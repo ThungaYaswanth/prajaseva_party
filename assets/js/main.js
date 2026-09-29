@@ -259,19 +259,56 @@ function initHeroCarousel() {
   const dots = document.querySelectorAll('.hero-dot');
   const banner = document.querySelector('.hero-banner-card');
 
-  if (prevBtn) prevBtn.addEventListener('click', () => changeHeroSlide(currentSlideIdx - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => changeHeroSlide(currentSlideIdx + 1));
+  // Immediately display the first slide without waiting
+  changeHeroSlide(0);
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      changeHeroSlide(currentSlideIdx - 1);
+      startSlideShow();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      changeHeroSlide(currentSlideIdx + 1);
+      startSlideShow();
+    });
+  }
 
   dots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => changeHeroSlide(idx));
+    dot.addEventListener('click', () => {
+      changeHeroSlide(idx);
+      startSlideShow();
+    });
   });
 
-  // Auto slide every 6 seconds
+  // Snappy auto slide every 3.5 seconds
   startSlideShow();
 
   if (banner) {
     banner.addEventListener('mouseenter', stopSlideShow);
     banner.addEventListener('mouseleave', startSlideShow);
+
+    // Responsive Mobile Touch Swipe Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    banner.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    banner.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          changeHeroSlide(currentSlideIdx + 1);
+        } else {
+          changeHeroSlide(currentSlideIdx - 1);
+        }
+        startSlideShow();
+      }
+    }, { passive: true });
   }
 }
 
@@ -279,7 +316,7 @@ function startSlideShow() {
   stopSlideShow();
   slideInterval = setInterval(() => {
     changeHeroSlide(currentSlideIdx + 1);
-  }, 6000);
+  }, 3500); // Fast, active 3.5s interval
 }
 
 function stopSlideShow() {
