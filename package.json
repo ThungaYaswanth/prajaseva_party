@@ -1,12 +1,5 @@
 {
-  "name": "prajaseva-party",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "node dev-server.js",
-    "start": "node dev-server.js"
-  },
-  "devDependencies": {
+  "dependencies": {
     "sharp": "^0.35.5"
   }
 }
