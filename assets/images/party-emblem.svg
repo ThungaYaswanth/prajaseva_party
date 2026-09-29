@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="45%" stop-color="#FFB800"/>
+      <stop offset="85%" stop-color="#E68A00"/>
+      <stop offset="100%" stop-color="#C26500"/>
+    </linearGradient>
+    <radialGradient id="centerDot" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="70%" stop-color="#C81016"/>
+      <stop offset="100%" stop-color="#80060A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Clean Circular Background with Bold Red Ring Border -->
+  <circle cx="100" cy="100" r="94" fill="#FFFFFF" stroke="#C81016" stroke-width="11"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#FFC928" stroke-width="2"/>
+
+  <!-- 24 Radiating Petals Band -->
+  <g fill="url(#goldGradient)" stroke="#D97706" stroke-width="0.8">
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(0 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(15 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(30 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(45 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(60 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(75 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(90 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(105 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(120 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(135 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(150 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(165 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(180 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(195 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(210 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(225 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(240 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(255 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(270 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(285 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(300 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(315 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(330 100 100)"/>
+    <path d="M 100 21 L 105 34 L 95 34 Z" transform="rotate(345 100 100)"/>
+  </g>
+
+  <!-- Inner Decorative Lotus Arcs -->
+  <circle cx="100" cy="100" r="66" fill="none" stroke="#C81016" stroke-width="1.8"/>
+  <circle cx="100" cy="100" r="61" fill="#FFFDF5" stroke="url(#goldGradient)" stroke-width="1.8"/>
+
+  <!-- 16-Petal Arc Band -->
+  <g fill="none" stroke="url(#goldGradient)" stroke-width="2.2">
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(0 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(22.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(45 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(67.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(90 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(112.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(135 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(157.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(180 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(202.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(225 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(247.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(270 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(292.5 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(315 100 100)"/>
+    <path d="M 94 39 Q 100 33 106 39" transform="rotate(337.5 100 100)"/>
+  </g>
+
+  <!-- Sri Yantra Sacred Geometry Intersecting Golden Triangles -->
+  <circle cx="100" cy="100" r="47" fill="#FFFFFF" stroke="#C81016" stroke-width="1.8"/>
+  
+  <g stroke="url(#goldGradient)" stroke-width="2.6" fill="none" stroke-linejoin="round">
+    <!-- Upward Triangles -->
+    <polygon points="100,56 64,118 136,118"/>
+    <polygon points="100,63 70,123 130,123"/>
+    <polygon points="100,71 76,129 124,129"/>
+    <polygon points="100,80 82,134 118,134"/>
+    
+    <!-- Downward Triangles -->
+    <polygon points="100,144 64,82 136,82" stroke="#D97706"/>
+    <polygon points="100,137 70,77 130,77" stroke="#D97706"/>
+    <polygon points="100,129 76,71 124,71" stroke="#D97706"/>
+    <polygon points="100,120 82,66 118,66" stroke="#D97706"/>
+    <polygon points="100,113 86,62 114,62" stroke="#D97706"/>
+  </g>
+
+  <!-- Central Red Gem Bindu -->
+  <circle cx="100" cy="100" r="7.5" fill="url(#centerDot)" stroke="#FFB800" stroke-width="1.6"/>
+  <circle cx="100" cy="100" r="2.5" fill="#FFFFFF"/>
+</svg>
