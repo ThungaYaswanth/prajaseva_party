@@ -858,6 +858,14 @@ body {
   transition: transform 7s ease;
 }
 
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .hero-slide.active .hero-slide-bg {
   transform: scale(1.02);
 }
@@ -4136,27 +4144,82 @@ body {
 
 @media (max-width: 991.98px) {
 
-  .hero-banner-card,
-  .hero-slider-track,
+  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  .hero-banner-card {
+    min-height: auto !important;
+    height: auto !important;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero-slider-track {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    aspect-ratio: 2172 / 724 !important;
+    position: relative;
+    overflow: hidden;
+  }
+
   .hero-slide {
-    min-height: 490px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 
-  .hero-slide-content {
-    padding: 24px 20px;
+  .hero-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
   }
 
-  .hero-slide-2-card {
-    padding: 20px 24px;
-    max-width: 90%;
+  .hero-slide-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: center !important;
+    display: block !important;
   }
 
-  .hero-slide-2-heading {
-    font-size: 1.55rem;
+  .hero-slide-overlay {
+    display: none !important;
   }
 
-  .hero-heading-main {
-    font-size: 1.95rem;
+  .hero-slide-1-content {
+    display: none !important;
+  }
+
+  .hero-arrow {
+    display: none !important;
+  }
+
+  .hero-indicators {
+    bottom: 8px !important;
+  }
+
+  .hero-dot {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .hero-dot.active {
+    width: 20px !important;
+  }
+
+  .quick-nav-section {
+    margin-top: 18px !important;
+    padding-bottom: 20px;
   }
 
   .issues-grid {
@@ -4289,48 +4352,78 @@ body {
 
 @media (max-width: 767.98px) {
 
-  .hero-banner-card,
-  .hero-slider-track,
+  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  .hero-banner-card {
+    min-height: auto !important;
+    height: auto !important;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero-slider-track {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    aspect-ratio: 2172 / 724 !important;
+    position: relative;
+    overflow: hidden;
+  }
+
   .hero-slide {
-    min-height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
+  }
+
+  .hero-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero-slide-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: center !important;
+    display: block !important;
   }
 
   .hero-slide-overlay {
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0.3) 100%);
+    display: none !important;
   }
 
-  .hero-slide-content {
-    padding: 24px 20px 48px 20px;
-  }
-
-  .hero-party-title {
-    font-size: 1.35rem;
-  }
-
-  .hero-heading-main {
-    font-size: 1.8rem;
-  }
-
-  .hero-heading-sub {
-    font-size: 1.05rem;
+  .hero-slide-1-content {
+    display: none !important;
   }
 
   .hero-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .hero-arrow.prev {
-    left: 8px;
-  }
-
-  .hero-arrow.next {
-    right: 8px;
+    display: none !important;
   }
 
   .hero-indicators {
-    bottom: 20px;
+    bottom: 6px !important;
+  }
+
+  .hero-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .quick-nav-section {
+    margin-top: 14px !important;
+    padding-bottom: 16px;
   }
 
   .quick-nav-strip {
@@ -4560,81 +4653,18 @@ body {
     font-size: 0.85rem !important;
   }
 
-  /* Section 2 — Hero Banner */
+  /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px) */
   .hero-banner-card,
   .hero-slider-track,
   .hero-slide {
-    min-height: 480px;
-    height: auto;
-  }
-
-  .hero-banner-card {
-    padding: 0;
-  }
-
-  .hero-slide-content {
-    padding: 24px 14px 44px 14px;
-  }
-
-  .hero-emblem-badge {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 8px;
-  }
-
-  .hero-party-title {
-    font-size: 1.2rem;
-  }
-
-  .hero-heading-main {
-    font-size: 1.5rem;
-    line-height: 1.25;
-    margin-bottom: 6px;
-  }
-
-  .hero-heading-sub {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-  }
-
-  .hero-quote-box {
-    padding: 6px 14px;
-    max-width: 100%;
-    margin-bottom: 16px;
-  }
-
-  .hero-quote-text {
-    font-size: 0.82rem;
-  }
-
-  .hero-cta-btns {
-    gap: 8px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero-cta-btns .btn-pill-red,
-  .hero-cta-btns .btn-pill-white-outline {
-    flex: 1 1 140px;
-    max-width: 220px;
-    justify-content: center;
-    padding: 9px 16px;
-    font-size: 0.84rem;
-  }
-
-  .hero-arrow {
-    display: none; /* Hide arrows on mobile to avoid text overlap; use swipe & dots */
-  }
-
-  .hero-indicators {
-    bottom: 16px;
+    min-height: auto !important;
+    height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 
   /* Section 3 — Quick Navigation Strip */
   .quick-nav-section {
-    margin-top: -18px;
+    margin-top: 10px !important;
     padding-bottom: 12px;
   }
 
