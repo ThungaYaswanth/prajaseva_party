@@ -69,13 +69,14 @@ body {
   overflow-x: hidden;
 }
 
-/* Container Constraint - High Width 1400px Format matching Membership Section */
+/* Container Constraint - Professional Decreased Width (1200px) matching all sections */
 .main-container {
-  max-width: 1400px;
+  max-width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Section Title Bar Component */
@@ -209,10 +210,10 @@ body {
 }
 
 .header-container {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
 .navbar {
@@ -317,7 +318,7 @@ body {
 }
 
 .nav-link {
-  font-size: 1.05rem;
+  font-size: 0.94rem;
   font-weight: 700;
   color: #0F172A !important;
   padding: 6px 0 !important;
@@ -359,8 +360,8 @@ body {
 }
 
 .btn-icon-search {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1px solid #E2E8F0;
   background-color: #F8FAFC;
@@ -368,7 +369,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #0F172A;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -384,9 +385,9 @@ body {
   align-items: center;
   background-color: #FFFFFF;
   border-radius: 50px;
-  padding: 7px 18px;
+  padding: 6px 14px;
   border: 1.5px solid #E2E8F0;
-  gap: 10px;
+  gap: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
   cursor: pointer;
   transition: var(--transition);
@@ -399,7 +400,7 @@ body {
 }
 
 .lang-label {
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 800;
   color: #0F172A;
   line-height: 1;
@@ -408,25 +409,25 @@ body {
 .lang-divider {
   color: #D1D5DB;
   font-weight: 300;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .lang-globe-icon {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: #64748B;
 }
 
 .btn-pill-membership {
   background-color: var(--primary-red);
   border-radius: var(--radius-pill);
-  padding: 10px 24px;
+  padding: 8px 20px;
   border: none;
   color: #FFFFFF !important;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   box-shadow: 0 4px 14px rgba(200, 16, 22, 0.3);
   white-space: nowrap;
   cursor: pointer;
@@ -1125,16 +1126,16 @@ body {
 }
 
 .quick-icon-wrap {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background-color: #FFF0F0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-red);
-  font-size: 1.35rem;
-  margin-bottom: 8px;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
   transition: var(--transition);
 }
 
@@ -1144,7 +1145,7 @@ body {
 }
 
 .quick-nav-label {
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 700;
   line-height: 1.3;
   color: #1E293B;
@@ -1199,22 +1200,22 @@ body {
   gap: 7px;
   background-color: #FEE2E2;
   color: #DC2626;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  padding: 6px 18px;
+  padding: 5px 16px;
   border-radius: 999px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 6px rgba(220, 38, 38, 0.08);
 }
 
 .issues-pill-badge i {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #DC2626;
 }
 
 .issues-main-title {
   font-family: var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 1.85rem;
   font-weight: 900;
   line-height: 1.25;
   margin-bottom: 8px;
@@ -1230,7 +1231,7 @@ body {
 }
 
 .issues-main-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   color: #334155;
   font-weight: 600;
   line-height: 1.6;
@@ -1419,7 +1420,7 @@ body {
 
 .issue-title {
   font-family: var(--font-heading);
-  font-size: 1.12rem;
+  font-size: 0.98rem;
   font-weight: 800;
   color: #C81016;
   line-height: 1.35;
@@ -1427,10 +1428,10 @@ body {
 }
 
 .issue-desc {
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   color: #334155;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.5;
   margin-bottom: 0;
   padding-right: 18px;
 }
@@ -1901,17 +1902,17 @@ body {
 }
 
 .leader-quote-headline {
-  font-size: 1.55rem;
+  font-size: 1.28rem;
   font-weight: 800;
   color: var(--primary-red);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.35;
 }
 
 .leader-bio-text {
-  font-size: 1.02rem;
+  font-size: 0.92rem;
   color: #1E293B;
-  line-height: 1.65;
+  line-height: 1.6;
   margin-bottom: 16px;
 }
 
@@ -1924,7 +1925,7 @@ body {
 }
 
 .leader-signature-text {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 800;
   font-style: italic;
   color: var(--primary-red);
@@ -1953,7 +1954,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
+  padding: 10px 12px;
   background-color: #FFFDF8;
   border: 1px solid #FEF3C7;
   border-radius: var(--radius-md);
@@ -1966,15 +1967,15 @@ body {
 }
 
 .stat-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #FFEDD5;
   color: #EA580C;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
@@ -1985,14 +1986,14 @@ body {
 
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.28rem;
   font-weight: 900;
   color: var(--primary-red);
   line-height: 1.1;
 }
 
 .stat-label {
-  font-size: 0.95rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: #0F172A;
   line-height: 1.35;
@@ -2079,7 +2080,7 @@ body {
 
 .campaign-pct-highlight {
   font-family: var(--font-heading);
-  font-size: 2.3rem;
+  font-size: 1.95rem;
   font-weight: 900;
   color: #b91c1c;
   line-height: 1.05;
@@ -2088,7 +2089,7 @@ body {
 
 .campaign-main-headline {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #0b1a30;
   line-height: 1.28;
@@ -2096,10 +2097,10 @@ body {
 }
 
 .campaign-subtitle-text {
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   color: #334155;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   margin-left: 17px;
   font-weight: 600;
 }
@@ -2107,9 +2108,9 @@ body {
 /* 3 Feature Badges Row */
 .campaign-features-row {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   align-items: flex-start;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   margin-left: 17px;
 }
 
@@ -2118,7 +2119,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 90px;
+  width: 85px;
   transition: transform 0.2s ease;
 }
 
@@ -2127,16 +2128,16 @@ body {
 }
 
 .feature-icon-circle {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #fee2e2;
   color: #dc2626;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  margin-bottom: 6px;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
   box-shadow: 0 2px 6px rgba(220, 38, 38, 0.12);
 }
 
@@ -2148,7 +2149,7 @@ body {
 
 .feature-main-lbl {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: #0b1a30;
   line-height: 1.2;
@@ -2156,7 +2157,7 @@ body {
 }
 
 .feature-sub-lbl {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: #475569;
   line-height: 1.15;
   margin-top: 2px;
@@ -2537,7 +2538,7 @@ body {
 
 .featured-headline {
   font-family: var(--font-heading);
-  font-size: 1.32rem;
+  font-size: 1.18rem;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.42;
@@ -2550,10 +2551,10 @@ body {
 }
 
 .featured-excerpt {
-  font-size: 0.96rem;
+  font-size: 0.88rem;
   color: #334155;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  line-height: 1.55;
+  margin-bottom: 14px;
 }
 
 .featured-action-bar {
@@ -2678,11 +2679,11 @@ body {
 
 .mini-card-title {
   font-family: var(--font-heading);
-  font-size: 0.98rem;
+  font-size: 0.88rem;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.45;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2819,7 +2820,7 @@ body {
 
 .event-crimson-date .date-num {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.5px;
@@ -2827,7 +2828,7 @@ body {
 }
 
 .event-crimson-date .date-month {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
   line-height: 1.2;
   margin-top: 2px;
@@ -2842,22 +2843,22 @@ body {
 }
 
 .event-category-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
   background-color: #fee2e2;
   color: #dc2626;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   flex-shrink: 0;
 }
 
 .event-category-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .event-info-box {
@@ -2867,15 +2868,15 @@ body {
 
 .event-title-text {
   font-family: var(--font-heading);
-  font-size: 1.08rem;
+  font-size: 0.94rem;
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   line-height: 1.35;
 }
 
 .event-location-text {
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   color: #475569;
   display: flex;
   align-items: center;
@@ -2976,281 +2977,268 @@ body {
 }
 
 /* ==========================================================================
-   Section 11 — Membership Section with Hanging ID Cards (Master Redesign)
+   Section 11 — Membership Section with Hanging ID Cards (Master Reference Match)
    ========================================================================== */
 .membership-master-section {
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 50px;
   position: relative;
   overflow: visible;
 }
 
 .membership-master-section .main-container {
-  max-width: 1400px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
   position: relative;
 }
 
-/* Grand Backdrop Card with Ambedkar + Secretariat Panoramic Background */
+/* Master Grand Backdrop Card */
 .membership-grand-card {
   position: relative;
-  background: url('../images/Dr.%20B.%20R.%20Ambedkar.jpg') no-repeat left center / cover;
-  border-radius: 28px;
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: clamp(16px, 2.5vw, 32px);
-  padding: 35px 30px 45px clamp(20px, 20vw, 280px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
-  border: 2px solid rgba(255, 201, 40, 0.55);
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-
-/* Curved fluid golden-red wave along bottom */
-.membership-grand-card::after {
-  content: '';
+/* Background Layer 1: Charminar with Crowd & Flags on the Right */
+.membership-charminar-bg {
   position: absolute;
-  left: 0;
+  top: 0;
   right: 0;
-  bottom: 0;
-  height: 40px;
-  background: linear-gradient(90deg, #FFC928 0%, #F59E0B 20%, #C81016 55%, #88070A 100%);
+  width: 58%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  opacity: 0.38;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 1) 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 1) 100%);
   pointer-events: none;
-  clip-path: ellipse(75% 100% at 50% 100%);
   z-index: 1;
 }
 
-/* Left Content Column - tight snug layout next to ID cards */
+/* Background Layer 2: Telangana Map Silhouette Watermark */
+.membership-tg-map-watermark {
+  position: absolute;
+  left: 22%;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 270px;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 12px rgba(200, 16, 22, 0.25));
+}
+
+.membership-tg-map-watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Top Content Row: Left Column + Right 3D Cards */
+.membership-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44px 44px 20px 48px;
+  position: relative;
+  z-index: 2;
+  gap: 32px;
+}
+
+/* Left Column: Brand Pill, Headline, Slogans, CTA Button */
 .membership-left-content {
-  flex: 0 1 385px;
-  max-width: 385px;
-  z-index: 3;
+  flex: 0 0 380px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 3;
 }
 
-/* Brand Plaque Pill - White capsule with red border & circular emblem matching Mockup */
+/* Brand Pill: Red capsule with white emblem disc & white text */
 .membership-brand-pill {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: #FFFFFF;
-  padding: 5px 22px 5px 6px;
+  gap: 10px;
+  background: #C81016;
+  color: #FFFFFF;
+  padding: 4px 18px 4px 5px;
   border-radius: 50px;
-  border: 2px solid #C81016;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(200, 16, 22, 0.25);
+  margin-bottom: 18px;
 }
 
 .brand-pill-icon-wrap {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(200, 16, 22, 0.15);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  border: 1.5px solid #FEE2E2;
 }
 
 .brand-pill-emblem {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
-.brand-pill-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
 .brand-te-name {
-  color: #C81016;
-  font-size: 1.18rem;
-  font-weight: 900;
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
-.brand-en-sub {
-  color: #0F172A;
-  font-size: 0.65rem;
-  font-weight: 900;
-  letter-spacing: 1.4px;
-}
-
-/* Membership Main Heading: Solid Dark Navy matching Mockup */
+/* Headline: Two distinct lines (పార్టీ in Dark Navy / సభ్యత్వం in Crimson) */
 .membership-main-heading {
-  font-size: clamp(2.4rem, 3.6vw, 3.4rem);
-  font-weight: 900;
-  line-height: 1.15;
-  margin: 4px 0 10px 0;
-  color: #0F172A;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-.membership-main-heading .heading-dark {
-  color: #0F172A;
-}
-
-.membership-main-heading .heading-red {
-  color: #0F172A;
-}
-
-/* Subtitle Lines */
-.membership-subtitles {
-  margin-bottom: 20px;
-}
-
-.membership-sub-line1 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #1E293B;
-  margin-bottom: 3px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
-}
-
-.membership-sub-line2 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #1E293B;
-  margin-bottom: 0;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
-}
-
-.membership-title-bar {
-  width: 48px;
-  height: 3.5px;
-  background: #C81016;
-  border-radius: 3px;
-  margin-top: 8px;
-}
-
-/* 3 Mini Feature Badges */
-.membership-features-strip {
-  display: flex;
-  align-items: stretch;
-  gap: 12px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-
-.mem-feat-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 14px;
-  padding: 12px 14px;
-  min-width: 105px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  line-height: 1.08;
+  margin: 0 0 18px 0;
 }
 
-.mem-feat-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(200, 16, 22, 0.18);
+.heading-line-party {
+  font-size: clamp(2.4rem, 3.2vw, 2.9rem);
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: -0.5px;
 }
 
-.mem-feat-circle {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #FEE2E2;
+.heading-line-membership {
+  font-size: clamp(3rem, 4vw, 3.7rem);
+  font-weight: 900;
   color: #C81016;
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(200, 16, 22, 0.15);
 }
 
-.mem-feat-lbls {
+/* Slogan Lines */
+.membership-slogan-lines {
   display: flex;
   flex-direction: column;
-  line-height: 1.25;
+  gap: 5px;
+  margin-bottom: 24px;
 }
 
-.mem-feat-bold {
-  color: #0F172A;
-  font-weight: 900;
-  font-size: 1.02rem;
-}
-
-.mem-feat-muted {
-  color: #334155;
+.membership-slogan-lines p {
+  margin: 0;
+  font-size: 1.05rem;
   font-weight: 700;
-  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
 }
 
-/* CTA Action Button */
+/* CTA Button */
+.membership-cta-action {
+  margin-top: 4px;
+}
+
 .btn-pill-membership-join {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(135deg, #E60000 0%, #C81016 50%, #B00B10 100%);
+  background: #C81016;
   color: #FFFFFF;
-  border: 2.5px solid #FFFFFF;
+  border: none;
   border-radius: 50px;
-  padding: 8px 10px 8px 24px;
-  font-size: 1.05rem;
-  font-weight: 900;
-  box-shadow: 0 8px 25px rgba(200, 16, 22, 0.45);
+  padding: 12px 24px;
+  font-size: 1.02rem;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(200, 16, 22, 0.35);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 .btn-pill-membership-join:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 28px rgba(200, 16, 22, 0.55);
-  background: linear-gradient(135deg, #FF1E24 0%, #D61218 50%, #9E080C 100%);
+  transform: translateY(-2px);
+  background: #B00B10;
+  box-shadow: 0 10px 26px rgba(200, 16, 22, 0.48);
   color: #FFFFFF;
 }
 
-.btn-pill-membership-join i.bi-person-plus-fill {
-  font-size: 1.2rem;
+.btn-pill-membership-join i.bi-person-fill-add {
+  font-size: 1.25rem;
 }
 
-.btn-arrow-circle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: #C81016;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease;
+.btn-pill-membership-join i.bi-arrow-right {
+  font-size: 1.15rem;
+  transition: transform 0.2s ease;
 }
 
-.btn-pill-membership-join:hover .btn-arrow-circle {
-  transform: translateX(3px);
+.btn-pill-membership-join:hover i.bi-arrow-right {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
-   Center / Right Column: 3D Hanging ID Cards
+   Right Column: 3D ID Cards Standing on Tiered Podium Stage
    ========================================================================== */
-.membership-id-cards-area {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+.membership-cards-stage-wrap {
   position: relative;
-  z-index: 4;
-  padding-top: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  z-index: 3;
+}
+
+/* 3D Tiered Elliptical Podium / Pedestal */
+.membership-podium-stage {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.podium-tier-base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #D41117 0%, #A30A0F 60%, #680508 100%);
+  box-shadow: 0 18px 36px rgba(163, 10, 15, 0.4), 0 30px 48px rgba(0, 0, 0, 0.18);
+}
+
+.podium-tier-top {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FEE2E2 50%, #DC2626 100%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12), inset 0 2px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Hanging ID Cards Area */
+.membership-id-cards-area {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 26px;
 }
 
 .id-card-wrapper {
@@ -3263,33 +3251,32 @@ body {
 
 .id-card-wrapper.front-card {
   z-index: 5;
+  margin-right: -18px;
   transform: rotate(-1.5deg);
 }
 
 .id-card-wrapper.front-card:hover {
-  transform: rotate(0deg) translateY(-6px) scale(1.02);
+  transform: rotate(0deg) translateY(-8px) scale(1.02);
   z-index: 10;
 }
 
 .id-card-wrapper.back-card {
-  z-index: 3;
-  margin-left: -32px;
-  transform: rotate(5deg);
-  margin-top: 16px;
+  z-index: 4;
+  transform: rotate(2deg);
 }
 
 .id-card-wrapper.back-card:hover {
-  transform: rotate(1deg) translateY(-6px) scale(1.02);
+  transform: rotate(0deg) translateY(-8px) scale(1.02);
   z-index: 10;
 }
 
-/* Crimson Lanyard Ribbon with white stitched loop */
+/* Crimson Lanyard Ribbon with Stitching */
 .id-lanyard-strap {
-  width: 28px;
-  height: 50px;
-  background: linear-gradient(90deg, #7F0000 0%, #C81016 45%, #EF4444 55%, #7F0000 100%);
+  width: 32px;
+  height: 55px;
+  background: linear-gradient(90deg, #8B0000 0%, #C81016 45%, #EF4444 55%, #8B0000 100%);
   border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.25);
   margin-bottom: -5px;
   z-index: 6;
   position: relative;
@@ -3299,20 +3286,20 @@ body {
 }
 
 .id-lanyard-stitch {
-  width: 28px;
+  width: 32px;
   height: 6px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Silver Metallic Badge Clip */
 .id-clip-metal {
-  width: 36px;
-  height: 14px;
+  width: 40px;
+  height: 16px;
   background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 30%, #94A3B8 70%, #CBD5E1 100%);
   border-radius: 3px;
   border: 1px solid #475569;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35), inset 0 1px 1px #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32), inset 0 1px 1px #fff;
   z-index: 7;
   position: relative;
   margin-top: -3px;
@@ -3325,18 +3312,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 14px;
-  height: 3px;
+  height: 3.5px;
   background: #1E293B;
   border-radius: 2px;
 }
 
-/* ID Card Body - Front Card (Glossy Golden Frame) */
+/* ID Card Body - Front Card */
 .id-card-body {
-  width: 310px;
+  width: 285px;
+  min-height: 395px;
   background: #FFFFFF;
-  border-radius: 24px;
-  border: 6px solid #FFBA08;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(255, 215, 0, 0.45);
+  border-radius: 22px;
+  border: 3.5px solid #F59E0B;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(245, 158, 11, 0.4);
   overflow: hidden;
   position: relative;
   margin-top: -6px;
@@ -3344,52 +3332,44 @@ body {
   flex-direction: column;
 }
 
-/* Top-right plastic gloss sheen */
+/* Plastic Sheen Overlay */
 .id-card-gloss-sheen {
   position: absolute;
   top: 0;
   right: 0;
-  width: 150px;
-  height: 150px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, transparent 60%);
   pointer-events: none;
   border-top-right-radius: 20px;
-  z-index: 8;
+  z-index: 9;
 }
 
-/* Back Card specific body width & border */
-.id-card-wrapper.back-card .id-card-body {
-  width: 295px;
-  border: 6px solid #FFBA08;
-  border-radius: 24px;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 215, 0, 0.4);
-}
-
-/* Oval Slot Hole */
+/* Card Slot Punch Hole */
 .id-slot-hole {
-  width: 36px;
-  height: 7px;
+  width: 32px;
+  height: 6px;
   background: #0F172A;
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 6px auto 4px auto;
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.6), 0 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.65), 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
-/* Card Header (Red Banner with white emblem circle) */
+/* ID Card Header Banner */
 .id-card-header {
   background: linear-gradient(180deg, #A50B0F 0%, #C81016 100%);
-  padding: 8px 12px;
+  padding: 7px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 0 0 12px 12px;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .id-emblem-wrap {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #FFFFFF;
   display: flex;
@@ -3400,8 +3380,8 @@ body {
 }
 
 .id-emblem-img {
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
@@ -3414,38 +3394,38 @@ body {
 
 .id-party-te {
   color: #FFFFFF;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.id-party-slogan-mini {
+  color: #FEE2E2;
+  font-size: 0.52rem;
+  font-weight: 700;
   letter-spacing: 0.3px;
 }
 
-.id-party-en {
-  color: #FFE4E6;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-}
-
-/* Gold Ribbon: MEMBERSHIP CARD */
+/* Gold Ribbon: MEMBER ID CARD */
 .id-gold-ribbon {
   background: linear-gradient(90deg, #D97706 0%, #F59E0B 20%, #FDE047 50%, #F59E0B 80%, #D97706 100%);
   color: #000000;
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   text-align: center;
-  padding: 3px 0;
-  border-radius: 4px;
-  margin: 3px 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  padding: 2.5px 0;
+  border-radius: 3px;
+  margin: 3px 10px 4px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-/* Card Main Grid (Photo Left, Details Right) */
+/* Card 1 Main Grid (Photo Left, Details Right) */
 .id-card-main-grid {
   display: grid;
-  grid-template-columns: 86px 1fr;
+  grid-template-columns: 80px 1fr;
   gap: 8px;
-  padding: 10px 12px 6px 12px;
+  padding: 4px 10px 4px 10px;
   align-items: flex-start;
   position: relative;
 }
@@ -3457,13 +3437,13 @@ body {
 }
 
 .id-photo-frame {
-  width: 86px;
-  height: 106px;
-  border: 2.5px solid #00B4D8;
+  width: 80px;
+  height: 100px;
+  border: 2px solid #C81016;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
-  background: #0080FF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  background: #0F172A;
 }
 
 .id-photo-img {
@@ -3474,30 +3454,30 @@ body {
   display: block;
 }
 
-/* Details Column */
+/* Member Details Column */
 .id-details-col {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding-top: 2px;
+  gap: 3px;
+  padding-top: 1px;
 }
 
 .id-field-row {
   display: flex;
   align-items: baseline;
-  font-size: 0.68rem;
-  line-height: 1.45;
+  font-size: 0.64rem;
+  line-height: 1.35;
 }
 
 .field-lbl {
-  width: 62px;
+  width: 58px;
   color: #1E293B;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .field-sep {
-  width: 8px;
+  width: 6px;
   color: #334155;
   font-weight: 700;
   text-align: center;
@@ -3510,54 +3490,55 @@ body {
   word-break: break-word;
 }
 
-.field-val[data-i18n="idCardNameVal"] {
+.field-val.highlight-red {
   color: #C81016;
   font-weight: 900;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
 }
 
 .field-val.desig {
   color: #0F172A;
-  font-size: 0.66rem;
+  font-size: 0.62rem;
   font-weight: 800;
 }
 
 .field-val.id-number {
   color: #C81016;
   font-weight: 900;
-  letter-spacing: 0.5px;
-  font-size: 0.72rem;
+  letter-spacing: 0.3px;
+  font-size: 0.68rem;
 }
 
 .field-val.blood-group {
   color: #C81016;
   font-weight: 900;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
 }
 
 .field-val.date-joined {
   font-weight: 800;
-  font-size: 0.68rem;
+  font-size: 0.64rem;
 }
 
-/* Card 1 Footer Strip */
+/* Front Card Footer Strip */
 .id-card-footer-strip {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 6px 10px 8px 10px;
+  padding: 4px 8px 6px 8px;
   position: relative;
   margin-top: auto;
 }
 
 .id-qr-box {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   background: #FFFFFF;
   border: 1px solid #CBD5E1;
   border-radius: 4px;
   padding: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .id-qr-img {
@@ -3571,14 +3552,14 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
-  font-size: 0.54rem;
+  font-size: 0.52rem;
   color: #475569;
 }
 
 .tagline-bold {
   font-weight: 900;
   color: #0F172A;
-  font-size: 0.58rem;
+  font-size: 0.56rem;
 }
 
 .tagline-bars {
@@ -3606,9 +3587,9 @@ body {
   left: 52%;
   bottom: 6px;
   transform: translateX(-50%);
-  width: 48px;
-  height: 48px;
-  opacity: 0.35;
+  width: 44px;
+  height: 44px;
+  opacity: 0.32;
   pointer-events: none;
 }
 
@@ -3624,18 +3605,19 @@ body {
   align-items: center;
   text-align: center;
   line-height: 1.15;
+  flex-shrink: 0;
 }
 
 .signature-script {
   font-family: 'Brush Script MT', 'Segoe Script', cursive, sans-serif;
   color: #1D4ED8;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: -2px;
 }
 
 .signature-lbl {
-  font-size: 0.46rem;
+  font-size: 0.44rem;
   color: #334155;
   font-weight: 800;
   border-top: 0.5px solid #94A3B8;
@@ -3643,23 +3625,23 @@ body {
 }
 
 .signature-sub {
-  font-size: 0.42rem;
+  font-size: 0.4rem;
   color: #C81016;
   font-weight: 800;
 }
 
-/* Bottom Gold & Red Wave Stripe */
 .id-bottom-wave-strip {
-  height: 10px;
+  height: 8px;
   background: linear-gradient(90deg, #FFC928 0%, #F59E0B 25%, #C81016 65%, #88070A 100%);
   width: 100%;
 }
 
 /* ==========================================================================
-   Back ID Card Specifics
+   Back ID Card (Party Member Responsibilities)
    ========================================================================== */
-.back-body {
-  border-color: #FFBA08;
+.id-card-wrapper.back-card .id-card-body {
+  width: 275px;
+  border-color: #F59E0B;
 }
 
 .id-red-ribbon {
@@ -3668,17 +3650,17 @@ body {
   font-size: 0.72rem;
   font-weight: 800;
   text-align: center;
-  padding: 4px 10px;
-  margin: 6px 12px;
+  padding: 3px 10px;
+  margin: 4px 10px 6px 10px;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(200, 16, 22, 0.3);
+  box-shadow: 0 1px 4px rgba(200, 16, 22, 0.25);
 }
 
 .id-responsibilities-list {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  padding: 4px 14px 6px 14px;
+  padding: 2px 12px 6px 12px;
 }
 
 .resp-item {
@@ -3688,29 +3670,30 @@ body {
 }
 
 .resp-bullet-icon {
-  width: 19px;
-  height: 19px;
-  min-width: 19px;
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
   background: #C81016;
   color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6rem;
-  margin-top: 1px;
+  font-size: 0.55rem;
+  margin-top: 2px;
+  box-shadow: 0 1px 3px rgba(200, 16, 22, 0.25);
 }
 
 .resp-text {
   color: #1E293B;
-  font-size: 0.66rem;
+  font-size: 0.63rem;
   line-height: 1.35;
   font-weight: 700;
 }
 
 .id-crowd-silhouette {
-  height: 26px;
-  background: linear-gradient(180deg, transparent 0%, rgba(200, 16, 22, 0.2) 100%);
+  height: 28px;
+  background: linear-gradient(180deg, transparent 0%, rgba(200, 16, 22, 0.22) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3720,27 +3703,27 @@ body {
 
 .flag-icon-wrap {
   color: #C81016;
-  font-size: 1rem;
-  opacity: 0.7;
+  font-size: 1.1rem;
+  opacity: 0.75;
 }
 
 .id-quote-banner {
   background: linear-gradient(135deg, #7F0000 0%, #A50B0F 50%, #7F0000 100%);
   color: #FFFFFF;
-  padding: 6px 10px;
+  padding: 5px 8px;
   text-align: center;
-  margin: 4px 10px 8px 10px;
-  border-radius: 20px;
+  margin: 3px 8px 6px 8px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .quote-sign {
   color: #FFC928;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 900;
   line-height: 1;
 }
@@ -3748,18 +3731,78 @@ body {
 .quote-motto-wrap {
   display: flex;
   flex-direction: column;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
-.quote-motto-line1 {
-  font-size: 0.62rem;
-  font-weight: 800;
-}
-
+.quote-motto-line1,
 .quote-motto-line2 {
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 800;
 }
+
+/* ==========================================================================
+   Bottom 4-Stats Strip Matching Master Reference
+   ========================================================================== */
+.membership-bottom-stats-strip {
+  background: #FFFFFF;
+  border-top: 1px solid #F1F5F9;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 3;
+}
+
+.mem-stat-col {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+  padding: 4px 10px;
+}
+
+.mem-stat-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #C81016;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(200, 16, 22, 0.25);
+}
+
+.mem-stat-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.mem-stat-num {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #C81016;
+  letter-spacing: -0.3px;
+}
+
+.mem-stat-lbl {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.mem-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: #E2E8F0;
+  flex-shrink: 0;
+}
+
 
 
 /* ==========================================================================
@@ -3802,15 +3845,15 @@ body {
 }
 
 .footer-brand-title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 .footer-slogan {
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   color: #CBD5E1;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   line-height: 1.5;
 }
 
@@ -3820,8 +3863,8 @@ body {
 }
 
 .social-btn {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
@@ -3829,7 +3872,7 @@ body {
   justify-content: center;
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: var(--transition);
 }
 
@@ -3840,10 +3883,10 @@ body {
 }
 
 .footer-heading {
-  font-size: 1.15rem;
+  font-size: 1.02rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   position: relative;
 }
 
@@ -3851,13 +3894,13 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
 }
 
 .footer-links-list a {
   color: #CBD5E1;
   text-decoration: none;
-  font-size: 0.96rem;
+  font-size: 0.86rem;
   font-weight: 600;
   transition: var(--transition);
   display: inline-flex;
@@ -3879,9 +3922,9 @@ body {
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-pill);
-  padding: 9px 18px;
+  padding: 8px 16px;
   color: #FFFFFF;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   flex-grow: 1;
   outline: none;
   transition: var(--transition);
@@ -3893,8 +3936,8 @@ body {
 }
 
 .newsletter-btn {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-color: var(--primary-red);
   border: none;
@@ -3914,7 +3957,7 @@ body {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 20px;
+  padding-top: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3923,7 +3966,7 @@ body {
 }
 
 .copyright-text {
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   color: #94A3B8;
   margin-bottom: 0;
 }
@@ -3935,7 +3978,7 @@ body {
 
 .footer-legal-links a {
   color: #CBD5E1;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 500;
   text-decoration: none;
   transition: var(--transition);
@@ -4193,29 +4236,43 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .membership-grand-card {
+  .membership-card-top-row {
     flex-direction: column;
-    padding: 36px 24px 80px 24px;
     text-align: center;
     align-items: center;
+    padding: 36px 20px 20px 20px;
+    gap: 28px;
   }
 
   .membership-left-content {
     max-width: 100%;
     align-items: center;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 24px;
-    border-radius: 20px;
-    backdrop-filter: blur(6px);
+    text-align: center;
   }
 
-  .membership-features-strip {
-    justify-content: center;
+  .membership-main-heading {
+    align-items: center;
   }
 
-  .membership-id-cards-area {
-    margin-top: 15px;
+  .membership-slogan-lines {
+    align-items: center;
+    text-align: center;
+  }
+
+  .membership-charminar-bg {
     width: 100%;
+    opacity: 0.18;
+  }
+
+  .membership-bottom-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .mem-stat-divider {
+    display: none;
   }
 }
 
@@ -4289,20 +4346,29 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .membership-cards-stage-wrap {
+    min-height: 440px;
+    width: 100%;
+  }
+
+  .membership-podium-stage {
+    width: 400px;
+  }
+
+  .podium-tier-base {
+    width: 400px;
+    height: 42px;
+  }
+
+  .podium-tier-top {
+    width: 340px;
+    height: 38px;
+    bottom: 16px;
+  }
+
   .membership-id-cards-area {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .id-card-wrapper.back-card {
-    margin-left: 0;
-    margin-top: 0;
-    transform: rotate(0deg);
-  }
-
-  .id-card-wrapper.front-card {
-    transform: rotate(0deg);
+    transform: scale(0.88);
+    transform-origin: bottom center;
   }
 
   .footer-top {
@@ -4385,40 +4451,60 @@ body {
     font-size: 0.88rem;
   }
 
-  .membership-grand-card {
-    padding: 24px 14px 70px 14px;
-    border-radius: 20px;
+  .membership-card-top-row {
+    padding: 24px 14px 16px 14px;
+    gap: 20px;
   }
 
   .membership-left-content {
-    padding: 16px 10px;
+    padding: 0;
   }
 
-  .membership-main-heading {
-    font-size: 1.85rem;
+  .heading-line-party {
+    font-size: 2.1rem;
   }
 
-  .membership-sub-line1,
-  .membership-sub-line2 {
-    font-size: 0.92rem;
+  .heading-line-membership {
+    font-size: 2.7rem;
   }
 
-  .membership-features-strip {
-    gap: 8px;
-  }
-
-  .mem-feat-item {
-    min-width: 90px;
-    padding: 8px 10px;
-  }
-
-  .btn-pill-membership-join {
-    padding: 8px 16px;
+  .membership-slogan-lines p {
     font-size: 0.95rem;
   }
 
-  .id-card-body {
-    width: 275px;
+  .btn-pill-membership-join {
+    padding: 10px 20px;
+    font-size: 0.94rem;
+  }
+
+  .membership-cards-stage-wrap {
+    min-height: 380px;
+  }
+
+  .membership-podium-stage {
+    width: 310px;
+  }
+
+  .podium-tier-base {
+    width: 310px;
+    height: 34px;
+  }
+
+  .podium-tier-top {
+    width: 260px;
+    height: 30px;
+    bottom: 12px;
+  }
+
+  .membership-id-cards-area {
+    transform: scale(0.76);
+    transform-origin: bottom center;
+  }
+
+  .membership-bottom-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px 12px;
   }
 }
 
@@ -4426,6 +4512,7 @@ body {
    Mobile S (<= 360px, specifically 320px screens) - All Sections Optimization
    ========================================================================== */
 @media (max-width: 360px) {
+
   /* Global Container Padding for 320px Viewport */
   .main-container {
     padding-left: 10px !important;
@@ -4738,57 +4825,59 @@ body {
     height: 180px;
   }
 
-  /* Section 9 — Membership Grand Card */
-  .membership-grand-card {
-    padding: 18px 8px 36px 8px;
-    border-radius: 16px;
+  /* Section 11 — Membership Grand Card */
+  .membership-card-top-row {
+    padding: 16px 8px 12px 8px;
+    gap: 16px;
   }
 
   .membership-left-content {
-    padding: 8px 4px;
+    padding: 0;
   }
 
-  .membership-main-heading {
-    font-size: 1.35rem;
-    line-height: 1.3;
+  .heading-line-party {
+    font-size: 1.8rem;
   }
 
-  .membership-sub-line1,
-  .membership-sub-line2 {
-    font-size: 0.82rem;
+  .heading-line-membership {
+    font-size: 2.3rem;
   }
 
-  .membership-features-strip {
-    gap: 6px;
-  }
-
-  .mem-feat-item {
-    min-width: 70px;
-    padding: 6px 6px;
-    font-size: 0.72rem;
-  }
-
-  .id-card-wrapper {
-    max-width: 100%;
-  }
-
-  .id-card-body {
-    width: 250px;
-    max-width: 100%;
-  }
-
-  .membership-cta-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
+  .membership-slogan-lines p {
+    font-size: 0.88rem;
   }
 
   .btn-pill-membership-join {
     width: 100%;
     justify-content: center;
     font-size: 0.88rem;
-    padding: 8px 12px;
+    padding: 9px 16px;
   }
+
+  .membership-cards-stage-wrap {
+    min-height: 330px;
+  }
+
+  .membership-podium-stage {
+    width: 260px;
+  }
+
+  .podium-tier-base {
+    width: 260px;
+    height: 30px;
+  }
+
+  .podium-tier-top {
+    width: 220px;
+    height: 26px;
+    bottom: 10px;
+  }
+
+  .membership-id-cards-area {
+    transform: scale(0.64);
+    transform-origin: bottom center;
+  }
+
 
   /* Section 10 — Footer */
   .site-footer {
