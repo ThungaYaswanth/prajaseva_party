@@ -2998,9 +2998,9 @@ body {
 .membership-grand-card {
   position: relative;
   background: #FFFFFF;
-  border-radius: 24px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.03);
+  border: 1px solid #E2E8F0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -3011,14 +3011,14 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 58%;
+  width: 55%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
-  opacity: 0.38;
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 1) 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 1) 100%);
+  opacity: 0.42;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 1) 90%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 1) 90%);
   pointer-events: none;
   z-index: 1;
 }
@@ -3027,13 +3027,12 @@ body {
 .membership-tg-map-watermark {
   position: absolute;
   left: 22%;
-  top: 45%;
+  top: 46%;
   transform: translateY(-50%);
-  width: 270px;
-  opacity: 0.09;
+  width: 280px;
+  opacity: 0.08;
   pointer-events: none;
   z-index: 1;
-  filter: drop-shadow(0 0 12px rgba(200, 16, 22, 0.25));
 }
 
 .membership-tg-map-watermark img {
@@ -3044,19 +3043,18 @@ body {
 
 /* Top Content Row: Left Column + Right 3D Cards */
 .membership-card-top-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 370px 1fr;
   align-items: center;
-  justify-content: space-between;
-  padding: 44px 44px 20px 48px;
+  padding: 36px 40px 16px 44px;
   position: relative;
   z-index: 2;
-  gap: 32px;
+  min-height: 430px;
+  gap: 20px;
 }
 
 /* Left Column: Brand Pill, Headline, Slogans, CTA Button */
 .membership-left-content {
-  flex: 0 0 380px;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3072,25 +3070,25 @@ body {
   color: #FFFFFF;
   padding: 4px 18px 4px 5px;
   border-radius: 50px;
-  box-shadow: 0 4px 14px rgba(200, 16, 22, 0.25);
-  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(200, 16, 22, 0.25);
+  margin-bottom: 16px;
 }
 
 .brand-pill-icon-wrap {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
 }
 
 .brand-pill-emblem {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
@@ -3105,36 +3103,36 @@ body {
 .membership-main-heading {
   display: flex;
   flex-direction: column;
-  line-height: 1.08;
-  margin: 0 0 18px 0;
+  line-height: 1.05;
+  margin: 0 0 16px 0;
 }
 
 .heading-line-party {
-  font-size: clamp(2.4rem, 3.2vw, 2.9rem);
+  font-size: clamp(2.4rem, 3.2vw, 2.8rem);
   font-weight: 900;
   color: #0F172A;
   letter-spacing: -0.5px;
 }
 
 .heading-line-membership {
-  font-size: clamp(3rem, 4vw, 3.7rem);
+  font-size: clamp(3rem, 4vw, 3.6rem);
   font-weight: 900;
   color: #C81016;
   letter-spacing: -0.5px;
-  text-shadow: 0 2px 10px rgba(200, 16, 22, 0.15);
+  text-shadow: 0 2px 8px rgba(200, 16, 22, 0.15);
 }
 
 /* Slogan Lines */
 .membership-slogan-lines {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-bottom: 24px;
+  gap: 4px;
+  margin-bottom: 22px;
 }
 
 .membership-slogan-lines p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 700;
   color: #334155;
   line-height: 1.5;
@@ -3142,7 +3140,7 @@ body {
 
 /* CTA Button */
 .membership-cta-action {
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .btn-pill-membership-join {
@@ -3153,10 +3151,10 @@ body {
   color: #FFFFFF;
   border: none;
   border-radius: 50px;
-  padding: 12px 24px;
-  font-size: 1.02rem;
+  padding: 11px 24px;
+  font-size: 1rem;
   font-weight: 800;
-  box-shadow: 0 6px 20px rgba(200, 16, 22, 0.35);
+  box-shadow: 0 6px 18px rgba(200, 16, 22, 0.35);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 0.2px;
@@ -3165,7 +3163,7 @@ body {
 .btn-pill-membership-join:hover {
   transform: translateY(-2px);
   background: #B00B10;
-  box-shadow: 0 10px 26px rgba(200, 16, 22, 0.48);
+  box-shadow: 0 10px 24px rgba(200, 16, 22, 0.48);
   color: #FFFFFF;
 }
 
@@ -3187,22 +3185,21 @@ body {
    ========================================================================== */
 .membership-cards-stage-wrap {
   position: relative;
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 480px;
+  height: 420px;
   z-index: 3;
 }
 
 /* 3D Tiered Elliptical Podium / Pedestal */
 .membership-podium-stage {
   position: absolute;
-  bottom: 0px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 480px;
-  height: 80px;
+  width: 440px;
+  height: 60px;
   pointer-events: none;
   z-index: 1;
 }
@@ -3212,23 +3209,23 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 480px;
-  height: 48px;
+  width: 440px;
+  height: 38px;
   border-radius: 50%;
   background: linear-gradient(180deg, #D41117 0%, #A30A0F 60%, #680508 100%);
-  box-shadow: 0 18px 36px rgba(163, 10, 15, 0.4), 0 30px 48px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 28px rgba(163, 10, 15, 0.35), 0 24px 36px rgba(0, 0, 0, 0.16);
 }
 
 .podium-tier-top {
   position: absolute;
-  bottom: 20px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
-  height: 44px;
+  width: 370px;
+  height: 34px;
   border-radius: 50%;
   background: linear-gradient(180deg, #FFFFFF 0%, #FEE2E2 50%, #DC2626 100%);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12), inset 0 2px 5px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.9);
 }
 
 /* Hanging ID Cards Area */
@@ -3238,7 +3235,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   z-index: 2;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .id-card-wrapper {
@@ -3251,7 +3248,7 @@ body {
 
 .id-card-wrapper.front-card {
   z-index: 5;
-  margin-right: -18px;
+  margin-right: -24px;
   transform: rotate(-1.5deg);
 }
 
@@ -3272,12 +3269,12 @@ body {
 
 /* Crimson Lanyard Ribbon with Stitching */
 .id-lanyard-strap {
-  width: 32px;
-  height: 55px;
+  width: 24px;
+  height: 38px;
   background: linear-gradient(90deg, #8B0000 0%, #C81016 45%, #EF4444 55%, #8B0000 100%);
-  border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.25);
-  margin-bottom: -5px;
+  border-radius: 3px 3px 0 0;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.25);
+  margin-bottom: -4px;
   z-index: 6;
   position: relative;
   display: flex;
@@ -3286,23 +3283,23 @@ body {
 }
 
 .id-lanyard-stitch {
-  width: 32px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.88);
+  width: 24px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Silver Metallic Badge Clip */
 .id-clip-metal {
-  width: 40px;
-  height: 16px;
+  width: 32px;
+  height: 12px;
   background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 30%, #94A3B8 70%, #CBD5E1 100%);
   border-radius: 3px;
   border: 1px solid #475569;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32), inset 0 1px 1px #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), inset 0 1px 1px #fff;
   z-index: 7;
   position: relative;
-  margin-top: -3px;
+  margin-top: -2px;
 }
 
 .id-clip-metal::after {
@@ -3311,23 +3308,36 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 14px;
-  height: 3.5px;
+  width: 12px;
+  height: 3px;
   background: #1E293B;
   border-radius: 2px;
 }
 
 /* ID Card Body - Front Card */
-.id-card-body {
-  width: 285px;
-  min-height: 395px;
+.id-card-wrapper.front-card .id-card-body {
+  width: 248px;
+  height: 350px;
   background: #FFFFFF;
-  border-radius: 22px;
-  border: 3.5px solid #F59E0B;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(245, 158, 11, 0.4);
+  border-radius: 18px;
+  border: 2.5px solid #F59E0B;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
-  margin-top: -6px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ID Card Body - Back Card */
+.id-card-wrapper.back-card .id-card-body {
+  width: 244px;
+  height: 350px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 2.5px solid #F59E0B;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -3337,95 +3347,95 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, transparent 60%);
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
   pointer-events: none;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 18px;
   z-index: 9;
 }
 
 /* Card Slot Punch Hole */
 .id-slot-hole {
-  width: 32px;
-  height: 6px;
+  width: 28px;
+  height: 5px;
   background: #0F172A;
   border-radius: 10px;
-  margin: 6px auto 4px auto;
+  margin: 5px auto 3px auto;
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.65), 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* ID Card Header Banner */
 .id-card-header {
   background: linear-gradient(180deg, #A50B0F 0%, #C81016 100%);
-  padding: 7px 10px;
+  padding: 5px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  gap: 6px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .id-emblem-wrap {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
 }
 
 .id-emblem-img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
 .id-header-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.15;
+  line-height: 1.1;
   text-align: left;
 }
 
 .id-party-te {
   color: #FFFFFF;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 900;
   letter-spacing: 0.2px;
 }
 
 .id-party-slogan-mini {
   color: #FEE2E2;
-  font-size: 0.52rem;
+  font-size: 0.46rem;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 /* Gold Ribbon: MEMBER ID CARD */
 .id-gold-ribbon {
   background: linear-gradient(90deg, #D97706 0%, #F59E0B 20%, #FDE047 50%, #F59E0B 80%, #D97706 100%);
   color: #000000;
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 900;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px;
   text-align: center;
-  padding: 2.5px 0;
+  padding: 2px 0;
   border-radius: 3px;
-  margin: 3px 10px 4px 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  margin: 2px 8px 3px 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Card 1 Main Grid (Photo Left, Details Right) */
 .id-card-main-grid {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 8px;
-  padding: 4px 10px 4px 10px;
+  grid-template-columns: 66px 1fr;
+  gap: 6px;
+  padding: 2px 8px 2px 8px;
   align-items: flex-start;
   position: relative;
 }
@@ -3437,12 +3447,12 @@ body {
 }
 
 .id-photo-frame {
-  width: 80px;
-  height: 100px;
-  border: 2px solid #C81016;
-  border-radius: 6px;
+  width: 66px;
+  height: 82px;
+  border: 1.8px solid #C81016;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   background: #0F172A;
 }
 
@@ -3458,19 +3468,20 @@ body {
 .id-details-col {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   padding-top: 1px;
 }
 
 .id-field-row {
   display: flex;
   align-items: baseline;
-  font-size: 0.64rem;
-  line-height: 1.35;
+  font-size: 0.58rem;
+  line-height: 1.3;
+  white-space: nowrap;
 }
 
 .field-lbl {
-  width: 58px;
+  width: 52px;
   color: #1E293B;
   font-weight: 700;
   flex-shrink: 0;
@@ -3487,18 +3498,19 @@ body {
 .field-val {
   color: #0F172A;
   font-weight: 700;
-  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .field-val.highlight-red {
   color: #C81016;
   font-weight: 900;
-  font-size: 0.72rem;
+  font-size: 0.64rem;
 }
 
 .field-val.desig {
   color: #0F172A;
-  font-size: 0.62rem;
+  font-size: 0.56rem;
   font-weight: 800;
 }
 
@@ -3506,18 +3518,18 @@ body {
   color: #C81016;
   font-weight: 900;
   letter-spacing: 0.3px;
-  font-size: 0.68rem;
+  font-size: 0.6rem;
 }
 
 .field-val.blood-group {
   color: #C81016;
   font-weight: 900;
-  font-size: 0.68rem;
+  font-size: 0.6rem;
 }
 
 .field-val.date-joined {
   font-weight: 800;
-  font-size: 0.64rem;
+  font-size: 0.58rem;
 }
 
 /* Front Card Footer Strip */
@@ -3525,19 +3537,19 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 4px 8px 6px 8px;
+  padding: 3px 6px 4px 6px;
   position: relative;
   margin-top: auto;
 }
 
 .id-qr-box {
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
   background: #FFFFFF;
   border: 1px solid #CBD5E1;
-  border-radius: 4px;
-  padding: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
@@ -3552,32 +3564,32 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
-  font-size: 0.52rem;
+  font-size: 0.46rem;
   color: #475569;
 }
 
 .tagline-bold {
   font-weight: 900;
   color: #0F172A;
-  font-size: 0.56rem;
+  font-size: 0.5rem;
 }
 
 .tagline-bars {
   display: flex;
   gap: 2px;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .bar-yellow {
-  width: 14px;
-  height: 2.5px;
+  width: 12px;
+  height: 2px;
   background: #F59E0B;
   border-radius: 1px;
 }
 
 .bar-red {
-  width: 14px;
-  height: 2.5px;
+  width: 12px;
+  height: 2px;
   background: #C81016;
   border-radius: 1px;
 }
@@ -3585,11 +3597,11 @@ body {
 .id-seal-watermark {
   position: absolute;
   left: 52%;
-  bottom: 6px;
+  bottom: 4px;
   transform: translateX(-50%);
-  width: 44px;
-  height: 44px;
-  opacity: 0.32;
+  width: 36px;
+  height: 36px;
+  opacity: 0.28;
   pointer-events: none;
 }
 
@@ -3604,20 +3616,20 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  line-height: 1.15;
+  line-height: 1.1;
   flex-shrink: 0;
 }
 
 .signature-script {
   font-family: 'Brush Script MT', 'Segoe Script', cursive, sans-serif;
   color: #1D4ED8;
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-weight: 700;
   margin-bottom: -2px;
 }
 
 .signature-lbl {
-  font-size: 0.44rem;
+  font-size: 0.4rem;
   color: #334155;
   font-weight: 800;
   border-top: 0.5px solid #94A3B8;
@@ -3625,13 +3637,13 @@ body {
 }
 
 .signature-sub {
-  font-size: 0.4rem;
+  font-size: 0.36rem;
   color: #C81016;
   font-weight: 800;
 }
 
 .id-bottom-wave-strip {
-  height: 8px;
+  height: 6px;
   background: linear-gradient(90deg, #FFC928 0%, #F59E0B 25%, #C81016 65%, #88070A 100%);
   width: 100%;
 }
@@ -3639,61 +3651,57 @@ body {
 /* ==========================================================================
    Back ID Card (Party Member Responsibilities)
    ========================================================================== */
-.id-card-wrapper.back-card .id-card-body {
-  width: 275px;
-  border-color: #F59E0B;
-}
-
 .id-red-ribbon {
   background: linear-gradient(90deg, #8B0000 0%, #C81016 50%, #8B0000 100%);
   color: #FFFFFF;
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 800;
   text-align: center;
-  padding: 3px 10px;
-  margin: 4px 10px 6px 10px;
-  border-radius: 20px;
-  box-shadow: 0 1px 4px rgba(200, 16, 22, 0.25);
+  padding: 2.5px 8px;
+  margin: 3px 8px 5px 8px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(200, 16, 22, 0.25);
 }
 
 .id-responsibilities-list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  padding: 2px 12px 6px 12px;
+  gap: 5px;
+  padding: 2px 10px 4px 10px;
 }
 
 .resp-item {
   display: flex;
   align-items: flex-start;
-  gap: 7px;
+  gap: 6px;
 }
 
 .resp-bullet-icon {
-  width: 17px;
-  height: 17px;
-  min-width: 17px;
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
   background: #C81016;
   color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.55rem;
-  margin-top: 2px;
-  box-shadow: 0 1px 3px rgba(200, 16, 22, 0.25);
+  font-size: 0.5rem;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px rgba(200, 16, 22, 0.25);
+  flex-shrink: 0;
 }
 
 .resp-text {
   color: #1E293B;
-  font-size: 0.63rem;
-  line-height: 1.35;
+  font-size: 0.57rem;
+  line-height: 1.3;
   font-weight: 700;
 }
 
 .id-crowd-silhouette {
-  height: 28px;
-  background: linear-gradient(180deg, transparent 0%, rgba(200, 16, 22, 0.22) 100%);
+  height: 38px;
+  background: linear-gradient(180deg, transparent 0%, rgba(200, 16, 22, 0.25) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3710,20 +3718,20 @@ body {
 .id-quote-banner {
   background: linear-gradient(135deg, #7F0000 0%, #A50B0F 50%, #7F0000 100%);
   color: #FFFFFF;
-  padding: 5px 8px;
+  padding: 4px 8px;
   text-align: center;
-  margin: 3px 8px 6px 8px;
-  border-radius: 16px;
+  margin: 2px 6px 5px 6px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
 }
 
 .quote-sign {
   color: #FFC928;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 900;
   line-height: 1;
 }
@@ -3736,7 +3744,7 @@ body {
 
 .quote-motto-line1,
 .quote-motto-line2 {
-  font-size: 0.6rem;
+  font-size: 0.56rem;
   font-weight: 800;
 }
 
@@ -3746,7 +3754,7 @@ body {
 .membership-bottom-stats-strip {
   background: #FFFFFF;
   border-top: 1px solid #F1F5F9;
-  padding: 16px 24px;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -3757,24 +3765,24 @@ body {
 .mem-stat-col {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex: 1;
   justify-content: center;
-  padding: 4px 10px;
+  padding: 2px 8px;
 }
 
 .mem-stat-icon-circle {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: #C81016;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(200, 16, 22, 0.25);
+  box-shadow: 0 3px 8px rgba(200, 16, 22, 0.22);
 }
 
 .mem-stat-info {
@@ -3784,24 +3792,25 @@ body {
 }
 
 .mem-stat-num {
-  font-size: 1.4rem;
+  font-size: 1.28rem;
   font-weight: 900;
   color: #C81016;
   letter-spacing: -0.3px;
 }
 
 .mem-stat-lbl {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #334155;
 }
 
 .mem-stat-divider {
   width: 1px;
-  height: 36px;
+  height: 32px;
   background: #E2E8F0;
   flex-shrink: 0;
 }
+
 
 
 
@@ -4237,11 +4246,12 @@ body {
   }
 
   .membership-card-top-row {
+    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 36px 20px 20px 20px;
-    gap: 28px;
+    padding: 32px 18px 16px 18px;
+    gap: 24px;
   }
 
   .membership-left-content {
@@ -4347,28 +4357,30 @@ body {
   }
 
   .membership-cards-stage-wrap {
-    min-height: 440px;
+    height: 370px;
+    min-height: 370px;
     width: 100%;
   }
 
   .membership-podium-stage {
-    width: 400px;
+    width: 360px;
   }
 
   .podium-tier-base {
-    width: 400px;
-    height: 42px;
+    width: 360px;
+    height: 36px;
   }
 
   .podium-tier-top {
-    width: 340px;
-    height: 38px;
-    bottom: 16px;
+    width: 300px;
+    height: 30px;
+    bottom: 12px;
   }
 
   .membership-id-cards-area {
-    transform: scale(0.88);
+    transform: scale(0.85);
     transform-origin: bottom center;
+    margin-bottom: 20px;
   }
 
   .footer-top {
@@ -4452,8 +4464,8 @@ body {
   }
 
   .membership-card-top-row {
-    padding: 24px 14px 16px 14px;
-    gap: 20px;
+    padding: 22px 12px 14px 12px;
+    gap: 16px;
   }
 
   .membership-left-content {
@@ -4461,15 +4473,15 @@ body {
   }
 
   .heading-line-party {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   .heading-line-membership {
-    font-size: 2.7rem;
+    font-size: 2.6rem;
   }
 
   .membership-slogan-lines p {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 
   .btn-pill-membership-join {
@@ -4478,33 +4490,35 @@ body {
   }
 
   .membership-cards-stage-wrap {
-    min-height: 380px;
+    height: 330px;
+    min-height: 330px;
   }
 
   .membership-podium-stage {
-    width: 310px;
+    width: 300px;
   }
 
   .podium-tier-base {
-    width: 310px;
-    height: 34px;
+    width: 300px;
+    height: 30px;
   }
 
   .podium-tier-top {
-    width: 260px;
-    height: 30px;
-    bottom: 12px;
+    width: 250px;
+    height: 26px;
+    bottom: 10px;
   }
 
   .membership-id-cards-area {
-    transform: scale(0.76);
+    transform: scale(0.72);
     transform-origin: bottom center;
+    margin-bottom: 16px;
   }
 
   .membership-bottom-stats-strip {
     grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 14px 12px;
+    gap: 10px;
+    padding: 12px;
   }
 }
 
