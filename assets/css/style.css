@@ -459,6 +459,26 @@ body {
 /* ==========================================================================
    Mobile Navigation Responsive Rules (< 992px)
    ========================================================================== */
+@media (max-width: 1200px) and (min-width: 992px) {
+  .membership-card-top-row {
+    padding: 24px 20px 12px 220px;
+    gap: 16px;
+  }
+  .membership-leader-col {
+    width: 235px;
+  }
+  .membership-left-content {
+    max-width: 410px;
+  }
+  .mem-feature-card {
+    min-width: 85px;
+    padding: 8px 8px;
+  }
+  .card-template-exact {
+    width: 310px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .site-header {
     position: sticky;
@@ -2986,10 +3006,10 @@ body {
 }
 
 /* ==========================================================================
-   Section 11 — Membership Section with Hanging ID Cards (Master Reference Match)
+   Section 11 — Membership Section with Authentic Master ID Card
    ========================================================================== */
 .membership-master-section {
-  padding-top: 20px;
+  padding-top: 24px;
   padding-bottom: 50px;
   position: relative;
   overflow: visible;
@@ -3003,151 +3023,227 @@ body {
   position: relative;
 }
 
-/* Master Grand Backdrop Card */
+/* Master Grand Backdrop Card with lastimage.webp background */
 .membership-grand-card {
   position: relative;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.03);
+  background-color: #FFFFFF;
+  background-image: url('../images/lastimage.webp');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
   border: 1px solid #E2E8F0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 550px;
 }
 
-/* Background Layer 1: Charminar with Crowd & Flags on the Right */
-.membership-charminar-bg {
+/* Subtle warm glow behind leader */
+.membership-grand-card::before {
+  content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: cover;
-  opacity: 0.42;
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 1) 90%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 1) 90%);
+  top: 10px;
+  left: 20px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.16) 0%, rgba(245, 158, 11, 0.08) 50%, transparent 70%);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Background Layer 2: Telangana Map Silhouette Watermark */
-.membership-tg-map-watermark {
+/* Leader Cut-out Image Standing on Left pointing at user */
+.membership-leader-col {
   position: absolute;
-  left: 22%;
-  top: 46%;
-  transform: translateY(-50%);
-  width: 280px;
-  opacity: 0.08;
+  left: 6px;
+  bottom: 0;
+  height: 98%;
+  max-height: 540px;
+  width: 275px;
+  display: flex;
+  align-items: flex-end;
   pointer-events: none;
-  z-index: 1;
-}
-
-.membership-tg-map-watermark img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Top Content Row: Left Column + Right 3D Cards */
-.membership-card-top-row {
-  display: grid;
-  grid-template-columns: 370px 1fr;
-  align-items: center;
-  padding: 36px 40px 16px 44px;
-  position: relative;
   z-index: 2;
-  min-height: 430px;
-  gap: 20px;
 }
 
-/* Left Column: Brand Pill, Headline, Slogans, CTA Button */
+.membership-leader-img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom left;
+  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.3));
+}
+
+/* Top Content Row: Left Column + Standalone ID Card */
+.membership-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 28px 12px 245px; /* space for leader on left */
+  position: relative;
+  z-index: 3;
+  gap: 22px;
+  flex: 1;
+}
+
+/* Left Column: Brand Pill, Headline, Slogan, Features, CTA Button */
 .membership-left-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 460px;
+  flex-shrink: 0;
   z-index: 3;
 }
 
-/* Brand Pill: Red capsule with white emblem disc & white text */
+/* Brand Pill: Red capsule with white emblem disc & dual-language text */
 .membership-brand-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   background: #C81016;
   color: #FFFFFF;
-  padding: 4px 18px 4px 5px;
+  padding: 5px 18px 5px 6px;
   border-radius: 50px;
-  box-shadow: 0 3px 10px rgba(200, 16, 22, 0.25);
-  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(200, 16, 22, 0.32);
+  margin-bottom: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
 }
 
 .brand-pill-icon-wrap {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
 }
 
 .brand-pill-emblem {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
+}
+
+.brand-pill-texts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .brand-te-name {
   color: #FFFFFF;
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: 0.98rem;
+  font-weight: 900;
   letter-spacing: 0.2px;
 }
 
-/* Headline: Two distinct lines (పార్టీ in Dark Navy / సభ్యత్వం in Crimson) */
+.brand-en-name {
+  color: #FEE2E2;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+/* Headline: పార్టీ (Navy) / సభ్యత్వం (Crimson) */
 .membership-main-heading {
   display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-  margin: 0 0 16px 0;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 1.1;
+  margin: 0 0 8px 0;
 }
 
 .heading-line-party {
-  font-size: clamp(2.4rem, 3.2vw, 2.8rem);
+  font-size: clamp(2.3rem, 3.2vw, 3rem);
   font-weight: 900;
   color: #0F172A;
   letter-spacing: -0.5px;
 }
 
 .heading-line-membership {
-  font-size: clamp(3rem, 4vw, 3.6rem);
+  font-size: clamp(2.5rem, 3.5vw, 3.3rem);
   font-weight: 900;
   color: #C81016;
   letter-spacing: -0.5px;
   text-shadow: 0 2px 8px rgba(200, 16, 22, 0.15);
 }
 
-/* Slogan Lines */
-.membership-slogan-lines {
+/* Slogan Text */
+.membership-slogan-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 18px 0;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+/* 3 Feature Badges in Horizontal Row */
+.membership-features-row {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 22px;
 }
 
-.membership-slogan-lines p {
-  margin: 0;
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: #334155;
-  line-height: 1.5;
+.mem-feature-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 105px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* CTA Button */
+.mem-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.mem-feature-icon {
+  font-size: 1.35rem;
+  color: #DC2626;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+.mem-feature-labels {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.feat-title {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.feat-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 2px;
+}
+
+/* CTA Action Button: Red pill with user-add icon and arrow */
 .membership-cta-action {
   margin-top: 2px;
 }
@@ -3156,14 +3252,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #C81016;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
   color: #FFFFFF;
   border: none;
   border-radius: 50px;
-  padding: 11px 24px;
-  font-size: 1rem;
+  padding: 10px 26px;
+  font-size: 1.02rem;
   font-weight: 800;
-  box-shadow: 0 6px 18px rgba(200, 16, 22, 0.35);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.38);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 0.2px;
@@ -3171,604 +3267,400 @@ body {
 
 .btn-pill-membership-join:hover {
   transform: translateY(-2px);
-  background: #B00B10;
-  box-shadow: 0 10px 24px rgba(200, 16, 22, 0.48);
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.5);
   color: #FFFFFF;
 }
 
-.btn-pill-membership-join i.bi-person-fill-add {
-  font-size: 1.25rem;
+.btn-icon-plus {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
-.btn-pill-membership-join i.bi-arrow-right {
+.btn-icon-arrow {
   font-size: 1.15rem;
   transition: transform 0.2s ease;
 }
 
-.btn-pill-membership-join:hover i.bi-arrow-right {
+.btn-pill-membership-join:hover .btn-icon-arrow {
   transform: translateX(4px);
 }
 
 /* ==========================================================================
-   Right Column: 3D ID Cards Standing on Tiered Podium Stage
+   Center/Right Column: Exact Master Reference Member ID Card
    ========================================================================== */
 .membership-cards-stage-wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 420px;
-  z-index: 3;
+  justify-content: flex-start;
+  margin-top: 0;
+  z-index: 4;
 }
 
-/* 3D Tiered Elliptical Podium / Pedestal */
-.membership-podium-stage {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 440px;
-  height: 60px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.podium-tier-base {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 440px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #D41117 0%, #A30A0F 60%, #680508 100%);
-  box-shadow: 0 14px 28px rgba(163, 10, 15, 0.35), 0 24px 36px rgba(0, 0, 0, 0.16);
-}
-
-.podium-tier-top {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 370px;
-  height: 34px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FEE2E2 50%, #DC2626 100%);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.9);
-}
-
-/* Hanging ID Cards Area */
 .membership-id-cards-area {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
-  z-index: 2;
-  margin-bottom: 24px;
 }
 
-.id-card-wrapper {
-  position: relative;
+.hanging-master-card {
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.22));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.2s ease;
 }
 
-.id-card-wrapper.front-card {
-  z-index: 5;
-  margin-right: -24px;
-  transform: rotate(-1.5deg);
+.hanging-master-card:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.3));
 }
 
-.id-card-wrapper.front-card:hover {
-  transform: rotate(0deg) translateY(-8px) scale(1.02);
-  z-index: 10;
-}
-
-.id-card-wrapper.back-card {
-  z-index: 4;
-  transform: rotate(2deg);
-}
-
-.id-card-wrapper.back-card:hover {
-  transform: rotate(0deg) translateY(-8px) scale(1.02);
-  z-index: 10;
-}
-
-/* Crimson Lanyard Ribbon with Stitching */
-.id-lanyard-strap {
-  width: 24px;
-  height: 38px;
-  background: linear-gradient(90deg, #8B0000 0%, #C81016 45%, #EF4444 55%, #8B0000 100%);
-  border-radius: 3px 3px 0 0;
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.25);
-  margin-bottom: -4px;
-  z-index: 6;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.id-lanyard-stitch {
-  width: 24px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Silver Metallic Badge Clip */
-.id-clip-metal {
-  width: 32px;
-  height: 12px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 30%, #94A3B8 70%, #CBD5E1 100%);
-  border-radius: 3px;
-  border: 1px solid #475569;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), inset 0 1px 1px #fff;
-  z-index: 7;
-  position: relative;
-  margin-top: -2px;
-}
-
-.id-clip-metal::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 3px;
-  background: #1E293B;
-  border-radius: 2px;
-}
-
-/* ID Card Body - Front Card */
-.id-card-wrapper.front-card .id-card-body {
-  width: 248px;
-  height: 350px;
+/* Card Body Matching Official Reference Image */
+.card-template-exact {
+  width: 330px;
+  max-width: 100%;
   background: #FFFFFF;
   border-radius: 18px;
-  border: 2.5px solid #F59E0B;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border: 1.5px solid #E2E8F0;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* ID Card Body - Back Card */
-.id-card-wrapper.back-card .id-card-body {
-  width: 244px;
-  height: 350px;
-  background: #FFFFFF;
-  border-radius: 18px;
-  border: 2.5px solid #F59E0B;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Plastic Sheen Overlay */
-.id-card-gloss-sheen {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
-  pointer-events: none;
-  border-top-right-radius: 18px;
-  z-index: 9;
-}
-
-/* Card Slot Punch Hole */
-.id-slot-hole {
-  width: 28px;
-  height: 5px;
-  background: #0F172A;
-  border-radius: 10px;
-  margin: 5px auto 3px auto;
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.65), 0 1px 1px rgba(255, 255, 255, 0.8);
-}
-
-/* ID Card Header Banner */
-.id-card-header {
-  background: linear-gradient(180deg, #A50B0F 0%, #C81016 100%);
-  padding: 5px 8px;
+/* 1. Red Header Banner with Round Emblem & Slogan */
+.id-header-exact {
+  background: linear-gradient(180deg, #DC2626 0%, #B91C1C 60%, #991B1B 100%);
+  padding: 8px 14px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  border-radius: 0 0 8px 8px;
-  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.id-emblem-wrap {
-  width: 26px;
-  height: 26px;
+.id-emblem-ring {
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: #FFFFFF;
+  border: 2.5px solid #DC2626;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
 }
 
-.id-emblem-img {
-  width: 20px;
-  height: 20px;
+.id-emblem-exact-img {
+  width: 38px;
+  height: 38px;
   object-fit: contain;
 }
 
-.id-header-text {
+.id-title-exact-wrap {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
   text-align: left;
 }
 
-.id-party-te {
+.id-title-exact-telugu {
+  font-size: 1.35rem;
+  font-weight: 900;
   color: #FFFFFF;
-  font-size: 0.92rem;
-  font-weight: 900;
   letter-spacing: 0.2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.id-party-slogan-mini {
-  color: #FEE2E2;
-  font-size: 0.46rem;
+.id-slogan-exact-telugu {
+  font-size: 0.62rem;
   font-weight: 700;
+  color: #FFFFFF;
+  margin-top: 2px;
   letter-spacing: 0.2px;
+  opacity: 0.95;
 }
 
-/* Gold Ribbon: MEMBER ID CARD */
-.id-gold-ribbon {
-  background: linear-gradient(90deg, #D97706 0%, #F59E0B 20%, #FDE047 50%, #F59E0B 80%, #D97706 100%);
-  color: #000000;
-  font-size: 0.65rem;
+/* 2. Golden-Yellow & Red Ribbon: —— ID CARD —— */
+.id-ribbon-exact {
+  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
+  padding: 2.5px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.id-ribbon-content {
+  background: #B91C1C;
+  color: #FFFFFF;
+  font-size: 0.76rem;
   font-weight: 900;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-align: center;
   padding: 2px 0;
-  border-radius: 3px;
-  margin: 2px 8px 3px 8px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-/* Card 1 Main Grid (Photo Left, Details Right) */
-.id-card-main-grid {
+.ribbon-dash {
+  color: #FBBF24;
+  font-weight: 900;
+}
+
+.ribbon-text {
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+/* 3. Photo (Left) + Member Details (Right) */
+.id-info-exact-grid {
   display: grid;
-  grid-template-columns: 66px 1fr;
-  gap: 6px;
-  padding: 2px 8px 2px 8px;
+  grid-template-columns: 114px 1fr;
+  gap: 10px;
+  padding: 10px 14px 6px 14px;
   align-items: flex-start;
   position: relative;
 }
 
-.id-photo-col {
+.id-photo-exact-col {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.id-photo-frame {
-  width: 66px;
-  height: 82px;
-  border: 1.8px solid #C81016;
-  border-radius: 5px;
+.id-photo-exact-frame {
+  width: 114px;
+  height: 138px;
+  border: 2.5px solid #DC2626;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  background: #0F172A;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  background: #000;
 }
 
-.id-photo-img {
+.id-photo-exact-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center top;
   display: block;
 }
 
-/* Member Details Column */
-.id-details-col {
+.id-fields-exact-col {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3.5px;
   padding-top: 1px;
 }
 
-.id-field-row {
+.id-row-exact {
   display: flex;
   align-items: baseline;
-  font-size: 0.58rem;
-  line-height: 1.3;
+  font-size: 0.72rem;
+  line-height: 1.32;
   white-space: nowrap;
 }
 
-.field-lbl {
-  width: 52px;
-  color: #1E293B;
-  font-weight: 700;
+.id-lbl-exact {
+  width: 74px;
+  color: #111827;
+  font-weight: 800;
   flex-shrink: 0;
 }
 
-.field-sep {
-  width: 6px;
-  color: #334155;
-  font-weight: 700;
+.id-sep-exact {
+  width: 10px;
+  color: #111827;
+  font-weight: 800;
   text-align: center;
   flex-shrink: 0;
 }
 
-.field-val {
-  color: #0F172A;
-  font-weight: 700;
+.id-val-exact.val-red {
+  color: #DC2626;
+  font-weight: 900;
+  font-size: 0.74rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.field-val.highlight-red {
-  color: #C81016;
-  font-weight: 900;
-  font-size: 0.64rem;
+.desig-exact-row {
+  align-items: flex-start;
 }
 
-.field-val.desig {
-  color: #0F172A;
-  font-size: 0.56rem;
-  font-weight: 800;
+.desig-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
 }
 
-.field-val.id-number {
-  color: #C81016;
-  font-weight: 900;
+.id-num-bold {
   letter-spacing: 0.3px;
-  font-size: 0.6rem;
 }
 
-.field-val.blood-group {
-  color: #C81016;
-  font-weight: 900;
-  font-size: 0.6rem;
-}
-
-.field-val.date-joined {
-  font-weight: 800;
-  font-size: 0.58rem;
-}
-
-/* Front Card Footer Strip */
-.id-card-footer-strip {
+/* 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) */
+.id-auth-exact-strip {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 3px 6px 4px 6px;
+  padding: 6px 14px 8px 14px;
   position: relative;
-  margin-top: auto;
 }
 
-.id-qr-box {
-  width: 42px;
-  height: 42px;
+.id-qr-exact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 2;
+}
+
+.id-qr-box-frame {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 2px;
   background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  border-radius: 3px;
-  padding: 1px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .id-qr-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
-.id-tagline-col {
+.id-tagline-exact {
   display: flex;
   flex-direction: column;
-  line-height: 1.15;
-  font-size: 0.46rem;
-  color: #475569;
+  line-height: 1.1;
+  text-align: left;
 }
 
-.tagline-bold {
-  font-weight: 900;
-  color: #0F172A;
-  font-size: 0.5rem;
-}
-
-.tagline-bars {
+.tagline-bars-exact {
   display: flex;
   gap: 2px;
-  margin-top: 1px;
+  margin-bottom: 2px;
 }
 
-.bar-yellow {
-  width: 12px;
-  height: 2px;
+.bar-gold {
+  width: 16px;
+  height: 2.5px;
   background: #F59E0B;
   border-radius: 1px;
 }
 
 .bar-red {
-  width: 12px;
-  height: 2px;
-  background: #C81016;
+  width: 16px;
+  height: 2.5px;
+  background: #DC2626;
   border-radius: 1px;
 }
 
-.id-seal-watermark {
-  position: absolute;
-  left: 52%;
-  bottom: 4px;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
-  opacity: 0.28;
-  pointer-events: none;
+.tagline-line1 {
+  font-size: 0.44rem;
+  color: #1E293B;
+  font-weight: 700;
 }
 
-.id-seal-img {
+.tagline-line2 {
+  font-size: 0.52rem;
+  color: #1E3A8A;
+  font-weight: 900;
+}
+
+.id-watermark-exact {
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.id-watermark-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.id-signature-col {
+.id-signature-exact-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  line-height: 1.1;
-  flex-shrink: 0;
+  z-index: 2;
 }
 
-.signature-script {
-  font-family: 'Brush Script MT', 'Segoe Script', cursive, sans-serif;
-  color: #1D4ED8;
-  font-size: 0.88rem;
-  font-weight: 700;
-  margin-bottom: -2px;
+.signature-drawing {
+  margin-bottom: 2px;
 }
 
-.signature-lbl {
-  font-size: 0.4rem;
-  color: #334155;
+.signature-lbl-exact {
+  font-size: 0.52rem;
   font-weight: 800;
-  border-top: 0.5px solid #94A3B8;
-  padding-top: 1px;
+  color: #111827;
+  border-top: 1px solid #94A3B8;
+  padding-top: 2px;
 }
 
-.signature-sub {
-  font-size: 0.36rem;
-  color: #C81016;
-  font-weight: 800;
-}
-
-.id-bottom-wave-strip {
-  height: 6px;
-  background: linear-gradient(90deg, #FFC928 0%, #F59E0B 25%, #C81016 65%, #88070A 100%);
-  width: 100%;
-}
-
-/* ==========================================================================
-   Back ID Card (Party Member Responsibilities)
-   ========================================================================== */
-.id-red-ribbon {
-  background: linear-gradient(90deg, #8B0000 0%, #C81016 50%, #8B0000 100%);
-  color: #FFFFFF;
-  font-size: 0.65rem;
-  font-weight: 800;
+/* 5. Bottom Red Curved Banner: ప్రజా సేవా పార్టీ */
+.id-bottom-exact-banner {
+  background: linear-gradient(180deg, #DC2626 0%, #B91C1C 60%, #991B1B 100%);
+  padding: 6px 10px 7px 10px;
   text-align: center;
-  padding: 2.5px 8px;
-  margin: 3px 8px 5px 8px;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(200, 16, 22, 0.25);
-}
-
-.id-responsibilities-list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 2px 10px 4px 10px;
-}
-
-.resp-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-}
-
-.resp-bullet-icon {
-  width: 15px;
-  height: 15px;
-  min-width: 15px;
-  background: #C81016;
-  color: #FFFFFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.5rem;
-  margin-top: 1px;
-  box-shadow: 0 1px 2px rgba(200, 16, 22, 0.25);
-  flex-shrink: 0;
-}
-
-.resp-text {
-  color: #1E293B;
-  font-size: 0.57rem;
-  line-height: 1.3;
-  font-weight: 700;
-}
-
-.id-crowd-silhouette {
-  height: 38px;
-  background: linear-gradient(180deg, transparent 0%, rgba(200, 16, 22, 0.25) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  margin-top: auto;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-.flag-icon-wrap {
-  color: #C81016;
-  font-size: 1.1rem;
-  opacity: 0.75;
+.id-bottom-gold-curve {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
+  border-radius: 50% 50% 0 0;
 }
 
-.id-quote-banner {
-  background: linear-gradient(135deg, #7F0000 0%, #A50B0F 50%, #7F0000 100%);
-  color: #FFFFFF;
-  padding: 4px 8px;
-  text-align: center;
-  margin: 2px 6px 5px 6px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
-}
-
-.quote-sign {
-  color: #FFC928;
-  font-size: 0.8rem;
+.id-bottom-telugu-text {
+  font-size: 1.12rem;
   font-weight: 900;
-  line-height: 1;
-}
-
-.quote-motto-wrap {
-  display: flex;
-  flex-direction: column;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
   line-height: 1.2;
-}
-
-.quote-motto-line1,
-.quote-motto-line2 {
-  font-size: 0.56rem;
-  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 /* ==========================================================================
-   Bottom 4-Stats Strip Matching Master Reference
+   Bottom 4-Stats Strip Floating Card Matching Master Reference
    ========================================================================== */
 .membership-bottom-stats-strip {
   background: #FFFFFF;
-  border-top: 1px solid #F1F5F9;
-  padding: 18px 24px;
+  border-radius: 20px;
+  margin: 10px 40px 24px 40px;
+  padding: 12px 28px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
-  z-index: 3;
+  z-index: 5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(226, 232, 240, 0.85);
 }
 
 .mem-stat-col {
@@ -3777,7 +3669,7 @@ body {
   gap: 14px;
   flex: 1;
   justify-content: center;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 12px;
   transition: all 0.22s ease;
 }
@@ -3790,20 +3682,20 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #C81016 0%, #A00C12 100%);
+  background: linear-gradient(135deg, #DC2626 0%, #A00C12 100%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(200, 16, 22, 0.28);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .mem-stat-col:hover .mem-stat-icon-circle {
   transform: scale(1.08);
-  box-shadow: 0 6px 16px rgba(200, 16, 22, 0.35);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
 }
 
 .mem-stat-info {
@@ -3815,15 +3707,15 @@ body {
 .mem-stat-num {
   font-size: 1.35rem;
   font-weight: 900;
-  color: #C81016;
+  color: #DC2626;
   letter-spacing: -0.3px;
   line-height: 1.15;
 }
 
 .mem-stat-lbl {
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #334155;
+  color: #1E293B;
   margin-top: 2px;
 }
 
@@ -3833,9 +3725,6 @@ body {
   background: #E2E8F0;
   flex-shrink: 0;
 }
-
-
-
 
 /* ==========================================================================
    Section 12 — Footer
@@ -4323,6 +4212,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .membership-grand-card {
+    min-height: auto;
+  }
+
+  .membership-leader-col {
+    display: none;
+  }
+
   .membership-card-top-row {
     display: flex;
     flex-direction: column;
@@ -4340,16 +4237,19 @@ body {
 
   .membership-main-heading {
     align-items: center;
+    justify-content: center;
   }
 
-  .membership-slogan-lines {
-    align-items: center;
+  .membership-slogan-text {
     text-align: center;
   }
 
-  .membership-charminar-bg {
-    width: 100%;
-    opacity: 0.18;
+  .membership-features-row {
+    justify-content: center;
+  }
+
+  .membership-cards-stage-wrap {
+    margin-top: 0;
   }
 
   .membership-bottom-stats-strip {
@@ -4357,8 +4257,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 18px 16px;
+    margin: 10px 16px 20px 16px;
     background: #FFFFFF;
-    border-top: 1px solid #ECEFF2;
   }
 
   .mem-stat-divider {
@@ -4629,7 +4529,7 @@ body {
 
   .membership-card-top-row {
     padding: 22px 12px 14px 12px;
-    gap: 16px;
+    gap: 20px;
   }
 
   .membership-left-content {
@@ -4641,47 +4541,32 @@ body {
   }
 
   .heading-line-membership {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 
-  .membership-slogan-lines p {
-    font-size: 0.92rem;
+  .membership-slogan-text {
+    font-size: 0.94rem;
   }
 
   .btn-pill-membership-join {
-    padding: 10px 20px;
+    padding: 10px 22px;
     font-size: 0.94rem;
   }
 
   .membership-cards-stage-wrap {
-    height: 330px;
-    min-height: 330px;
+    margin-top: 0;
   }
 
-  .membership-podium-stage {
-    width: 300px;
-  }
-
-  .podium-tier-base {
-    width: 300px;
-    height: 30px;
-  }
-
-  .podium-tier-top {
-    width: 250px;
-    height: 26px;
-    bottom: 10px;
-  }
-
-  .membership-id-cards-area {
-    transform: scale(0.72);
-    transform-origin: bottom center;
-    margin-bottom: 16px;
+  .hanging-master-card {
+    transform: scale(0.9);
+    transform-origin: top center;
+    margin-bottom: -30px;
   }
 
   .membership-bottom-stats-strip {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px;
+    gap: 10px;
+    margin: 10px 12px 18px 12px;
     padding: 12px 10px;
   }
 
@@ -5005,53 +4890,59 @@ body {
   }
 
   .heading-line-party {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .heading-line-membership {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
   }
 
-  .membership-slogan-lines p {
+  .membership-slogan-text {
     font-size: 0.88rem;
+  }
+
+  .membership-features-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+
+  .mem-feature-card {
+    min-width: 0;
+    padding: 8px 4px;
+  }
+
+  .feat-title {
+    font-size: 0.72rem;
+  }
+
+  .feat-sub {
+    font-size: 0.62rem;
   }
 
   .btn-pill-membership-join {
     width: 100%;
     justify-content: center;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     padding: 9px 16px;
   }
 
   .membership-cards-stage-wrap {
-    min-height: 330px;
+    margin-top: 0;
   }
 
-  .membership-podium-stage {
-    width: 260px;
+  .hanging-master-card {
+    transform: scale(0.82);
+    transform-origin: top center;
+    margin-bottom: -60px;
   }
-
-  .podium-tier-base {
-    width: 260px;
-    height: 30px;
-  }
-
-  .podium-tier-top {
-    width: 220px;
-    height: 26px;
-    bottom: 10px;
-  }
-
-  .membership-id-cards-area {
-    transform: scale(0.64);
-    transform-origin: bottom center;
-  }
-
 
   .membership-bottom-stats-strip {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 6px;
-    padding: 10px 6px;
+    gap: 8px;
+    margin: 10px 8px 16px 8px;
+    padding: 10px 8px;
   }
 
   .mem-stat-col {
