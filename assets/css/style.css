@@ -464,16 +464,20 @@ body {
     padding: 24px 20px 12px 220px;
     gap: 16px;
   }
+
   .membership-leader-col {
     width: 235px;
   }
+
   .membership-left-content {
     max-width: 410px;
   }
+
   .mem-feature-card {
     min-width: 85px;
     padding: 8px 8px;
   }
+
   .card-template-exact {
     width: 310px;
   }
@@ -1308,11 +1312,11 @@ body {
   transform: translateX(3px);
 }
 
-/* 10 Issues Cards Grid (5 x 2) */
+/* 10 Issues Cards Grid (4 columns per row, natural left-aligned flow) */
 .issues-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   position: relative;
   z-index: 1;
 }
@@ -1322,7 +1326,7 @@ body {
   border-radius: 20px;
   border: 1px solid rgba(226, 232, 240, 0.85);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.035), 0 1px 3px rgba(0, 0, 0, 0.02);
-  padding: 20px 14px 18px 14px;
+  padding: 22px 18px 20px 18px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1753,7 +1757,7 @@ body {
   }
 
   .issues-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
@@ -3082,7 +3086,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 26px 28px 12px 245px; /* space for leader on left */
+  padding: 26px 28px 12px 245px;
+  /* space for leader on left */
   position: relative;
   z-index: 3;
   gap: 22px;
@@ -4021,7 +4026,8 @@ body {
    ========================================================================== */
 @media (max-width: 1199.98px) {
   .issues-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 
   .campaign-interactive-banner {
@@ -4126,7 +4132,7 @@ body {
   }
 
   .issues-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .leadership-grid {
