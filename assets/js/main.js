@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initHeroCarousel();
   initGalleryLightbox();
+  initPhotoGallerySlider();
   initForms();
   initBackToTop();
   initSearch();
@@ -357,7 +358,10 @@ const galleryData = [
   { src: "assets/images/gallery/gallery-2.jpg", captionTe: "గ్రామ సభలో ప్రజల సమస్యలను ఆలకిస్తున్న నాయకులు", captionEn: "Leaders Attentively Listening to Public Grievances at Village Assembly" },
   { src: "assets/images/gallery/gallery-3.jpg", captionTe: "యువజన నాయకులతో భవిష్యత్ కార్యాచరణ సమావేశం", captionEn: "Future Action Plan Meeting with Dedicated Youth Leaders" },
   { src: "assets/images/gallery/gallery-4.jpg", captionTe: "మహిళా స్వయం సహాయక సంఘాల ప్రతినిధులతో సదస్సు", captionEn: "Empowerment Conference with Women's Self-Help Groups" },
-  { src: "assets/images/gallery/gallery-5.jpg", captionTe: "ప్రజాసేవ పార్టీ సమగ్ర అభివృద్ధి విధాన ప్రణాళిక", captionEn: "Prajaseva Party Comprehensive Governance Roadmap" }
+  { src: "assets/images/gallery/gallery-5.jpg", captionTe: "ప్రజాసేవ పార్టీ సమగ్ర అభివృద్ధి విధాన ప్రణాళిక", captionEn: "Prajaseva Party Comprehensive Governance Roadmap" },
+  { src: "assets/images/gallery/gallery-assembly.jpg", captionTe: "తెలంగాణ ప్రజా సమస్యల పరిష్కారానికై భారీ సభ", captionEn: "Massive Public Rally for Citizens Rights" },
+  { src: "assets/images/about.webp", captionTe: "సుభిక్షమైన తెలంగాణ రాష్ట్ర నిర్మాణం – మా లక్ష్యం", captionEn: "Building a Prosperous Telangana State" },
+  { src: "assets/images/lastimage.webp", captionTe: "ప్రజాసేవకై నవతరం నాయకత్వం – అంకితభావం", captionEn: "Dedicated Leadership for People's Welfare" }
 ];
 
 let currentLightboxIdx = 0;
@@ -373,7 +377,12 @@ function initGalleryLightbox() {
   const bsModal = new bootstrap.Modal(lightboxModalEl);
 
   galleryItems.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      const strip = document.getElementById('gallery-slider-strip');
+      if (strip && strip.dataset.dragging === 'true') {
+        e.preventDefault();
+        return;
+      }
       const idx = parseInt(item.getAttribute('data-index') || '0', 10);
       showLightboxImage(idx);
       bsModal.show();
@@ -409,6 +418,121 @@ function showLightboxImage(idx) {
   if (captionEl && item) {
     captionEl.textContent = currentLang === 'te' ? item.captionTe : item.captionEn;
   }
+}
+
+/* ==========================================================================
+   3b. Interactive Photo Gallery Horizontal Slider
+   ========================================================================== */
+function initPhotoGallerySlider() {
+  const strip = document.getElementById('gallery-slider-strip');
+  const prevBtn = document.getElementById('gallery-prev-btn');
+  const nextBtn = document.getElementById('gallery-next-btn');
+
+  if (!strip) return;
+
+  function getItemStep() {
+    const item = strip.querySelector('.gallery-item');
+    if (!item) return 240;
+    const style = window.getComputedStyle(strip);
+    const gap = parseFloat(style.gap) || 14;
+    return item.offsetWidth + gap;
+  }
+
+  function scrollNext() {
+    const step = getItemStep();
+    const maxScroll = strip.scrollWidth - strip.clientWidth;
+    if (strip.scrollLeft + step >= maxScroll - 8) {
+      strip.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      strip.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  }
+
+  function scrollPrev() {
+    const step = getItemStep();
+    if (strip.scrollLeft <= 8) {
+      const maxScroll = strip.scrollWidth - strip.clientWidth;
+      strip.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      strip.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollNext();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollPrev();
+    });
+  }
+
+  // Smooth Drag to Scroll (with threshold to avoid blocking clicks)
+  let isDown = false;
+  let startX = 0;
+  let scrollStart = 0;
+  let hasDragged = false;
+
+  strip.addEventListener('mousedown', (e) => {
+    isDown = true;
+    hasDragged = false;
+    startX = e.pageX;
+    scrollStart = strip.scrollLeft;
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const diff = e.pageX - startX;
+    if (Math.abs(diff) > 6) {
+      hasDragged = true;
+      strip.dataset.dragging = 'true';
+      strip.scrollLeft = scrollStart - diff;
+    }
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDown) {
+      isDown = false;
+      setTimeout(() => {
+        hasDragged = false;
+        if (strip) strip.dataset.dragging = 'false';
+      }, 70);
+    }
+  });
+
+  // Auto-slide every 3.8s with pause on hover & touch
+  let autoTimer = null;
+  function startTimer() {
+    stopTimer();
+    autoTimer = setInterval(() => {
+      const maxScroll = strip.scrollWidth - strip.clientWidth;
+      if (maxScroll > 15) {
+        scrollNext();
+      }
+    }, 3800);
+  }
+
+  function stopTimer() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  const container = strip.closest('.gallery-strip-container');
+  if (container) {
+    container.addEventListener('mouseenter', stopTimer);
+    container.addEventListener('mouseleave', startTimer);
+    container.addEventListener('touchstart', stopTimer, { passive: true });
+    container.addEventListener('touchend', startTimer, { passive: true });
+  }
+
+  startTimer();
 }
 
 /* ==========================================================================

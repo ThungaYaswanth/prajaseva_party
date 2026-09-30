@@ -2922,35 +2922,81 @@ body {
    Section 10 — Photo Gallery (ఫోటోలు గ్యాలరీ)
    ========================================================================== */
 .gallery-section {
-  padding-top: 10px;
-  padding-bottom: 36px;
+  padding-top: 14px;
+  padding-bottom: 38px;
+}
+
+.gallery-view-all-link {
+  color: #DC2626;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.gallery-view-all-link:hover {
+  color: #B91C1C;
+  transform: translateX(3px);
 }
 
 .gallery-strip-container {
   position: relative;
+  width: 100%;
+  margin-top: 8px;
 }
 
 .gallery-strip {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  padding: 6px 2px;
+  cursor: grab;
+  user-select: none;
+}
+
+.gallery-strip::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.gallery-strip:active {
+  cursor: grabbing;
 }
 
 .gallery-item {
   position: relative;
-  height: 145px;
-  border-radius: var(--radius-md);
+  flex: 0 0 calc((100% - 4 * 14px) / 5); /* 5 items visible on desktop */
+  min-width: 215px;
+  height: 155px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  scroll-snap-align: start;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  background-color: #F8FAFC;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.4s ease;
+  pointer-events: none;
 }
 
 .gallery-item:hover img {
@@ -2963,14 +3009,14 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(200, 16, 22, 0.45);
+  background: rgba(200, 16, 22, 0.42);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity 0.25s ease;
   color: #FFFFFF;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -2981,32 +3027,80 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--border-light);
+  background-color: #FFFFFF;
+  border: 1.5px solid #F1F5F9;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-red);
+  color: #DC2626;
   cursor: pointer;
-  z-index: 3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  transition: all 0.22s ease;
 }
 
 .gallery-nav-btn:hover {
-  background-color: var(--primary-red);
+  background-color: #DC2626;
   color: #FFFFFF;
+  border-color: #DC2626;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.gallery-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .gallery-nav-btn.prev {
-  left: -14px;
+  left: -20px;
 }
 
 .gallery-nav-btn.next {
-  right: -14px;
+  right: -20px;
+}
+
+/* Responsive Rules for Gallery Slider */
+@media (max-width: 1200px) and (min-width: 992px) {
+  .gallery-item {
+    flex: 0 0 calc((100% - 3 * 14px) / 4);
+    min-width: 210px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .gallery-nav-btn.prev {
+    left: -10px;
+  }
+  .gallery-nav-btn.next {
+    right: -10px;
+  }
+  .gallery-item {
+    flex: 0 0 calc((100% - 2 * 12px) / 3);
+    min-width: 190px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .gallery-nav-btn.prev {
+    left: -6px;
+  }
+  .gallery-nav-btn.next {
+    right: -6px;
+  }
+  .gallery-item {
+    flex: 0 0 78%;
+    min-width: 220px;
+    height: 150px;
+  }
 }
 
 /* ==========================================================================
@@ -4422,10 +4516,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .gallery-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .membership-cards-stage-wrap {
     height: 370px;
     min-height: 370px;
@@ -4873,12 +4963,6 @@ body {
 
   .event-title-text {
     font-size: 0.82rem;
-  }
-
-  /* Section 8 — Gallery */
-  .gallery-strip {
-    grid-template-columns: 1fr;
-    gap: 10px;
   }
 
   .gallery-card-img {

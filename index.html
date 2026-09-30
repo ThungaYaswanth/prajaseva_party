@@ -1031,9 +1031,13 @@
          ========================================================================== -->
     <section class="gallery-section" id="gallery">
       <div class="main-container">
+        <!-- Section Header with Red Vertical Accent Bar matching reference -->
         <div class="d-flex align-items-center justify-content-between mb-3">
-          <h2 class="section-title mb-0" data-i18n="galleryHeading">ఫోటోలు గ్యాలరీ</h2>
-          <a href="#gallery" class="small text-danger fw-bold text-decoration-none">
+          <div class="d-flex align-items-center gap-2">
+            <div class="header-accent-bar"></div>
+            <h2 class="header-accent-title" data-i18n="galleryHeading">ఫోటోలు గ్యాలరీ</h2>
+          </div>
+          <a href="#gallery" class="gallery-view-all-link">
             <span data-i18n="btnAllPhotos">అన్ని ఫోటోలు చూడండి</span> <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -1047,26 +1051,38 @@
             <i class="bi bi-chevron-right"></i>
           </button>
 
-          <!-- 5 Horizontal Gallery Items -->
-          <div class="gallery-strip">
+          <!-- Horizontal Gallery Slider Track -->
+          <div class="gallery-strip" id="gallery-slider-strip">
             <div class="gallery-item" data-index="0" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
-              <img src="assets/images/gallery/gallery-1.jpg" alt="ప్రజాసేవ ర్యాలీ">
+              <img src="assets/images/gallery/gallery-1.jpg" alt="ప్రజాసేవ ర్యాలీ" loading="lazy">
               <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
             </div>
             <div class="gallery-item" data-index="1" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
-              <img src="assets/images/gallery/gallery-2.jpg" alt="గ్రామ సభలో నాయకులు">
+              <img src="assets/images/gallery/gallery-2.jpg" alt="గ్రామ సభలో నాయకులు" loading="lazy">
               <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
             </div>
             <div class="gallery-item" data-index="2" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
-              <img src="assets/images/gallery/gallery-3.jpg" alt="యువజన సమావేశం">
+              <img src="assets/images/gallery/gallery-3.jpg" alt="యువజన సమావేశం" loading="lazy">
               <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
             </div>
             <div class="gallery-item" data-index="3" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
-              <img src="assets/images/gallery/gallery-4.jpg" alt="మహిళా స్వయం సహాయక సంఘాలు">
+              <img src="assets/images/gallery/gallery-4.jpg" alt="మహిళా స్వయం సహాయక సంఘాలు" loading="lazy">
               <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
             </div>
             <div class="gallery-item" data-index="4" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
-              <img src="assets/images/gallery/gallery-5.jpg" alt="ప్రజాసేవ పార్టీ కార్యక్రమం">
+              <img src="assets/images/gallery/gallery-5.jpg" alt="ప్రజాసేవ పార్టీ కార్యక్రమం" loading="lazy">
+              <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+            <div class="gallery-item" data-index="5" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
+              <img src="assets/images/gallery/gallery-assembly.jpg" alt="భారీ బహిరంగ సభ" loading="lazy">
+              <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+            <div class="gallery-item" data-index="6" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
+              <img src="assets/images/about.webp" alt="సుభిక్ష తెలంగాణ నిర్మాణం" loading="lazy">
+              <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+            <div class="gallery-item" data-index="7" title="క్లిక్ చేసి పెద్ద చిత్రంగా చూడండి">
+              <img src="assets/images/lastimage.webp" alt="నవతరం నాయకత్వం" loading="lazy">
               <div class="gallery-overlay"><i class="bi bi-arrows-fullscreen"></i></div>
             </div>
           </div>
