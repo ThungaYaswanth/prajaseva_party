@@ -44,6 +44,26 @@ const translations = {
     quickMembership: "సభ్యత్వం",
     quickContact: "సంప్రదించండి",
 
+    // Section 3B: About Party (మా గురించి)
+    breadcrumbHome: "ముఖ్య పేజీ",
+    breadcrumbAbout: "మా గురించి",
+    aboutPartyTitle: "మా గురించి",
+    aboutPartySubtitle: "సమాజం కోసం, ప్రజల కోసం, మరింత మంచి భవిష్యత్తు కోసం...",
+    aboutPartyDesc: "మా పార్టీ లక్ష్యం సమాజంలో ప్రతి ఒక్కరి జీవితంలో మార్పు తీసుకురావడం. పేద, మధ్యతరగతి, బలహీన వర్గాల అభివృద్ధి కోసం నిరంతరం కృషి చేస్తూ, ప్రజల సమస్యలను తెలుసుకుని, వాటి పరిష్కారానికి కట్టుబడి ఉన్నాం. సమగ్ర అభివృద్ధి, సమాన అవకాశాలు, పారదర్శక పాలన మా ప్రధాన లక్ష్యాలు.",
+    aboutSloganLine1: "ప్రజలే మా బలం..",
+    aboutSloganLine2: "ప్రజల కోసం మా ప్రయాణం...",
+    btnAboutObjectives: "మా లక్ష్యాలు తెలుసుకోండి",
+    aboutFeat1Title: "ప్రజా సంక్షేమం",
+    aboutFeat1Desc: "ప్రతి కుటుంబానికి సంక్షేమం, ప్రతి వ్యక్తికి గౌరవం.",
+    aboutFeat2Title: "అభివృద్ధి",
+    aboutFeat2Desc: "గ్రామీణ, పట్టణ ప్రాంతాల సమగ్ర అభివృద్ధి.",
+    aboutFeat3Title: "విద్య & ఉపాధి",
+    aboutFeat3Desc: "యువతకు నాణ్యమైన విద్య, ఉపాధి అవకాశాలు.",
+    aboutFeat4Title: "ఆరోగ్యం",
+    aboutFeat4Desc: "ప్రతి ఒక్కరికీ మెరుగైన వైద్య సేవలు.",
+    aboutFeat5Title: "సుస్థిర భవిష్యత్తు",
+    aboutFeat5Desc: "పర్యావరణ పరిరక్షణ, సుస్థిర అభివృద్ధి.",
+
     // Section 4: 10 Public Issues
     issuesBadge: "ప్రజల అభివృద్ధే మా లక్ష్యం",
     partyNameOnly: "ప్రజాసేవ పార్టీ",
@@ -139,6 +159,19 @@ const translations = {
     galleryHeading: "ఫోటోలు గ్యాలరీ",
     btnAllPhotos: "అన్ని ఫోటోలు చూడండి",
 
+    // Section 10B: Social Media Connect
+    socialConnectTitlePart1: "మాతో సోషల్ మీడియాలో",
+    socialConnectTitlePart2: "కలవండి",
+    socialConnectSub: "మా కార్యకలాపాలు, తాజా వార్తలు, కార్యక్రమాలు మరియు ప్రజాప్రయోజన సమాచారాన్ని నేరుగా మీకు చేరువ చేసుకుంటాము.",
+    socialFbDesc: "మా తాజా కార్యక్రమాలు, ఫోటోలు మరియు వార్తలు.",
+    socialIgDesc: "మా కార్యక్రమాలు, ఫోటోలు, వీడియోలు మరియు అప్‌డేట్స్.",
+    socialYtDesc: "మా ప్రసంగాలు, సభలు, ప్రజా కార్యక్రమాల వీడియోలు.",
+    socialXDesc: "తాజా అప్‌డేట్స్, ప్రకటనలు మరియు ముఖ్యమైన సమాచారం.",
+    socialWaDesc: "ముఖ్యమైన అప్‌డేట్స్, కార్యక్రమాలు నేరుగా మీ వాట్సాప్‌లో.",
+    btnFollow: "ఫాలో అవ్వండి",
+    btnSubscribe: "సబ్‌స్క్రైబ్ చేయండి",
+    btnJoin: "జాయిన్ అవ్వండి",
+
     // Section 11: Membership Banner & ID Card
     membershipBadge: "ప్రజా సేవ పార్టీ",
     membershipHeading: "సభ్యత్వం",
@@ -228,6 +261,26 @@ const translations = {
     quickEvents: "Events",
     quickMembership: "Membership",
     quickContact: "Contact Us",
+
+    // Section 3B: About Party (About Us)
+    breadcrumbHome: "Home",
+    breadcrumbAbout: "About Us",
+    aboutPartyTitle: "About Us",
+    aboutPartySubtitle: "For the society, for the people, for a better future...",
+    aboutPartyDesc: "Our party's objective is to bring a transformative change in the lives of everyone in society. Constantly striving for the progress of the poor, middle class, and underprivileged communities, understanding people's grievances, and remaining dedicated to resolving them. Comprehensive development, equal opportunities, and transparent governance are our primary goals.",
+    aboutSloganLine1: "People are our strength..",
+    aboutSloganLine2: "Our journey is for the people...",
+    btnAboutObjectives: "Learn Our Objectives",
+    aboutFeat1Title: "Public Welfare",
+    aboutFeat1Desc: "Welfare for every family, dignity for every individual.",
+    aboutFeat2Title: "Development",
+    aboutFeat2Desc: "Comprehensive progress of rural & urban regions.",
+    aboutFeat3Title: "Education & Employment",
+    aboutFeat3Desc: "Quality education for youth, employment opportunities.",
+    aboutFeat4Title: "Healthcare",
+    aboutFeat4Desc: "Better medical care for everyone.",
+    aboutFeat5Title: "Sustainable Future",
+    aboutFeat5Desc: "Environmental protection, sustainable development.",
 
     // Section 4: 10 Public Issues
     issuesBadge: "Public Progress is Our Mission",
@@ -323,6 +376,19 @@ const translations = {
     // Section 10: Gallery
     galleryHeading: "Photo Gallery",
     btnAllPhotos: "View All Photos",
+
+    // Section 10B: Social Media Connect
+    socialConnectTitlePart1: "Connect With Us on",
+    socialConnectTitlePart2: "Social Media",
+    socialConnectSub: "We bring our activities, latest news, upcoming events, and public welfare announcements directly to you.",
+    socialFbDesc: "Our latest activities, photo galleries, and news updates.",
+    socialIgDesc: "Our daily initiatives, photos, videos, and highlights.",
+    socialYtDesc: "Key speeches, public rallies, and video coverage.",
+    socialXDesc: "Live updates, official press statements, and news alerts.",
+    socialWaDesc: "Crucial updates and announcements directly on WhatsApp.",
+    btnFollow: "Follow Us",
+    btnSubscribe: "Subscribe",
+    btnJoin: "Join Now",
 
     // Section 11: Membership Banner & ID Card
     membershipBadge: "Praja Seva Party",
