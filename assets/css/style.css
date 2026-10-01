@@ -904,16 +904,14 @@ body {
      - 0% opacity on the left (0%-24%): Person (leader) & flag are 100% visible, sharp & unclouded
      - Gentle soft white linear backlight in center (36%-64%): Guarantees perfect legibility for Telugu text
      - 0% opacity on the right (76%-100%): Charminar & public gathering crowd are 100% visible & vivid */
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 24%,
-    rgba(255, 255, 255, 0.32) 36%,
-    rgba(255, 255, 255, 0.65) 50%,
-    rgba(255, 255, 255, 0.32) 64%,
-    rgba(255, 255, 255, 0) 76%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 24%,
+      rgba(255, 255, 255, 0.32) 36%,
+      rgba(255, 255, 255, 0.65) 50%,
+      rgba(255, 255, 255, 0.32) 64%,
+      rgba(255, 255, 255, 0) 76%,
+      rgba(255, 255, 255, 0) 100%);
   opacity: 0.85;
   z-index: 2;
   pointer-events: none;
@@ -1426,6 +1424,7 @@ body {
   .about-overview-grid {
     gap: 36px;
   }
+
   .about-pillars-grid {
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 16px;
@@ -1437,9 +1436,11 @@ body {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
   .about-image-card {
     max-height: 360px;
   }
+
   .about-story-text {
     text-align: left;
   }
@@ -1450,13 +1451,16 @@ body {
     padding-top: 36px;
     padding-bottom: 42px;
   }
+
   .about-overview-grid {
     margin-bottom: 32px;
     gap: 26px;
   }
+
   .about-image-card {
     max-height: 300px;
   }
+
   .about-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
@@ -1468,6 +1472,7 @@ body {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
   .about-pillar-card {
     padding: 20px 14px;
   }
@@ -3105,14 +3110,16 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
   padding: 6px 2px;
   cursor: grab;
   user-select: none;
 }
 
 .gallery-strip::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
+  /* Chrome/Safari */
 }
 
 .gallery-strip:active {
@@ -3121,7 +3128,8 @@ body {
 
 .gallery-item {
   position: relative;
-  flex: 0 0 calc((100% - 4 * 14px) / 5); /* 5 items visible on desktop */
+  flex: 0 0 calc((100% - 4 * 14px) / 5);
+  /* 5 items visible on desktop */
   min-width: 215px;
   height: 155px;
   border-radius: 16px;
@@ -3223,9 +3231,11 @@ body {
   .gallery-nav-btn.prev {
     left: -10px;
   }
+
   .gallery-nav-btn.next {
     right: -10px;
   }
+
   .gallery-item {
     flex: 0 0 calc((100% - 2 * 12px) / 3);
     min-width: 190px;
@@ -3239,12 +3249,15 @@ body {
     height: 36px;
     font-size: 0.95rem;
   }
+
   .gallery-nav-btn.prev {
     left: -6px;
   }
+
   .gallery-nav-btn.next {
     right: -6px;
   }
+
   .gallery-item {
     flex: 0 0 78%;
     min-width: 220px;
@@ -3448,11 +3461,13 @@ body {
 .btn-social-facebook {
   background: #1877F2;
 }
+
 .btn-social-facebook:hover {
   background: #166FE5;
   box-shadow: 0 4px 14px rgba(24, 119, 242, 0.45);
   color: #FFFFFF;
 }
+
 .btn-social-facebook .social-btn-arrow-circle {
   color: #1877F2;
 }
@@ -3460,11 +3475,13 @@ body {
 .btn-social-instagram {
   background: linear-gradient(90deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);
 }
+
 .btn-social-instagram:hover {
   box-shadow: 0 4px 14px rgba(221, 42, 123, 0.45);
   filter: brightness(1.06);
   color: #FFFFFF;
 }
+
 .btn-social-instagram .social-btn-arrow-circle {
   color: #DD2A7B;
 }
@@ -3472,11 +3489,13 @@ body {
 .btn-social-youtube {
   background: #DC2626;
 }
+
 .btn-social-youtube:hover {
   background: #B91C1C;
   box-shadow: 0 4px 14px rgba(220, 38, 38, 0.45);
   color: #FFFFFF;
 }
+
 .btn-social-youtube .social-btn-arrow-circle {
   color: #DC2626;
 }
@@ -3484,11 +3503,13 @@ body {
 .btn-social-twitter {
   background: #0F172A;
 }
+
 .btn-social-twitter:hover {
   background: #000000;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.45);
   color: #FFFFFF;
 }
+
 .btn-social-twitter .social-btn-arrow-circle {
   color: #0F172A;
 }
@@ -3496,11 +3517,13 @@ body {
 .btn-social-whatsapp {
   background: #16A34A;
 }
+
 .btn-social-whatsapp:hover {
   background: #15803D;
   box-shadow: 0 4px 14px rgba(22, 163, 74, 0.45);
   color: #FFFFFF;
 }
+
 .btn-social-whatsapp .social-btn-arrow-circle {
   color: #16A34A;
 }
@@ -3510,12 +3533,15 @@ body {
   .social-connect-grid {
     gap: 12px;
   }
+
   .social-connect-card {
     padding: 10px 10px 14px 10px;
   }
+
   .social-card-img-wrap {
     height: 120px;
   }
+
   .social-card-desc {
     font-size: 0.74rem;
   }
@@ -3526,9 +3552,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+
   .social-connect-card:nth-child(4) {
     grid-column: 1 / 2;
   }
+
   .social-connect-card:nth-child(5) {
     grid-column: 2 / 3;
   }
@@ -3539,10 +3567,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
   .social-connect-card:nth-child(4),
   .social-connect-card:nth-child(5) {
     grid-column: auto;
   }
+
   .social-connect-card:nth-child(5) {
     grid-column: 1 / -1;
     max-width: 320px;
@@ -3557,9 +3587,11 @@ body {
     max-width: 330px;
     margin: 0 auto;
   }
+
   .social-connect-card:nth-child(5) {
     max-width: 100%;
   }
+
   .social-card-img-wrap {
     height: 150px;
   }
@@ -4377,6 +4409,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0px 6px !important;
 }
 
 .footer-links-list a {
@@ -5537,4 +5570,487 @@ body {
     font-size: 0.74rem;
     gap: 8px;
   }
+}
+
+/* ==========================================================================
+   Section 12 — Grand Modern Footer System (.footer-grand)
+   Matches Official Praja Seva Party Identity
+   ========================================================================== */
+.footer-grand {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--text-dark, #1e293b);
+  overflow: hidden;
+  font-family: 'Noto Sans Telugu', 'Inter', sans-serif;
+}
+
+/* 1. TOP HERO STAGE */
+.footer-hero-stage {
+  position: relative;
+  background: linear-gradient(135deg, #fffcf8 0%, #fef8f0 45%, #fcf3e6 100%);
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 36px;
+  padding-bottom: 60px;
+  /* leaves room for sweeping wave ribbon */
+}
+
+.footer-hero-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-hero-bg-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 58%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 25%;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+  filter: contrast(1.15) saturate(1.1);
+}
+
+.footer-hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #fffcf8 32%, rgba(255, 252, 248, 0.75) 60%, rgba(255, 252, 248, 0.15) 100%);
+}
+
+.footer-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.footer-hero-brand {
+  max-width: 620px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-emblem-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-emblem-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.footer-emblem-img:hover {
+  transform: rotate(6deg) scale(1.04);
+}
+
+.footer-brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-party-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #b91c1c;
+  margin: 0 0 2px 0;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+.footer-party-sub {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #b91c1c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-party-motto {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+  line-height: 1.4;
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+/* Social Media Row */
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.social-pill-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.social-pill-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+  color: #ffffff !important;
+}
+
+.pill-fb {
+  background-color: #1877f2;
+}
+
+.pill-x {
+  background-color: #000000;
+}
+
+.pill-insta {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.pill-yt {
+  background-color: #ff0000;
+}
+
+.pill-wa {
+  background-color: #25d366;
+}
+
+/* Right: Leader namaste stage */
+.footer-hero-leader {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+.footer-leader-radiance {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.38) 0%, rgba(254, 243, 199, 0.16) 50%, transparent 75%);
+  filter: blur(25px);
+  pointer-events: none;
+  z-index: 1;
+  bottom: 0;
+}
+
+.footer-hero-leader-img {
+  position: relative;
+  z-index: 2;
+  height: 290px;
+  width: auto;
+  max-width: 360px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+  margin-bottom: -15px;
+}
+
+/* Sweeping 2-Tone Wave Ribbon */
+.footer-wave-ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-wave-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 2. NAVIGATION COLUMNS TIER */
+.footer-nav-tier {
+  background-color: #ffffff;
+  padding: 48px 0 44px 0;
+  border-bottom: 1px solid #f8f6f0;
+}
+
+.footer-nav-container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+
+.footer-col-header {
+  margin-bottom: 22px;
+}
+
+.f-col-icon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b91c1c;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 7px 5px;
+  border-radius: 6px;
+}
+
+.f-col-icon-pill i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-list li a {
+  color: #334155;
+  font-size: 0.94rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #b91c1c;
+  transform: translateX(4px);
+}
+
+.f-link-chev {
+  color: #d97706;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.footer-links-list li a:hover .f-link-chev {
+  transform: translateX(2px);
+}
+
+/* Column 4: Contact items */
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.f-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.f-contact-icon-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.f-contact-text strong {
+  display: block;
+  color: #1e293b;
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.f-contact-text span {
+  display: block;
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.f-contact-link {
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.f-contact-link:hover {
+  color: #b91c1c;
+  text-decoration: underline;
+}
+
+/* 3. LEGAL BAR */
+.footer-legal-tier {
+  background-color: #fdfbf7;
+  border-top: 1px solid #f1ece4;
+  padding: 20px 0;
+}
+
+.footer-legal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.f-legal-copyright {
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.f-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+}
+
+.f-legal-links a {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.f-legal-links a:hover {
+  color: #b91c1c;
+}
+
+.f-pipe {
+  color: #cbd5e1;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991.98px) {
+  .footer-hero-container {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .footer-brand-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-social-row {
+    justify-content: center;
+  }
+
+  .footer-hero-leader {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .footer-hero-leader-img {
+    height: 230px;
+    margin-bottom: 0;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .f-legal-links {
+    margin-left: auto;
+    margin-right: auto;
+}
+  .f-legal-copyright {
+    margin: auto;
+}
+}
+
+@media (max-width: 575.98px) {
+  .footer-party-name {
+    font-size: 1.85rem;
+  }
+
+  .footer-party-motto {
+    font-size: 0.9rem;
+  }
+
+  .footer-hero-stage {
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+
+  .footer-hero-leader-img {
+    height: 190px;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-legal-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .f-legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+   .footer-hero-container {
+    flex-direction: column;
+}
+.f-legal-links {
+    margin-left: auto;
+    margin-right: auto;
+}
 }
