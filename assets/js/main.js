@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearch();
   initPolicyModal();
   initCampaignSlider();
+  initInteractiveMap();
 });
 
 function initMobileNav() {
@@ -988,3 +989,100 @@ function initCampaignSlider() {
   startTimer();
 }
 
+/**
+ * Interactive Vector India Map
+ * Shows ONLY state name for all states on hover
+ * For Telangana: Shows ONLY the Leader Card Popup (matching reference screenshot)
+ */
+function initInteractiveMap() {
+  const mapStage = document.getElementById('indiaMapStage');
+  if (!mapStage) return;
+
+  const tooltip = document.getElementById('mapInteractiveTooltip');
+  const tooltipTitle = document.getElementById('mapTooltipTitle');
+  const popup = document.getElementById('telanganaLeaderPopup');
+  const closePopupBtn = document.getElementById('closeTelanganaPopup');
+  const statePaths = document.querySelectorAll('.india-map-stage .map-state-path');
+  const tgElement = document.getElementById('INTG') || document.querySelector('.active-telangana-zone');
+
+  let popupTimer = null;
+
+  function openTelanganaPopup() {
+    if (popupTimer) clearTimeout(popupTimer);
+    if (tooltip) tooltip.classList.remove('visible');
+    if (popup) popup.classList.add('active');
+  }
+
+  function closeTelanganaPopup() {
+    popupTimer = setTimeout(() => {
+      if (popup) popup.classList.remove('active');
+    }, 280);
+  }
+
+  statePaths.forEach((path) => {
+    const isTelangana = path.id === 'INTG' || path.classList.contains('active-telangana-zone') || path.classList.contains('telangana-highlight-path');
+
+    if (isTelangana) {
+      path.addEventListener('mouseenter', openTelanganaPopup);
+      path.addEventListener('mouseleave', closeTelanganaPopup);
+      path.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (tooltip) tooltip.classList.remove('visible');
+        if (popup) {
+          if (popup.classList.contains('active')) {
+            popup.classList.remove('active');
+          } else {
+            openTelanganaPopup();
+          }
+        }
+      });
+      return;
+    }
+
+    // All other states: show ONLY the state name in the tooltip
+    path.addEventListener('mouseenter', () => {
+      if (popup && popup.classList.contains('active')) return;
+      const stateName = path.getAttribute('data-state') || 'రాష్ట్రం';
+      if (tooltipTitle) tooltipTitle.textContent = stateName;
+      if (tooltip) tooltip.classList.add('visible');
+    });
+
+    path.addEventListener('mousemove', (e) => {
+      if (!tooltip || !mapStage) return;
+      const rect = mapStage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+    });
+
+    path.addEventListener('mouseleave', () => {
+      if (tooltip) tooltip.classList.remove('visible');
+    });
+  });
+
+  // Keep popup open when cursor is hovered over it
+  if (popup) {
+    popup.addEventListener('mouseenter', () => {
+      if (popupTimer) clearTimeout(popupTimer);
+    });
+    popup.addEventListener('mouseleave', closeTelanganaPopup);
+  }
+
+  // Close button
+  if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (popup) popup.classList.remove('active');
+    });
+  }
+
+  // Dismiss popup on outside click
+  document.addEventListener('click', (e) => {
+    if (popup && popup.classList.contains('active')) {
+      if (!popup.contains(e.target) && (!tgElement || !tgElement.contains(e.target))) {
+        popup.classList.remove('active');
+      }
+    }
+  });
+}

@@ -4,6 +4,12 @@
  */
 const translations = {
   te: {
+    // Map & Telangana Popup
+    mapTelanganaTitle: "తెలంగాణ",
+    mapTelanganaDistricts: "33 జిల్లాలు - ప్రజా సేవ",
+    mapTelanganaPresident: "తల్లారం నర్సింలు",
+    mapTelanganaRole: "పార్టీ అధ్యక్షుడు, తెలంగాణ",
+
     // Header & Brand
     partyName: "ప్రజాసేవ పార్టీ",
     partySubtitle: "PRAJASEVA PARTY",
@@ -287,6 +293,12 @@ const translations = {
   },
 
   en: {
+    // Map & Telangana Popup
+    mapTelanganaTitle: "Telangana",
+    mapTelanganaDistricts: "33 Districts - Praja Seva",
+    mapTelanganaPresident: "Thallaram Narsimhulu",
+    mapTelanganaRole: "Party President, Telangana",
+
     // Header & Brand
     partyName: "Prajaseva Party",
     partySubtitle: "PRAJASEVA PARTY",

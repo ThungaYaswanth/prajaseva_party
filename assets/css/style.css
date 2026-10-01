@@ -3670,6 +3670,633 @@ body {
 }
 
 /* ==========================================================================
+   Section 9C — State Mission & Public Welfare Banner (ప్రజల సంక్షేమం మా ప్రధాన లక్ష్యం)
+   Clean, Modern & Interactive India Map Section with Telangana Focus
+   ========================================================================== */
+/* ==========================================================================
+   Section 9C: State Mission & Interactive Vector India Map
+   ========================================================================== */
+.state-mission-section {
+  padding-top: 24px;
+  padding-bottom: 42px;
+  position: relative;
+}
+
+.state-mission-card {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FFFFFF 50%, #FFFDF9 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.25);
+  border-radius: 28px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04), 0 2px 10px rgba(245, 158, 11, 0.08);
+  position: relative;
+  overflow: visible;
+  padding: 40px 36px 44px 36px;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+/* Decorative Waves Matching Mockup */
+.mission-wave-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mission-wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3-Column Grid Layout: Enhanced Center Column for Larger Map */
+.state-mission-grid {
+  display: grid;
+  grid-template-columns: 290px 1.45fr 270px;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Column */
+.state-mission-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.state-mission-heading {
+  margin: 0;
+  font-family: var(--font-heading);
+  line-height: 1.25;
+}
+
+.heading-dark {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: #0F172A;
+  display: block;
+}
+
+.heading-red {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: #C81016;
+  display: block;
+  margin-top: 6px;
+}
+
+.state-mission-accent-line {
+  width: 100px;
+  height: 4.5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #F59E0B 0%, #F59E0B 35%, #C81016 35%, #C81016 100%);
+  margin: 20px 0 16px 0;
+}
+
+.state-mission-desc {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+  max-width: 380px;
+}
+
+/* Center Column: Prominent India Map Stage */
+.state-mission-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.india-map-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.india-map-svg {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  filter: drop-shadow(0 14px 36px rgba(245, 158, 11, 0.16));
+  display: block;
+}
+
+/* Individual State Paths (Pure Vector SVG) */
+.map-state-path {
+  fill: #FFFFFF;
+  stroke: #F59E0B;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: all 0.22s ease;
+  cursor: pointer;
+}
+
+.map-state-path:hover {
+  fill: #FEF3C7;
+  stroke: #D97706;
+  stroke-width: 2.2;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+}
+
+/* Highlighted Telangana State in Vector SVG */
+.telangana-highlight-path {
+  fill: #C81016 !important;
+  stroke: #FFFFFF !important;
+  stroke-width: 2.5 !important;
+  filter: drop-shadow(0 4px 14px rgba(200, 16, 22, 0.55));
+  cursor: pointer;
+  outline: none;
+}
+
+.telangana-highlight-path:hover,
+.telangana-highlight-path:focus {
+  fill: #B91C1C !important;
+  stroke-width: 2.8 !important;
+  filter: drop-shadow(0 6px 24px rgba(200, 16, 22, 0.85));
+}
+
+.pin-pulse-halo {
+  animation: pulseHalo 2s infinite ease-out;
+  opacity: 0.7;
+  transform-origin: 410px 642px;
+  pointer-events: none;
+}
+
+@keyframes pulseHalo {
+  0% {
+    r: 18;
+    opacity: 0.8;
+  }
+  50% {
+    r: 32;
+    opacity: 0;
+  }
+  100% {
+    r: 18;
+    opacity: 0.8;
+  }
+}
+
+/* Floating Tooltip (Shows ONLY state name cleanly as requested) */
+.map-interactive-tooltip {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  z-index: 20;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  transform: translate(-50%, -125%);
+  white-space: nowrap;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+.map-interactive-tooltip .tooltip-title {
+  font-weight: 800;
+  color: #FBBF24;
+  display: inline-block;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
+}
+
+.map-interactive-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -135%);
+}
+
+/* Telangana Leader Pop-up (Exact 1:1 Match with User Screenshot) */
+.telangana-leader-popup {
+  position: absolute;
+  top: 22%;
+  right: 15px;
+  width: 295px;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12), 0 4px 14px rgba(245, 158, 11, 0.15);
+  padding: 14px 16px;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.96);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.telangana-leader-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.popup-header-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+  padding-right: 22px;
+}
+
+.popup-header-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.live-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #F43F5E;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.25);
+  animation: blinkPulse 1.4s infinite;
+}
+
+@keyframes blinkPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-state-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #1E293B;
+  letter-spacing: 0.2px;
+}
+
+.popup-badge-districts {
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3.5px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #94A3B8;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 6px;
+  transition: color 0.18s ease;
+}
+
+.popup-close-btn:hover {
+  color: #C81016;
+}
+
+.popup-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 11px;
+}
+
+.popup-avatar-box {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2.5px solid #F59E0B;
+  background: #0EA5E9;
+  padding: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.popup-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.popup-avatar-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #C81016;
+  color: #FFFFFF;
+  font-size: 9.5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-profile-info {
+  min-width: 0;
+}
+
+.popup-leader-name {
+  margin: 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #C81016;
+  line-height: 1.22;
+}
+
+.popup-leader-role {
+  font-size: 0.79rem;
+  color: #475569;
+  font-weight: 600;
+  display: block;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+
+.popup-dashed-separator {
+  border-top: 1px dashed #CBD5E1;
+  margin: 10px 0 11px 0;
+  width: 100%;
+}
+
+.popup-districts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dist-pill {
+  font-size: 0.73rem;
+  background: #F1F5F9;
+  color: #334155;
+  border: 1px solid #E2E8F0;
+  padding: 3.5px 9px;
+  border-radius: 7px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dist-pill.dist-hq {
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FEE2E2;
+  font-weight: 700;
+}
+
+.dist-pill.dist-more {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  font-weight: 700;
+}
+
+/* Right Column: 3 Capsule Pills */
+.state-mission-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-capsule-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  padding: 6px 22px 6px 6px;
+  width: 100%;
+  max-width: 290px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mission-capsule-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #F59E0B;
+}
+
+.mission-pill-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  margin-right: 14px;
+  background: #C81016;
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(200, 16, 22, 0.25);
+}
+
+.mission-pill-icon i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mission-pill-icon.icon-red,
+.mission-pill-icon.icon-amber,
+.mission-pill-icon.icon-yellow {
+  background: #C81016;
+  color: #FFFFFF;
+}
+
+.mission-pill-text {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive Rules for State Mission Section */
+@media (max-width: 1199.98px) {
+  .state-mission-card {
+    padding: 34px 28px 40px 28px;
+  }
+
+  .state-mission-grid {
+    grid-template-columns: 260px 1.35fr 240px;
+    gap: 18px;
+  }
+
+  .india-map-stage {
+    max-width: 540px;
+  }
+
+  .india-map-svg {
+    max-width: 520px;
+  }
+
+  .heading-dark,
+  .heading-red {
+    font-size: 2rem;
+  }
+
+  .mission-capsule-pill {
+    max-width: 260px;
+    padding: 6px 18px 6px 6px;
+  }
+
+  .mission-pill-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+
+  .mission-pill-text {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .state-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .state-mission-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .state-mission-accent-line {
+    margin: 16px auto 14px auto;
+  }
+
+  .state-mission-desc {
+    max-width: 500px;
+  }
+
+  .state-mission-right {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .mission-capsule-pill {
+    max-width: 250px;
+    flex: 1 1 220px;
+  }
+
+  .india-map-stage {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .india-map-svg {
+    max-width: 480px;
+  }
+
+  .telangana-leader-popup {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(10px) scale(0.96);
+    top: 15%;
+  }
+
+  .telangana-leader-popup.active {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .state-mission-card {
+    padding: 26px 16px 32px 16px;
+    border-radius: 20px;
+  }
+
+  .heading-dark,
+  .heading-red {
+    font-size: 1.65rem;
+  }
+
+  .state-mission-desc {
+    font-size: 0.92rem;
+  }
+
+  .mission-capsule-pill {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .india-map-stage {
+    max-width: 100%;
+  }
+
+  .india-map-svg {
+    max-width: 100%;
+  }
+
+  .telangana-leader-popup {
+    width: calc(100% - 24px);
+    max-width: 295px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(10px) scale(0.96);
+    top: 10%;
+  }
+
+  .telangana-leader-popup.active {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================================
    Section 10 — Photo Gallery (ఫోటోలు గ్యాలరీ)
    ========================================================================== */
 .gallery-section {
