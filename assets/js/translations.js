@@ -182,6 +182,18 @@ const translations = {
     member4Bio: "సంఘటితం, అభివృద్ధి, సేవా కార్యక్రమాల ద్వారా ప్రజల మధ్య ఉంటున్న నాయకుడు.",
     teamViewAllLeadersBtn: "మరిన్ని నాయకులను చూడండి",
 
+    // Section 9C: State Mission & Public Welfare Banner (ప్రజల సంక్షేమం మా ప్రధాన లక్ష్యం)
+    stateMissionTitle1: "ప్రజల సంక్షేమం",
+    stateMissionTitle2: "మా ప్రధాన లక్ష్యం",
+    stateMissionDesc: "రాష్ట్రంలో ప్రతి ఒక్క ప్రజా ప్రయోజనం అభివృద్ధి చెందాలని అదే తపనతో ప్రజలతో కలిసి ముందుకు.",
+    statePill1Text: "ప్రజా ఆధారితం",
+    statePill2Text: "సమగ్ర అభివృద్ధి",
+    statePill3Text: "పారదర్శక పాలన",
+    mapTelanganaTitle: "తెలంగాణ",
+    mapTelanganaDistricts: "33 జిల్లాలు - ప్రజా సేవ",
+    mapTelanganaPresident: "తల్లారం నర్సింలు",
+    mapTelanganaRole: "పార్టీ అధ్యక్షుడు, తెలంగాణ",
+
     // Section 10: Gallery
     galleryHeading: "ఫోటోలు గ్యాలరీ",
     btnAllPhotos: "అన్ని ఫోటోలు చూడండి",
@@ -452,6 +464,18 @@ const translations = {
     member4Name: "Sri Suri Krishna",
     member4Bio: "A leader always among people through unity, development, and service.",
     teamViewAllLeadersBtn: "View More Leaders",
+
+    // Section 9C: State Mission & Public Welfare Banner (Public Welfare is Our Main Goal)
+    stateMissionTitle1: "Public Welfare",
+    stateMissionTitle2: "Our Primary Goal",
+    stateMissionDesc: "Moving forward together with the people with relentless dedication for comprehensive progress across the state.",
+    statePill1Text: "People Centric",
+    statePill2Text: "Holistic Development",
+    statePill3Text: "Transparent Governance",
+    mapTelanganaTitle: "Telangana",
+    mapTelanganaDistricts: "33 Districts - Praja Seva",
+    mapTelanganaPresident: "Thallaram Narsimlu",
+    mapTelanganaRole: "Party President, Telangana",
 
     // Section 10: Gallery
     galleryHeading: "Photo Gallery",
