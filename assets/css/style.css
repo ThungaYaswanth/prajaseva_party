@@ -900,9 +900,24 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0.02) 100%);
+  /* Horizontal linear-gradient: 
+     - 0% opacity on the left (0%-24%): Person (leader) & flag are 100% visible, sharp & unclouded
+     - Gentle soft white linear backlight in center (36%-64%): Guarantees perfect legibility for Telugu text
+     - 0% opacity on the right (76%-100%): Charminar & public gathering crowd are 100% visible & vivid */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 24%,
+    rgba(255, 255, 255, 0.32) 36%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0.32) 64%,
+    rgba(255, 255, 255, 0) 76%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0.85;
   z-index: 2;
   pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 .hero-slide-2-overlay {
@@ -963,6 +978,7 @@ body {
   color: var(--primary-red);
   margin-bottom: 4px;
   letter-spacing: -0.3px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .hero-heading-main {
@@ -971,7 +987,7 @@ body {
   color: var(--primary-red);
   line-height: 1.25;
   margin-bottom: 6px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85);
 }
 
 .hero-heading-sub {
@@ -979,6 +995,7 @@ body {
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 16px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 /* Hero Slogan Quote Box Matching Image 2 */
