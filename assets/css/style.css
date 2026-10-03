@@ -1534,63 +1534,9 @@ main > section:not(.hero-section):not(.quick-nav-section) {
 }
 
 /* Hero Controls (Arrows & Dots) */
-.hero-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 4;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.88);
-  border: 1px solid var(--border-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-red);
-  font-size: 1.1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-}
-
-.hero-arrow:hover {
-  background-color: var(--primary-red);
-  color: #FFFFFF;
-  border-color: var(--primary-red);
-}
-
-.hero-arrow.prev {
-  left: 14px;
-}
-
-.hero-arrow.next {
-  right: 14px;
-}
-
+.hero-arrow,
 .hero-indicators {
-  position: absolute;
-  bottom: 58px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  display: flex;
-  gap: 8px;
-}
-
-.hero-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #CBD5E1;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.hero-dot.active {
-  background-color: var(--primary-red);
-  width: 22px;
-  border-radius: 10px;
+  display: none !important;
 }
 
 /* ==========================================================================
