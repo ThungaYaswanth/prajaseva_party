@@ -4194,6 +4194,23 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   display: block;
 }
 
+.india-map-svg,
+.india-map-svg *,
+.india-map-svg path {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.india-map-svg:focus,
+.india-map-svg *:focus,
+.india-map-svg path:focus,
+.india-map-svg:focus-visible,
+.india-map-svg *:focus-visible,
+.india-map-svg path:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Individual State Paths (Pure Vector SVG) */
 .map-state-path {
   fill: #FFFFFF;
@@ -4203,6 +4220,17 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   stroke-linecap: round;
   transition: all 0.22s ease;
   cursor: pointer;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.map-state-path:focus,
+.map-state-path:focus-visible,
+.map-state-path:active {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .map-state-path:hover {
@@ -4210,6 +4238,8 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   stroke: #D97706;
   stroke-width: 2.2;
   filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Highlighted Telangana State in Vector SVG */
@@ -4219,14 +4249,21 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   stroke-width: 2.5 !important;
   filter: drop-shadow(0 4px 14px rgba(200, 16, 22, 0.55));
   cursor: pointer;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .telangana-highlight-path:hover,
-.telangana-highlight-path:focus {
+.telangana-highlight-path:focus,
+.telangana-highlight-path:focus-visible,
+.telangana-highlight-path:active {
   fill: #B91C1C !important;
   stroke-width: 2.8 !important;
   filter: drop-shadow(0 6px 24px rgba(200, 16, 22, 0.85));
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .pin-pulse-halo {
