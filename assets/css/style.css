@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+  --header-height: 86px;
   --primary-red: #C81016;
   --primary-red-hover: #A50B0F;
   --primary-red-dark: #7F070A;
@@ -1080,22 +1081,57 @@ body {
 }
 
 /* ==========================================================================
-   Section 2 — Hero Banner
+   Section 2 — Hero Banner (Full Available Viewport Height: 100svh / 100vh)
    ========================================================================== */
+
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section > div {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .hero-banner-card {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   background: #FFFFFF;
   overflow: hidden;
+  border-radius: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  min-height: 520px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
+  height: calc(100vh - var(--header-height, 86px));
+  height: calc(100svh - var(--header-height, 86px));
 }
 
 /* Slider Track & Slides */
 .hero-slider-track {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
   overflow: hidden;
 }
 
@@ -1105,7 +1141,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 540px;
+  min-height: 100%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s ease;
@@ -1127,6 +1163,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1186,7 +1224,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 520px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
 }
 
 /* Hero Content in Center */
@@ -6141,21 +6181,28 @@ body {
 
 @media (max-width: 991.98px) {
 
-  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  /* Tablet Hero Section (<= 991.98px): Full Available Viewport Height (100svh / 100vh) */
+  :root {
+    --header-height: 67px;
+  }
+
+  .hero-section,
   .hero-banner-card {
-    min-height: auto !important;
-    height: auto !important;
-    border-radius: 14px;
-    overflow: hidden;
-    background: transparent;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    min-height: calc(100vh - var(--header-height, 67px)) !important;
+    min-height: calc(100svh - var(--header-height, 67px)) !important;
+    height: calc(100vh - var(--header-height, 67px)) !important;
+    height: calc(100svh - var(--header-height, 67px)) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
   }
 
   .hero-slider-track {
-    min-height: auto !important;
-    height: auto !important;
+    min-height: calc(100vh - var(--header-height, 67px)) !important;
+    min-height: calc(100svh - var(--header-height, 67px)) !important;
+    height: 100% !important;
     width: 100% !important;
-    aspect-ratio: 2172 / 724 !important;
+    aspect-ratio: unset !important;
     position: relative;
     overflow: hidden;
   }
@@ -6166,8 +6213,8 @@ body {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    min-height: auto !important;
-    aspect-ratio: 2172 / 724 !important;
+    min-height: 100% !important;
+    aspect-ratio: unset !important;
   }
 
   .hero-slide-bg {
@@ -6176,7 +6223,7 @@ body {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    background-size: 100% 100% !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6184,17 +6231,23 @@ body {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: fill !important;
+    object-fit: cover !important;
     object-position: center !important;
     display: block !important;
   }
 
   .hero-slide-overlay {
-    display: none !important;
+    display: block !important;
   }
 
   .hero-slide-1-content {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100% !important;
+    height: 100% !important;
+    padding: clamp(16px, 3vh, 32px) clamp(16px, 4vw, 32px) !important;
   }
 
   .hero-arrow {
@@ -6202,7 +6255,7 @@ body {
   }
 
   .hero-indicators {
-    bottom: 8px !important;
+    bottom: 14px !important;
   }
 
   .hero-dot {
@@ -6399,21 +6452,28 @@ body {
 
 @media (max-width: 767.98px) {
 
-  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  /* Mobile Hero Section (320px–767px): Full Available Viewport Height (100svh / 100vh) */
+  :root {
+    --header-height: 61px;
+  }
+
+  .hero-section,
   .hero-banner-card {
-    min-height: auto !important;
-    height: auto !important;
-    border-radius: 14px;
-    overflow: hidden;
-    background: transparent;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    min-height: calc(100vh - var(--header-height, 61px)) !important;
+    min-height: calc(100svh - var(--header-height, 61px)) !important;
+    height: calc(100vh - var(--header-height, 61px)) !important;
+    height: calc(100svh - var(--header-height, 61px)) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
   }
 
   .hero-slider-track {
-    min-height: auto !important;
-    height: auto !important;
+    min-height: calc(100vh - var(--header-height, 61px)) !important;
+    min-height: calc(100svh - var(--header-height, 61px)) !important;
+    height: 100% !important;
     width: 100% !important;
-    aspect-ratio: 2172 / 724 !important;
+    aspect-ratio: unset !important;
     position: relative;
     overflow: hidden;
   }
@@ -6422,19 +6482,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    min-height: auto !important;
-    aspect-ratio: 2172 / 724 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    aspect-ratio: unset !important;
   }
 
   .hero-slide-bg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6442,17 +6502,108 @@ body {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: fill !important;
+    object-fit: cover !important;
     object-position: center !important;
     display: block !important;
   }
 
   .hero-slide-overlay {
-    display: none !important;
+    display: block !important;
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.85) 35%,
+        rgba(255, 255, 255, 0.85) 65%,
+        rgba(255, 255, 255, 0.55) 100%) !important;
   }
 
   .hero-slide-1-content {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: clamp(12px, 2.5vh, 24px) 14px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content-col {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-emblem-badge {
+    width: clamp(50px, 12vw, 68px) !important;
+    height: clamp(50px, 12vw, 68px) !important;
+    margin-bottom: clamp(6px, 1.2vh, 10px) !important;
+  }
+
+  .hero-party-title {
+    font-size: clamp(1.15rem, 4vw, 1.4rem) !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hero-heading-main {
+    font-size: clamp(1.35rem, 5vw, 1.95rem) !important;
+    line-height: 1.22 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-heading-sub {
+    font-size: clamp(0.85rem, 2.8vw, 1rem) !important;
+    margin-bottom: clamp(8px, 1.5vh, 14px) !important;
+  }
+
+  .hero-quote-box {
+    display: block !important;
+    text-align: center !important;
+    padding: clamp(6px, 1vh, 8px) clamp(10px, 2.5vw, 16px) !important;
+    margin-bottom: clamp(10px, 1.8vh, 16px) !important;
+    max-width: 95% !important;
+    width: auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-quote-text {
+    font-size: clamp(0.72rem, 2.3vw, 0.88rem) !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    display: inline !important;
+  }
+
+  .hero-quote-mark {
+    font-size: 1.15rem !important;
+    display: inline !important;
+  }
+
+  .hero-cta-btns {
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-cta-btns .btn-pill-red,
+  .hero-cta-btns .btn-pill-white-outline {
+    font-size: 0.82rem !important;
+    padding: 7px 16px !important;
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
   }
 
   .hero-arrow {
@@ -6460,7 +6611,7 @@ body {
   }
 
   .hero-indicators {
-    bottom: 6px !important;
+    bottom: 10px !important;
   }
 
   .hero-dot {
@@ -6713,13 +6864,16 @@ body {
     font-size: 0.85rem !important;
   }
 
-  /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px) */
+  /* Section 2 — Hero Banner (Full Available Viewport Height preserved on 320px) */
+  .hero-section,
   .hero-banner-card,
   .hero-slider-track,
   .hero-slide {
-    min-height: auto !important;
-    height: auto !important;
-    aspect-ratio: 2172 / 724 !important;
+    min-height: calc(100vh - var(--header-height, 61px)) !important;
+    min-height: calc(100svh - var(--header-height, 61px)) !important;
+    height: calc(100vh - var(--header-height, 61px)) !important;
+    height: calc(100svh - var(--header-height, 61px)) !important;
+    aspect-ratio: unset !important;
   }
 
   /* Section 3 — Quick Navigation Strip */
