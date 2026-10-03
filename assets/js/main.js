@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPhotoGallerySlider();
   initForms();
   initBackToTop();
-  initSearch();
   initPolicyModal();
   initCampaignSlider();
   initInteractiveMap();
@@ -787,59 +786,7 @@ function showPolicyDetail(idx, modal) {
 }
 
 /* ==========================================================================
-   5. Search Functionality
-   ========================================================================== */
-function initSearch() {
-  const searchBtn = document.getElementById('header-search-btn');
-  const searchModalEl = document.getElementById('searchModal');
-  const searchInput = document.getElementById('searchInput');
-  const searchResults = document.getElementById('searchResults');
-
-  if (!searchModalEl) return;
-  const modal = new bootstrap.Modal(searchModalEl);
-
-  if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-      modal.show();
-      setTimeout(() => searchInput && searchInput.focus(), 400);
-    });
-  }
-
-  if (searchInput && searchResults) {
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      if (!query) {
-        searchResults.innerHTML = `<p class="text-muted text-center my-3">${currentLang === 'te' ? 'దయచేసి శోధన పదాన్ని నమోదు చేయండి...' : 'Please enter a search keyword...'}</p>`;
-        return;
-      }
-
-      // Search through policy details
-      const matches = policyDetails.filter((p) => {
-        return (
-          p.titleTe.toLowerCase().includes(query) ||
-          p.titleEn.toLowerCase().includes(query) ||
-          p.pointsTe.some(pt => pt.toLowerCase().includes(query)) ||
-          p.pointsEn.some(pt => pt.toLowerCase().includes(query))
-        );
-      });
-
-      if (matches.length === 0) {
-        searchResults.innerHTML = `<p class="text-danger text-center my-3">${currentLang === 'te' ? 'ఫలితాలు కనుగొనబడలేదు.' : 'No matching results found.'}</p>`;
-      } else {
-        searchResults.innerHTML = matches.map((m, i) => `
-          <div class="search-result-item p-3 border rounded mb-2 bg-light">
-            <span class="badge bg-warning text-dark mb-1">అంశం #${m.num}</span>
-            <h6 class="fw-bold text-danger mb-1">${currentLang === 'te' ? m.titleTe : m.titleEn}</h6>
-            <p class="small text-muted mb-0">${currentLang === 'te' ? m.pointsTe[0] : m.pointsEn[0]}</p>
-          </div>
-        `).join('');
-      }
-    });
-  }
-}
-
-/* ==========================================================================
-   6. Form Validation & Toasts (Membership & Newsletter)
+   5. Policy Modal Popup (Issue Cards)
    ========================================================================== */
 function initForms() {
   // Membership Form

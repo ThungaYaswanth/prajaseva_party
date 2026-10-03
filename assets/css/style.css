@@ -80,6 +80,196 @@ body {
   padding-right: 20px;
 }
 
+/* ==========================================================================
+   Consistent Website Section Vertical Spacing System
+   - Mobile (320–575px): 40px top and 40px bottom
+   - Tablet (576–991px): 60px top and 60px bottom
+   - Laptop (992–1439px): 70px top and 70px bottom
+   - Desktop (1440px+): 90px top and 90px bottom
+   ========================================================================== */
+:root {
+  --section-padding-top: 40px;
+  --section-padding-bottom: 40px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --section-padding-top: 60px;
+    --section-padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --section-padding-top: 70px;
+    --section-padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --section-padding-top: 90px;
+    --section-padding-bottom: 90px;
+  }
+}
+
+/* Mobile (320–575px): 40px top and 40px bottom */
+.about-overview-section,
+.issues-section,
+.campaign-banner-section,
+.news-events-section,
+.leadership-showcase-section,
+.state-mission-section,
+.gallery-section,
+.social-connect-section,
+.membership-master-section,
+main > section:not(.hero-section):not(.quick-nav-section) {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* Tablet (576–991px): 60px top and 60px bottom */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .about-overview-section,
+  .issues-section,
+  .campaign-banner-section,
+  .news-events-section,
+  .leadership-showcase-section,
+  .state-mission-section,
+  .gallery-section,
+  .social-connect-section,
+  .membership-master-section,
+  main > section:not(.hero-section):not(.quick-nav-section) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+  }
+}
+
+/* Laptop (992–1439px): 70px top and 70px bottom */
+@media (min-width: 992px) and (max-width: 1439.98px) {
+  .about-overview-section,
+  .issues-section,
+  .campaign-banner-section,
+  .news-events-section,
+  .leadership-showcase-section,
+  .state-mission-section,
+  .gallery-section,
+  .social-connect-section,
+  .membership-master-section,
+  main > section:not(.hero-section):not(.quick-nav-section) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+  }
+}
+
+/* Desktop (1440px+): 90px top and 90px bottom */
+@media (min-width: 1440px) {
+  .about-overview-section,
+  .issues-section,
+  .campaign-banner-section,
+  .news-events-section,
+  .leadership-showcase-section,
+  .state-mission-section,
+  .gallery-section,
+  .social-connect-section,
+  .membership-master-section,
+  main > section:not(.hero-section):not(.quick-nav-section) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+  }
+}
+
+/* ==========================================================================
+   Global Icon Centering System — Perfect Center for ALL circular icon containers
+   Applies to every icon-in-circle pattern across the entire homepage.
+   ========================================================================== */
+.quick-icon-wrap,
+.feature-icon-circle,
+.issue-circle-stage,
+.issue-halo-ring,
+.issue-circle-img-wrap.is-vector,
+.about-pillar-icon,
+.social-circle-btn,
+.mem-stat-icon-circle,
+.mem-feature-icon,
+.leader-avatar-wrap,
+.f-contact-icon-bubble,
+.president-halo-circle,
+.circle-action-btn,
+.id-emblem-ring,
+.social-btn-arrow-circle,
+.social-platform-icon,
+.event-category-icon,
+.mission-pill-icon,
+.gallery-nav-btn,
+.slider-arrow-btn,
+.popup-close-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ensure icons inside circular containers are perfectly centered */
+.quick-icon-wrap > *,
+.feature-icon-circle > *,
+.issue-circle-img-wrap.is-vector > *,
+.about-pillar-icon > *,
+.social-circle-btn > *,
+.mem-stat-icon-circle > *,
+.f-contact-icon-bubble > *,
+.circle-action-btn > *,
+.id-emblem-ring > *,
+.social-btn-arrow-circle > *,
+.social-platform-icon > *,
+.event-category-icon > *,
+.mission-pill-icon > *,
+.gallery-nav-btn > *,
+.popup-close-btn > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Bootstrap Icons & Font Awesome — force perfect vertical centering inside circles */
+.quick-icon-wrap i,
+.feature-icon-circle i,
+.issue-circle-img-wrap.is-vector i,
+.about-pillar-icon i,
+.social-circle-btn i,
+.mem-stat-icon-circle i,
+.f-contact-icon-bubble i,
+.circle-action-btn i,
+.id-emblem-ring i,
+.social-btn-arrow-circle i,
+.social-platform-icon i,
+.event-category-icon i,
+.mission-pill-icon i,
+.gallery-nav-btn i,
+.popup-close-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+}
+
 /* Section Title Bar Component */
 .section-header-wrap {
   display: flex;
@@ -410,31 +600,6 @@ body {
   gap: 16px;
   flex-shrink: 0;
   margin-left: auto;
-}
-
-/* Circular Search Button matching user format */
-.btn-circle-search {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.5px solid #E2E8F0;
-  background-color: #FFFFFF;
-  color: #1E293B;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-  padding: 0;
-}
-
-.btn-circle-search:hover {
-  border-color: #CBD5E1;
-  background-color: #F8FAFC;
-  color: #C81016;
-  transform: scale(1.04);
 }
 
 /* Language Dropdown Capsule (తెలుగు ⌄) matching user format */
@@ -887,13 +1052,6 @@ body {
     gap: 8px;
   }
 
-  .btn-circle-search {
-    display: inline-flex !important;
-    width: 35px;
-    height: 35px;
-    font-size: 0.85rem;
-  }
-
   .lang-dropdown-capsule {
     padding: 6px 12px;
     gap: 5px;
@@ -963,10 +1121,6 @@ body {
   .header-right-controls {
     gap: 6px;
     flex-shrink: 0;
-  }
-
-  .header-right-controls .btn-circle-search {
-    display: none !important;
   }
 
   .header-right-controls .btn-pill-membership {
@@ -1081,7 +1235,9 @@ body {
 }
 
 /* ==========================================================================
-   Section 2 — Hero Banner (Full Available Viewport Height: 100svh / 100vh)
+   Section 2 — Hero Banner
+   Laptop & Desktop (>= 992px): Larger fixed/responsive hero height covering hero area
+   Mobile & Tablet (< 992px): Edge-to-edge, 100% width, automatic height by aspect ratio
    ========================================================================== */
 
 .hero-section {
@@ -1091,13 +1247,11 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - var(--header-height, 86px));
-  min-height: calc(100svh - var(--header-height, 86px));
   display: flex;
   flex-direction: column;
 }
 
-.hero-section>div {
+.hero-section > div {
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
@@ -1118,10 +1272,6 @@ body {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--header-height, 86px));
-  min-height: calc(100svh - var(--header-height, 86px));
-  height: calc(100vh - var(--header-height, 86px));
-  height: calc(100svh - var(--header-height, 86px));
 }
 
 /* Slider Track & Slides */
@@ -1130,9 +1280,29 @@ body {
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
-  min-height: calc(100vh - var(--header-height, 86px));
-  min-height: calc(100svh - var(--header-height, 86px));
   overflow: hidden;
+}
+
+/* Desktop & Laptop (>= 992px): Larger fixed/responsive hero height covering full area */
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: calc(100vh - var(--header-height, 86px));
+    min-height: calc(100svh - var(--header-height, 86px));
+    height: calc(100vh - var(--header-height, 86px));
+    height: calc(100svh - var(--header-height, 86px));
+  }
+
+  .hero-banner-card {
+    min-height: calc(100vh - var(--header-height, 86px));
+    min-height: calc(100svh - var(--header-height, 86px));
+    height: calc(100vh - var(--header-height, 86px));
+    height: calc(100svh - var(--header-height, 86px));
+  }
+
+  .hero-slider-track {
+    min-height: calc(100vh - var(--header-height, 86px));
+    min-height: calc(100svh - var(--header-height, 86px));
+  }
 }
 
 .hero-slide {
@@ -1364,63 +1534,9 @@ body {
 }
 
 /* Hero Controls (Arrows & Dots) */
-.hero-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 4;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.88);
-  border: 1px solid var(--border-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-red);
-  font-size: 1.1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-}
-
-.hero-arrow:hover {
-  background-color: var(--primary-red);
-  color: #FFFFFF;
-  border-color: var(--primary-red);
-}
-
-.hero-arrow.prev {
-  left: 14px;
-}
-
-.hero-arrow.next {
-  right: 14px;
-}
-
+.hero-arrow,
 .hero-indicators {
-  position: absolute;
-  bottom: 58px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  display: flex;
-  gap: 8px;
-}
-
-.hero-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #CBD5E1;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.hero-dot.active {
-  background-color: var(--primary-red);
-  width: 22px;
-  border-radius: 10px;
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -1496,8 +1612,8 @@ body {
    ========================================================================== */
 .about-overview-section {
   position: relative;
-  padding-top: 48px;
-  padding-bottom: 56px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   background-color: #FAF8F5;
   background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
   overflow: hidden;
@@ -1739,11 +1855,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .about-overview-section {
-    padding-top: 36px;
-    padding-bottom: 42px;
-  }
-
   .about-overview-grid {
     margin-bottom: 32px;
     gap: 26px;
@@ -1775,8 +1886,8 @@ body {
    ========================================================================== */
 .issues-section {
   position: relative;
-  padding-top: 45px;
-  padding-bottom: 50px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   background-color: #FAF9F6;
   background: radial-gradient(circle at 10% 20%, rgba(254, 242, 242, 0.7) 0%, rgba(255, 255, 255, 0.3) 40%, #FAF9F6 100%);
   overflow: hidden;
@@ -2463,8 +2574,8 @@ body {
    Section 6 & 7 — Telangana Reservation Banner & Slogan (Master Format)
    ========================================================================== */
 .campaign-banner-section {
-  padding-top: 14px;
-  padding-bottom: 38px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
 }
 
 .campaign-interactive-banner {
@@ -2831,8 +2942,8 @@ body {
    Section 8 & 9 — Latest News & Upcoming Events (Master Redesign)
    ========================================================================== */
 .news-events-section {
-  padding-top: 14px;
-  padding-bottom: 42px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
 }
 
 /* Custom Header with Vertical Red Bar */
@@ -3354,8 +3465,8 @@ body {
    Pixel-Perfect Implementation of User Design Mockup
    ========================================================================== */
 .leadership-showcase-section {
-  padding-top: 28px;
-  padding-bottom: 38px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   position: relative;
 }
 
@@ -3832,11 +3943,6 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .leadership-showcase-section {
-    padding-top: 22px;
-    padding-bottom: 30px;
-  }
-
   .president-hero-card {
     grid-template-columns: 260px 1fr;
     gap: 20px;
@@ -3973,8 +4079,8 @@ body {
    Section 9C: State Mission & Interactive Vector India Map
    ========================================================================== */
 .state-mission-section {
-  padding-top: 24px;
-  padding-bottom: 42px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   position: relative;
 }
 
@@ -4051,11 +4157,7 @@ body {
 }
 
 .state-mission-accent-line {
-  width: 100px;
-  height: 4.5px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, #F59E0B 0%, #F59E0B 35%, #C81016 35%, #C81016 100%);
-  margin: 20px 0 16px 0;
+  display: none;
 }
 
 .state-mission-desc {
@@ -4063,7 +4165,7 @@ body {
   color: #475569;
   line-height: 1.6;
   font-weight: 500;
-  margin: 0;
+  margin: 24px 0 0 0;
   max-width: 380px;
 }
 
@@ -4600,8 +4702,8 @@ body {
    Section 10 — Photo Gallery (ఫోటోలు గ్యాలరీ)
    ========================================================================== */
 .gallery-section {
-  padding-top: 14px;
-  padding-bottom: 38px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
 }
 
 .header-accent-bar {
@@ -4812,8 +4914,8 @@ body {
    Section 10B — Social Media Connect (మాతో సోషల్ మీడియాలో కలవండి)
    ========================================================================== */
 .social-connect-section {
-  padding-top: 24px;
-  padding-bottom: 42px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   position: relative;
 }
 
@@ -5144,8 +5246,8 @@ body {
    Section 11 — Membership Section with Authentic Master ID Card
    ========================================================================== */
 .membership-master-section {
-  padding-top: 24px;
-  padding-bottom: 50px;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
   position: relative;
   overflow: visible;
 }
@@ -6185,54 +6287,91 @@ body {
 
 @media (max-width: 991.98px) {
 
-  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) with zero white gap */
-  .hero-section,
-  .hero-section > div,
+  /* Tablet & Mobile Hero Section (<= 991.98px): Edge-to-Edge, 100% width, automatic height by aspect ratio (3:1) */
+  .hero-section {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .hero-section > div {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .hero-banner-card {
     min-height: auto !important;
     height: auto !important;
-    border-radius: 14px;
-    overflow: hidden;
-    background: transparent;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: block !important;
+    flex: none !important;
   }
 
   .hero-slider-track {
     min-height: auto !important;
     height: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
     aspect-ratio: 2172 / 724 !important;
-    position: relative;
-    overflow: hidden;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
     height: 100% !important;
     min-height: auto !important;
     aspect-ratio: 2172 / 724 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
     width: 100% !important;
     height: 100% !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center !important;
+    object-position: center center !important;
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-overlay {
@@ -6445,54 +6584,91 @@ body {
 
 @media (max-width: 767.98px) {
 
-  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) with zero white gap */
-  .hero-section,
-  .hero-section > div,
+  /* Mobile Hero Section (320px–767px): Edge-to-Edge, 100% width, automatic height by aspect ratio (3:1) */
+  .hero-section {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .hero-section > div {
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .hero-banner-card {
     min-height: auto !important;
     height: auto !important;
-    border-radius: 14px;
-    overflow: hidden;
-    background: transparent;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: block !important;
+    flex: none !important;
   }
 
   .hero-slider-track {
     min-height: auto !important;
     height: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
     aspect-ratio: 2172 / 724 !important;
-    position: relative;
-    overflow: hidden;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     min-height: auto !important;
     aspect-ratio: 2172 / 724 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center !important;
+    object-position: center center !important;
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-slide-overlay {
@@ -6761,15 +6937,19 @@ body {
     font-size: 0.85rem !important;
   }
 
-  /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px) */
+  /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px, Edge-to-Edge) */
   .hero-section,
-  .hero-section > div,
   .hero-banner-card,
   .hero-slider-track,
   .hero-slide {
     min-height: auto !important;
     height: auto !important;
     aspect-ratio: 2172 / 724 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
   }
 
   /* Section 3 — Quick Navigation Strip */

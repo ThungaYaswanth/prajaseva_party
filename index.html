@@ -56,10 +56,7 @@
               <a class="nav-link" href="#public-issues" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#news-events" data-i18n="navNews">వార్తలు</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#upcoming-events" data-i18n="navEvents">కార్యక్రమాలు</a>
+              <a class="nav-link" href="#news-events" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
             </li>
           </ul>
 
@@ -76,13 +73,8 @@
           </div>
         </div>
 
-        <!-- 3. Right: Search + Language Dropdown + Donate + Membership -->
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
         <div class="header-right-controls d-flex align-items-center">
-          <!-- Search Circular Button -->
-          <button class="btn-circle-search" id="header-search-btn" data-bs-toggle="modal" data-bs-target="#searchModal"
-            title="శోధించండి / Search" aria-label="Search">
-            <i class="bi bi-search"></i>
-          </button>
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
           <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
@@ -194,20 +186,6 @@
               </div>
             </div>
 
-          </div>
-
-          <!-- Left & Right Arrow Controls -->
-          <button class="hero-arrow prev" id="hero-prev-btn" aria-label="Previous Slide">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <button class="hero-arrow next" id="hero-next-btn" aria-label="Next Slide">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-
-          <!-- Slide Indicators (2 Dots) -->
-          <div class="hero-indicators" id="hero-indicators">
-            <span class="hero-dot active" data-slide="0" title="Slide 1"></span>
-            <span class="hero-dot" data-slide="1" title="Slide 2"></span>
           </div>
         </div>
       </div>
@@ -1207,18 +1185,6 @@
     <section class="state-mission-section" id="state-mission">
       <div class="main-container">
         <div class="state-mission-card">
-          <!-- Top-Right Flowing Decorative Wave Matching Design Mockup -->
-          <svg class="mission-wave-top-right" viewBox="0 0 280 150" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C90,65 190,25 280,105 L280,0 Z" fill="#F59E0B" fill-opacity="0.9"/>
-            <path d="M45,0 C135,50 215,15 280,75 L280,0 Z" fill="#C81016"/>
-          </svg>
-
-          <!-- Bottom Flowing Decorative Wave Matching Design Mockup -->
-          <svg class="mission-wave-bottom" viewBox="0 0 1200 90" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,48 C280,92 780,15 1200,65 L1200,90 L0,90 Z" fill="#F59E0B" fill-opacity="0.92"/>
-            <path d="M0,60 C360,100 840,30 1200,72 L1200,90 L0,90 Z" fill="#C81016"/>
-          </svg>
-
           <div class="state-mission-grid">
             <!-- Left Column: Title & Subtitle -->
             <div class="state-mission-left">
@@ -2159,27 +2125,6 @@
     </div>
   </div>
 
-  <!-- 3. Search Modal -->
-  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="searchModalLabel" data-i18n="searchTitle">వెబ్‌సైట్‌లో శోధించండి</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="input-group mb-3">
-            <span class="input-group-text"><i class="bi bi-search"></i></span>
-            <input type="text" class="form-control" id="searchInput" placeholder="శోధించండి..."
-              data-i18n-placeholder="searchPlaceholder">
-          </div>
-          <div id="searchResults" style="max-height: 280px; overflow-y: auto;">
-            <p class="text-muted text-center my-3">దయచేసి శోధన పదాన్ని నమోదు చేయండి...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- 4. Gallery Lightbox Modal -->
   <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-hidden="true">
