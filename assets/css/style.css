@@ -1097,7 +1097,7 @@ body {
   flex-direction: column;
 }
 
-.hero-section > div {
+.hero-section>div {
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
@@ -4139,10 +4139,12 @@ body {
     r: 18;
     opacity: 0.8;
   }
+
   50% {
     r: 32;
     opacity: 0;
   }
+
   100% {
     r: 18;
     opacity: 0.8;
@@ -4239,10 +4241,12 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.4;
     transform: scale(0.85);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -6181,28 +6185,21 @@ body {
 
 @media (max-width: 991.98px) {
 
-  /* Tablet Hero Section (<= 991.98px): Full Available Viewport Height (100svh / 100vh) */
-  :root {
-    --header-height: 67px;
-  }
-
-  .hero-section,
+  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
   .hero-banner-card {
-    min-height: calc(100vh - var(--header-height, 67px)) !important;
-    min-height: calc(100svh - var(--header-height, 67px)) !important;
-    height: calc(100vh - var(--header-height, 67px)) !important;
-    height: calc(100svh - var(--header-height, 67px)) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .hero-slider-track {
-    min-height: calc(100vh - var(--header-height, 67px)) !important;
-    min-height: calc(100svh - var(--header-height, 67px)) !important;
-    height: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
     width: 100% !important;
-    aspect-ratio: unset !important;
+    aspect-ratio: 2172 / 724 !important;
     position: relative;
     overflow: hidden;
   }
@@ -6213,8 +6210,8 @@ body {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    min-height: 100% !important;
-    aspect-ratio: unset !important;
+    min-height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 
   .hero-slide-bg {
@@ -6223,7 +6220,7 @@ body {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    background-size: cover !important;
+    background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6231,23 +6228,17 @@ body {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: fill !important;
     object-position: center !important;
     display: block !important;
   }
 
   .hero-slide-overlay {
-    display: block !important;
+    display: none !important;
   }
 
   .hero-slide-1-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 100% !important;
-    height: 100% !important;
-    padding: clamp(16px, 3vh, 32px) clamp(16px, 4vw, 32px) !important;
+    display: none !important;
   }
 
   .hero-arrow {
@@ -6255,7 +6246,7 @@ body {
   }
 
   .hero-indicators {
-    bottom: 14px !important;
+    bottom: 8px !important;
   }
 
   .hero-dot {
@@ -6452,28 +6443,21 @@ body {
 
 @media (max-width: 767.98px) {
 
-  /* Mobile Hero Section (320px–767px): Full Available Viewport Height (100svh / 100vh) */
-  :root {
-    --header-height: 61px;
-  }
-
-  .hero-section,
+  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
   .hero-banner-card {
-    min-height: calc(100vh - var(--header-height, 61px)) !important;
-    min-height: calc(100svh - var(--header-height, 61px)) !important;
-    height: calc(100vh - var(--header-height, 61px)) !important;
-    height: calc(100svh - var(--header-height, 61px)) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .hero-slider-track {
-    min-height: calc(100vh - var(--header-height, 61px)) !important;
-    min-height: calc(100svh - var(--header-height, 61px)) !important;
-    height: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
     width: 100% !important;
-    aspect-ratio: unset !important;
+    aspect-ratio: 2172 / 724 !important;
     position: relative;
     overflow: hidden;
   }
@@ -6482,19 +6466,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 100% !important;
-    aspect-ratio: unset !important;
+    width: 100%;
+    height: 100%;
+    min-height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 
   .hero-slide-bg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6502,108 +6486,17 @@ body {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: fill !important;
     object-position: center !important;
     display: block !important;
   }
 
   .hero-slide-overlay {
-    display: block !important;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.45) 0%,
-        rgba(255, 255, 255, 0.85) 35%,
-        rgba(255, 255, 255, 0.85) 65%,
-        rgba(255, 255, 255, 0.55) 100%) !important;
+    display: none !important;
   }
 
   .hero-slide-1-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding: clamp(12px, 2.5vh, 24px) 14px !important;
-    overflow: hidden !important;
-  }
-
-  .hero-content-col {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    width: 100% !important;
-    padding: 0 4px !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-emblem-badge {
-    width: clamp(50px, 12vw, 68px) !important;
-    height: clamp(50px, 12vw, 68px) !important;
-    margin-bottom: clamp(6px, 1.2vh, 10px) !important;
-  }
-
-  .hero-party-title {
-    font-size: clamp(1.15rem, 4vw, 1.4rem) !important;
-    margin-bottom: 2px !important;
-  }
-
-  .hero-heading-main {
-    font-size: clamp(1.35rem, 5vw, 1.95rem) !important;
-    line-height: 1.22 !important;
-    margin-bottom: 4px !important;
-  }
-
-  .hero-heading-sub {
-    font-size: clamp(0.85rem, 2.8vw, 1rem) !important;
-    margin-bottom: clamp(8px, 1.5vh, 14px) !important;
-  }
-
-  .hero-quote-box {
-    display: block !important;
-    text-align: center !important;
-    padding: clamp(6px, 1vh, 8px) clamp(10px, 2.5vw, 16px) !important;
-    margin-bottom: clamp(10px, 1.8vh, 16px) !important;
-    max-width: 95% !important;
-    width: auto !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    border-radius: 18px !important;
-  }
-
-  .hero-quote-text {
-    font-size: clamp(0.72rem, 2.3vw, 0.88rem) !important;
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-    text-align: center !important;
-    line-height: 1.35 !important;
-    display: inline !important;
-  }
-
-  .hero-quote-mark {
-    font-size: 1.15rem !important;
-    display: inline !important;
-  }
-
-  .hero-cta-btns {
-    gap: 8px !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-cta-btns .btn-pill-red,
-  .hero-cta-btns .btn-pill-white-outline {
-    font-size: 0.82rem !important;
-    padding: 7px 16px !important;
-    flex: 1 1 auto !important;
-    justify-content: center !important;
-    text-align: center !important;
-    white-space: nowrap !important;
+    display: none !important;
   }
 
   .hero-arrow {
@@ -6611,7 +6504,7 @@ body {
   }
 
   .hero-indicators {
-    bottom: 10px !important;
+    bottom: 6px !important;
   }
 
   .hero-dot {
@@ -6864,16 +6757,13 @@ body {
     font-size: 0.85rem !important;
   }
 
-  /* Section 2 — Hero Banner (Full Available Viewport Height preserved on 320px) */
-  .hero-section,
+  /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px) */
   .hero-banner-card,
   .hero-slider-track,
   .hero-slide {
-    min-height: calc(100vh - var(--header-height, 61px)) !important;
-    min-height: calc(100svh - var(--header-height, 61px)) !important;
-    height: calc(100vh - var(--header-height, 61px)) !important;
-    height: calc(100svh - var(--header-height, 61px)) !important;
-    aspect-ratio: unset !important;
+    min-height: auto !important;
+    height: auto !important;
+    aspect-ratio: 2172 / 724 !important;
   }
 
   /* Section 3 — Quick Navigation Strip */
@@ -7656,13 +7546,15 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
+
   .f-legal-links {
     margin-left: auto;
     margin-right: auto;
-}
+  }
+
   .f-legal-copyright {
     margin: auto;
-}
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -7699,11 +7591,12 @@ body {
     justify-content: center;
   }
 
-   .footer-hero-container {
+  .footer-hero-container {
     flex-direction: column;
-}
-.f-legal-links {
+  }
+
+  .f-legal-links {
     margin-left: auto;
     margin-right: auto;
-}
+  }
 }
