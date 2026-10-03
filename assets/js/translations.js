@@ -22,7 +22,8 @@ const translations = {
     navEvents: "కార్యక్రమాలు",
     navGallery: "గ్యాలరీ",
     navContact: "సంప్రదించండి",
-    btnMembership: "సభ్యత్వం పొందండి",
+    btnMembership: "సభ్యత్వం",
+    btnDonate: "విరాళం ఇవ్వండి",
     searchPlaceholder: "శోధించండి...",
 
     // Hero Banner
@@ -311,7 +312,8 @@ const translations = {
     navEvents: "Events",
     navGallery: "Gallery",
     navContact: "Contact",
-    btnMembership: "Join Membership",
+    btnMembership: "Membership",
+    btnDonate: "Donate",
     searchPlaceholder: "Search...",
 
     // Hero Banner
@@ -407,9 +409,9 @@ const translations = {
     tgHeadline: "Mandate Local Job Reservation in Special Sectors",
     tgSubtitle: "Moving forward with comprehensive policies for the welfare of every community...",
     tgFeature1Title: "For Youth",
-    tgFeature1Sub: "Employment Opportunities",
+    tgFeature1Sub: "Job Creation",
     tgFeature2Title: "Public Welfare",
-    tgFeature2Sub: "Our Prime Mission",
+    tgFeature2Sub: "Our Mission",
     tgFeature3Title: "Holistic Growth",
     tgFeature3Sub: "Our Vision",
     btnTgVision: "Our Telangana Vision",

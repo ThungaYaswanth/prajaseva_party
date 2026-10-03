@@ -19,7 +19,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=11.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=28.0">
 </head>
 
 <body>
@@ -29,13 +29,18 @@
        ========================================================================== -->
   <header class="site-header" id="site-header">
     <div class="main-container header-container">
-      <nav class="navbar navbar-expand-lg p-0">
-        <!-- 1. Party Logo (Left) -->
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
         <a class="brand-wrap" href="#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
-          <img src="assets/images/logo.webp" alt="ప్రజాసేవ పార్టీ" class="brand-logo-img">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport.jpg" alt="నాయకుడు" class="brand-leader-img">
+          </div>
         </a>
 
-        <!-- 2. Navigation Links (Center / Main Nav on Desktop) -->
+        <!-- 2. Center: Navigation Links (Exact 6 items from reference) -->
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav align-items-center mb-0">
             <li class="nav-item">
@@ -51,53 +56,64 @@
               <a class="nav-link" href="#public-issues" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-party" data-i18n="navLeadership">నాయకత్వం</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#news-events" data-i18n="navNews">వార్తలు</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#upcoming-events" data-i18n="navEvents">కార్యక్రమాలు</a>
             </li>
           </ul>
+
+          <!-- Mobile Action CTAs (Inside dropdown menu on < 992px) -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <button type="button" class="btn-mobile-nav-membership" data-bs-toggle="modal" data-bs-target="#membershipModal" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </button>
+            <button type="button" class="btn-mobile-nav-donate" data-bs-toggle="modal" data-bs-target="#donateModal" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </button>
+          </div>
         </div>
 
-        <!-- 3. Header Right Controls (Far Right on Desktop, Action Bar on Mobile) -->
+        <!-- 3. Right: Search + Language Dropdown + Donate + Membership -->
         <div class="header-right-controls d-flex align-items-center">
-          <!-- Language Switcher Capsule -->
-          <button type="button" class="lang-switch-capsule" id="lang-toggle-btn"
-            title="భాషను మార్చండి / Switch Language">
-            <span class="lang-label" id="lang-current-label">తెలుగు</span>
-            <span class="lang-divider">|</span>
-            <i class="bi bi-globe2 lang-globe-icon"></i>
-          </button>
-
-          <!-- Search Icon Button (Desktop only) -->
-          <button class="btn-icon-search d-none d-lg-inline-flex" id="header-search-btn" title="Search"
-            aria-label="Search">
+          <!-- Search Circular Button -->
+          <button class="btn-circle-search" id="header-search-btn" data-bs-toggle="modal" data-bs-target="#searchModal"
+            title="శోధించండి / Search" aria-label="Search">
             <i class="bi bi-search"></i>
           </button>
 
-          <!-- Join Membership Button -->
-          <button class="btn-pill-membership" data-bs-toggle="modal" data-bs-target="#membershipModal"
-            id="header-membership-btn">
-            <i class="bi bi-person-fill text-gold-icon"></i>
-            <span class="btn-mem-text-full d-none d-sm-inline" data-i18n="btnMembership">సభ్యత్వం పొందండి</span>
-            <span class="btn-mem-text-short d-inline d-sm-none" data-i18n="btnMembershipShort">సభ్యత్వం</span>
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            title="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
+
+          <!-- Donate Button (Gold Pill: విరాళం ఇవ్వండి) -->
+          <button type="button" class="btn-pill-donate" data-bs-toggle="modal" data-bs-target="#donateModal"
+            id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </button>
+
+          <!-- Join Membership Button (Red Pill: 👤 సభ్యత్వం) -->
+          <button type="button" class="btn-pill-membership" data-bs-toggle="modal" data-bs-target="#membershipModal"
+            id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
           </button>
 
           <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
           <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
             data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
             aria-expanded="false" aria-label="Toggle navigation">
-            <!-- Icon 1: Hamburger (shown when menu is closed) -->
             <svg class="toggle-icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor"
               stroke-width="2.3" fill="none" stroke-linecap="round">
               <line x1="3.5" y1="6" x2="20.5" y2="6"></line>
               <line x1="3.5" y1="12" x2="20.5" y2="12"></line>
               <line x1="3.5" y1="18" x2="20.5" y2="18"></line>
             </svg>
-            <!-- Icon 2: Close 'X' (shown when menu is open, exactly matching Image 2) -->
             <svg class="toggle-icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor"
               stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -122,7 +138,7 @@
             <!-- Slide 1: hero.webp (Leader, Charminar & Public Movement) -->
             <div class="hero-slide active" data-slide-index="0">
               <div class="hero-slide-bg" style="background-image: url('assets/images/hero.webp');">
-                <img src="assets/images/hero.webp" alt="ప్రజాసేవ పార్టీ - ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన"
+                <img src="assets/images/Golden.webp" alt="ప్రజాసేవ పార్టీ - ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన"
                   class="hero-slide-img" width="2172" height="724" fetchpriority="high">
               </div>
               <div class="hero-slide-overlay"></div>
@@ -2071,6 +2087,53 @@
     </div>
   </div>
 
+  <!-- 1.1 Donation Contribution Modal -->
+  <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"
+        style="border-radius: 24px; border: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.16);">
+        <div class="modal-header"
+          style="background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%); color: #1E293B; border-bottom: none; padding: 18px 24px;">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+            <h5 class="modal-title fw-bold mb-0" id="donateModalLabel">ప్రజాసేవ పార్టీకి విరాళం</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <p class="text-muted small mb-3">ప్రజల సంక్షేమం, ఉచిత విద్య, నాణ్యమైన వైద్యం సాధన కోసం ప్రజాసేవ పార్టీకి మీ
+            వంతు చేయూతనివ్వండి.</p>
+          <div class="bg-light p-3 rounded-4 mb-3 d-inline-block border">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" style="width: 170px; height: 170px; display: block;"
+              class="mx-auto">
+            <div class="mt-2 text-dark fw-bold small">Scan &amp; Pay with Any UPI App (GPay / PhonePe / Paytm)</div>
+            <div class="badge bg-danger-subtle text-danger px-3 py-1 rounded-pill mt-1 fs-6">prajasevaparty@upi</div>
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹100</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹500</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹1,000</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹5,000</button></div>
+          </div>
+          <div class="alert alert-secondary py-2 small mb-0 text-start">
+            <strong>ఖాతా వివరాలు:</strong> ప్రజాసేవ పార్టీ వెల్ఫేర్ ట్రస్ట్ &bull; A/C: 123456789012 &bull; IFSC:
+            SBIN0001234
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0 px-4 pb-4">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">మూసివేయి</button>
+          <button type="button" class="btn btn-warning rounded-pill px-4 fw-bold"
+            onclick="alert('విరాళం అందించినందుకు ధన్యవాదాలు! Thank you for your contribution.')">చెల్లింపు
+            నిర్ధారించండి</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 2. Policy Detail Modal -->
   <div class="modal fade" id="policyDetailModal" tabindex="-1" aria-labelledby="policyModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -2161,10 +2224,8 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/translations.js"></script>
-  <script src="assets/js/main.js?v=2.0"></script>
+  <script src="assets/js/translations.js?v=4.0"></script>
+  <script src="assets/js/main.js?v=5.0"></script>
 </body>
-
-</html>
 
 </html>

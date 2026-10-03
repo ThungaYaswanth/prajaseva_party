@@ -101,6 +101,16 @@ function initMobileNav() {
     });
   });
 
+  // Handle mobile drawer action buttons: close menu when opening modal
+  const drawerActionBtns = navbarCollapse.querySelectorAll('.btn-mobile-nav-membership, .btn-mobile-nav-donate');
+  drawerActionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        closeMobileMenu();
+      }
+    });
+  });
+
   // Brand logo tap returns to top
   if (brandLogo) {
     brandLogo.addEventListener('click', (e) => {
