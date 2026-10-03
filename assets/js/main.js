@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  updateHeaderHeight();
   initLanguage();
   initMobileNav();
   initHeroCarousel();
@@ -15,6 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initCampaignSlider();
   initInteractiveMap();
 });
+
+function updateHeaderHeight() {
+  const header = document.getElementById('site-header');
+  if (header) {
+    const h = header.offsetHeight;
+    if (h > 0) {
+      document.documentElement.style.setProperty('--header-height', `${h}px`);
+    }
+  }
+}
+
+window.addEventListener('resize', updateHeaderHeight);
+window.addEventListener('orientationchange', updateHeaderHeight);
 
 function initMobileNav() {
   const toggleBtn = document.getElementById('mobileMenuToggleBtn');

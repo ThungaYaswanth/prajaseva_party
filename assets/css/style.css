@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+  --header-height: 86px;
   --primary-red: #C81016;
   --primary-red-hover: #A50B0F;
   --primary-red-dark: #7F070A;
@@ -1234,22 +1235,57 @@ main > section:not(.hero-section):not(.quick-nav-section) {
 }
 
 /* ==========================================================================
-   Section 2 — Hero Banner
+   Section 2 — Hero Banner (Full Available Viewport Height: 100svh / 100vh)
    ========================================================================== */
+
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section>div {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .hero-banner-card {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   background: #FFFFFF;
   overflow: hidden;
+  border-radius: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  min-height: 520px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
+  height: calc(100vh - var(--header-height, 86px));
+  height: calc(100svh - var(--header-height, 86px));
 }
 
 /* Slider Track & Slides */
 .hero-slider-track {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: calc(100vh - var(--header-height, 86px));
+  min-height: calc(100svh - var(--header-height, 86px));
   overflow: hidden;
 }
 
@@ -1259,7 +1295,7 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 540px;
+  min-height: 100%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s ease;
@@ -1281,6 +1317,8 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1340,7 +1378,9 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 520px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
 }
 
 /* Hero Content in Center */
@@ -4239,10 +4279,12 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     r: 18;
     opacity: 0.8;
   }
+
   50% {
     r: 32;
     opacity: 0;
   }
+
   100% {
     r: 18;
     opacity: 0.8;
@@ -4339,10 +4381,12 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.4;
     transform: scale(0.85);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -6316,7 +6360,7 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-    background-size: 100% 100% !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6324,7 +6368,7 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: fill !important;
+    object-fit: cover !important;
     object-position: center !important;
     display: block !important;
   }
@@ -6574,7 +6618,7 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 100% 100% !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
@@ -6582,7 +6626,7 @@ main > section:not(.hero-section):not(.quick-nav-section) {
   .hero-slide-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: fill !important;
+    object-fit: cover !important;
     object-position: center !important;
     display: block !important;
   }
@@ -7642,13 +7686,15 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
+
   .f-legal-links {
     margin-left: auto;
     margin-right: auto;
-}
+  }
+
   .f-legal-copyright {
     margin: auto;
-}
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -7685,11 +7731,12 @@ main > section:not(.hero-section):not(.quick-nav-section) {
     justify-content: center;
   }
 
-   .footer-hero-container {
+  .footer-hero-container {
     flex-direction: column;
-}
-.f-legal-links {
+  }
+
+  .f-legal-links {
     margin-left: auto;
     margin-right: auto;
-}
+  }
 }
