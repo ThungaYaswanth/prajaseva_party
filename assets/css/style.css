@@ -6185,7 +6185,9 @@ body {
 
 @media (max-width: 991.98px) {
 
-  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  /* Tablet & Mobile Hero Section (<= 991.98px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) with zero white gap */
+  .hero-section,
+  .hero-section > div,
   .hero-banner-card {
     min-height: auto !important;
     height: auto !important;
@@ -6443,7 +6445,9 @@ body {
 
 @media (max-width: 767.98px) {
 
-  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) */
+  /* Mobile Hero Section (320px–767px): Hero Height Adapts to Image's Exact Aspect Ratio (3:1) with zero white gap */
+  .hero-section,
+  .hero-section > div,
   .hero-banner-card {
     min-height: auto !important;
     height: auto !important;
@@ -6758,6 +6762,8 @@ body {
   }
 
   /* Section 2 — Hero Banner (Strict 3:1 aspect ratio preserved on 320px) */
+  .hero-section,
+  .hero-section > div,
   .hero-banner-card,
   .hero-slider-track,
   .hero-slide {
