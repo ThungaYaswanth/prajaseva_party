@@ -269,6 +269,11 @@ function applyLanguage(lang) {
       el.placeholder = dict[key];
     }
   });
+
+  // Update map tooltip immediately if currently visible or active
+  if (typeof updateMapTooltipLanguage === 'function') {
+    updateMapTooltipLanguage(lang);
+  }
 }
 
 /* ==========================================================================
@@ -961,9 +966,75 @@ function initCampaignSlider() {
 }
 
 /**
+ * State Bilingual Mapping for Interactive India Map
+ */
+const mapStateNames = {
+  INAN: { te: "అండమాన్ & నికోబార్ దీవులు", en: "Andaman & Nicobar Islands" },
+  INTG: { te: "తెలంగాణ", en: "Telangana" },
+  INAP: { te: "ఆంధ్రప్రదేశ్", en: "Andhra Pradesh" },
+  INAR: { te: "అరుణాచల్ ప్రదేశ్", en: "Arunachal Pradesh" },
+  INAS: { te: "అస్సాం", en: "Assam" },
+  INBR: { te: "బీహార్", en: "Bihar" },
+  INCH: { te: "చండీగఢ్", en: "Chandigarh" },
+  INCT: { te: "ఛత్తీస్‌గఢ్", en: "Chhattisgarh" },
+  INDH: { te: "దాద్రా & నగర్ హవేలి", en: "Dadra & Nagar Haveli" },
+  INDL: { te: "ఢిల్లీ (NCR)", en: "Delhi (NCR)" },
+  INGA: { te: "గోవా", en: "Goa" },
+  INGJ: { te: "గుజరాత్", en: "Gujarat" },
+  INHR: { te: "హర్యానా", en: "Haryana" },
+  INHP: { te: "హిమాచల్ ప్రదేశ్", en: "Himachal Pradesh" },
+  INJH: { te: "జార్ఖండ్", en: "Jharkhand" },
+  INKA: { te: "కర్ణాటక", en: "Karnataka" },
+  INKL: { te: "కేరళ", en: "Kerala" },
+  INMP: { te: "మధ్యప్రదేశ్", en: "Madhya Pradesh" },
+  INMH: { te: "మహారాష్ట్ర", en: "Maharashtra" },
+  INMN: { te: "మణిపూర్", en: "Manipur" },
+  INML: { te: "మేఘాలయ", en: "Meghalaya" },
+  INMZ: { te: "మిజోరం", en: "Mizoram" },
+  INNL: { te: "నాగాలాండ్", en: "Nagaland" },
+  INOR: { te: "ఒడిశా", en: "Odisha" },
+  INPY: { te: "పుదుచ్చేరి", en: "Puducherry" },
+  INPB: { te: "పంజాబ్", en: "Punjab" },
+  INRJ: { te: "రాజస్థాన్", en: "Rajasthan" },
+  INSK: { te: "సిక్కిం", en: "Sikkim" },
+  INTN: { te: "తమిళనాడు", en: "Tamil Nadu" },
+  INTR: { te: "త్రిపుర", en: "Tripura" },
+  INUP: { te: "ఉత్తర ప్రదేశ్", en: "Uttar Pradesh" },
+  INUT: { te: "ఉత్తరాఖండ్", en: "Uttarakhand" },
+  INWB: { te: "పశ్చిమ బెంగాల్", en: "West Bengal" },
+  INLD: { te: "లక్షద్వీప్", en: "Lakshadweep" },
+  INJK: { te: "జమ్మూ & కాశ్మీర్", en: "Jammu & Kashmir" },
+  INLA: { te: "లడఖ్", en: "Ladakh" }
+};
+
+let currentlyHoveredMapPath = null;
+
+function getMapStateName(path, lang) {
+  if (!path) return '';
+  const id = path.id;
+  if (mapStateNames[id]) {
+    return lang === 'en' ? mapStateNames[id].en : mapStateNames[id].te;
+  }
+  if (lang === 'en') {
+    return path.getAttribute('data-state-en') || path.getAttribute('data-state') || 'State';
+  }
+  return path.getAttribute('data-state') || 'రాష్ట్రం';
+}
+
+function updateMapTooltipLanguage(lang) {
+  const tooltipTitle = document.getElementById('mapTooltipTitle');
+  if (!tooltipTitle) return;
+  if (currentlyHoveredMapPath) {
+    tooltipTitle.textContent = getMapStateName(currentlyHoveredMapPath, lang);
+  } else {
+    tooltipTitle.textContent = lang === 'en' ? 'State' : 'రాష్ట్రం';
+  }
+}
+
+/**
  * Interactive Vector India Map
- * Shows ONLY state name for all states on hover
- * For Telangana: Shows ONLY the Leader Card Popup (matching reference screenshot)
+ * Shows state name for all states on hover in current language
+ * For Telangana: Shows Leader Card Popup
  */
 function initInteractiveMap() {
   const mapStage = document.getElementById('indiaMapStage');
@@ -980,6 +1051,7 @@ function initInteractiveMap() {
 
   function openTelanganaPopup() {
     if (popupTimer) clearTimeout(popupTimer);
+    currentlyHoveredMapPath = null;
     if (tooltip) tooltip.classList.remove('visible');
     if (popup) popup.classList.add('active');
   }
@@ -1010,10 +1082,11 @@ function initInteractiveMap() {
       return;
     }
 
-    // All other states: show ONLY the state name in the tooltip
+    // All other states: show state name in the tooltip according to selected language
     path.addEventListener('mouseenter', () => {
       if (popup && popup.classList.contains('active')) return;
-      const stateName = path.getAttribute('data-state') || 'రాష్ట్రం';
+      currentlyHoveredMapPath = path;
+      const stateName = getMapStateName(path, currentLang);
       if (tooltipTitle) tooltipTitle.textContent = stateName;
       if (tooltip) tooltip.classList.add('visible');
     });
@@ -1028,6 +1101,9 @@ function initInteractiveMap() {
     });
 
     path.addEventListener('mouseleave', () => {
+      if (currentlyHoveredMapPath === path) {
+        currentlyHoveredMapPath = null;
+      }
       if (tooltip) tooltip.classList.remove('visible');
     });
   });
