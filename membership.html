@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>సభ్యత్వ నమోదు | Membership Registration - ప్రజాసేవ పార్టీ (Prajaseva Party)</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీలో సభ్యత్వం పొందండి. తెలంగాణ సమగ్ర అభివృద్ధి, ప్రజల సంక్షేమం మరియు పారదర్శక ప్రజా పాలన సాధనలో భాగస్వామ్యం అవండి.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=33.0">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation (Exact Portal Header)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#campaign-banner" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#public-issues" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#news-events" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            title="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
+
+          <!-- Donate Button (Gold Pill) -->
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill - Active on this page) -->
+          <a href="membership.html" class="btn-pill-membership active" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bar top-bar"></span>
+            <span class="bar mid-bar"></span>
+            <span class="bar bot-bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Main Membership Content: Left (Leader & Message) + Right (Form Card)
+       ========================================================================== -->
+  <main class="mem-page-section">
+    <div class="mem-page-container">
+
+      <!-- LEFT SIDE: Leader Image, Telugu Heading, Description & 3 Benefit Cards -->
+      <div class="mem-left-side">
+
+        <!-- Leader Portrait with Soft Red/Yellow Splash -->
+        <div class="mem-leader-stage">
+          <div class="mem-leader-splash" aria-hidden="true"></div>
+          <img src="assets/images/leader-namaste.png" alt="తల్లారం నర్సింలు - పార్టీ అధ్యక్షుడు" class="mem-leader-img" loading="eager">
+        </div>
+
+        <!-- Red & Yellow Accent Bar -->
+        <div class="mem-accent-bar" aria-hidden="true"></div>
+
+        <!-- Telugu Headline -->
+        <h1 class="mem-left-heading">
+          <span class="mem-head-dark" data-i18n="memPageHead1">ప్రజా సేవలో</span><br>
+          <span class="mem-head-red" data-i18n="memPageHead2">భాగస్వామ్యం</span><br>
+          <span class="mem-head-dark" data-i18n="memPageHead3">అవండి..</span>
+        </h1>
+
+        <!-- Telugu Message / Subtitle -->
+        <p class="mem-left-desc" data-i18n="memPageSub">
+          తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం, మన ప్రయాణంలో మీరు కూడా భాగస్వామ్యం అవండి.
+        </p>
+
+        <!-- 3 Small Benefit Cards -->
+        <div class="mem-benefits-row">
+          <!-- Benefit 1 -->
+          <div class="mem-benefit-item">
+            <div class="mem-benefit-icon-circle icon-circle-red">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="mem-benefit-title" data-i18n="memBenefit1Title">ప్రజా కోసం</div>
+            <div class="mem-benefit-sub" data-i18n="memBenefit1Sub">మన సమాజాల ముందుకు</div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="mem-benefit-item">
+            <div class="mem-benefit-icon-circle icon-circle-gold">
+              <i class="bi bi-flower1"></i>
+            </div>
+            <div class="mem-benefit-title" data-i18n="memBenefit2Title">సేవా దృక్పథం</div>
+            <div class="mem-benefit-sub" data-i18n="memBenefit2Sub">ప్రతి ఒక్కరి సహకారం</div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="mem-benefit-item">
+            <div class="mem-benefit-icon-circle icon-circle-red">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div class="mem-benefit-title" data-i18n="memBenefit3Title">మంచి తెలంగాణ</div>
+            <div class="mem-benefit-sub" data-i18n="memBenefit3Sub">మన చేతుల్లో మన భవిష్యత్తు</div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- RIGHT SIDE: Clean White Membership Form Card -->
+      <div class="mem-right-card">
+
+        <!-- Initial Form View -->
+        <div id="membershipFormView">
+          <!-- Card Header -->
+          <h2 class="mem-form-title" data-i18n="memFormTitle">వివరాలు ఇవ్వండి</h2>
+          <p class="mem-form-subtitle" data-i18n="memFormSub">
+            ప్రజా సేవలో భాగస్వామ్యం కావడానికి మీ వివరాలు నమోదు చేయండి.
+          </p>
+          <div class="mem-form-accent-bar" aria-hidden="true"></div>
+
+          <!-- Form Element -->
+          <form id="dedicatedMembershipForm" novalidate>
+
+            <!-- 1. Full Name -->
+            <div class="mem-form-group">
+              <label for="memFullName" class="mem-form-label">
+                <i class="bi bi-person-fill"></i>
+                <span data-i18n="memLblFullName">పూర్తి పేరు</span>
+                <span class="req-star">*</span>
+              </label>
+              <input type="text" id="memFullName" class="mem-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి" data-i18n-placeholder="memPlcFullName" required autocomplete="name">
+              <div class="mem-error-text" id="errFullName">దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.</div>
+            </div>
+
+            <!-- 2. Mobile Number + Send OTP Button -->
+            <div class="mem-form-group">
+              <label for="memMobile" class="mem-form-label">
+                <i class="bi bi-telephone-fill"></i>
+                <span data-i18n="memLblMobile">మొబైల్ నంబర్</span>
+                <span class="req-star">*</span>
+              </label>
+              <div class="mem-phone-input-wrap">
+                <input type="tel" id="memMobile" class="mem-input" placeholder="మీ మొబైల్ నంబర్" data-i18n-placeholder="memPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
+                <button type="button" id="btnSendOtp" class="btn-otp-action">
+                  <i class="bi bi-shield-lock"></i>
+                  <span id="btnSendOtpLabel" data-i18n="memBtnSendOtp">OTP పంపండి</span>
+                </button>
+              </div>
+              <div class="mem-error-text" id="errMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
+
+              <!-- OTP Verification Panel (Expands upon clicking Send OTP) -->
+              <div id="otpVerifyPanel" class="mem-otp-verify-panel">
+                <label for="memOtpInput" class="mem-form-label small mb-1">
+                  <i class="bi bi-key-fill text-warning"></i>
+                  <span data-i18n="memLblOtp">OTP ధృవీకరణ కోడ్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="mem-otp-box-row">
+                  <input type="text" id="memOtpInput" class="mem-input text-center fw-bold" placeholder="6 అంకెల OTP" data-i18n-placeholder="memPlcOtp" maxlength="6" inputmode="numeric" style="letter-spacing: 4px; font-size: 1.1rem;">
+                  <button type="button" id="btnVerifyOtp" class="btn-verify-otp-action">
+                    <span data-i18n="memBtnVerifyOtp">ధృవీకరించండి</span>
+                  </button>
+                </div>
+                <div class="mem-otp-hint" id="otpHintText">
+                  <i class="bi bi-info-circle"></i> డెమో ధృవీకరణ OTP: <strong id="demoOtpCode">849201</strong>
+                </div>
+                <div class="mem-error-text" id="errOtp">దయచేసి సరైన OTP నమోదు చేయండి.</div>
+              </div>
+
+              <!-- Verified Badge -->
+              <div id="otpVerifiedBadge" class="mem-otp-verified-badge">
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-i18n="memOtpVerified">మొబైల్ నంబర్ విజయవంతంగా ధృవీకరించబడింది!</span>
+              </div>
+            </div>
+
+            <!-- 3. Email (Optional) -->
+            <div class="mem-form-group">
+              <label for="memEmail" class="mem-form-label">
+                <i class="bi bi-envelope-fill"></i>
+                <span data-i18n="memLblEmail">ఈమెయిల్</span>
+              </label>
+              <input type="email" id="memEmail" class="mem-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)" data-i18n-placeholder="memPlcEmail" autocomplete="email">
+              <div class="mem-error-text" id="errEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
+            </div>
+
+            <!-- 4. District & Constituency (Searchable Dropdowns) -->
+            <div class="mem-form-row-2">
+              <!-- District Dropdown -->
+              <div class="mem-form-group">
+                <label class="mem-form-label">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="memLblDistrict">జిల్లా</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="searchable-select" id="districtSelect">
+                  <input type="hidden" id="memDistrict" name="district" required>
+                  <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
+                    <span class="searchable-trigger-text is-placeholder" id="districtTriggerText" data-i18n="memPlcDistrict">జిల్లా ఎంపిక చేయండి</span>
+                    <i class="bi bi-chevron-down searchable-chevron"></i>
+                  </div>
+                  <div class="searchable-dropdown">
+                    <div class="searchable-search-box">
+                      <i class="bi bi-search"></i>
+                      <input type="text" class="searchable-input" placeholder="శోధించండి..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+                    </div>
+                    <ul class="searchable-options" id="districtOptionsList">
+                      <!-- Populated dynamically with all 33 Telangana districts -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="mem-error-text" id="errDistrict">దయచేసి మీ జిల్లాను ఎంపిక చేయండి.</div>
+              </div>
+
+              <!-- Constituency Dropdown -->
+              <div class="mem-form-group">
+                <label class="mem-form-label">
+                  <i class="bi bi-flag-fill"></i>
+                  <span data-i18n="memLblConstituency">నియోజకవర్గం</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="searchable-select" id="constituencySelect">
+                  <input type="hidden" id="memConstituency" name="constituency" required>
+                  <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
+                    <span class="searchable-trigger-text is-placeholder" id="constituencyTriggerText" data-i18n="memPlcConstituency">నియోజకవర్గం ఎంపిక చేయండి</span>
+                    <i class="bi bi-chevron-down searchable-chevron"></i>
+                  </div>
+                  <div class="searchable-dropdown">
+                    <div class="searchable-search-box">
+                      <i class="bi bi-search"></i>
+                      <input type="text" class="searchable-input" placeholder="శోధించండి..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+                    </div>
+                    <ul class="searchable-options" id="constituencyOptionsList">
+                      <!-- Populated dynamically based on selected district -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="mem-error-text" id="errConstituency">దయచేసి నియోజకవర్గాన్ని ఎంపిక చేయండి.</div>
+              </div>
+            </div>
+
+            <!-- 5. Mandal / Town (Searchable Dropdown) -->
+            <div class="mem-form-group">
+              <label class="mem-form-label">
+                <i class="bi bi-house-door-fill"></i>
+                <span data-i18n="memLblMandal">మండలం / పట్టణం</span>
+                <span class="req-star">*</span>
+              </label>
+              <div class="searchable-select" id="mandalSelect">
+                <input type="hidden" id="memMandal" name="mandal" required>
+                <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
+                  <span class="searchable-trigger-text is-placeholder" id="mandalTriggerText" data-i18n="memPlcMandal">మండలం / పట్టణం ఎంపిక చేయండి</span>
+                  <i class="bi bi-chevron-down searchable-chevron"></i>
+                </div>
+                <div class="searchable-dropdown">
+                  <div class="searchable-search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="searchable-input" placeholder="శోధించండి..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+                  </div>
+                  <ul class="searchable-options" id="mandalOptionsList">
+                    <!-- Populated dynamically -->
+                  </ul>
+                </div>
+              </div>
+              <div class="mem-error-text" id="errMandal">దయచేసి మండలం లేదా పట్టణాన్ని ఎంపిక చేయండి.</div>
+            </div>
+
+            <!-- 6. Blood Group & Photo Upload -->
+            <div class="mem-form-row-2">
+              <!-- Blood Group Dropdown -->
+              <div class="mem-form-group">
+                <label class="mem-form-label">
+                  <i class="bi bi-droplet-fill text-danger"></i>
+                  <span data-i18n="memLblBloodGroup">రక్త వర్గం</span>
+                </label>
+                <div class="searchable-select" id="bloodGroupSelect">
+                  <input type="hidden" id="memBloodGroup" name="bloodGroup" value="A+">
+                  <div class="searchable-trigger" tabindex="0">
+                    <span class="searchable-trigger-text" id="bloodGroupTriggerText">A+</span>
+                    <i class="bi bi-chevron-down searchable-chevron"></i>
+                  </div>
+                  <div class="searchable-dropdown">
+                    <ul class="searchable-options" id="bloodGroupOptionsList">
+                      <li class="searchable-option is-selected" data-val="A+">A+</li>
+                      <li class="searchable-option" data-val="A-">A-</li>
+                      <li class="searchable-option" data-val="B+">B+</li>
+                      <li class="searchable-option" data-val="B-">B-</li>
+                      <li class="searchable-option" data-val="O+">O+</li>
+                      <li class="searchable-option" data-val="O-">O-</li>
+                      <li class="searchable-option" data-val="AB+">AB+</li>
+                      <li class="searchable-option" data-val="AB-">AB-</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Photo Upload Box -->
+              <div class="mem-form-group">
+                <label class="mem-form-label">
+                  <i class="bi bi-camera-fill"></i>
+                  <span data-i18n="memLblPhoto">మీ ఫోటో</span>
+                </label>
+                <div class="mem-photo-box" id="memPhotoDropzone" role="button" tabindex="0">
+                  <input type="file" id="memPhotoInput" accept="image/png, image/jpeg, image/jpg" style="display: none;">
+                  <div class="mem-photo-icon-wrap">
+                    <i class="bi bi-camera-fill"></i>
+                  </div>
+                  <span class="mem-photo-text" data-i18n="memUploadPhotoText">ఫోటో అప్‌లోడ్ చేయండి</span>
+                  <small class="mem-photo-sub" data-i18n="memUploadPhotoSub">JPG, PNG (Max 2MB)</small>
+                  <div class="mem-photo-preview" id="memPhotoPreview">
+                    <img src="" alt="సభ్యుడి ఫోటో" id="memPhotoPreviewImg">
+                    <button type="button" class="mem-photo-remove-btn" id="memPhotoRemoveBtn" title="తొలగించండి">&times;</button>
+                  </div>
+                </div>
+                <div class="mem-error-text" id="errPhoto">దయచేసి 2MB లోపు ఫైల్ ఎంచుకోండి.</div>
+              </div>
+            </div>
+
+            <!-- 7. Interests / Roles Checkboxes -->
+            <div class="mem-form-group">
+              <label class="mem-form-label">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="memLblInterests">మీ ఆసక్తి / పాత్ర</span>
+                <span class="req-star">*</span>
+              </label>
+              <div class="mem-checkbox-grid" id="rolesCheckboxGrid">
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="పార్టీ సభ్యత్వం" checked>
+                  <span data-i18n="memRoleParty">పార్టీ సభ్యత్వం</span>
+                </label>
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="వాలంటీర్">
+                  <span data-i18n="memRoleVolunteer">వాలంటీర్</span>
+                </label>
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="కార్యక్రమాల్లో పాల్గొనడం">
+                  <span data-i18n="memRoleEvents">కార్యక్రమాల్లో పాల్గొనడం</span>
+                </label>
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="సోషల్ మీడియా">
+                  <span data-i18n="memRoleSocial">సోషల్ మీడియా</span>
+                </label>
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="ప్రజా సేవ">
+                  <span data-i18n="memRoleService">ప్రజా సేవ</span>
+                </label>
+                <label class="mem-check-item">
+                  <input type="checkbox" name="interestRole" value="ఇతర">
+                  <span data-i18n="memRoleOther">ఇతర</span>
+                </label>
+              </div>
+              <div class="mem-error-text" id="errRoles">దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.</div>
+            </div>
+
+            <!-- 8. Message / Suggestions -->
+            <div class="mem-form-group">
+              <label for="memMessage" class="mem-form-label">
+                <i class="bi bi-chat-left-text-fill"></i>
+                <span data-i18n="memLblMessage">సందేశం / సూచనలు</span>
+              </label>
+              <textarea id="memMessage" class="mem-textarea" placeholder="మీ అభిప్రాయాలు, సూచనలు ఇక్కడ రాయండి (ఐచ్ఛికం)" data-i18n-placeholder="memPlcMessage"></textarea>
+            </div>
+
+            <!-- 9. Consent Checkbox -->
+            <div class="mem-consent-wrap" id="consentWrap">
+              <input type="checkbox" id="memConsentCheck" required>
+              <label for="memConsentCheck" data-i18n="memConsentText">
+                నేను ఇచ్చిన వివరాలు సరైనవని నిర్ధారిస్తున్నాను.
+              </label>
+            </div>
+            <div class="mem-error-text" id="errConsent" style="margin-top: -16px; margin-bottom: 16px;">దయచేసి నియమాలను అంగీకరించండి.</div>
+
+            <!-- 10. Submit Button: Yellow CTA -->
+            <button type="submit" class="btn-mem-submit" id="btnSubmitMembership">
+              <i class="bi bi-send-fill"></i>
+              <span data-i18n="memBtnSubmit">వివరాలు పంపండి</span>
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Submission Success / Thank You Screen (Hidden by default) -->
+        <div id="membershipSuccessView" class="mem-success-card">
+          <div class="mem-success-icon-badge">
+            <i class="bi bi-check-lg"></i>
+          </div>
+          <h3 class="mem-success-title" data-i18n="memSuccessTitle">సభ్యత్వం విజయవంతంగా నమోదైంది!</h3>
+          <p class="mem-success-sub" data-i18n="memSuccessSub">
+            ప్రజాసేవ పార్టీలో భాగస్వామి అయినందుకు మీకు సాదర స్వాగతం.
+          </p>
+
+          <!-- Generated Member ID Pill -->
+          <div class="mem-id-chip">
+            <span class="mem-id-chip-label" data-i18n="memIdLabel">సభ్యత్వ సంఖ్య (Membership ID)</span>
+            <span class="mem-id-chip-val" id="confirmedMemberId">PSP-TG-2026-89421</span>
+          </div>
+
+          <!-- Digital Member ID Card Preview -->
+          <div class="mem-card-preview-wrap" id="printableCardArea">
+            <div class="mem-card-head">
+              <img src="assets/images/party-emblem.png" alt="ప్రజాసేవ పార్టీ చిహ్నం">
+              <div>
+                <div class="mem-card-head-title">ప్రజాసేవ పార్టీ - సభ్యత్వ కార్డు</div>
+                <div class="mem-card-head-sub">PRAJASEVA PARTY &bull; OFFICIAL MEMBER</div>
+              </div>
+            </div>
+            <div class="mem-card-body-content">
+              <img src="assets/images/passport1.png" alt="సభ్యుడి చిత్రం" class="mem-card-photo" id="confirmedCardPhoto">
+              <div class="mem-card-details">
+                <div class="mem-card-name" id="confirmedCardName">నారాయణ రావు</div>
+                <div class="mem-card-id-text" id="confirmedCardIdText">ID: PSP-TG-2026-89421</div>
+                <div class="mem-card-loc-text" id="confirmedCardLoc">హైదరాబాద్ &bull; A+</div>
+                <div class="mt-2 badge bg-warning text-dark fw-bold px-2 py-1 small" id="confirmedCardRole">పార్టీ సభ్యత్వం</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mem-success-actions">
+            <button type="button" class="btn-mem-action-primary" id="btnPrintCard">
+              <i class="bi bi-download"></i>
+              <span data-i18n="memBtnDownload">సభ్యత్వ కార్డు డౌన్‌లోడ్ చేయండి</span>
+            </button>
+            <a href="index.html#home" class="btn-mem-action-secondary">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="btnBackHome">ముఖ్య పేజీకి వెళ్లండి</span>
+            </a>
+            <button type="button" class="btn-mem-action-secondary" id="btnRegisterAnother">
+              <i class="bi bi-arrow-repeat"></i>
+              <span data-i18n="memBtnNewReg">మరో సభ్యత్వం నమోదు</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Grand Modern Footer (Exact Portal Footer)
+       ========================================================================== -->
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
+      <div class="main-container footer-hero-container">
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
+            </div>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
+            </div>
+          </div>
+          <!-- Social Media Pills -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon (Red on top, Gold underneath) -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER (Clean Pure White Background) -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
+              <li><a href="index.html#leadership-team"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDocs">పత్రాలు</span></a></li>
+              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <!-- Location Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <!-- Phone Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <!-- Email Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Donation Modal
+       ========================================================================== -->
+  <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"
+        style="border-radius: 24px; border: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.16);">
+        <div class="modal-header"
+          style="background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%); color: #1E293B; border-bottom: none; padding: 18px 24px;">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+            <h5 class="modal-title fw-bold mb-0" id="donateModalLabel">ప్రజాసేవ పార్టీకి విరాళం</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <p class="text-muted small mb-3">ప్రజల సంక్షేమం, ఉచిత విద్య, నాణ్యమైన వైద్యం సాధన కోసం ప్రజాసేవ పార్టీకి మీ వంతు చేయూతనివ్వండి.</p>
+          <div class="bg-light p-3 rounded-4 mb-3 d-inline-block border">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" style="width: 170px; height: 170px; display: block;"
+              class="mx-auto">
+            <div class="mt-2 text-dark fw-bold small">Scan &amp; Pay with Any UPI App (GPay / PhonePe / Paytm)</div>
+            <div class="badge bg-danger-subtle text-danger px-3 py-1 rounded-pill mt-1 fs-6">prajasevaparty@upi</div>
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹100</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹500</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹1,000</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹5,000</button></div>
+          </div>
+          <div class="alert alert-secondary py-2 small mb-0 text-start">
+            <strong>ఖాతా వివరాలు:</strong> ప్రజాసేవ పార్టీ వెల్ఫేర్ ట్రస్ట్ &bull; A/C: 123456789012 &bull; IFSC: SBIN0001234
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0 px-4 pb-4">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">మూసివేయి</button>
+          <button type="button" class="btn btn-warning rounded-pill px-4 fw-bold"
+            onclick="alert('విరాళం అందించినందుకు ధన్యవాదాలు! Thank you for your contribution.')">చెల్లింపు నిర్ధారించండి</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Toast Container -->
+  <div class="toast-container">
+    <div id="siteToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastBody">
+          సందేశం విజయవంతంగా పంపబడింది!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=4.0"></script>
+  <script src="assets/js/main.js?v=5.0"></script>
+
+  <!-- Dedicated Membership Logic Script -->
+  <script>
+    (function () {
+      // 33 Telangana Districts Data & Constituencies
+      const telanganaData = {
+        "హైదరాబాద్ (Hyderabad)": {
+          constituencies: ["చార్మినార్ (Charminar)", "చాంద్రాయణగుట్ట (Chandrayangutta)", "గోషామహల్ (Goshamahal)", "అంబర్‌పేట్ (Amberpet)", "ఖైరతాబాద్ (Khairatabad)", "జూబ్లీహిల్స్ (Jubilee Hills)", "సనత్‌నగర్ (Sanathnagar)", "నాంపల్లి (Nampally)", "మలక్‌పేట్ (Malakpet)", "ముషీరాబాద్ (Musheerabad)", "సికింద్రాబాద్ (Secunderabad)", "సికింద్రాబాద్ కంటోన్మెంట్ (Secunderabad Cantt)"],
+          mandals: ["ఆసిఫ్‌నగర్", "బహదూర్‌పురా", "బండ్లగూడ", "చార్మినార్", "గోల్కొండ", "హిమాయత్‌నగర్", "నాంపల్లి", "సైదాబాద్", "అమీర్‌పేట్", "ఖైరతాబాద్", "షేక్‌పేట్", "సికింద్రాబాద్"]
+        },
+        "రంగారెడ్డి (Ranga Reddy)": {
+          constituencies: ["ఇబ్రహీంపట్నం (Ibrahimpatnam)", "ఎల్బీనగర్ (LB Nagar)", "మహేశ్వరం (Maheshwaram)", "రాజేంద్రనగర్ (Rajendranagar)", "శేరిలింగంపల్లి (Serilingampally)", "చేవెళ్ల (Chevella)", "షాద్‌నగర్ (Shadnagar)"],
+          mandals: ["హయత్‌నగర్", "సరూర్‌నగర్", "ఇబ్రహీంపట్నం", "మంచాల", "యాచారం", "మహేశ్వరం", "కందుకూరు", "శంషాబాద్", "రాజేంద్రనగర్", "చేవెళ్ల"]
+        },
+        "మేడ్చల్-మల్కాజిగిరి (Medchal-Malkajgiri)": {
+          constituencies: ["మేడ్చల్ (Medchal)", "మల్కాజిగిరి (Malkajgiri)", "కుత్బుల్లాపూర్ (Quthbullapur)", "కూకట్‌పల్లి (Kukatpally)", "ఉప్పల్ (Uppal)"],
+          mandals: ["మేడ్చల్", "శామీర్‌పేట్", "కీసర", "ఘట్‌కేసర్", "మల్కాజిగిరి", "అల్వాల్", "కుత్బుల్లాపూర్", "కూకట్‌పల్లి", "ఉప్పల్", "కాప్రా"]
+        },
+        "వరంగల్ (Warangal)": {
+          constituencies: ["వరంగల్ తూర్పు (Warangal East)", "వరంగల్ పశ్చిమ (Warangal West)", "వర్ధన్నపేట (Wardhannapet)", "నర్సంపేట (Narsampet)"],
+          mandals: ["వరంగల్", "ఖిలా వరంగల్", "హనుమకొండ", "వర్ధన్నపేట", "గీసుకొండ", "రాయపర్తి", "నర్సంపేట"]
+        },
+        "హనుమకొండ (Hanumakonda)": {
+          constituencies: ["హనుమకొండ (Hanumakonda)", "పరకాల (Parkal)"],
+          mandals: ["హనుమకొండ", "కాజీపేట్", "పరకాల", "ఆత్మకూరు", "శాయంపేట", "కమలాపూర్"]
+        },
+        "కరీంనగర్ (Karimnagar)": {
+          constituencies: ["కరీంనగర్ (Karimnagar)", "చొప్పదండి (Choppadandi)", "మానకొండూర్ (Manakondur)", "హుజురాబాద్ (Huzurabad)"],
+          mandals: ["కరీంనగర్", "కొత్తపల్లి", "గంగాధర", "రామడుగు", "చొప్పదండి", "మానకొండూర్", "తిమ్మాపూర్", "హుజురాబాద్", "జమ్మికుంట"]
+        },
+        "ఖమ్మం (Khammam)": {
+          constituencies: ["ఖమ్మం (Khammam)", "పాలేరు (Palair)", "మధిర (Madhira)", "వైరా (Wyra)", "సత్తుపల్లి (Sathupally)"],
+          mandals: ["ఖమ్మం అర్బన్", "ఖమ్మం రూరల్", "కూసుమంచి", "తిరుమలాయపాలెం", "నేలకొండపల్లి", "మధిర", "బోనకల్", "వైరా", "సత్తుపల్లి"]
+        },
+        "నిజామాబాద్ (Nizamabad)": {
+          constituencies: ["నిజామాబాద్ అర్బన్ (Nizamabad Urban)", "నిజామాబాద్ రూరల్ (Nizamabad Rural)", "ఆర్మూర్ (Armoor)", "బోధన్ (Bodhan)", "బాల్కొండ (Balkonda)"],
+          mandals: ["నిజామాబాద్ సౌత్", "నిజామాబాద్ నార్త్", "ఆర్మూర్", "బోధన్", "బాల్కొండ", "డిచ్‌పల్లి", "జక్రాన్‌పల్లి", "కోటగిరి"]
+        },
+        "నల్గొండ (Nalgonda)": {
+          constituencies: ["నల్గొండ (Nalgonda)", "నకిరేకల్ (Nakrekal)", "మిర్యాలగూడ (Miryalaguda)", "దేవరకొండ (Devarakonda)", "నాగార్జునసాగర్ (Nagarjuna Sagar)"],
+          mandals: ["నల్గొండ", "కట్టంగూర్", "నకిరేకల్", "తిప్పర్తి", "మిర్యాలగూడ", "దేవరకొండ", "నిడమనూరు", "త్రిపురారం"]
+        },
+        "సంగారెడ్డి (Sangareddy)": {
+          constituencies: ["సంగారెడ్డి (Sangareddy)", "పటాన్‌చెరు (Patancheru)", "జహీరాబాద్ (Zahirabad)", "ఆందోల్ (Andole)", "నారాయణఖేడ్ (Narayankhed)"],
+          mandals: ["సంగారెడ్డి", "కంది", "కొండాపూర్", "సదాశివపేట్", "పటాన్‌చెరు", "రామచంద్రాపురం", "అమీన్‌పూర్", "జహీరాబాద్"]
+        },
+        "సిద్దిపేట (Siddipet)": {
+          constituencies: ["సిద్దిపేట (Siddipet)", "గజ్వేల్ (Gajwel)", "దుబ్బాక (Dubbak)", "హుస్నాబాద్ (Husnabad)"],
+          mandals: ["సిద్దిపేట అర్బన్", "సిద్దిపేట రూరల్", "చిన్నకోడూరు", "నంగునూరు", "గజ్వేల్", "వర్గల్", "దుబ్బాక", "హుస్నాబాద్"]
+        },
+        "మహబూబ్‌నగర్ (Mahabubnagar)": {
+          constituencies: ["మహబూబ్‌నగర్ (Mahabubnagar)", "జడ్చర్ల (Jadcherla)", "దేవరకద్ర (Devarkadra)"],
+          mandals: ["మహబూబ్‌నగర్ అర్బన్", "మహబూబ్‌నగర్ రూరల్", "జడ్చర్ల", "భూత్పూర్", "దేవరకద్ర", "నవాబ్‌పేట", "కోయిలకొండ"]
+        },
+        "భద్రాద్రి కొత్తగూడెం (Bhadradri Kothagudem)": {
+          constituencies: ["కొత్తగూడెం (Kothagudem)", "భద్రాచలం (Bhadrachalam)", "పినపాక (Pinapaka)", "ఇల్లందు (Yellandu)", "అశ్వారావుపేట (Aswaraopeta)"],
+          mandals: ["కొత్తగూడెం", "పాల్వంచ", "భద్రాచలం", "మణుగూరు", "పినపాక", "ఇల్లందు", "అశ్వారావుపేట", "చర్ల"]
+        },
+        "జగిత్యాల (Jagtial)": {
+          constituencies: ["జగిత్యాల (Jagtial)", "కోరుట్ల (Koratla)", "ధర్మపురి (Dharmapuri)"],
+          mandals: ["జగిత్యాల", "కోరుట్ల", "మెట్‌పల్లి", "ధర్మపురి", "రాయికల్", "సారంగాపూర్", "మల్యాల", "గొల్లపల్లి"]
+        },
+        "సూర్యాపేట (Suryapet)": {
+          constituencies: ["సూర్యాపేట (Suryapet)", "తుంగతుర్తి (Thungathurthi)", "కోదాడ (Kodad)", "హుజూర్‌నగర్ (Huzurnagar)"],
+          mandals: ["సూర్యాపేట", "చివ్వెంల", "మోతె", "తుంగతుర్తి", "కోదాడ", "మునగాల", "హుజూర్‌నగర్", "గరిడేపల్లి"]
+        },
+        "మంచిర్యాల (Mancherial)": {
+          constituencies: ["మంచిర్యాల (Mancherial)", "బెల్లంపల్లి (Bellampalli)", "చెన్నూర్ (Chennur)"],
+          mandals: ["మంచిర్యాల", "నస్పూర్", "హాజీపూర్", "బెల్లంపల్లి", "మందమర్రి", "చెన్నూర్", "కోటపల్లి", "జైపూర్"]
+        },
+        "కామారెడ్డి (Kamareddy)": {
+          constituencies: ["కామారెడ్డి (Kamareddy)", "ఎల్లారెడ్డి (Yellareddy)", "జుక్కల్ (Jukkal)"],
+          mandals: ["కామారెడ్డి", "మాచారెడ్డి", "సదాశివనగర్", "ఎల్లారెడ్డి", "బాన్సువాడ", "జుక్కల్", "పిట్లం", "నిజాంసాగర్"]
+        },
+        "వికారాబాద్ (Vikarabad)": {
+          constituencies: ["వికారాబాద్ (Vikarabad)", "తాండూరు (Tandur)", "పరిగి (Pargi)", "కొడంగల్ (Kodangal)"],
+          mandals: ["వికారాబాద్", "ధారూరు", "తాండూరు", "యాలాల", "పరిగి", "దోమ", "కొడంగల్", "బొంరాస్‌పేట"]
+        },
+        "జనగాం (Jangaon)": {
+          constituencies: ["జనగాం (Jangaon)", "స్టేషన్ ఘన్‌పూర్ (Station Ghanpur)", "పాలకుర్తి (Palakurthi)"],
+          mandals: ["జనగాం", "రఘునాథపల్లి", "నర్మెట్ట", "బచ్చన్నపేట", "స్టేషన్ ఘన్‌పూర్", "జాఫర్‌గడ్", "పాలకుర్తి", "దేవరుప్పుల"]
+        },
+        "అదిలాబాద్ (Adilabad)": {
+          constituencies: ["అదిలాబాద్ (Adilabad)", "బోథ్ (Boath)"],
+          mandals: ["అదిలాబాద్ అర్బన్", "అదిలాబాద్ రూరల్", "మావల", "బోథ్", "బేల", "జైనథ్", "ఉట్నూరు", "ఇంద్రవెల్లి"]
+        },
+        "జయశంకర్ భూపాలపల్లి (Jayashankar Bhupalpally)": {
+          constituencies: ["భూపాలపల్లి (Bhupalpally)"],
+          mandals: ["భూపాలపల్లి", "ఘన్‌పూర్", "రేగొండ", "మొగుళ్లపల్లి", "చిట్యాల", "టేకుమట్ల"]
+        },
+        "జోగులాంబ గద్వాల (Jogulamba Gadwal)": {
+          constituencies: ["గద్వాల (Gadwal)", "అలంపూర్ (Alampur)"],
+          mandals: ["గద్వాల", "ధరూర", "మల్దకల్", "ఇటిక్యాల", "అలంపూర్", "ఉండవెల్లి", "మానవపాడు"]
+        },
+        "కొమురం భీమ్ ఆసిఫాబాద్ (Kumuram Bheem Asifabad)": {
+          constituencies: ["ఆసిఫాబాద్ (Asifabad)", "సిర్పూర్ (Sirpur)"],
+          mandals: ["ఆసిఫాబాద్", "రెబ్బెన", "వాంకిడి", "కెరమెరి", "సిర్పూర్ (టి)", "కాగజ్‌నగర్", "దహెగాం"]
+        },
+        "మహబూబాబాద్ (Mahabubabad)": {
+          constituencies: ["మహబూబాబాద్ (Mahabubabad)", "డోర్నకల్ (Dornakal)"],
+          mandals: ["మహబూబాబాద్", "కురవి", "కేసముద్రం", "నెల్లికుదురు", "డోర్నకల్", "మరిపెడ", "గార్ల"]
+        },
+        "మెదక్ (Medak)": {
+          constituencies: ["మెదక్ (Medak)", "నర్సాపూర్ (Narsapur)"],
+          mandals: ["మెదక్", "హవేలి ఘన్‌పూర్", "పాపన్నపేట్", "రామాయంపేట్", "శంకరంపేట్", "నర్సాపూర్", "శివంపేట్", "కౌడిపల్లి"]
+        },
+        "ములుగు (Mulugu)": {
+          constituencies: ["ములుగు (Mulugu)"],
+          mandals: ["ములుగు", "వెంకటాపూర్", "గోవిందరావుపేట", "తాడ్వాయి", "ఏటూరునాగారం", "మంగపేట"]
+        },
+        "నాగర్‌కర్నూల్ (Nagarkurnool)": {
+          constituencies: ["నాగర్‌కర్నూల్ (Nagarkurnool)", "అచ్చంపేట (Achampet)", "కొల్లాపూర్ (Kollapur)", "కల్వకుర్తి (Kalwakurthy)"],
+          mandals: ["నాగర్‌కర్నూల్", "తెల్కపల్లి", "తిమ్మాజిపేట్", "తాడూరు", "అచ్చంపేట", "అమ్రాబాద్", "కొల్లాపూర్", "కల్వకుర్తి"]
+        },
+        "నారాయణపేట (Narayanpet)": {
+          constituencies: ["నారాయణపేట (Narayanpet)", "మక్తల్ (Makthal)"],
+          mandals: ["నారాయణపేట", "దామరగిద్ద", "ధన్వాడ", "మద్దూరు", "కోయిలకొండ", "మక్తల్", "మాగనూరు", "ఊట్కూరు"]
+        },
+        "నిర్మల్ (Nirmal)": {
+          constituencies: ["నిర్మల్ (Nirmal)", "ముధోల్ (Mudhole)", "ఖానాపూర్ (Khanapur)"],
+          mandals: ["నిర్మల్ అర్బన్", "నిర్మల్ రూరల్", "సోన్", "మామడ", "లక్ష్మణచాంద", "ముధోల్", "భైంసా", "ఖానాపూర్"]
+        },
+        "పెద్దపల్లి (Peddapalli)": {
+          constituencies: ["పెద్దపల్లి (Peddapalli)", "రామగుండం (Ramagundam)", "మంథని (Manthani)"],
+          mandals: ["పెద్దపల్లి", "సుల్తానాబాద్", "జూలపల్లి", "ఎలిగేడు", "రామగుండం", "అంతర్గాం", "మంథని", "కమాన్‌పూర్"]
+        },
+        "రాజన్న సిరిసిల్ల (Rajanna Sircilla)": {
+          constituencies: ["సిరిసిల్ల (Sircilla)", "వేములవాడ (Vemulawada)"],
+          mandals: ["సిరిసిల్ల", "తంగళ్ళపల్లి", "గంభీరావుపేట", "ఎల్లారెడ్డిపేట", "ముస్తాబాద్", "వేములవాడ", "బోయినపల్లి", "చందుర్తి"]
+        },
+        "వనపర్తి (Wanaparthy)": {
+          constituencies: ["వనపర్తి (Wanaparthy)"],
+          mandals: ["వనపర్తి", "గోపాల్‌పేట", "రేవల్లి", "పెబ్బేరు", "శ్రీరంగాపూర్", "పాన్‌గల్", "ఘన్‌పూర్"]
+        },
+        "యాదాద్రి భువనగిరి (Yadadri Bhuvanagiri)": {
+          constituencies: ["భువనగిరి (Bhongir)", "ఆలేరు (Aler)"],
+          mandals: ["భువనగిరి", "వలిగొండ", "బీబీనగర్", "పోచంపల్లి", "చౌటుప్పల్", "ఆలేరు", "యాదగిరిగుట్ట", "రాజాపేట", "తుర్కపల్లి"]
+        }
+      };
+
+      // State
+      let isOtpSent = false;
+      let isOtpVerified = false;
+      let generatedOtp = '849201';
+      let uploadedPhotoData = null;
+
+      // Populate Districts into Searchable Select
+      const districtListEl = document.getElementById('districtOptionsList');
+      const districtTriggerText = document.getElementById('districtTriggerText');
+      const districtHiddenInput = document.getElementById('memDistrict');
+      const constituencyListEl = document.getElementById('constituencyOptionsList');
+      const constituencyTriggerText = document.getElementById('constituencyTriggerText');
+      const constituencyHiddenInput = document.getElementById('memConstituency');
+      const mandalListEl = document.getElementById('mandalOptionsList');
+      const mandalTriggerText = document.getElementById('mandalTriggerText');
+      const mandalHiddenInput = document.getElementById('memMandal');
+
+      function initDistricts() {
+        districtListEl.innerHTML = '';
+        Object.keys(telanganaData).forEach(districtName => {
+          const li = document.createElement('li');
+          li.className = 'searchable-option';
+          li.textContent = districtName;
+          li.dataset.val = districtName;
+          li.addEventListener('click', () => selectDistrict(districtName));
+          districtListEl.appendChild(li);
+        });
+      }
+
+      function selectDistrict(distName) {
+        districtHiddenInput.value = distName;
+        districtTriggerText.textContent = distName;
+        districtTriggerText.classList.remove('is-placeholder');
+        closeAllSearchables();
+        clearError('memDistrict', 'errDistrict');
+
+        // Populate constituencies & mandals for this district
+        const distInfo = telanganaData[distName] || { constituencies: [], mandals: [] };
+        
+        // Populate Constituencies
+        constituencyListEl.innerHTML = '';
+        constituencyHiddenInput.value = '';
+        constituencyTriggerText.textContent = 'నియోజకవర్గం ఎంపిక చేయండి';
+        constituencyTriggerText.classList.add('is-placeholder');
+
+        distInfo.constituencies.forEach(constName => {
+          const li = document.createElement('li');
+          li.className = 'searchable-option';
+          li.textContent = constName;
+          li.dataset.val = constName;
+          li.addEventListener('click', () => selectConstituency(constName));
+          constituencyListEl.appendChild(li);
+        });
+
+        // Populate Mandals
+        mandalListEl.innerHTML = '';
+        mandalHiddenInput.value = '';
+        mandalTriggerText.textContent = 'మండలం / పట్టణం ఎంపిక చేయండి';
+        mandalTriggerText.classList.add('is-placeholder');
+
+        distInfo.mandals.forEach(mandalName => {
+          const li = document.createElement('li');
+          li.className = 'searchable-option';
+          li.textContent = mandalName;
+          li.dataset.val = mandalName;
+          li.addEventListener('click', () => selectMandal(mandalName));
+          mandalListEl.appendChild(li);
+        });
+      }
+
+      function selectConstituency(constName) {
+        constituencyHiddenInput.value = constName;
+        constituencyTriggerText.textContent = constName;
+        constituencyTriggerText.classList.remove('is-placeholder');
+        closeAllSearchables();
+        clearError('memConstituency', 'errConstituency');
+      }
+
+      function selectMandal(mandalName) {
+        mandalHiddenInput.value = mandalName;
+        mandalTriggerText.textContent = mandalName;
+        mandalTriggerText.classList.remove('is-placeholder');
+        closeAllSearchables();
+        clearError('memMandal', 'errMandal');
+      }
+
+      // Searchable Select Setup
+      function setupSearchableSelect(selectId) {
+        const wrap = document.getElementById(selectId);
+        if (!wrap) return;
+
+        const trigger = wrap.querySelector('.searchable-trigger');
+        const input = wrap.querySelector('.searchable-input');
+        const optionsList = wrap.querySelector('.searchable-options');
+
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = wrap.classList.contains('is-open');
+          closeAllSearchables();
+          if (!isOpen) {
+            wrap.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+            if (input) {
+              input.value = '';
+              filterOptions(optionsList, '');
+              setTimeout(() => input.focus(), 50);
+            }
+          }
+        });
+
+        if (input) {
+          input.addEventListener('click', (e) => e.stopPropagation());
+          input.addEventListener('input', (e) => {
+            filterOptions(optionsList, e.target.value.trim().toLowerCase());
+          });
+        }
+      }
+
+      function filterOptions(optionsList, query) {
+        const items = optionsList.querySelectorAll('.searchable-option:not(.is-no-match)');
+        let matchCount = 0;
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          if (!query || text.includes(query)) {
+            item.style.display = 'block';
+            matchCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        let noMatch = optionsList.querySelector('.is-no-match');
+        if (matchCount === 0) {
+          if (!noMatch) {
+            noMatch = document.createElement('li');
+            noMatch.className = 'searchable-option is-no-match';
+            noMatch.textContent = 'ఫలితాలు కనుగొనబడలేదు';
+            optionsList.appendChild(noMatch);
+          }
+          noMatch.style.display = 'block';
+        } else if (noMatch) {
+          noMatch.style.display = 'none';
+        }
+      }
+
+      function closeAllSearchables() {
+        document.querySelectorAll('.searchable-select').forEach(s => {
+          s.classList.remove('is-open');
+          const trigger = s.querySelector('.searchable-trigger');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      document.addEventListener('click', () => closeAllSearchables());
+
+      // Blood Group Select
+      const bloodGroupSelect = document.getElementById('bloodGroupSelect');
+      if (bloodGroupSelect) {
+        setupSearchableSelect('bloodGroupSelect');
+        const options = bloodGroupSelect.querySelectorAll('.searchable-option');
+        const hiddenInput = document.getElementById('memBloodGroup');
+        const triggerText = document.getElementById('bloodGroupTriggerText');
+        options.forEach(opt => {
+          opt.addEventListener('click', () => {
+            options.forEach(o => o.classList.remove('is-selected'));
+            opt.classList.add('is-selected');
+            hiddenInput.value = opt.dataset.val;
+            triggerText.textContent = opt.dataset.val;
+            closeAllSearchables();
+          });
+        });
+      }
+
+      // Initialize District, Constituency, Mandal selects
+      setupSearchableSelect('districtSelect');
+      setupSearchableSelect('constituencySelect');
+      setupSearchableSelect('mandalSelect');
+      initDistricts();
+
+      // Mobile Number: Numbers Only Restriction (strictly digits, max 10)
+      const mobileInput = document.getElementById('memMobile');
+      mobileInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (this.value.length > 10) {
+          this.value = this.value.slice(0, 10);
+        }
+        if (this.value.length === 10) {
+          clearError('memMobile', 'errMobile');
+        }
+        // If mobile number changes after verification, require re-verification
+        if (isOtpVerified) {
+          isOtpVerified = false;
+          document.getElementById('otpVerifiedBadge').classList.remove('is-verified');
+          document.getElementById('btnSendOtpLabel').textContent = 'OTP పంపండి';
+        }
+      });
+
+      // OTP Send Action
+      const btnSendOtp = document.getElementById('btnSendOtp');
+      const otpVerifyPanel = document.getElementById('otpVerifyPanel');
+      const demoOtpCodeEl = document.getElementById('demoOtpCode');
+      const otpInput = document.getElementById('memOtpInput');
+      const btnVerifyOtp = document.getElementById('btnVerifyOtp');
+      const otpVerifiedBadge = document.getElementById('otpVerifiedBadge');
+
+      btnSendOtp.addEventListener('click', function () {
+        const val = mobileInput.value.trim();
+        if (val.length !== 10 || !/^[6-9]\d{9}$/.test(val)) {
+          showError('memMobile', 'errMobile', 'దయచేసి సరైన 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి (6-9 తో ప్రారంభం).');
+          mobileInput.focus();
+          return;
+        }
+
+        clearError('memMobile', 'errMobile');
+
+        // Generate clean 6-digit OTP
+        generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        demoOtpCodeEl.textContent = generatedOtp;
+
+        otpVerifyPanel.classList.add('is-active');
+        isOtpSent = true;
+        otpInput.value = '';
+        clearError('memOtpInput', 'errOtp');
+        otpInput.focus();
+
+        // 30s Countdown timer on Send OTP button
+        let countdown = 30;
+        btnSendOtp.disabled = true;
+        document.getElementById('btnSendOtpLabel').textContent = `మళ్లీ పంపండి (${countdown}s)`;
+
+        const timer = setInterval(() => {
+          countdown--;
+          if (countdown <= 0) {
+            clearInterval(timer);
+            btnSendOtp.disabled = false;
+            document.getElementById('btnSendOtpLabel').textContent = 'మళ్లీ పంపండి';
+          } else {
+            document.getElementById('btnSendOtpLabel').textContent = `మళ్లీ పంపండి (${countdown}s)`;
+          }
+        }, 1000);
+
+        // Notify toast
+        const toast = document.getElementById('siteToast');
+        if (toast && window.bootstrap && bootstrap.Toast) {
+          document.getElementById('toastBody').textContent = `ధృవీకరణ OTP ${generatedOtp} మీ మొబైల్ ${val} కు పంపబడింది!`;
+          const bsToast = new bootstrap.Toast(toast, { delay: 4000 });
+          bsToast.show();
+        }
+      });
+
+      // Verify OTP Action
+      btnVerifyOtp.addEventListener('click', function () {
+        const entered = otpInput.value.trim();
+        if (entered === generatedOtp) {
+          isOtpVerified = true;
+          clearError('memOtpInput', 'errOtp');
+          otpVerifyPanel.classList.remove('is-active');
+          otpVerifiedBadge.classList.add('is-verified');
+          btnSendOtp.disabled = true;
+          document.getElementById('btnSendOtpLabel').textContent = 'ధృవీకరించబడింది ✓';
+        } else {
+          showError('memOtpInput', 'errOtp', 'తప్పు OTP నమోదు చేయబడింది. దయచేసి మళ్లీ ప్రయత్నించండి.');
+        }
+      });
+
+      otpInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (this.value.length === 6 && this.value === generatedOtp) {
+          btnVerifyOtp.click();
+        }
+      });
+
+      // Photo Upload Handling
+      const photoDropzone = document.getElementById('memPhotoDropzone');
+      const photoInput = document.getElementById('memPhotoInput');
+      const photoPreview = document.getElementById('memPhotoPreview');
+      const photoPreviewImg = document.getElementById('memPhotoPreviewImg');
+      const photoRemoveBtn = document.getElementById('memPhotoRemoveBtn');
+
+      photoDropzone.addEventListener('click', (e) => {
+        if (e.target !== photoRemoveBtn) {
+          photoInput.click();
+        }
+      });
+
+      photoInput.addEventListener('change', function () {
+        if (this.files && this.files[0]) {
+          const file = this.files[0];
+          if (file.size > 2 * 1024 * 1024) {
+            showError('memPhotoDropzone', 'errPhoto', 'ఫోటో సైజు 2MB కంటే తక్కువగా ఉండాలి.');
+            return;
+          }
+          clearError('memPhotoDropzone', 'errPhoto');
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            uploadedPhotoData = e.target.result;
+            photoPreviewImg.src = uploadedPhotoData;
+            photoPreview.classList.add('has-image');
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      photoRemoveBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        photoInput.value = '';
+        uploadedPhotoData = null;
+        photoPreview.classList.remove('has-image');
+        photoPreviewImg.src = '';
+      });
+
+      // Form Validation Helpers
+      function showError(inputId, errorId, message) {
+        const el = document.getElementById(inputId);
+        const errEl = document.getElementById(errorId);
+        if (el) el.classList.add('is-invalid');
+        if (errEl) {
+          if (message) errEl.textContent = message;
+          errEl.style.display = 'block';
+        }
+      }
+
+      function clearError(inputId, errorId) {
+        const el = document.getElementById(inputId);
+        const errEl = document.getElementById(errorId);
+        if (el) el.classList.remove('is-invalid');
+        if (errEl) errEl.style.display = 'none';
+      }
+
+      document.getElementById('memFullName').addEventListener('input', function () {
+        if (this.value.trim().length > 1) clearError('memFullName', 'errFullName');
+      });
+
+      document.getElementById('memConsentCheck').addEventListener('change', function () {
+        if (this.checked) clearError('consentWrap', 'errConsent');
+      });
+
+      // Form Submission
+      const form = document.getElementById('dedicatedMembershipForm');
+      const formView = document.getElementById('membershipFormView');
+      const successView = document.getElementById('membershipSuccessView');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // 1. Full Name
+        const nameVal = document.getElementById('memFullName').value.trim();
+        if (!nameVal || nameVal.length < 2) {
+          showError('memFullName', 'errFullName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.');
+          isValid = false;
+        } else {
+          clearError('memFullName', 'errFullName');
+        }
+
+        // 2. Mobile
+        const mobileVal = mobileInput.value.trim();
+        if (mobileVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobileVal)) {
+          showError('memMobile', 'errMobile', 'దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి.');
+          isValid = false;
+        } else {
+          clearError('memMobile', 'errMobile');
+        }
+
+        // 3. OTP Mandatory Verification
+        if (!isOtpVerified) {
+          showError('memMobile', 'errMobile', 'సభ్యత్వం నమోదుకు ముందు మొబైల్ OTP ని ధృవీకరించడం తప్పనిసరి.');
+          if (!isOtpSent) {
+            btnSendOtp.click();
+          } else {
+            otpVerifyPanel.classList.add('is-active');
+            otpInput.focus();
+          }
+          isValid = false;
+        }
+
+        // 4. District
+        const distVal = districtHiddenInput.value.trim();
+        if (!distVal) {
+          showError('districtSelect', 'errDistrict', 'దయచేసి మీ జిల్లాను ఎంపిక చేయండి.');
+          isValid = false;
+        } else {
+          clearError('districtSelect', 'errDistrict');
+        }
+
+        // 5. Constituency
+        const constVal = constituencyHiddenInput.value.trim();
+        if (!constVal) {
+          showError('constituencySelect', 'errConstituency', 'దయచేసి నియోజకవర్గాన్ని ఎంపిక చేయండి.');
+          isValid = false;
+        } else {
+          clearError('constituencySelect', 'errConstituency');
+        }
+
+        // 6. Mandal
+        const mandalVal = mandalHiddenInput.value.trim();
+        if (!mandalVal) {
+          showError('mandalSelect', 'errMandal', 'దయచేసి మండలం లేదా పట్టణాన్ని ఎంపిక చేయండి.');
+          isValid = false;
+        } else {
+          clearError('mandalSelect', 'errMandal');
+        }
+
+        // 7. Roles Checkbox
+        const checkedRoles = Array.from(document.querySelectorAll('input[name="interestRole"]:checked')).map(cb => cb.value);
+        if (checkedRoles.length === 0) {
+          showError('rolesCheckboxGrid', 'errRoles', 'దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.');
+          isValid = false;
+        } else {
+          clearError('rolesCheckboxGrid', 'errRoles');
+        }
+
+        // 8. Consent
+        const consentChecked = document.getElementById('memConsentCheck').checked;
+        if (!consentChecked) {
+          showError('consentWrap', 'errConsent', 'దయచేసి వివరాల ధృవీకరణ నిబంధనను అంగీకరించండి.');
+          isValid = false;
+        } else {
+          clearError('consentWrap', 'errConsent');
+        }
+
+        if (!isValid) {
+          // Scroll to first invalid field
+          const firstErr = document.querySelector('.is-invalid');
+          if (firstErr) {
+            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return;
+        }
+
+        // Submit Success: Generate Membership ID & Render Confirmation Card
+        const randomNum = Math.floor(10000 + Math.random() * 90000);
+        const memberId = `PSP-TG-2026-${randomNum}`;
+
+        document.getElementById('confirmedMemberId').textContent = memberId;
+        document.getElementById('confirmedCardName').textContent = nameVal;
+        document.getElementById('confirmedCardIdText').textContent = `ID: ${memberId}`;
+        const blood = document.getElementById('memBloodGroup').value || 'A+';
+        document.getElementById('confirmedCardLoc').textContent = `${distVal.split(' ')[0]} &bull; ${blood}`;
+        document.getElementById('confirmedCardRole').textContent = checkedRoles[0] || 'పార్టీ సభ్యత్వం';
+
+        if (uploadedPhotoData) {
+          document.getElementById('confirmedCardPhoto').src = uploadedPhotoData;
+        }
+
+        // Switch to Thank You screen smoothly
+        formView.style.display = 'none';
+        successView.classList.add('is-visible');
+
+        // Scroll into view
+        window.scrollTo({
+          top: successView.offsetTop - 80,
+          behavior: 'smooth'
+        });
+
+        // Trigger confetti/celebration notification
+        const toast = document.getElementById('siteToast');
+        if (toast && window.bootstrap && bootstrap.Toast) {
+          document.getElementById('toastBody').textContent = `సభ్యత్వం విజయవంతంగా పూర్తయింది! సభ్యత్వ సంఖ్య: ${memberId}`;
+          const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
+          bsToast.show();
+        }
+      });
+
+      // Register Another Member
+      document.getElementById('btnRegisterAnother').addEventListener('click', function () {
+        form.reset();
+        isOtpSent = false;
+        isOtpVerified = false;
+        uploadedPhotoData = null;
+        photoPreview.classList.remove('has-image');
+        photoPreviewImg.src = '';
+        otpVerifyPanel.classList.remove('is-active');
+        otpVerifiedBadge.classList.remove('is-verified');
+        btnSendOtp.disabled = false;
+        document.getElementById('btnSendOtpLabel').textContent = 'OTP పంపండి';
+
+        districtTriggerText.textContent = 'జిల్లా ఎంపిక చేయండి';
+        districtTriggerText.classList.add('is-placeholder');
+        districtHiddenInput.value = '';
+
+        constituencyTriggerText.textContent = 'నియోజకవర్గం ఎంపిక చేయండి';
+        constituencyTriggerText.classList.add('is-placeholder');
+        constituencyHiddenInput.value = '';
+
+        mandalTriggerText.textContent = 'మండలం / పట్టణం ఎంపిక చేయండి';
+        mandalTriggerText.classList.add('is-placeholder');
+        mandalHiddenInput.value = '';
+
+        successView.classList.remove('is-visible');
+        formView.style.display = 'block';
+        window.scrollTo({ top: formView.offsetTop - 80, behavior: 'smooth' });
+      });
+
+      // Print Member Card
+      document.getElementById('btnPrintCard').addEventListener('click', function () {
+        window.print();
+      });
+
+    })();
+  </script>
+</body>
+
+</html>

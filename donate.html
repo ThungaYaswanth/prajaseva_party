@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>విరాళం ఇవ్వండి | Donate - ప్రజాసేవ పార్టీ (Prajaseva Party)</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీకి విరాళం అందించి తెలంగాణ సమగ్ర అభివృద్ధి మరియు ప్రజా సంక్షేమ ఉద్యమంలో భాగస్వామ్యం అవండి.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=34.0">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation (Exact Portal Header)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#campaign-banner" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#public-issues" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#news-events" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate active" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            title="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
+
+          <!-- Donate Button (Gold Pill - Active on this page) -->
+          <a href="donate.html" class="btn-pill-donate active" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill) -->
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bar top-bar"></span>
+            <span class="bar mid-bar"></span>
+            <span class="bar bot-bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Main Donation Content: Left (Leader & Message) + Right (Form Card)
+       ========================================================================== -->
+  <main class="don-page-section">
+    <div class="don-page-container">
+
+      <!-- LEFT SIDE: Leader Image, Telugu Heading, Description & 3 Benefit Cards -->
+      <div class="don-left-side">
+
+        <!-- Leader Portrait with Soft Red/Yellow Splash (No Charminar) -->
+        <div class="don-leader-stage">
+          <div class="don-leader-splash" aria-hidden="true"></div>
+          <img src="assets/images/leader-namaste.png" alt="తల్లారం నర్సింలు - పార్టీ అధ్యక్షుడు" class="don-leader-img" loading="eager">
+        </div>
+
+        <!-- Red & Yellow Accent Bar -->
+        <div class="don-accent-bar" aria-hidden="true"></div>
+
+        <!-- Telugu Headline -->
+        <h1 class="don-left-heading">
+          <span class="don-head-dark" data-i18n="donPageHead1">ప్రజా సేవకు</span><br>
+          <span class="don-head-red" data-i18n="donPageHead2">మీ సహకారం</span><br>
+          <span class="don-head-dark" data-i18n="donPageHead3">అందించండి..</span>
+        </h1>
+
+        <!-- Telugu Message / Subtitle -->
+        <p class="don-left-desc" data-i18n="donPageSub">
+          తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం, మీ విలువైన సహకారం అందించండి. కలిసే ముందుకు సాగుదాం..
+        </p>
+
+        <!-- 3 Benefit Cards (Matching Reference Image) -->
+        <div class="don-benefits-row">
+          <!-- Benefit 1: ప్రజల కోసం -->
+          <div class="don-benefit-item">
+            <div class="don-benefit-icon-circle icon-badge-red">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="don-benefit-title" data-i18n="donBenefit1Title">ప్రజల కోసం</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit1Sub">మంచి పాలన కోసం మీ సహాయంతో</div>
+          </div>
+
+          <!-- Benefit 2: సేవా దృక్పథం -->
+          <div class="don-benefit-item">
+            <div class="don-benefit-icon-circle icon-badge-gold">
+              <i class="bi bi-flower1"></i>
+            </div>
+            <div class="don-benefit-title" data-i18n="donBenefit2Title">సేవా దృక్పథం</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit2Sub">ప్రతి వ్యక్తికి సమాన అవకాశాలు</div>
+          </div>
+
+          <!-- Benefit 3: మంచి తెలంగాణ -->
+          <div class="don-benefit-item">
+            <div class="don-benefit-icon-circle icon-badge-red">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <div class="don-benefit-title" data-i18n="donBenefit3Title">మంచి తెలంగాణ</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit3Sub">మరింత బలమైన భవిష్యత్తు కోసం</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: Clean White Donation Form Card -->
+      <div class="don-right-card">
+
+        <!-- Form View -->
+        <div id="donationFormView">
+          <!-- Card Header -->
+          <h2 class="don-form-title" data-i18n="donFormTitle">ప్రజా సేవకు మీ సహకారం అందించండి</h2>
+          <p class="don-form-sub" data-i18n="donFormSub">
+            తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం మీ విరాళం ఎంతో విలువైనది.
+          </p>
+          <div class="don-form-accent" aria-hidden="true"></div>
+
+          <!-- Donation Form -->
+          <form id="dedicatedDonationForm" novalidate>
+
+            <!-- 2-Column Fields Grid: Name, Mobile, Email, Town/District -->
+            <div class="don-fields-grid-2">
+
+              <!-- 1. Full Name -->
+              <div class="don-form-group">
+                <label for="donFullName" class="don-form-label">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="donLblFullName">పూర్తి పేరు</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="text" id="donFullName" class="don-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి" data-i18n-placeholder="donPlcFullName" required autocomplete="name">
+                  <div class="don-error-text" id="errDonName">దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 2. Mobile Number (10 Digits strictly) -->
+              <div class="don-form-group">
+                <label for="donMobile" class="don-form-label">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span data-i18n="donLblMobile">మొబైల్ నంబర్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="tel" id="donMobile" class="don-input" placeholder="10 అంకెల మొబైల్ నంబర్" data-i18n-placeholder="donPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
+                  <div class="don-error-text" id="errDonMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 3. Email (Optional) -->
+              <div class="don-form-group">
+                <label for="donEmail" class="don-form-label">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span data-i18n="donLblEmail">ఈమెయిల్</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="email" id="donEmail" class="don-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)" data-i18n-placeholder="donPlcEmail" autocomplete="email">
+                  <div class="don-error-text" id="errDonEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 4. Town / District (Searchable Dropdown) -->
+              <div class="don-form-group">
+                <label for="donLocationTrigger" class="don-form-label">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="donLblLocation">పట్టణం / జిల్లా</span>
+                </label>
+                <div class="searchable-select" id="locationSelect">
+                  <div class="searchable-trigger" id="donLocationTrigger" tabindex="0" role="combobox" aria-expanded="false">
+                    <span class="searchable-trigger-text is-placeholder" id="locationTriggerText" data-i18n="donPlcLocation">పట్టణం / జిల్లా ఎంచుకోండి</span>
+                    <i class="bi bi-chevron-down searchable-trigger-icon"></i>
+                  </div>
+                  <div class="searchable-dropdown">
+                    <div class="searchable-search-wrap">
+                      <i class="bi bi-search"></i>
+                      <input type="text" class="searchable-search-input" placeholder="జిల్లా / పట్టణం శోధించండి..." autocomplete="off">
+                    </div>
+                    <div class="searchable-options-list" id="locationOptionsList" role="listbox">
+                      <!-- Populated via script with Telangana districts -->
+                    </div>
+                  </div>
+                  <input type="hidden" id="donLocation" name="donLocation" value="">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 5. Donation Amount Section -->
+            <div class="don-amount-section">
+              <label class="don-form-label">
+                <i class="bi bi-currency-rupee text-danger"></i>
+                <span data-i18n="donLblAmount">విరాళం మొత్తం</span>
+                <span class="req-star">*</span>
+              </label>
+
+              <!-- Amount Preset Pills -->
+              <div class="don-amount-pills-row" id="amountPillsRow">
+                <button type="button" class="don-pill-btn" data-amt="500">₹500</button>
+                <button type="button" class="don-pill-btn active" data-amt="1000">₹1,000</button>
+                <button type="button" class="don-pill-btn" data-amt="2000">₹2,000</button>
+                <button type="button" class="don-pill-btn" data-amt="5000">₹5,000</button>
+                <button type="button" class="don-pill-btn" data-amt="other" data-i18n="donAmtOther">ఇతర మొత్తం</button>
+              </div>
+
+              <!-- Custom Amount Input Field -->
+              <div class="don-custom-amount-wrap">
+                <span class="don-currency-prefix">₹</span>
+                <input type="number" id="customAmountInput" class="don-input don-custom-amount-input" value="1000" min="10" max="1000000" placeholder="మొత్తం నమోదు చేయండి (₹)" data-i18n-placeholder="donPlcAmount" required>
+              </div>
+              <div class="don-error-text" id="errDonAmount">దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.</div>
+            </div>
+
+            <!-- 6. Payment Method Section -->
+            <div class="don-method-section">
+              <label class="don-form-label">
+                <i class="bi bi-credit-card-2-front-fill"></i>
+                <span data-i18n="donLblPaymentMethod">చెల్లింపు పద్ధతి</span>
+                <span class="req-star">*</span>
+              </label>
+
+              <!-- 3 Interactive Cards: UPI, Card, Net Banking -->
+              <div class="don-method-grid" id="paymentMethodGrid">
+                <!-- Method 1: UPI -->
+                <div class="don-method-card active" data-method="upi" tabindex="0" role="button">
+                  <i class="bi bi-qr-code-scan don-method-icon"></i>
+                  <div class="don-method-title" data-i18n="donPayUpi">UPI</div>
+                  <div class="don-method-sub" data-i18n="donPayUpiSub">UPI ద్వారా</div>
+                </div>
+
+                <!-- Method 2: Card -->
+                <div class="don-method-card" data-method="card" tabindex="0" role="button">
+                  <i class="bi bi-credit-card-fill don-method-icon"></i>
+                  <div class="don-method-title" data-i18n="donPayCard">కార్డ్</div>
+                  <div class="don-method-sub" data-i18n="donPayCardSub">డెబిట్ / క్రెడిట్ కార్డ్</div>
+                </div>
+
+                <!-- Method 3: Net Banking -->
+                <div class="don-method-card" data-method="netbanking" tabindex="0" role="button">
+                  <i class="bi bi-bank2 don-method-icon"></i>
+                  <div class="don-method-title" data-i18n="donPayNet">నెట్ బ్యాంకింగ్</div>
+                  <div class="don-method-sub" data-i18n="donPayNetSub">ఇంటర్నెట్ బ్యాంకింగ్</div>
+                </div>
+              </div>
+
+              <!-- Dynamic Subpanels for Selected Method -->
+              <!-- UPI Panel -->
+              <div class="don-subpanel active" id="subpanelUpi">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="small fw-bold text-dark"><i class="bi bi-phone"></i> ఏదైనా UPI యాప్ ద్వారా చెల్లించండి:</span>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle">తక్షణ ధృవీకరణ</span>
+                </div>
+                <div class="row g-2 align-items-center">
+                  <div class="col-sm-8">
+                    <input type="text" id="upiIdInput" class="don-input" placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)" style="height: 40px; font-size: 0.88rem;">
+                  </div>
+                  <div class="col-sm-4">
+                    <button type="button" id="btnShowQr" class="btn btn-outline-danger w-100 text-truncate" style="height: 40px; font-size: 0.84rem; border-radius: 8px;">
+                      <i class="bi bi-qr-code"></i> QR కోడ్ చూపించు
+                    </button>
+                  </div>
+                </div>
+                <div id="inlineQrCodeBox" class="mt-2 text-center p-2 bg-white rounded border" style="display: none;">
+                  <img src="assets/images/qr-code.svg" alt="UPI QR" style="width: 140px; height: 140px;" class="mx-auto d-block">
+                  <div class="small text-muted mt-1">GPay, PhonePe, Paytm తో స్కాన్ చేయండి</div>
+                  <div class="badge bg-danger-subtle text-danger mt-1">prajasevaparty@upi</div>
+                </div>
+              </div>
+
+              <!-- Card Panel -->
+              <div class="don-subpanel" id="subpanelCard">
+                <div class="small fw-bold text-dark mb-2"><i class="bi bi-shield-lock"></i> కార్డ్ వివరాలు:</div>
+                <div class="row g-2">
+                  <div class="col-12">
+                    <input type="text" class="don-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19" style="height: 40px; font-size: 0.88rem;">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="don-input" placeholder="MM / YY" maxlength="5" style="height: 40px; font-size: 0.88rem;">
+                  </div>
+                  <div class="col-6">
+                    <input type="password" class="don-input" placeholder="CVV" maxlength="3" style="height: 40px; font-size: 0.88rem;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Net Banking Panel -->
+              <div class="don-subpanel" id="subpanelNetbanking">
+                <div class="small fw-bold text-dark mb-2"><i class="bi bi-building"></i> ప్రముఖ బ్యాంకులు:</div>
+                <div class="don-bank-pill-row">
+                  <span class="don-bank-pill active">SBI</span>
+                  <span class="don-bank-pill">HDFC</span>
+                  <span class="don-bank-pill">ICICI</span>
+                  <span class="don-bank-pill">Axis Bank</span>
+                  <span class="don-bank-pill">Union Bank</span>
+                  <span class="don-bank-pill">Canara Bank</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Consent Checkbox -->
+            <div class="don-consent-group" id="donConsentWrap">
+              <label class="don-checkbox-label">
+                <input type="checkbox" id="donConsentCheck" checked required>
+                <span>
+                  <span data-i18n="donConsentText">నా వివరాలు మరియు విరాళానికి సంబంధించిన సమాచారం సరైనవని నేను నిర్ధారిస్తున్నాను.</span>
+                  <span class="req-star">*</span>
+                </span>
+              </label>
+              <div class="don-error-text" id="errDonConsent">దయచేసి నిబంధనలను అంగీకరించండి.</div>
+            </div>
+
+            <!-- 8. Submit Button: Yellow CTA -->
+            <button type="submit" id="btnDonPay" class="btn-don-pay-cta">
+              <i class="bi bi-lock-fill"></i>
+              <span data-i18n="donBtnPayNow">విరాళం చెల్లించండి</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <!-- 9. Security Trust Note -->
+            <div class="don-security-note">
+              <i class="bi bi-shield-fill-check"></i>
+              <span data-i18n="donSecurityNote">మీ చెల్లింపు సమాచారం పూర్తిగా సురక్షితం.</span>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Success Receipt Confirmation View -->
+        <div class="don-success-view" id="donationSuccessView">
+          <div class="don-success-icon-badge">
+            <i class="bi bi-check2-circle"></i>
+          </div>
+          <h3 class="don-success-title" data-i18n="donSuccessTitle">మీ విరాళానికి హృదయపూర్వక ధన్యవాదాలు!</h3>
+          <p class="don-success-sub" data-i18n="donSuccessSub">
+            ప్రజాసేవ పార్టీ ఉద్యమానికి మీ సహకారం ఎంతో అమూల్యమైనది.
+          </p>
+
+          <!-- Receipt Details Card -->
+          <div class="don-receipt-card" id="donationReceiptPrintArea">
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl" data-i18n="donTxnIdLabel">లావాదేవీ సంఖ్య (Transaction ID)</span>
+              <span class="don-receipt-val" id="receiptTxnId">PSP-TXN-2026-89412</span>
+            </div>
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl" data-i18n="donLblFullName">పూర్తి పేరు</span>
+              <span class="don-receipt-val" id="receiptName">-</span>
+            </div>
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl" data-i18n="donLblMobile">మొబైల్ నంబర్</span>
+              <span class="don-receipt-val" id="receiptMobile">-</span>
+            </div>
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl" data-i18n="donLblAmount">విరాళం మొత్తం</span>
+              <span class="don-receipt-val text-success fs-5" id="receiptAmount">₹1,000</span>
+            </div>
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl" data-i18n="donLblPaymentMethod">చెల్లింపు పద్ధతి</span>
+              <span class="don-receipt-val" id="receiptMethod">UPI (సురక్షిత చెల్లింపు)</span>
+            </div>
+            <div class="don-receipt-row">
+              <span class="don-receipt-lbl">తేదీ & సమయం</span>
+              <span class="don-receipt-val" id="receiptDate">2026-10-05 11:15 AM</span>
+            </div>
+          </div>
+
+          <!-- 80G Tax Exemption Note -->
+          <div class="don-tax-banner">
+            <i class="bi bi-award-fill fs-5"></i>
+            <span data-i18n="donTaxNote">ఈ విరాళానికి ఆదాయపు పన్ను చట్టం 80G కింద పన్ను మినహాయింపు వర్తిస్తుంది.</span>
+          </div>
+
+          <!-- Actions -->
+          <div class="don-receipt-actions">
+            <button type="button" id="btnPrintReceipt" class="btn-receipt-download">
+              <i class="bi bi-printer-fill"></i>
+              <span data-i18n="donBtnDownloadReceipt">రశీదు ప్రింట్ / డౌన్‌లోడ్</span>
+            </button>
+            <button type="button" id="btnDonateAgain" class="btn-don-repeat">
+              <i class="bi bi-arrow-clockwise"></i>
+              <span>మరొక విరాళం చేయండి</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Grand Site Footer (Exact Portal Footer - Untouched & Consistent)
+       ========================================================================== -->
+  <footer class="site-footer" id="site-footer">
+
+    <!-- 1. HERO CALLOUT TIER -->
+    <div class="footer-hero-tier">
+      <div class="main-container footer-hero-container">
+        <!-- Left: Party Brand Identity -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-lockup">
+            <div class="footer-brand-logo-frame">
+              <img src="assets/images/party-emblem.png" alt="ప్రజా సేవ పార్టీ చిహ్నం" class="footer-brand-logo-img">
+            </div>
+            <div class="footer-brand-names">
+              <span class="footer-brand-telugu" data-i18n="footerBrandTelugu">ప్రజా సేవ పార్టీ</span>
+              <span class="footer-brand-english" data-i18n="footerBrandEnglish">PRAJA SEVA PARTY</span>
+            </div>
+          </div>
+          <div class="footer-party-tagline" data-i18n="footerTagline">
+            "నిజాయితీ &bull; సేవ &bull; సమానత్వం"
+          </div>
+          <p class="footer-party-brief" data-i18n="footerBrief">
+            తెలంగాణ ప్రజల సంక్షేమం మరియు సమాన హక్కుల కోసం అంకితమైన రాజకీయ ఉద్యమం. ప్రతి పౌరుడికి గౌరవప్రదమైన జీవితం,
+            ఉపాధి మరియు ఉచిత విద్య, నాణ్యమైన వైద్యాన్ని అందించడమే మా సంకల్పం.
+          </p>
+          <!-- Social Icons Row -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-ig"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon (Red on top, Gold underneath) -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER (Clean Pure White Background) -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
+              <li><a href="index.html#leadership-team"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDocs">పత్రాలు</span></a></li>
+              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <!-- Location Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <!-- Phone Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <!-- Email Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=4.0"></script>
+  <script src="assets/js/main.js?v=5.0"></script>
+
+  <!-- Dedicated Donation Page Logic -->
+  <script>
+    (function () {
+      // 33 Telangana Districts for Dropdown
+      const telanganaDistricts = [
+        "హైదరాబాద్ (Hyderabad)",
+        "రంగారెడ్డి (Ranga Reddy)",
+        "మేడ్చల్-మల్కాజిగిరి (Medchal-Malkajgiri)",
+        "వరంగల్ (Warangal)",
+        "హనుమకొండ (Hanumakonda)",
+        "కరీంనగర్ (Karimnagar)",
+        "ఖమ్మం (Khammam)",
+        "నిజామాబాద్ (Nizamabad)",
+        "నల్గొండ (Nalgonda)",
+        "సంగారెడ్డి (Sangareddy)",
+        "సిద్దిపేట (Siddipet)",
+        "మహబూబ్‌నగర్ (Mahabubnagar)",
+        "భద్రాద్రి కొత్తగూడెం (Bhadradri Kothagudem)",
+        "జగిత్యాల (Jagtial)",
+        "సూర్యాపేట (Suryapet)",
+        "మంచిర్యాల (Mancherial)",
+        "కామారెడ్డి (Kamareddy)",
+        "వికారాబాద్ (Vikarabad)",
+        "జనగాం (Jangaon)",
+        "అదిలాబాద్ (Adilabad)",
+        "జయశంకర్ భూపాలపల్లి (Jayashankar Bhupalpally)",
+        "జోగులాంబ గద్వాల (Jogulamba Gadwal)",
+        "కొమరం భీమ్ ఆసిఫాబాద్ (Kumuram Bheem Asifabad)",
+        "మహబూబాబాద్ (Mahabubabad)",
+        "మెదక్ (Medak)",
+        "ములుగు (Mulugu)",
+        "నాగర్‌కర్నూల్ (Nagarkurnool)",
+        "నారాయణపేట (Narayanpet)",
+        "నిర్మల్ (Nirmal)",
+        "పెద్దపల్లి (Peddapalli)",
+        "రాజన్న సిరిసిల్ల (Rajanna Sircilla)",
+        "వనపర్తి (Wanaparthy)",
+        "యాదాద్రి భువనగిరి (Yadadri Bhuvanagiri)"
+      ];
+
+      // Populate District / Town Searchable Select
+      const locList = document.getElementById('locationOptionsList');
+      const locTriggerText = document.getElementById('locationTriggerText');
+      const locHidden = document.getElementById('donLocation');
+      const locSelect = document.getElementById('locationSelect');
+      const locTrigger = document.getElementById('donLocationTrigger');
+      const locSearch = locSelect.querySelector('.searchable-search-input');
+
+      function initLocations() {
+        locList.innerHTML = '';
+        telanganaDistricts.forEach(dist => {
+          const opt = document.createElement('div');
+          opt.className = 'searchable-option';
+          opt.dataset.val = dist;
+          opt.textContent = dist;
+          opt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            locList.querySelectorAll('.searchable-option').forEach(o => o.classList.remove('is-selected'));
+            opt.classList.add('is-selected');
+            locHidden.value = dist;
+            locTriggerText.textContent = dist;
+            locTriggerText.classList.remove('is-placeholder');
+            locSelect.classList.remove('is-open');
+            locTrigger.setAttribute('aria-expanded', 'false');
+          });
+          locList.appendChild(opt);
+        });
+      }
+      initLocations();
+
+      locTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = locSelect.classList.toggle('is-open');
+        locTrigger.setAttribute('aria-expanded', isOpen);
+        if (isOpen) {
+          locSearch.value = '';
+          filterLocations('');
+          setTimeout(() => locSearch.focus(), 50);
+        }
+      });
+
+      locSearch.addEventListener('input', (e) => {
+        filterLocations(e.target.value.toLowerCase());
+      });
+
+      locSearch.addEventListener('click', (e) => e.stopPropagation());
+
+      function filterLocations(query) {
+        let matchCount = 0;
+        locList.querySelectorAll('.searchable-option').forEach(opt => {
+          const text = opt.textContent.toLowerCase();
+          if (text.includes(query)) {
+            opt.style.display = 'block';
+            matchCount++;
+          } else {
+            opt.style.display = 'none';
+          }
+        });
+      }
+
+      document.addEventListener('click', () => {
+        locSelect.classList.remove('is-open');
+        locTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      // Amount Pills Sync
+      const amountPills = document.querySelectorAll('.don-pill-btn');
+      const customAmountInput = document.getElementById('customAmountInput');
+
+      amountPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          amountPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const amt = pill.dataset.amt;
+          if (amt === 'other') {
+            customAmountInput.value = '';
+            customAmountInput.focus();
+          } else {
+            customAmountInput.value = amt;
+          }
+          clearError('customAmountInput', 'errDonAmount');
+        });
+      });
+
+      customAmountInput.addEventListener('input', function () {
+        const val = this.value.trim();
+        let matched = false;
+        amountPills.forEach(pill => {
+          if (pill.dataset.amt === val) {
+            pill.classList.add('active');
+            matched = true;
+          } else {
+            pill.classList.remove('active');
+          }
+        });
+        if (!matched) {
+          const otherBtn = document.querySelector('.don-pill-btn[data-amt="other"]');
+          if (otherBtn) otherBtn.classList.add('active');
+        }
+        if (parseFloat(val) >= 10) {
+          clearError('customAmountInput', 'errDonAmount');
+        }
+      });
+
+      // Payment Method Cards & Subpanels
+      const methodCards = document.querySelectorAll('.don-method-card');
+      const subpanels = {
+        upi: document.getElementById('subpanelUpi'),
+        card: document.getElementById('subpanelCard'),
+        netbanking: document.getElementById('subpanelNetbanking')
+      };
+      let selectedMethod = 'upi';
+
+      methodCards.forEach(card => {
+        card.addEventListener('click', () => {
+          methodCards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          selectedMethod = card.dataset.method;
+
+          // Toggle subpanel
+          Object.keys(subpanels).forEach(key => {
+            if (key === selectedMethod) {
+              subpanels[key].classList.add('active');
+            } else {
+              subpanels[key].classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // Show QR Toggle Button in UPI subpanel
+      const btnShowQr = document.getElementById('btnShowQr');
+      const inlineQrCodeBox = document.getElementById('inlineQrCodeBox');
+      if (btnShowQr && inlineQrCodeBox) {
+        btnShowQr.addEventListener('click', () => {
+          const isShown = inlineQrCodeBox.style.display === 'block';
+          inlineQrCodeBox.style.display = isShown ? 'none' : 'block';
+          btnShowQr.innerHTML = isShown
+            ? '<i class="bi bi-qr-code"></i> QR కోడ్ చూపించు'
+            : '<i class="bi bi-x-circle"></i> QR మూసివేయి';
+        });
+      }
+
+      // Bank Pills in Net Banking subpanel
+      const bankPills = document.querySelectorAll('.don-bank-pill');
+      bankPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          bankPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+        });
+      });
+
+      // Form Validation & Submission
+      const form = document.getElementById('dedicatedDonationForm');
+      const formView = document.getElementById('donationFormView');
+      const successView = document.getElementById('donationSuccessView');
+
+      function showError(inputId, errId, msg) {
+        const el = document.getElementById(inputId);
+        const err = document.getElementById(errId);
+        if (el) el.classList.add('is-invalid');
+        if (err) {
+          if (msg) err.textContent = msg;
+          err.classList.add('show');
+        }
+      }
+
+      function clearError(inputId, errId) {
+        const el = document.getElementById(inputId);
+        const err = document.getElementById(errId);
+        if (el) el.classList.remove('is-invalid');
+        if (err) err.classList.remove('show');
+      }
+
+      // Live digit restriction for Mobile (10 digits strictly)
+      const mobileInput = document.getElementById('donMobile');
+      mobileInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (this.value.length > 10) {
+          this.value = this.value.slice(0, 10);
+        }
+        if (this.value.length === 10) {
+          clearError('donMobile', 'errDonMobile');
+        }
+      });
+
+      // Live Full Name validation
+      const nameInput = document.getElementById('donFullName');
+      nameInput.addEventListener('input', function () {
+        if (this.value.trim().length >= 2) {
+          clearError('donFullName', 'errDonName');
+        }
+      });
+
+      // Consent Checkbox
+      const consentCheck = document.getElementById('donConsentCheck');
+      consentCheck.addEventListener('change', function () {
+        if (this.checked) {
+          clearError('donConsentCheck', 'errDonConsent');
+        }
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // 1. Full Name
+        const nameVal = nameInput.value.trim();
+        if (nameVal.length < 2) {
+          showError('donFullName', 'errDonName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.');
+          isValid = false;
+        } else {
+          clearError('donFullName', 'errDonName');
+        }
+
+        // 2. Mobile
+        const mobVal = mobileInput.value.trim();
+        if (mobVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobVal)) {
+          showError('donMobile', 'errDonMobile', 'దయచేసి సరైన 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి (6-9 తో ప్రారంభం).');
+          isValid = false;
+        } else {
+          clearError('donMobile', 'errDonMobile');
+        }
+
+        // 3. Email (optional, but validate format if entered)
+        const emailInput = document.getElementById('donEmail');
+        const emailVal = emailInput.value.trim();
+        if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+          showError('donEmail', 'errDonEmail', 'దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.');
+          isValid = false;
+        } else {
+          clearError('donEmail', 'errDonEmail');
+        }
+
+        // 4. Amount
+        const amtVal = parseFloat(customAmountInput.value);
+        if (isNaN(amtVal) || amtVal < 10) {
+          showError('customAmountInput', 'errDonAmount', 'దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.');
+          isValid = false;
+        } else {
+          clearError('customAmountInput', 'errDonAmount');
+        }
+
+        // 5. Consent Check
+        if (!consentCheck.checked) {
+          showError('donConsentCheck', 'errDonConsent', 'దయచేసి వివరాల ధృవీకరణ నిబంధనను అంగీకరించండి.');
+          isValid = false;
+        } else {
+          clearError('donConsentCheck', 'errDonConsent');
+        }
+
+        if (!isValid) {
+          const firstErr = document.querySelector('.is-invalid');
+          if (firstErr) {
+            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return;
+        }
+
+        // Submission Simulation: Generate Receipt & Show Confirmation Card
+        const randomTxn = Math.floor(100000 + Math.random() * 900000);
+        const txnId = `PSP-TXN-2026-${randomTxn}`;
+
+        document.getElementById('receiptTxnId').textContent = txnId;
+        document.getElementById('receiptName').textContent = nameVal;
+        document.getElementById('receiptMobile').textContent = `+91 ${mobVal}`;
+        document.getElementById('receiptAmount').textContent = `₹${amtVal.toLocaleString('en-IN')}`;
+
+        let methodText = 'UPI (సురక్షిత చెల్లింపు)';
+        if (selectedMethod === 'card') methodText = 'డెబిట్ / క్రెడిట్ కార్డ్ (సురక్షిత చెల్లింపు)';
+        if (selectedMethod === 'netbanking') {
+          const activeBank = document.querySelector('.don-bank-pill.active');
+          methodText = `నెట్ బ్యాంకింగ్ (${activeBank ? activeBank.textContent : 'All Banks'})`;
+        }
+        document.getElementById('receiptMethod').textContent = methodText;
+
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('te-IN', { year: 'numeric', month: 'short', day: 'numeric' }) + ' ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('receiptDate').textContent = dateStr;
+
+        // Transition to Success Receipt
+        formView.style.display = 'none';
+        successView.classList.add('show');
+        window.scrollTo({
+          top: successView.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+
+      // Print Receipt
+      document.getElementById('btnPrintReceipt').addEventListener('click', function () {
+        window.print();
+      });
+
+      // Donate Again
+      document.getElementById('btnDonateAgain').addEventListener('click', function () {
+        form.reset();
+        customAmountInput.value = '1000';
+        amountPills.forEach(p => p.classList.remove('active'));
+        const defPill = document.querySelector('.don-pill-btn[data-amt="1000"]');
+        if (defPill) defPill.classList.add('active');
+
+        locTriggerText.textContent = 'పట్టణం / జిల్లా ఎంచుకోండి';
+        locTriggerText.classList.add('is-placeholder');
+        locHidden.value = '';
+
+        if (inlineQrCodeBox) inlineQrCodeBox.style.display = 'none';
+        if (btnShowQr) btnShowQr.innerHTML = '<i class="bi bi-qr-code"></i> QR కోడ్ చూపించు';
+
+        consentCheck.checked = true;
+        successView.classList.remove('show');
+        formView.style.display = 'block';
+        window.scrollTo({
+          top: formView.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+
+    })();
+  </script>
+</body>
+
+</html>

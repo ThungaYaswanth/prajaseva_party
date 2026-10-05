@@ -47,7 +47,7 @@
               <a class="nav-link active" href="#home" data-i18n="navHome">హోమ్</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-party" data-i18n="navAbout">మా గురించి</a>
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#campaign-banner" data-i18n="navManifesto">మా దృక్పథం</a>
@@ -62,14 +62,14 @@
 
           <!-- Mobile Action CTAs (Inside dropdown menu on < 992px) -->
           <div class="mobile-nav-cta-panel d-lg-none">
-            <button type="button" class="btn-mobile-nav-membership" data-bs-toggle="modal" data-bs-target="#membershipModal" title="సభ్యత్వం">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
               <i class="bi bi-person-fill"></i>
               <span data-i18n="btnMembership">సభ్యత్వం</span>
-            </button>
-            <button type="button" class="btn-mobile-nav-donate" data-bs-toggle="modal" data-bs-target="#donateModal" title="విరాళం ఇవ్వండి">
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
               <i class="bi bi-heart-fill"></i>
               <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -84,17 +84,15 @@
           </button>
 
           <!-- Donate Button (Gold Pill: విరాళం ఇవ్వండి) -->
-          <button type="button" class="btn-pill-donate" data-bs-toggle="modal" data-bs-target="#donateModal"
-            id="header-donate-btn" title="విరాళం ఇవ్వండి">
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
             <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
-          </button>
+          </a>
 
           <!-- Join Membership Button (Red Pill: 👤 సభ్యత్వం) -->
-          <button type="button" class="btn-pill-membership" data-bs-toggle="modal" data-bs-target="#membershipModal"
-            id="header-membership-btn" title="సభ్యత్వం">
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
             <i class="bi bi-person-fill"></i>
             <span data-i18n="btnMembership">సభ్యత్వం</span>
-          </button>
+          </a>
 
           <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
           <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
@@ -285,10 +283,16 @@
               <div class="about-quote-line" data-i18n="aboutSloganLine2">ప్రజల కోసం మా ప్రయాణం...</div>
             </div>
 
-            <a href="#public-issues" class="btn-about-goals">
-              <span data-i18n="btnAboutObjectives">మా లక్ష్యాలు తెలుసుకోండి</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <a href="about.html" class="btn-about-goals">
+                <span data-i18n="btnAboutFull">పూర్తి వివరాలు చూడండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#public-issues" class="btn-about-goals" style="background: transparent; color: var(--primary-red); border: 1.5px solid var(--primary-red);">
+                <span data-i18n="btnAboutObjectives">మా లక్ష్యాలు తెలుసుకోండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Right Column: Leader Banner Image Card -->
@@ -1607,11 +1611,11 @@
 
               <!-- CTA Join Button: + సభ్యత్వం పొందండి → -->
               <div class="membership-cta-action">
-                <button class="btn-pill-membership-join" data-bs-toggle="modal" data-bs-target="#membershipModal">
+                <a href="membership.html" class="btn-pill-membership-join">
                   <span class="btn-icon-plus"><i class="bi bi-person-fill-add"></i></span>
                   <span class="btn-text-label">సభ్యత్వం పొందండి</span>
                   <span class="btn-icon-arrow"><i class="bi bi-arrow-right"></i></span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -1890,7 +1894,7 @@
             <ul class="footer-links-list">
               <li><a href="#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a>
               </li>
-              <li><a href="#about-party"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా
                     గురించి</span></a></li>
               <li><a href="#about-party"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా
                     నాయకులు</span></a></li>
@@ -1909,17 +1913,14 @@
               </span>
             </div>
             <ul class="footer-links-list">
-              <li><a href="#membershipModal" data-bs-toggle="modal" data-bs-target="#membershipModal"><span
+              <li><a href="membership.html"><span
                     class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
-              <li><a href="#membershipModal" data-bs-toggle="modal" data-bs-target="#membershipModal"><span
+              <li><a href="membership.html"><span
                     class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా
                     చేరండి</span></a></li>
               <li><a href="#upcoming-events"><span class="f-link-chev">&#8250;</span> <span
                     data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
-              <li><a href="#campaign-banner"><span class="f-link-chev">&#8250;</span> <span
-                    data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
-              <li><a href="#membershipModal" data-bs-toggle="modal" data-bs-target="#membershipModal"><span
-                    class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
             </ul>
           </div>
           <!-- Column 3: Help & Support -->
