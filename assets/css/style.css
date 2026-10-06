@@ -1807,6 +1807,24 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   transform: translateX(4px);
 }
 
+/* Outline / Secondary Capsule Action Button */
+.btn-about-goals.btn-outline,
+.btn-about-outline {
+  background: transparent !important;
+  color: var(--primary-red) !important;
+  border: 1.5px solid var(--primary-red) !important;
+  box-shadow: none !important;
+}
+
+.btn-about-goals.btn-outline:hover,
+.btn-about-outline:hover {
+  background: linear-gradient(135deg, #C81016 0%, #A30D12 100%) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 16px rgba(200, 16, 22, 0.3) !important;
+  transform: translateY(-2px);
+}
+
 /* Right Column Leader Image Card */
 .about-image-card {
   position: relative;
