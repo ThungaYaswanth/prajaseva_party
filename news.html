@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>వార్తలు & కార్యక్రమాలు | ప్రజాసేవ పార్టీ</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీ తాజా వార్తలు, ప్రకటనలు, రాబోయే ప్రజా సభలు మరియు సేవా కార్యక్రమాలు. ప్రజలతో కలసి ప్రజా ప్రగతి ప్రయాణం.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=39.0">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation (Consistent Portal Header)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#campaign-banner" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="issues.html" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="news.html" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs (Inside dropdown menu on < 992px) -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            title="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
+
+          <!-- Donate Button (Gold Pill: విరాళం ఇవ్వండి) -->
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill: 👤 సభ్యత్వం) -->
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bar top-bar"></span>
+            <span class="bar mid-bar"></span>
+            <span class="bar bot-bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         1. TOP HERO BANNER: Wide Rally with Brush-Stroke Telugu Title
+         ========================================================================== -->
+    <section class="news-hero-banner" aria-label="వార్తలు & కార్యక్రమాలు శీర్షిక">
+      <div class="news-banner-inner">
+        <!-- Breadcrumb Navigation (Red Home Icon + > + Current) -->
+        <nav class="news-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#home" class="news-bc-home">
+            <i class="bi bi-house-door-fill news-bc-icon"></i>
+            <span data-i18n="navHome">హోమ్</span>
+          </a>
+          <span class="news-bc-sep">&gt;</span>
+          <span class="news-bc-current" data-i18n="navNews">వార్తలు &amp; కార్యక్రమాలు</span>
+        </nav>
+
+        <!-- Main Banner Title & Underline Accent Bar -->
+        <div class="news-banner-content">
+          <h1 class="news-banner-title">
+            <span class="news-title-navy" data-i18n="newsHeroTitle1">వార్తలు &amp;</span><br>
+            <span class="news-title-red" data-i18n="newsHeroTitle2">కార్యక్రమాలు</span>
+          </h1>
+          <div class="news-accent-stripe" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. MAIN NEWS SECTION
+         ========================================================================== -->
+    <section class="news-main-section">
+      <div class="news-container">
+
+        <!-- TOP SHOWCASE: 4 Compact News Stack (Left) + Featured Breaking News (Right) -->
+        <div class="news-top-highlight-grid">
+
+          <!-- Left: 4 Compact News Stack (Entire card clickable, sticky on left column) -->
+          <div class="news-compact-list" id="compactNewsList">
+
+            <!-- Item 1 -->
+            <div class="compact-news-card" data-story-key="compact1" onclick="selectShowcaseStory('compact1')"
+              onkeydown="if(event.key==='Enter'||event.key===' ')selectShowcaseStory('compact1')" tabindex="0" role="button"
+              aria-label="యువత కోసం నైపుణ్య శిక్షణ కార్యక్రమాలు – ప్రజా సేవ పార్టీ ప్రతిభ">
+              <div class="compact-thumb-wrap">
+                <img src="assets/images/gallery/gallery-1.jpg" alt="యువత కోసం నైపుణ్య శిక్షణ కార్యక్రమాలు" loading="lazy">
+              </div>
+              <div class="compact-info">
+                <div class="compact-date">
+                  <i class="bi bi-calendar3"></i> 16 సెప్టెంబర్ 2026
+                </div>
+                <h3 class="compact-title">
+                  యువత కోసం నైపుణ్య శిక్షణ కార్యక్రమాలు – ప్రజా సేవ పార్టీ ప్రతిభ
+                </h3>
+              </div>
+              <i class="bi bi-arrow-right-circle compact-arrow-icon"></i>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="compact-news-card" data-story-key="compact2" onclick="selectShowcaseStory('compact2')"
+              onkeydown="if(event.key==='Enter'||event.key===' ')selectShowcaseStory('compact2')" tabindex="0" role="button"
+              aria-label="రైతుల సంక్షేమంపై కీలక సమావేశం">
+              <div class="compact-thumb-wrap">
+                <img src="assets/images/policy/policy-farmer.jpg" alt="రైతుల సంక్షేమంపై కీలక సమావేశం" loading="lazy">
+              </div>
+              <div class="compact-info">
+                <div class="compact-date">
+                  <i class="bi bi-calendar3"></i> 14 సెప్టెంబర్ 2026
+                </div>
+                <h3 class="compact-title">
+                  రైతుల సంక్షేమంపై కీలక సమావేశం
+                </h3>
+              </div>
+              <i class="bi bi-arrow-right-circle compact-arrow-icon"></i>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="compact-news-card" data-story-key="compact3" onclick="selectShowcaseStory('compact3')"
+              onkeydown="if(event.key==='Enter'||event.key===' ')selectShowcaseStory('compact3')" tabindex="0" role="button"
+              aria-label="మహిళా సాధికారతపై పార్టీ ప్రత్యేక చర్చ">
+              <div class="compact-thumb-wrap">
+                <img src="assets/images/policy/policy-women.jpg" alt="మహిళా సాధికారతపై పార్టీ ప్రత్యేక చర్చ" loading="lazy">
+              </div>
+              <div class="compact-info">
+                <div class="compact-date">
+                  <i class="bi bi-calendar3"></i> 12 సెప్టెంబర్ 2026
+                </div>
+                <h3 class="compact-title">
+                  మహిళా సాధికారతపై పార్టీ ప్రత్యేక చర్చ
+                </h3>
+              </div>
+              <i class="bi bi-arrow-right-circle compact-arrow-icon"></i>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="compact-news-card" data-story-key="compact4" onclick="selectShowcaseStory('compact4')"
+              onkeydown="if(event.key==='Enter'||event.key===' ')selectShowcaseStory('compact4')" tabindex="0" role="button"
+              aria-label="ప్రజా సేవ పార్టీ ముఖ్య నాయకుల రాష్ట్ర స్థాయి సమావేశం">
+              <div class="compact-thumb-wrap">
+                <img src="assets/images/news/news-meeting.jpg" alt="ప్రజా సేవ పార్టీ ముఖ్య నాయకుల సమావేశం" loading="lazy">
+              </div>
+              <div class="compact-info">
+                <div class="compact-date">
+                  <i class="bi bi-calendar3"></i> 10 సెప్టెంబర్ 2026
+                </div>
+                <h3 class="compact-title">
+                  ప్రజా సేవ పార్టీ ముఖ్య నాయకుల రాష్ట్ర స్థాయి సమావేశం
+                </h3>
+              </div>
+              <i class="bi bi-arrow-right-circle compact-arrow-icon"></i>
+            </div>
+
+          </div>
+
+          <!-- Right: Big Featured Story (Expands vertically downward, stays in right column) -->
+          <article class="featured-breaking-card" id="featuredBreakingCard">
+            <div class="featured-img-wrap">
+              <span class="breaking-badge" id="featuredBadge">
+                <i class="bi bi-lightning-charge-fill"></i>
+                <span id="featuredBadgeText" data-i18n="newsBreakingBadge">ప్రధాన వార్త</span>
+              </span>
+              <img src="assets/images/news/news-rally.jpg" alt="రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలు ప్రారంభం"
+                id="featuredHeroImg" loading="eager">
+            </div>
+            <div class="featured-card-body" id="featuredCardBody">
+              <div class="news-meta-row">
+                <span class="news-meta-item">
+                  <i class="bi bi-calendar3"></i> <span id="featuredDate">18 సెప్టెంబర్ 2026</span>
+                </span>
+                <span class="news-meta-item">
+                  <i class="bi bi-geo-alt-fill"></i> <span id="featuredLoc">హైదరాబాద్</span>
+                </span>
+              </div>
+              <h2 class="featured-title" id="featuredTitle">
+                ప్రజల అభివృద్ధే మా లక్ష్యం – రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలు ప్రారంభం
+              </h2>
+              <p class="featured-desc" id="featuredDesc">
+                తెలంగాణ రాష్ట్ర సమగ్ర అభివృద్ధి కోసం ప్రజా సేవ పార్టీ రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలను ప్రారంభించింది. యువత, రైతులు, మహిళలు, కార్మికుల సంక్షేమానికి మా కట్టుబాటు కొనసాగుతుంది.
+              </p>
+
+              <!-- Inline Full Article Section (Expands downward, no popup, left cards stay sticky) -->
+              <div class="featured-full-article" id="featuredFullArticle" style="display: none;">
+                <div class="featured-article-content" id="featuredArticleContent">
+                  <!-- Populated by JS -->
+                </div>
+                <div class="show-less-wrap">
+                  <button type="button" class="btn-show-less" id="btnShowLess" onclick="collapseShowcaseArticle()">
+                    <span data-i18n="newsShowLess">తక్కువగా చూపించు</span>
+                    <i class="bi bi-chevron-up"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Read More Button (Inline Expand Trigger) -->
+              <button type="button" class="btn-read-more-pill" id="featuredReadMoreBtn" onclick="expandShowcaseArticle()">
+                <span data-i18n="newsReadMore">మరింత చదవండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ======================================================================
+             3. FILTER & SEARCH BAR
+             ====================================================================== -->
+        <div class="news-filter-bar">
+          <!-- Left: Category Tabs -->
+          <div class="filter-tabs-wrap" id="categoryFilterTabs" role="tablist">
+            <button type="button" class="filter-tab-pill is-active" data-cat="all">
+              <i class="bi bi-grid-fill"></i>
+              <span data-i18n="newsFilterAll">అన్నీ</span>
+            </button>
+            <button type="button" class="filter-tab-pill" data-cat="news">
+              <i class="bi bi-newspaper"></i>
+              <span data-i18n="newsFilterNews">వార్తలు</span>
+            </button>
+            <button type="button" class="filter-tab-pill" data-cat="events">
+              <i class="bi bi-calendar-event"></i>
+              <span data-i18n="newsFilterEvents">కార్యక్రమాలు</span>
+            </button>
+            <button type="button" class="filter-tab-pill" data-cat="announcements">
+              <i class="bi bi-megaphone-fill"></i>
+              <span data-i18n="newsFilterAnnouncements">ప్రకటనలు</span>
+            </button>
+          </div>
+
+          <!-- Right: Search Box + Date & Location Selects -->
+          <div class="filter-controls-wrap">
+            <div class="filter-search-box">
+              <i class="bi bi-search"></i>
+              <input type="text" id="newsSearchInput" class="filter-search-input"
+                placeholder="వార్తలు, కార్యక్రమాలు వెతకండి..." data-i18n-placeholder="newsSearchPlc" autocomplete="off">
+            </div>
+
+            <select id="dateFilterSelect" class="filter-select" aria-label="తేదీ ఎంచుకోండి">
+              <option value="all" data-i18n="newsDateAll">తేదీ ఎంచుకోండి</option>
+              <option value="september">సెప్టెంబర్ 2026</option>
+              <option value="august">ఆగస్టు 2026</option>
+              <option value="recent">ఇటీవలి వార్తలు</option>
+            </select>
+
+            <select id="locFilterSelect" class="filter-select" aria-label="అన్ని ప్రాంతాలు">
+              <option value="all" data-i18n="newsLocAll">అన్ని ప్రాంతాలు</option>
+              <option value="hyderabad">హైదరాబాద్</option>
+              <option value="warangal">వరంగల్</option>
+              <option value="karimnagar">కరీంనగర్</option>
+              <option value="nalgonda">నల్లగొండ</option>
+              <option value="nizamabad">నిజామాబాద్</option>
+              <option value="adilabad">ఆదిలాబాద్</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ======================================================================
+             4. "తాజా వార్తలు" (LATEST NEWS) 6-CARD GRID
+             ====================================================================== -->
+        <section class="latest-news-section" aria-labelledby="latestNewsTitle">
+          <!-- Section Header -->
+          <div class="news-sec-header">
+            <div class="news-sec-title-wrap">
+              <div class="sec-icon-box">
+                <i class="bi bi-newspaper"></i>
+              </div>
+              <h2 class="sec-title-text" id="latestNewsTitle" data-i18n="newsLatestHead">తాజా వార్తలు</h2>
+            </div>
+            <a href="javascript:void(0)" class="sec-link-view-all" onclick="resetFilters()">
+              <span data-i18n="newsViewAll">అన్నీ వార్తలు</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 6 News Cards Grid (2 rows x 3 cols) -->
+          <div class="latest-news-grid" id="latestNewsGrid">
+
+            <!-- Card 1 -->
+            <article class="news-card-item" data-cat="news" data-loc="nalgonda" onclick="openStoryModal('latest1')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
+                <img src="assets/images/policy/policy-peoplesvoice.jpg" alt="ప్రజలతో ప్రత్యక్ష సంభాషణ" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 08 సెప్టెంబర్ 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> నల్లగొండ</span>
+                </div>
+                <h3 class="news-card-title">
+                  ప్రజలతో ప్రత్యక్ష సంభాషణ – నల్లగొండలో భారీ జనసమూహం
+                </h3>
+                <p class="news-card-desc">
+                  తెలంగాణ రాష్ట్ర సమగ్ర అభివృద్ధి కోసం నల్లగొండలో ప్రజలతో సంభాషించి పలు కీలక నిర్ణయాలు ప్రకటించారు.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="news-card-item" data-cat="events" data-loc="warangal" onclick="openStoryModal('latest2')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-events" data-i18n="newsFilterEvents">కార్యక్రమాలు</span>
+                <img src="assets/images/policy/policy-housing.jpg" alt="యువత కోసం నైపుణ్యాభివృద్ధి శిబిరాలు" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 05 సెప్టెంబర్ 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> వరంగల్</span>
+                </div>
+                <h3 class="news-card-title">
+                  యువత కోసం నైపుణ్యాభివృద్ధి శిబిరాలు
+                </h3>
+                <p class="news-card-desc">
+                  తెలంగాణ రాష్ట్ర యువతకు ఉపాధి అవకాశాలు విస్తరించేందుకు నైపుణ్యాభివృద్ధి శిబిరాలు ప్రారంభించారు.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="news-card-item" data-cat="news" data-loc="karimnagar" onclick="openStoryModal('latest3')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
+                <img src="assets/images/gallery/gallery-4.jpg" alt="మహిళా స్వయం సహాయక సంఘాలతో సమావేశం" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 02 సెప్టెంబర్ 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> కరీంనగర్</span>
+                </div>
+                <h3 class="news-card-title">
+                  మహిళా స్వయం సహాయక సంఘాలతో సమావేశం
+                </h3>
+                <p class="news-card-desc">
+                  మహిళల ఆర్థిక స్వావలంబన కోసం పలు పథకాలపై స్వయం సహాయక సంఘాలతో విశేష చర్చ జరిగింది.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="news-card-item" data-cat="announcements" data-loc="hyderabad" onclick="openStoryModal('latest4')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-announcements" data-i18n="newsFilterAnnouncements">ప్రకటనలు</span>
+                <img src="assets/images/policy/policy-edu.jpg" alt="విద్యారంగంలో నూతన కార్యక్రమాలు" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 22 ఆగస్టు 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> హైదరాబాద్</span>
+                </div>
+                <h3 class="news-card-title">
+                  విద్యారంగంలో నూతన కార్యక్రమాలు
+                </h3>
+                <p class="news-card-desc">
+                  తెలంగాణ రాష్ట్ర విద్యార్థుల భవిష్యత్తు కోసం నూతన విద్యా కార్యక్రమాలను ప్రకటించారు.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="news-card-item" data-cat="news" data-loc="nizamabad" onclick="openStoryModal('latest5')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
+                <img src="assets/images/Image_3.jpg" alt="రైతుల సమస్యలపై ప్రజా సేవ పార్టీ ప్రతినిధుల భేటీ" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 18 ఆగస్టు 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> నిజామాబాద్</span>
+                </div>
+                <h3 class="news-card-title">
+                  రైతుల సమస్యలపై ప్రజా సేవ పార్టీ ప్రతినిధుల భేటీ
+                </h3>
+                <p class="news-card-desc">
+                  రైతుల సంక్షేమానికి రాష్ట్ర స్థాయి చర్చలపై నిజామాబాద్‌లో కీలక సమావేశం జరిగింది.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="news-card-item" data-cat="events" data-loc="adilabad" onclick="openStoryModal('latest6')">
+              <div class="news-card-img-wrap">
+                <span class="card-cat-badge cat-events" data-i18n="newsFilterEvents">కార్యక్రమాలు</span>
+                <img src="assets/images/policy/policy-women.jpg" alt="మహిళా సాధికారతకు నూతన పథకాలు" loading="lazy">
+              </div>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span><i class="bi bi-calendar3"></i> 12 ఆగస్టు 2026</span>
+                  <span><i class="bi bi-geo-alt-fill"></i> ఆదిలాబాద్</span>
+                </div>
+                <h3 class="news-card-title">
+                  మహిళా సాధికారతకు నూతన పథకాలు
+                </h3>
+                <p class="news-card-desc">
+                  మహిళల ఉపాధి, ఆర్థిక సహాయ పథకాలపై ఆదిలాబాద్‌లో అవగాహన కార్యక్రమం నిర్వహించారు.
+                </p>
+                <div class="news-card-footer">
+                  <span class="card-more-label" data-i18n="newsReadMore">మరింత చదవండి</span>
+                  <i class="bi bi-arrow-right-circle card-arrow-circle"></i>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Pagination Bar -->
+          <nav class="news-pagination" aria-label="వార్తల పేజీలు">
+            <button type="button" class="page-nav-arrow" aria-label="Previous Page">‹</button>
+            <button type="button" class="page-num-btn is-active">1</button>
+            <button type="button" class="page-num-btn">2</button>
+            <button type="button" class="page-num-btn">3</button>
+            <button type="button" class="page-num-btn">4</button>
+            <button type="button" class="page-num-btn">5</button>
+            <button type="button" class="page-nav-arrow" aria-label="Next Page">›</button>
+          </nav>
+        </section>
+
+        <!-- ======================================================================
+             5. "రాబోయే కార్యక్రమాలు" (UPCOMING EVENTS) 4-CARD ROW
+             ====================================================================== -->
+        <section class="upcoming-events-wrap" aria-labelledby="upcomingEventsTitle">
+          <!-- Section Header -->
+          <div class="news-sec-header">
+            <div class="news-sec-title-wrap">
+              <div class="sec-icon-box">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <h2 class="sec-title-text" id="upcomingEventsTitle" data-i18n="newsUpcomingHead">రాబోయే కార్యక్రమాలు</h2>
+            </div>
+            <a href="javascript:void(0)" class="sec-link-view-all" onclick="filterUpcomingEvents()">
+              <span data-i18n="newsAllEvents">అన్నీ కార్యక్రమాలు చూడండి</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 4 Horizontal Event Cards -->
+          <div class="upcoming-events-grid" id="upcomingEventsGrid">
+
+            <!-- Event Card 1 -->
+            <div class="event-card-item" onclick="openStoryModal('event1')">
+              <div class="event-top-row">
+                <div class="event-date-badge">
+                  <div class="event-date-day">22</div>
+                  <div class="event-date-month">సెప్టెం</div>
+                  <div class="event-date-year">2026</div>
+                </div>
+                <div class="event-thumb-wrap">
+                  <img src="assets/images/Festive.webp" alt="ప్రజా సందేశ సభ" loading="lazy">
+                </div>
+              </div>
+              <h3 class="event-title">ప్రజా సందేశ సభ</h3>
+              <div class="event-meta-list">
+                <div class="event-meta-line">
+                  <i class="bi bi-geo-alt-fill"></i> వరంగల్
+                </div>
+                <div class="event-meta-line">
+                  <i class="bi bi-clock-fill"></i> సా. 4:00 గంటలకు
+                </div>
+              </div>
+              <button type="button" class="btn-event-action">
+                <span data-i18n="newsEventDetails">వివరాలు చూడండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="event-card-item" onclick="openStoryModal('event2')">
+              <div class="event-top-row">
+                <div class="event-date-badge">
+                  <div class="event-date-day">28</div>
+                  <div class="event-date-month">సెప్టెం</div>
+                  <div class="event-date-year">2026</div>
+                </div>
+                <div class="event-thumb-wrap">
+                  <img src="assets/images/Image_1.jpg" alt="యువత నైపుణ్య శిబిరం" loading="lazy">
+                </div>
+              </div>
+              <h3 class="event-title">యువత నైపుణ్య శిబిరం</h3>
+              <div class="event-meta-list">
+                <div class="event-meta-line">
+                  <i class="bi bi-geo-alt-fill"></i> హైదరాబాద్
+                </div>
+                <div class="event-meta-line">
+                  <i class="bi bi-clock-fill"></i> ఉ. 10:00 గంటలకు
+                </div>
+              </div>
+              <button type="button" class="btn-event-action">
+                <span data-i18n="newsEventDetails">వివరాలు చూడండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="event-card-item" onclick="openStoryModal('event3')">
+              <div class="event-top-row">
+                <div class="event-date-badge">
+                  <div class="event-date-day">05</div>
+                  <div class="event-date-month">అక్టో</div>
+                  <div class="event-date-year">2026</div>
+                </div>
+                <div class="event-thumb-wrap">
+                  <img src="assets/images/policy/policy-farmer.jpg" alt="రైతు సంక్షేమ సమావేశం" loading="lazy">
+                </div>
+              </div>
+              <h3 class="event-title">రైతు సంక్షేమ సమావేశం</h3>
+              <div class="event-meta-list">
+                <div class="event-meta-line">
+                  <i class="bi bi-geo-alt-fill"></i> కరీంనగర్
+                </div>
+                <div class="event-meta-line">
+                  <i class="bi bi-clock-fill"></i> ఉ. 11:00 గంటలకు
+                </div>
+              </div>
+              <button type="button" class="btn-event-action">
+                <span data-i18n="newsEventDetails">వివరాలు చూడండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="event-card-item" onclick="openStoryModal('event4')">
+              <div class="event-top-row">
+                <div class="event-date-badge">
+                  <div class="event-date-day">10</div>
+                  <div class="event-date-month">అక్టో</div>
+                  <div class="event-date-year">2026</div>
+                </div>
+                <div class="event-thumb-wrap">
+                  <img src="assets/images/policy/policy-women.jpg" alt="మహిళా సాధికారత సదస్సు" loading="lazy">
+                </div>
+              </div>
+              <h3 class="event-title">మహిళా సాధికారత సదస్సు</h3>
+              <div class="event-meta-list">
+                <div class="event-meta-line">
+                  <i class="bi bi-geo-alt-fill"></i> నిజామాబాద్
+                </div>
+                <div class="event-meta-line">
+                  <i class="bi bi-clock-fill"></i> సా. 3:00 గంటలకు
+                </div>
+              </div>
+              <button type="button" class="btn-event-action">
+                <span data-i18n="newsEventDetails">వివరాలు చూడండి</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       News & Events Details Modal
+       ========================================================================== -->
+  <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <span class="badge bg-danger rounded-pill px-3 py-2" id="modalBadge">వార్తలు</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-3 px-4">
+          <div class="rounded-3 overflow-hidden mb-3" style="max-height: 360px;">
+            <img src="" id="modalImg" alt="Article Image" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="d-flex align-items-center gap-3 text-muted small fw-bold mb-2">
+            <span id="modalDate"><i class="bi bi-calendar3 text-danger"></i> </span>
+            <span id="modalLoc"><i class="bi bi-geo-alt-fill text-danger"></i> </span>
+          </div>
+          <h3 class="fw-bold text-dark mb-3" id="modalTitle"></h3>
+          <p class="text-secondary leading-relaxed" id="modalDesc"></p>
+        </div>
+        <div class="modal-footer border-0 pt-0 px-4 pb-4">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">మూసివేయి</button>
+          <a href="javascript:void(0)" class="btn btn-danger rounded-pill px-4" onclick="shareArticle()">
+            <i class="bi bi-share-fill me-1"></i> భాగస్వామ్యం చేయండి
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Section 12 — Grand Modern Footer (Exact Homepage Footer)
+       ========================================================================== -->
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
+      <div class="main-container footer-hero-container">
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
+            </div>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
+            </div>
+          </div>
+          <!-- Social Media Pills -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon (Red on top, Gold underneath) -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER (Clean Pure White Background) -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
+              <li><a href="index.html#about-party"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <!-- Location Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <!-- Phone Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <!-- Email Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- ==========================================================================
+       Interactive News Data & Filter Logic
+       ========================================================================== -->
+  <script>
+    // Detailed Data Store for Stories & Events
+    const STORIES_DB = {
+      featured: {
+        badge: "ప్రధాన వార్త",
+        title: "ప్రజల అభివృద్ధే మా లక్ష్యం – రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలు ప్రారంభం",
+        date: "18 సెప్టెంబర్ 2026",
+        loc: "హైదరాబాద్",
+        img: "assets/images/news/news-rally.jpg",
+        desc: "తెలంగాణ రాష్ట్ర సమగ్ర అభివృద్ధి కోసం ప్రజా సేవ పార్టీ రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలను ప్రారంభించింది. యువత, రైతులు, మహిళలు, కార్మికుల సంక్షేమానికి మా కట్టుబాటు కొనసాగుతుంది.",
+        fullArticle: [
+          "తెలంగాణ రాష్ట్ర సమగ్ర అభివృద్ధి కోసం ప్రజా సేవ పార్టీ రాష్ట్రవ్యాప్తంగా ప్రజా సందేశ సభలను ఘనంగా ప్రారంభించింది. యువత, రైతులు, మహిళలు, కార్మికుల సంక్షేమానికి మా కట్టుబాటు నిరంతరం కొనసాగుతుంది.",
+          "ఈ సందర్భంగా పార్టీ అధ్యక్షుడు తల్లారం నర్సింలు మాట్లాడుతూ, ప్రతి నియోజకవర్గంలో ప్రజల సమస్యలను క్షేత్రస్థాయిలో ప్రత్యక్షంగా తెలుసుకుని, శాశ్వత పరిష్కార ప్రణాళికలను రూపొందిస్తామని స్పష్టం చేశారు. పేదరిక నిర్మూలన, నాణ్యమైన ఉచిత విద్య, మరియు మెరుగైన ఉచిత వైద్యం అందించడమే తమ ప్రథమ ప్రాధాన్యత అని ప్రకటించారు.",
+          "లక్షలాదిగా తరలివచ్చిన ప్రజాప్రతినిధులు, కార్యకర్తలు మరియు ప్రజానీకం పార్టీ సిద్ధాంతాలకు సంపూర్ణ మద్దతు ప్రకటించారు. రాబోయే 100 రోజుల్లో రాష్ట్రంలోని అన్ని జిల్లాల్లో ఈ యాత్ర దిగ్విజయంగా కొనసాగుతుందని పార్టీ వర్గాలు వెల్లడించాయి."
+        ]
+      },
+      compact1: {
+        badge: "కార్యక్రమాలు",
+        title: "యువత కోసం నైపుణ్య శిక్షణ కార్యక్రమాలు – ప్రజా సేవ పార్టీ ప్రతిభ",
+        date: "16 సెప్టెంబర్ 2026",
+        loc: "హైదరాబాద్",
+        img: "assets/images/gallery/gallery-1.jpg",
+        desc: "నిరుద్యోగ యువతకు ఆధునిక ఐటీ, తయారీ మరియు పారిశ్రామిక నైపుణ్యాలలో ఉచిత శిక్షణ అందించడానికి ప్రత్యేక కేంద్రాన్ని ప్రారంభించారు. రాబోయే 6 నెలల్లో 10,000 మందికి ఉపాధి అవకాశాలు కల్పించడమే లక్ష్యం.",
+        fullArticle: [
+          "నిరుద్యోగ యువతకు ఆధునిక ఐటీ, డేటా అనలిటిక్స్, పారిశ్రామిక నైపుణ్యాలలో అంతర్జాతీయ స్థాయి ఉచిత శిక్షణ అందించడానికి ప్రత్యేక కేంద్రాన్ని ప్రారంభించారు.",
+          "రాబోయే 6 నెలల్లో 10,000 మందికి ఉపాధి అవకాశాలు కల్పించడమే లక్ష్యంగా ప్రముఖ పరిశ్రమలతో అవగాహన ఒప్పందాలు కుదుర్చుకున్నారు. శిక్షణ పూర్తయిన ప్రతి అభ్యర్థికి ఉద్యోగ మార్గదర్శకత్వంతో పాటు స్టార్టప్ ఇన్సెంటివ్‌లు అందించనున్నారు.",
+          "గ్రామీణ ప్రాంతాల యువత ఈ అవకాశాన్ని సద్వినియోగం చేసుకోవాలని, యువశక్తిని ప్రజా సేవకు అనుసంధానించడమే తమ లక్ష్యమని పార్టీ యువజన విభాగం తెలిపింది."
+        ]
+      },
+      compact2: {
+        badge: "వార్తలు",
+        title: "రైతుల సంక్షేమంపై కీలక సమావేశం",
+        date: "14 సెప్టెంబర్ 2026",
+        loc: "ఖమ్మం",
+        img: "assets/images/policy/policy-farmer.jpg",
+        desc: "రైతులకు గిట్టుబాటు ధర, నాణ్యమైన విత్తనాలు, మరియు ఉచిత వ్యవసాయ సలహాలు అందించడంపై నిపుణులతో సమగ్ర చర్చ జరిగింది. రుణ విముక్తి కోసం ప్రత్యేక కార్యాచరణ ప్రకటించారు.",
+        fullArticle: [
+          "రైతులకు గిట్టుబాటు ధర, సకాలంలో నాణ్యమైన విత్తనాలు, ఎరువులు మరియు ఉచిత వ్యవసాయ సాంకేతిక సలహాలు అందించడంపై వ్యవసాయ నిపుణులు మరియు రైతు సంఘాల ప్రతినిధులతో సమగ్ర సమావేశం జరిగింది.",
+          "రైతులపై అప్పుల భారాన్ని తగ్గించేందుకు సమగ్ర రుణ విముక్తి విధానం మరియు వాతావరణ మార్పులను తట్టుకునే సరికొత్త పంటల విధానాన్ని అమలు చేయాలని తీర్మానించారు.",
+          "ప్రతి మండలంలో కోల్డ్ స్టోరేజ్ గోదాములు, వ్యవసాయ ఉత్పత్తులకు నేరుగా మార్కెటింగ్ నెట్‌వర్క్ ఏర్పాటు చేసి దళారుల దోపిడీకి అడ్డుకట్ట వేస్తామని పార్టీ స్పష్టం చేసింది."
+        ]
+      },
+      compact3: {
+        badge: "వార్తలు",
+        title: "మహిళా సాధికారతపై పార్టీ ప్రత్యేక చర్చ",
+        date: "12 సెప్టెంబర్ 2026",
+        loc: "వరంగల్",
+        img: "assets/images/policy/policy-women.jpg",
+        desc: "మహిళా సంఘాలకు వడ్డీ లేని రుణాలు, స్వయం ఉపాధి యూనిట్ల స్థాపన, మరియు భద్రతా చర్యలపై పార్టీ ప్రత్యేక మహిళా విభాగం విస్తృత సమావేశం నిర్వహించింది.",
+        fullArticle: [
+          "మహిళా స్వయం సహాయక సంఘాలకు వడ్డీ లేని రుణాలు, చిన్న తరహా పరిశ్రమల స్థాపనకు పూర్తి సహకారం, మరియు మార్కెట్ సదుపాయాలపై మహిళా విభాగం విస్తృత స్థాయి చర్చను నిర్వహించింది.",
+          "మహిళల భద్రత కోసం ప్రత్యేక హెల్ప్‌లైన్, ప్రతి నియోజకవర్గంలో ఉచిత న్యాయ సలహా కేంద్రాలు, మరియు మహిళా పారిశ్రామికవేత్తలకు 50% రాయితీతో యంత్ర పరికరాల పంపిణీ ప్రణాళికను పార్టీ ప్రకటించింది.",
+          "ఆర్థికంగా, సామాజికంగా మహిళలు బలపడినప్పుడే సమాజ సమగ్ర అభివృద్ధి సాధ్యమని పార్టీ మహిళా విభాగ ప్రతినిధులు పేర్కొన్నారు."
+        ]
+      },
+      compact4: {
+        badge: "సమావేశం",
+        title: "ప్రజా సేవ పార్టీ ముఖ్య నాయకుల రాష్ట్ర స్థాయి సమావేశం",
+        date: "10 సెప్టెంబర్ 2026",
+        loc: "హైదరాబాద్",
+        img: "assets/images/news/news-meeting.jpg",
+        desc: "పార్టీ భవిష్యత్ కార్యాచరణ, సభ్యత్వ నమోదు ప్రక్రియ, మరియు రాబోయే ఎన్నికల ప్రణాళికపై రాష్ట్ర స్థాయి నాయకులు విస్తృతంగా చర్చించారు.",
+        fullArticle: [
+          "పార్టీ భవిష్యత్ కార్యాచరణ, రాష్ట్రవ్యాప్త సభ్యత్వ నమోదు ప్రక్రియ, మరియు రాబోయే ఎన్నికల వ్యూహాలపై పార్టీ కేంద్ర కార్యాలయంలో ముఖ్య నాయకుల ఉన్నత స్థాయి సమావేశం జరిగింది.",
+          "బూత్ స్థాయి నుండి పార్టీని బలోపేతం చేయడానికి ప్రత్యేక కార్యచరణను ఖరారు చేశారు. ప్రజా సమస్యలపై క్షేత్రస్థాయి పోరాటాలకు జిల్లాల వారీగా సమన్వయ కమిటీలను నియమించారు.",
+          "పార్టీ సిద్ధాంతాలను, ప్రజా సంక్షేమ పథకాలను ప్రతి గడపకూ చేరవేసేందుకు డిజిటల్ మరియు క్షేత్రస్థాయి ప్రచార కార్యక్రమాలను వేగవంతం చేయాలని ఏకగ్రీవంగా తీర్మానించారు."
+        ]
+      },
+      latest1: {
+        badge: "వార్తలు",
+        title: "ప్రజలతో ప్రత్యక్ష సంభాషణ – నల్లగొండలో భారీ జనసమూహం",
+        date: "08 సెప్టెంబర్ 2026",
+        loc: "నల్లగొండ",
+        img: "assets/images/policy/policy-peoplesvoice.jpg",
+        desc: "నల్లగొండ బహిరంగ సభలో వేలాది మంది ప్రజలు పాల్గొన్నారు. ప్రజా సమస్యల తక్షణ పరిష్కారానికై ప్రత్యేక హెల్ప్‌లైన్ మరియు ప్రజా దర్బార్ నిర్వహణను పార్టీ అధ్యక్షుడు ప్రకటించారు."
+      },
+      latest2: {
+        badge: "కార్యక్రమాలు",
+        title: "యువత కోసం నైపుణ్యాభివృద్ధి శిబిరాలు",
+        date: "05 సెప్టెంబర్ 2026",
+        loc: "వరంగల్",
+        img: "assets/images/policy/policy-housing.jpg",
+        desc: "వరంగల్ పట్టణంలో నిరుద్యోగ యువతకు మౌలిక వసతులు, కోడింగ్, మరియు పారిశ్రామిక నైపుణ్యాలపై వారం రోజుల ప్రత్యక్ష శిక్షణా శిబిరం విజయవంతంగా ప్రారంభమైంది."
+      },
+      latest3: {
+        badge: "వార్తలు",
+        title: "మహిళా స్వయం సహాయక సంఘాలతో సమావేశం",
+        date: "02 సెప్టెంబర్ 2026",
+        loc: "కరీంనగర్",
+        img: "assets/images/gallery/gallery-4.jpg",
+        desc: "మహిళల ఆర్థిక స్వావలంబన కోసం కుటీర పరిశ్రమలు, మార్కెటింగ్ నెట్‌వర్క్ మరియు డిజిటల్ చెల్లింపులపై స్వయం సహాయక సంఘాల ప్రతినిధులతో అవగాహన సదస్సు జరిగింది."
+      },
+      latest4: {
+        badge: "ప్రకటనలు",
+        title: "విద్యారంగంలో నూతన కార్యక్రమాలు",
+        date: "22 ఆగస్టు 2026",
+        loc: "హైదరాబాద్",
+        img: "assets/images/policy/policy-edu.jpg",
+        desc: "ప్రభుత్వ పాఠశాలల్లో డిజిటల్ తరగతులు, ఉచిత పుస్తకాలు మరియు పేద విద్యార్థులకు ప్రత్యేక స్కాలర్‌షిప్ పథకాలను ప్రజాసేవ పార్టీ తన మేనిఫెస్టోలో పొందుపరిచింది."
+      },
+      latest5: {
+        badge: "వార్తలు",
+        title: "రైతుల సమస్యలపై ప్రజా సేవ పార్టీ ప్రతినిధుల భేటీ",
+        date: "18 ఆగస్టు 2026",
+        loc: "నిజామాబాద్",
+        img: "assets/images/Image_3.jpg",
+        desc: "పసుపు, చెరకు మరియు వరి రైతులకు సరైన మద్దతు ధర కోసం నిజామాబాద్ కలెక్టరేట్ ఎదుట శాంతియుత నిరసన అనంతరం వినతిపత్రం సమర్పించారు."
+      },
+      latest6: {
+        badge: "కార్యక్రమాలు",
+        title: "మహిళా సాధికారతకు నూతన పథకాలు",
+        date: "12 ఆగస్టు 2026",
+        loc: "ఆదిలాబాద్",
+        img: "assets/images/policy/policy-women.jpg",
+        desc: "మారుమూల గిరిజన ప్రాంతాల మహిళలకు ఆరోగ్యం, పౌష్టికాహారం మరియు జీవనోపాధి కల్పించే సమగ్ర కార్యాచరణను ఆదిలాబాద్‌లో విడుదల చేశారు."
+      },
+      event1: {
+        badge: "కార్యక్రమం",
+        title: "ప్రజా సందేశ సభ – వరంగల్",
+        date: "22 సెప్టెంబర్ 2026 | సా. 4:00 గంటలకు",
+        loc: "వరంగల్ పబ్లిక్ గార్డెన్స్",
+        img: "assets/images/Festive.webp",
+        desc: "రాష్ట్ర సమగ్ర ప్రగతి కోసం నిర్వహించే భారీ బహిరంగ సభ. ముఖ్య నాయకులు మరియు వేలాది మంది ప్రజలు పాల్గొంటారు. పార్టీ మేనిఫెస్టో ముసాయిదా విడుదల."
+      },
+      event2: {
+        badge: "శిబిరం",
+        title: "యువత నైపుణ్య శిబిరం – హైదరాబాద్",
+        date: "28 సెప్టెంబర్ 2026 | ఉ. 10:00 గంటలకు",
+        loc: "హైదరాబాద్ ఎగ్జిబిషన్ గ్రౌండ్స్",
+        img: "assets/images/Image_1.jpg",
+        desc: "సాంకేతిక నైపుణ్యాలు, స్టార్టప్ ఆలోచనలు, మరియు రెజ్యూమ్ బిల్డింగ్‌పై ఉచిత వర్క్‌షాప్. పారిశ్రామిక ప్రముఖుల ప్రత్యేక మార్గదర్శకత్వం."
+      },
+      event3: {
+        badge: "సదస్సు",
+        title: "రైతు సంక్షేమ సమావేశం – కరీంనగర్",
+        date: "05 అక్టోబర్ 2026 | ఉ. 11:00 గంటలకు",
+        loc: "కరీంనగర్ రైతు వేదిక",
+        img: "assets/images/policy/policy-farmer.jpg",
+        desc: "సేంద్రియ సేద్యం, నీటి యాజమాన్యం మరియు మార్కెట్ ధరల విశ్లేషణపై ప్రముఖ వ్యవసాయ శాస్త్రవేత్తలతో విస్తృత రైతు సదస్సు."
+      },
+      event4: {
+        badge: "సదస్సు",
+        title: "మహిళా సాధికారత సదస్సు – నిజామాబాద్",
+        date: "10 అక్టోబర్ 2026 | సా. 3:00 గంటలకు",
+        loc: "నిజామాబాద్ టౌన్ హాల్",
+        img: "assets/images/policy/policy-women.jpg",
+        desc: "మహిళా వ్యాపారవేత్తలు, స్వయం సహాయక సంఘాలు మరియు విద్యార్థినుల భాగస్వామ్యంతో రాష్ట్ర స్థాయి సాధికారత సదస్సు."
+      }
+    };
+
+    // Current active showcase story
+    let currentShowcaseStoryKey = 'featured';
+
+    // 1. Change Main News when a Right-Side Card is clicked
+    function selectShowcaseStory(storyKey) {
+      const story = STORIES_DB[storyKey];
+      if (!story) return;
+
+      currentShowcaseStoryKey = storyKey;
+
+      // Automatically collapse any previously expanded full article
+      const fullArticleEl = document.getElementById("featuredFullArticle");
+      const readMoreBtn = document.getElementById("featuredReadMoreBtn");
+      if (fullArticleEl) fullArticleEl.style.display = "none";
+      if (readMoreBtn) readMoreBtn.style.display = "inline-flex";
+
+      // Mark the active right-side card
+      document.querySelectorAll(".compact-news-card").forEach(card => {
+        if (card.getAttribute("data-story-key") === storyKey) {
+          card.classList.add("is-active-story");
+        } else {
+          card.classList.remove("is-active-story");
+        }
+      });
+
+      // Trigger smooth crossfade transition on the left card
+      const leftCard = document.getElementById("featuredBreakingCard");
+      if (leftCard) {
+        leftCard.classList.remove("is-animating");
+        void leftCard.offsetWidth; // Force DOM reflow
+        leftCard.classList.add("is-animating");
+      }
+
+      // Update image, badge, date, location, title, and description
+      const heroImg = document.getElementById("featuredHeroImg");
+      const badgeText = document.getElementById("featuredBadgeText");
+      const dateEl = document.getElementById("featuredDate");
+      const locEl = document.getElementById("featuredLoc");
+      const titleEl = document.getElementById("featuredTitle");
+      const descEl = document.getElementById("featuredDesc");
+
+      if (heroImg) {
+        heroImg.src = story.img;
+        heroImg.alt = story.title;
+      }
+      if (badgeText) badgeText.textContent = story.badge;
+      if (dateEl) dateEl.textContent = story.date;
+      if (locEl) locEl.textContent = story.loc;
+      if (titleEl) titleEl.textContent = story.title;
+      if (descEl) descEl.textContent = story.desc;
+
+      // When over reading and click another news card, smoothly scroll back to the start/top of the main card
+      if (leftCard) {
+        const rect = leftCard.getBoundingClientRect();
+        if (rect.top < 90 || rect.bottom < window.innerHeight) {
+          const targetY = window.pageYOffset + rect.top - 100;
+          window.scrollTo({
+            top: Math.max(0, targetY),
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    // 2. Expand Full Article Inline (No Popup, Stays in Left Column)
+    function expandShowcaseArticle() {
+      const story = STORIES_DB[currentShowcaseStoryKey] || STORIES_DB.featured;
+      const fullArticleEl = document.getElementById("featuredFullArticle");
+      const articleContentEl = document.getElementById("featuredArticleContent");
+      const readMoreBtn = document.getElementById("featuredReadMoreBtn");
+
+      if (!fullArticleEl || !articleContentEl) return;
+
+      // Populate article paragraphs
+      let html = '';
+      if (Array.isArray(story.fullArticle) && story.fullArticle.length > 0) {
+        story.fullArticle.forEach(para => {
+          html += `<p>${para}</p>`;
+        });
+      } else {
+        html = `<p>${story.desc}</p><p>ఈ అంశంపై ప్రజా సేవ పార్టీ సమగ్ర కార్యాచరణ ప్రణాళికను త్వరలోనే ప్రజల ముందుకు తేనుంది. ప్రజా సంక్షేమమే మా ఏకైక లక్ష్యం.</p>`;
+      }
+      articleContentEl.innerHTML = html;
+
+      // Expand downward inline
+      fullArticleEl.style.display = "block";
+      if (readMoreBtn) readMoreBtn.style.display = "none";
+    }
+
+    // 3. Show Less: Collapse Article and scroll to start
+    function collapseShowcaseArticle() {
+      const fullArticleEl = document.getElementById("featuredFullArticle");
+      const readMoreBtn = document.getElementById("featuredReadMoreBtn");
+
+      if (fullArticleEl) fullArticleEl.style.display = "none";
+      if (readMoreBtn) readMoreBtn.style.display = "inline-flex";
+
+      // Smoothly scroll back to the start of the card
+      const leftCard = document.getElementById("featuredBreakingCard");
+      if (leftCard) {
+        const rect = leftCard.getBoundingClientRect();
+        if (rect.top < 90) {
+          const targetY = window.pageYOffset + rect.top - 100;
+          window.scrollTo({
+            top: Math.max(0, targetY),
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    // Modal popup for latest news cards and upcoming events only
+    function openStoryModal(storyKey) {
+      const story = STORIES_DB[storyKey];
+      if (!story) return;
+
+      document.getElementById("modalBadge").textContent = story.badge;
+      document.getElementById("modalTitle").textContent = story.title;
+      document.getElementById("modalDate").innerHTML = `<i class="bi bi-calendar3 text-danger"></i> ${story.date}`;
+      document.getElementById("modalLoc").innerHTML = `<i class="bi bi-geo-alt-fill text-danger"></i> ${story.loc}`;
+      document.getElementById("modalDesc").textContent = story.desc;
+      document.getElementById("modalImg").src = story.img;
+      document.getElementById("modalImg").alt = story.title;
+
+      const modalEl = document.getElementById("newsDetailModal");
+      const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+      modal.show();
+    }
+
+    function shareArticle() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.getElementById("modalTitle").textContent,
+          text: document.getElementById("modalDesc").textContent.substring(0, 100) + '...',
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert("లింక్ కాపీ చేయబడింది!");
+      }
+    }
+
+    // Interactive Filtering Logic
+    let currentCategory = 'all';
+
+    function applyFilters() {
+      const searchVal = document.getElementById("newsSearchInput").value.toLowerCase().trim();
+      const locVal = document.getElementById("locFilterSelect").value;
+      const dateVal = document.getElementById("dateFilterSelect").value;
+
+      const cards = document.querySelectorAll("#latestNewsGrid .news-card-item");
+      cards.forEach(card => {
+        const cat = card.getAttribute("data-cat");
+        const loc = card.getAttribute("data-loc");
+        const title = card.querySelector(".news-card-title").textContent.toLowerCase();
+        const desc = card.querySelector(".news-card-desc").textContent.toLowerCase();
+
+        let matchesCat = (currentCategory === 'all') || (cat === currentCategory);
+        let matchesSearch = !searchVal || title.includes(searchVal) || desc.includes(searchVal);
+        let matchesLoc = (locVal === 'all') || (loc === locVal);
+        let matchesDate = true; // Flexible demonstration
+
+        if (matchesCat && matchesSearch && matchesLoc && matchesDate) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function resetFilters() {
+      currentCategory = 'all';
+      document.querySelectorAll(".filter-tab-pill").forEach(pill => {
+        pill.classList.toggle("is-active", pill.getAttribute("data-cat") === 'all');
+      });
+      document.getElementById("newsSearchInput").value = "";
+      document.getElementById("locFilterSelect").value = "all";
+      document.getElementById("dateFilterSelect").value = "all";
+      applyFilters();
+    }
+
+    function filterUpcomingEvents() {
+      const eventsEl = document.querySelector(".upcoming-events-wrap");
+      if (eventsEl) {
+        eventsEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Event Listeners
+    document.addEventListener("DOMContentLoaded", () => {
+      // Category Tab Clicks
+      document.querySelectorAll(".filter-tab-pill").forEach(pill => {
+        pill.addEventListener("click", () => {
+          document.querySelectorAll(".filter-tab-pill").forEach(p => p.classList.remove("is-active"));
+          pill.classList.add("is-active");
+          currentCategory = pill.getAttribute("data-cat");
+          applyFilters();
+        });
+      });
+
+      // Search Box Input
+      const searchInput = document.getElementById("newsSearchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", applyFilters);
+      }
+
+      // Location & Date Dropdown
+      const locSelect = document.getElementById("locFilterSelect");
+      if (locSelect) locSelect.addEventListener("change", applyFilters);
+
+      const dateSelect = document.getElementById("dateFilterSelect");
+      if (dateSelect) dateSelect.addEventListener("change", applyFilters);
+
+      // Pagination Click Simulation
+      document.querySelectorAll(".page-num-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".page-num-btn").forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        });
+      });
+    });
+  </script>
+
+  <!-- Global Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=5.0"></script>
+  <script src="assets/js/main.js?v=6.0"></script>
+</body>
+
+</html>

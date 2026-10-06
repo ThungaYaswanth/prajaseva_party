@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=34.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=35.0">
 </head>
 
 <body>
@@ -49,10 +49,10 @@
               <a class="nav-link" href="index.html#campaign-banner" data-i18n="navManifesto">మా దృక్పథం</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#public-issues" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+              <a class="nav-link" href="issues.html" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#news-events" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
+              <a class="nav-link" href="news.html" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
             </li>
           </ul>
 
@@ -115,7 +115,8 @@
         <!-- Leader Portrait with Soft Red/Yellow Splash (No Charminar) -->
         <div class="don-leader-stage">
           <div class="don-leader-splash" aria-hidden="true"></div>
-          <img src="assets/images/leader-namaste.png" alt="తల్లారం నర్సింలు - పార్టీ అధ్యక్షుడు" class="don-leader-img" loading="eager">
+          <img src="assets/images/leader-namaste.png" alt="తల్లారం నర్సింలు - పార్టీ అధ్యక్షుడు" class="don-leader-img"
+            loading="eager">
         </div>
 
         <!-- Red & Yellow Accent Bar -->
@@ -191,7 +192,8 @@
                   <span class="req-star">*</span>
                 </label>
                 <div class="don-input-wrap">
-                  <input type="text" id="donFullName" class="don-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి" data-i18n-placeholder="donPlcFullName" required autocomplete="name">
+                  <input type="text" id="donFullName" class="don-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి"
+                    data-i18n-placeholder="donPlcFullName" required autocomplete="name">
                   <div class="don-error-text" id="errDonName">దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.</div>
                 </div>
               </div>
@@ -204,8 +206,10 @@
                   <span class="req-star">*</span>
                 </label>
                 <div class="don-input-wrap">
-                  <input type="tel" id="donMobile" class="don-input" placeholder="10 అంకెల మొబైల్ నంబర్" data-i18n-placeholder="donPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
-                  <div class="don-error-text" id="errDonMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
+                  <input type="tel" id="donMobile" class="don-input" placeholder="10 అంకెల మొబైల్ నంబర్"
+                    data-i18n-placeholder="donPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
+                  <div class="don-error-text" id="errDonMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు
+                    చేయండి.</div>
                 </div>
               </div>
 
@@ -216,7 +220,8 @@
                   <span data-i18n="donLblEmail">ఈమెయిల్</span>
                 </label>
                 <div class="don-input-wrap">
-                  <input type="email" id="donEmail" class="don-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)" data-i18n-placeholder="donPlcEmail" autocomplete="email">
+                  <input type="email" id="donEmail" class="don-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)"
+                    data-i18n-placeholder="donPlcEmail" autocomplete="email">
                   <div class="don-error-text" id="errDonEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
                 </div>
               </div>
@@ -228,14 +233,17 @@
                   <span data-i18n="donLblLocation">పట్టణం / జిల్లా</span>
                 </label>
                 <div class="searchable-select" id="locationSelect">
-                  <div class="searchable-trigger" id="donLocationTrigger" tabindex="0" role="combobox" aria-expanded="false">
-                    <span class="searchable-trigger-text is-placeholder" id="locationTriggerText" data-i18n="donPlcLocation">పట్టణం / జిల్లా ఎంచుకోండి</span>
+                  <div class="searchable-trigger" id="donLocationTrigger" tabindex="0" role="combobox"
+                    aria-expanded="false">
+                    <span class="searchable-trigger-text is-placeholder" id="locationTriggerText"
+                      data-i18n="donPlcLocation">పట్టణం / జిల్లా ఎంచుకోండి</span>
                     <i class="bi bi-chevron-down searchable-trigger-icon"></i>
                   </div>
                   <div class="searchable-dropdown">
                     <div class="searchable-search-wrap">
                       <i class="bi bi-search"></i>
-                      <input type="text" class="searchable-search-input" placeholder="జిల్లా / పట్టణం శోధించండి..." autocomplete="off">
+                      <input type="text" class="searchable-search-input" placeholder="జిల్లా / పట్టణం శోధించండి..."
+                        autocomplete="off">
                     </div>
                     <div class="searchable-options-list" id="locationOptionsList" role="listbox">
                       <!-- Populated via script with Telangana districts -->
@@ -250,7 +258,7 @@
             <!-- 5. Donation Amount Section -->
             <div class="don-amount-section">
               <label class="don-form-label">
-                <i class="bi bi-currency-rupee text-danger"></i>
+                <i class="bi bi-currency-rupee"></i>
                 <span data-i18n="donLblAmount">విరాళం మొత్తం</span>
                 <span class="req-star">*</span>
               </label>
@@ -267,7 +275,9 @@
               <!-- Custom Amount Input Field -->
               <div class="don-custom-amount-wrap">
                 <span class="don-currency-prefix">₹</span>
-                <input type="number" id="customAmountInput" class="don-input don-custom-amount-input" value="1000" min="10" max="1000000" placeholder="మొత్తం నమోదు చేయండి (₹)" data-i18n-placeholder="donPlcAmount" required>
+                <input type="number" id="customAmountInput" class="don-input don-custom-amount-input" value="1000"
+                  min="10" max="1000000" placeholder="మొత్తం నమోదు చేయండి (₹)" data-i18n-placeholder="donPlcAmount"
+                  required>
               </div>
               <div class="don-error-text" id="errDonAmount">దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.</div>
             </div>
@@ -308,21 +318,26 @@
               <!-- UPI Panel -->
               <div class="don-subpanel active" id="subpanelUpi">
                 <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="small fw-bold text-dark"><i class="bi bi-phone"></i> ఏదైనా UPI యాప్ ద్వారా చెల్లించండి:</span>
+                  <span class="small fw-bold text-dark"><i class="bi bi-phone"></i> ఏదైనా UPI యాప్ ద్వారా
+                    చెల్లించండి:</span>
                   <span class="badge bg-success-subtle text-success border border-success-subtle">తక్షణ ధృవీకరణ</span>
                 </div>
                 <div class="row g-2 align-items-center">
                   <div class="col-sm-8">
-                    <input type="text" id="upiIdInput" class="don-input" placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)" style="height: 40px; font-size: 0.88rem;">
+                    <input type="text" id="upiIdInput" class="don-input"
+                      placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)"
+                      style="height: 40px; font-size: 0.88rem;">
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" id="btnShowQr" class="btn btn-outline-danger w-100 text-truncate" style="height: 40px; font-size: 0.84rem; border-radius: 8px;">
+                    <button type="button" id="btnShowQr" class="btn btn-outline-danger w-100 text-truncate"
+                      style="height: 40px; font-size: 0.84rem; border-radius: 8px;">
                       <i class="bi bi-qr-code"></i> QR కోడ్ చూపించు
                     </button>
                   </div>
                 </div>
                 <div id="inlineQrCodeBox" class="mt-2 text-center p-2 bg-white rounded border" style="display: none;">
-                  <img src="assets/images/qr-code.svg" alt="UPI QR" style="width: 140px; height: 140px;" class="mx-auto d-block">
+                  <img src="assets/images/qr-code.svg" alt="UPI QR" style="width: 140px; height: 140px;"
+                    class="mx-auto d-block">
                   <div class="small text-muted mt-1">GPay, PhonePe, Paytm తో స్కాన్ చేయండి</div>
                   <div class="badge bg-danger-subtle text-danger mt-1">prajasevaparty@upi</div>
                 </div>
@@ -333,13 +348,16 @@
                 <div class="small fw-bold text-dark mb-2"><i class="bi bi-shield-lock"></i> కార్డ్ వివరాలు:</div>
                 <div class="row g-2">
                   <div class="col-12">
-                    <input type="text" class="don-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19" style="height: 40px; font-size: 0.88rem;">
+                    <input type="text" class="don-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19"
+                      style="height: 40px; font-size: 0.88rem;">
                   </div>
                   <div class="col-6">
-                    <input type="text" class="don-input" placeholder="MM / YY" maxlength="5" style="height: 40px; font-size: 0.88rem;">
+                    <input type="text" class="don-input" placeholder="MM / YY" maxlength="5"
+                      style="height: 40px; font-size: 0.88rem;">
                   </div>
                   <div class="col-6">
-                    <input type="password" class="don-input" placeholder="CVV" maxlength="3" style="height: 40px; font-size: 0.88rem;">
+                    <input type="password" class="don-input" placeholder="CVV" maxlength="3"
+                      style="height: 40px; font-size: 0.88rem;">
                   </div>
                 </div>
               </div>
@@ -363,7 +381,8 @@
               <label class="don-checkbox-label">
                 <input type="checkbox" id="donConsentCheck" checked required>
                 <span>
-                  <span data-i18n="donConsentText">నా వివరాలు మరియు విరాళానికి సంబంధించిన సమాచారం సరైనవని నేను నిర్ధారిస్తున్నాను.</span>
+                  <span data-i18n="donConsentText">నా వివరాలు మరియు విరాళానికి సంబంధించిన సమాచారం సరైనవని నేను
+                    నిర్ధారిస్తున్నాను.</span>
                   <span class="req-star">*</span>
                 </span>
               </label>
@@ -449,48 +468,46 @@
   </main>
 
   <!-- ==========================================================================
-       Grand Site Footer (Exact Portal Footer - Untouched & Consistent)
+       Section 12 — Grand Modern Footer (Exact Homepage Footer)
        ========================================================================== -->
-  <footer class="site-footer" id="site-footer">
-
-    <!-- 1. HERO CALLOUT TIER -->
-    <div class="footer-hero-tier">
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
       <div class="main-container footer-hero-container">
-        <!-- Left: Party Brand Identity -->
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
         <div class="footer-hero-brand">
-          <div class="footer-brand-lockup">
-            <div class="footer-brand-logo-frame">
-              <img src="assets/images/party-emblem.png" alt="ప్రజా సేవ పార్టీ చిహ్నం" class="footer-brand-logo-img">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
             </div>
-            <div class="footer-brand-names">
-              <span class="footer-brand-telugu" data-i18n="footerBrandTelugu">ప్రజా సేవ పార్టీ</span>
-              <span class="footer-brand-english" data-i18n="footerBrandEnglish">PRAJA SEVA PARTY</span>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
             </div>
           </div>
-          <div class="footer-party-tagline" data-i18n="footerTagline">
-            "నిజాయితీ &bull; సేవ &bull; సమానత్వం"
-          </div>
-          <p class="footer-party-brief" data-i18n="footerBrief">
-            తెలంగాణ ప్రజల సంక్షేమం మరియు సమాన హక్కుల కోసం అంకితమైన రాజకీయ ఉద్యమం. ప్రతి పౌరుడికి గౌరవప్రదమైన జీవితం,
-            ఉపాధి మరియు ఉచిత విద్య, నాణ్యమైన వైద్యాన్ని అందించడమే మా సంకల్పం.
-          </p>
-          <!-- Social Icons Row -->
+          <!-- Social Media Pills -->
           <div class="footer-social-row" aria-label="Social Media Links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
               aria-label="Facebook">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
               </svg>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
-              aria-label="X (formerly Twitter)">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-ig"
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
               aria-label="Instagram">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path
@@ -544,8 +561,8 @@
             <ul class="footer-links-list">
               <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
               <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
-              <li><a href="index.html#leadership-team"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
-              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#about-party"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
               <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
             </ul>
           </div>
@@ -561,7 +578,6 @@
               <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
               <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
               <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
-              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
               <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
             </ul>
           </div>
@@ -574,10 +590,10 @@
               </span>
             </div>
             <ul class="footer-links-list">
-              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDocs">పత్రాలు</span></a></li>
-              <li><a href="index.html#news-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
-              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
-              <li><a href="index.html#public-issues"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ అవకాశాలు</span></a></li>
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
               <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
             </ul>
           </div>
@@ -642,6 +658,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

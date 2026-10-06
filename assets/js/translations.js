@@ -49,6 +49,7 @@ const translations = {
     hero2Quote: "మన యువతకు ఇక్కడే ఉద్యోగాలు – మన రైతులకు సంపూర్ణ భరోసా.",
     hero2CtaMembership: "సభ్యత్వం పొందండి",
     hero2CtaVision: "మా దృక్పథం",
+    heroCtaVision: "మా దృక్పథం",
 
     // Quick Navigation Strip
     quickParty: "మా పార్టీ",
@@ -95,7 +96,7 @@ const translations = {
     aboutNavLeadership: "నాయకత్వం",
     aboutNavSymbol: "పార్టీ చిహ్నం",
     aboutNavStats: "సంఖ్యల్లో ప్రగతి",
-    
+
     aboutStoryBadge: "మన ఆవిర్భావం",
     aboutStoryTitle: "ప్రజల కష్టాల నుంచే పుట్టిన ప్రజాసేవ పార్టీ",
     aboutStoryP1: "సామాన్య ప్రజల బాధలు, పేదరికం, నిరుద్యోగం, నాణ్యమైన విద్య మరియు వైద్యం అందక అవస్థలు పడుతున్న కుటుంబాల ఆవేదన నుంచి ప్రజాసేవ పార్టీ ఆవిర్భవించింది. అధికారం కోసం కాకుండా, ప్రజా సమస్యల పరిష్కారమే పరమావధిగా ఈ ఉద్యమం ప్రారంభమైంది.",
@@ -106,17 +107,17 @@ const translations = {
     aboutStoryCommit3: "ప్రతి పౌరుడికి సూపర్ స్పెషాలిటీ ఉచిత వైద్య సేవలు",
     aboutStoryCommit4: "తెలంగాణ ప్రైవేట్ రంగంలో స్థానిక యువతకు 70% రిజర్వేషన్లు",
     aboutStoryCommit5: "రైతులకు సాగునీరు, గిట్టుబాటు ధర, పూర్తి రుణ భరోసా",
-    
+
     aboutVisionBadge: "మా దిశానిర్దేశం",
     aboutVisionCardTitle: "మా దృక్పథం (Our Vision)",
     aboutVisionCardDesc: "ఒక నవ తెలంగాణ సమాజం — ఇక్కడ ఏ ఒక్క బిడ్డ ఆర్థిక స్తోమత లేక చదువుకు దూరం కాకూడదు, ఏ ఒక్క కుటుంబం అనారోగ్యం పాలై అప్పుల పాలు కాకూడదు. స్థానిక యువత తమ సొంత గడ్డపైనే గౌరవప్రదమైన ఉద్యోగాలు సాధించాలి, రైతన్న దేశానికి గర్వకారణంగా తలెత్తుకుని జీవించాలి.",
     aboutMissionCardTitle: "మా లక్ష్యం (Our Mission)",
     aboutMissionCardDesc: "రాజకీయాల్లో నైతికత, ప్రజాస్వామ్య విలువల పునరుద్ధరణ. అవినీతికి తావులేని ప్రజాపాలన అందించడం. గడపగడపకూ సంక్షేమ పథకాలను పారదర్శకంగా చేర్చడం, మహిళా సాధికారతకు ఆర్థిక-సామాజిక చేయూతనివ్వడం, గ్రామీణ-పట్టణ ప్రాంతాల సమతుల్య అభివృద్ధి సాధించడం.",
-    
+
     aboutPillarsBadge: "మా పునాదులు",
     aboutPillarsTitle: "ప్రజాసేవ పార్టీ 6 ప్రధాన సిద్ధాంతాలు",
     aboutPillarsSub: "ఈ మౌలిక సిద్ధాంతాలే మా ప్రతి అడుగుకు, నిర్ణయానికి మార్గదర్శకాలు.",
-    
+
     aboutPillar1Title: "ప్రజా సంక్షేమం & సామాజిక న్యాయం",
     aboutPillar1Desc: "సమాజంలో పేద, వెనుకబడిన వర్గాలకు సంపూర్ణ ప్రాధాన్యత. కుల, మత వివక్ష లేని సమగ్ర సమాజ నిర్మాణం.",
     aboutPillar2Title: "ఉచిత నాణ్యమైన విద్య",
@@ -129,7 +130,7 @@ const translations = {
     aboutPillar5Desc: "సాగునీరు, ఉచిత విద్యుత్, సకాలంలో ఎరువులు, గిట్టుబాటు ధరలు కల్పిస్తూ రైతును రుణ విముక్తుడిని చేయడం.",
     aboutPillar6Title: "అవినీతి రహిత పారదర్శక పాలన",
     aboutPillar6Desc: "ప్రభుత్వ కార్యాలయాల్లో లంచాలు లేని సేవలు, ప్రజా సమస్యల సత్వర పరిష్కారానికి సింగిల్ విండో వ్యవస్థ.",
-    
+
     aboutSymbolBadge: "గుర్తింపు & ఆదర్శాలు",
     aboutSymbolTitle: "పార్టీ చిహ్నం & రంగుల ప్రాముఖ్యత",
     aboutSymbolSub: "ప్రజాసేవ పార్టీ జెండా మరియు చిహ్నం ప్రజల ఆశయాలకు ప్రతీకలు.",
@@ -139,16 +140,16 @@ const translations = {
     aboutColorRedDesc: "ప్రజల హక్కుల పరిరక్షణకై సాగే రాజీలేని పోరాటం, త్యాగం, నవ చైతన్యం మరియు సామాజిక మార్పుకు చిహ్నం.",
     aboutColorGoldTitle: "పసుపు రంగు (Golden Yellow)",
     aboutColorGoldDesc: "ప్రజల సుభిక్షమైన భవిత, వ్యవసాయ సమృద్ధి, శాంతి, శ్రేయస్సు, గౌరవం మరియు ఉజ్వల నవోదయానికి నిదర్శనం.",
-    
+
     aboutLeaderBadge: "ప్రజా నాయకత్వం",
     aboutLeaderTitle: "ప్రజలతో మమేకమైన నాయకత్వం",
     aboutLeaderQuote: "\"రాజకీయం అంటే అధికారం కాదు, అట్టడుగు ప్రజలకు అండగా నిలబడే పవిత్రమైన ప్రజాసేవ.\"",
     aboutLeaderQuoteAuthor: "– తల్లారం నర్సింలు, పార్టీ అధ్యక్షుడు",
     btnViewFullTeam: "పూర్తి నాయకత్వ బృందాన్ని చూడండి",
-    
+
     aboutStatsBadge: "క్షేత్రస్థాయి ప్రభావం",
     aboutStatsTitle: "సంఖ్యల్లో ప్రజాసేవ పార్టీ బలం",
-    
+
     aboutCtaBadge: "కలిసి నడుద్దాం",
     aboutCtaTitle: "ప్రజాసేవలో మీరూ భాగస్వాములు కండి",
     aboutCtaSubtitle: "ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి. తెలంగాణ ప్రగతి, ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.",
@@ -254,8 +255,13 @@ const translations = {
 
     // Section 4: 10 Public Issues
     issuesBadge: "ప్రజల అభివృద్ధే మా లక్ష్యం",
+    issuesBannerPart1: "ప్రజల అభివృద్ధే",
+    issuesBannerPart2: "మా లక్ష్యం",
     partyNameOnly: "ప్రజాసేవ పార్టీ",
     issuesTitlePart2: "10 ప్రధాన ప్రజా అంశాలు",
+    issuesMobileSelectLabel: "ప్రజా అంశాన్ని ఎంచుకోండి:",
+    targetHighlightTitle: "మా లక్ష్యం",
+    keyInitiativesHeading: "ప్రధాన కార్యక్రమాలు",
     sectionIssuesTitle: "ప్రజాసేవ పార్టీ – 10 ప్రధాన ప్రజా అంశాలు",
     sectionIssuesSubtitle: "ప్రతి పౌరుడి సంక్షేమమే మా లక్ష్యం, సమాన, సమగ్ర, సుస్థిర అభివృద్ధి కోసం మా కట్టుబాటు.",
     btnViewAllIssues: "అన్ని అంశాలు చూడండి",
@@ -475,7 +481,31 @@ const translations = {
     modalMemberSubmit: "సభ్యత్వాన్ని నిర్ధారించండి",
     modalClose: "మూసివేయి",
     searchTitle: "వెబ్‌సైట్‌లో శోధించండి",
-    searchNoResults: "ఫలితాలు కనుగొనబడలేదు"
+    searchNoResults: "ఫలితాలు కనుగొనబడలేదు",
+
+    // News & Events Page (వార్తలు & కార్యక్రమాలు)
+    newsHeroTitle1: "వార్తలు &",
+    newsHeroTitle2: "కార్యక్రమాలు",
+    newsHeroSub: "ప్రజలతో కలసి, ప్రజల కోసం – మా ప్రతి అడుగు, మీ కోసం..",
+    newsBreakingBadge: "ప్రధాన వార్త",
+    newsFilterAll: "అన్నీ",
+    newsFilterNews: "వార్తలు",
+    newsFilterEvents: "కార్యక్రమాలు",
+    newsFilterAnnouncements: "ప్రకటనలు",
+    newsSearchPlc: "వార్తలు, కార్యక్రమాలు వెతకండి...",
+    newsDateAll: "తేదీ ఎంచుకోండి",
+    newsLocAll: "అన్ని ప్రాంతాలు",
+    newsLatestHead: "తాజా వార్తలు",
+    newsViewAll: "అన్నీ వార్తలు",
+    newsReadMore: "మరింత చదవండి",
+    newsUpcomingHead: "రాబోయే కార్యక్రమాలు",
+    newsAllEvents: "అన్నీ కార్యక్రమాలు చూడండి",
+    newsEventDetails: "వివరాలు చూడండి",
+    newsShowLess: "తక్కువగా చూపించు",
+    memBannerTitle1: "పార్టీలో",
+    memBannerTitle2: "సభ్యత్వం పొందండి",
+    issuesHeroTitle1: "ప్రజా సమస్యలకు",
+    issuesHeroTitle2: "10 ప్రధాన అంశాలు"
   },
 
   en: {
@@ -524,6 +554,7 @@ const translations = {
     hero2Quote: "Jobs for our youth at home – Guaranteed prosperity for every farmer.",
     hero2CtaMembership: "Join Membership",
     hero2CtaVision: "Our Vision",
+    heroCtaVision: "Our Vision",
 
     // Quick Navigation Strip
     quickParty: "Our Party",
@@ -570,7 +601,7 @@ const translations = {
     aboutNavLeadership: "Leadership",
     aboutNavSymbol: "Party Emblem",
     aboutNavStats: "Impact & Reach",
-    
+
     aboutStoryBadge: "Our Journey",
     aboutStoryTitle: "Born from the Grassroots Struggles of the People",
     aboutStoryP1: "Prajaseva Party was born out of the lived realities, hardships, poverty, unemployment, and acute lack of quality education and healthcare faced by common families. It was founded not for political power, but with the unyielding purpose of resolving public grievances.",
@@ -581,17 +612,17 @@ const translations = {
     aboutStoryCommit3: "Free super-speciality healthcare services for every citizen",
     aboutStoryCommit4: "70% job reservation for local youth in Telangana's private sector",
     aboutStoryCommit5: "Complete farmer support, irrigation, fair prices & debt freedom",
-    
+
     aboutVisionBadge: "Our Roadmap",
     aboutVisionCardTitle: "Our Vision (మా దృక్పథం)",
     aboutVisionCardDesc: "A progressive Telangana where no child is deprived of education due to financial hardship, no family falls into poverty due to medical emergencies, local youth secure respectable jobs in their own state, and farmers live with dignity and pride.",
     aboutMissionCardTitle: "Our Mission (మా లక్ష్యం)",
     aboutMissionCardDesc: "Restoring morality and democratic principles in politics. Delivering zero-corruption governance, taking welfare schemes to the doorstep of every eligible family, empowering women socio-economically, and bridging rural-urban disparities.",
-    
+
     aboutPillarsBadge: "Our Foundations",
     aboutPillarsTitle: "6 Guiding Pillars of Prajaseva Party",
     aboutPillarsSub: "These core principles guide every policy, decision, and step of our party.",
-    
+
     aboutPillar1Title: "Public Welfare & Social Justice",
     aboutPillar1Desc: "Absolute priority for the poor and marginalized. Building an inclusive society free from caste, religion, and regional discrimination.",
     aboutPillar2Title: "Free Quality Education",
@@ -604,7 +635,7 @@ const translations = {
     aboutPillar5Desc: "Assured irrigation water, reliable power, timely quality seeds, remunerative crop pricing, and liberation from chronic debt cycles.",
     aboutPillar6Title: "Zero-Corruption Transparent Governance",
     aboutPillar6Desc: "Eliminating bribery and middlemen across government departments through digital citizen services and strict accountability.",
-    
+
     aboutSymbolBadge: "Identity & Values",
     aboutSymbolTitle: "Significance of Emblem & Colors",
     aboutSymbolSub: "The Prajaseva Party emblem and flag embody the highest aspirations of the people.",
@@ -614,16 +645,16 @@ const translations = {
     aboutColorRedDesc: "Symbol of resolute resistance for citizen rights, selfless sacrifice, youth awakening, and profound social transformation.",
     aboutColorGoldTitle: "Golden Yellow",
     aboutColorGoldDesc: "Emblem of prosperous tomorrow, agricultural abundance, communal harmony, well-being, and a bright new dawn for Telangana.",
-    
+
     aboutLeaderBadge: "Public Leadership",
     aboutLeaderTitle: "Leadership Rooted Among the People",
     aboutLeaderQuote: "\"Politics is not a pursuit of power, but a sacred responsibility to stand shoulder-to-shoulder with the common citizen.\"",
     aboutLeaderQuoteAuthor: "– Thallaram Narsimhulu, Party President",
     btnViewFullTeam: "View Full Leadership Team",
-    
+
     aboutStatsBadge: "Ground Impact",
     aboutStatsTitle: "Prajaseva Party Strength in Numbers",
-    
+
     aboutCtaBadge: "Walk With Us",
     aboutCtaTitle: "Be a Part of the People's Movement",
     aboutCtaSubtitle: "Join hands in the collective pursuit of people's welfare, equality, and prosperity across Telangana.",
@@ -729,8 +760,13 @@ const translations = {
 
     // Section 4: 10 Public Issues
     issuesBadge: "Public Progress is Our Mission",
+    issuesBannerPart1: "People's Progress is",
+    issuesBannerPart2: "Our Mission",
     partyNameOnly: "Prajaseva Party",
     issuesTitlePart2: "10 Key Public Issues",
+    issuesMobileSelectLabel: "Select a Public Issue:",
+    targetHighlightTitle: "Our Mission",
+    keyInitiativesHeading: "Key Initiatives",
     sectionIssuesTitle: "Prajaseva Party – 10 Key Public Issues",
     sectionIssuesSubtitle: "Every citizen's welfare is our goal, committed to equal, comprehensive, and sustainable development.",
     btnViewAllIssues: "View All 10 Issues",
@@ -950,6 +986,30 @@ const translations = {
     modalMemberSubmit: "Confirm Membership",
     modalClose: "Close",
     searchTitle: "Search Website",
-    searchNoResults: "No matching results found"
+    searchNoResults: "No matching results found",
+
+    // News & Events Page (వార్తలు & కార్యక్రమాలు)
+    newsHeroTitle1: "News &",
+    newsHeroTitle2: "Events",
+    newsHeroSub: "Together with the people, for the people – our every step, for you..",
+    newsBreakingBadge: "Breaking News",
+    newsFilterAll: "All",
+    newsFilterNews: "News",
+    newsFilterEvents: "Events",
+    newsFilterAnnouncements: "Announcements",
+    newsSearchPlc: "Search news, events...",
+    newsDateAll: "Select Date",
+    newsLocAll: "All Locations",
+    newsLatestHead: "Latest News",
+    newsViewAll: "All News",
+    newsReadMore: "Read More",
+    newsUpcomingHead: "Upcoming Events",
+    newsAllEvents: "View All Events",
+    newsEventDetails: "View Details",
+    newsShowLess: "Show Less",
+    memBannerTitle1: "Join the Party",
+    memBannerTitle2: "Get Membership",
+    issuesHeroTitle1: "For Public Issues",
+    issuesHeroTitle2: "10 Key Promises"
   }
 };

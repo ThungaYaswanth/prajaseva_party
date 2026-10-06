@@ -274,6 +274,13 @@ function applyLanguage(lang) {
   if (typeof updateMapTooltipLanguage === 'function') {
     updateMapTooltipLanguage(lang);
   }
+
+  // Update issues page language if present
+  if (typeof updateIssuesPageLanguage === 'function') {
+    updateIssuesPageLanguage(lang);
+  }
+
+  document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
 /* ==========================================================================
