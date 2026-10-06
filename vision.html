@@ -99,12 +99,20 @@
           </a>
 
           <!-- Mobile Hamburger / Close Toggler -->
-          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button"
-            id="mobileMenuToggleBtn" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="bar top-bar"></span>
-            <span class="bar mid-bar"></span>
-            <span class="bar bot-bar"></span>
+          <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </button>
         </div>
       </nav>
@@ -400,108 +408,149 @@
 
     <!-- ==========================================================================
          Section 5 — మా దృష్టి – ఆచరణలో / Our Vision in Action
-         Action Quote, Map Outline with Pins, and 5 Key Focus Pillars
+         Action Quote, Large Telangana Map with Teardrop Pins & Connectors, 5 Key Pillars
          ========================================================================== -->
     <section class="vm-section" id="vision-in-action" aria-label="మా దృష్టి – ఆచరణలో (Our Vision in Action)">
       <div class="main-container">
         <div class="vm-action-layout">
-          <!-- Left Column: Title, Quote Card & Discover Goals Button -->
+          <!-- Left Column: Title, Accent Line, Quote Card & Discover Goals Button -->
           <div class="vm-action-left">
             <div class="vm-action-title-group">
               <h2 class="vm-action-main-title" data-i18n="actionSecTitle">మా దృష్టి – ఆచరణలో</h2>
               <span class="vm-action-sub-title" data-i18n="actionSecSub">Our Vision in Action</span>
+              <div class="vm-action-red-line" aria-hidden="true"></div>
             </div>
 
             <div class="vm-action-quote-box">
               <div class="vm-action-quote-mark" aria-hidden="true">“</div>
               <p class="vm-action-quote-text" data-i18n="actionQuote">
-                ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, మళ్లీ తెలంగాణ కోసం నిరంతరం కృషి.
+                ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, సుస్థిర తెలంగాణ కోసం నిరంతరం కృషి.
               </p>
             </div>
 
-            <a href="issues.html" class="vm-btn-gold-action" title="మా 10 ప్రధాన లక్ష్యాలను తెలుసుకోండి">
+            <a href="issues.html" class="vm-btn-gold-action" title="మా లక్ష్యాలను తెలుసుకోండి">
               <span data-i18n="actionBtnCta">మా లక్ష్యాలను తెలుసుకోండి</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
 
-          <!-- Center Column: Telangana Map Silhouette with Animated Pin Indicators -->
+          <!-- Center Column: Larger Telangana Map with Teardrop Drop Pins & Curved Connectors -->
           <div class="vm-action-center-map">
             <div class="vm-action-map-svg-wrap">
               <!-- Crisp Telangana State Vector Silhouette -->
               <svg class="vm-action-map-svg" viewBox="338 573 145 138" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="tgGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FEF3C7" />
-                    <stop offset="50%" stop-color="#FDE68A" />
-                    <stop offset="100%" stop-color="#FCD34D" />
+                    <stop offset="0%" stop-color="#FFF2D6" />
+                    <stop offset="50%" stop-color="#FFE099" />
+                    <stop offset="100%" stop-color="#FFCE66" />
                   </linearGradient>
+                  <!-- Soft Radial Glow from Center -->
+                  <radialGradient id="tgCenterRays" cx="400" cy="642" r="50" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="#FFCE66" stop-opacity="0" />
+                  </radialGradient>
                 </defs>
-                <!-- Telangana Path from Master Map Data -->
+                <!-- Telangana Master Vector Boundary -->
                 <path d="M355.2 698.3l0.1-1.2-0.2-0.3 0.1-0.8-0.2-0.1-0.3-0.7 0.3-1.2-0.1-0.7-0.3-0.6-0.1-1.2 0.3-0.8 0-0.7-0.2-1.1 0.4-0.5 0.6 0 0.5-0.5 0.6-0.3 0.4 0.3 0.3-0.8-0.2-0.4-1.3-0.7-0.5-0.5-1-0.2-1.2 0.1-0.7 0.3-1-0.5-0.6 0.1-0.6-0.3-1.3-0.5-0.5-0.7-0.4-1.1 1.1-0.2 0.2-0.5 0.7 0.3 1.2-0.1 0-0.5 0.4-0.2 0.9-0.2 0-0.8-0.4-0.1-0.2-0.5 0.8 0 0.4-0.4 0.5 0 0-0.8 0.4-1-0.2-0.2-0.8 0.3-0.5-0.7 1.4-0.4 0.1-0.9-1.3-0.1 0.4-1.4 0-0.5 0.8 0.1 0.2-0.6-0.5-0.8 0.1-0.6-0.1-1.8 0.3-0.2-0.1-1.1 0.5-0.4-0.1-0.6 0.6-0.5-0.2-0.8-0.4-0.8 0-0.4-0.5-0.5 0.1-0.3-1.6-0.5-0.8-0.5-0.4-0.6 0.3-0.9 0.6 0 0-0.6-0.3-0.2 2-1.6-0.6-0.4 0.4-0.7 0.2-0.9-0.1-0.7 0.7 0 0.2 0.4 1-0.2 0-0.7 0.3-0.3-0.6-0.4 0-0.5 0.6-0.4 1.1 0.4 0-0.7 0.7 0.3 0.4 0 0-0.8 0.6-0.1 0.4-0.2 1 0.2 0.1-0.7-0.9-0.7-1 0-0.8-0.3-0.1-0.7-1 0.2-0.6-0.7-0.7 1-0.3-0.8-0.5 0.1-0.3-0.4-0.6-0.1 0-0.6 0.3-0.8-0.2-0.8 0.4-1.2 0.8-0.2 0.2-0.3 0.9-0.3 0.3 0.1 0.6-0.6-0.2-0.5-0.8-0.5-0.6-0.1 0.2-0.5 0.4-0.3 0-0.4 0.8-0.1 0.3-0.4 0.1-0.7 0.7-0.4-0.2-0.8 0.8 0.2 0.1-1.2 0.7-0.1 0.2-0.6-0.2-0.7-0.4 0-0.7-0.7-1.4-0.5-0.2-0.6 0.6-0.6 0.8-0.2 0.1-0.5-0.2-0.8 0.1-0.7-0.5-0.3-0.3-0.8 0.5-0.8-0.4-0.7 0.8-1-0.8-0.4-0.6 0 0.5-0.5-0.4-0.7-0.7-0.2-0.2-0.7 0.8-0.7 0.1-0.9-0.8-0.2 0.1-0.4 0.9 0.1 0.6-0.2-0.3-0.7 0.1-0.5 0.7 0.3 0-0.5-0.4-0.3 0.3-1.3 1.2-0.2 0.1 0.5 0.3 0.3 1.5-0.8 0.5 0.1 0.5-1.1-0.1-0.9-0.4-0.7 0.1-0.9 0.5-0.4 1-0.1 0.4-0.7 0-0.4 0.6-1.1 0.4-1.1 1.9-0.7 0.9 0.3 0.1-0.6-0.5-0.5-0.7-0.3-0.4-0.5-0.1-0.6-0.7 0-0.5-0.1 0.4-1.2-1.1 0.1 0.1-1-1.4 0 0-1.1-0.2-0.2 0.1-1 1 0.3-0.1-0.6 0.1-0.8 0.5-0.1 0.3 0.5 0.4 0 0.1-0.8-0.3-0.5 0.4-0.7 0.1-0.6-0.2-0.3 0.6-1.7 0.5-0.4 0.4 0.1 0-0.6-1.1-0.2 0-0.5 1.4-0.5 0.4-0.4 0.6-0.3 0.8 0.6 0.2 0.4 0.7 0.2 0.5 0.6 0.5 0.3 0 0.6 0.3 0.3 0.7-0.5 0.4 0.3 0.8 0 0.6 0.4 0.9-0.3 0-1.1 0.3-0.7 0.1-0.8-0.5-0.6 0.3-1.3 1-1.1 0.7 0.1 0.6-0.7 0.7 0.2 0.4-0.5-0.1-0.6-0.3-0.5-0.1-1.6 0.4-0.4 0-0.9-0.6-1.5-0.5-0.2 0.4-0.8 0.9 0 0.1-0.4 0.7-0.3 0-0.6 0.4-0.6 0.2-0.8-0.2-0.7-0.6-0.2 0-0.8-1.2-0.3 0.4-1.8 0.7 0.9 1.3 0.1 0.1 0.8 0.3 0.4 0.9 0.4 1.3 0.2 0.4 0.7 0.9-0.8 1.6 0.2 0.5-0.1 0.5 0.2 2.2 0.7 0.4 0.6 0.6-0.4 0.7 0.1 0.6-0.1 0.6 0.6 1.1 0 0.3 0.8 0.2 1-0.2 1.2 0.9 0 0.7-0.4 0.7 0.1 0.7 0.5-0.1 0.9 0.4 0.8 0 0.3-0.7 0.5 0 0.3 0.7 0 0.4-0.3 0.7 0.6 0.9-0.1 0.3 0.4 1.1 0.1 0.1 0.4 0.9 0.4 0.8 0.9 0.6 0.3 0.8-0.2-0.3-0.6 0.2-0.7 0.6-0.5 0.1-0.9 0.2-0.5-0.3-1 0.5 0 1.3 0.6 0.3 0.7 0.7-0.2 0.8 0 0.1 0.3 1.1 0.8 0.8 0 0.4 0.5 0.4 0.6 1.1-0.6 0.1-0.7 0.7-0.2 0.2 0.7 0.5 0.4 0.7 0.3 0.2-0.2 0.2-0.9 0.4-0.8 0.5-0.3 1.1 0 0.9-0.2 0.8-0.6 1 0.2 0.4 0.5 0.6 0.3 0.4 0.9 1.3 1.1 0.9 0.2 1 1 0 0.5 0.7 1.2-0.2 1.4-0.2 0.5 0.1 1.1-0.4 0.4-0.7 1.6 0 0.7 0.6 0.8-1 1-1 0.6-0.3 0.5 0.1 1.3-0.1 0.5 0.3 0.2 0.6-0.3 0.9 0.1 0.3 0.6-0.1 1.3 0.3 1.1-0.1 2.3-0.4 0.6-0.8 0.2 0.6 1 0.4 0.3 2.2 0.6 0.2 0.4 0.4 0.1 0.3 0.8 1 0.5 0.7 0.7 1.4-0.5 0.3 0.5 0.5 0.1 0.4-0.6 1.2-0.2 0.6-0.4 0.8 0.9 0.6 1.8 0.6 1.1 0.7-0.6 0.4 0.4 0.6-0.4 1.3-0.6 1 0 0.7 0.3 0.5 0.9 1.9 1.2 0.4 0.5 0.5 0.2 0.1 0.7 0.4 0.7 0.8 0.5 0.4 0.6-0.1 0.4 0.6 0.4 0.3 1.3 0.6 1.2 0 0.5 0.6 0.7 0.4 1-1.4 0.7 0.1 1.3 0.7 0.3 1-0.1 0.6-0.8-0.1-0.9 0.2-0.3 1 0.3 0.2 0.5-0.5 0.2 0.2 1.7 0.2 0.3 1-0.1 1.2-0.6 0.3-0.3 0.5-0.1 0 0.7-0.6 0.6-0.1 1 0.5 1.3-0.1 0.4 0.3 1.1 0.3 2 0.3 0.2 0.3 2.2 0.2 0.7 0.5 0.7 0.7 0.2 0.5-0.1 0.6-0.9 1.7-1 0.9 0.2 1.7 1 1.7 0 1.9 0.1 0.7 0.1 0.4-0.5 0.3 0.2 0.9-0.2 0.3 0.5 2-0.3 0.6-0.4 1 0.4 0.8-0.7 0.1-0.5 0.5-0.6 0.7-0.2 0.4 0.7 1.5-1 0.6 0.7 0.4 0.8-0.3 0.3-0.5 0.1-0.3 0.3-0.7 0-0.7 0.5-0.1 0.5-0.7 0.5-1.4 0.1-0.4 0.6-0.7 0.3-0.3 0.4 0 0.9-0.5 0.6-0.5 1-0.6 0.6-0.3 0.6 0.6 0.5-0.6 0.9-0.2 2.6-1.5 1.9-0.5 0.3-0.2 0.3-0.8 0.2-1-0.4-0.2-0.5-0.5-0.1-0.9 1.5-0.6 0.5-1.4 0-0.7-0.2-0.5 0.6-0.1 1.1 0.3 0.4-0.5 0.6-0.5 0-1.6 0.6-0.6 0.2-0.6 0-0.4 0.5-1.2 0.2-0.8-0.2-0.6-0.5-0.7 0.1 0.2 0.9 0 0.7-0.7 0.1-0.5-0.1-0.1 0.6-0.3 0.4 0.2 0.4-0.2 0.8 0.1 0.5-0.7 0.7-0.3-0.3-2.1-0.5-0.6-0.3-1.1-0.1-1 0.4-0.3-0.5 0.5-0.3-0.7-0.8-0.9-0.2-1-0.6-0.3 0.4-1.4 0.7-0.3 0.5-0.1 0.8-0.3 0.5-0.5 0-0.2 0.6-0.7-0.2-0.6-0.9-0.1-0.6-0.8 0.6 0.6 1.2-0.5 0.5-0.3 0.7 1.1 0.4 1.2 0.4 0.9 0.6 0.4-0.7 0.8 0.3 0.3-0.4 1.1 0.7 0.4 0-0.1 0.7 0.1 0.8-0.6 0.1 0 1-0.2 0.3 0.8 0.5 0.3 0.6-0.9 0.7-2-0.4-0.9-0.4-0.1-0.7-0.9-0.4-0.1-0.4-0.5-0.2 0 0.5-0.7 0.6-0.4-1.3-0.7 0-0.4-0.4-0.2-1.2-0.3-1.3-1.1-1.5-0.5 0.2-0.7-0.5-0.6 0.1 0-0.7-0.3-0.1-0.5 0.6-0.6 0.6-0.3 0.5-0.7 0.1-0.5-0.2-0.1 0.7-1.1 0-0.2 0.8-0.8 0.8-0.5 1.3 0.6 0.3 0.6 0 0.2 0.8 0.8 0.3-0.5 1.2-0.1 0.8-0.9 0.9-0.7 0.6-0.5 0.9-0.8 0.8-0.5 0-0.6-0.2-0.3-0.3-0.5-1.1-0.3-0.3-1.4 0.2-0.8-0.9-0.2-0.2-0.7 0.3-0.7 0.8-1.1 0-0.8 0.5-0.2 0.4-1.3-0.1-0.7 0.6-1 0.3-1.1 0.1-1.3 0.6-0.2 0.4-0.4 0.3-2.2 0.1-0.8 0.1-1.4 0.4-0.2 0.5-0.8 0.7-0.2 0.8 0.4 1-0.5 0.5-0.2 2.2 0.4 0.7 0.1 1.1-0.1 1.4-0.5 0.6-0.9 0.4-1.4-0.6-1.5 0-0.7-0.2-0.7 0-0.7 0.4-0.9 0.3-1.4 0.8-0.1 0.7 0.5 1.3-0.6 0.7-0.8-0.4-0.2-1-0.2-0.4-0.7 0.2 0.1 1.9-0.8 1.1-0.9 0.7-1 0-0.6-0.1-0.8-0.4-0.5-0.5-0.9-1-0.9-0.1-1.2 1.1-1.7-0.4-1.2-0.3-1.3 0-1 0.6-0.8 0.2-0.6 0.7-0.7 0-0.6-0.2-0.5 0.3 0.2 0.9-0.3 0.7-0.1 0.9-0.4 0.4-0.7 0.2-0.7 0.5 0.1 0.3-0.5 1.1-1 0 0 0.4-0.7 0.2-1-0.4-0.4-0.8-0.3-0.8-0.6 0.1-0.4 1-0.8-0.4-1.2 0-1.2-0.6-0.5 0.1-0.3 0.5-0.6 0-1 0.3-2.3-0.6-0.8 0.3-1.3-0.2-0.9-0.8-0.5 0.1-2.1-0.4z"
-                  fill="url(#tgGoldGradient)" stroke="#F59E0B" stroke-width="1.8" />
-                <!-- Subtle internal district guidance boundaries -->
-                <circle cx="396.7" cy="641.9" r="1.5" fill="#B91C1C" opacity="0.6" />
-                <circle cx="428" cy="635" r="1.2" fill="#B91C1C" opacity="0.6" />
-                <circle cx="418" cy="616" r="1.2" fill="#B91C1C" opacity="0.6" />
-                <circle cx="385" cy="610" r="1.2" fill="#B91C1C" opacity="0.6" />
-                <circle cx="418" cy="668" r="1.2" fill="#B91C1C" opacity="0.6" />
+                  fill="url(#tgGoldGradient)" stroke="#F59E0B" stroke-width="1.6" />
+                <path d="M355.2 698.3l0.1-1.2-0.2-0.3 0.1-0.8-0.2-0.1-0.3-0.7 0.3-1.2-0.1-0.7-0.3-0.6-0.1-1.2 0.3-0.8 0-0.7-0.2-1.1 0.4-0.5 0.6 0 0.5-0.5 0.6-0.3 0.4 0.3 0.3-0.8-0.2-0.4-1.3-0.7-0.5-0.5-1-0.2-1.2 0.1-0.7 0.3-1-0.5-0.6 0.1-0.6-0.3-1.3-0.5-0.5-0.7-0.4-1.1 1.1-0.2 0.2-0.5 0.7 0.3 1.2-0.1 0-0.5 0.4-0.2 0.9-0.2 0-0.8-0.4-0.1-0.2-0.5 0.8 0 0.4-0.4 0.5 0 0-0.8 0.4-1-0.2-0.2-0.8 0.3-0.5-0.7 1.4-0.4 0.1-0.9-1.3-0.1 0.4-1.4 0-0.5 0.8 0.1 0.2-0.6-0.5-0.8 0.1-0.6-0.1-1.8 0.3-0.2-0.1-1.1 0.5-0.4-0.1-0.6 0.6-0.5-0.2-0.8-0.4-0.8 0-0.4-0.5-0.5 0.1-0.3-1.6-0.5-0.8-0.5-0.4-0.6 0.3-0.9 0.6 0 0-0.6-0.3-0.2 2-1.6-0.6-0.4 0.4-0.7 0.2-0.9-0.1-0.7 0.7 0 0.2 0.4 1-0.2 0-0.7 0.3-0.3-0.6-0.4 0-0.5 0.6-0.4 1.1 0.4 0-0.7 0.7 0.3 0.4 0 0-0.8 0.6-0.1 0.4-0.2 1 0.2 0.1-0.7-0.9-0.7-1 0-0.8-0.3-0.1-0.7-1 0.2-0.6-0.7-0.7 1-0.3-0.8-0.5 0.1-0.3-0.4-0.6-0.1 0-0.6 0.3-0.8-0.2-0.8 0.4-1.2 0.8-0.2 0.2-0.3 0.9-0.3 0.3 0.1 0.6-0.6-0.2-0.5-0.8-0.5-0.6-0.1 0.2-0.5 0.4-0.3 0-0.4 0.8-0.1 0.3-0.4 0.1-0.7 0.7-0.4-0.2-0.8 0.8 0.2 0.1-1.2 0.7-0.1 0.2-0.6-0.2-0.7-0.4 0-0.7-0.7-1.4-0.5-0.2-0.6 0.6-0.6 0.8-0.2 0.1-0.5-0.2-0.8 0.1-0.7-0.5-0.3-0.3-0.8 0.5-0.8-0.4-0.7 0.8-1-0.8-0.4-0.6 0 0.5-0.5-0.4-0.7-0.7-0.2-0.2-0.7 0.8-0.7 0.1-0.9-0.8-0.2 0.1-0.4 0.9 0.1 0.6-0.2-0.3-0.7 0.1-0.5 0.7 0.3 0-0.5-0.4-0.3 0.3-1.3 1.2-0.2 0.1 0.5 0.3 0.3 1.5-0.8 0.5 0.1 0.5-1.1-0.1-0.9-0.4-0.7 0.1-0.9 0.5-0.4 1-0.1 0.4-0.7 0-0.4 0.6-1.1 0.4-1.1 1.9-0.7 0.9 0.3 0.1-0.6-0.5-0.5-0.7-0.3-0.4-0.5-0.1-0.6-0.7 0-0.5-0.1 0.4-1.2-1.1 0.1 0.1-1-1.4 0 0-1.1-0.2-0.2 0.1-1 1 0.3-0.1-0.6 0.1-0.8 0.5-0.1 0.3 0.5 0.4 0 0.1-0.8-0.3-0.5 0.4-0.7 0.1-0.6-0.2-0.3 0.6-1.7 0.5-0.4 0.4 0.1 0-0.6-1.1-0.2 0-0.5 1.4-0.5 0.4-0.4 0.6-0.3 0.8 0.6 0.2 0.4 0.7 0.2 0.5 0.6 0.5 0.3 0 0.6 0.3 0.3 0.7-0.5 0.4 0.3 0.8 0 0.6 0.4 0.9-0.3 0-1.1 0.3-0.7 0.1-0.8-0.5-0.6 0.3-1.3 1-1.1 0.7 0.1 0.6-0.7 0.7 0.2 0.4-0.5-0.1-0.6-0.3-0.5-0.1-1.6 0.4-0.4 0-0.9-0.6-1.5-0.5-0.2 0.4-0.8 0.9 0 0.1-0.4 0.7-0.3 0-0.6 0.4-0.6 0.2-0.8-0.2-0.7-0.6-0.2 0-0.8-1.2-0.3 0.4-1.8 0.7 0.9 1.3 0.1 0.1 0.8 0.3 0.4 0.9 0.4 1.3 0.2 0.4 0.7 0.9-0.8 1.6 0.2 0.5-0.1 0.5 0.2 2.2 0.7 0.4 0.6 0.6-0.4 0.7 0.1 0.6-0.1 0.6 0.6 1.1 0 0.3 0.8 0.2 1-0.2 1.2 0.9 0 0.7-0.4 0.7 0.1 0.7 0.5-0.1 0.9 0.4 0.8 0 0.3-0.7 0.5 0 0.3 0.7 0 0.4-0.3 0.7 0.6 0.9-0.1 0.3 0.4 1.1 0.1 0.1 0.4 0.9 0.4 0.8 0.9 0.6 0.3 0.8-0.2-0.3-0.6 0.2-0.7 0.6-0.5 0.1-0.9 0.2-0.5-0.3-1 0.5 0 1.3 0.6 0.3 0.7 0.7-0.2 0.8 0 0.1 0.3 1.1 0.8 0.8 0 0.4 0.5 0.4 0.6 1.1-0.6 0.1-0.7 0.7-0.2 0.2 0.7 0.5 0.4 0.7 0.3 0.2-0.2 0.2-0.9 0.4-0.8 0.5-0.3 1.1 0 0.9-0.2 0.8-0.6 1 0.2 0.4 0.5 0.6 0.3 0.4 0.9 1.3 1.1 0.9 0.2 1 1 0 0.5 0.7 1.2-0.2 1.4-0.2 0.5 0.1 1.1-0.4 0.4-0.7 1.6 0 0.7 0.6 0.8-1 1-1 0.6-0.3 0.5 0.1 1.3-0.1 0.5 0.3 0.2 0.6-0.3 0.9 0.1 0.3 0.6-0.1 1.3 0.3 1.1-0.1 2.3-0.4 0.6-0.8 0.2 0.6 1 0.4 0.3 2.2 0.6 0.2 0.4 0.4 0.1 0.3 0.8 1 0.5 0.7 0.7 1.4-0.5 0.3 0.5 0.5 0.1 0.4-0.6 1.2-0.2 0.6-0.4 0.8 0.9 0.6 1.8 0.6 1.1 0.7-0.6 0.4 0.4 0.6-0.4 1.3-0.6 1 0 0.7 0.3 0.5 0.9 1.9 1.2 0.4 0.5 0.5 0.2 0.1 0.7 0.4 0.7 0.8 0.5 0.4 0.6-0.1 0.4 0.6 0.4 0.3 1.3 0.6 1.2 0 0.5 0.6 0.7 0.4 1-1.4 0.7 0.1 1.3 0.7 0.3 1-0.1 0.6-0.8-0.1-0.9 0.2-0.3 1 0.3 0.2 0.5-0.5 0.2 0.2 1.7 0.2 0.3 1-0.1 1.2-0.6 0.3-0.3 0.5-0.1 0 0.7-0.6 0.6-0.1 1 0.5 1.3-0.1 0.4 0.3 1.1 0.3 2 0.3 0.2 0.3 2.2 0.2 0.7 0.5 0.7 0.7 0.2 0.5-0.1 0.6-0.9 1.7-1 0.9 0.2 1.7 1 1.7 0 1.9 0.1 0.7 0.1 0.4-0.5 0.3 0.2 0.9-0.2 0.3 0.5 2-0.3 0.6-0.4 1 0.4 0.8-0.7 0.1-0.5 0.5-0.6 0.7-0.2 0.4 0.7 1.5-1 0.6 0.7 0.4 0.8-0.3 0.3-0.5 0.1-0.3 0.3-0.7 0-0.7 0.5-0.1 0.5-0.7 0.5-1.4 0.1-0.4 0.6-0.7 0.3-0.3 0.4 0 0.9-0.5 0.6-0.5 1-0.6 0.6-0.3 0.6 0.6 0.5-0.6 0.9-0.2 2.6-1.5 1.9-0.5 0.3-0.2 0.3-0.8 0.2-1-0.4-0.2-0.5-0.5-0.1-0.9 1.5-0.6 0.5-1.4 0-0.7-0.2-0.5 0.6-0.1 1.1 0.3 0.4-0.5 0.6-0.5 0-1.6 0.6-0.6 0.2-0.6 0-0.4 0.5-1.2 0.2-0.8-0.2-0.6-0.5-0.7 0.1 0.2 0.9 0 0.7-0.7 0.1-0.5-0.1-0.1 0.6-0.3 0.4 0.2 0.4-0.2 0.8 0.1 0.5-0.7 0.7-0.3-0.3-2.1-0.5-0.6-0.3-1.1-0.1-1 0.4-0.3-0.5 0.5-0.3-0.7-0.8-0.9-0.2-1-0.6-0.3 0.4-1.4 0.7-0.3 0.5-0.1 0.8-0.3 0.5-0.5 0-0.2 0.6-0.7-0.2-0.6-0.9-0.1-0.6-0.8 0.6 0.6 1.2-0.5 0.5-0.3 0.7 1.1 0.4 1.2 0.4 0.9 0.6 0.4-0.7 0.8 0.3 0.3-0.4 1.1 0.7 0.4 0-0.1 0.7 0.1 0.8-0.6 0.1 0 1-0.2 0.3 0.8 0.5 0.3 0.6-0.9 0.7-2-0.4-0.9-0.4-0.1-0.7-0.9-0.4-0.1-0.4-0.5-0.2 0 0.5-0.7 0.6-0.4-1.3-0.7 0-0.4-0.4-0.2-1.2-0.3-1.3-1.1-1.5-0.5 0.2-0.7-0.5-0.6 0.1 0-0.7-0.3-0.1-0.5 0.6-0.6 0.6-0.3 0.5-0.7 0.1-0.5-0.2-0.1 0.7-1.1 0-0.2 0.8-0.8 0.8-0.5 1.3 0.6 0.3 0.6 0 0.2 0.8 0.8 0.3-0.5 1.2-0.1 0.8-0.9 0.9-0.7 0.6-0.5 0.9-0.8 0.8-0.5 0-0.6-0.2-0.3-0.3-0.5-1.1-0.3-0.3-1.4 0.2-0.8-0.9-0.2-0.2-0.7 0.3-0.7 0.8-1.1 0-0.8 0.5-0.2 0.4-1.3-0.1-0.7 0.6-1 0.3-1.1 0.1-1.3 0.6-0.2 0.4-0.4 0.3-2.2 0.1-0.8 0.1-1.4 0.4-0.2 0.5-0.8 0.7-0.2 0.8 0.4 1-0.5 0.5-0.2 2.2 0.4 0.7 0.1 1.1-0.1 1.4-0.5 0.6-0.9 0.4-1.4-0.6-1.5 0-0.7-0.2-0.7 0-0.7 0.4-0.9 0.3-1.4 0.8-0.1 0.7 0.5 1.3-0.6 0.7-0.8-0.4-0.2-1-0.2-0.4-0.7 0.2 0.1 1.9-0.8 1.1-0.9 0.7-1 0-0.6-0.1-0.8-0.4-0.5-0.5-0.9-1-0.9-0.1-1.2 1.1-1.7-0.4-1.2-0.3-1.3 0-1 0.6-0.8 0.2-0.6 0.7-0.7 0-0.6-0.2-0.5 0.3 0.2 0.9-0.3 0.7-0.1 0.9-0.4 0.4-0.7 0.2-0.7 0.5 0.1 0.3-0.5 1.1-1 0 0 0.4-0.7 0.2-1-0.4-0.4-0.8-0.3-0.8-0.6 0.1-0.4 1-0.8-0.4-1.2 0-1.2-0.6-0.5 0.1-0.3 0.5-0.6 0-1 0.3-2.3-0.6-0.8 0.3-1.3-0.2-0.9-0.8-0.5 0.1-2.1-0.4z"
+                  fill="url(#tgCenterRays)" />
+                <!-- Subtle Radial Ray Lines from Center -->
+                <g stroke="#F59E0B" stroke-width="0.35" stroke-dasharray="1.5,1.5" opacity="0.45">
+                  <line x1="400" y1="642" x2="385" y2="612" />
+                  <line x1="400" y1="642" x2="430" y2="615" />
+                  <line x1="400" y1="642" x2="442" y2="648" />
+                  <line x1="400" y1="642" x2="415" y2="682" />
+                  <line x1="400" y1="642" x2="368" y2="656" />
+                </g>
               </svg>
 
-              <!-- Animated Pin 1: North (Nizamabad) -->
-              <div class="vm-map-pin" style="top: 27%; left: 32%;" title="నిజామాబాద్">
-                <div class="vm-pin-marker"></div>
-                <div class="vm-pin-ripple"></div>
+              <!-- SVG Curved Red Pointer Arrows Connecting Map to Right Pillars -->
+              <svg class="vm-connector-arrows-svg" viewBox="0 0 460 380" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <marker id="arrowRedHead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626" />
+                  </marker>
+                </defs>
+                <!-- Arrow 1: North-East Warangal Pin to Pillar 1 (Urban Development) -->
+                <path d="M 295 125 C 345 95, 385 65, 435 48" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrowRedHead)" opacity="0.85" />
+                <!-- Arrow 2: Khammam/East Pin to Pillar 5 (Community Well-being) -->
+                <path d="M 320 235 C 365 265, 395 305, 435 330" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrowRedHead)" opacity="0.85" />
+              </svg>
+
+              <!-- Teardrop Pin 1: North-West (Adilabad / Nizamabad) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 25%; left: 34%;" title="నిజామాబాద్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
               </div>
 
-              <!-- Animated Pin 2: North-East (Karimnagar) -->
-              <div class="vm-map-pin" style="top: 31%; left: 55%;" title="కరీంనగర్">
-                <div class="vm-pin-marker"></div>
-                <div class="vm-pin-ripple"></div>
+              <!-- Teardrop Pin 2: North-East (Karimnagar / Warangal) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 32%; left: 64%;" title="వరంగల్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
               </div>
 
-              <!-- Animated Pin 3: Center-East (Warangal) -->
-              <div class="vm-map-pin" style="top: 45%; left: 62%;" title="వరంగల్">
-                <div class="vm-pin-marker"></div>
-                <div class="vm-pin-ripple"></div>
+              <!-- Teardrop Pin 3: Center-Capital (Hyderabad) -->
+              <div class="vm-teardrop-pin-wrap is-capital" style="top: 50%; left: 45%;" title="హైదరాబాద్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="30" height="38">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#B91C1C" />
+                  <circle cx="12" cy="11" r="4.8" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
               </div>
 
-              <!-- Animated Pin 4: Center-Capital (Hyderabad) -->
-              <div class="vm-map-pin" style="top: 50%; left: 40%;" title="హైదరాబాద్">
-                <div class="vm-pin-marker" style="background:#B91C1C; transform:scale(1.2);"></div>
-                <div class="vm-pin-ripple" style="animation-duration: 1.6s;"></div>
+              <!-- Teardrop Pin 4: East (Khammam) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 61%; left: 69%;" title="ఖమ్మం">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
               </div>
 
-              <!-- Animated Pin 5: South (Nalgonda) -->
-              <div class="vm-map-pin" style="top: 68%; left: 55%;" title="నల్లగొండ">
-                <div class="vm-pin-marker"></div>
-                <div class="vm-pin-ripple"></div>
+              <!-- Teardrop Pin 5: South (Nalgonda / Mahabubnagar) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 76%; left: 47%;" title="నల్లగొండ">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
               </div>
             </div>
           </div>
 
           <!-- Right Column: 5 Pillar Cards Connected to Map Focus -->
           <div class="vm-action-right-pillars">
+            <!-- Spine Track Connector Line Behind Circles -->
+            <div class="vm-pillars-track-line" aria-hidden="true"></div>
+
             <!-- Pillar 1: Urban Development -->
-            <div class="vm-pillar-pill">
-              <div class="vm-pillar-icon-bubble">
-                <i class="bi bi-building"></i>
+            <div class="vm-pillar-pill" id="actionPillar1">
+              <div class="vm-pillar-icon-bubble bubble-red">
+                <i class="bi bi-buildings-fill"></i>
               </div>
               <span class="vm-pillar-label" data-i18n="actPill1">పట్టణాల అభివృద్ధి</span>
             </div>
 
             <!-- Pillar 2: Rural Development -->
-            <div class="vm-pillar-pill">
-              <div class="vm-pillar-icon-bubble">
+            <div class="vm-pillar-pill" id="actionPillar2">
+              <div class="vm-pillar-icon-bubble bubble-red">
                 <i class="bi bi-house-door-fill"></i>
               </div>
               <span class="vm-pillar-label" data-i18n="actPill2">గ్రామాల అభివృద్ధి</span>
             </div>
 
-            <!-- Pillar 3: Farmers Welfare -->
-            <div class="vm-pillar-pill">
-              <div class="vm-pillar-icon-bubble">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <!-- Pillar 3: Farmers Welfare (Green Theme from Reference) -->
+            <div class="vm-pillar-pill" id="actionPillar3">
+              <div class="vm-pillar-icon-bubble bubble-green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C12.5 4.5 14 7.5 17 8C19.5 8.5 21 11 20 13.5C19 16 16.5 16.5 14 15.5C13 15 12.5 14 12 13C11.5 14 11 15 10 15.5C7.5 16.5 5 16 4 13.5C3 11 4.5 8.5 7 8C10 7.5 11.5 4.5 12 2ZM11 15.5V22H13V15.5C12.7 15.6 12.3 15.6 12 15.6C11.7 15.6 11.3 15.6 11 15.5Z" />
                 </svg>
               </div>
@@ -509,16 +558,16 @@
             </div>
 
             <!-- Pillar 4: Youth Opportunities -->
-            <div class="vm-pillar-pill">
-              <div class="vm-pillar-icon-bubble">
+            <div class="vm-pillar-pill" id="actionPillar4">
+              <div class="vm-pillar-icon-bubble bubble-red">
                 <i class="bi bi-mortarboard-fill"></i>
               </div>
               <span class="vm-pillar-label" data-i18n="actPill4">యువతకు అవకాశాలు</span>
             </div>
 
             <!-- Pillar 5: Community Well-being -->
-            <div class="vm-pillar-pill">
-              <div class="vm-pillar-icon-bubble">
+            <div class="vm-pillar-pill" id="actionPillar5">
+              <div class="vm-pillar-icon-bubble bubble-red">
                 <i class="bi bi-people-fill"></i>
               </div>
               <span class="vm-pillar-label" data-i18n="actPill5">సమాజ శ్రేయస్సు</span>

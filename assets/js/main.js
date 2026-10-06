@@ -336,6 +336,26 @@ function initHeroCarousel() {
     });
   });
 
+  // Manual Previous & Next Slider Arrow Controls
+  const prevBtn = document.getElementById('hero-prev-btn');
+  const nextBtn = document.getElementById('hero-next-btn');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      changeHeroSlide(currentSlideIdx - 1);
+      startSlideShow();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      changeHeroSlide(currentSlideIdx + 1);
+      startSlideShow();
+    });
+  }
+
   // Snappy auto slide every 3.5 seconds
   startSlideShow();
 

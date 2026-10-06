@@ -592,7 +592,7 @@ const translations = {
     // Section 5: Our Vision in Action
     actionSecTitle: "మా దృష్టి – ఆచరణలో",
     actionSecSub: "Our Vision in Action",
-    actionQuote: "ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, మళ్లీ తెలంగాణ కోసం నిరంతరం కృషి.",
+    actionQuote: "ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, సుస్థిర తెలంగాణ కోసం నిరంతరం కృషి.",
     actionBtnCta: "మా లక్ష్యాలను తెలుసుకోండి",
     actPill1: "పట్టణాల అభివృద్ధి",
     actPill2: "గ్రామాల అభివృద్ధి",
