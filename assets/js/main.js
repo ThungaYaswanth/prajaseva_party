@@ -204,24 +204,46 @@ function initMobileNav() {
 /* ==========================================================================
    1. Language Switcher (Telugu <-> English)
    ========================================================================== */
-let currentLang = localStorage.getItem('prajaseva_lang') || 'te';
+let currentLang = 'te';
+try {
+  currentLang = localStorage.getItem('prajaseva_lang') || 'te';
+} catch (e) {
+  currentLang = 'te';
+}
 
 function initLanguage() {
-  const teBtn = document.getElementById('lang-btn-te');
-  const enBtn = document.getElementById('lang-btn-en');
-  const toggleBtn = document.getElementById('lang-toggle-btn');
+  const teBtns = document.querySelectorAll('#lang-btn-te, .lang-select-te');
+  const enBtns = document.querySelectorAll('#lang-btn-en, .lang-select-en');
+  const toggleBtns = document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule');
 
-  if (teBtn && enBtn) {
-    teBtn.addEventListener('click', () => switchLanguage('te'));
-    enBtn.addEventListener('click', () => switchLanguage('en'));
-  }
+  teBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchLanguage('te');
+    });
+  });
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
+  enBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchLanguage('en');
+    });
+  });
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const nextLang = currentLang === 'te' ? 'en' : 'te';
       switchLanguage(nextLang);
     });
-  }
+  });
+
+  // Sync across open browser tabs/windows
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'prajaseva_lang' && e.newValue && e.newValue !== currentLang) {
+      applyLanguage(e.newValue);
+    }
+  });
 
   // Initial apply
   applyLanguage(currentLang);
@@ -229,35 +251,45 @@ function initLanguage() {
 
 function switchLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('prajaseva_lang', lang);
+  try {
+    localStorage.setItem('prajaseva_lang', lang);
+  } catch (e) {}
   applyLanguage(lang);
 }
 
 function applyLanguage(lang) {
-  const dict = translations[lang];
+  currentLang = lang;
+  const dict = typeof translations !== 'undefined' ? translations[lang] : null;
   if (!dict) return;
 
-  // Update capsule toggle label
-  const currentLabel = document.getElementById('lang-current-label');
-  if (currentLabel) {
-    currentLabel.textContent = lang === 'te' ? 'తెలుగు' : 'English';
-  }
+  // 1. Update capsule toggle labels and accessibility attributes across all pages
+  const labelText = lang === 'te' ? 'తెలుగు' : 'English';
+  const nextLangName = lang === 'te' ? 'English' : 'తెలుగు';
+  const toggleTitle = lang === 'te' ? 'భాషను మార్చండి / Switch to English' : 'Switch Language / తెలుగులోకి మార్చండి';
+
+  document.querySelectorAll('#lang-current-label, .lang-dropdown-capsule .lang-label').forEach(el => {
+    el.textContent = labelText;
+  });
+
+  document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule').forEach(btn => {
+    btn.setAttribute('title', toggleTitle);
+    btn.setAttribute('aria-label', toggleTitle);
+  });
+
   document.documentElement.lang = lang;
-
-  // Update active state on legacy buttons if present
-  const teBtn = document.getElementById('lang-btn-te');
-  const enBtn = document.getElementById('lang-btn-en');
-  if (teBtn && enBtn) {
-    if (lang === 'te') {
-      teBtn.classList.add('active');
-      enBtn.classList.remove('active');
-    } else {
-      enBtn.classList.add('active');
-      teBtn.classList.remove('active');
-    }
+  if (document.body) {
+    document.body.setAttribute('data-lang', lang);
   }
 
-  // Replace text for all elements with data-i18n
+  // 2. Update active state on legacy or segmented buttons if present
+  document.querySelectorAll('#lang-btn-te, .lang-select-te').forEach(btn => {
+    btn.classList.toggle('active', lang === 'te');
+  });
+  document.querySelectorAll('#lang-btn-en, .lang-select-en').forEach(btn => {
+    btn.classList.toggle('active', lang === 'en');
+  });
+
+  // 3. Replace text for all elements with data-i18n
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (dict[key]) {
@@ -273,7 +305,7 @@ function applyLanguage(lang) {
     }
   });
 
-  // Replace placeholders for elements with data-i18n-placeholder
+  // 4. Replace placeholders for elements with data-i18n-placeholder
   document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (dict[key]) {
@@ -281,21 +313,22 @@ function applyLanguage(lang) {
     }
   });
 
-  // Update map tooltip immediately if currently visible or active
+  // 5. Update map tooltip immediately if currently visible or active
   if (typeof updateMapTooltipLanguage === 'function') {
     updateMapTooltipLanguage(lang);
   }
 
-  // Update issues page language if present
+  // 6. Update issues page language if present
   if (typeof updateIssuesPageLanguage === 'function') {
     updateIssuesPageLanguage(lang);
   }
 
-  // Update news page language if present
+  // 7. Update news page language if present
   if (typeof updateNewsPageLanguage === 'function') {
     updateNewsPageLanguage(lang);
   }
 
+  // 8. Dispatch custom event for any other module hooks
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
