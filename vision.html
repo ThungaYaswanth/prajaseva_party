@@ -23,8 +23,18 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=36.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
   <link rel="stylesheet" href="assets/css/vision.css?v=1.0">
+
+  <!-- Early Language Preference Sync -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s) document.documentElement.lang = s;
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body>
@@ -65,7 +75,7 @@
             </li>
           </ul>
 
-          <!-- Mobile Only CTA Panel in Drawer -->
+          <!-- Mobile Action CTAs -->
           <div class="mobile-nav-cta-panel d-lg-none">
             <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
               <i class="bi bi-person-fill"></i>
@@ -80,9 +90,9 @@
 
         <!-- 3. Right: Language Dropdown + Donate + Membership -->
         <div class="header-right-controls d-flex align-items-center">
-          <!-- Language Dropdown Capsule -->
-          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
-            title="భాషను మార్చండి / Switch Language">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language">
             <span class="lang-label" id="lang-current-label">తెలుగు</span>
             <i class="bi bi-chevron-down lang-chevron-icon"></i>
           </button>
@@ -99,7 +109,7 @@
           </a>
 
           <!-- Mobile Hamburger / Close Toggler -->
-          <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" id="mobileMenuToggleBtn"
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
             data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -118,6 +128,17 @@
       </nav>
     </div>
   </header>
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s === 'en') {
+          var l = document.getElementById('lang-current-label');
+          if (l) l.textContent = 'English';
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <main id="main-content">
     <!-- ==========================================================================

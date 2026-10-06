@@ -15,7 +15,16 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=39.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
+  <!-- Early Language Preference Sync -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s) document.documentElement.lang = s;
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body>
@@ -73,8 +82,7 @@
         <div class="header-right-controls d-flex align-items-center">
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
-          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
-            title="భాషను మార్చండి / Switch Language">
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language">
             <span class="lang-label" id="lang-current-label">తెలుగు</span>
             <i class="bi bi-chevron-down lang-chevron-icon"></i>
           </button>
@@ -110,6 +118,17 @@
       </nav>
     </div>
   </header>
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s === 'en') {
+          var l = document.getElementById('lang-current-label');
+          if (l) l.textContent = 'English';
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <main id="main-content">
     <!-- ==========================================================================
@@ -981,7 +1000,7 @@
 
   <!-- Global Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/translations.js?v=5.0"></script>
+  <script src="assets/js/translations.js?v=6.0"></script>
   <script src="assets/js/news.js?v=1.0"></script>
   <script src="assets/js/main.js?v=6.0"></script>
 </body>
