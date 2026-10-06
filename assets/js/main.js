@@ -280,6 +280,11 @@ function applyLanguage(lang) {
     updateIssuesPageLanguage(lang);
   }
 
+  // Update news page language if present
+  if (typeof updateNewsPageLanguage === 'function') {
+    updateNewsPageLanguage(lang);
+  }
+
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
