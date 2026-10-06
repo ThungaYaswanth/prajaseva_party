@@ -918,16 +918,20 @@ body[lang="en"] .lang-dropdown-capsule {
   .header-pill-nav {
     border-radius: 0 !important;
     min-height: 54px;
-    padding: 4px 0 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
     border: none !important;
     box-shadow: none !important;
+    background: transparent !important;
   }
 
   .brand-wrap {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
     gap: 8px;
+    margin-right: 0 !important;
+    text-decoration: none !important;
   }
 
   .header-right-controls {
@@ -1148,25 +1152,62 @@ body[lang="en"] .lang-dropdown-capsule {
 /* ==========================================================================
    Tablet Devices (768px - 991.98px): Spacious Layout
    ========================================================================== */
+/* ==========================================================================
+   Tablet Devices (768px - 991.98px): Spacious, Balanced Top Bar
+   ========================================================================== */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .site-header .header-container {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
 
+  .site-header .navbar {
+    min-height: 60px;
+    padding: 6px 0;
+  }
+
   .brand-wrap {
     gap: 10px;
+    margin-right: 0 !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .brand-emblem-frame,
   .brand-leader-frame {
-    width: 46px;
-    height: 46px;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
   .brand-emblem-img {
-    width: 44px;
-    height: 44px;
+    width: 46px !important;
+    height: 46px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .brand-leader-frame {
+    border: 2px solid #FFC928 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    background-color: #0077D4 !important;
+  }
+
+  .brand-leader-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+    transform: scale(1.36) !important;
+    transform-origin: center 26% !important;
+    display: block !important;
   }
 
   .header-right-controls {
@@ -1174,13 +1215,14 @@ body[lang="en"] .lang-dropdown-capsule {
     align-items: center !important;
     gap: 8px;
     flex-wrap: nowrap !important;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
   }
 
   .lang-dropdown-capsule {
     padding: 6px 12px;
     gap: 5px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1193,7 +1235,7 @@ body[lang="en"] .lang-dropdown-capsule {
     padding: 6px 13px;
     font-size: 0.82rem;
     gap: 5px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1202,20 +1244,20 @@ body[lang="en"] .lang-dropdown-capsule {
     padding: 6px 13px;
     font-size: 0.82rem;
     gap: 5px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
   .navbar-toggler {
-    width: 38px;
-    height: 38px;
-    margin-left: 4px !important;
+    width: 40px;
+    height: 40px;
+    margin-left: 2px !important;
     flex-shrink: 0 !important;
   }
 }
 
 /* ==========================================================================
-   Mobile Devices (< 768px): Clean Top Bar, Zero Overflow
+   Mobile Devices (< 768px): Clean Top Bar, Always-Visible Dual Brand Icons
    ========================================================================== */
 @media (max-width: 767.98px) {
   .site-header {
@@ -1232,31 +1274,63 @@ body[lang="en"] .lang-dropdown-capsule {
     padding: 5px 0;
     gap: 6px;
     flex-wrap: nowrap !important;
+    justify-content: space-between !important;
   }
 
   .brand-wrap {
-    gap: 6px;
-    flex-shrink: 0;
+    gap: 8px;
+    margin-right: 0 !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .brand-emblem-frame,
   .brand-leader-frame {
-    width: 38px;
-    height: 38px;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
   .brand-emblem-img {
-    width: 36px;
-    height: 36px;
+    width: 38px !important;
+    height: 38px !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 
-  /* In mobile top bar, hide secondary membership & search so hamburger toggler NEVER gets pushed out */
+  .brand-leader-frame {
+    border: 2px solid #FFC928 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    background-color: #0077D4 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .brand-leader-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+    transform: scale(1.36) !important;
+    transform-origin: center 26% !important;
+    display: block !important;
+  }
+
+  /* In mobile top bar, hide secondary membership so hamburger never gets pushed */
   .header-right-controls {
     display: flex !important;
     align-items: center !important;
+    justify-content: flex-end !important;
     gap: 6px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     flex-wrap: nowrap !important;
+    margin-left: auto !important;
   }
 
   .header-right-controls .btn-pill-membership {
@@ -1264,9 +1338,9 @@ body[lang="en"] .lang-dropdown-capsule {
   }
 
   .lang-dropdown-capsule {
-    padding: 5px 10px;
+    padding: 5px 9px;
     gap: 4px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1279,10 +1353,10 @@ body[lang="en"] .lang-dropdown-capsule {
   }
 
   .btn-pill-donate {
-    padding: 5px 12px;
-    font-size: 0.78rem;
+    padding: 5px 10px;
+    font-size: 0.76rem;
     gap: 4px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1314,35 +1388,64 @@ body[lang="en"] .lang-dropdown-capsule {
     padding: 3px 0;
     gap: 4px;
     flex-wrap: nowrap !important;
+    justify-content: space-between !important;
   }
 
   .brand-wrap {
-    gap: 4px;
+    gap: 5px;
+    margin-right: 0 !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .brand-emblem-frame,
   .brand-leader-frame {
-    width: 33px;
-    height: 33px;
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
   .brand-emblem-img {
-    width: 30px;
-    height: 30px;
+    width: 33px !important;
+    height: 33px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .brand-leader-frame {
+    border: 1.5px solid #FFC928 !important;
+  }
+
+  .brand-leader-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+    transform: scale(1.36) !important;
+    transform-origin: center 26% !important;
+    display: block !important;
   }
 
   .header-right-controls {
     display: flex !important;
     align-items: center !important;
+    justify-content: flex-end !important;
     gap: 4px;
     flex-wrap: nowrap !important;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
   }
 
   .lang-dropdown-capsule {
-    padding: 4px 8px;
+    padding: 4px 7px;
     gap: 3px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1351,9 +1454,9 @@ body[lang="en"] .lang-dropdown-capsule {
   }
 
   .btn-pill-donate {
-    padding: 4px 9px;
-    font-size: 0.73rem;
-    flex-shrink: 0;
+    padding: 4px 8px;
+    font-size: 0.72rem;
+    flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
@@ -1365,8 +1468,8 @@ body[lang="en"] .lang-dropdown-capsule {
   }
 
   .navbar-toggler svg {
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
   }
 
   .site-header .navbar-collapse {
