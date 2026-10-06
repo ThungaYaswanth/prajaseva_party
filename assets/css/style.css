@@ -5701,6 +5701,107 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.3));
 }
 
+/* ==========================================================================
+   Smooth 3D Flip Card Animation System (Professional Front & Back 180° Flip)
+   ========================================================================== */
+
+/* 1. 3D Scene Wrapper with Perspective */
+.id-card-3d-scene {
+  perspective: 1400px;
+  -webkit-perspective: 1400px;
+  width: 355px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 2. Rotating 3D Inner Wrapper */
+.id-card-3d-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+/* 3. Smooth Horizontal 180° Flip on Hover or Active Touch */
+.id-card-3d-scene:hover .id-card-3d-flipper,
+.id-card-3d-scene:focus .id-card-3d-flipper,
+.id-card-3d-scene:focus-within .id-card-3d-flipper,
+.id-card-3d-scene.is-flipped .id-card-3d-flipper {
+  transform: rotateY(180deg);
+}
+
+/* 4. Perfectly Aligned Card Faces */
+.id-card-face {
+  width: 100%;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  box-sizing: border-box;
+}
+
+.id-card-face-front {
+  position: relative;
+  z-index: 2;
+  transform: rotateY(0deg) translateZ(1px);
+  -webkit-transform: rotateY(0deg) translateZ(1px);
+}
+
+.id-card-face-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: rotateY(180deg) translateZ(1px);
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure Front & Back Card Bodies fill Face */
+.id-card-face .card-template-exact {
+  width: 100%;
+  margin: 0;
+}
+
+/* Back Side Card Body */
+.id-card-back-body {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1.5px solid #E2E8F0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.id-card-back-full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 16.5px;
+}
+
+
 /* Card Body Matching Official Reference Image */
 .card-template-exact {
   width: 330px;
@@ -5802,9 +5903,9 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 /* 3. Photo (Left) + Member Details (Right) */
 .id-info-exact-grid {
   display: grid;
-  grid-template-columns: 114px 1fr;
-  gap: 10px;
-  padding: 10px 14px 6px 14px;
+  grid-template-columns: 104px 1fr;
+  gap: 8px;
+  padding: 10px 10px 6px 10px;
   align-items: flex-start;
   position: relative;
 }
@@ -5816,13 +5917,16 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 .id-photo-exact-frame {
-  width: 114px;
-  height: 138px;
-  border: 2.5px solid #DC2626;
-  border-radius: 10px;
+  width: 104px;
+  height: 132px;
+  border: 2px solid #DC2626;
+  border-radius: 9px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
-  background: #000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+  background: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .id-photo-exact-img {
@@ -5836,27 +5940,29 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 .id-fields-exact-col {
   display: flex;
   flex-direction: column;
-  gap: 3.5px;
+  gap: 3px;
   padding-top: 1px;
+  min-width: 0;
 }
 
 .id-row-exact {
   display: flex;
   align-items: baseline;
-  font-size: 0.72rem;
-  line-height: 1.32;
-  white-space: nowrap;
+  font-size: 0.70rem;
+  line-height: 1.3;
+  min-width: 0;
 }
 
 .id-lbl-exact {
-  width: 74px;
+  width: 66px;
   color: #111827;
   font-weight: 800;
   flex-shrink: 0;
+  font-size: 0.69rem;
 }
 
 .id-sep-exact {
-  width: 10px;
+  width: 8px;
   color: #111827;
   font-weight: 800;
   text-align: center;
@@ -5866,9 +5972,12 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 .id-val-exact.val-red {
   color: #DC2626;
   font-weight: 900;
-  font-size: 0.74rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.71rem;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow: visible;
+  flex: 1;
+  min-width: 0;
 }
 
 .desig-exact-row {
@@ -5882,7 +5991,9 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 .id-num-bold {
-  letter-spacing: 0.3px;
+  font-size: 0.69rem !important;
+  letter-spacing: 0.2px;
+  white-space: nowrap !important;
 }
 
 /* 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) */
@@ -8922,18 +9033,58 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 
 .mem-page-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: 390px 1fr;
+  gap: 36px;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Left Side: Leader & Telugu Message & Benefits */
+@media (max-width: 991px) {
+  .mem-page-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Left Side: ID Card Preview & Telugu Message & Benefits */
 .mem-left-side {
   position: relative;
-  padding: 10px 0;
+  padding: 6px 0;
+}
+
+.mem-id-card-frame {
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mem-id-card-exact {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  border: 3.5px solid #F59E0B;
+  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.id-photo-exact-frame.studio-blue-bg {
+  background: #1976D2;
+  border: 2.5px solid #DC2626;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.id-photo-exact-frame.studio-blue-bg .id-photo-exact-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: scale(1.08) translateY(2px);
 }
 
 .mem-leader-stage {
@@ -9086,32 +9237,52 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 /* Right Side: Clean White Membership Form Card */
 .mem-right-card {
   background: #FFFFFF;
-  border-radius: 24px;
-  padding: 38px 34px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 32px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #F1F5F9;
   position: relative;
 }
 
 .mem-form-title {
-  font-size: 1.95rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #081124;
-  margin-bottom: 6px;
-}
-
-.mem-form-subtitle {
-  font-size: 0.95rem;
-  color: #64748B;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .mem-form-accent-bar {
-  width: 44px;
-  height: 4px;
-  background: linear-gradient(90deg, #C81016 50%, #FFC928 50%);
-  border-radius: 3px;
-  margin-bottom: 24px;
+  width: 32px;
+  height: 3px;
+  background: #C81016;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.mem-form-subtitle {
+  font-size: 0.88rem;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.mem-modern-grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+}
+
+.mem-modern-grid-form .full-width-field {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .mem-modern-grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mem-modern-grid-form .full-width-field {
+    grid-column: span 1;
+  }
 }
 
 .mem-form-row-2 {
@@ -9121,7 +9292,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 .mem-form-group {
-  margin-bottom: 18px;
+  margin-bottom: 4px;
   position: relative;
 }
 
@@ -9129,7 +9300,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #1E293B;
   margin-bottom: 6px;
@@ -9142,16 +9313,16 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 
 .mem-form-label i {
   color: #C81016;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .mem-input {
   width: 100%;
-  height: 46px;
+  height: 44px;
   border: 1.5px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 0 16px;
-  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 0.9rem;
   font-family: inherit;
   color: #1E293B;
   background: #FAFCFF;
@@ -9160,14 +9331,33 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 .mem-input:focus {
-  border-color: #C81016;
+  border-color: #EF4444;
   background: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(200, 16, 22, 0.1);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
 .mem-input.is-invalid {
   border-color: #DC2626 !important;
   background: #FFFDFD;
+}
+
+.mem-input-icon-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.mem-input-icon-wrap .mem-input {
+  padding-right: 38px;
+}
+
+.mem-input-trailing-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748B;
+  pointer-events: none;
+  font-size: 0.95rem;
 }
 
 .mem-error-text {
@@ -9188,19 +9378,19 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 /* Phone & OTP Controls */
 .mem-phone-input-wrap {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
 }
 
 .btn-otp-action {
-  height: 46px;
-  border-radius: 12px;
-  padding: 0 18px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 0 12px;
   font-weight: 700;
-  font-size: 0.9rem;
-  border: 1.5px solid #FCA5A5;
-  background: #FFF5F5;
-  color: #C81016;
+  font-size: 0.82rem;
+  border: 1px solid #FECDD3;
+  background: #FFF1F2;
+  color: #E11D48;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
@@ -9208,11 +9398,12 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   align-items: center;
   gap: 6px;
   font-family: inherit;
+  flex-shrink: 0;
 }
 
 .btn-otp-action:hover {
-  background: #FEE2E2;
-  border-color: #EF4444;
+  background: #FFE4E6;
+  border-color: #FDA4AF;
 }
 
 .btn-otp-action:disabled {
@@ -9492,15 +9683,158 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   z-index: 6;
 }
 
-/* Checkbox Grid for Interests */
+/* Payment Method Interactive Grid */
+.mem-method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mem-method-card {
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.mem-method-card:hover {
+  border-color: #EF4444;
+}
+
+.mem-method-card.active {
+  border-color: #EF4444;
+  background: #FEF2F2;
+}
+
+.mem-method-icon {
+  font-size: 1.35rem;
+  color: #475569;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.mem-method-card.active .mem-method-icon,
+.mem-method-card.active .mem-method-title {
+  color: #DC2626;
+}
+
+.mem-method-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1E293B;
+  line-height: 1.2;
+}
+
+.mem-method-sub {
+  font-size: 0.72rem;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.mem-payment-subpanel {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.mem-subpanel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mem-subpanel-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-verification {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.mem-upi-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mem-upi-input-group .mem-input {
+  flex: 1;
+}
+
+.btn-qr-show {
+  height: 44px;
+  background: #FFFFFF;
+  border: 1.5px solid #EF4444;
+  color: #DC2626;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-qr-show:hover {
+  background: #FEF2F2;
+}
+
+.mem-inline-qr-box {
+  margin-top: 10px;
+  text-align: center;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+}
+
+.mem-qr-img {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Checkbox Grid for Interests (Exact 2-column layout matching screenshot) */
 .mem-checkbox-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 16px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 24px;
   background: #FAFCFF;
   border: 1px solid #EDF2F7;
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 14px 18px;
+}
+
+@media (max-width: 576px) {
+  .mem-checkbox-grid {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
 }
 
 .mem-checkbox-grid.is-invalid {
@@ -9527,11 +9861,11 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 /* Textarea */
 .mem-textarea {
   width: 100%;
-  min-height: 80px;
+  min-height: 60px;
   border: 1.5px solid #E2E8F0;
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
   font-family: inherit;
   color: #1E293B;
   background: #FAFCFF;
@@ -9541,54 +9875,53 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 .mem-textarea:focus {
-  border-color: #C81016;
+  border-color: #EF4444;
   background: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(200, 16, 22, 0.1);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
 /* Consent Row */
 .mem-consent-wrap {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  margin: 18px 0 24px;
-  font-size: 0.92rem;
+  margin: 12px 0 18px;
+  font-size: 0.88rem;
   color: #334155;
 }
 
 .mem-consent-wrap input {
-  margin-top: 3px;
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   accent-color: #C81016;
   cursor: pointer;
 }
 
-/* Submit Button: Yellow CTA */
+/* Submit Button: Solid Amber Golden CTA Bar Matching Screenshot */
 .btn-mem-submit {
   width: 100%;
-  height: 52px;
-  background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%);
-  color: #081124;
-  font-size: 1.12rem;
+  height: 48px;
+  background: linear-gradient(90deg, #F59E0B 0%, #EAB308 50%, #F59E0B 100%);
+  color: #0F172A;
+  font-size: 1.02rem;
   font-weight: 800;
-  border-radius: 50px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 6px 18px rgba(255, 184, 0, 0.35);
-  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.35);
+  transition: all 0.2s ease;
   font-family: inherit;
 }
 
 .btn-mem-submit:hover {
-  background: linear-gradient(135deg, #FFD147 0%, #EAA800 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(255, 184, 0, 0.45);
+  background: linear-gradient(90deg, #D97706 0%, #CA8A04 100%);
   color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.45);
 }
 
 .btn-mem-submit:active {
@@ -9636,7 +9969,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 
 .mem-id-chip {
   display: inline-block;
-  background: #FFFBEB;
+  background:#fdfdfd;
   border: 1.5px solid #FCD34D;
   border-radius: 50px;
   padding: 8px 22px;
@@ -9658,81 +9991,79 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   letter-spacing: 1px;
 }
 
-/* Mini Member Card Preview */
+/* Master Member ID Card Result Preview */
 .mem-card-preview-wrap {
-  max-width: 380px;
-  margin: 0 auto 28px;
-  background: linear-gradient(135deg, #0D1A38 0%, #060D1E 100%);
-  border-radius: 18px;
-  border: 1.5px solid rgba(255, 201, 40, 0.35);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  overflow: hidden;
-  text-align: left;
-}
-
-.mem-card-head {
-  background: #C81016;
-  padding: 10px 16px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  margin: 0 auto 30px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-width: 100%;
 }
 
-.mem-card-head img {
-  width: 32px;
-  height: 32px;
+.id-card-result {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(220, 38, 38, 0.1);
+  border: 2px solid #E2E8F0;
+  border-radius: 20px;
+  background: #ffffff;
 }
 
-.mem-card-head-title {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.2;
+.id-card-3d-scene:hover {
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.18));
 }
 
-.mem-card-head-sub {
-  font-size: 0.72rem;
-  color: #FFD147;
+.studio-blue-bg {
+  background: #fdfdfd !important;
 }
 
-.mem-card-body-content {
-  padding: 16px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
+@keyframes spin-cw {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.mem-card-photo {
-  width: 75px;
-  height: 90px;
-  border-radius: 8px;
-  object-fit: cover;
-  border: 2px solid #FFC928;
-  background: #16254A;
+.spin {
+  display: inline-block;
+  animation: spin-cw 0.8s linear infinite;
 }
 
-.mem-card-details {
-  flex: 1;
-}
+/* Print Specific Rules for Member ID Card */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
 
-.mem-card-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 4px;
-}
+  #printableCardArea,
+  #printableCardArea .id-card-face-front,
+  #printableCardArea .id-card-face-front * {
+    visibility: visible !important;
+  }
 
-.mem-card-id-text {
-  font-size: 0.8rem;
-  color: #FCD34D;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
+  #printableCardArea {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
 
-.mem-card-loc-text {
-  font-size: 0.78rem;
-  color: #CBD5E1;
+  .id-card-3d-flipper {
+    transform: none !important;
+  }
+
+  .id-card-face-back {
+    display: none !important;
+  }
 }
 
 .mem-success-actions {
@@ -11484,6 +11815,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
     opacity: 0.5;
     transform: scale(0.995) translateY(2px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -11591,6 +11923,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
     opacity: 0;
     transform: translateY(6px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -12345,6 +12678,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
 }
 
 @media (max-width: 768px) {
+
   .news-hero-banner,
   .membership-hero-banner,
   .issues-hero-banner {
@@ -12392,4 +12726,4 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   .filter-search-box {
     width: 100%;
   }
-}
+}

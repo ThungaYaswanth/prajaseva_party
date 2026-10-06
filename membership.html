@@ -136,14 +136,138 @@
     <section class="mem-page-section">
       <div class="mem-page-container">
 
-        <!-- LEFT SIDE: Leader Image, Telugu Heading, Description & 3 Benefit Cards -->
+        <!-- LEFT SIDE: Exact Member ID Card, Telugu Heading, Description & 3 Benefit Cards -->
         <div class="mem-left-side">
 
-          <!-- Leader Portrait with Soft Red/Yellow Splash -->
-          <div class="mem-leader-stage">
-            <div class="mem-leader-splash" aria-hidden="true"></div>
-            <img src="assets/images/leader-namaste.png" alt="తల్లారం నర్సింలు - పార్టీ అధ్యక్షుడు" class="mem-leader-img"
-              loading="eager">
+          <!-- Exact Member ID Card Component with Smooth 3D Flip -->
+          <div class="mem-id-card-frame">
+            <div class="id-card-3d-scene" tabindex="0" role="region" aria-label="Praja Seva Party ID Card (Hover to flip 3D)">
+              <div class="id-card-3d-flipper">
+
+                <!-- 1. FRONT SIDE OF ID CARD -->
+                <div class="id-card-face id-card-face-front">
+                  <div class="id-card-body card-template-exact mem-id-card-exact">
+                    <!-- 1. Red Header Banner with Round Emblem & Telugu Slogan -->
+                    <div class="id-header-exact">
+                      <div class="id-emblem-ring">
+                        <img src="assets/images/party-emblem.png" alt="ప్రజాసేవ పార్టీ గుర్తు"
+                          class="id-emblem-exact-img">
+                      </div>
+                      <div class="id-title-exact-wrap">
+                        <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
+                        <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                      </div>
+                    </div>
+
+                    <!-- 2. Golden-Yellow & Red Ribbon: —— ID CARD —— -->
+                    <div class="id-ribbon-exact">
+                      <div class="id-ribbon-content">
+                        <span class="ribbon-dash">—</span>
+                        <span class="ribbon-text">ID CARD</span>
+                        <span class="ribbon-dash">—</span>
+                      </div>
+                    </div>
+
+                    <!-- 3. Photo (Left) + Member Details (Right) -->
+                    <div class="id-info-exact-grid">
+                      <!-- Photo on Left (Studio Blue Background, Passport photo) -->
+                      <div class="id-photo-exact-col">
+                        <div class="id-photo-exact-frame studio-blue-bg">
+                          <img src="assets/images/passport1.png" alt="తల్లారం నర్సింలు ఫోటో" class="id-photo-exact-img">
+                        </div>
+                      </div>
+
+                      <!-- Details on Right (Cleanly aligned, bold red field values) -->
+                      <div class="id-fields-exact-col">
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Name</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red">తల్లారం నర్సింలు</span>
+                        </div>
+                        <div class="id-row-exact desig-exact-row">
+                          <span class="id-lbl-exact">Designation</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red desig-wrap">
+                            <span>President</span>
+                            <span>Telangana</span>
+                          </span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">ID No</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red id-num-bold">PSP00000001</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Blood Group</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red">B+</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Mobile No</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red">7989454568</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">District</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red">Telangana</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) -->
+                    <div class="id-auth-exact-strip">
+                      <!-- Left: QR Code + Tagline -->
+                      <div class="id-qr-exact-wrap">
+                        <div class="id-qr-box-frame">
+                          <img src="assets/images/qr-code.svg" alt="ID QR Code" class="id-qr-img">
+                        </div>
+                        <div class="id-tagline-exact">
+                          <div class="tagline-bars-exact">
+                            <span class="bar-gold"></span>
+                            <span class="bar-red"></span>
+                          </div>
+                          <span class="tagline-line1">Together for a</span>
+                          <span class="tagline-line2">Better Tomorrow</span>
+                        </div>
+                      </div>
+
+                      <!-- Center: Golden Sri Chakra Emblem Watermark -->
+                      <div class="id-watermark-exact">
+                        <img src="assets/images/party-emblem.png" alt="Party Emblem Watermark" class="id-watermark-img">
+                      </div>
+
+                      <!-- Right: Signature + Authorised Signatory -->
+                      <div class="id-signature-exact-wrap">
+                        <div class="signature-drawing">
+                          <svg viewBox="0 0 110 36" width="94" height="30">
+                            <path
+                              d="M8 22 C 16 6, 22 4, 30 18 C 34 26, 40 10, 46 22 C 52 30, 58 14, 68 18 C 76 22, 84 12, 92 16 M10 26 L96 24"
+                              fill="none" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <span class="signature-lbl-exact">Authorised Signatory</span>
+                      </div>
+                    </div>
+
+                    <!-- 5. Bottom Red Curved Banner: ప్రజా సేవా పార్టీ -->
+                    <div class="id-bottom-exact-banner">
+                      <div class="id-bottom-gold-curve"></div>
+                      <span class="id-bottom-telugu-text">ప్రజా సేవా పార్టీ</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) -->
+                <div class="id-card-face id-card-face-back">
+                  <div class="id-card-body card-template-exact id-card-back-body">
+                    <img src="assets/images/id-card-back-clean.png" alt="ప్రజా సేవా పార్టీ గుర్తింపు కార్డు వెనుక భాగం" class="id-card-back-full-img" loading="eager">
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
 
           <!-- Red & Yellow Accent Bar -->
@@ -156,132 +280,137 @@
             <span class="mem-head-dark" data-i18n="memPageHead3">అవండి..</span>
           </h2>
 
-        <!-- Telugu Message / Subtitle -->
-        <p class="mem-left-desc" data-i18n="memPageSub">
-          తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం, మన ప్రయాణంలో మీరు కూడా భాగస్వామ్యం అవండి.
-        </p>
+          <!-- Telugu Message / Subtitle -->
+          <p class="mem-left-desc" data-i18n="memPageSub">
+            తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం, మన ప్రయాణంలో మీరు కూడా భాగస్వామ్యం అవండి.
+          </p>
 
-        <!-- 3 Small Benefit Cards -->
-        <div class="mem-benefits-row">
-          <!-- Benefit 1 -->
-          <div class="mem-benefit-item">
-            <div class="mem-benefit-icon-circle icon-circle-red">
-              <i class="bi bi-people-fill"></i>
+          <!-- 3 Small Benefit Cards -->
+          <div class="mem-benefits-row">
+            <!-- Benefit 1 -->
+            <div class="mem-benefit-item">
+              <div class="mem-benefit-icon-circle icon-circle-red">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div class="mem-benefit-title" data-i18n="memBenefit1Title">ప్రజా కోసం</div>
+              <div class="mem-benefit-sub" data-i18n="memBenefit1Sub">మన సమాజం ముందుకు</div>
             </div>
-            <div class="mem-benefit-title" data-i18n="memBenefit1Title">ప్రజా కోసం</div>
-            <div class="mem-benefit-sub" data-i18n="memBenefit1Sub">మన సమాజాల ముందుకు</div>
+
+            <!-- Benefit 2 -->
+            <div class="mem-benefit-item">
+              <div class="mem-benefit-icon-circle icon-circle-gold">
+                <i class="bi bi-flower1"></i>
+              </div>
+              <div class="mem-benefit-title" data-i18n="memBenefit2Title">మా విశ్వసనీయత</div>
+              <div class="mem-benefit-sub" data-i18n="memBenefit2Sub">ప్రతి మనిషి సంక్షేమం</div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="mem-benefit-item">
+              <div class="mem-benefit-icon-circle icon-circle-red">
+                <i class="bi bi-flag-fill"></i>
+              </div>
+              <div class="mem-benefit-title" data-i18n="memBenefit3Title">మంచి తెలంగాణ</div>
+              <div class="mem-benefit-sub" data-i18n="memBenefit3Sub">మన భవిష్యత్తు కోసం భవిష్యత్తు</div>
+            </div>
           </div>
 
-          <!-- Benefit 2 -->
-          <div class="mem-benefit-item">
-            <div class="mem-benefit-icon-circle icon-circle-gold">
-              <i class="bi bi-flower1"></i>
-            </div>
-            <div class="mem-benefit-title" data-i18n="memBenefit2Title">సేవా దృక్పథం</div>
-            <div class="mem-benefit-sub" data-i18n="memBenefit2Sub">ప్రతి ఒక్కరి సహకారం</div>
-          </div>
-
-          <!-- Benefit 3 -->
-          <div class="mem-benefit-item">
-            <div class="mem-benefit-icon-circle icon-circle-red">
-              <i class="bi bi-mortarboard-fill"></i>
-            </div>
-            <div class="mem-benefit-title" data-i18n="memBenefit3Title">మంచి తెలంగాణ</div>
-            <div class="mem-benefit-sub" data-i18n="memBenefit3Sub">మన చేతుల్లో మన భవిష్యత్తు</div>
-          </div>
         </div>
 
+        <!-- RIGHT SIDE: Clean White Membership Form Card -->
+        <div class="mem-right-card">
 
+          <!-- Initial Form View -->
+          <div id="membershipFormView">
+            <!-- Card Header -->
+            <h2 class="mem-form-title" data-i18n="memFormTitle">వివరాలు ఇవ్వండి</h2>
+            <div class="mem-form-accent-bar" aria-hidden="true"></div>
+            <p class="mem-form-subtitle" data-i18n="memFormSub">
+              ప్రజా సేవలో భాగస్వామ్యం అవ్వడానికి మీ వివరాలు నమోదు చేయండి.
+            </p>
 
-      </div>
+            <!-- Form Element (Modern 2-Column Grid Matching Reference) -->
+            <form id="dedicatedMembershipForm" class="mem-modern-grid-form" novalidate>
 
-      <!-- RIGHT SIDE: Clean White Membership Form Card -->
-      <div class="mem-right-card">
-
-        <!-- Initial Form View -->
-        <div id="membershipFormView">
-          <!-- Card Header -->
-          <h2 class="mem-form-title" data-i18n="memFormTitle">వివరాలు ఇవ్వండి</h2>
-          <p class="mem-form-subtitle" data-i18n="memFormSub">
-            ప్రజా సేవలో భాగస్వామ్యం కావడానికి మీ వివరాలు నమోదు చేయండి.
-          </p>
-          <div class="mem-form-accent-bar" aria-hidden="true"></div>
-
-          <!-- Form Element -->
-          <form id="dedicatedMembershipForm" novalidate>
-
-            <!-- 1. Full Name -->
-            <div class="mem-form-group">
-              <label for="memFullName" class="mem-form-label">
-                <i class="bi bi-person-fill"></i>
-                <span data-i18n="memLblFullName">పూర్తి పేరు</span>
-                <span class="req-star">*</span>
-              </label>
-              <input type="text" id="memFullName" class="mem-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి"
-                data-i18n-placeholder="memPlcFullName" required autocomplete="name">
-              <div class="mem-error-text" id="errFullName">దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.</div>
-            </div>
-
-            <!-- 2. Mobile Number + Send OTP Button -->
-            <div class="mem-form-group">
-              <label for="memMobile" class="mem-form-label">
-                <i class="bi bi-telephone-fill"></i>
-                <span data-i18n="memLblMobile">మొబైల్ నంబర్</span>
-                <span class="req-star">*</span>
-              </label>
-              <div class="mem-phone-input-wrap">
-                <input type="tel" id="memMobile" class="mem-input" placeholder="మీ మొబైల్ నంబర్"
-                  data-i18n-placeholder="memPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
-                <button type="button" id="btnSendOtp" class="btn-otp-action">
-                  <i class="bi bi-shield-lock"></i>
-                  <span id="btnSendOtpLabel" data-i18n="memBtnSendOtp">OTP పంపండి</span>
-                </button>
-              </div>
-              <div class="mem-error-text" id="errMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.
-              </div>
-
-              <!-- OTP Verification Panel (Expands upon clicking Send OTP) -->
-              <div id="otpVerifyPanel" class="mem-otp-verify-panel">
-                <label for="memOtpInput" class="mem-form-label small mb-1">
-                  <i class="bi bi-key-fill text-warning"></i>
-                  <span data-i18n="memLblOtp">OTP ధృవీకరణ కోడ్</span>
+              <!-- Row 1: Full Name & Mobile Number (2 columns) -->
+              <div class="mem-form-group">
+                <label for="memFullName" class="mem-form-label">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="memLblFullName">పూర్తి పేరు</span>
                   <span class="req-star">*</span>
                 </label>
-                <div class="mem-otp-box-row">
-                  <input type="text" id="memOtpInput" class="mem-input text-center fw-bold" placeholder="6 అంకెల OTP"
-                    data-i18n-placeholder="memPlcOtp" maxlength="6" inputmode="numeric"
-                    style="letter-spacing: 4px; font-size: 1.1rem;">
-                  <button type="button" id="btnVerifyOtp" class="btn-verify-otp-action">
-                    <span data-i18n="memBtnVerifyOtp">ధృవీకరించండి</span>
+                <input type="text" id="memFullName" class="mem-input" placeholder="మీ పూర్తి పేరు నమోదు చేయండి"
+                  data-i18n-placeholder="memPlcFullName" required autocomplete="name">
+                <div class="mem-error-text" id="errFullName">దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.</div>
+              </div>
+
+              <div class="mem-form-group">
+                <label for="memMobile" class="mem-form-label">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span data-i18n="memLblMobile">మొబైల్ నంబర్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="mem-phone-input-wrap">
+                  <input type="tel" id="memMobile" class="mem-input" placeholder="మీ మొబైల్ నంబర్"
+                    data-i18n-placeholder="memPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
+                  <button type="button" id="btnSendOtp" class="btn-otp-action">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <span id="btnSendOtpLabel" data-i18n="memBtnSendOtp">OTP పంపండి</span>
                   </button>
                 </div>
-                <div class="mem-otp-hint" id="otpHintText">
-                  <i class="bi bi-info-circle"></i> డెమో ధృవీకరణ OTP: <strong id="demoOtpCode">849201</strong>
+                <div class="mem-error-text" id="errMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
+
+                <!-- OTP Verification Panel -->
+                <div id="otpVerifyPanel" class="mem-otp-verify-panel">
+                  <label for="memOtpInput" class="mem-form-label small mb-1">
+                    <i class="bi bi-key-fill text-warning"></i>
+                    <span data-i18n="memLblOtp">OTP ధృవీకరణ కోడ్</span>
+                    <span class="req-star">*</span>
+                  </label>
+                  <div class="mem-otp-box-row">
+                    <input type="text" id="memOtpInput" class="mem-input text-center fw-bold" placeholder="6 అంకెల OTP"
+                      data-i18n-placeholder="memPlcOtp" maxlength="6" inputmode="numeric"
+                      style="letter-spacing: 4px; font-size: 1.1rem;">
+                    <button type="button" id="btnVerifyOtp" class="btn-verify-otp-action">
+                      <span data-i18n="memBtnVerifyOtp">ధృవీకరించండి</span>
+                    </button>
+                  </div>
+                  <div class="mem-otp-hint" id="otpHintText">
+                    <i class="bi bi-info-circle"></i> డెమో ధృవీకరణ OTP: <strong id="demoOtpCode">849201</strong>
+                  </div>
+                  <div class="mem-error-text" id="errOtp">దయచేసి సరైన OTP నమోదు చేయండి.</div>
                 </div>
-                <div class="mem-error-text" id="errOtp">దయచేసి సరైన OTP నమోదు చేయండి.</div>
+
+                <!-- Verified Badge -->
+                <div id="otpVerifiedBadge" class="mem-otp-verified-badge">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="memOtpVerified">మొబైల్ నంబర్ విజయవంతంగా ధృవీకరించబడింది!</span>
+                </div>
               </div>
 
-              <!-- Verified Badge -->
-              <div id="otpVerifiedBadge" class="mem-otp-verified-badge">
-                <i class="bi bi-check-circle-fill"></i>
-                <span data-i18n="memOtpVerified">మొబైల్ నంబర్ విజయవంతంగా ధృవీకరించబడింది!</span>
+              <!-- Row 2: Email & Date of Birth (2 columns) -->
+              <div class="mem-form-group">
+                <label for="memEmail" class="mem-form-label">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span data-i18n="memLblEmail">ఇమెయిల్</span>
+                </label>
+                <input type="email" id="memEmail" class="mem-input" placeholder="మీ ఇమెయిల్ (ఐచ్ఛికం)"
+                  data-i18n-placeholder="memPlcEmail" autocomplete="email">
+                <div class="mem-error-text" id="errEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
               </div>
-            </div>
 
-            <!-- 3. Email (Optional) -->
-            <div class="mem-form-group">
-              <label for="memEmail" class="mem-form-label">
-                <i class="bi bi-envelope-fill"></i>
-                <span data-i18n="memLblEmail">ఈమెయిల్</span>
-              </label>
-              <input type="email" id="memEmail" class="mem-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)"
-                data-i18n-placeholder="memPlcEmail" autocomplete="email">
-              <div class="mem-error-text" id="errEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
-            </div>
+              <div class="mem-form-group">
+                <label for="memDob" class="mem-form-label">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span data-i18n="memLblDob">పుట్టిన తేదీ</span>
+                </label>
+                <div class="mem-input-icon-wrap">
+                  <input type="text" id="memDob" class="mem-input" placeholder="dd/mm/yyyy" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                  <i class="bi bi-calendar3 mem-input-trailing-icon"></i>
+                </div>
+              </div>
 
-            <!-- 4. District & Constituency (Searchable Dropdowns) -->
-            <div class="mem-form-row-2">
-              <!-- District Dropdown -->
+              <!-- Row 3: District & Constituency (2 columns) -->
               <div class="mem-form-group">
                 <label class="mem-form-label">
                   <i class="bi bi-geo-alt-fill"></i>
@@ -292,7 +421,7 @@
                   <input type="hidden" id="memDistrict" name="district" required>
                   <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
                     <span class="searchable-trigger-text is-placeholder" id="districtTriggerText"
-                      data-i18n="memPlcDistrict">జిల్లా ఎంపిక చేయండి</span>
+                      data-i18n="memPlcDistrict">మీ జిల్లా ఎంపిక చేయండి</span>
                     <i class="bi bi-chevron-down searchable-chevron"></i>
                   </div>
                   <div class="searchable-dropdown">
@@ -302,14 +431,12 @@
                         data-i18n-placeholder="searchPlaceholder" autocomplete="off">
                     </div>
                     <ul class="searchable-options" id="districtOptionsList">
-                      <!-- Populated dynamically with all 33 Telangana districts -->
                     </ul>
                   </div>
                 </div>
                 <div class="mem-error-text" id="errDistrict">దయచేసి మీ జిల్లాను ఎంపిక చేయండి.</div>
               </div>
 
-              <!-- Constituency Dropdown -->
               <div class="mem-form-group">
                 <label class="mem-form-label">
                   <i class="bi bi-flag-fill"></i>
@@ -330,49 +457,44 @@
                         data-i18n-placeholder="searchPlaceholder" autocomplete="off">
                     </div>
                     <ul class="searchable-options" id="constituencyOptionsList">
-                      <!-- Populated dynamically based on selected district -->
                     </ul>
                   </div>
                 </div>
                 <div class="mem-error-text" id="errConstituency">దయచేసి నియోజకవర్గాన్ని ఎంపిక చేయండి.</div>
               </div>
-            </div>
 
-            <!-- 5. Mandal / Town (Searchable Dropdown) -->
-            <div class="mem-form-group">
-              <label class="mem-form-label">
-                <i class="bi bi-house-door-fill"></i>
-                <span data-i18n="memLblMandal">మండలం / పట్టణం</span>
-                <span class="req-star">*</span>
-              </label>
-              <div class="searchable-select" id="mandalSelect">
-                <input type="hidden" id="memMandal" name="mandal" required>
-                <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
-                  <span class="searchable-trigger-text is-placeholder" id="mandalTriggerText"
-                    data-i18n="memPlcMandal">మండలం / పట్టణం ఎంపిక చేయండి</span>
-                  <i class="bi bi-chevron-down searchable-chevron"></i>
-                </div>
-                <div class="searchable-dropdown">
-                  <div class="searchable-search-box">
-                    <i class="bi bi-search"></i>
-                    <input type="text" class="searchable-input" placeholder="శోధించండి..."
-                      data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+              <!-- Row 4: Mandal / Town (Full width field) -->
+              <div class="mem-form-group full-width-field">
+                <label class="mem-form-label">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span data-i18n="memLblMandal">మండలం / పట్టణం</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="searchable-select" id="mandalSelect">
+                  <input type="hidden" id="memMandal" name="mandal" required>
+                  <div class="searchable-trigger" tabindex="0" role="combobox" aria-expanded="false">
+                    <span class="searchable-trigger-text is-placeholder" id="mandalTriggerText"
+                      data-i18n="memPlcMandal">మండలం / పట్టణం ఎంపిక చేయండి</span>
+                    <i class="bi bi-chevron-down searchable-chevron"></i>
                   </div>
-                  <ul class="searchable-options" id="mandalOptionsList">
-                    <!-- Populated dynamically -->
-                  </ul>
+                  <div class="searchable-dropdown">
+                    <div class="searchable-search-box">
+                      <i class="bi bi-search"></i>
+                      <input type="text" class="searchable-input" placeholder="శోధించండి..."
+                        data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+                    </div>
+                    <ul class="searchable-options" id="mandalOptionsList">
+                    </ul>
+                  </div>
                 </div>
+                <div class="mem-error-text" id="errMandal">దయచేసి మండలం లేదా పట్టణాన్ని ఎంపిక చేయండి.</div>
               </div>
-              <div class="mem-error-text" id="errMandal">దయచేసి మండలం లేదా పట్టణాన్ని ఎంపిక చేయండి.</div>
-            </div>
 
-            <!-- 6. Blood Group & Photo Upload -->
-            <div class="mem-form-row-2">
-              <!-- Blood Group Dropdown -->
+              <!-- Row 5: Blood Group & Photo (2 columns) -->
               <div class="mem-form-group">
                 <label class="mem-form-label">
                   <i class="bi bi-droplet-fill text-danger"></i>
-                  <span data-i18n="memLblBloodGroup">రక్త వర్గం</span>
+                  <span data-i18n="memLblBloodGroup">రక్త గ్రూప్</span>
                 </label>
                 <div class="searchable-select" id="bloodGroupSelect">
                   <input type="hidden" id="memBloodGroup" name="bloodGroup" value="A+">
@@ -395,94 +517,165 @@
                 </div>
               </div>
 
-              <!-- Photo Upload Box -->
               <div class="mem-form-group">
                 <label class="mem-form-label">
                   <i class="bi bi-camera-fill"></i>
                   <span data-i18n="memLblPhoto">మీ ఫోటో</span>
+                  <span class="req-star">*</span>
                 </label>
                 <div class="mem-photo-box" id="memPhotoDropzone" role="button" tabindex="0">
-                  <input type="file" id="memPhotoInput" accept="image/png, image/jpeg, image/jpg"
-                    style="display: none;">
+                  <input type="file" id="memPhotoInput" accept="image/png, image/jpeg, image/jpg" style="display: none;">
                   <div class="mem-photo-icon-wrap">
                     <i class="bi bi-camera-fill"></i>
                   </div>
                   <span class="mem-photo-text" data-i18n="memUploadPhotoText">ఫోటో అప్‌లోడ్ చేయండి</span>
-                  <small class="mem-photo-sub" data-i18n="memUploadPhotoSub">JPG, PNG (Max 2MB)</small>
+                  <small class="mem-photo-sub" data-i18n="memUploadPhotoSub">(JPG, PNG, Max 2MB)</small>
                   <div class="mem-photo-preview" id="memPhotoPreview">
                     <img src="" alt="సభ్యుడి ఫోటో" id="memPhotoPreviewImg">
-                    <button type="button" class="mem-photo-remove-btn" id="memPhotoRemoveBtn"
-                      title="తొలగించండి">&times;</button>
+                    <button type="button" class="mem-photo-remove-btn" id="memPhotoRemoveBtn" title="తొలగించండి">&times;</button>
                   </div>
                 </div>
-                <div class="mem-error-text" id="errPhoto">దయచేసి 2MB లోపు ఫైల్ ఎంచుకోండి.</div>
+                <div class="mem-error-text" id="errPhoto">దయచేసి మీ ఫోటోను అప్‌లోడ్ చేయండి.</div>
               </div>
-            </div>
 
-            <!-- 7. Interests / Roles Checkboxes -->
-            <div class="mem-form-group">
-              <label class="mem-form-label">
-                <i class="bi bi-people-fill"></i>
-                <span data-i18n="memLblInterests">మీ ఆసక్తి / పాత్ర</span>
-                <span class="req-star">*</span>
-              </label>
-              <div class="mem-checkbox-grid" id="rolesCheckboxGrid">
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="పార్టీ సభ్యత్వం" checked>
-                  <span data-i18n="memRoleParty">పార్టీ సభ్యత్వం</span>
+              <!-- Row 6: Payment Method (Full width field) -->
+              <div class="mem-form-group full-width-field">
+                <label class="mem-form-label">
+                  <i class="bi bi-credit-card-2-front-fill"></i>
+                  <span data-i18n="memLblPayment">చెల్లింపు పద్ధతి</span>
+                  <span class="req-star">*</span>
                 </label>
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="వాలంటీర్">
-                  <span data-i18n="memRoleVolunteer">వాలంటీర్</span>
+                <div class="mem-method-grid" id="memPaymentMethodGrid">
+                  <div class="mem-method-card active" data-method="upi" tabindex="0" role="button">
+                    <i class="bi bi-qr-code-scan mem-method-icon"></i>
+                    <div class="mem-method-title" data-i18n="memPayUpi">UPI</div>
+                    <div class="mem-method-sub" data-i18n="memPayUpiSub">UPI ద్వారా</div>
+                  </div>
+                  <div class="mem-method-card" data-method="card" tabindex="0" role="button">
+                    <i class="bi bi-credit-card-fill mem-method-icon"></i>
+                    <div class="mem-method-title" data-i18n="memPayCard">కార్డ్</div>
+                    <div class="mem-method-sub" data-i18n="memPayCardSub">డెబిట్ / క్రెడిట్ కార్డ్</div>
+                  </div>
+                  <div class="mem-method-card" data-method="netbanking" tabindex="0" role="button">
+                    <i class="bi bi-bank2 mem-method-icon"></i>
+                    <div class="mem-method-title" data-i18n="memPayNet">నెట్ బ్యాంకింగ్</div>
+                    <div class="mem-method-sub" data-i18n="memPayNetSub">ఇంటర్నెట్ బ్యాంకింగ్</div>
+                  </div>
+                </div>
+
+                <!-- Subpanel: UPI -->
+                <div class="mem-payment-subpanel active" id="memSubpanelUpi">
+                  <div class="mem-subpanel-header">
+                    <span class="mem-subpanel-title"><i class="bi bi-phone"></i> <span data-i18n="memPayUpiApp">ఏదైనా UPI యాప్ ద్వారా చెల్లించండి:</span></span>
+                    <span class="badge-verification" data-i18n="memPayVerifyBadge">చెల్లింపు ధృవీకరణ</span>
+                  </div>
+                  <div class="mem-upi-input-group">
+                    <input type="text" id="memUpiIdInput" class="mem-input" placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)" data-i18n-placeholder="memPlcUpi">
+                    <button type="button" id="btnMemShowQr" class="btn-qr-show">
+                      <i class="bi bi-qr-code text-danger"></i> <span data-i18n="memBtnShowQr">QR కోడ్ చూపించు</span>
+                    </button>
+                  </div>
+                  <div id="memInlineQrBox" class="mem-inline-qr-box" style="display: none;">
+                    <img src="assets/images/qr-code.svg" alt="UPI QR" class="mem-qr-img">
+                    <div class="small text-muted mt-1">GPay, PhonePe, Paytm తో స్కాన్ చేయండి</div>
+                    <div class="badge bg-danger-subtle text-danger mt-1">prajasevaparty@upi</div>
+                  </div>
+                </div>
+
+                <!-- Subpanel: Card -->
+                <div class="mem-payment-subpanel" id="memSubpanelCard" style="display: none;">
+                  <div class="small fw-bold text-dark mb-2"><i class="bi bi-shield-lock"></i> కార్డ్ వివరాలు:</div>
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <input type="text" class="mem-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19">
+                    </div>
+                    <div class="col-6">
+                      <input type="text" class="mem-input" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="col-6">
+                      <input type="password" class="mem-input" placeholder="CVV" maxlength="3">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Subpanel: Net Banking -->
+                <div class="mem-payment-subpanel" id="memSubpanelNetbanking" style="display: none;">
+                  <div class="small fw-bold text-dark mb-2"><i class="bi bi-bank"></i> మీ బ్యాంక్ ఎంచుకోండి:</div>
+                  <select class="mem-input">
+                    <option value="">బ్యాంక్ ఎంపిక చేయండి</option>
+                    <option value="sbi">State Bank of India (SBI)</option>
+                    <option value="hdfc">HDFC Bank</option>
+                    <option value="icici">ICICI Bank</option>
+                    <option value="axis">Axis Bank</option>
+                    <option value="canara">Canara Bank</option>
+                    <option value="union">Union Bank of India</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 7: Interests / Roles Checkboxes (Full width field) -->
+              <div class="mem-form-group full-width-field">
+                <label class="mem-form-label">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="memLblInterests">మీ ఆసక్తి / పాత్ర</span>
+                  <span class="req-star">*</span>
                 </label>
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="కార్యక్రమాల్లో పాల్గొనడం">
-                  <span data-i18n="memRoleEvents">కార్యక్రమాల్లో పాల్గొనడం</span>
+                <div class="mem-checkbox-grid" id="rolesCheckboxGrid">
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="పార్టీ సభ్యత్వం" checked>
+                    <span data-i18n="memRoleParty">పార్టీ సభ్యత్వం</span>
+                  </label>
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="కార్యకర్తగా పనిచేయడం">
+                    <span data-i18n="memRoleWorker">కార్యకర్తగా పనిచేయడం</span>
+                  </label>
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="ప్రజా సేవ">
+                    <span data-i18n="memRoleService">ప్రజా సేవ</span>
+                  </label>
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="నాయకత్వం">
+                    <span data-i18n="memRoleLeadership">నాయకత్వం</span>
+                  </label>
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="జనసేవ సమూహం">
+                    <span data-i18n="memRoleTeam">జనసేవ సమూహం</span>
+                  </label>
+                  <label class="mem-check-item">
+                    <input type="checkbox" name="interestRole" value="ఇతర">
+                    <span data-i18n="memRoleOther">ఇతర</span>
+                  </label>
+                </div>
+                <div class="mem-error-text" id="errRoles">దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.</div>
+              </div>
+
+              <!-- Row 8: Message / Suggestions (Full width field) -->
+              <div class="mem-form-group full-width-field">
+                <label for="memMessage" class="mem-form-label">
+                  <i class="bi bi-chat-left-text-fill"></i>
+                  <span data-i18n="memLblMessage">సందేశం / సూచనలు</span>
                 </label>
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="సోషల్ మీడియా">
-                  <span data-i18n="memRoleSocial">సోషల్ మీడియా</span>
-                </label>
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="ప్రజా సేవ">
-                  <span data-i18n="memRoleService">ప్రజా సేవ</span>
-                </label>
-                <label class="mem-check-item">
-                  <input type="checkbox" name="interestRole" value="ఇతర">
-                  <span data-i18n="memRoleOther">ఇతర</span>
+                <textarea id="memMessage" class="mem-textarea" placeholder="మీ అభిప్రాయాలు, సూచనలు ఇక్కడ రాయండి (ఐచ్ఛికం)"
+                  data-i18n-placeholder="memPlcMessage"></textarea>
+              </div>
+
+              <!-- Row 9: Consent Checkbox (Full width field) -->
+              <div class="mem-consent-wrap full-width-field" id="consentWrap">
+                <input type="checkbox" id="memConsentCheck" required>
+                <label for="memConsentCheck" data-i18n="memConsentText">
+                  నేను ఇచ్చిన వివరాలు సరైనవని నిర్ధారిస్తున్నాను.
                 </label>
               </div>
-              <div class="mem-error-text" id="errRoles">దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.</div>
-            </div>
+              <div class="mem-error-text full-width-field" id="errConsent" style="margin-top: -12px; margin-bottom: 12px;">దయచేసి నియమాలను అంగీకరించండి.</div>
 
-            <!-- 8. Message / Suggestions -->
-            <div class="mem-form-group">
-              <label for="memMessage" class="mem-form-label">
-                <i class="bi bi-chat-left-text-fill"></i>
-                <span data-i18n="memLblMessage">సందేశం / సూచనలు</span>
-              </label>
-              <textarea id="memMessage" class="mem-textarea" placeholder="మీ అభిప్రాయాలు, సూచనలు ఇక్కడ రాయండి (ఐచ్ఛికం)"
-                data-i18n-placeholder="memPlcMessage"></textarea>
-            </div>
+              <!-- Row 10: Submit Button (Full width field) -->
+              <button type="submit" class="btn-mem-submit full-width-field" id="btnSubmitMembership">
+                <i class="bi bi-send-fill"></i>
+                <span data-i18n="memBtnSubmit">వివరాలు పంపండి</span>
+              </button>
 
-            <!-- 9. Consent Checkbox -->
-            <div class="mem-consent-wrap" id="consentWrap">
-              <input type="checkbox" id="memConsentCheck" required>
-              <label for="memConsentCheck" data-i18n="memConsentText">
-                నేను ఇచ్చిన వివరాలు సరైనవని నిర్ధారిస్తున్నాను.
-              </label>
-            </div>
-            <div class="mem-error-text" id="errConsent" style="margin-top: -16px; margin-bottom: 16px;">దయచేసి నియమాలను
-              అంగీకరించండి.</div>
-
-            <!-- 10. Submit Button: Yellow CTA -->
-            <button type="submit" class="btn-mem-submit" id="btnSubmitMembership">
-              <i class="bi bi-send-fill"></i>
-              <span data-i18n="memBtnSubmit">వివరాలు పంపండి</span>
-            </button>
-
-          </form>
-        </div>
+            </form>
+          </div>
 
         <!-- Submission Success / Thank You Screen (Hidden by default) -->
         <div id="membershipSuccessView" class="mem-success-card">
@@ -500,24 +693,134 @@
             <span class="mem-id-chip-val" id="confirmedMemberId">PSP-TG-2026-89421</span>
           </div>
 
-          <!-- Digital Member ID Card Preview -->
+          <!-- Official Member ID Card (Exact Reference Design Format with 3D Flip) -->
           <div class="mem-card-preview-wrap" id="printableCardArea">
-            <div class="mem-card-head">
-              <img src="assets/images/party-emblem.png" alt="ప్రజాసేవ పార్టీ చిహ్నం">
-              <div>
-                <div class="mem-card-head-title">ప్రజాసేవ పార్టీ - సభ్యత్వ కార్డు</div>
-                <div class="mem-card-head-sub">PRAJASEVA PARTY &bull; OFFICIAL MEMBER</div>
-              </div>
-            </div>
-            <div class="mem-card-body-content">
-              <img src="assets/images/passport1.png" alt="సభ్యుడి చిత్రం" class="mem-card-photo"
-                id="confirmedCardPhoto">
-              <div class="mem-card-details">
-                <div class="mem-card-name" id="confirmedCardName">నారాయణ రావు</div>
-                <div class="mem-card-id-text" id="confirmedCardIdText">ID: PSP-TG-2026-89421</div>
-                <div class="mem-card-loc-text" id="confirmedCardLoc">హైదరాబాద్ &bull; A+</div>
-                <div class="mt-2 badge bg-warning text-dark fw-bold px-2 py-1 small" id="confirmedCardRole">పార్టీ
-                  సభ్యత్వం</div>
+            <div class="id-card-3d-scene" tabindex="0" role="region" aria-label="Member ID Card (Hover to flip 3D)">
+              <div class="id-card-3d-flipper">
+
+                <!-- 1. FRONT SIDE OF ID CARD -->
+                <div class="id-card-face id-card-face-front">
+                  <div class="id-card-body card-template-exact mem-id-card-exact id-card-result">
+                    <!-- 1. Red Header Banner with Round Emblem & Telugu Slogan -->
+                    <div class="id-header-exact">
+                      <div class="id-emblem-ring">
+                        <img src="assets/images/party-emblem.png" alt="ప్రజాసేవ పార్టీ గుర్తు"
+                          class="id-emblem-exact-img">
+                      </div>
+                      <div class="id-title-exact-wrap">
+                        <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
+                        <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                      </div>
+                    </div>
+
+                    <!-- 2. Golden-Yellow & Red Ribbon: —— ID CARD —— -->
+                    <div class="id-ribbon-exact">
+                      <div class="id-ribbon-content">
+                        <span class="ribbon-dash">—</span>
+                        <span class="ribbon-text">ID CARD</span>
+                        <span class="ribbon-dash">—</span>
+                      </div>
+                    </div>
+
+                    <!-- 3. Photo (Left) + Member Details (Right) -->
+                    <div class="id-info-exact-grid">
+                      <!-- Photo on Left (Studio Blue Background, Passport photo) -->
+                      <div class="id-photo-exact-col">
+                        <div class="id-photo-exact-frame studio-blue-bg">
+                          <img src="assets/images/passport1.png" alt="సభ్యుడి ఫోటో" class="id-photo-exact-img"
+                            id="confirmedCardPhoto">
+                        </div>
+                      </div>
+
+                      <!-- Details on Right (Cleanly aligned, bold red field values) -->
+                      <div class="id-fields-exact-col">
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Name</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red" id="confirmedCardName">నారాయణ రావు</span>
+                        </div>
+                        <div class="id-row-exact desig-exact-row">
+                          <span class="id-lbl-exact">Designation</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red desig-wrap" id="confirmedCardRole">
+                            <span>పార్టీ సభ్యత్వం</span>
+                            <span>Telangana</span>
+                          </span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">ID No</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red id-num-bold" id="confirmedCardIdText">PSP-TG-2026-89421</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Blood Group</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red" id="confirmedCardBlood">B+</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">Mobile No</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red" id="confirmedCardMobile">7989454568</span>
+                        </div>
+                        <div class="id-row-exact">
+                          <span class="id-lbl-exact">District</span>
+                          <span class="id-sep-exact">:</span>
+                          <span class="id-val-exact val-red" id="confirmedCardDistrict">Telangana</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) -->
+                    <div class="id-auth-exact-strip">
+                      <!-- Left: QR Code + Tagline -->
+                      <div class="id-qr-exact-wrap">
+                        <div class="id-qr-box-frame">
+                          <img src="assets/images/qr-code.svg" alt="ID QR Code" class="id-qr-img">
+                        </div>
+                        <div class="id-tagline-exact">
+                          <div class="tagline-bars-exact">
+                            <span class="bar-gold"></span>
+                            <span class="bar-red"></span>
+                          </div>
+                          <span class="tagline-line1">Together for a</span>
+                          <span class="tagline-line2">Better Tomorrow</span>
+                        </div>
+                      </div>
+
+                      <!-- Center: Golden Sri Chakra Emblem Watermark -->
+                      <div class="id-watermark-exact">
+                        <img src="assets/images/party-emblem.png" alt="Party Emblem Watermark" class="id-watermark-img">
+                      </div>
+
+                      <!-- Right: Signature + Authorised Signatory -->
+                      <div class="id-signature-exact-wrap">
+                        <div class="signature-drawing">
+                          <svg viewBox="0 0 110 36" width="94" height="30">
+                            <path
+                              d="M8 22 C 16 6, 22 4, 30 18 C 34 26, 40 10, 46 22 C 52 30, 58 14, 68 18 C 76 22, 84 12, 92 16 M10 26 L96 24"
+                              fill="none" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <span class="signature-lbl-exact">Authorised Signatory</span>
+                      </div>
+                    </div>
+
+                    <!-- 5. Bottom Red Curved Banner: ప్రజా సేవా పార్టీ -->
+                    <div class="id-bottom-exact-banner">
+                      <div class="id-bottom-gold-curve"></div>
+                      <span class="id-bottom-telugu-text">ప్రజా సేవా పార్టీ</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) -->
+                <div class="id-card-face id-card-face-back">
+                  <div class="id-card-body card-template-exact id-card-back-body">
+                    <img src="assets/images/id-card-back-clean.png" alt="ప్రజా సేవా పార్టీ గుర్తింపు కార్డు వెనుక భాగం" class="id-card-back-full-img" loading="eager">
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -823,6 +1126,7 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="assets/js/translations.js?v=4.0"></script>
   <script src="assets/js/main.js?v=5.0"></script>
 
@@ -1276,6 +1580,32 @@
         photoPreviewImg.src = '';
       });
 
+      // Payment Method Tabs
+      const paymentCards = document.querySelectorAll('.mem-method-card');
+      const subpanelUpi = document.getElementById('memSubpanelUpi');
+      const subpanelCard = document.getElementById('memSubpanelCard');
+      const subpanelNet = document.getElementById('memSubpanelNetbanking');
+      const btnShowQr = document.getElementById('btnMemShowQr');
+      const inlineQrBox = document.getElementById('memInlineQrBox');
+
+      paymentCards.forEach(card => {
+        card.addEventListener('click', function () {
+          paymentCards.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          const method = this.dataset.method;
+          if (subpanelUpi) subpanelUpi.style.display = method === 'upi' ? 'block' : 'none';
+          if (subpanelCard) subpanelCard.style.display = method === 'card' ? 'block' : 'none';
+          if (subpanelNet) subpanelNet.style.display = method === 'netbanking' ? 'block' : 'none';
+        });
+      });
+
+      if (btnShowQr && inlineQrBox) {
+        btnShowQr.addEventListener('click', function () {
+          const isVisible = inlineQrBox.style.display === 'block';
+          inlineQrBox.style.display = isVisible ? 'none' : 'block';
+        });
+      }
+
       // Form Validation Helpers
       function showError(inputId, errorId, message) {
         const el = document.getElementById(inputId);
@@ -1400,14 +1730,39 @@
         const memberId = `PSP-TG-2026-${randomNum}`;
 
         document.getElementById('confirmedMemberId').textContent = memberId;
-        document.getElementById('confirmedCardName').textContent = nameVal;
-        document.getElementById('confirmedCardIdText').textContent = `ID: ${memberId}`;
-        const blood = document.getElementById('memBloodGroup').value || 'A+';
-        document.getElementById('confirmedCardLoc').textContent = `${distVal.split(' ')[0]} &bull; ${blood}`;
-        document.getElementById('confirmedCardRole').textContent = checkedRoles[0] || 'పార్టీ సభ్యత్వం';
 
-        if (uploadedPhotoData) {
-          document.getElementById('confirmedCardPhoto').src = uploadedPhotoData;
+        // Populate Master Format Card Fields
+        const nameTarget = document.getElementById('confirmedCardName');
+        if (nameTarget) nameTarget.textContent = nameVal || 'సభ్యుడు';
+
+        const idTarget = document.getElementById('confirmedCardIdText');
+        if (idTarget) idTarget.textContent = memberId;
+
+        const bloodTarget = document.getElementById('confirmedCardBlood');
+        const bloodVal = document.getElementById('memBloodGroup').value || 'B+';
+        if (bloodTarget) bloodTarget.textContent = bloodVal;
+
+        const mobileTarget = document.getElementById('confirmedCardMobile');
+        if (mobileTarget) mobileTarget.textContent = mobileVal || '7989454568';
+
+        const districtTarget = document.getElementById('confirmedCardDistrict');
+        const cleanDistrict = distVal ? distVal.replace(/\(.*?\)/g, '').trim() : 'Telangana';
+        if (districtTarget) districtTarget.textContent = cleanDistrict || 'Telangana';
+
+        const roleTarget = document.getElementById('confirmedCardRole');
+        if (roleTarget) {
+          const primaryRole = (checkedRoles.length > 0) ? checkedRoles[0] : 'పార్టీ సభ్యత్వం';
+          const roleLabel = primaryRole.split('(')[0].trim() || 'పార్టీ సభ్యత్వం';
+          roleTarget.innerHTML = `<span>${roleLabel}</span><span>Telangana</span>`;
+        }
+
+        const photoTarget = document.getElementById('confirmedCardPhoto');
+        if (photoTarget) {
+          if (uploadedPhotoData) {
+            photoTarget.src = uploadedPhotoData;
+          } else {
+            photoTarget.src = 'assets/images/passport1.png';
+          }
         }
 
         // Switch to Thank You screen smoothly
@@ -1420,7 +1775,7 @@
           behavior: 'smooth'
         });
 
-        // Trigger confetti/celebration notification
+        // Trigger celebration toast notification
         const toast = document.getElementById('siteToast');
         if (toast && window.bootstrap && bootstrap.Toast) {
           document.getElementById('toastBody').textContent = `సభ్యత్వం విజయవంతంగా పూర్తయింది! సభ్యత్వ సంఖ్య: ${memberId}`;
@@ -1442,7 +1797,7 @@
         btnSendOtp.disabled = false;
         document.getElementById('btnSendOtpLabel').textContent = 'OTP పంపండి';
 
-        districtTriggerText.textContent = 'జిల్లా ఎంపిక చేయండి';
+        districtTriggerText.textContent = 'మీ జిల్లా ఎంపిక చేయండి';
         districtTriggerText.classList.add('is-placeholder');
         districtHiddenInput.value = '';
 
@@ -1454,14 +1809,61 @@
         mandalTriggerText.classList.add('is-placeholder');
         mandalHiddenInput.value = '';
 
+        if (inlineQrBox) inlineQrBox.style.display = 'none';
+        paymentCards.forEach(c => c.classList.remove('active'));
+        const upiCard = document.querySelector('.mem-method-card[data-method="upi"]');
+        if (upiCard) upiCard.classList.add('active');
+        if (subpanelUpi) subpanelUpi.style.display = 'block';
+        if (subpanelCard) subpanelCard.style.display = 'none';
+        if (subpanelNet) subpanelNet.style.display = 'none';
+
         successView.classList.remove('is-visible');
         formView.style.display = 'block';
         window.scrollTo({ top: formView.offsetTop - 80, behavior: 'smooth' });
       });
 
-      // Print Member Card
+      // Mobile / Tablet 3D Flip Card Tap Support
+      document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
+        scene.addEventListener('click', function () {
+          if (window.matchMedia('(hover: none)').matches) {
+            this.classList.toggle('is-flipped');
+          }
+        });
+      });
+
+      // Download / Print Member Card
       document.getElementById('btnPrintCard').addEventListener('click', function () {
-        window.print();
+        const cardNode = document.querySelector('#printableCardArea .id-card-face-front .card-template-exact') ||
+          document.querySelector('#printableCardArea .card-template-exact') ||
+          document.getElementById('printableCardArea');
+        const btn = this;
+
+        if (window.html2canvas && cardNode) {
+          const originalContent = btn.innerHTML;
+          btn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i> <span>డౌన్‌లోడ్ అవుతోంది...</span>';
+          btn.disabled = true;
+
+          html2canvas(cardNode, {
+            scale: 3,
+            useCORS: true,
+            allowTaint: true,
+            backgroundColor: '#ffffff'
+          }).then(function (canvas) {
+            const link = document.createElement('a');
+            const idVal = (document.getElementById('confirmedMemberId')?.textContent || 'Card').trim();
+            link.download = `PSP_MemberCard_${idVal}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+          }).catch(function (err) {
+            console.warn('html2canvas rendering error, falling back to print:', err);
+            window.print();
+          }).finally(function () {
+            btn.innerHTML = originalContent;
+            btn.disabled = false;
+          });
+        } else {
+          window.print();
+        }
       });
 
     })();

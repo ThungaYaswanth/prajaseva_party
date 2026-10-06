@@ -15,7 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initPolicyModal();
   initCampaignSlider();
   initInteractiveMap();
+  init3DFlipCards();
 });
+
+function init3DFlipCards() {
+  document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
+    scene.addEventListener('click', function () {
+      if (window.matchMedia('(hover: none)').matches) {
+        this.classList.toggle('is-flipped');
+      }
+    });
+  });
+}
 
 function updateHeaderHeight() {
   const header = document.getElementById('site-header');
