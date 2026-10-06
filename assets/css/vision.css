@@ -1,0 +1,700 @@
+
+/* ==========================================================================
+   Vision & Mission Page (మా దృష్టి & లక్ష్యం) Styles
+   Matching Exact Reference UI / UX Design
+   ========================================================================== */
+
+/* 1. Base Vision & Mission Section Wrappers */
+.vm-section {
+  position: relative;
+  width: 100%;
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.vm-section.bg-light-warm {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F5 50%, #FFFFFF 100%);
+}
+
+.vm-section.bg-subtle-tint {
+  background: #FAFAF9;
+  border-top: 1px solid #F1F5F9;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+/* 2. Section Header Badges & Two-Line Title */
+.vm-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.vm-badge-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.28);
+  flex-shrink: 0;
+}
+
+.vm-badge-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.vm-badge-primary {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #B91C1C;
+  line-height: 1.15;
+}
+
+.vm-badge-secondary {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #64748B;
+  letter-spacing: 0.3px;
+}
+
+.vm-main-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.28;
+  margin-bottom: 16px;
+  letter-spacing: -0.4px;
+}
+
+.vm-main-title .title-dark {
+  color: #0F172A;
+  display: block;
+}
+
+.vm-main-title .title-crimson {
+  color: #B91C1C;
+  display: block;
+}
+
+.vm-title-accent-bar {
+  width: 65px;
+  height: 4px;
+  background: linear-gradient(90deg, #B91C1C 0%, #F59E0B 100%);
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.vm-main-desc {
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: #334155;
+  margin-bottom: 0;
+}
+
+/* Centered Section Header for Core Values & Approach */
+.vm-center-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 44px;
+}
+
+.vm-center-header .vm-center-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.vm-center-header .vm-center-sub {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #B91C1C;
+  letter-spacing: 0.2px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.vm-center-header .vm-center-sub::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: #B91C1C;
+  border-radius: 2px;
+}
+
+/* 3. Section 1: Our Vision Layout */
+.vm-vision-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.25fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.vm-vision-left {
+  padding-right: 12px;
+}
+
+.vm-vision-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vm-vision-map-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vm-vision-map-card:hover {
+  transform: translateY(-4px);
+}
+
+.vm-vision-map-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(15, 23, 42, 0.12));
+}
+
+.vm-vision-right {
+  display: flex;
+  justify-content: center;
+}
+
+.vm-quote-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #F1F5F9;
+  border-left: 4px solid #B91C1C;
+  border-radius: 16px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  width: 100%;
+  max-width: 320px;
+}
+
+.vm-quote-symbol {
+  font-family: Georgia, serif;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: #B91C1C;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.vm-quote-content {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #1E293B;
+  margin-bottom: 16px;
+}
+
+.vm-quote-dash {
+  width: 36px;
+  height: 3px;
+  background: #B91C1C;
+  border-radius: 2px;
+}
+
+/* 4. Section 2: Our Mission Layout */
+.vm-mission-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.vm-mission-left {
+  position: relative;
+}
+
+.vm-mission-photo-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  border: 4px solid #FFFFFF;
+}
+
+.vm-mission-photo-frame img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.vm-mission-photo-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.vm-mission-photo-badge i {
+  color: #F59E0B;
+}
+
+.vm-mission-right {
+  padding-left: 10px;
+}
+
+/* 5. Section 3: Core Values (6-Card Horizontal Grid) */
+.vm-values-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.vm-value-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 28px 14px 22px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vm-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(185, 28, 28, 0.1);
+  border-color: #FECACA;
+}
+
+.vm-value-icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  border: 1.5px solid #FEE2E2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DC2626;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.vm-value-card:hover .vm-value-icon-circle {
+  transform: scale(1.08);
+  background: #FEE2E2;
+}
+
+.vm-value-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #B91C1C;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.vm-value-desc {
+  font-size: 0.84rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* 6. Section 4: Our Approach (3-Card Feature Grid) */
+.vm-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.vm-approach-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.vm-approach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.vm-approach-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.vm-approach-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vm-approach-card:hover .vm-approach-img-wrap img {
+  transform: scale(1.05);
+}
+
+.vm-approach-overlap-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2.5px solid #B91C1C;
+  box-shadow: 0 6px 16px rgba(185, 28, 28, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B91C1C;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+.vm-approach-body {
+  padding: 34px 24px 26px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.vm-approach-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #B91C1C;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.vm-approach-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vm-approach-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.96rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.vm-approach-bullets li::before {
+  content: '♦';
+  color: #B91C1C;
+  font-size: 0.85rem;
+}
+
+/* 7. Section 5: Our Vision in Action (Action Map & Pillars) */
+.vm-action-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.vm-action-left {
+  padding-right: 12px;
+}
+
+.vm-action-title-group {
+  margin-bottom: 24px;
+}
+
+.vm-action-main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.vm-action-sub-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #B91C1C;
+  display: block;
+}
+
+.vm-action-quote-box {
+  position: relative;
+  background: #FFFFFF;
+  border-left: 3.5px solid #B91C1C;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  margin-bottom: 26px;
+}
+
+.vm-action-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #B91C1C;
+  font-weight: 700;
+}
+
+.vm-action-quote-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.vm-btn-gold-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%);
+  color: #0F172A;
+  font-size: 1.02rem;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255, 184, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vm-btn-gold-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 184, 0, 0.45);
+  color: #0F172A;
+}
+
+.vm-btn-gold-action i {
+  transition: transform 0.25s ease;
+}
+
+.vm-btn-gold-action:hover i {
+  transform: translateX(4px);
+}
+
+/* Center Map Silhouette */
+.vm-action-center-map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vm-action-map-svg-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.vm-action-map-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 14px 28px rgba(217, 119, 6, 0.18));
+}
+
+/* Map Animated Pin Nodes */
+.vm-map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.vm-pin-marker {
+  width: 14px;
+  height: 14px;
+  background: #DC2626;
+  border: 2.5px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.vm-pin-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.3);
+  animation: vmPinPulse 2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes vmPinPulse {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+/* Right Pillars List */
+.vm-action-right-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vm-pillar-pill {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 50px;
+  padding: 10px 20px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.vm-pillar-pill:hover {
+  transform: translateX(6px);
+  border-color: #FECACA;
+  background: #FFFBFB;
+  box-shadow: 0 8px 20px rgba(185, 28, 28, 0.08);
+}
+
+.vm-pillar-icon-bubble {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  color: #DC2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.vm-pillar-pill:hover .vm-pillar-icon-bubble {
+  background: #DC2626;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.vm-pillar-label {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.25;
+}
+
+/* 8. Responsive Breakpoints */
+@media (max-width: 1199.98px) {
+  .vm-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .vm-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+  .vm-vision-left {
+    padding-right: 0;
+  }
+  .vm-badge-row {
+    justify-content: center;
+  }
+  .vm-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .vm-mission-right {
+    padding-left: 0;
+  }
+  .vm-approach-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .vm-action-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .vm-action-left {
+    padding-right: 0;
+  }
+  .vm-action-right-pillars {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .vm-section {
+    padding: 44px 0;
+  }
+  .vm-main-title {
+    font-size: 1.85rem;
+  }
+  .vm-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .vm-value-card {
+    padding: 20px 10px;
+  }
+  .vm-value-icon-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
+  }
+  .vm-value-title {
+    font-size: 1rem;
+  }
+  .vm-value-desc {
+    font-size: 0.78rem;
+  }
+  .vm-action-main-title {
+    font-size: 1.75rem;
+  }
+}

@@ -533,7 +533,72 @@ const translations = {
     memBannerTitle1: "పార్టీలో",
     memBannerTitle2: "సభ్యత్వం పొందండి",
     issuesHeroTitle1: "ప్రజా సమస్యలకు",
-    issuesHeroTitle2: "10 ప్రధాన అంశాలు"
+    issuesHeroTitle2: "10 ప్రధాన అంశాలు",
+    // Vision & Mission Page (మా దృష్టి & లక్ష్యం)
+    visionPageTitle: "మా దృష్టి & లక్ష్యం | Prajaseva Party - Our Vision & Mission",
+    visionBcCurrent: "మా దృష్టి & లక్ష్యం",
+    visionHeroTag: "మా దృష్టి & లక్ష్యం",
+    visionHeroHeadNavy: "మా దృష్టి &",
+    visionHeroHeadRed: "లక్ష్యం",
+    visionHeroDesc: "తెలంగాణ సమగ్ర అభివృద్ధి, సమానత్వం, సుపరిపాలన మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ కట్టుబాటు.",
+    
+    // Section 1: Our Vision
+    visionSecBadgeTe: "మా దృష్టి",
+    visionSecBadgeEn: "Our Vision",
+    visionSecTitlePart1: "సమగ్ర అభివృద్ధితో",
+    visionSecTitlePart2: "సమృద్ధి తెలంగాణ",
+    visionSecDesc: "ప్రతి పౌరుడు గౌరవంతో, అవకాశాలతో, సమానత్వంతో జీవించే సమృద్ధి, సురక్షిత, అభివృద్ధి చెందిన తెలంగాణను నిర్మించడం మా దృష్టి.",
+    visionSecQuote: "ప్రజల కలలతో ముందుకు సాగే అభివృద్ధి తెలంగాణ మా దృష్టి.",
+
+    // Section 2: Our Mission
+    missionSecBadgeTe: "మా లక్ష్యం",
+    missionSecBadgeEn: "Our Mission",
+    missionSecTitlePart1: "ప్రజా కోసం ... ప్రజలతో కలిసి ...",
+    missionSecTitlePart2: "ప్రజల భవిష్యత్తుకోసం",
+    missionSecDesc: "ప్రతి కుటుంబానికి భరోసా చేకూర్చిన, నాణ్యమైన విద్య, వైద్యం, ఉపాధి, సురక్షిత సమాజం మరియు పారదర్శక పాలనతో అభివృద్ధిని సాధించడం మా లక్ష్యం.",
+
+    // Section 3: Core Values
+    valuesSecTitle: "మా ప్రాథమిక విలువలు",
+    valuesSecSub: "Our Core Values",
+    val1Title: "ప్రజా సేవ",
+    val1Desc: "ప్రజలే మా ప్రాధాన్యం",
+    val2Title: "నిజాయితీ",
+    val2Desc: "సత్యం, పారదర్శకత మా బలం",
+    val3Title: "సమానత్వం",
+    val3Desc: "అందరికీ సమాన అవకాశాలు",
+    val4Title: "పారదర్శకత",
+    val4Desc: "ప్రజలకు జవాబుదారీ పాలన",
+    val5Title: "బాధ్యత",
+    val5Desc: "మాటకు కట్టుబడే నిబద్ధత",
+    val6Title: "అభివృద్ధి",
+    val6Desc: "స్థిరమైన ప్రగతి మా లక్ష్యం",
+
+    // Section 4: Our Approach
+    approachSecTitle: "మా దృష్టి సాధన మార్గాలు",
+    approachSecSub: "Our Approach",
+    appr1Title: "మనుషుల్లో పెట్టుబడి",
+    appr1Item1: "నాణ్యమైన విద్య",
+    appr1Item2: "యువత సాధికారత",
+    appr1Item3: "నైపుణ్యాభివృద్ధి...",
+    appr2Title: "సమగ్ర అభివృద్ధి",
+    appr2Item1: "మెరుగైన మౌలిక సదుపాయాలు",
+    appr2Item2: "సమతుల్య రీజనల్ అభివృద్ధి",
+    appr2Item3: "పర్యావరణ పరిరక్షణ",
+    appr3Title: "ప్రతి కుటుంబానికి సంక్షేమం",
+    appr3Item1: "రైతుల అభివృద్ధి",
+    appr3Item2: "సామాజిక భద్రత",
+    appr3Item3: "నాణ్యమైన ఆరోగ్య సేవలు",
+
+    // Section 5: Our Vision in Action
+    actionSecTitle: "మా దృష్టి – ఆచరణలో",
+    actionSecSub: "Our Vision in Action",
+    actionQuote: "ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, మళ్లీ తెలంగాణ కోసం నిరంతరం కృషి.",
+    actionBtnCta: "మా లక్ష్యాలను తెలుసుకోండి",
+    actPill1: "పట్టణాల అభివృద్ధి",
+    actPill2: "గ్రామాల అభివృద్ధి",
+    actPill3: "రైతుల సంక్షేమం",
+    actPill4: "యువతకు అవకాశాలు",
+    actPill5: "సమాజ శ్రేయస్సు"
   },
 
   en: {
@@ -1066,6 +1131,71 @@ const translations = {
     memBannerTitle1: "Join the Party",
     memBannerTitle2: "Get Membership",
     issuesHeroTitle1: "For Public Issues",
-    issuesHeroTitle2: "10 Key Promises"
+    issuesHeroTitle2: "10 Key Promises",
+    // Vision & Mission Page
+    visionPageTitle: "Our Vision & Mission | Prajaseva Party - Telangana Progress",
+    visionBcCurrent: "Our Vision & Mission",
+    visionHeroTag: "OUR VISION & MISSION",
+    visionHeroHeadNavy: "Our Vision &",
+    visionHeroHeadRed: "Mission",
+    visionHeroDesc: "Praja Seva Party's steadfast commitment to inclusive progress, social equity, transparent governance, and the welfare of every household in Telangana.",
+    
+    // Section 1: Our Vision
+    visionSecBadgeTe: "Our Vision",
+    visionSecBadgeEn: "Our Vision",
+    visionSecTitlePart1: "With Comprehensive Progress,",
+    visionSecTitlePart2: "Prosperous Telangana",
+    visionSecDesc: "Our vision is to build a prosperous, safe, and flourishing Telangana where every citizen lives with dignity, equal opportunities, and enduring pride.",
+    visionSecQuote: "A progressive Telangana striding forward hand-in-hand with the aspirations of the people is our vision.",
+
+    // Section 2: Our Mission
+    missionSecBadgeTe: "Our Mission",
+    missionSecBadgeEn: "Our Mission",
+    missionSecTitlePart1: "For the People ... United with the People ...",
+    missionSecTitlePart2: "For the Future of the People",
+    missionSecDesc: "Our mission is to achieve holistic development by providing a safety net for every household, ensuring quality free education, accessible healthcare, meaningful employment, and transparent, accountable governance.",
+
+    // Section 3: Core Values
+    valuesSecTitle: "Our Core Values",
+    valuesSecSub: "Guiding Principles of Praja Seva Party",
+    val1Title: "Public Service",
+    val1Desc: "People are our highest priority",
+    val2Title: "Integrity",
+    val2Desc: "Truth and transparency are our strength",
+    val3Title: "Equality",
+    val3Desc: "Equal opportunities for all citizens",
+    val4Title: "Transparency",
+    val4Desc: "Accountable, people-first governance",
+    val5Title: "Responsibility",
+    val5Desc: "Steadfast commitment to our word",
+    val6Title: "Development",
+    val6Desc: "Sustainable and inclusive progress",
+
+    // Section 4: Our Approach
+    approachSecTitle: "Our Approach",
+    approachSecSub: "Strategic Pathways to Fulfill Our Vision",
+    appr1Title: "Investing in People",
+    appr1Item1: "Quality Education",
+    appr1Item2: "Youth Empowerment",
+    appr1Item3: "Skill Development...",
+    appr2Title: "Comprehensive Development",
+    appr2Item1: "Advanced Infrastructure",
+    appr2Item2: "Balanced Regional Growth",
+    appr2Item3: "Environmental Conservation",
+    appr3Title: "Welfare for Every Family",
+    appr3Item1: "Farmers' Empowerment",
+    appr3Item2: "Social Security",
+    appr3Item3: "Quality Healthcare Services",
+
+    // Section 5: Our Vision in Action
+    actionSecTitle: "Our Vision in Action",
+    actionSecSub: "Delivering Ground-Level Transformation",
+    actionQuote: "Every village, every town, every family... tireless dedication for a prosperous, secure, and thriving Telangana.",
+    actionBtnCta: "Discover Our Goals",
+    actPill1: "Urban Development",
+    actPill2: "Rural & Village Development",
+    actPill3: "Farmers' Welfare",
+    actPill4: "Opportunities for Youth",
+    actPill5: "Community Well-being"
   }
 };
