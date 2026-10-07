@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=43.0">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -179,75 +179,139 @@
     <!-- ==========================================================================
          Section 1 — Party Genesis & Our Story (పార్టీ ఆవిర్భావం)
          ========================================================================== -->
-    <section class="about-story-section" id="party-story">
+    <section class="about-story-section" id="party-story" aria-label="మన ఆవిర్భావం">
       <div class="main-container">
-        <div class="about-story-grid">
-          <!-- Story Text Content Left -->
-          <div class="about-story-text-wrap">
-            <div class="about-section-badge">
-              <i class="bi bi-clock-history"></i>
+        <div class="about-genesis-grid">
+
+          <!-- Left Column: Story & 4 Pillars -->
+          <div class="about-genesis-content-wrap">
+            <!-- Pill Badge: మన ఆవిర్భావం -->
+            <div class="about-genesis-badge">
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
               <span data-i18n="aboutStoryBadge">మన ఆవిర్భావం</span>
             </div>
-            <h2 class="about-section-title" data-i18n="aboutStoryTitle">
-              ప్రజల కష్టాల నుంచే పుట్టిన ప్రజాసేవ పార్టీ
+
+            <!-- Main Heading -->
+            <h2 class="about-genesis-title">
+              <span class="genesis-title-dark" data-i18n="aboutGenesisTitle1">ప్రజల కష్టాల నుంచే పుట్టిన</span>
+              <span class="genesis-title-red" data-i18n="aboutGenesisTitle2">ప్రజాసేవ పార్టీ</span>
             </h2>
-            <p data-i18n="aboutStoryP1">
-              సామాన్య ప్రజల బాధలు, పేదరికం, నిరుద్యోగం, నాణ్యమైన విద్య మరియు వైద్యం అందక అవస్థలు పడుతున్న కుటుంబాల ఆవేదన నుంచి ప్రజాసేవ పార్టీ ఆవిర్భవించింది. అధికారం కోసం కాకుండా, ప్రజా సమస్యల పరిష్కారమే పరమావధిగా ఈ ఉద్యమం ప్రారంభమైంది.
-            </p>
-            <p data-i18n="aboutStoryP2">
-              తెలంగాణ సమాజంలో ప్రతి వర్గానికి సమన్యాయం చేకూరాలని, రైతన్నల కళ్లలో ఆనందం, యువత భవిష్యత్తుకు భరోసా, మహిళలకు గౌరవం, ప్రతి ఒక్కరికీ నాణ్యమైన జీవనం అందించే లక్ష్యంతో పార్టీ అధ్యక్షుడు తల్లారం నర్సింలు నేతృత్వంలో ప్రజల చెంతకు చేరాము.
+
+            <!-- Paragraph -->
+            <p class="about-genesis-desc" data-i18n="aboutGenesisDesc">
+              సామాన్య ప్రజల బాధలు, వేదన, నిరుద్యోగం, న్యాయమైన హక్కులు మరియు అభివృద్ధి అవకాశాలను దృష్టిలో ఉంచుకుని ప్రజల కోసం ప్రజాసేవ పార్టీ ఆవిర్భవించింది. ప్రజల గొంతు వినిపించే సమాజ నిర్మాణం, సంక్షేమం, అభివృద్ధి మా లక్ష్యం.
             </p>
 
-            <!-- Key Commitments Checklist Card -->
-            <div class="about-commitments-card">
-              <h4 data-i18n="aboutStoryCommitTitle">మా ప్రధాన కట్టుబాట్లు:</h4>
-              <ul class="about-commit-list">
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="aboutStoryCommit1">ప్రజల మాటే ప్రభుత్వ విధానంగా 100% పారదర్శక పాలన</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="aboutStoryCommit2">కేజీ నుండి పీజీ వరకు సంపూర్ణ ఉచిత నాణ్యమైన విద్య</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="aboutStoryCommit3">ప్రతి పౌరుడికి సూపర్ స్పెషాలిటీ ఉచిత వైద్య సేవలు</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="aboutStoryCommit4">తెలంగాణ ప్రైవేట్ రంగంలో స్థానిక యువతకు 70% రిజర్వేషన్లు</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="aboutStoryCommit5">రైతులకు సాగునీరు, గిట్టుబాటు ధర, పూర్తి రుణ భరోసా</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Quote Block -->
-            <div class="about-story-quote">
-              <i class="bi bi-quote quote-icon" aria-hidden="true"></i>
-              <div class="about-story-quote-text">
-                <span data-i18n="aboutSloganLine1">ప్రజలే మా బలం..</span><br>
-                <span data-i18n="aboutSloganLine2">ప్రజల కోసం మా ప్రయాణం...</span>
+            <!-- 4 Connected Pillar Cards with Decorative Curved Arch -->
+            <div class="about-genesis-pillars-container">
+              <!-- Decorative Arch Wave Connector -->
+              <div class="genesis-arch-track" aria-hidden="true">
+                <svg viewBox="0 0 600 32" fill="none" preserveAspectRatio="none" class="genesis-arch-svg">
+                  <path d="M 15,24 Q 45,6 75,6 Q 105,6 150,24 Q 195,6 225,6 Q 255,6 300,24 Q 345,6 375,6 Q 405,6 450,24 Q 495,6 525,6 Q 555,6 585,24" stroke="url(#genesisArchGradient)" stroke-width="1.8" stroke-linecap="round"/>
+                  <defs>
+                    <linearGradient id="genesisArchGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.4"/>
+                      <stop offset="25%" stop-color="#EF4444"/>
+                      <stop offset="50%" stop-color="#F59E0B"/>
+                      <stop offset="75%" stop-color="#EF4444"/>
+                      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.4"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
-            </div>
-          </div>
 
-          <!-- Story Image Card Right -->
-          <div class="about-story-img-wrap">
-            <div class="about-story-img-card">
-              <img src="assets/images/Image_1.jpg" alt="ప్రజాసేవ పార్టీ - ప్రజల సేవలో" loading="lazy">
-              <div class="about-story-img-badge">
-                <i class="bi bi-heart-pulse-fill"></i>
-                <div class="about-story-img-badge-text">
-                  <strong>నిరంతరం ప్రజాసేవలో</strong>
-                  <span>ప్రజల హక్కుల పరిరక్షణే మా శ్వాస</span>
+              <!-- 4 Cards Grid -->
+              <div class="genesis-pillars-grid">
+                <!-- Card 1: ప్రజల సమస్యల పరిష్కారం -->
+                <div class="genesis-pillar-card pillar-card-red">
+                  <div class="pillar-crest-dot" aria-hidden="true"></div>
+                  <div class="pillar-icon-box">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <h3 class="pillar-card-title" data-i18n="pillar1Title">ప్రజల సమస్యల పరిష్కారం</h3>
+                  <p class="pillar-card-desc" data-i18n="pillar1Desc">ప్రజల సమస్యలపై సంపూర్ణ దృష్టితో 100% పరిష్కార దిశగా</p>
+                </div>
+
+                <!-- Card 2: నిజాయితీ పాలన -->
+                <div class="genesis-pillar-card pillar-card-gold">
+                  <div class="pillar-crest-dot" aria-hidden="true"></div>
+                  <div class="pillar-icon-box">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                  <h3 class="pillar-card-title" data-i18n="pillar2Title">నిజాయితీ పాలన</h3>
+                  <p class="pillar-card-desc" data-i18n="pillar2Desc">పారదర్శకమైన, బాధ్యతాయుతమైన పాలన వ్యవస్థ కట్టుబాటు</p>
+                </div>
+
+                <!-- Card 3: సమగ్ర అభివృద్ధి -->
+                <div class="genesis-pillar-card pillar-card-red">
+                  <div class="pillar-crest-dot" aria-hidden="true"></div>
+                  <div class="pillar-icon-box">
+                    <svg class="pillar-svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-4.5 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7.2c-1.3 0-2.4.9-2.7 2.1l-.3.9c-.2.7-.8 1.2-1.5 1.3h-.1c-1.1 0-2.1.8-2.3 1.9-.3 1.6.8 3.1 2.4 3.3.4.1.8.1 1.2 0l1.8-.4c.3-.1.6.1.7.4.2.7.9 1.2 1.8 1.2s1.6-.5 1.8-1.2c.1-.3.4-.5.7-.4l1.8.4c.4.1.8.1 1.2 0 1.6-.2 2.7-1.7 2.4-3.3-.2-1.1-1.2-1.9-2.3-1.9h-.1c-.7-.1-1.3-.6-1.5-1.3l-.3-.9c-.3-1.2-1.4-2.1-2.7-2.1z"/>
+                      <path d="M4.5 14.5c.3 1.8 1.9 3.5 3.8 4.2.4.1.6.5.5.9-.1.4-.5.6-.9.5-2.4-.9-4.3-2.9-4.6-5.1-.1-.4.2-.8.6-.9.4-.1.8.2.9.6zm15 0c-.1-.4.2-.7.6-.8.4-.1.8.2.9.6-.3 2.2-2.2 4.2-4.6 5.1-.4.1-.8-.1-.9-.5-.1-.4.1-.8.5-.9 1.9-.7 3.5-2.4 3.8-4.2z"/>
+                    </svg>
+                  </div>
+                  <h3 class="pillar-card-title" data-i18n="pillar3Title">సమగ్ర అభివృద్ధి</h3>
+                  <p class="pillar-card-desc" data-i18n="pillar3Desc">ప్రతి ప్రాంతానికి సమానమైన అభివృద్ధి అవకాశాలు</p>
+                </div>
+
+                <!-- Card 4: ప్రజల భద్రత - సంక్షేమం -->
+                <div class="genesis-pillar-card pillar-card-gold">
+                  <div class="pillar-crest-dot" aria-hidden="true"></div>
+                  <div class="pillar-icon-box">
+                    <i class="bi bi-shield-fill-check"></i>
+                  </div>
+                  <h3 class="pillar-card-title" data-i18n="pillar4Title">ప్రజల భద్రత - సంక్షేమం</h3>
+                  <p class="pillar-card-desc" data-i18n="pillar4Desc">సురక్షిత, సుస్థిర, సమరస తెలంగాణ నిర్మాణం</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Right Column: Visual Stage with Leader Circle, Rings, Floating Badge & Quote Card -->
+          <div class="about-genesis-visual-wrap">
+            <div class="about-genesis-visual-stage">
+
+              <!-- Outer Orbital Accent Ring (Red) with Left Bead Dot -->
+              <div class="genesis-orbit-ring ring-red" aria-hidden="true">
+                <span class="orbit-dot dot-red"></span>
+              </div>
+
+              <!-- Inner Orbital Accent Ring (Gold) with Top Bead Dot -->
+              <div class="genesis-orbit-ring ring-gold" aria-hidden="true">
+                <span class="orbit-dot dot-gold"></span>
+              </div>
+
+              <!-- Main Circular Leader Portrait Frame -->
+              <div class="genesis-leader-circle-frame">
+                <img src="assets/images/leader-crop.png" alt="తల్లారం నర్సింలు - ప్రజాసేవ పార్టీ అధ్యక్షుడు" class="genesis-leader-circle-img">
+              </div>
+
+              <!-- Floating Top-Right Commitment Badge (100% నిబద్ధత) -->
+              <div class="genesis-floating-stat-badge" aria-label="100% ప్రజల కోసం నిబద్ధత">
+                <div class="stat-badge-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <span class="stat-badge-label" data-i18n="genesisBadgeLabel1">ప్రజల కోసం</span>
+                <span class="stat-badge-percent">100%</span>
+                <span class="stat-badge-sub" data-i18n="genesisBadgeLabel2">నిబద్ధత</span>
+              </div>
+
+              <!-- Floating Bottom Quote Card (ప్రజల విశ్వాసమే నా శక్తి...) -->
+              <div class="genesis-floating-quote-card">
+                <div class="quote-card-badge" aria-hidden="true">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="quote-card-content">
+                  <div class="quote-line-lead" data-i18n="genesisQuoteLine1">ప్రజల విశ్వాసమే నా శక్తి...</div>
+                  <div class="quote-line-highlight" data-i18n="genesisQuoteLine2">ప్రజల సంక్షేమమే మా ప్రభుత్వ ధ్యేయం.</div>
+                  <div class="quote-author" data-i18n="genesisQuoteAuthor">— ప్రజాసేవకుడు</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -877,8 +941,8 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/translations.js?v=6.0"></script>
-  <script src="assets/js/main.js?v=6.0"></script>
+  <script src="assets/js/translations.js?v=44.0"></script>
+  <script src="assets/js/main.js?v=44.0"></script>
 </body>
 
 </html>

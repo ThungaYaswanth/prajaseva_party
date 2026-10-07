@@ -8462,138 +8462,618 @@ body[lang="en"] .lang-dropdown-capsule {
   line-height: 1.65;
 }
 
-/* Section 1: Story Section */
-.about-story-grid {
+/* ==========================================================================
+   Section 1: Party Genesis & Story Section (మన ఆవిర్భావం)
+   Pixel-perfect matching of official design mockup
+   ========================================================================== */
+.about-story-section {
+  background-color: #FFFFFF;
+  padding-top: var(--section-padding-top, 60px);
+  padding-bottom: var(--section-padding-bottom, 60px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-genesis-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.16fr 0.84fr;
   gap: 40px;
   align-items: center;
 }
 
-.about-story-text-wrap p {
-  font-size: 1.02rem;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin-bottom: 18px;
-}
-
-.about-commitments-card {
-  background: var(--bg-white);
-  border: 1px solid var(--border-light);
-  border-left: 4px solid var(--primary-red);
-  border-radius: var(--radius-md);
-  padding: 22px 24px;
-  margin: 24px 0;
-  box-shadow: var(--shadow-sm);
-}
-
-.about-commitments-card h4 {
-  font-size: 1.08rem;
-  font-weight: 700;
-  color: var(--navy-dark);
-  margin-bottom: 14px;
-}
-
-.about-commit-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Left Column Content */
+.about-genesis-content-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  position: relative;
+  z-index: 2;
 }
 
-.about-commit-list li {
+.about-genesis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #FFF1F1;
+  color: #DC2626;
+  border: 1px solid #FFD4D4;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.05);
+}
+
+.about-genesis-badge i {
+  font-size: 1rem;
+  color: #DC2626;
+}
+
+.about-genesis-title {
+  font-family: var(--font-telugu, inherit);
+  font-size: clamp(1.95rem, 3.1vw, 2.7rem);
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+}
+
+.about-genesis-title .genesis-title-dark {
+  display: block;
+  color: #111827;
+  font-weight: 800;
+}
+
+.about-genesis-title .genesis-title-red {
+  display: block;
+  color: #DC2626;
+  font-weight: 900;
+  margin-top: 2px;
+}
+
+.about-genesis-desc {
+  font-family: var(--font-telugu, inherit);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #4B5563;
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+/* 4 Connected Pillar Cards & Arch */
+.about-genesis-pillars-container {
+  position: relative;
+  padding-top: 14px;
+  margin-top: 6px;
+}
+
+.genesis-arch-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.genesis-arch-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.genesis-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.genesis-pillar-card {
+  background: linear-gradient(180deg, #FFFCF8 0%, #FFFFFF 100%);
+  border: 1px solid #F1E9DE;
+  border-radius: 20px;
+  padding: 16px 10px 18px;
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.95rem;
-  color: var(--text-body);
-  line-height: 1.5;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
-.about-commit-list li i {
-  color: #16A34A;
-  font-size: 1.1rem;
-  margin-top: 1px;
-  flex-shrink: 0;
+.genesis-pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.28);
 }
 
-.about-story-quote {
-  background: linear-gradient(135deg, rgba(200, 16, 22, 0.05) 0%, rgba(255, 201, 40, 0.08) 100%);
-  border: 1px solid rgba(200, 16, 22, 0.15);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
+.pillar-crest-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.pillar-card-red .pillar-crest-dot {
+  background-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.pillar-card-gold .pillar-crest-dot {
+  background-color: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  transition: transform 0.25s ease;
 }
 
-.about-story-quote i.quote-icon {
-  font-size: 2.2rem;
-  color: var(--primary-red);
-  opacity: 0.8;
-  flex-shrink: 0;
+.genesis-pillar-card:hover .pillar-icon-box {
+  transform: scale(1.08);
 }
 
-.about-story-quote-text {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary-red-dark);
-  line-height: 1.4;
+.pillar-card-red .pillar-icon-box {
+  background-color: #FEE2E2;
+  color: #DC2626;
 }
 
-.about-story-img-card {
-  position: relative;
-  background: var(--bg-white);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-light);
+.pillar-card-gold .pillar-icon-box {
+  background-color: #FEF3C7;
+  color: #D97706;
 }
 
-.about-story-img-card img {
-  width: 100%;
-  height: auto;
+.pillar-svg-icon {
   display: block;
+  color: inherit;
+}
+
+.pillar-card-title {
+  font-family: var(--font-telugu, inherit);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.pillar-card-desc {
+  font-family: var(--font-telugu, inherit);
+  font-size: 0.77rem;
+  color: #6B7280;
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Right Column Visual Showcase */
+/* Right Column Visual Showcase */
+.about-genesis-visual-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-genesis-visual-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 440px;
+  margin: 0 auto;
+}
+
+/* Concentric Orbital Rings */
+.genesis-orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.genesis-orbit-ring.ring-red {
+  width: 420px;
+  height: 420px;
+  top: 10px;
+  left: 0px;
+  border: 2px solid #EF4444;
+  z-index: 1;
+}
+
+.genesis-orbit-ring.ring-gold {
+  width: 380px;
+  height: 380px;
+  top: 30px;
+  left: 20px;
+  border: 2px solid #F59E0B;
+  z-index: 2;
+}
+
+/* Orbital Bead Dots */
+.orbit-dot.dot-red {
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #DC2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+}
+
+.orbit-dot.dot-gold {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #F59E0B;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+
+/* Main Circular Leader Frame */
+.genesis-leader-circle-frame {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  top: 50px;
+  left: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border: 4px solid #FFFFFF;
+  background: #FFFFFF;
+}
+
+.genesis-leader-circle-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center 15%;
+  display: block;
   transition: transform 0.4s ease;
 }
 
-.about-story-img-card:hover img {
-  transform: scale(1.02);
+.genesis-leader-circle-frame:hover .genesis-leader-circle-img {
+  transform: scale(1.04);
 }
 
-.about-story-img-badge {
+/* Floating Top-Right Commitment Badge */
+.genesis-floating-stat-badge {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(8, 17, 36, 0.88);
-  backdrop-filter: blur(8px);
-  padding: 14px 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  top: 24px;
+  right: 5px;
+  z-index: 5;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2.5px solid #F59E0B;
+  outline: 5px solid #FFF5EB;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+  animation: badgeSubtleFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes badgeSubtleFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+.stat-badge-icon {
+  color: #DC2626;
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.stat-badge-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4B5563;
+  line-height: 1.15;
+}
+
+.stat-badge-percent {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #DC2626;
+  line-height: 1.1;
+  margin: 1px 0;
+}
+
+.stat-badge-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.1;
+}
+
+/* Floating Bottom Quote Card */
+.genesis-floating-quote-card {
+  position: absolute;
+  bottom: -45px;
+  right: -25px;
+  width: 330px;
+  max-width: 90%;
+  z-index: 6;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px 22px 14px 26px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-right: 5px solid #DC2626;
+}
+
+.quote-card-badge {
+  position: absolute;
+  top: -16px;
+  left: -14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #DC2626;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(220, 38, 38, 0.38);
+  font-size: 1.35rem;
 }
 
-.about-story-img-badge i {
-  font-size: 1.6rem;
-  color: var(--gold-yellow);
+.quote-card-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.about-story-img-badge-text strong {
-  display: block;
+.quote-line-lead {
+  font-family: var(--font-telugu, inherit);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+.quote-line-highlight {
+  font-family: var(--font-telugu, inherit);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #DC2626;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.quote-author {
+  font-family: var(--font-telugu, inherit);
   font-size: 0.95rem;
-  color: #fff;
+  font-weight: 700;
+  color: #DC2626;
+  text-align: right;
+  margin: 0;
 }
 
-.about-story-img-badge-text span {
-  font-size: 0.8rem;
-  color: #CBD5E1;
+/* ==========================================================================
+   Responsive Media Queries for Genesis Section
+   Desktop, Tablet, Mobile & Small Screen Optimizations
+   ========================================================================== */
+@media (max-width: 1199px) {
+  .about-genesis-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-genesis-desc {
+    max-width: 100%;
+  }
+  .about-genesis-visual-stage {
+    margin: 15px auto 20px;
+  }
+  .genesis-floating-quote-card {
+    right: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .genesis-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .genesis-arch-track {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-genesis-title {
+    font-size: clamp(1.75rem, 5vw, 2.2rem);
+  }
+  .about-genesis-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .genesis-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .about-genesis-visual-stage {
+    width: 360px;
+    height: 380px;
+    margin: 15px auto 30px;
+  }
+  .genesis-orbit-ring.ring-red {
+    width: 340px;
+    height: 340px;
+    top: 5px;
+    left: 10px;
+  }
+  .genesis-orbit-ring.ring-gold {
+    width: 310px;
+    height: 310px;
+    top: 20px;
+    left: 25px;
+  }
+  .genesis-leader-circle-frame {
+    width: 270px;
+    height: 270px;
+    top: 40px;
+    left: 45px;
+  }
+  .genesis-floating-stat-badge {
+    width: 86px;
+    height: 86px;
+    top: 10px;
+    right: 0px;
+    padding: 4px;
+  }
+  .stat-badge-icon {
+    font-size: 1rem;
+    margin-bottom: 1px;
+  }
+  .stat-badge-label {
+    font-size: 0.62rem;
+  }
+  .stat-badge-percent {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .stat-badge-sub {
+    font-size: 0.62rem;
+  }
+  .genesis-floating-quote-card {
+    bottom: -15px;
+    right: -10px;
+    left: 10px;
+    width: auto;
+    max-width: 330px;
+    padding: 14px 18px 12px 22px;
+  }
+  .quote-card-badge {
+    width: 34px;
+    height: 34px;
+    top: -14px;
+    left: -10px;
+    font-size: 1.15rem;
+  }
+  .quote-line-lead {
+    font-size: 1.02rem;
+  }
+  .quote-line-highlight {
+    font-size: 1.08rem;
+    margin-bottom: 4px;
+  }
+  .quote-author {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-genesis-title {
+    font-size: 1.6rem;
+  }
+  .about-genesis-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .genesis-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .genesis-pillar-card {
+    padding: 14px 8px 14px;
+    border-radius: 16px;
+  }
+  .pillar-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .pillar-card-title {
+    font-size: 0.86rem;
+    margin-bottom: 4px;
+  }
+  .pillar-card-desc {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+  .about-genesis-visual-stage {
+    width: 300px;
+    height: 330px;
+    margin: 15px auto 35px;
+  }
+  .genesis-orbit-ring.ring-red {
+    width: 290px;
+    height: 290px;
+    top: 5px;
+    left: 5px;
+  }
+  .genesis-orbit-ring.ring-gold {
+    width: 265px;
+    height: 265px;
+    top: 17px;
+    left: 17px;
+  }
+  .genesis-leader-circle-frame {
+    width: 230px;
+    height: 230px;
+    top: 35px;
+    left: 35px;
+  }
+  .genesis-floating-stat-badge {
+    width: 76px;
+    height: 76px;
+    top: 5px;
+    right: -5px;
+    padding: 2px;
+  }
+  .stat-badge-percent {
+    font-size: 0.96rem;
+  }
+  .genesis-floating-quote-card {
+    bottom: -22px;
+    right: -5px;
+    left: 0px;
+    width: auto;
+    max-width: 300px;
+    padding: 12px 14px 10px 16px;
+  }
+  .quote-card-badge {
+    width: 30px;
+    height: 30px;
+    top: -12px;
+    left: -8px;
+    font-size: 1.05rem;
+  }
+  .quote-line-lead {
+    font-size: 0.92rem;
+  }
+  .quote-line-highlight {
+    font-size: 0.96rem;
+    margin-bottom: 2px;
+  }
+  .quote-author {
+    font-size: 0.8rem;
+  }
 }
 
 /* Section 2: Vision & Mission Section */
@@ -10227,7 +10707,7 @@ body[lang="en"] .lang-dropdown-capsule {
 
 .mem-id-chip {
   display: inline-block;
-  background:#fdfdfd;
+  background: #fdfdfd;
   border: 1.5px solid #FCD34D;
   border-radius: 50px;
   padding: 8px 22px;
@@ -10376,35 +10856,11 @@ body[lang="en"] .lang-dropdown-capsule {
   color: #081124;
 }
 
-/* ==========================================================================
-   Dedicated Membership Page (సభ్యత్వ నమోదు పేజీ) Comprehensive Responsive System
-   Flawless Desktop, Tablet, Mobile & Small Mobile Layout
-   ========================================================================== */
-
-/* 1. Large Tablets & Small Desktops (992px - 1199.98px) */
-@media (max-width: 1199.98px) and (min-width: 992px) {
-  .mem-page-container {
-    grid-template-columns: 360px 1fr;
-    gap: 28px;
-    padding: 0 16px;
-  }
-
-  .mem-right-card {
-    padding: 28px 24px;
-  }
-}
-
-/* 2. Tablet View (768px - 991.98px): Centered, Executive Layout */
+/* Membership Page Responsive Styles */
 @media (max-width: 991.98px) {
-  .mem-page-section {
-    padding: 36px 0 60px;
-  }
-
   .mem-page-container {
     grid-template-columns: 1fr;
     gap: 36px;
-    max-width: 760px;
-    padding: 0 20px;
   }
 
   /* Reorder sequence: 1. Heading & Info -> 2. Card Image -> 3. Form */
@@ -10427,22 +10883,10 @@ body[lang="en"] .lang-dropdown-capsule {
     margin: 0 auto 14px;
   }
 
-  .mem-left-heading {
-    font-size: clamp(2.1rem, 4.5vw, 2.75rem);
-    margin-bottom: 14px;
-  }
-
   .mem-left-desc {
     order: 3;
     max-width: 560px;
     margin: 0 auto 24px;
-    font-size: 1.02rem;
-  }
-
-  .mem-benefits-row {
-    max-width: 620px;
-    margin: 0 auto 28px;
-    gap: 14px;
   }
 
   .mem-benefits-row {
@@ -10458,387 +10902,65 @@ body[lang="en"] .lang-dropdown-capsule {
   }
 
   .mem-right-card {
-    max-width: 700px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 32px 28px;
-    border-radius: 22px;
+    padding: 32px 24px;
   }
 }
 
-/* 3. Mobile View (< 768px): Thumb-Friendly, Fluid 1-Column Layout */
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .mem-page-section {
     padding: 24px 0 50px;
   }
 
-  .mem-page-container {
-    padding: 0 14px;
-    gap: 28px;
-    max-width: 100%;
+  .mem-form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
-  .mem-id-card-frame {
-    margin-bottom: 20px;
-  }
-
-  .mem-left-heading {
-    font-size: clamp(1.85rem, 6.5vw, 2.3rem);
-    line-height: 1.25;
-    margin-bottom: 12px;
-  }
-
-  .mem-left-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    padding: 0 4px;
-  }
-
-  /* 3-Benefit Cards on Mobile */
   .mem-benefits-row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
-    margin-bottom: 22px;
   }
 
   .mem-benefit-item {
     padding: 12px 6px;
-    border-radius: 14px;
   }
 
   .mem-benefit-icon-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 1.15rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
     margin-bottom: 6px;
   }
 
   .mem-benefit-title {
     font-size: 0.82rem;
-    margin-bottom: 2px;
   }
 
   .mem-benefit-sub {
-    font-size: 0.70rem;
-    line-height: 1.28;
+    font-size: 0.7rem;
   }
 
-  /* Form Container */
   .mem-right-card {
-    padding: 24px 18px;
+    padding: 24px 16px;
     border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   }
 
   .mem-form-title {
-    font-size: 1.65rem;
+    font-size: 1.6rem;
   }
 
-  .mem-form-subtitle {
-    font-size: 0.86rem;
-    margin-bottom: 18px;
-  }
-
-  /* Form Fields: Switch to Full-Width Single Column */
-  .mem-modern-grid-form {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .mem-modern-grid-form .full-width-field {
-    grid-column: span 1;
-  }
-
-  .mem-form-row-2 {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  /* Phone & OTP stacking */
   .mem-phone-input-wrap {
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
   }
 
   .btn-otp-action {
     width: 100%;
-    height: 42px;
     justify-content: center;
-    border-radius: 9px;
   }
 
-  .mem-otp-verify-panel {
-    padding: 12px 14px;
-  }
-
-  .mem-otp-box-row {
-    gap: 8px;
-  }
-
-  .btn-verify-otp-action {
-    padding: 0 14px;
-    font-size: 0.84rem;
-    height: 44px;
-  }
-
-  /* Checkbox Grid */
   .mem-checkbox-grid {
     grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    gap: 8px;
-    padding: 12px 14px;
-  }
-
-  /* Submit CTA */
-  .btn-mem-submit {
-    height: 48px;
-    font-size: 1rem;
-    border-radius: 10px;
-  }
-
-  /* Success View */
-  .mem-success-icon-badge {
-    width: 60px;
-    height: 60px;
-    font-size: 1.9rem;
-    margin-bottom: 12px;
-  }
-
-  .mem-success-title {
-    font-size: 1.55rem;
-  }
-
-  .mem-success-sub {
-    font-size: 0.92rem;
-    margin-bottom: 18px;
-  }
-
-  .mem-id-chip {
-    padding: 6px 18px;
-    margin-bottom: 20px;
-  }
-
-  .mem-id-chip-val {
-    font-size: 1.2rem;
-  }
-
-  .mem-success-actions {
-    max-width: 100%;
-    gap: 8px;
-  }
-}
-
-/* 4. Compact Mobile (< 480px) */
-@media (max-width: 479.98px) {
-  .mem-page-container {
-    padding: 0 10px;
-  }
-
-  .mem-right-card {
-    padding: 20px 14px;
-    border-radius: 16px;
-  }
-
-  .mem-form-title {
-    font-size: 1.5rem;
-  }
-
-  .mem-input {
-    height: 42px;
-    font-size: 0.88rem;
-    padding: 0 12px;
-  }
-
-  .searchable-trigger {
-    height: 44px;
-    font-size: 0.9rem;
-    padding: 0 12px;
-  }
-
-  /* Payment Method Grid */
-  .mem-method-grid {
-    gap: 8px;
-  }
-
-  .mem-method-card {
-    padding: 10px 4px;
-  }
-
-  .mem-method-title {
-    font-size: 0.84rem;
-  }
-
-  .mem-method-sub {
-    font-size: 0.68rem;
-  }
-
-  /* Photo dropzone */
-  .mem-photo-box {
-    height: 94px;
-  }
-
-  .mem-photo-icon-wrap {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .mem-photo-text {
-    font-size: 0.78rem;
-  }
-
-  /* Textarea */
-  .mem-textarea {
-    min-height: 55px;
-    font-size: 0.88rem;
-  }
-
-  /* Consent */
-  .mem-consent-wrap {
-    font-size: 0.82rem;
-    line-height: 1.4;
-  }
-}
-
-/* 5. Ultra-Compact Mobile (<= 360px, e.g., iPhone SE, 320px screens) */
-@media (max-width: 360px) {
-  .mem-page-container {
-    padding: 0 6px;
-  }
-
-  /* Responsive ID Card Scaling: Prevents any horizontal overflow */
-  .id-card-3d-scene {
-    width: 295px !important;
-    max-width: 100% !important;
-  }
-
-  .card-template-exact {
-    width: 100% !important;
-    max-width: 295px !important;
-    border-radius: 15px !important;
-  }
-
-  .id-header-exact {
-    padding: 6px 8px !important;
-    gap: 6px !important;
-  }
-
-  .id-emblem-ring {
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-  .id-emblem-exact-img {
-    width: 30px !important;
-    height: 30px !important;
-  }
-
-  .id-title-exact-telugu {
-    font-size: 1.15rem !important;
-  }
-
-  .id-slogan-exact-telugu {
-    font-size: 0.54rem !important;
-  }
-
-  .id-ribbon-content {
-    font-size: 0.68rem !important;
-    letter-spacing: 1.5px !important;
-    padding: 1px 0 !important;
-  }
-
-  .id-info-exact-grid {
-    grid-template-columns: 86px 1fr !important;
-    gap: 6px !important;
-    padding: 8px 6px 4px 6px !important;
-  }
-
-  .id-photo-exact-frame {
-    width: 86px !important;
-    height: 110px !important;
-    border-radius: 8px !important;
-  }
-
-  .id-fields-exact-col {
-    gap: 2px !important;
-  }
-
-  .id-lbl-exact {
-    width: 52px !important;
-    font-size: 0.62rem !important;
-  }
-
-  .id-sep-exact {
-    width: 6px !important;
-  }
-
-  .id-val-exact.val-red {
-    font-size: 0.64rem !important;
-  }
-
-  .id-auth-exact-strip {
-    padding: 4px 8px 6px 8px !important;
-  }
-
-  .id-qr-box-frame {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .id-watermark-exact {
-    width: 55px !important;
-    height: 55px !important;
-  }
-
-  .signature-drawing svg {
-    width: 78px !important;
-    height: 24px !important;
-  }
-
-  .id-bottom-exact-banner {
-    padding: 5px 8px !important;
-  }
-
-  .id-bottom-telugu-text {
-    font-size: 1rem !important;
-  }
-
-  /* Benefits Row becomes a compact list on smallest screens */
-  .mem-benefits-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .mem-benefit-item {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 12px;
-    padding: 10px 12px;
-  }
-
-  .mem-benefit-icon-circle {
-    margin: 0;
-    flex-shrink: 0;
-  }
-
-  /* Payment QR button and input stacking */
-  .mem-method-sub {
-    display: none;
-  }
-
-  .mem-upi-input-group {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-
-  .btn-qr-show {
-    width: 100%;
-    justify-content: center;
-    height: 40px;
   }
 }
 
