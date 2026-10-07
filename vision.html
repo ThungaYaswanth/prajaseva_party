@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="visionPageTitle">మా దృష్టి &amp; లక్ష్యం | Prajaseva Party - Our Vision &amp; Mission</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీ అధికారిక దృష్టి &amp; లక్ష్యం. సమగ్ర అభివృద్ధితో సమృద్ధి తెలంగాణ, పారదర్శక పాలన, ఉచిత విద్య, వైద్యం మరియు ప్రజా సంక్షేమం.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Preconnect to CDNs for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload Critical Banner Background & Vision Map Image -->
+  <link rel="preload" as="image" href="assets/images/about_bg.png">
+  <link rel="preload" as="image" href="assets/images/ourvision-map.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
+  <link rel="stylesheet" href="assets/css/vision.css?v=1.0">
+
+  <!-- Early Language Preference Sync -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s) document.documentElement.lang = s;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Section 1 — Header and Navigation
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="vision.html" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="issues.html" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" data-i18n="navNews">వార్తలు &amp; కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <div class="lang-dropdown-wrapper">
+            <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" onclick="window.toggleLanguageDropdown && window.toggleLanguageDropdown(event);" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language" aria-expanded="false">
+              <span class="lang-label" id="lang-current-label">తెలుగు</span>
+              <i class="bi bi-chevron-down lang-chevron-icon"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <button type="button" class="lang-dropdown-item active" data-lang-val="te" onclick="window.switchLanguage && window.switchLanguage('te'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>తెలుగు</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+              <button type="button" class="lang-dropdown-item" data-lang-val="en" onclick="window.switchLanguage && window.switchLanguage('en'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>English</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Donate Button (Gold Pill) -->
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill) -->
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger / Close Toggler -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s === 'en') {
+          var l = document.getElementById('lang-current-label');
+          if (l) l.textContent = 'English';
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Page Hero Banner (మా దృష్టి & లక్ష్యం బ్యానర్)
+         Matching Exact UI style of existing About Us page banner
+         ========================================================================== -->
+    <section class="about-page-hero" aria-label="మా దృష్టి &amp; లక్ష్యం శీర్షిక">
+      <div class="main-container about-banner-container">
+        <div class="about-banner-content">
+          <!-- Breadcrumbs -->
+          <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html#home" class="about-bc-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="breadcrumbHome">హోమ్</span>
+            </a>
+            <span class="about-bc-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="about-bc-current" aria-current="page" data-i18n="visionBcCurrent">మా దృష్టి &amp; లక్ష్యం</span>
+          </nav>
+
+          <!-- Red & Gold Accent Bar -->
+          <div class="about-banner-accent" aria-hidden="true"></div>
+
+          <!-- Eyebrow Tag -->
+          <div class="about-banner-eyebrow" data-i18n="visionHeroTag">మా దృష్టి &amp; లక్ష్యం</div>
+
+          <!-- Main Headline -->
+          <h1 class="about-banner-title">
+            <span class="about-title-navy" data-i18n="visionHeroHeadNavy">మా దృష్టి &amp;</span>
+            <span class="about-title-red" data-i18n="visionHeroHeadRed">లక్ష్యం</span>
+          </h1>
+
+          <!-- Subtitle Description -->
+          <p class="about-banner-desc" data-i18n="visionHeroDesc">
+            తెలంగాణ సమగ్ర అభివృద్ధి, సమానత్వం, సుపరిపాలన మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ కట్టుబాటు.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 1 — మా దృష్టి / Our Vision
+         Using existing ourvision-map.png image as per Requirement 1
+         ========================================================================== -->
+    <section class="vm-section" id="our-vision" aria-label="మా దృష్టి (Our Vision)">
+      <div class="main-container">
+        <div class="vm-vision-grid">
+          <!-- Left Column: Badge, Title & Detailed Description -->
+          <div class="vm-vision-left">
+            <div class="vm-badge-row">
+              <div class="vm-badge-circle" aria-hidden="true">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <div class="vm-badge-text-wrap">
+                <span class="vm-badge-primary" data-i18n="visionSecBadgeTe">మా దృష్టి</span>
+                <span class="vm-badge-secondary" data-i18n="visionSecBadgeEn">Our Vision</span>
+              </div>
+            </div>
+
+            <h2 class="vm-main-title">
+              <span class="title-dark" data-i18n="visionSecTitlePart1">సమగ్ర అభివృద్ధితో</span>
+              <span class="title-crimson" data-i18n="visionSecTitlePart2">సమృద్ధి తెలంగాణ</span>
+            </h2>
+
+            <div class="vm-title-accent-bar" aria-hidden="true"></div>
+
+            <p class="vm-main-desc" data-i18n="visionSecDesc">
+              ప్రతి పౌరుడు గౌరవంతో, అవకాశాలతో, సమానత్వంతో జీవించే సమృద్ధి, సురక్షిత, అభివృద్ధి చెందిన తెలంగాణను నిర్మించడం మా దృష్టి.
+            </p>
+          </div>
+
+          <!-- Center Column: Visual Map Artwork from assets\images\ourvision-map.png -->
+          <div class="vm-vision-center">
+            <div class="vm-vision-map-card">
+              <img src="assets/images/ourvision-map.png" alt="సమగ్ర అభివృద్ధితో సమృద్ధి తెలంగాణ - మా దృష్టి"
+                class="vm-vision-map-img" loading="eager" width="440" height="505">
+            </div>
+          </div>
+
+          <!-- Right Column: Slogan Quote Card -->
+          <div class="vm-vision-right">
+            <div class="vm-quote-card">
+              <div class="vm-quote-symbol" aria-hidden="true">“</div>
+              <p class="vm-quote-content" data-i18n="visionSecQuote">
+                ప్రజల కలలతో ముందుకు సాగే అభివృద్ధి తెలంగాణ మా దృష్టి.
+              </p>
+              <div class="vm-quote-dash" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 2 — మా లక్ష్యం / Our Mission
+         Leader Rally Photo + Mission Statement
+         ========================================================================== -->
+    <section class="vm-section bg-light-warm" id="our-mission" aria-label="మా లక్ష్యం (Our Mission)">
+      <div class="main-container">
+        <div class="vm-mission-grid">
+          <!-- Left Column: Inspiring Leader & Crowd Photo -->
+          <div class="vm-mission-left">
+            <div class="vm-mission-photo-frame">
+              <img src="assets/images/image-leader-banner.webp" alt="ప్రజాసేవ పార్టీ అధ్యక్షుడు తల్లారం నర్సింలు - ప్రజా గళం"
+                loading="lazy" width="600" height="380">
+              <div class="vm-mission-photo-badge">
+                <i class="bi bi-star-fill"></i>
+                <span>ప్రజల కోసం... ప్రజలతో... ప్రజా నాయకత్వం</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Badge, Title & Mission Statement -->
+          <div class="vm-mission-right">
+            <div class="vm-badge-row">
+              <div class="vm-badge-circle" aria-hidden="true">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <div class="vm-badge-text-wrap">
+                <span class="vm-badge-primary" data-i18n="missionSecBadgeTe">మా లక్ష్యం</span>
+                <span class="vm-badge-secondary" data-i18n="missionSecBadgeEn">Our Mission</span>
+              </div>
+            </div>
+
+            <h2 class="vm-main-title">
+              <span class="title-dark" data-i18n="missionSecTitlePart1">ప్రజా కోసం ... ప్రజలతో కలిసి ...</span>
+              <span class="title-crimson" data-i18n="missionSecTitlePart2">ప్రజల భవిష్యత్తుకోసం</span>
+            </h2>
+
+            <div class="vm-title-accent-bar" aria-hidden="true"></div>
+
+            <p class="vm-main-desc" data-i18n="missionSecDesc">
+              ప్రతి కుటుంబానికి భరోసా చేకూర్చిన, నాణ్యమైన విద్య, వైద్యం, ఉపాధి, సురక్షిత సమాజం మరియు పారదర్శక పాలనతో అభివృద్ధిని సాధించడం మా లక్ష్యం.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 3 — మా ప్రాథమిక విలువలు / Our Core Values
+         6-Card Grid with Custom Icons
+         ========================================================================== -->
+    <section class="vm-section" id="core-values" aria-label="మా ప్రాథమిక విలువలు (Our Core Values)">
+      <div class="main-container">
+        <!-- Section Header -->
+        <div class="vm-center-header">
+          <h2 class="vm-center-title" data-i18n="valuesSecTitle">మా ప్రాథమిక విలువలు</h2>
+          <span class="vm-center-sub" data-i18n="valuesSecSub">Our Core Values</span>
+        </div>
+
+        <!-- 6 Values Cards Grid -->
+        <div class="vm-values-grid">
+          <!-- Card 1: ప్రజా సేవ -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val1Title">ప్రజా సేవ</h3>
+            <p class="vm-value-desc" data-i18n="val1Desc">ప్రజలే మా ప్రాధాన్యం</p>
+          </div>
+
+          <!-- Card 2: నిజాయితీ -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val2Title">నిజాయితీ</h3>
+            <p class="vm-value-desc" data-i18n="val2Desc">సత్యం, పారదర్శకత మా బలం</p>
+          </div>
+
+          <!-- Card 3: సమానత్వం -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3c-.55 0-1 .45-1 1v1.07C7.61 5.56 5 8.47 5 12h2c0-2.76 2.24-5 5-5s5 2.24 5 5h2c0-3.53-2.61-6.44-6-6.93V4c0-.55-.45-1-1-1zm-7 9l-3 6h6l-3-6zm14 0l-3 6h6l-3-6zM11 14v6H8v2h8v-2h-3v-6h-2z" />
+              </svg>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val3Title">సమానత్వం</h3>
+            <p class="vm-value-desc" data-i18n="val3Desc">అందరికీ సమాన అవకాశాలు</p>
+          </div>
+
+          <!-- Card 4: పారదర్శకత -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+              </svg>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val4Title">పారదర్శకత</h3>
+            <p class="vm-value-desc" data-i18n="val4Desc">ప్రజలకు జవాబుదారీ పాలన</p>
+          </div>
+
+          <!-- Card 5: బాధ్యత -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.07 4.93c-.39-.39-1.02-.39-1.41 0L12 10.59 9.35 7.94c-.39-.39-1.02-.39-1.41 0L2.34 13.53c-.39.39-.39 1.02 0 1.41l5.66 5.66c.39.39 1.02.39 1.41 0l7.07-7.07 2.59 2.59c.39.39 1.02.39 1.41 0l4.24-4.24c.39-.39.39-1.02 0-1.41l-5.65-5.54z" />
+              </svg>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val5Title">బాధ్యత</h3>
+            <p class="vm-value-desc" data-i18n="val5Desc">మాటకు కట్టుబడే నిబద్ధత</p>
+          </div>
+
+          <!-- Card 6: అభివృద్ధి -->
+          <div class="vm-value-card">
+            <div class="vm-value-icon-circle">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3 class="vm-value-title" data-i18n="val6Title">అభివృద్ధి</h3>
+            <p class="vm-value-desc" data-i18n="val6Desc">స్థిరమైన ప్రగతి మా లక్ష్యం</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 4 — మా దృష్టి సాధన మార్గాలు / Our Approach
+         3 Feature Cards with Overlapping Badges & Bullets
+         ========================================================================== -->
+    <section class="vm-section bg-subtle-tint" id="our-approach" aria-label="మా దృష్టి సాధన మార్గాలు (Our Approach)">
+      <div class="main-container">
+        <!-- Section Header -->
+        <div class="vm-center-header">
+          <h2 class="vm-center-title" data-i18n="approachSecTitle">మా దృష్టి సాధన మార్గాలు</h2>
+          <span class="vm-center-sub" data-i18n="approachSecSub">Our Approach</span>
+        </div>
+
+        <!-- 3 Feature Cards Grid -->
+        <div class="vm-approach-grid">
+          <!-- Card 1: మనుషుల్లో పెట్టుబడి (Investing in People) -->
+          <div class="vm-approach-card">
+            <div class="vm-approach-img-wrap">
+              <img src="assets/images/policy/policy-edu.jpg" alt="విద్యార్థులు - మనుషుల్లో పెట్టుబడి" loading="lazy">
+              <div class="vm-approach-overlap-badge" aria-hidden="true">
+                <i class="bi bi-book-half"></i>
+              </div>
+            </div>
+            <div class="vm-approach-body">
+              <h3 class="vm-approach-title" data-i18n="appr1Title">మనుషుల్లో పెట్టుబడి</h3>
+              <ul class="vm-approach-bullets">
+                <li data-i18n="appr1Item1">నాణ్యమైన విద్య</li>
+                <li data-i18n="appr1Item2">యువత సాధికారత</li>
+                <li data-i18n="appr1Item3">నైపుణ్యాభివృద్ధి...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: సమగ్ర అభివృద్ధి (Comprehensive Infrastructure & Development) -->
+          <div class="vm-approach-card">
+            <div class="vm-approach-img-wrap">
+              <img src="assets/images/gallery/gallery-assembly.jpg" alt="సమగ్ర అభివృద్ధి - మౌలిక వసతులు" loading="lazy">
+              <div class="vm-approach-overlap-badge" aria-hidden="true">
+                <i class="bi bi-gear-fill"></i>
+              </div>
+            </div>
+            <div class="vm-approach-body">
+              <h3 class="vm-approach-title" data-i18n="appr2Title">సమగ్ర అభివృద్ధి</h3>
+              <ul class="vm-approach-bullets">
+                <li data-i18n="appr2Item1">మెరుగైన మౌలిక సదుపాయాలు</li>
+                <li data-i18n="appr2Item2">సమతుల్య రీజనల్ అభివృద్ధి</li>
+                <li data-i18n="appr2Item3">పర్యావరణ పరిరక్షణ</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: ప్రతి కుటుంబానికి సంక్షేమం (Welfare for Every Family) -->
+          <div class="vm-approach-card">
+            <div class="vm-approach-img-wrap">
+              <img src="assets/images/policy/policy-farmer.jpg" alt="రైతులు - ప్రతి కుటుంబానికి సంక్షేమం" loading="lazy">
+              <div class="vm-approach-overlap-badge" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C12.5 4.5 14 7.5 17 8C19.5 8.5 21 11 20 13.5C19 16 16.5 16.5 14 15.5C13 15 12.5 14 12 13C11.5 14 11 15 10 15.5C7.5 16.5 5 16 4 13.5C3 11 4.5 8.5 7 8C10 7.5 11.5 4.5 12 2ZM11 15.5V22H13V15.5C12.7 15.6 12.3 15.6 12 15.6C11.7 15.6 11.3 15.6 11 15.5Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="vm-approach-body">
+              <h3 class="vm-approach-title" data-i18n="appr3Title">ప్రతి కుటుంబానికి సంక్షేమం</h3>
+              <ul class="vm-approach-bullets">
+                <li data-i18n="appr3Item1">రైతుల అభివృద్ధి</li>
+                <li data-i18n="appr3Item2">సామాజిక భద్రత</li>
+                <li data-i18n="appr3Item3">నాణ్యమైన ఆరోగ్య సేవలు</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 5 — మా దృష్టి – ఆచరణలో / Our Vision in Action
+         Action Quote, Large Telangana Map with Teardrop Pins & Connectors, 5 Key Pillars
+         ========================================================================== -->
+    <section class="vm-section" id="vision-in-action" aria-label="మా దృష్టి – ఆచరణలో (Our Vision in Action)">
+      <div class="main-container">
+        <div class="vm-action-layout">
+          <!-- Left Column: Title, Accent Line, Quote Card & Discover Goals Button -->
+          <div class="vm-action-left">
+            <div class="vm-action-title-group">
+              <h2 class="vm-action-main-title" data-i18n="actionSecTitle">మా దృష్టి – ఆచరణలో</h2>
+              <span class="vm-action-sub-title" data-i18n="actionSecSub">Our Vision in Action</span>
+              <div class="vm-action-red-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="vm-action-quote-box">
+              <div class="vm-action-quote-mark" aria-hidden="true">“</div>
+              <p class="vm-action-quote-text" data-i18n="actionQuote">
+                ప్రతి గ్రామం, ప్రతి పట్టణం, ప్రతి కుటుంబం... సమృద్ధి, సురక్షితమైన, సుస్థిర తెలంగాణ కోసం నిరంతరం కృషి.
+              </p>
+            </div>
+
+            <a href="issues.html" class="vm-btn-gold-action" title="మా లక్ష్యాలను తెలుసుకోండి">
+              <span data-i18n="actionBtnCta">మా లక్ష్యాలను తెలుసుకోండి</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Center Column: Larger Telangana Map with Teardrop Drop Pins & Curved Connectors -->
+          <div class="vm-action-center-map">
+            <div class="vm-action-map-svg-wrap">
+              <!-- Crisp Telangana State Vector Silhouette -->
+              <svg class="vm-action-map-svg" viewBox="338 573 145 138" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tgGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFF2D6" />
+                    <stop offset="50%" stop-color="#FFE099" />
+                    <stop offset="100%" stop-color="#FFCE66" />
+                  </linearGradient>
+                  <!-- Soft Radial Glow from Center -->
+                  <radialGradient id="tgCenterRays" cx="400" cy="642" r="50" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="#FFCE66" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <!-- Telangana Master Vector Boundary -->
+                <path d="M355.2 698.3l0.1-1.2-0.2-0.3 0.1-0.8-0.2-0.1-0.3-0.7 0.3-1.2-0.1-0.7-0.3-0.6-0.1-1.2 0.3-0.8 0-0.7-0.2-1.1 0.4-0.5 0.6 0 0.5-0.5 0.6-0.3 0.4 0.3 0.3-0.8-0.2-0.4-1.3-0.7-0.5-0.5-1-0.2-1.2 0.1-0.7 0.3-1-0.5-0.6 0.1-0.6-0.3-1.3-0.5-0.5-0.7-0.4-1.1 1.1-0.2 0.2-0.5 0.7 0.3 1.2-0.1 0-0.5 0.4-0.2 0.9-0.2 0-0.8-0.4-0.1-0.2-0.5 0.8 0 0.4-0.4 0.5 0 0-0.8 0.4-1-0.2-0.2-0.8 0.3-0.5-0.7 1.4-0.4 0.1-0.9-1.3-0.1 0.4-1.4 0-0.5 0.8 0.1 0.2-0.6-0.5-0.8 0.1-0.6-0.1-1.8 0.3-0.2-0.1-1.1 0.5-0.4-0.1-0.6 0.6-0.5-0.2-0.8-0.4-0.8 0-0.4-0.5-0.5 0.1-0.3-1.6-0.5-0.8-0.5-0.4-0.6 0.3-0.9 0.6 0 0-0.6-0.3-0.2 2-1.6-0.6-0.4 0.4-0.7 0.2-0.9-0.1-0.7 0.7 0 0.2 0.4 1-0.2 0-0.7 0.3-0.3-0.6-0.4 0-0.5 0.6-0.4 1.1 0.4 0-0.7 0.7 0.3 0.4 0 0-0.8 0.6-0.1 0.4-0.2 1 0.2 0.1-0.7-0.9-0.7-1 0-0.8-0.3-0.1-0.7-1 0.2-0.6-0.7-0.7 1-0.3-0.8-0.5 0.1-0.3-0.4-0.6-0.1 0-0.6 0.3-0.8-0.2-0.8 0.4-1.2 0.8-0.2 0.2-0.3 0.9-0.3 0.3 0.1 0.6-0.6-0.2-0.5-0.8-0.5-0.6-0.1 0.2-0.5 0.4-0.3 0-0.4 0.8-0.1 0.3-0.4 0.1-0.7 0.7-0.4-0.2-0.8 0.8 0.2 0.1-1.2 0.7-0.1 0.2-0.6-0.2-0.7-0.4 0-0.7-0.7-1.4-0.5-0.2-0.6 0.6-0.6 0.8-0.2 0.1-0.5-0.2-0.8 0.1-0.7-0.5-0.3-0.3-0.8 0.5-0.8-0.4-0.7 0.8-1-0.8-0.4-0.6 0 0.5-0.5-0.4-0.7-0.7-0.2-0.2-0.7 0.8-0.7 0.1-0.9-0.8-0.2 0.1-0.4 0.9 0.1 0.6-0.2-0.3-0.7 0.1-0.5 0.7 0.3 0-0.5-0.4-0.3 0.3-1.3 1.2-0.2 0.1 0.5 0.3 0.3 1.5-0.8 0.5 0.1 0.5-1.1-0.1-0.9-0.4-0.7 0.1-0.9 0.5-0.4 1-0.1 0.4-0.7 0-0.4 0.6-1.1 0.4-1.1 1.9-0.7 0.9 0.3 0.1-0.6-0.5-0.5-0.7-0.3-0.4-0.5-0.1-0.6-0.7 0-0.5-0.1 0.4-1.2-1.1 0.1 0.1-1-1.4 0 0-1.1-0.2-0.2 0.1-1 1 0.3-0.1-0.6 0.1-0.8 0.5-0.1 0.3 0.5 0.4 0 0.1-0.8-0.3-0.5 0.4-0.7 0.1-0.6-0.2-0.3 0.6-1.7 0.5-0.4 0.4 0.1 0-0.6-1.1-0.2 0-0.5 1.4-0.5 0.4-0.4 0.6-0.3 0.8 0.6 0.2 0.4 0.7 0.2 0.5 0.6 0.5 0.3 0 0.6 0.3 0.3 0.7-0.5 0.4 0.3 0.8 0 0.6 0.4 0.9-0.3 0-1.1 0.3-0.7 0.1-0.8-0.5-0.6 0.3-1.3 1-1.1 0.7 0.1 0.6-0.7 0.7 0.2 0.4-0.5-0.1-0.6-0.3-0.5-0.1-1.6 0.4-0.4 0-0.9-0.6-1.5-0.5-0.2 0.4-0.8 0.9 0 0.1-0.4 0.7-0.3 0-0.6 0.4-0.6 0.2-0.8-0.2-0.7-0.6-0.2 0-0.8-1.2-0.3 0.4-1.8 0.7 0.9 1.3 0.1 0.1 0.8 0.3 0.4 0.9 0.4 1.3 0.2 0.4 0.7 0.9-0.8 1.6 0.2 0.5-0.1 0.5 0.2 2.2 0.7 0.4 0.6 0.6-0.4 0.7 0.1 0.6-0.1 0.6 0.6 1.1 0 0.3 0.8 0.2 1-0.2 1.2 0.9 0 0.7-0.4 0.7 0.1 0.7 0.5-0.1 0.9 0.4 0.8 0 0.3-0.7 0.5 0 0.3 0.7 0 0.4-0.3 0.7 0.6 0.9-0.1 0.3 0.4 1.1 0.1 0.1 0.4 0.9 0.4 0.8 0.9 0.6 0.3 0.8-0.2-0.3-0.6 0.2-0.7 0.6-0.5 0.1-0.9 0.2-0.5-0.3-1 0.5 0 1.3 0.6 0.3 0.7 0.7-0.2 0.8 0 0.1 0.3 1.1 0.8 0.8 0 0.4 0.5 0.4 0.6 1.1-0.6 0.1-0.7 0.7-0.2 0.2 0.7 0.5 0.4 0.7 0.3 0.2-0.2 0.2-0.9 0.4-0.8 0.5-0.3 1.1 0 0.9-0.2 0.8-0.6 1 0.2 0.4 0.5 0.6 0.3 0.4 0.9 1.3 1.1 0.9 0.2 1 1 0 0.5 0.7 1.2-0.2 1.4-0.2 0.5 0.1 1.1-0.4 0.4-0.7 1.6 0 0.7 0.6 0.8-1 1-1 0.6-0.3 0.5 0.1 1.3-0.1 0.5 0.3 0.2 0.6-0.3 0.9 0.1 0.3 0.6-0.1 1.3 0.3 1.1-0.1 2.3-0.4 0.6-0.8 0.2 0.6 1 0.4 0.3 2.2 0.6 0.2 0.4 0.4 0.1 0.3 0.8 1 0.5 0.7 0.7 1.4-0.5 0.3 0.5 0.5 0.1 0.4-0.6 1.2-0.2 0.6-0.4 0.8 0.9 0.6 1.8 0.6 1.1 0.7-0.6 0.4 0.4 0.6-0.4 1.3-0.6 1 0 0.7 0.3 0.5 0.9 1.9 1.2 0.4 0.5 0.5 0.2 0.1 0.7 0.4 0.7 0.8 0.5 0.4 0.6-0.1 0.4 0.6 0.4 0.3 1.3 0.6 1.2 0 0.5 0.6 0.7 0.4 1-1.4 0.7 0.1 1.3 0.7 0.3 1-0.1 0.6-0.8-0.1-0.9 0.2-0.3 1 0.3 0.2 0.5-0.5 0.2 0.2 1.7 0.2 0.3 1-0.1 1.2-0.6 0.3-0.3 0.5-0.1 0 0.7-0.6 0.6-0.1 1 0.5 1.3-0.1 0.4 0.3 1.1 0.3 2 0.3 0.2 0.3 2.2 0.2 0.7 0.5 0.7 0.7 0.2 0.5-0.1 0.6-0.9 1.7-1 0.9 0.2 1.7 1 1.7 0 1.9 0.1 0.7 0.1 0.4-0.5 0.3 0.2 0.9-0.2 0.3 0.5 2-0.3 0.6-0.4 1 0.4 0.8-0.7 0.1-0.5 0.5-0.6 0.7-0.2 0.4 0.7 1.5-1 0.6 0.7 0.4 0.8-0.3 0.3-0.5 0.1-0.3 0.3-0.7 0-0.7 0.5-0.1 0.5-0.7 0.5-1.4 0.1-0.4 0.6-0.7 0.3-0.3 0.4 0 0.9-0.5 0.6-0.5 1-0.6 0.6-0.3 0.6 0.6 0.5-0.6 0.9-0.2 2.6-1.5 1.9-0.5 0.3-0.2 0.3-0.8 0.2-1-0.4-0.2-0.5-0.5-0.1-0.9 1.5-0.6 0.5-1.4 0-0.7-0.2-0.5 0.6-0.1 1.1 0.3 0.4-0.5 0.6-0.5 0-1.6 0.6-0.6 0.2-0.6 0-0.4 0.5-1.2 0.2-0.8-0.2-0.6-0.5-0.7 0.1 0.2 0.9 0 0.7-0.7 0.1-0.5-0.1-0.1 0.6-0.3 0.4 0.2 0.4-0.2 0.8 0.1 0.5-0.7 0.7-0.3-0.3-2.1-0.5-0.6-0.3-1.1-0.1-1 0.4-0.3-0.5 0.5-0.3-0.7-0.8-0.9-0.2-1-0.6-0.3 0.4-1.4 0.7-0.3 0.5-0.1 0.8-0.3 0.5-0.5 0-0.2 0.6-0.7-0.2-0.6-0.9-0.1-0.6-0.8 0.6 0.6 1.2-0.5 0.5-0.3 0.7 1.1 0.4 1.2 0.4 0.9 0.6 0.4-0.7 0.8 0.3 0.3-0.4 1.1 0.7 0.4 0-0.1 0.7 0.1 0.8-0.6 0.1 0 1-0.2 0.3 0.8 0.5 0.3 0.6-0.9 0.7-2-0.4-0.9-0.4-0.1-0.7-0.9-0.4-0.1-0.4-0.5-0.2 0 0.5-0.7 0.6-0.4-1.3-0.7 0-0.4-0.4-0.2-1.2-0.3-1.3-1.1-1.5-0.5 0.2-0.7-0.5-0.6 0.1 0-0.7-0.3-0.1-0.5 0.6-0.6 0.6-0.3 0.5-0.7 0.1-0.5-0.2-0.1 0.7-1.1 0-0.2 0.8-0.8 0.8-0.5 1.3 0.6 0.3 0.6 0 0.2 0.8 0.8 0.3-0.5 1.2-0.1 0.8-0.9 0.9-0.7 0.6-0.5 0.9-0.8 0.8-0.5 0-0.6-0.2-0.3-0.3-0.5-1.1-0.3-0.3-1.4 0.2-0.8-0.9-0.2-0.2-0.7 0.3-0.7 0.8-1.1 0-0.8 0.5-0.2 0.4-1.3-0.1-0.7 0.6-1 0.3-1.1 0.1-1.3 0.6-0.2 0.4-0.4 0.3-2.2 0.1-0.8 0.1-1.4 0.4-0.2 0.5-0.8 0.7-0.2 0.8 0.4 1-0.5 0.5-0.2 2.2 0.4 0.7 0.1 1.1-0.1 1.4-0.5 0.6-0.9 0.4-1.4-0.6-1.5 0-0.7-0.2-0.7 0-0.7 0.4-0.9 0.3-1.4 0.8-0.1 0.7 0.5 1.3-0.6 0.7-0.8-0.4-0.2-1-0.2-0.4-0.7 0.2 0.1 1.9-0.8 1.1-0.9 0.7-1 0-0.6-0.1-0.8-0.4-0.5-0.5-0.9-1-0.9-0.1-1.2 1.1-1.7-0.4-1.2-0.3-1.3 0-1 0.6-0.8 0.2-0.6 0.7-0.7 0-0.6-0.2-0.5 0.3 0.2 0.9-0.3 0.7-0.1 0.9-0.4 0.4-0.7 0.2-0.7 0.5 0.1 0.3-0.5 1.1-1 0 0 0.4-0.7 0.2-1-0.4-0.4-0.8-0.3-0.8-0.6 0.1-0.4 1-0.8-0.4-1.2 0-1.2-0.6-0.5 0.1-0.3 0.5-0.6 0-1 0.3-2.3-0.6-0.8 0.3-1.3-0.2-0.9-0.8-0.5 0.1-2.1-0.4z"
+                  fill="url(#tgGoldGradient)" stroke="#F59E0B" stroke-width="1.6" />
+                <path d="M355.2 698.3l0.1-1.2-0.2-0.3 0.1-0.8-0.2-0.1-0.3-0.7 0.3-1.2-0.1-0.7-0.3-0.6-0.1-1.2 0.3-0.8 0-0.7-0.2-1.1 0.4-0.5 0.6 0 0.5-0.5 0.6-0.3 0.4 0.3 0.3-0.8-0.2-0.4-1.3-0.7-0.5-0.5-1-0.2-1.2 0.1-0.7 0.3-1-0.5-0.6 0.1-0.6-0.3-1.3-0.5-0.5-0.7-0.4-1.1 1.1-0.2 0.2-0.5 0.7 0.3 1.2-0.1 0-0.5 0.4-0.2 0.9-0.2 0-0.8-0.4-0.1-0.2-0.5 0.8 0 0.4-0.4 0.5 0 0-0.8 0.4-1-0.2-0.2-0.8 0.3-0.5-0.7 1.4-0.4 0.1-0.9-1.3-0.1 0.4-1.4 0-0.5 0.8 0.1 0.2-0.6-0.5-0.8 0.1-0.6-0.1-1.8 0.3-0.2-0.1-1.1 0.5-0.4-0.1-0.6 0.6-0.5-0.2-0.8-0.4-0.8 0-0.4-0.5-0.5 0.1-0.3-1.6-0.5-0.8-0.5-0.4-0.6 0.3-0.9 0.6 0 0-0.6-0.3-0.2 2-1.6-0.6-0.4 0.4-0.7 0.2-0.9-0.1-0.7 0.7 0 0.2 0.4 1-0.2 0-0.7 0.3-0.3-0.6-0.4 0-0.5 0.6-0.4 1.1 0.4 0-0.7 0.7 0.3 0.4 0 0-0.8 0.6-0.1 0.4-0.2 1 0.2 0.1-0.7-0.9-0.7-1 0-0.8-0.3-0.1-0.7-1 0.2-0.6-0.7-0.7 1-0.3-0.8-0.5 0.1-0.3-0.4-0.6-0.1 0-0.6 0.3-0.8-0.2-0.8 0.4-1.2 0.8-0.2 0.2-0.3 0.9-0.3 0.3 0.1 0.6-0.6-0.2-0.5-0.8-0.5-0.6-0.1 0.2-0.5 0.4-0.3 0-0.4 0.8-0.1 0.3-0.4 0.1-0.7 0.7-0.4-0.2-0.8 0.8 0.2 0.1-1.2 0.7-0.1 0.2-0.6-0.2-0.7-0.4 0-0.7-0.7-1.4-0.5-0.2-0.6 0.6-0.6 0.8-0.2 0.1-0.5-0.2-0.8 0.1-0.7-0.5-0.3-0.3-0.8 0.5-0.8-0.4-0.7 0.8-1-0.8-0.4-0.6 0 0.5-0.5-0.4-0.7-0.7-0.2-0.2-0.7 0.8-0.7 0.1-0.9-0.8-0.2 0.1-0.4 0.9 0.1 0.6-0.2-0.3-0.7 0.1-0.5 0.7 0.3 0-0.5-0.4-0.3 0.3-1.3 1.2-0.2 0.1 0.5 0.3 0.3 1.5-0.8 0.5 0.1 0.5-1.1-0.1-0.9-0.4-0.7 0.1-0.9 0.5-0.4 1-0.1 0.4-0.7 0-0.4 0.6-1.1 0.4-1.1 1.9-0.7 0.9 0.3 0.1-0.6-0.5-0.5-0.7-0.3-0.4-0.5-0.1-0.6-0.7 0-0.5-0.1 0.4-1.2-1.1 0.1 0.1-1-1.4 0 0-1.1-0.2-0.2 0.1-1 1 0.3-0.1-0.6 0.1-0.8 0.5-0.1 0.3 0.5 0.4 0 0.1-0.8-0.3-0.5 0.4-0.7 0.1-0.6-0.2-0.3 0.6-1.7 0.5-0.4 0.4 0.1 0-0.6-1.1-0.2 0-0.5 1.4-0.5 0.4-0.4 0.6-0.3 0.8 0.6 0.2 0.4 0.7 0.2 0.5 0.6 0.5 0.3 0 0.6 0.3 0.3 0.7-0.5 0.4 0.3 0.8 0 0.6 0.4 0.9-0.3 0-1.1 0.3-0.7 0.1-0.8-0.5-0.6 0.3-1.3 1-1.1 0.7 0.1 0.6-0.7 0.7 0.2 0.4-0.5-0.1-0.6-0.3-0.5-0.1-1.6 0.4-0.4 0-0.9-0.6-1.5-0.5-0.2 0.4-0.8 0.9 0 0.1-0.4 0.7-0.3 0-0.6 0.4-0.6 0.2-0.8-0.2-0.7-0.6-0.2 0-0.8-1.2-0.3 0.4-1.8 0.7 0.9 1.3 0.1 0.1 0.8 0.3 0.4 0.9 0.4 1.3 0.2 0.4 0.7 0.9-0.8 1.6 0.2 0.5-0.1 0.5 0.2 2.2 0.7 0.4 0.6 0.6-0.4 0.7 0.1 0.6-0.1 0.6 0.6 1.1 0 0.3 0.8 0.2 1-0.2 1.2 0.9 0 0.7-0.4 0.7 0.1 0.7 0.5-0.1 0.9 0.4 0.8 0 0.3-0.7 0.5 0 0.3 0.7 0 0.4-0.3 0.7 0.6 0.9-0.1 0.3 0.4 1.1 0.1 0.1 0.4 0.9 0.4 0.8 0.9 0.6 0.3 0.8-0.2-0.3-0.6 0.2-0.7 0.6-0.5 0.1-0.9 0.2-0.5-0.3-1 0.5 0 1.3 0.6 0.3 0.7 0.7-0.2 0.8 0 0.1 0.3 1.1 0.8 0.8 0 0.4 0.5 0.4 0.6 1.1-0.6 0.1-0.7 0.7-0.2 0.2 0.7 0.5 0.4 0.7 0.3 0.2-0.2 0.2-0.9 0.4-0.8 0.5-0.3 1.1 0 0.9-0.2 0.8-0.6 1 0.2 0.4 0.5 0.6 0.3 0.4 0.9 1.3 1.1 0.9 0.2 1 1 0 0.5 0.7 1.2-0.2 1.4-0.2 0.5 0.1 1.1-0.4 0.4-0.7 1.6 0 0.7 0.6 0.8-1 1-1 0.6-0.3 0.5 0.1 1.3-0.1 0.5 0.3 0.2 0.6-0.3 0.9 0.1 0.3 0.6-0.1 1.3 0.3 1.1-0.1 2.3-0.4 0.6-0.8 0.2 0.6 1 0.4 0.3 2.2 0.6 0.2 0.4 0.4 0.1 0.3 0.8 1 0.5 0.7 0.7 1.4-0.5 0.3 0.5 0.5 0.1 0.4-0.6 1.2-0.2 0.6-0.4 0.8 0.9 0.6 1.8 0.6 1.1 0.7-0.6 0.4 0.4 0.6-0.4 1.3-0.6 1 0 0.7 0.3 0.5 0.9 1.9 1.2 0.4 0.5 0.5 0.2 0.1 0.7 0.4 0.7 0.8 0.5 0.4 0.6-0.1 0.4 0.6 0.4 0.3 1.3 0.6 1.2 0 0.5 0.6 0.7 0.4 1-1.4 0.7 0.1 1.3 0.7 0.3 1-0.1 0.6-0.8-0.1-0.9 0.2-0.3 1 0.3 0.2 0.5-0.5 0.2 0.2 1.7 0.2 0.3 1-0.1 1.2-0.6 0.3-0.3 0.5-0.1 0 0.7-0.6 0.6-0.1 1 0.5 1.3-0.1 0.4 0.3 1.1 0.3 2 0.3 0.2 0.3 2.2 0.2 0.7 0.5 0.7 0.7 0.2 0.5-0.1 0.6-0.9 1.7-1 0.9 0.2 1.7 1 1.7 0 1.9 0.1 0.7 0.1 0.4-0.5 0.3 0.2 0.9-0.2 0.3 0.5 2-0.3 0.6-0.4 1 0.4 0.8-0.7 0.1-0.5 0.5-0.6 0.7-0.2 0.4 0.7 1.5-1 0.6 0.7 0.4 0.8-0.3 0.3-0.5 0.1-0.3 0.3-0.7 0-0.7 0.5-0.1 0.5-0.7 0.5-1.4 0.1-0.4 0.6-0.7 0.3-0.3 0.4 0 0.9-0.5 0.6-0.5 1-0.6 0.6-0.3 0.6 0.6 0.5-0.6 0.9-0.2 2.6-1.5 1.9-0.5 0.3-0.2 0.3-0.8 0.2-1-0.4-0.2-0.5-0.5-0.1-0.9 1.5-0.6 0.5-1.4 0-0.7-0.2-0.5 0.6-0.1 1.1 0.3 0.4-0.5 0.6-0.5 0-1.6 0.6-0.6 0.2-0.6 0-0.4 0.5-1.2 0.2-0.8-0.2-0.6-0.5-0.7 0.1 0.2 0.9 0 0.7-0.7 0.1-0.5-0.1-0.1 0.6-0.3 0.4 0.2 0.4-0.2 0.8 0.1 0.5-0.7 0.7-0.3-0.3-2.1-0.5-0.6-0.3-1.1-0.1-1 0.4-0.3-0.5 0.5-0.3-0.7-0.8-0.9-0.2-1-0.6-0.3 0.4-1.4 0.7-0.3 0.5-0.1 0.8-0.3 0.5-0.5 0-0.2 0.6-0.7-0.2-0.6-0.9-0.1-0.6-0.8 0.6 0.6 1.2-0.5 0.5-0.3 0.7 1.1 0.4 1.2 0.4 0.9 0.6 0.4-0.7 0.8 0.3 0.3-0.4 1.1 0.7 0.4 0-0.1 0.7 0.1 0.8-0.6 0.1 0 1-0.2 0.3 0.8 0.5 0.3 0.6-0.9 0.7-2-0.4-0.9-0.4-0.1-0.7-0.9-0.4-0.1-0.4-0.5-0.2 0 0.5-0.7 0.6-0.4-1.3-0.7 0-0.4-0.4-0.2-1.2-0.3-1.3-1.1-1.5-0.5 0.2-0.7-0.5-0.6 0.1 0-0.7-0.3-0.1-0.5 0.6-0.6 0.6-0.3 0.5-0.7 0.1-0.5-0.2-0.1 0.7-1.1 0-0.2 0.8-0.8 0.8-0.5 1.3 0.6 0.3 0.6 0 0.2 0.8 0.8 0.3-0.5 1.2-0.1 0.8-0.9 0.9-0.7 0.6-0.5 0.9-0.8 0.8-0.5 0-0.6-0.2-0.3-0.3-0.5-1.1-0.3-0.3-1.4 0.2-0.8-0.9-0.2-0.2-0.7 0.3-0.7 0.8-1.1 0-0.8 0.5-0.2 0.4-1.3-0.1-0.7 0.6-1 0.3-1.1 0.1-1.3 0.6-0.2 0.4-0.4 0.3-2.2 0.1-0.8 0.1-1.4 0.4-0.2 0.5-0.8 0.7-0.2 0.8 0.4 1-0.5 0.5-0.2 2.2 0.4 0.7 0.1 1.1-0.1 1.4-0.5 0.6-0.9 0.4-1.4-0.6-1.5 0-0.7-0.2-0.7 0-0.7 0.4-0.9 0.3-1.4 0.8-0.1 0.7 0.5 1.3-0.6 0.7-0.8-0.4-0.2-1-0.2-0.4-0.7 0.2 0.1 1.9-0.8 1.1-0.9 0.7-1 0-0.6-0.1-0.8-0.4-0.5-0.5-0.9-1-0.9-0.1-1.2 1.1-1.7-0.4-1.2-0.3-1.3 0-1 0.6-0.8 0.2-0.6 0.7-0.7 0-0.6-0.2-0.5 0.3 0.2 0.9-0.3 0.7-0.1 0.9-0.4 0.4-0.7 0.2-0.7 0.5 0.1 0.3-0.5 1.1-1 0 0 0.4-0.7 0.2-1-0.4-0.4-0.8-0.3-0.8-0.6 0.1-0.4 1-0.8-0.4-1.2 0-1.2-0.6-0.5 0.1-0.3 0.5-0.6 0-1 0.3-2.3-0.6-0.8 0.3-1.3-0.2-0.9-0.8-0.5 0.1-2.1-0.4z"
+                  fill="url(#tgCenterRays)" />
+                <!-- Subtle Radial Ray Lines from Center -->
+                <g stroke="#F59E0B" stroke-width="0.35" stroke-dasharray="1.5,1.5" opacity="0.45">
+                  <line x1="400" y1="642" x2="385" y2="612" />
+                  <line x1="400" y1="642" x2="430" y2="615" />
+                  <line x1="400" y1="642" x2="442" y2="648" />
+                  <line x1="400" y1="642" x2="415" y2="682" />
+                  <line x1="400" y1="642" x2="368" y2="656" />
+                </g>
+              </svg>
+
+              <!-- SVG Curved Red Pointer Arrows Connecting Map to Right Pillars -->
+              <svg class="vm-connector-arrows-svg" viewBox="0 0 460 380" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <marker id="arrowRedHead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626" />
+                  </marker>
+                </defs>
+                <!-- Arrow 1: North-East Warangal Pin to Pillar 1 (Urban Development) -->
+                <path d="M 295 125 C 345 95, 385 65, 435 48" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrowRedHead)" opacity="0.85" />
+                <!-- Arrow 2: Khammam/East Pin to Pillar 5 (Community Well-being) -->
+                <path d="M 320 235 C 365 265, 395 305, 435 330" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrowRedHead)" opacity="0.85" />
+              </svg>
+
+              <!-- Teardrop Pin 1: North-West (Adilabad / Nizamabad) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 25%; left: 34%;" title="నిజామాబాద్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
+              </div>
+
+              <!-- Teardrop Pin 2: North-East (Karimnagar / Warangal) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 32%; left: 64%;" title="వరంగల్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
+              </div>
+
+              <!-- Teardrop Pin 3: Center-Capital (Hyderabad) -->
+              <div class="vm-teardrop-pin-wrap is-capital" style="top: 50%; left: 45%;" title="హైదరాబాద్">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="30" height="38">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#B91C1C" />
+                  <circle cx="12" cy="11" r="4.8" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
+              </div>
+
+              <!-- Teardrop Pin 4: East (Khammam) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 61%; left: 69%;" title="ఖమ్మం">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
+              </div>
+
+              <!-- Teardrop Pin 5: South (Nalgonda / Mahabubnagar) -->
+              <div class="vm-teardrop-pin-wrap" style="top: 76%; left: 47%;" title="నల్లగొండ">
+                <svg class="vm-teardrop-pin" viewBox="0 0 24 32" width="26" height="34">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 8.5 12 20 12 20s12-11.5 12-20c0-6.63-5.37-12-12-12z" fill="#DC2626" />
+                  <circle cx="12" cy="11" r="4.2" fill="#FFFFFF" />
+                </svg>
+                <div class="vm-pin-halo"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 5 Pillar Cards Connected to Map Focus -->
+          <div class="vm-action-right-pillars">
+            <!-- Spine Track Connector Line Behind Circles -->
+            <div class="vm-pillars-track-line" aria-hidden="true"></div>
+
+            <!-- Pillar 1: Urban Development -->
+            <div class="vm-pillar-pill" id="actionPillar1">
+              <div class="vm-pillar-icon-bubble bubble-red">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+              <span class="vm-pillar-label" data-i18n="actPill1">పట్టణాల అభివృద్ధి</span>
+            </div>
+
+            <!-- Pillar 2: Rural Development -->
+            <div class="vm-pillar-pill" id="actionPillar2">
+              <div class="vm-pillar-icon-bubble bubble-red">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+              <span class="vm-pillar-label" data-i18n="actPill2">గ్రామాల అభివృద్ధి</span>
+            </div>
+
+            <!-- Pillar 3: Farmers Welfare (Green Theme from Reference) -->
+            <div class="vm-pillar-pill" id="actionPillar3">
+              <div class="vm-pillar-icon-bubble bubble-green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C12.5 4.5 14 7.5 17 8C19.5 8.5 21 11 20 13.5C19 16 16.5 16.5 14 15.5C13 15 12.5 14 12 13C11.5 14 11 15 10 15.5C7.5 16.5 5 16 4 13.5C3 11 4.5 8.5 7 8C10 7.5 11.5 4.5 12 2ZM11 15.5V22H13V15.5C12.7 15.6 12.3 15.6 12 15.6C11.7 15.6 11.3 15.6 11 15.5Z" />
+                </svg>
+              </div>
+              <span class="vm-pillar-label" data-i18n="actPill3">రైతుల సంక్షేమం</span>
+            </div>
+
+            <!-- Pillar 4: Youth Opportunities -->
+            <div class="vm-pillar-pill" id="actionPillar4">
+              <div class="vm-pillar-icon-bubble bubble-red">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <span class="vm-pillar-label" data-i18n="actPill4">యువతకు అవకాశాలు</span>
+            </div>
+
+            <!-- Pillar 5: Community Well-being -->
+            <div class="vm-pillar-pill" id="actionPillar5">
+              <div class="vm-pillar-icon-bubble bubble-red">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <span class="vm-pillar-label" data-i18n="actPill5">సమాజ శ్రేయస్సు</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Section 12 — Grand Modern Footer
+       ========================================================================== -->
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
+      <div class="main-container footer-hero-container">
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
+            </div>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
+            </div>
+          </div>
+          <!-- Social Media Pills -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
+              <li><a href="vision.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navManifesto">మా దృక్పథం</span></a></li>
+              <li><a href="index.html#leadership-team"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="news.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Modals
+       ========================================================================== -->
+
+  <!-- 1. Membership Registration Modal -->
+  <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="membershipModalLabel" data-i18n="modalMemberTitle">ప్రజాసేవ పార్టీ సభ్యత్వ నమోదు</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="membershipForm">
+            <div class="mb-3">
+              <label class="form-label small fw-bold" data-i18n="modalMemberName">పూర్తి పేరు</label>
+              <input type="text" class="form-control" id="memberFullName" required placeholder="మీ పేరు నమోదు చేయండి">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold" data-i18n="modalMemberPhone">మొబైల్ సంఖ్య</label>
+              <input type="tel" class="form-control" id="memberPhone" required placeholder="10 అంకెల మొబైల్ సంఖ్య">
+            </div>
+            <div class="row mb-3">
+              <div class="col-8">
+                <label class="form-label small fw-bold" data-i18n="modalMemberDist">జిల్లా / నియోజకవర్గం</label>
+                <input type="text" class="form-control" id="memberConstituency" required
+                  placeholder="ఉదా: హైదరాబాద్, వరంగల్">
+              </div>
+              <div class="col-4">
+                <label class="form-label small fw-bold" data-i18n="modalMemberAge">వయస్సు</label>
+                <input type="number" class="form-control" id="memberAge" min="18" max="100" placeholder="18+">
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="memberConsent" checked required>
+              <label class="form-check-label small text-muted" for="memberConsent">
+                నేను ప్రజాసేవ పార్టీ విధానాలకు కట్టుబడి ఉంటానని అంగీకరిస్తున్నాను.
+              </label>
+            </div>
+            <button type="submit" class="btn-pill-red w-100" data-i18n="modalMemberSubmit">సభ్యత్వాన్ని నిర్ధారించండి</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Donation Contribution Modal -->
+  <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"
+        style="border-radius: 24px; border: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.16);">
+        <div class="modal-header"
+          style="background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%); color: #1E293B; border-bottom: none; padding: 18px 24px;">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+            <h5 class="modal-title fw-bold mb-0" id="donateModalLabel">ప్రజాసేవ పార్టీకి విరాళం</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <p class="text-muted small mb-3">ప్రజల సంక్షేమం, ఉచిత విద్య, నాణ్యమైన వైద్యం సాధన కోసం ప్రజాసేవ పార్టీకి మీ వంతు చేయూతనివ్వండి.</p>
+          <div class="bg-light p-3 rounded-4 mb-3 d-inline-block border">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" style="width: 170px; height: 170px; display: block;"
+              class="mx-auto">
+            <div class="mt-2 text-dark fw-bold small">Scan &amp; Pay with Any UPI App (GPay / PhonePe / Paytm)</div>
+            <div class="badge bg-danger-subtle text-danger px-3 py-1 rounded-pill mt-1 fs-6">prajasevaparty@upi</div>
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹100</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹500</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹1,000</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹5,000</button></div>
+          </div>
+          <div class="alert alert-secondary py-2 small mb-0 text-start">
+            <strong>ఖాతా వివరాలు:</strong> ప్రజాసేవ పార్టీ వెల్ఫేర్ ట్రస్ట్ &bull; A/C: 123456789012 &bull; IFSC: SBIN0001234
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0 px-4 pb-4">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">మూసివేయి</button>
+          <button type="button" class="btn btn-warning rounded-pill px-4 fw-bold"
+            onclick="alert('విరాళం అందించినందుకు ధన్యవాదాలు! Thank you for your contribution.')">చెల్లింపు నిర్ధారించండి</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container">
+    <div id="siteToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastBody">
+          సందేశం విజయవంతంగా పంపబడింది!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=10.0"></script>
+  <script src="assets/js/main.js?v=10.0"></script>
+</body>
+
+</html>

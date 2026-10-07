@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ప్రజా అభివృద్ధే మా లక్ష్యం – 10 ప్రధాన ప్రజా అంశాలు | ప్రజాసేవ పార్టీ</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీ 10 ప్రధాన ప్రజా అంశాలు: నాణ్యమైన విద్య, ఉచిత వైద్యం, రైతు సంక్షేమం, యువతకు ఉపాధి, సుపరిపాలన. ప్రజా అభివృద్ధి కోసం మా స్పష్టమైన విధానాలు.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
+  <!-- Early Language Preference Sync -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s) document.documentElement.lang = s;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation (Consistent with Portal Header)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vision.html" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="issues.html" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" data-i18n="navNews">వార్తలు & కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs (Inside dropdown menu on < 992px) -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <div class="lang-dropdown-wrapper">
+            <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" onclick="window.toggleLanguageDropdown && window.toggleLanguageDropdown(event);" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language" aria-expanded="false">
+              <span class="lang-label" id="lang-current-label">తెలుగు</span>
+              <i class="bi bi-chevron-down lang-chevron-icon"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <button type="button" class="lang-dropdown-item active" data-lang-val="te" onclick="window.switchLanguage && window.switchLanguage('te'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>తెలుగు</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+              <button type="button" class="lang-dropdown-item" data-lang-val="en" onclick="window.switchLanguage && window.switchLanguage('en'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>English</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Donate Button (Gold Pill: విరాళం ఇవ్వండి) -->
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill: 👤 సభ్యత్వం) -->
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s === 'en') {
+          var l = document.getElementById('lang-current-label');
+          if (l) l.textContent = 'English';
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Top Banner: Hero matching about.html & vision.html UI design
+         ========================================================================== -->
+    <section class="about-page-hero" aria-label="10 ప్రధాన అంశాలు శీర్షిక">
+      <div class="main-container about-banner-container">
+        <div class="about-banner-content">
+          <!-- Breadcrumbs -->
+          <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html#home" class="about-bc-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="breadcrumbHome">హోమ్</span>
+            </a>
+            <span class="about-bc-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="about-bc-current" aria-current="page" data-i18n="navPolicies">10 ప్రధాన అంశాలు</span>
+          </nav>
+
+          <!-- Red & Gold Accent Bar -->
+          <div class="about-banner-accent" aria-hidden="true"></div>
+
+          <!-- Eyebrow Tag -->
+          <div class="about-banner-eyebrow" data-i18n="issuesHeroTag">10 ప్రధాన అంశాలు</div>
+
+          <!-- Main Headline -->
+          <h1 class="about-banner-title">
+            <span class="about-title-navy" data-i18n="issuesHeroTitle1">ప్రజా సమస్యలకు</span>
+            <span class="about-title-red" data-i18n="issuesHeroTitle2">10 ప్రధాన అంశాలు</span>
+          </h1>
+
+          <!-- Subtitle Description -->
+          <p class="about-banner-desc" data-i18n="issuesHeroDesc">
+            తెలంగాణ ప్రజల సమగ్ర అభివృద్ధి, సమాన అవకాశాలు మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ 10 స్పష్టమైన కార్యాచరణ అంశాలు.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive 2-Column Section
+         Left: 10 Numbered Issue Menu Cards
+         Right: Dynamic Detailed Content Card
+         ========================================================================== -->
+    <section class="issues-main-section">
+      <div class="issues-layout-grid">
+
+        <!-- LEFT COLUMN: Desktop Menu -->
+        <aside class="issues-nav-sidebar">
+          <h2 class="issues-sidebar-header">
+            <span data-i18n="partyName">ప్రజాసేవ పార్టీ</span> – <span class="text-accent"
+              data-i18n="issuesTitlePart2">10 ప్రధాన ప్రజా అంశాలు</span>
+          </h2>
+          <ul class="issues-menu-list" id="issuesDesktopMenuList" role="tablist">
+            <!-- Populated dynamically / static anchors with active binding -->
+          </ul>
+        </aside>
+
+        <!-- MOBILE SELECTOR: Converted to responsive dropdown & quick pill tabs on < 992px -->
+        <div class="issues-mobile-selector">
+          <label for="mobileIssueSelect" class="form-label fw-bold text-dark mb-2">
+            <i class="bi bi-list-check text-danger me-1"></i> <span data-i18n="issuesMobileSelectLabel">ప్రజా అంశాన్ని
+              ఎంచుకోండి:</span>
+          </label>
+          <div class="mobile-issue-select-wrap">
+            <select class="mobile-issue-dropdown" id="mobileIssueSelect" aria-label="ప్రజా అంశాన్ని ఎంచుకోండి">
+              <!-- Dynamically populated options -->
+            </select>
+            <i class="bi bi-chevron-down mobile-select-icon"></i>
+          </div>
+          <!-- Horizontal Quick Pills Bar -->
+          <div class="mobile-issue-pills-bar" id="mobileIssuePillsBar" role="tablist">
+            <!-- Dynamically populated pills -->
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Detailed Content Card Panel -->
+        <div class="issues-detail-panel" id="issuesDetailPanel" role="region" aria-live="polite">
+          <div class="issue-detail-card-view" id="issueCardView">
+
+            <!-- 1. Top Detail Header (Title, Lead, Desc & Feature Image) -->
+            <div class="issue-detail-top">
+              <div class="issue-detail-text-col">
+                <div class="issue-detail-title-row">
+                  <div class="issue-detail-num-badge" id="issueDetailNum">01</div>
+                  <h2 class="issue-detail-title" id="issueDetailTitle">నాణ్యమైన విద్య</h2>
+                </div>
+                <div class="issue-detail-rule"></div>
+                <div class="issue-lead-text" id="issueDetailLead">
+                  ప్రతి బిడ్డకు నాణ్యమైన, సమాన, ఆధునిక విద్య – బలమైన తెలంగాణ భవిష్యత్తు.
+                </div>
+                <p class="issue-body-text" id="issueDetailDesc">
+                  విద్య ఎల్లప్పుడూ సమాజానికి పునాది. ప్రతి పిల్లవాడికి సమాన అవకాశాలు, నాణ్యమైన విద్య, ఆధునిక సౌకర్యాలు
+                  అందించడం మా ప్రధాన లక్ష్యం. పాఠశాలలు, కళాశాలలు, సాంకేతిక విద్య, నైపుణ్య అభివృద్ధి ద్వారా యువతకు
+                  మెరుగైన భవిష్యత్తు నిర్మాణానికి మా కట్టుబాటు.
+                </p>
+              </div>
+              <div class="issue-detail-img-col">
+                <div class="issue-img-frame">
+                  <img src="assets/images/policy/policy-edu.jpg" alt="నాణ్యమైన విద్య" id="issueDetailImg"
+                    class="issue-feature-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Middle Highlight Box: "మా లక్ష్యం" -->
+            <div class="issue-target-box">
+              <div class="target-icon-bubble">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <div class="target-content">
+                <div class="target-title" data-i18n="targetHighlightTitle">మా లక్ష్యం</div>
+                <p class="target-desc" id="issueDetailTarget">
+                  ప్రతి పౌరుడికీ అందుబాటులో నాణ్యమైన విద్య, డిజిటల్ లెర్నింగ్, నైపుణ్య అభివృద్ధి, ఉన్నత విద్య అవకాశాలు
+                  కల్పించడం.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. Section Title: | ప్రధాన కార్యక్రమాలు -->
+            <div class="initiatives-sec-header">
+              <div class="initiatives-bar"></div>
+              <h3 class="initiatives-title" data-i18n="keyInitiativesHeading">ప్రధాన కార్యక్రమాలు</h3>
+            </div>
+
+            <!-- 4. Grid of 6 Mini Commitment Cards -->
+            <div class="initiatives-cards-grid" id="issueInitiativesGrid">
+              <!-- Dynamically populated 6 commitment cards -->
+            </div>
+
+            <!-- 5. Bottom Golden Quote Strip -->
+            <div class="issue-quote-strip">
+              <div class="quote-graphic-wrap">
+                <!-- Inline SVG of Books Stack with Graduation Cap -->
+                <svg class="quote-graphic-svg" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Bottom Book -->
+                  <rect x="14" y="42" width="56" height="10" rx="3" fill="#0B1936" />
+                  <path d="M14 45H70" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.6" />
+                  <rect x="10" y="42" width="6" height="10" rx="2" fill="#D97706" />
+                  <!-- Middle Book -->
+                  <rect x="18" y="30" width="52" height="9" rx="3" fill="#C81016" />
+                  <path d="M18 33H68" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.6" />
+                  <rect x="14" y="30" width="6" height="9" rx="2" fill="#FBBF24" />
+                  <!-- Top Book -->
+                  <rect x="22" y="20" width="46" height="8" rx="2.5" fill="#0284C7" />
+                  <path d="M22 23H66" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.6" />
+                  <rect x="19" y="20" width="5" height="8" rx="2" fill="#38BDF8" />
+                  <!-- Graduation Cap Mortarboard -->
+                  <polygon points="45,4 72,12 45,20 18,12" fill="#1E293B" />
+                  <polygon points="45,4 72,12 45,14 18,12" fill="#334155" />
+                  <rect x="36" y="16" width="18" height="6" rx="2" fill="#0F172A" />
+                  <!-- Tassel -->
+                  <circle cx="45" cy="12" r="2.5" fill="#F59E0B" />
+                  <path d="M45 12C36 15 32 24 30 28" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="30" cy="28" r="2.5" fill="#D97706" />
+                </svg>
+              </div>
+              <div class="quote-text-wrap">
+                <p class="quote-body" id="issueDetailQuote">
+                  “విద్యతోనే వ్యక్తి, కుటుంబం, సమాజం, రాష్ట్రం అభివృద్ధి చెందుతుంది.”
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Grand Modern Footer (Exact Homepage Footer)
+       ========================================================================== -->
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
+      <div class="main-container footer-hero-container">
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
+            </div>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
+            </div>
+          </div>
+          <!-- Social Media Pills -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon (Red on top, Gold underneath) -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER (Clean Pure White Background) -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా
+                    గురించి</span></a></li>
+              <li><a href="index.html#leadership-team"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన
+                    అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <!-- Location Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <!-- Phone Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <!-- Email Row -->
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- ==========================================================================
+       Interactive Issues Logic
+       ========================================================================== -->
+  <script>
+    // Helper to determine active language
+    function getActiveLang() {
+      return localStorage.getItem('prajaseva_lang') || document.documentElement.lang || 'te';
+    }
+
+    // 10 Detailed Public Issues Data Object with Telugu and English Content
+    const ISSUES_DATA = [
+      {
+        id: 1,
+        num: "01",
+        title: "నాణ్యమైన విద్య",
+        title_en: "Quality Education",
+        menuIcon: "bi-mortarboard-fill",
+        iconColor: "#DC2626",
+        image: "assets/images/policy/policy-edu.jpg",
+        lead: "ప్రతి బిడ్డకు నాణ్యమైన, సమాన, ఆధునిక విద్య – బలమైన తెలంగాణ భవిష్యత్తు.",
+        lead_en: "Quality, equitable, modern education for every child – building a strong future.",
+        desc: "విద్య ఎల్లప్పుడూ సమాజానికి పునాది. ప్రతి పిల్లవాడికి సమాన అవకాశాలు, నాణ్యమైన విద్య, ఆధునిక సౌకర్యాలు అందించడం మా ప్రధాన లక్ష్యం. పాఠశాలలు, కళాశాలలు, సాంకేతిక విద్య, నైపుణ్య అభివృద్ధి ద్వారా యువతకు మెరుగైన భవిష్యత్తు నిర్మాణానికి మా కట్టుబాటు.",
+        desc_en: "Education is the bedrock of society. Our primary mission is providing equal opportunities, quality education, and modern infrastructure to every student. We are committed to securing our youth's future through world-class institutions and practical skill development.",
+        target: "ప్రతి పౌరుడికీ అందుబాటులో నాణ్యమైన విద్య, డిజిటల్ లెర్నింగ్, నైపుణ్య అభివృద్ధి, ఉన్నత విద్య అవకాశాలు కల్పించడం.",
+        target_en: "Making accessible quality education, digital learning, skill development, and higher education opportunities available to every citizen.",
+        commitments: [
+          { icon: "bi-bank2", color: "#DC2626", name: "ఆధునిక పాఠశాలలు", name_en: "Modern Schools", desc: "ప్రతి గ్రామంలో నాణ్యమైన సదుపాయాలతో ప్రభుత్వ పాఠశాలలు.", desc_en: "Government schools with quality facilities in every village." },
+          { icon: "bi-laptop", color: "#7C3AED", name: "డిజిటల్ విద్య", name_en: "Digital Education", desc: "స్మార్ట్ క్లాసులు, డిజిటల్ ల్యాబ్‌లు, ఇ-లెర్నింగ్ సదుపాయాలు.", desc_en: "Smart classrooms, digital computer labs, and e-learning resources." },
+          { icon: "bi-people-fill", color: "#2563EB", name: "ఉన్నత విద్య సహాయం", name_en: "Higher Education Aid", desc: "పేద విద్యార్థులకు స్కాలర్‌షిప్‌లు, ఫీజు రీయింబర్స్‌మెంట్.", desc_en: "Scholarships and full fee reimbursement for underprivileged students." },
+          { icon: "bi-gear-fill", color: "#DC2626", name: "నైపుణ్య అభివృద్ధి", name_en: "Skill Development", desc: "యువతకు పరిశ్రమల అవసరాలకు అనుగుణంగా నైపుణ్య శిక్షణలు.", desc_en: "Industry-aligned vocational and modern skills training for youth." },
+          { icon: "bi-lightbulb-fill", color: "#D97706", name: "పరిశోధన & ఆవిష్కరణలు", name_en: "Research & Innovation", desc: "ఇంక్యుబేటర్లు, ఇన్నోవేషన్ సెంటర్లు ప్రోత్సాహం.", desc_en: "Promoting incubators, technology labs, and innovation hubs." },
+          { icon: "bi-book-half", color: "#DC2626", name: "సమాన అవకాశం", name_en: "Equal Opportunity", desc: "అణగారిన వర్గాల పిల్లలకు ప్రత్యేక విద్యా సదుపాయాలు.", desc_en: "Special educational support and residential schools for marginalized children." }
+        ],
+        quote: "“విద్యతోనే వ్యక్తి, కుటుంబం, సమాజం, రాష్ట్రం అభివృద్ధి చెందుతుంది.”",
+        quote_en: "“Education is the foundation upon which individuals, families, society, and the state progress.”"
+      },
+      {
+        id: 2,
+        num: "02",
+        title: "ఆరోగ్య సేవలు",
+        title_en: "Healthcare Services",
+        menuIcon: "bi-heart-pulse-fill",
+        iconColor: "#DC2626",
+        image: "assets/images/policy/policy-health.jpg",
+        lead: "ప్రతి పేదవాడికి ఉచిత, నాణ్యమైన అత్యున్నత వైద్య సేవలు – సంపూర్ణ ఆరోగ్య భారతం.",
+        lead_en: "Free, high-quality, premier medical care for every family – a healthier society.",
+        desc: "ఆరోగ్యం ప్రతి పౌరుడి ప్రాథమిక హక్కు. ఎవరూ వైద్య ఖర్చుల వల్ల పేదరికంలోకి నెట్టబడకూడదు. అత్యాధునిక మౌలిక సదుపాయాలతో కూడిన ఆసుపత్రులు, సమగ్ర ఆరోగ్య బీమా, మారుమూల గ్రామాల్లో ప్రాథమిక ఆరోగ్య కేంద్రాల బలోపేతం మా ధ్యేయం.",
+        desc_en: "Healthcare is a fundamental human right. No family should slide into poverty due to medical bills. Our goal is state-of-the-art hospitals, comprehensive healthcare coverage, and strengthened primary healthcare centers in every village.",
+        target: "రూపాయి ఖర్చు లేకుండా అత్యున్నత స్థాయి సూపర్ స్పెషాలిటీ చికిత్సలు మరియు ఉచిత మందులు ప్రతి ఒక్కరికీ అందించడం.",
+        target_en: "Providing world-class super-speciality treatments and essential medicines completely free of cost to all citizens.",
+        commitments: [
+          { icon: "bi-hospital-fill", color: "#DC2626", name: "ఉచిత వైద్యం", name_en: "Free Healthcare", desc: "పేద, మధ్యతరగతి కుటుంబాలకు సూపర్ స్పెషాలిటీ చికిత్సలు ఉచితం.", desc_en: "Free super-speciality medical care for low and middle-income families." },
+          { icon: "bi-geo-alt-fill", color: "#7C3AED", name: "గ్రామీణ క్లినిక్‌లు", name_en: "Rural Clinics", desc: "ప్రతి గ్రామంలో 24/7 ప్రాథమిక ఆరోగ్య కేంద్రం, టెలిమెడిసిన్.", desc_en: "24/7 primary health clinics and telemedicine in every village." },
+          { icon: "bi-capsule", color: "#2563EB", name: "ఉచిత మందులు", name_en: "Free Medicines", desc: "ప్రతి ప్రభుత్వ ఆసుపత్రిలో నాణ్యమైన జనరిక్ మందులు ఉచిత పంపిణీ.", desc_en: "Free distribution of quality generic medicines across all public hospitals." },
+          { icon: "bi-shield-heart-fill", color: "#DC2626", name: "మాతా శిశు సంరక్షణ", name_en: "Maternal & Child Care", desc: "గర్భిణీ స్త్రీలకు, నవజాత శిశువులకు పౌష్టికాహారం, ప్రత్యేక నిధి.", desc_en: "Nutritional support and dedicated care funds for expectant mothers and infants." },
+          { icon: "bi-clipboard2-pulse-fill", color: "#D97706", name: "డయాగ్నస్టిక్ నెట్‌వర్క్", name_en: "Diagnostic Network", desc: "ఉచిత రక్త, స్కానింగ్ పరీక్షల కోసం ఆధునిక ల్యాబ్‌ల ఏర్పాటు.", desc_en: "Modern diagnostic labs for free blood tests and advanced scans." },
+          { icon: "bi-truck", color: "#DC2626", name: "అత్యవసర రెస్పాన్స్", name_en: "Emergency Response", desc: "10 నిమిషాల్లో అంబులెన్స్ సేవలు మరియు క్రిటికల్ కేర్ మద్దతు.", desc_en: "Guaranteed 10-minute ambulance response time and critical care outreach." }
+        ],
+        quote: "“ఆరోగ్యవంతమైన పౌరులే సుసంపన్నమైన సమాజానికి అసలైన సంపద.”",
+        quote_en: "“Healthy citizens are the greatest and truest asset of a prosperous society.”"
+      },
+      {
+        id: 3,
+        num: "03",
+        title: "రైతుల సంక్షేమం",
+        title_en: "Farmer Welfare",
+        menuIcon: "bi-flower1",
+        iconColor: "#16A34A",
+        image: "assets/images/policy/policy-farmer.jpg",
+        lead: "అన్నదాత సుఖీభవ – గిట్టుబాటు ధర, సాగు రక్షణ, గౌరవప్రదమైన రైతు జీవనం.",
+        lead_en: "Prosperity for Farmers – guaranteed MSP, crop protection, and dignified livelihood.",
+        desc: "వ్యవసాయం ఆర్థిక వ్యవస్థకు వెన్నెముక. రైతులకు సమగ్ర భరోసా కల్పించడం, ఆధునిక సేద్య పద్ధతులు, సాగునీటి పంపిణీ, గిట్టుబాటు ధరల హామీ ద్వారా వ్యవసాయాన్ని లాభసాటి వృత్తిగా మార్చడమే ప్రజాసేవ పార్టీ సంకల్పం.",
+        desc_en: "Agriculture is the backbone of our economy. Prajaseva Party is committed to making farming profitable through investment support, assured irrigation, guaranteed minimum support prices, and modern agronomic practices.",
+        target: "ప్రతి రైతుకు పెట్టుబడి సాయం, పంటలకు గిట్టుబాటు ధర గ్యారెంటీ మరియు పూర్తి పంట బీమా కవరేజ్ అందించడం.",
+        target_en: "Providing financial input assistance, statutory price guarantees, and comprehensive zero-premium crop insurance for all farmers.",
+        commitments: [
+          { icon: "bi-currency-rupee", color: "#DC2626", name: "గిట్టుబాటు ధర చట్టం", name_en: "Guaranteed MSP Law", desc: "రైతులకు గిట్టుబాటు ధరల చట్టబద్ధమైన హామీ మరియు కొనుగోలు కేంద్రాలు.", desc_en: "Legally backed minimum support prices and direct procurement centers." },
+          { icon: "bi-cash-stack", color: "#16A34A", name: "పెట్టుబడి సాయం", name_en: "Input Assistance", desc: "ఎకరాకు సీజన్‌కు తగిన ఆర్థిక చేయూత, నాణ్యమైన విత్తనాలు, ఎరువుల సరఫరా.", desc_en: "Direct financial support per acre, high-yield seeds, and organic fertilizers." },
+          { icon: "bi-umbrella-fill", color: "#2563EB", name: "సమగ్ర పంట బీమా", name_en: "Comprehensive Insurance", desc: "రైతులకు ప్రీమియం రహిత ప్రకృతి వైపరీత్యాల పరిహార వ్యవస్థ.", desc_en: "Zero-premium crop insurance with swift compensation for weather losses." },
+          { icon: "bi-box-seam-fill", color: "#D97706", name: "కోల్డ్ స్టోరేజ్ గ్రిడ్", name_en: "Cold Storage Grid", desc: "మండల స్థాయిలో ఆధునిక శీతల గిడ్డంగులు, ఫుడ్ ప్రాసెసింగ్ యూనిట్లు.", desc_en: "Decentralized cold storages and agro-processing hubs at mandal level." },
+          { icon: "bi-heart-fill", color: "#DC2626", name: "రైతు పెన్షన్ & భరోసా", name_en: "Farmer Pension Fund", desc: "వృద్ధ రైతులకు గౌరవ పెన్షన్ మరియు రైతు కుటుంబ భరోసా పథకం.", desc_en: "Dignified pension for senior farmers and security funds for bereaved families." },
+          { icon: "bi-sun-fill", color: "#CA8A04", name: "సౌర & బిందు సేద్యం", name_en: "Solar & Micro-Irrigation", desc: "రైతులకు ఉచిత సోలార్ పంపుసెట్లు మరియు 90% సబ్సిడీతో మైక్రో ఇరిగేషన్.", desc_en: "Free solar pumpsets and 90% subsidized drip & micro-irrigation systems." }
+        ],
+        quote: "“అన్నదాత కన్నీరు తుడిచినప్పుడే సమాజానికి నిజమైన అన్నపూర్ణ వెలుగు.”",
+        quote_en: "“Only when the tears of the food provider are wiped away does true prosperity dawn.”"
+      },
+      {
+        id: 4,
+        num: "04",
+        title: "ఉపాధి అవకాశాలు",
+        title_en: "Employment & Youth",
+        menuIcon: "bi-briefcase-fill",
+        iconColor: "#DC2626",
+        image: "assets/images/policy/policy-jobs.jpg",
+        lead: "ప్రతి యువకుడికి ఉద్యోగ భరోసా – పారదర్శక నియామకాలు, పరిశ్రమల విస్తరణ.",
+        lead_en: "Guaranteed jobs for youth – transparent recruitment and local industrial growth.",
+        desc: "యువత మేధస్సు మరియు శ్రమశక్తిని దేశాభివృద్ధికి చోదక శక్తిగా మార్చడం. ఖాళీగా ఉన్న ప్రభుత్వ ఉద్యోగాలను జాబ్ క్యాలెండర్ ప్రకారం భర్తీ చేయడం, ఐటీ, పారిశ్రామిక క్లస్టర్ల ద్వారా లక్షలాది స్థానిక ఉద్యోగాలు సృష్టించడమే మా సంకల్పం.",
+        desc_en: "Channeling the energy and intellect of our youth into economic progress. Transparent annual job calendars for public vacancies and expanding IT, manufacturing clusters to generate millions of local opportunities.",
+        target: "అర్హులైన ప్రతి యువకుడికి ఉపాధి లేదా స్వయం ఉపాధి కల్పించి నిరుద్యోగ రహిత సమాజం సాధించడం.",
+        target_en: "Achieving an unemployment-free society by providing secure employment and entrepreneurship support to every eligible youth.",
+        commitments: [
+          { icon: "bi-calendar-check-fill", color: "#DC2626", name: "వార్షిక జాబ్ క్యాలెండర్", name_en: "Annual Job Calendar", desc: "ప్రతి సంవత్సరం క్రమం తప్పకుండా పారదర్శక ప్రభుత్వ ఉద్యోగ నియామకాలు.", desc_en: "Regular, paperleak-proof, transparent government recruitment cycles." },
+          { icon: "bi-buildings-fill", color: "#7C3AED", name: "జిల్లా పారిశ్రామిక పార్కులు", name_en: "District Industrial Hubs", desc: "ప్రతి జిల్లాలో యువతకు ఉద్యోగాలు ఇచ్చే పరిశ్రమల క్లస్టర్లు.", desc_en: "Modern industrial parks in each district generating localized employment." },
+          { icon: "bi-rocket-takeoff-fill", color: "#2563EB", name: "స్టార్టప్ సీడ్ ఫండ్", name_en: "Startup Seed Fund", desc: "యువ పారిశ్రామికవేత్తలకు రూ. 10 లక్షల వరకు పూచీకత్తు లేని రుణాలు.", desc_en: "Collateral-free seed capital and incubation grants up to ₹10 Lakhs." },
+          { icon: "bi-cpu-fill", color: "#DC2626", name: "గ్లోబల్ స్కిల్లింగ్", name_en: "Global Tech Skilling", desc: "ఆధునిక సాంకేతికత, ఏఐ, కోడింగ్, తయారీ రంగాల్లో ఉచిత శిక్షణ.", desc_en: "Cutting-edge vocational training in AI, digital tech, and advanced manufacturing." },
+          { icon: "bi-wallet2", color: "#D97706", name: "నిరుద్యోగ భృతి", name_en: "Unemployment Allowance", desc: "అర్హులైన నిరుద్యోగ యువతకు ఉద్యోగం వచ్చే వరకు గౌరవ ప్రోత్సాహక భృతి.", desc_en: "Monthly transitional stipend and career guidance until placement." },
+          { icon: "bi-person-hearts", color: "#EC4899", name: "మహిళా ఉపాధి ప్రోత్సాహం", name_en: "Women Livelihoods", desc: "మహిళా స్వయం సహాయక సంఘాల ఉత్పత్తులకు గ్లోబల్ మార్కెటింగ్.", desc_en: "Global marketing channels and micro-credit for women entrepreneurs." }
+        ],
+        quote: "“యువత శక్తే రాష్ట్ర ప్రగతికి మూలస్తంభం – ప్రతి చేతికి పని, ప్రతి కంటికి వెలుగు.”",
+        quote_en: "“Youth energy is the pillar of state progress – work for every hand, hope for every eye.”"
+      },
+      {
+        id: 5,
+        num: "05",
+        title: "పట్టణాల అభివృద్ధి",
+        title_en: "Urban Development",
+        menuIcon: "bi-buildings-fill",
+        iconColor: "#D97706",
+        image: "assets/images/policy/policy-housing.jpg",
+        lead: "స్మార్ట్, పచ్చని, సురక్షిత నగరాలు – ప్రతి పేద కుటుంబానికి సొంతింటి కల సాకారం.",
+        lead_en: "Smart, green, safe cities – realizing the dream of a permanent home for all.",
+        desc: "వేగంగా విస్తరిస్తున్న పట్టణాల్లో ఆధునిక ప్రజా రవాణా, పరిశుభ్రమైన తాగునీరు, డ్రైనేజీ వ్యవస్థ మరియు మురికివాడల సమగ్ర అభివృద్ధి. పేద మరియు అల్పాదాయ వర్గాల ప్రజలకు గౌరవప్రదమైన శాశ్వత గృహ నిర్మాణం మా హామీ.",
+        desc_en: "Providing world-class civic amenities in rapidly urbanizing regions: modern transit, uninterrupted clean water, flood-free drainage, and urban greening. Building permanent quality homes for low-income citizens.",
+        target: "అన్ని పట్టణాల్లో అత్యాధునిక మౌలిక వసతులు మరియు అర్హులైన ప్రతి పేద కుటుంబానికి ఉచిత పక్కా ఇల్లు.",
+        target_en: "Equipping all towns with modern infrastructure and providing a permanent quality pucca house for every eligible underprivileged family.",
+        commitments: [
+          { icon: "bi-house-door-fill", color: "#DC2626", name: "పేదలందరికీ గృహాలు", name_en: "Housing for All", desc: "నాణ్యమైన మౌలిక వసతులతో కూడిన శాశ్వత పక్కా ఇళ్ల నిర్మాణం.", desc_en: "Permanent pucca homes with water, electricity, and clean titles." },
+          { icon: "bi-water", color: "#2563EB", name: "ఆధునిక డ్రైనేజీ వ్యవస్థ", name_en: "Underground Drainage", desc: "వరద ముంపు లేని అత్యాధునిక భూగర్భ డ్రైనేజీ నెట్‌వర్క్.", desc_en: "Flood-resistant storm-water drainage and sewage treatment networks." },
+          { icon: "bi-bus-front-fill", color: "#7C3AED", name: "సురక్షిత ప్రజా రవాణా", name_en: "Green Public Transit", desc: "ఎలక్ట్రిక్ బస్సులు, మెట్రో విస్తరణ, చౌకైన ప్రజా రవాణా సౌకర్యాలు.", desc_en: "Zero-emission electric buses, metro expansion, and affordable passes." },
+          { icon: "bi-tree-fill", color: "#16A34A", name: "అర్బన్ గ్రీనరీ & పార్కులు", name_en: "Urban Parks & Greenery", desc: "ప్రతి వార్డులో ప్రజల కోసం పచ్చని ఉద్యానవనాలు, వాకింగ్ ట్రాక్‌లు.", desc_en: "Community lung spaces, walking paths, and recreational parks in every ward." },
+          { icon: "bi-droplet-fill", color: "#0284C7", name: "24x7 శుద్ధి చేసిన నీరు", name_en: "24x7 Clean Water", desc: "ప్రతి ఇంటికీ సురక్షితమైన రక్షిత మంచినీటి నల్లా కనెక్షన్లు.", desc_en: "Treated, laboratory-certified drinking tap water for every residence." },
+          { icon: "bi-phone-fill", color: "#D97706", name: "పారదర్శక మున్సిపల్ సేవలు", name_en: "Digital Civic Services", desc: "డిజిటల్ గవర్నెన్స్ ద్వారా అవినీతి రహిత పట్టణ పౌర సేవలు.", desc_en: "Speedy, corruption-free online processing of all municipal permits." }
+        ],
+        quote: "“పరిశుభ్రమైన నగరాలు, పచ్చని పరిసరాలు – సుఖమయ పట్టణ జీవనానికి బాటలు.”",
+        quote_en: "“Clean cities and green neighborhoods pave the path to comfortable urban life.”"
+      },
+      {
+        id: 6,
+        num: "06",
+        title: "నీరు & సాగునీరు",
+        title_en: "Water & Irrigation",
+        menuIcon: "bi-droplet-fill",
+        iconColor: "#0284C7",
+        image: "assets/images/policy/policy-land.jpg",
+        lead: "ప్రతి ఎకరాకూ సాగునీరు – ప్రతి గొంతుకూ దాహార్తి తీర్చే రక్షిత తాగునీరు.",
+        lead_en: "Irrigation for every acre – safe, pure drinking water for every household.",
+        desc: "నదుల సమగ్ర సద్వినియోగం, పెండింగ్ ప్రాజెక్టుల సత్వర పూర్తి, చెరువుల పునరుద్ధరణ మరియు భూగర్భ జలాల పెంపుదల. వ్యవసాయానికి అవసరమైన ప్రతి చుక్క నీటిని పొదుపుగా రైతు చేనుకు చేర్చడం ప్రజాసేవ పార్టీ అత్యున్నత ప్రాధాన్యత.",
+        desc_en: "Optimal harnessing of river basins, time-bound completion of pending irrigation barrages, rejuvenation of village lakes, and aggressive groundwater recharging to guarantee water security.",
+        target: "ప్రతి సాగుభూమికి పుష్కలమైన నీటి సరఫరా మరియు ప్రతి ఇంటికి స్వచ్ఛమైన తాగునీటి రక్షణ.",
+        target_en: "Ensuring abundant water supply to every farmland and guaranteed safe drinking water to every home.",
+        commitments: [
+          { icon: "bi-water", color: "#0284C7", name: "ప్రాజెక్టుల శీఘ్ర పూర్తి", name_en: "Expedited Projects", desc: "పెండింగ్ ఇరిగేషన్ ప్రాజెక్టులను నిర్దిష్ట గడువులో పూర్తి చేయడం.", desc_en: "Fast-tracking major & medium irrigation schemes without cost overruns." },
+          { icon: "bi-tsunami", color: "#2563EB", name: "చెరువుల పునరుద్ధరణ", name_en: "Lake Rejuvenation", desc: "గ్రామీణ ప్రాంతాల్లో గొలుసుకట్టు చెరువుల పూడికతీత, గట్టు రక్షణ.", desc_en: "Desilting and strengthening bunds of interconnected historical tanks." },
+          { icon: "bi-bezier2", color: "#7C3AED", name: "కాల్వల ఆధునీకరణ", name_en: "Canal Modernization", desc: "చివరి ఆయకట్టు రైతుకూ నీరందేలా కాల్వల లైనింగ్ మరియు నిర్వహణ.", desc_en: "Concrete canal lining ensuring tail-end farmers receive full water quotas." },
+          { icon: "bi-layers-fill", color: "#16A34A", name: "భూగర్భ జలాల పెంపు", name_en: "Groundwater Recharge", desc: "విస్తృత చెక్‌డ్యాంలు, ఇంకుడు గుంతలతో జల సంరక్షణ ఉద్యమం.", desc_en: "Constructing check dams and rainwater harvesting structures state-wide." },
+          { icon: "bi-cup-straw", color: "#DC2626", name: "ఉచిత రక్షిత తాగునీరు", name_en: "Free Potable Water", desc: "ప్రతి ఆవాస ప్రాంతంలో ఆర్వో వాటర్ ప్లాంట్లు, ఉచిత తాగునీరు.", desc_en: "Community RO filtration plants providing clean fluoride-free water." },
+          { icon: "bi-speedometer2", color: "#D97706", name: "స్మార్ట్ వాటర్ మేనేజ్‌మెంట్", name_en: "Smart Water Grid", desc: "సెన్సార్లు, డిజిటల్ మానిటరింగ్‌తో నీటి వృథా అరికట్టడం.", desc_en: "IoT telemetry and flow sensors to minimize transit transmission losses." }
+        ],
+        quote: "“నీరే ప్రాణాధారం – సస్యశ్యామల సేద్యమే రాష్ట్ర సర్వతోముఖాభివృద్ధికి మూలం.”",
+        quote_en: "“Water is life – flourishing agriculture is the cornerstone of all-round growth.”"
+      },
+      {
+        id: 7,
+        num: "07",
+        title: "మౌలిక సదుపాయాలు",
+        title_en: "Infrastructure & Roads",
+        menuIcon: "bi-signpost-2-fill",
+        iconColor: "#DC2626",
+        image: "assets/images/policy/policy-village.jpg",
+        lead: "గ్రామాలు – నగరాల అనుసంధానం: నాణ్యమైన రహదారులు, విద్యుత్, డిజిటల్ కనెక్టివిటీ.",
+        lead_en: "Connecting villages and towns: all-weather roads, uninterrupted power, digital access.",
+        desc: "సమగ్ర అభివృద్ధికి మౌలిక వసతులే పునాది. ప్రతి పల్లెకు ఆల్‌వెదర్ తారు రోడ్లు, అంతరాయం లేని నాణ్యమైన విద్యుత్, బ్రిడ్జిలు, అత్యాధునిక డిజిటల్ నెట్‌వర్క్‌ల ద్వారా రాష్ట్ర ప్రగతి వేగాన్ని రెట్టింపు చేయడమే మా లక్ష్యం.",
+        desc_en: "Strong infrastructure is the bedrock of holistic progress. Paving reliable all-weather roads to remote hamlets, upgrading transmission lines, building flyovers, and expanding optical fiber networks.",
+        target: "ప్రపంచ స్థాయి రోడ్లు, నిరంతర విద్యుత్ మరియు విశ్వసనీయ రవాణా వ్యవస్థల నిర్మాణం.",
+        target_en: "Building world-class roads, 24/7 quality power grids, and reliable public transportation networks.",
+        commitments: [
+          { icon: "bi-signpost-fill", color: "#DC2626", name: "పల్లె పల్లెకూ తారు రోడ్లు", name_en: "All-Weather Roads", desc: "మట్టి రోడ్లు లేని గ్రామ పంచాయతీలు, నాణ్యమైన లింక్ రోడ్లు.", desc_en: "Eliminating kutcha roads; 100% blacktop connectivity to all hamlets." },
+          { icon: "bi-lightning-charge-fill", color: "#CA8A04", name: "24 గంటల నాణ్యమైన విద్యుత్", name_en: "24/7 Reliable Power", desc: "గృహ, వ్యవసాయ, పరిశ్రమలకు లోవోల్టేజీ లేని విద్యుత్ సరఫరా.", desc_en: "Uninterrupted, surge-free power supply for homes, farms, and factories." },
+          { icon: "bi-cone-striped", color: "#2563EB", name: "హైవే కారిడార్లు", name_en: "Expressway Corridors", desc: "జిల్లాలను కలిపే 4-లేన్ ఎక్స్‌ప్రెస్‌వేలు మరియు బైపాస్ రోడ్లు.", desc_en: "Four-lane economic corridors and ring roads connecting district centers." },
+          { icon: "bi-wifi", color: "#7C3AED", name: "హై-స్పీడ్ ఇంటర్నెట్ ఫైబర్", name_en: "High-Speed Fiber Net", desc: "ప్రతి గ్రామానికీ ఉచిత ఫైబర్ నెట్ మరియు డిజిటల్ సేవా కేంద్రాలు.", desc_en: "Fiber broadband access and digital citizen facilitation centers in all villages." },
+          { icon: "bi-bus-front-fill", color: "#DC2626", name: "ఆధునిక బస్ స్టేషన్లు", name_en: "Modern Bus Terminals", desc: "ప్రతి మండల కేంద్రంలో సౌకర్యవంతమైన మోడల్ ఆర్టీసీ బస్టాండ్లు.", desc_en: "Upgraded public transit terminals with passenger conveniences." },
+          { icon: "bi-sun-fill", color: "#16A34A", name: "సౌర విద్యుత్ ప్రోత్సాహం", name_en: "Renewable Energy", desc: "ప్రభుత్వ భవనాలు, వ్యవసాయంలో హరిత ఇంధన విప్లవం.", desc_en: "Promoting rooftop solar and clean solar agricultural feeders." }
+        ],
+        quote: "“సులభమైన రవాణా, పటిష్టమైన మౌలిక వసతులు – ప్రగతి పథంలో వేగవంతమైన ప్రయాణం.”",
+        quote_en: "“Seamless transit and strong infrastructure fuel swift acceleration toward progress.”"
+      },
+      {
+        id: 8,
+        num: "08",
+        title: "ఆర్థికాభివృద్ధి",
+        title_en: "Economic Growth",
+        menuIcon: "bi-graph-up-arrow",
+        iconColor: "#EA580C",
+        image: "assets/images/policy/policy-peoplesvoice.jpg",
+        lead: "సంపద సృష్టి – సమతుల్య పంపిణీ: వ్యాపార ప్రోత్సాహం, స్థానిక ఆర్థిక పురోగతి.",
+        lead_en: "Wealth creation and equitable sharing: business empowerment and local growth.",
+        desc: "కేవలం సంపద సృష్టించడమే కాకుండా, అది సమాజంలోని అన్ని వర్గాలకు చేరేలా చూడడం. చిన్న, మధ్యతరహా వ్యాపారాలకు (MSME) చేయూత, విదేశీ పెట్టుబడుల ఆకర్షణ మరియు స్థానిక ఆర్థిక వ్యవస్థల పరిపుష్టి మా విధానం.",
+        desc_en: "Focusing on inclusive economic expansion that uplifts everyone. Fostering micro and small businesses (MSMEs), attracting global manufacturing investments, and stimulating local commercial ecosystems.",
+        target: "పారదర్శక పారిశ్రామిక విధానం, వ్యాపార సులభతరం మరియు స్థానిక వ్యాపారులకు ఆర్థిక భరోసా.",
+        target_en: "Transparent industrial policy, ease of doing business, and strong financial backing for local enterprises.",
+        commitments: [
+          { icon: "bi-check2-circle", color: "#16A34A", name: "వ్యాపార సులభతరం (Ease of Biz)", name_en: "Ease of Doing Business", desc: "అనుమతులన్నీ 15 రోజుల్లో సింగిల్ విండో ద్వారా మంజూరు.", desc_en: "Single-window clearances guaranteed within 15 working days." },
+          { icon: "bi-cash-coin", color: "#CA8A04", name: "MSMEలకు రాయితీలు", name_en: "MSME Subsidies", desc: "చిన్న పరిశ్రమలకు విద్యుత్, పన్ను ప్రోత్సాహకాలు మరియు రుణ సాయం.", desc_en: "Power tariffs subsidies, low-interest working capital, and tax holidays." },
+          { icon: "bi-shop", color: "#DC2626", name: "స్వయం ఉపాధి రుణాలు", name_en: "Self-Employment Loans", desc: "చిరు వ్యాపారులకు వడ్డీ లేని లేదా తక్కువ వడ్డీ రుణాలు.", desc_en: "Zero-interest micro-loans for small vendors and retail trade owners." },
+          { icon: "bi-globe-americas", color: "#2563EB", name: "ప్రాంతీయ ఆర్థిక హబ్‌లు", name_en: "Tier-2 Economic Hubs", desc: "హైదరాబాద్‌తో పాటు ద్వితీయ శ్రేణి నగరాల్లో ప్రత్యేక ఆర్థిక మండళ్లు.", desc_en: "Developing specialized manufacturing and logistics clusters in Tier-2 cities." },
+          { icon: "bi-tools", color: "#7C3AED", name: "చేతివృత్తుల పరిరక్షణ", name_en: "Artisans & Crafts", desc: "సాంప్రదాయ వృత్తులకు ఆధునిక యంత్రాలు, గ్లోబల్ ఈ-కామర్స్ మార్కెట్.", desc_en: "Modernization tools and global online marketplaces for traditional craftspeople." },
+          { icon: "bi-shield-check", color: "#DC2626", name: "వినియోగదారుల రక్షణ", name_en: "Price Stabilization", desc: "నిత్యావసరాల ధరల స్థిరీకరణ మరియు మార్కెట్ పర్యవేక్షణ.", desc_en: "Market intervention funds to prevent runaway inflation of essentials." }
+        ],
+        quote: "“సమగ్ర ఆర్థిక వృద్ధి సమాజంలోని ప్రతి సామాన్యుడి ముఖంలో చిరునవ్వు నింపుతుంది.”",
+        quote_en: "“Equitable economic growth brings a smile to the face of every common citizen.”"
+      },
+      {
+        id: 9,
+        num: "09",
+        title: "సామాజిక సంక్షేమం",
+        title_en: "Social Welfare",
+        menuIcon: "bi-people-fill",
+        iconColor: "#DC2626",
+        image: "assets/images/policy/policy-women.jpg",
+        lead: "సమానత్వం – సామాజిక న్యాయం: అణగారిన వర్గాల ఉన్నతి, మహిళా సాధికారత, వృద్ధుల సంరక్షణ.",
+        lead_en: "Equality & social justice: uplifting marginalized communities and empowering women.",
+        desc: "సమాజంలో ఎవరూ వెనుకబడి ఉండకూడదు. ఎస్సీ, ఎస్టీ, బీసీ, మైనారిటీ మరియు దివ్యాంగుల సంపూర్ణ సాధికారత. మహిళలకు ఆర్థిక స్వాలంబన, గౌరవప్రదమైన వృద్ధాప్య పింఛన్లు మరియు అనాథలకు ఆశ్రయం కల్పించడం ప్రజాసేవ పార్టీ ప్రథమ కర్తవ్యం.",
+        desc_en: "Leaving no one behind: empowering SC, ST, BC, Minority, and differently-abled citizens. Ensuring women's financial autonomy, generous senior pensions, and supportive shelter for vulnerable individuals.",
+        target: "సామాజిక సమానత్వం, గౌరవప్రదమైన జీవనం మరియు చివరి వ్యక్తికీ సంక్షేమ పథకాల చేరిక.",
+        target_en: "Achieving social equality, dignified living, and ensuring welfare reaches the last person.",
+        commitments: [
+          { icon: "bi-heart-fill", color: "#DC2626", name: "గౌరవ వృద్ధాప్య పింఛన్", name_en: "Dignified Pensions", desc: "వృద్ధులు, వితంతువులు, దివ్యాంగులకు నెలకు గౌరవప్రదమైన పెన్షన్.", desc_en: "Assured, dignified monthly pensions for seniors, widows, and the disabled." },
+          { icon: "bi-gender-female", color: "#EC4899", name: "మహిళా సాధికారత నిధి", name_en: "Women Empowerment Fund", desc: "డ్వాక్రా సంఘాలకు రూ. 5 లక్షల వరకు వడ్డీ లేని రుణాలు.", desc_en: "Interest-free working loans up to ₹5 Lakhs for women SHG groups." },
+          { icon: "bi-shield-shaded", color: "#2563EB", name: "ఎస్సీ, ఎస్టీ, బీసీ సబ్‌ప్లాన్", name_en: "Targeted Sub-Plans", desc: "కేటాయించిన సంక్షేమ నిధులు వారికే సంపూర్ణంగా వినియోగం.", desc_en: "Strict legislative ring-fencing of welfare funds for marginalized communities." },
+          { icon: "bi-person-wheelchair", color: "#7C3AED", name: "దివ్యాంగుల సహాయం", name_en: "Accessibility & Inclusion", desc: "ఉచిత బ్యాటరీ వాహనాలు, ఉపకరణాలు, 5% ప్రత్యేక ఉద్యోగ రిజర్వేషన్.", desc_en: "Free motorized wheelchairs, assistive gear, and 5% public job quota." },
+          { icon: "bi-person-raised-hand", color: "#16A34A", name: "మైనారిటీ సంక్షేమం", name_en: "Minority Welfare", desc: "విద్యా, ఉపాధి రంగాలు మరియు మైనారిటీ కార్పొరేషన్ బలోపేతం.", desc_en: "Strengthening coaching, scholarships, and economic finance corporations." },
+          { icon: "bi-file-earmark-lock-fill", color: "#D97706", name: "ఉచిత న్యాయ సహాయం", name_en: "Free Legal Aid", desc: "అణగారిన వర్గాలకు ప్రభుత్వ ఖర్చుతో న్యాయవాదుల సేవలు.", desc_en: "State-sponsored legal counsel to protect rights and property of the poor." }
+        ],
+        quote: "“అణగారిన వర్గాల ఎదుగుదలే దేశ సమగ్ర వికాసానికి గీటురాయి.”",
+        quote_en: "“The upliftment of the marginalized is the true touchstone of national progress.”"
+      },
+      {
+        id: 10,
+        num: "10",
+        title: "సుపరిపాలన పాలన",
+        title_en: "Good Governance",
+        menuIcon: "bi-scale",
+        iconColor: "#DC2626",
+        image: "assets/images/gallery/gallery-assembly.jpg",
+        lead: "అవినీతి రహిత పాలన – పారదర్శకత, బాధ్యతాయుత ప్రజా ప్రభుత్వం.",
+        lead_en: "Corruption-free governance – transparency, accountability, and rule of law.",
+        desc: "ప్రజలే ప్రభువులు. పరిపాలనలో పూర్తి పారదర్శకత, అవినీతిపై ఉక్కుపాదం, పౌర సేవల హక్కు చట్టం అమలు. ఏ అధికారిక కార్యాలయంలోనూ పైరవీలు, లంచాలకు తావులేని విధంగా పూర్తి డిజిటల్ పౌర పాలన అందించడం మా లక్ష్యం.",
+        desc_en: "People are the true sovereigns. Ironclad anti-corruption measures, guaranteed citizen services timeline, public grievance redressal, and seamless e-governance to eliminate middlemen completely.",
+        target: "జీరో కరప్షన్, నిర్ణీత గడువులోగా పౌర సేవలు మరియు నిజమైన ప్రజాస్వామ్య భాగస్వామ్యం.",
+        target_en: "Zero corruption, time-bound delivery of citizen services, and true democratic participation.",
+        commitments: [
+          { icon: "bi-shield-x", color: "#DC2626", name: "అవినీతిపై టోల్‌ఫ్రీ నిఘా", name_en: "Anti-Corruption Vigilance", desc: "స్వతంత్ర లోకాయుక్త మరియు అవినీతి రహిత పాలన పర్యవేక్షణ.", desc_en: "Empowered independent ombudsman and direct whistleblower hotlines." },
+          { icon: "bi-clock-history", color: "#2563EB", name: "పౌర సేవల గ్యారెంటీ చట్టం", name_en: "Citizen Service Guarantee", desc: "సర్టిఫికెట్లు, అనుమతులు నిర్దిష్ట రోజుల్లోనే ఇంటి వద్దకే.", desc_en: "Time-bound delivery of certificates and permits directly to your door." },
+          { icon: "bi-file-earmark-spreadsheet-fill", color: "#16A34A", name: "పారదర్శక బడ్జెట్", name_en: "Open Public Budgeting", desc: "ప్రతి పైసా ఖర్చు పబ్లిక్ డొమైన్‌లో ప్రజల తనిఖీకి అందుబాటులో.", desc_en: "Public audit dashboards detailing every rupee of government expenditure." },
+          { icon: "bi-megaphone-fill", color: "#D97706", name: "ప్రజా దర్బార్ & ఈ-గ్రీవెన్స్", name_en: "Praja Darbar Redressal", desc: "ప్రతి వారం ప్రజల సమస్యలు నేరుగా ఆలకించి 72 గంటల్లో పరిష్కారం.", desc_en: "Weekly leadership public hearings with 72-hour guaranteed resolution." },
+          { icon: "bi-shield-lock-fill", color: "#7C3AED", name: "పోలీసు సంస్కరణలు", name_en: "Community Policing", desc: "ఫ్రెండ్లీ పోలీసింగ్, మహిళా భద్రతా కేంద్రాలు, ఆధునిక సీసీటీవీ నెట్‌వర్క్.", desc_en: "Compassionate policing, specialized women protection desks, and smart safety." },
+          { icon: "bi-diagram-3-fill", color: "#DC2626", name: "వికేంద్రీకృత పాలన", name_en: "Decentralized Powers", desc: "పంచాయతీలు, వార్డులకు పూర్తి అధికారాలు, నేరుగా నిధుల బదిలీ.", desc_en: "Direct devolution of developmental funds directly to panchayats and wards." }
+        ],
+        quote: "“ధర్మం, న్యాయం, ప్రజా సంక్షేమమే ప్రజాసేవ ప్రభుత్వానికి పరమ లక్ష్యాలు.”",
+        quote_en: "“Righteousness, justice, and citizen welfare are the supreme goals of our government.”"
+      }
+    ];
+
+    // Current Selected State
+    let currentSelectedId = 1;
+
+    // Render Left Desktop Menu Items
+    function initDesktopMenu() {
+      const listContainer = document.getElementById("issuesDesktopMenuList");
+      if (!listContainer) return;
+      listContainer.innerHTML = "";
+      const isEn = getActiveLang() === 'en';
+
+      ISSUES_DATA.forEach(issue => {
+        const li = document.createElement("li");
+        const isActive = issue.id === currentSelectedId;
+        const displayTitle = isEn && issue.title_en ? issue.title_en : issue.title;
+
+        li.innerHTML = `
+          <button type="button" class="issue-menu-btn ${isActive ? 'is-active' : ''}" data-issue-id="${issue.id}" aria-selected="${isActive}">
+            <span class="issue-nav-num">${issue.num}</span>
+            <span class="issue-nav-icon" style="color: ${issue.iconColor}">
+              <i class="bi ${issue.menuIcon}"></i>
+            </span>
+            <span class="issue-nav-text">${displayTitle}</span>
+            <i class="bi bi-chevron-right issue-nav-arrow"></i>
+          </button>
+        `;
+
+        li.querySelector(".issue-menu-btn").addEventListener("click", () => {
+          selectIssue(issue.id);
+          if (window.innerWidth < 992) {
+            const panel = document.getElementById("issuesDetailPanel");
+            if (panel) {
+              const headerEl = document.getElementById("site-header");
+              const headerH = headerEl ? headerEl.offsetHeight : 65;
+              const panelTop = panel.getBoundingClientRect().top + window.pageYOffset - (headerH + 12);
+              window.scrollTo({ top: Math.max(0, panelTop), behavior: 'smooth' });
+            }
+          }
+        });
+
+        listContainer.appendChild(li);
+      });
+    }
+
+    // Render Mobile Dropdown and Pill Bar
+    function initMobileControls() {
+      const selectEl = document.getElementById("mobileIssueSelect");
+      const pillsBar = document.getElementById("mobileIssuePillsBar");
+      if (!selectEl || !pillsBar) return;
+
+      selectEl.innerHTML = "";
+      pillsBar.innerHTML = "";
+      const isEn = getActiveLang() === 'en';
+
+      ISSUES_DATA.forEach(issue => {
+        const displayTitle = isEn && issue.title_en ? issue.title_en : issue.title;
+
+        // Dropdown Option
+        const opt = document.createElement("option");
+        opt.value = issue.id;
+        opt.textContent = `${issue.num}. ${displayTitle}`;
+        if (issue.id === currentSelectedId) opt.selected = true;
+        selectEl.appendChild(opt);
+
+        // Pill Button
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = `mobile-issue-pill ${issue.id === currentSelectedId ? 'is-active' : ''}`;
+        pill.setAttribute("data-issue-id", issue.id);
+        pill.innerHTML = `<span>${issue.num}</span> <span>${displayTitle}</span>`;
+        pill.addEventListener("click", () => {
+          selectIssue(issue.id);
+        });
+        pillsBar.appendChild(pill);
+      });
+
+      selectEl.addEventListener("change", (e) => {
+        selectIssue(parseInt(e.target.value, 10));
+      });
+    }
+
+    // Select and Switch Issue Details dynamically with smooth fade animation
+    function selectIssue(id, forceUpdate = false) {
+      const isEn = getActiveLang() === 'en';
+      const targetIssue = ISSUES_DATA.find(item => item.id === id) || ISSUES_DATA[0];
+      const displayTitle = isEn && targetIssue.title_en ? targetIssue.title_en : targetIssue.title;
+
+      if (!forceUpdate && id === currentSelectedId && document.getElementById("issueDetailTitle").textContent.trim() === displayTitle) {
+        return;
+      }
+
+      currentSelectedId = id;
+
+      // Update Desktop Buttons
+      document.querySelectorAll(".issue-menu-btn").forEach(btn => {
+        const btnId = parseInt(btn.getAttribute("data-issue-id"), 10);
+        if (btnId === id) {
+          btn.classList.add("is-active");
+          btn.setAttribute("aria-selected", "true");
+        } else {
+          btn.classList.remove("is-active");
+          btn.setAttribute("aria-selected", "false");
+        }
+      });
+
+      // Update Mobile Dropdown & Pills
+      const selectEl = document.getElementById("mobileIssueSelect");
+      if (selectEl) selectEl.value = id;
+
+      document.querySelectorAll(".mobile-issue-pill").forEach(pill => {
+        const pillId = parseInt(pill.getAttribute("data-issue-id"), 10);
+        if (pillId === id) {
+          pill.classList.add("is-active");
+          pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          pill.classList.remove("is-active");
+        }
+      });
+
+      // Animate Transition on Right Card View
+      const cardView = document.getElementById("issueCardView");
+      if (cardView) {
+        cardView.classList.add("fade-out");
+
+        setTimeout(() => {
+          // Update Content
+          document.getElementById("issueDetailNum").textContent = targetIssue.num;
+          document.getElementById("issueDetailTitle").textContent = displayTitle;
+          document.getElementById("issueDetailLead").textContent = isEn && targetIssue.lead_en ? targetIssue.lead_en : targetIssue.lead;
+          document.getElementById("issueDetailDesc").textContent = isEn && targetIssue.desc_en ? targetIssue.desc_en : targetIssue.desc;
+
+          const imgEl = document.getElementById("issueDetailImg");
+          if (imgEl) {
+            imgEl.src = targetIssue.image;
+            imgEl.alt = displayTitle;
+          }
+
+          document.getElementById("issueDetailTarget").textContent = isEn && targetIssue.target_en ? targetIssue.target_en : targetIssue.target;
+
+          // Render 6 Commitments
+          const gridEl = document.getElementById("issueInitiativesGrid");
+          if (gridEl) {
+            gridEl.innerHTML = "";
+            targetIssue.commitments.forEach(item => {
+              const card = document.createElement("div");
+              card.className = "initiative-mini-card";
+              const cName = isEn && item.name_en ? item.name_en : item.name;
+              const cDesc = isEn && item.desc_en ? item.desc_en : item.desc;
+
+              card.innerHTML = `
+                <div class="initiative-icon-wrap" style="color: ${item.color}">
+                  <i class="bi ${item.icon}"></i>
+                </div>
+                <div class="initiative-content">
+                  <div class="initiative-name">${cName}</div>
+                  <p class="initiative-desc">${cDesc}</p>
+                </div>
+              `;
+              gridEl.appendChild(card);
+            });
+          }
+
+          // Update Quote
+          document.getElementById("issueDetailQuote").textContent = isEn && targetIssue.quote_en ? targetIssue.quote_en : targetIssue.quote;
+
+          // Fade back in
+          cardView.classList.remove("fade-out");
+        }, 140);
+      }
+    }
+
+    // Language Change Listener for complete site consistency
+    function updateIssuesPageLanguage(lang) {
+      initDesktopMenu();
+      initMobileControls();
+      selectIssue(currentSelectedId, true);
+    }
+    window.updateIssuesPageLanguage = updateIssuesPageLanguage;
+
+    document.addEventListener('languageChanged', (e) => {
+      const lang = e.detail ? e.detail.lang : getActiveLang();
+      updateIssuesPageLanguage(lang);
+    });
+
+    // Initialize upon DOM load
+    document.addEventListener("DOMContentLoaded", () => {
+      initDesktopMenu();
+      initMobileControls();
+      selectIssue(1, true);
+    });
+  </script>
+
+  <!-- Global Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=10.0"></script>
+  <script src="assets/js/main.js?v=10.0"></script>
+</body>
+
+</html>
