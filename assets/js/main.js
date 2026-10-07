@@ -318,7 +318,7 @@ function applyLanguage(lang) {
   });
 
   document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule').forEach(btn => {
-    btn.setAttribute('title', toggleTitle);
+    btn.removeAttribute('title');
     btn.setAttribute('aria-label', toggleTitle);
     if (lang === 'en') {
       btn.classList.add('lang-is-en');

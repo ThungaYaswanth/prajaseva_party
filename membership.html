@@ -82,22 +82,10 @@
         <div class="header-right-controls d-flex align-items-center">
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
-          <div class="lang-dropdown-wrapper">
-            <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" onclick="window.toggleLanguageDirect && window.toggleLanguageDirect(event);" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language" aria-expanded="false">
-              <span class="lang-label" id="lang-current-label">తెలుగు</span>
-              <i class="bi bi-chevron-down lang-chevron-icon"></i>
-            </button>
-            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
-              <button type="button" class="lang-dropdown-item active" data-lang-val="te" onclick="window.switchLanguage && window.switchLanguage('te'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
-                <span>తెలుగు</span>
-                <i class="bi bi-check2 check-icon"></i>
-              </button>
-              <button type="button" class="lang-dropdown-item" data-lang-val="en" onclick="window.switchLanguage && window.switchLanguage('en'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
-                <span>English</span>
-                <i class="bi bi-check2 check-icon"></i>
-              </button>
-            </div>
-          </div>
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" aria-label="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
 
           <!-- Donate Button (Gold Pill) -->
           <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
