@@ -12446,28 +12446,32 @@ body.mobile-nav-open {
 /* Tablet Version (768px to 991.98px): Horizontal full-screen sidebar grid (4 per row) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .issues-layout-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 0 16px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 20px;
+    width: 100% !important;
   }
 
   /* Show the sidebar full width as a horizontal 4-column grid across the screen */
   .issues-nav-sidebar {
     display: block !important;
+    position: static !important;
+    top: auto !important;
     width: 100% !important;
-    margin-bottom: 8px;
+    margin-bottom: 0 !important;
   }
 
   .issues-sidebar-header {
-    font-size: 1.2rem;
-    margin-bottom: 14px;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
     text-align: center;
   }
 
   .issues-menu-list {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
-    gap: 10px !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
@@ -12478,17 +12482,20 @@ body.mobile-nav-open {
 
   .issue-menu-btn {
     width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: 12px 6px !important;
-    min-height: 94px !important;
-    gap: 5px !important;
-    border-radius: 12px !important;
+    padding: 12px 8px !important;
+    min-height: 96px !important;
+    gap: 6px !important;
+    border-radius: 14px !important;
     border: 1.5px solid #E2E8F0;
     background: #FFFFFF;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: all 0.22s ease;
   }
 
   .issue-menu-btn.is-active {
@@ -12500,19 +12507,19 @@ body.mobile-nav-open {
   .issue-nav-num {
     width: 26px !important;
     height: 26px !important;
-    font-size: 0.78rem !important;
+    font-size: 0.8rem !important;
     margin-bottom: 2px !important;
   }
 
   .issue-nav-icon {
-    font-size: 1.22rem !important;
+    font-size: 1.25rem !important;
     width: auto !important;
     margin-bottom: 2px !important;
   }
 
   .issue-nav-text {
-    font-size: 0.84rem !important;
-    line-height: 1.22 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.25 !important;
     text-align: center !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
@@ -12539,6 +12546,8 @@ body.mobile-nav-open {
   }
 
   .issues-detail-panel {
+    position: static !important;
+    width: 100% !important;
     padding: 28px 24px;
     border-radius: 18px;
   }
@@ -12574,29 +12583,33 @@ body.mobile-nav-open {
   }
 }
 
-/* Mobile Version (< 768px): Horizontal full-screen sidebar grid (3 per row) */
+/* Mobile Version (< 768px): Horizontal full-screen sidebar grid */
 @media (max-width: 767.98px) {
   .issues-main-section {
-    padding: 20px 0 50px;
+    padding: 24px 0 50px;
     overflow-x: hidden;
   }
 
   .issues-layout-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
     padding: 0 12px;
+    width: 100% !important;
   }
 
   /* Show the sidebar full width as a horizontal 3-column grid across the screen */
   .issues-nav-sidebar {
     display: block !important;
+    position: static !important;
+    top: auto !important;
     width: 100% !important;
-    margin-bottom: 6px;
+    margin-bottom: 0 !important;
   }
 
   .issues-sidebar-header {
-    font-size: 1.05rem;
-    margin-bottom: 10px;
+    font-size: 1.08rem;
+    margin-bottom: 12px;
     text-align: center;
   }
 
@@ -12612,19 +12625,27 @@ body.mobile-nav-open {
     width: 100%;
   }
 
+  /* Center the 10th card in the 3-column grid */
+  .issues-menu-list li:nth-child(10) {
+    grid-column: 2 !important;
+  }
+
   .issue-menu-btn {
     width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
     padding: 10px 4px !important;
-    min-height: 86px !important;
+    min-height: 88px !important;
     gap: 4px !important;
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     border: 1.5px solid #E2E8F0;
     background: #FFFFFF;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
   }
 
   .issue-menu-btn.is-active {
@@ -12686,7 +12707,9 @@ body.mobile-nav-open {
   }
 
   .issues-detail-panel {
-    padding: 18px 16px;
+    position: static !important;
+    width: 100% !important;
+    padding: 20px 16px;
     border-radius: 16px;
   }
 
@@ -12720,6 +12743,7 @@ body.mobile-nav-open {
   .issue-body-text {
     font-size: 0.92rem;
     line-height: 1.6;
+    margin-bottom: 14px;
   }
 
   .issue-img-frame {
@@ -12762,6 +12786,19 @@ body.mobile-nav-open {
   .quote-graphic-wrap {
     width: 50px;
   }
+}
+
+/* Extra Small Phones (< 360px): 2 per row for comfortable breathing room */
+@media (max-width: 359.98px) {
+  .issues-menu-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .issues-menu-list li:nth-child(10) {
+    grid-column: auto !important;
+  }
+}
 
   .quote-body {
     font-size: 0.92rem;
