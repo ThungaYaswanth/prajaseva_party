@@ -3,7 +3,7 @@
  * Language switching, carousels, lightbox, modals, and validation
  */
 
-function initApp() {
+document.addEventListener('DOMContentLoaded', () => {
   updateHeaderHeight();
   initLanguage();
   initMobileNav();
@@ -16,13 +16,7 @@ function initApp() {
   initCampaignSlider();
   initInteractiveMap();
   init3DFlipCards();
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initApp);
-} else {
-  initApp();
-}
+});
 
 function init3DFlipCards() {
   document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
@@ -56,46 +50,96 @@ function initMobileNav() {
 
   if (!navbarCollapse || !toggleBtn) return;
 
+  // Prevent Bootstrap collision by removing data-bs-toggle attribute
+  toggleBtn.removeAttribute('data-bs-toggle');
+
+  // Enforce consistent closed state on initial load
+  if (!navbarCollapse.classList.contains('show')) {
+    toggleBtn.classList.add('collapsed');
+    toggleBtn.classList.remove('is-open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  // Create or retrieve professional dimmed backdrop
+  let backdrop = document.querySelector('.mobile-nav-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'mobile-nav-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
   function setMenuState(isOpen) {
     if (isOpen) {
       toggleBtn.setAttribute('aria-expanded', 'true');
       toggleBtn.classList.remove('collapsed');
       toggleBtn.classList.add('is-open');
+      navbarCollapse.classList.add('show');
+      if (backdrop) backdrop.classList.add('show');
+      document.body.classList.add('mobile-nav-open');
     } else {
       toggleBtn.setAttribute('aria-expanded', 'false');
       toggleBtn.classList.add('collapsed');
       toggleBtn.classList.remove('is-open');
+      navbarCollapse.classList.remove('show');
+      if (backdrop) backdrop.classList.remove('show');
+      document.body.classList.remove('mobile-nav-open');
     }
+  }
+
+  function toggleMobileMenu() {
+    const isCurrentlyOpen = navbarCollapse.classList.contains('show') || toggleBtn.getAttribute('aria-expanded') === 'true';
+    setMenuState(!isCurrentlyOpen);
   }
 
   function closeMobileMenu() {
-    if (navbarCollapse.classList.contains('show') || navbarCollapse.classList.contains('collapsing')) {
-      if (window.bootstrap && bootstrap.Collapse) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-        bsCollapse.hide();
-      } else {
-        navbarCollapse.classList.remove('show');
-      }
-      setMenuState(false);
-    }
+    setMenuState(false);
   }
 
-  // Sync state on Bootstrap collapse events
-  navbarCollapse.addEventListener('show.bs.collapse', () => setMenuState(true));
-  navbarCollapse.addEventListener('shown.bs.collapse', () => setMenuState(true));
-  navbarCollapse.addEventListener('hide.bs.collapse', () => setMenuState(false));
-  navbarCollapse.addEventListener('hidden.bs.collapse', () => setMenuState(false));
+  // Toggler button click: deterministic toggle
+  toggleBtn.onclick = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMobileMenu();
+  };
 
-  // Toggler button click safety sync
-  toggleBtn.addEventListener('click', () => {
-    const isCurrentlyExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    setMenuState(!isCurrentlyExpanded);
+  // Tap on backdrop closes drawer
+  if (backdrop) {
+    backdrop.onclick = function (e) {
+      e.preventDefault();
+      closeMobileMenu();
+    };
+  }
+
+  // Tap outside menu closes it
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+      if (!navbarCollapse.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    }
+  });
+
+  // ESC key closes menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+      closeMobileMenu();
+    }
+  });
+
+  // Auto-close menu if resized to desktop viewport (>= 992px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+      closeMobileMenu();
+    }
   });
 
   // Handle all nav links: smooth scroll + close menu + update active state
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
+      if (window.innerWidth < 992) {
+        closeMobileMenu();
+      }
       if (!href || !href.startsWith('#')) return;
 
       const targetId = href.substring(1);
@@ -107,13 +151,6 @@ function initMobileNav() {
 
       if (targetEl) {
         e.preventDefault();
-
-        // Close mobile dropdown smoothly
-        if (window.innerWidth < 992) {
-          closeMobileMenu();
-        }
-
-        // Calculate offset with sticky header height
         const headerHeight = headerEl ? headerEl.offsetHeight : 65;
         const targetRect = targetEl.getBoundingClientRect();
         const targetTop = targetRect.top + window.pageYOffset - (headerHeight + 10);
@@ -156,22 +193,6 @@ function initMobileNav() {
     });
   }
 
-  // Tap outside menu closes it
-  document.addEventListener('click', (e) => {
-    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-      if (!navbarCollapse.contains(e.target) && !toggleBtn.contains(e.target)) {
-        closeMobileMenu();
-      }
-    }
-  });
-
-  // ESC key closes menu
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
-      closeMobileMenu();
-    }
-  });
-
   // ScrollSpy to highlight active menu item on scroll
   const sections = [];
   navLinks.forEach(link => {
@@ -208,7 +229,7 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   1. Language Switcher (Telugu <-> English)
+   1. Language Switcher (Direct Toggle Telugu <-> English, No Dropdown)
    ========================================================================== */
 let currentLang = 'te';
 try {
@@ -217,31 +238,49 @@ try {
   currentLang = 'te';
 }
 
+function toggleLanguageDirect(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const nextLang = (currentLang === 'te') ? 'en' : 'te';
+  switchLanguage(nextLang);
+}
+window.toggleLanguageDirect = toggleLanguageDirect;
+window.toggleLanguageDropdown = toggleLanguageDirect; // Alias for backward compatibility
+window.closeAllLangDropdowns = function () { };
+
 function initLanguage() {
   const teBtns = document.querySelectorAll('#lang-btn-te, .lang-select-te');
   const enBtns = document.querySelectorAll('#lang-btn-en, .lang-select-en');
   const toggleBtns = document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule');
 
   teBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.onclick = (e) => {
       e.preventDefault();
       switchLanguage('te');
-    });
+    };
   });
 
   enBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.onclick = (e) => {
       e.preventDefault();
       switchLanguage('en');
-    });
+    };
   });
 
   toggleBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const nextLang = currentLang === 'te' ? 'en' : 'te';
-      switchLanguage(nextLang);
-    });
+    btn.onclick = (e) => {
+      toggleLanguageDirect(e);
+    };
+  });
+
+  // Global document delegation: any click on toggle button directly flips language
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('#lang-toggle-btn, .lang-dropdown-capsule');
+    if (btn) {
+      toggleLanguageDirect(e);
+    }
   });
 
   // Sync across open browser tabs/windows
@@ -259,18 +298,19 @@ function switchLanguage(lang) {
   currentLang = lang;
   try {
     localStorage.setItem('prajaseva_lang', lang);
-  } catch (e) {}
+  } catch (e) { }
   applyLanguage(lang);
 }
+window.switchLanguage = switchLanguage;
+window.applyLanguage = applyLanguage;
 
 function applyLanguage(lang) {
   currentLang = lang;
   const dict = typeof translations !== 'undefined' ? translations[lang] : null;
   if (!dict) return;
 
-  // 1. Update capsule toggle labels and accessibility attributes across all pages
+  // 1. Update capsule toggle labels and rotate chevron arrow
   const labelText = lang === 'te' ? 'తెలుగు' : 'English';
-  const nextLangName = lang === 'te' ? 'English' : 'తెలుగు';
   const toggleTitle = lang === 'te' ? 'భాషను మార్చండి / Switch to English' : 'Switch Language / తెలుగులోకి మార్చండి';
 
   document.querySelectorAll('#lang-current-label, .lang-dropdown-capsule .lang-label').forEach(el => {
@@ -280,6 +320,11 @@ function applyLanguage(lang) {
   document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule').forEach(btn => {
     btn.setAttribute('title', toggleTitle);
     btn.setAttribute('aria-label', toggleTitle);
+    if (lang === 'en') {
+      btn.classList.add('lang-is-en');
+    } else {
+      btn.classList.remove('lang-is-en');
+    }
   });
 
   document.documentElement.lang = lang;
@@ -349,33 +394,39 @@ function initHeroCarousel() {
   const prevBtn = document.getElementById('hero-prev-btn');
   const nextBtn = document.getElementById('hero-next-btn');
   const dots = document.querySelectorAll('.hero-dot');
-  const banner = document.querySelector('.hero-banner-card');
+  const banner = document.querySelector('.hero-banner-card, .hero-section');
+  const slides = document.querySelectorAll('.hero-slide');
 
-  // Immediately display the first slide without waiting
+  if (!slides.length) return;
+
+  // Immediately display the active slide
   changeHeroSlide(0);
 
   if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.onclick = function (e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
       changeHeroSlide(currentSlideIdx - 1);
       startSlideShow();
-    });
+    };
   }
 
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
+    nextBtn.onclick = function (e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
       changeHeroSlide(currentSlideIdx + 1);
       startSlideShow();
-    });
+    };
   }
 
   dots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => {
+    dot.onclick = function (e) {
+      if (e) e.preventDefault();
       changeHeroSlide(idx);
       startSlideShow();
-    });
+    };
   });
 
-  // Snappy auto slide every 3.5 seconds
+  // Snappy auto slide every 4 seconds with smooth transition
   startSlideShow();
 
   if (banner) {
@@ -384,13 +435,12 @@ function initHeroCarousel() {
 
     // Responsive Mobile Touch Swipe Support
     let touchStartX = 0;
-    let touchEndX = 0;
     banner.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
     banner.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
+      const touchEndX = e.changedTouches[0].screenX;
       const diff = touchStartX - touchEndX;
       if (Math.abs(diff) > 40) {
         if (diff > 0) {
@@ -408,11 +458,14 @@ function startSlideShow() {
   stopSlideShow();
   slideInterval = setInterval(() => {
     changeHeroSlide(currentSlideIdx + 1);
-  }, 3500); // Fast, active 3.5s interval
+  }, 4000);
 }
 
 function stopSlideShow() {
-  if (slideInterval) clearInterval(slideInterval);
+  if (slideInterval) {
+    clearInterval(slideInterval);
+    slideInterval = null;
+  }
 }
 
 function changeHeroSlide(newIdx) {

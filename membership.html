@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.0">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -82,10 +82,22 @@
         <div class="header-right-controls d-flex align-items-center">
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
-          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language">
-            <span class="lang-label" id="lang-current-label">తెలుగు</span>
-            <i class="bi bi-chevron-down lang-chevron-icon"></i>
-          </button>
+          <div class="lang-dropdown-wrapper">
+            <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" onclick="window.toggleLanguageDirect && window.toggleLanguageDirect(event);" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language" aria-expanded="false">
+              <span class="lang-label" id="lang-current-label">తెలుగు</span>
+              <i class="bi bi-chevron-down lang-chevron-icon"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <button type="button" class="lang-dropdown-item active" data-lang-val="te" onclick="window.switchLanguage && window.switchLanguage('te'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>తెలుగు</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+              <button type="button" class="lang-dropdown-item" data-lang-val="en" onclick="window.switchLanguage && window.switchLanguage('en'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>English</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+            </div>
+          </div>
 
           <!-- Donate Button (Gold Pill) -->
           <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
@@ -132,27 +144,38 @@
 
   <main id="main-content">
     <!-- ==========================================================================
-         1. TOP HERO BANNER: Wide Handshake Banner with Telugu Title
+         Top Hero Banner: Hero matching about.html & vision.html UI design
          ========================================================================== -->
-    <section class="membership-hero-banner" aria-label="సభ్యత్వం శీర్షిక">
-      <div class="membership-banner-inner">
-        <!-- Breadcrumb Navigation (Red Home Icon + > + Current) -->
-        <nav class="membership-breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html#home" class="membership-bc-home">
-            <i class="bi bi-house-door-fill membership-bc-icon"></i>
-            <span data-i18n="navHome">హోమ్</span>
-          </a>
-          <span class="membership-bc-sep">&gt;</span>
-          <span class="membership-bc-current" data-i18n="btnMembership">సభ్యత్వం</span>
-        </nav>
+    <section class="about-page-hero" aria-label="సభ్యత్వం శీర్షిక">
+      <div class="main-container about-banner-container">
+        <!-- Breadcrumb, Accent Bar, Eyebrow, Title & Mission -->
+        <div class="about-banner-content">
+          <!-- Breadcrumbs Navigation -->
+          <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html#home" class="about-bc-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="breadcrumbHome">హోమ్</span>
+            </a>
+            <span class="about-bc-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="about-bc-current" aria-current="page" data-i18n="btnMembership">సభ్యత్వం</span>
+          </nav>
 
-        <!-- Main Banner Title & Underline Accent Bar -->
-        <div class="membership-banner-content">
-          <h1 class="membership-banner-title">
-            <span class="membership-title-navy" data-i18n="memBannerTitle1">పార్టీలో</span><br>
-            <span class="membership-title-red" data-i18n="memBannerTitle2">సభ్యత్వం పొందండి</span>
+          <!-- Red & Gold Accent Bar -->
+          <div class="about-banner-accent" aria-hidden="true"></div>
+
+          <!-- Eyebrow Tag -->
+          <div class="about-banner-eyebrow" data-i18n="memHeroTag">పార్టీ సభ్యత్వం</div>
+
+          <!-- Main Headline -->
+          <h1 class="about-banner-title">
+            <span class="about-title-navy" data-i18n="memBannerTitle1">పార్టీలో</span>
+            <span class="about-title-red" data-i18n="memBannerTitle2">సభ్యత్వం పొందండి</span>
           </h1>
-          <div class="membership-accent-stripe" aria-hidden="true"></div>
+
+          <!-- Subtitle Description -->
+          <p class="about-banner-desc" data-i18n="memHeroDesc">
+            ప్రజాసేవ పార్టీ కుటుంబంలో భాగస్వామ్యులు కండి. తెలంగాణ సమగ్ర అభివృద్ధి, సమానత్వం మరియు ప్రజా సంక్షేమ ఉద్యమంలో చేరండి.
+          </p>
         </div>
       </div>
     </section>
@@ -1154,8 +1177,8 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="assets/js/translations.js?v=45.0"></script>
-  <script src="assets/js/main.js?v=45.0"></script>
+  <script src="assets/js/translations.js?v=12.0"></script>
+  <script src="assets/js/main.js?v=12.0"></script>
 
   <!-- Dedicated Membership Logic Script -->
   <script>

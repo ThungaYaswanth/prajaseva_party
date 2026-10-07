@@ -742,14 +742,54 @@ body[lang="en"] .lang-dropdown-capsule {
 }
 
 .lang-dropdown-capsule .lang-chevron-icon {
+  display: inline-block;
   font-size: 0.72rem;
   color: #64748B;
-  transition: transform 0.25s ease, color 0.2s ease;
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
+  transform-origin: center center;
 }
 
+/* Arrow smoothly rotates 180 degrees in English mode */
 html[lang="en"] .lang-dropdown-capsule .lang-chevron-icon,
-body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
-  transform: rotate(180deg);
+body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon,
+.lang-dropdown-capsule.lang-is-en .lang-chevron-icon {
+  transform: rotate(180deg) !important;
+  color: #C81016 !important;
+}
+
+/* Hide all dropdown menus completely as requested: no dropdown open */
+.lang-dropdown-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Professional Mobile Navigation Backdrop */
+.mobile-nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1039;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+
+.mobile-nav-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.mobile-nav-open {
+  overflow: hidden !important;
 }
 
 /* Donate Pill Button (Gold with Red Heart: ❤️ విరాళం ఇవ్వండి) */
@@ -989,16 +1029,27 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   /* When Menu is OPEN: Toggle hamburger to Close 'X' */
   .navbar-toggler[aria-expanded="true"] .toggle-icon-hamburger,
   .navbar-toggler.is-open .toggle-icon-hamburger,
-  .navbar-toggler:not(.collapsed) .toggle-icon-hamburger {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) .toggle-icon-hamburger {
     display: none !important;
   }
 
   .navbar-toggler[aria-expanded="true"] .toggle-icon-close,
   .navbar-toggler.is-open .toggle-icon-close,
-  .navbar-toggler:not(.collapsed) .toggle-icon-close {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) .toggle-icon-close {
     display: block !important;
     color: #FFFFFF !important;
     stroke: #FFFFFF !important;
+  }
+
+  /* When Menu is CLOSED: Guarantee hamburger is visible and Close 'X' is hidden */
+  .navbar-toggler[aria-expanded="false"] .toggle-icon-hamburger,
+  .navbar-toggler.collapsed .toggle-icon-hamburger {
+    display: block !important;
+  }
+
+  .navbar-toggler[aria-expanded="false"] .toggle-icon-close,
+  .navbar-toggler.collapsed .toggle-icon-close {
+    display: none !important;
   }
 
   /* 3-Bar Fallback Support (if bar spans used) */
@@ -1013,19 +1064,19 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   }
 
   .navbar-toggler[aria-expanded="true"] .top-bar,
-  .navbar-toggler:not(.collapsed) .top-bar {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) .top-bar {
     transform: translateY(7.2px) rotate(45deg);
     background-color: #C81016;
   }
 
   .navbar-toggler[aria-expanded="true"] .mid-bar,
-  .navbar-toggler:not(.collapsed) .mid-bar {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) .mid-bar {
     opacity: 0;
     transform: scale(0.2);
   }
 
   .navbar-toggler[aria-expanded="true"] .bot-bar,
-  .navbar-toggler:not(.collapsed) .bot-bar {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) .bot-bar {
     transform: translateY(-7.2px) rotate(-45deg);
     background-color: #C81016;
   }
@@ -1033,7 +1084,7 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   /* Active toggler styling when menu is open: Solid Red with white X */
   .navbar-toggler[aria-expanded="true"],
   .navbar-toggler.is-open,
-  .navbar-toggler:not(.collapsed) {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]) {
     background-color: #DC2626 !important;
     border-color: #DC2626 !important;
     color: #FFFFFF !important;
@@ -1042,9 +1093,18 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
 
   .navbar-toggler[aria-expanded="true"]:hover,
   .navbar-toggler.is-open:hover,
-  .navbar-toggler:not(.collapsed):hover {
+  .navbar-toggler:not(.collapsed):not([aria-expanded="false"]):hover {
     background-color: #B91C1C !important;
     border-color: #B91C1C !important;
+  }
+
+  /* Default closed toggler styling */
+  .navbar-toggler[aria-expanded="false"],
+  .navbar-toggler.collapsed {
+    background-color: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+    color: #0F172A !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   }
 
   .navbar-toggler:hover {
@@ -1057,7 +1117,7 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
     outline: none;
   }
 
-  /* Mobile Dropdown Floating Card (< 992px) */
+  /* Mobile & Tablet Dropdown Floating Drawer (< 992px) */
   .site-header .navbar-collapse {
     position: absolute;
     top: calc(100% + 8px);
@@ -1067,20 +1127,40 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
     margin-left: 0 !important;
     background: #FFFFFF;
     border-radius: 18px;
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.18), 0 4px 12px rgba(15, 23, 42, 0.06);
     border: 1px solid #ECEFF2;
     padding: 14px 12px;
     z-index: 1050;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .site-header .navbar-collapse {
+      max-width: 440px;
+      left: auto !important;
+      right: 16px !important;
+      width: 440px;
+    }
+  }
+
   .site-header .navbar-collapse:not(.show) {
     display: none !important;
   }
 
-  .site-header .navbar-collapse.show,
-  .site-header .navbar-collapse.collapsing {
+  @keyframes mobileDrawerSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .site-header .navbar-collapse.show {
     display: block !important;
+    animation: mobileDrawerSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   .navbar-nav {
@@ -1660,7 +1740,7 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   min-height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s ease;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12363,37 +12443,89 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   }
 }
 
-/* Tablet Version (768px to 991.98px) */
+/* Tablet Version (768px to 991.98px): Horizontal full-screen sidebar grid (4 per row) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .issues-layout-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 0 20px;
+    gap: 22px;
+    padding: 0 16px;
   }
 
+  /* Show the sidebar full width as a horizontal 4-column grid across the screen */
   .issues-nav-sidebar {
-    display: none;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  .issues-sidebar-header {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .issues-menu-list {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .issues-menu-list li {
+    display: flex;
+    width: 100%;
+  }
+
+  .issue-menu-btn {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 6px !important;
+    min-height: 94px !important;
+    gap: 5px !important;
+    border-radius: 12px !important;
+    border: 1.5px solid #E2E8F0;
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  .issue-menu-btn.is-active {
+    background: #FEF2F2 !important;
+    border-color: #C81016 !important;
+    box-shadow: 0 4px 12px rgba(200, 16, 22, 0.14) !important;
+  }
+
+  .issue-nav-num {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.78rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .issue-nav-icon {
+    font-size: 1.22rem !important;
+    width: auto !important;
+    margin-bottom: 2px !important;
+  }
+
+  .issue-nav-text {
+    font-size: 0.84rem !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .issue-nav-arrow {
+    display: none !important;
   }
 
   .issues-mobile-selector {
-    display: block;
-    margin-bottom: 24px;
-  }
-
-  .mobile-issue-pills-bar {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px 2px 14px;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .mobile-issue-pill {
-    flex-shrink: 0;
-    padding: 9px 16px;
-    font-size: 0.92rem;
-    border-radius: 30px;
+    display: none !important;
   }
 
   .issues-hero-banner {
@@ -12442,49 +12574,94 @@ body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
   }
 }
 
-/* Mobile Version (< 768px) */
+/* Mobile Version (< 768px): Horizontal full-screen sidebar grid (3 per row) */
 @media (max-width: 767.98px) {
   .issues-main-section {
-    padding: 24px 0 50px;
+    padding: 20px 0 50px;
     overflow-x: hidden;
   }
 
   .issues-layout-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 0 14px;
+    gap: 16px;
+    padding: 0 12px;
   }
 
+  /* Show the sidebar full width as a horizontal 3-column grid across the screen */
   .issues-nav-sidebar {
-    display: none;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 6px;
+  }
+
+  .issues-sidebar-header {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .issues-menu-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .issues-menu-list li {
+    display: flex;
+    width: 100%;
+  }
+
+  .issue-menu-btn {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 10px 4px !important;
+    min-height: 86px !important;
+    gap: 4px !important;
+    border-radius: 10px !important;
+    border: 1.5px solid #E2E8F0;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  .issue-menu-btn.is-active {
+    background: #FEF2F2 !important;
+    border-color: #C81016 !important;
+    box-shadow: 0 3px 10px rgba(200, 16, 22, 0.14) !important;
+  }
+
+  .issue-nav-num {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.72rem !important;
+    margin-bottom: 1px !important;
+  }
+
+  .issue-nav-icon {
+    font-size: 1.15rem !important;
+    width: auto !important;
+    margin-bottom: 1px !important;
+  }
+
+  .issue-nav-text {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .issue-nav-arrow {
+    display: none !important;
   }
 
   .issues-mobile-selector {
-    display: block;
-    margin-bottom: 16px;
-  }
-
-  .mobile-issue-dropdown {
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    border-radius: 10px;
-  }
-
-  .mobile-issue-pills-bar {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding: 10px 0 12px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .mobile-issue-pill {
-    flex-shrink: 0;
-    padding: 7px 14px;
-    font-size: 0.85rem;
-    border-radius: 25px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    display: none !important;
   }
 
   .issues-hero-banner {
