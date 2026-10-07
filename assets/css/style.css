@@ -744,7 +744,12 @@ body[lang="en"] .lang-dropdown-capsule {
 .lang-dropdown-capsule .lang-chevron-icon {
   font-size: 0.72rem;
   color: #64748B;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+html[lang="en"] .lang-dropdown-capsule .lang-chevron-icon,
+body[data-lang="en"] .lang-dropdown-capsule .lang-chevron-icon {
+  transform: rotate(180deg);
 }
 
 /* Donate Pill Button (Gold with Red Heart: ❤️ విరాళం ఇవ్వండి) */

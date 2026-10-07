@@ -3,7 +3,7 @@
  * Language switching, carousels, lightbox, modals, and validation
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   updateHeaderHeight();
   initLanguage();
   initMobileNav();
@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initCampaignSlider();
   initInteractiveMap();
   init3DFlipCards();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 function init3DFlipCards() {
   document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
@@ -368,26 +374,6 @@ function initHeroCarousel() {
       startSlideShow();
     });
   });
-
-  // Manual Previous & Next Slider Arrow Controls
-  const prevBtn = document.getElementById('hero-prev-btn');
-  const nextBtn = document.getElementById('hero-next-btn');
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      changeHeroSlide(currentSlideIdx - 1);
-      startSlideShow();
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      changeHeroSlide(currentSlideIdx + 1);
-      startSlideShow();
-    });
-  }
 
   // Snappy auto slide every 3.5 seconds
   startSlideShow();
