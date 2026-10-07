@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.0">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -98,8 +98,8 @@
             <span data-i18n="btnMembership">సభ్యత్వం</span>
           </a>
 
-          <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
-          <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" id="mobileMenuToggleBtn"
+          <!-- Mobile Hamburger / Close Toggler -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
             data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -132,27 +132,38 @@
 
   <main id="main-content">
     <!-- ==========================================================================
-         1. TOP HERO BANNER: Wide Rally with Brush-Stroke Telugu Title
+         Top Hero Banner: Hero matching about.html & vision.html UI design
          ========================================================================== -->
-    <section class="news-hero-banner" aria-label="వార్తలు & కార్యక్రమాలు శీర్షిక">
-      <div class="news-banner-inner">
-        <!-- Breadcrumb Navigation (Red Home Icon + > + Current) -->
-        <nav class="news-breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html#home" class="news-bc-home">
-            <i class="bi bi-house-door-fill news-bc-icon"></i>
-            <span data-i18n="navHome">హోమ్</span>
-          </a>
-          <span class="news-bc-sep">&gt;</span>
-          <span class="news-bc-current" data-i18n="navNews">వార్తలు &amp; కార్యక్రమాలు</span>
-        </nav>
+    <section class="about-page-hero" aria-label="వార్తలు &amp; కార్యక్రమాలు శీర్షిక">
+      <div class="main-container about-banner-container">
+        <!-- Breadcrumb, Accent Bar, Eyebrow, Title & Mission -->
+        <div class="about-banner-content">
+          <!-- Breadcrumb Navigation -->
+          <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html#home" class="about-bc-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="breadcrumbHome">హోమ్</span>
+            </a>
+            <span class="about-bc-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="about-bc-current" aria-current="page" data-i18n="navNews">వార్తలు &amp; కార్యక్రమాలు</span>
+          </nav>
 
-        <!-- Main Banner Title & Underline Accent Bar -->
-        <div class="news-banner-content">
-          <h1 class="news-banner-title">
-            <span class="news-title-navy" data-i18n="newsHeroTitle1">వార్తలు &amp;</span><br>
-            <span class="news-title-red" data-i18n="newsHeroTitle2">కార్యక్రమాలు</span>
+          <!-- Red & Gold Accent Bar -->
+          <div class="about-banner-accent" aria-hidden="true"></div>
+
+          <!-- Eyebrow Tag -->
+          <div class="about-banner-eyebrow" data-i18n="newsHeroTag">వార్తలు &amp; కార్యక్రమాలు</div>
+
+          <!-- Main Headline -->
+          <h1 class="about-banner-title">
+            <span class="about-title-navy" data-i18n="newsHeroTitle1">వార్తలు &amp;</span>
+            <span class="about-title-red" data-i18n="newsHeroTitle2">కార్యక్రమాలు</span>
           </h1>
-          <div class="news-accent-stripe" aria-hidden="true"></div>
+
+          <!-- Subtitle Description -->
+          <p class="about-banner-desc" data-i18n="newsHeroDesc">
+            ప్రజాసేవ పార్టీ తాజా వార్తలు, అధికారిక పత్రికా ప్రకటనలు, క్షేత్రస్థాయి ప్రజా పర్యటనలు మరియు రాబోయే కార్యక్రమాల వివరాలు.
+          </p>
         </div>
       </div>
     </section>
@@ -1000,9 +1011,9 @@
 
   <!-- Global Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/translations.js?v=45.0"></script>
+  <script src="assets/js/translations.js?v=12.0"></script>
   <script src="assets/js/news.js?v=1.0"></script>
-  <script src="assets/js/main.js?v=45.0"></script>
+  <script src="assets/js/main.js?v=12.0"></script>
 </body>
 
 </html>

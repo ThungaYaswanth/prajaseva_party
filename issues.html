@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=40.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.0">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -98,8 +98,8 @@
             <span data-i18n="btnMembership">సభ్యత్వం</span>
           </a>
 
-          <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
-          <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" id="mobileMenuToggleBtn"
+          <!-- Mobile Hamburger / Close Toggler -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
             data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -132,27 +132,38 @@
 
   <main id="main-content">
     <!-- ==========================================================================
-         Top Banner: Wide Hero with Telugu Title & 10 Promises Background
+         Top Banner: Hero matching about.html & vision.html UI design
          ========================================================================== -->
-    <section class="issues-hero-banner" aria-label="10 ప్రధాన అంశాలు శీర్షిక">
-      <div class="issues-banner-inner">
-        <!-- Breadcrumb -->
-        <nav class="issues-breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html#home" class="issues-bc-home">
-            <i class="bi bi-house-door-fill issues-bc-icon"></i>
-            <span data-i18n="navHome">హోమ్</span>
-          </a>
-          <span class="issues-bc-sep">&gt;</span>
-          <span class="issues-bc-current" data-i18n="navPolicies">10 ప్రధాన అంశాలు</span>
-        </nav>
+    <section class="about-page-hero" aria-label="10 ప్రధాన అంశాలు శీర్షిక">
+      <div class="main-container about-banner-container">
+        <!-- Breadcrumb, Accent Bar, Eyebrow, Title & Mission -->
+        <div class="about-banner-content">
+          <!-- Breadcrumb Navigation -->
+          <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html#home" class="about-bc-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span data-i18n="breadcrumbHome">హోమ్</span>
+            </a>
+            <span class="about-bc-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="about-bc-current" aria-current="page" data-i18n="navPolicies">10 ప్రధాన అంశాలు</span>
+          </nav>
 
-        <!-- Main Banner Title & Underline Accent Bar -->
-        <div class="issues-banner-content">
-          <h1 class="issues-banner-title">
-            <span class="issues-title-navy" data-i18n="issuesHeroTitle1">ప్రజా సమస్యలకు</span><br>
-            <span class="issues-title-red" data-i18n="issuesHeroTitle2">10 ప్రధాన అంశాలు</span>
+          <!-- Red & Gold Accent Bar -->
+          <div class="about-banner-accent" aria-hidden="true"></div>
+
+          <!-- Eyebrow Tag -->
+          <div class="about-banner-eyebrow" data-i18n="issuesHeroTag">10 ప్రధాన అంశాలు</div>
+
+          <!-- Main Headline -->
+          <h1 class="about-banner-title">
+            <span class="about-title-navy" data-i18n="issuesHeroTitle1">ప్రజా సమస్యలకు</span>
+            <span class="about-title-red" data-i18n="issuesHeroTitle2">10 ప్రధాన అంశాలు</span>
           </h1>
-          <div class="issues-accent-stripe" aria-hidden="true"></div>
+
+          <!-- Subtitle Description -->
+          <p class="about-banner-desc" data-i18n="issuesHeroDesc">
+            తెలంగాణ ప్రజల సమగ్ర అభివృద్ధి, సమాన అవకాశాలు మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ 10 స్పష్టమైన కార్యాచరణ అంశాలు.
+          </p>
         </div>
       </div>
     </section>
@@ -743,7 +754,7 @@
         num: "10",
         title: "సుపరిపాలన పాలన",
         title_en: "Good Governance",
-        menuIcon: "bi-scale",
+        menuIcon: "bi-shield-check",
         iconColor: "#DC2626",
         image: "assets/images/gallery/gallery-assembly.jpg",
         lead: "అవినీతి రహిత పాలన – పారదర్శకత, బాధ్యతాయుత ప్రజా ప్రభుత్వం.",
@@ -793,6 +804,14 @@
 
         li.querySelector(".issue-menu-btn").addEventListener("click", () => {
           selectIssue(issue.id);
+          if (window.innerWidth < 992) {
+            const panel = document.getElementById("issuesDetailPanel");
+            if (panel) {
+              const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 70;
+              const top = panel.getBoundingClientRect().top + window.pageYOffset - (headerH + 15);
+              window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            }
+          }
         });
 
         listContainer.appendChild(li);
@@ -949,8 +968,8 @@
 
   <!-- Global Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/translations.js?v=45.0"></script>
-  <script src="assets/js/main.js?v=45.0"></script>
+  <script src="assets/js/translations.js?v=12.0"></script>
+  <script src="assets/js/main.js?v=12.0"></script>
 </body>
 
 </html>
