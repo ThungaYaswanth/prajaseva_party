@@ -1152,6 +1152,7 @@ body.mobile-nav-open {
       opacity: 0;
       transform: translateY(-10px) scale(0.98);
     }
+
     to {
       opacity: 1;
       transform: translateY(0) scale(1);
@@ -1655,31 +1656,24 @@ body.mobile-nav-open {
   top: 50%;
   transform: translateY(-50%);
   z-index: 15;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  border: none;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   outline: none;
   user-select: none;
 }
 
 .hero-slider-nav-btn:hover {
-  background: rgba(200, 16, 22, 0.9);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 6px 20px rgba(200, 16, 22, 0.45);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .hero-slider-nav-btn:active {
@@ -1696,14 +1690,16 @@ body.mobile-nav-open {
 
 @media (max-width: 768px) {
   .hero-slider-nav-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
-    background: rgba(15, 23, 42, 0.6);
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+    background: transparent;
   }
+
   .hero-slider-nav-btn.prev-btn {
     left: 10px;
   }
+
   .hero-slider-nav-btn.next-btn {
     right: 10px;
   }
@@ -8860,8 +8856,13 @@ body.mobile-nav-open {
 }
 
 @keyframes badgeSubtleFloat {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-6px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-6px);
+  }
 }
 
 .stat-badge-icon {
@@ -8966,12 +8967,15 @@ body.mobile-nav-open {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .about-genesis-desc {
     max-width: 100%;
   }
+
   .about-genesis-visual-stage {
     margin: 15px auto 20px;
   }
+
   .genesis-floating-quote-card {
     right: 0;
   }
@@ -8982,6 +8986,7 @@ body.mobile-nav-open {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
   .genesis-arch-track {
     display: none;
   }
@@ -8991,38 +8996,45 @@ body.mobile-nav-open {
   .about-genesis-title {
     font-size: clamp(1.75rem, 5vw, 2.2rem);
   }
+
   .about-genesis-desc {
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 20px;
   }
+
   .genesis-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+
   .about-genesis-visual-stage {
     width: 360px;
     height: 380px;
     margin: 15px auto 30px;
   }
+
   .genesis-orbit-ring.ring-red {
     width: 340px;
     height: 340px;
     top: 5px;
     left: 10px;
   }
+
   .genesis-orbit-ring.ring-gold {
     width: 310px;
     height: 310px;
     top: 20px;
     left: 25px;
   }
+
   .genesis-leader-circle-frame {
     width: 270px;
     height: 270px;
     top: 40px;
     left: 45px;
   }
+
   .genesis-floating-stat-badge {
     width: 86px;
     height: 86px;
@@ -9030,20 +9042,25 @@ body.mobile-nav-open {
     right: 0px;
     padding: 4px;
   }
+
   .stat-badge-icon {
     font-size: 1rem;
     margin-bottom: 1px;
   }
+
   .stat-badge-label {
     font-size: 0.62rem;
   }
+
   .stat-badge-percent {
     font-size: 1.1rem;
     margin: 0;
   }
+
   .stat-badge-sub {
     font-size: 0.62rem;
   }
+
   .genesis-floating-quote-card {
     bottom: -15px;
     right: -10px;
@@ -9052,6 +9069,7 @@ body.mobile-nav-open {
     max-width: 330px;
     padding: 14px 18px 12px 22px;
   }
+
   .quote-card-badge {
     width: 34px;
     height: 34px;
@@ -9059,13 +9077,16 @@ body.mobile-nav-open {
     left: -10px;
     font-size: 1.15rem;
   }
+
   .quote-line-lead {
     font-size: 1.02rem;
   }
+
   .quote-line-highlight {
     font-size: 1.08rem;
     margin-bottom: 4px;
   }
+
   .quote-author {
     font-size: 0.88rem;
   }
@@ -9075,55 +9096,66 @@ body.mobile-nav-open {
   .about-genesis-title {
     font-size: 1.6rem;
   }
+
   .about-genesis-desc {
     font-size: 0.9rem;
     line-height: 1.6;
   }
+
   .genesis-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
+
   .genesis-pillar-card {
     padding: 14px 8px 14px;
     border-radius: 16px;
   }
+
   .pillar-icon-box {
     width: 42px;
     height: 42px;
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
+
   .pillar-card-title {
     font-size: 0.86rem;
     margin-bottom: 4px;
   }
+
   .pillar-card-desc {
     font-size: 0.72rem;
     line-height: 1.4;
   }
+
   .about-genesis-visual-stage {
     width: 300px;
     height: 330px;
     margin: 15px auto 35px;
   }
+
   .genesis-orbit-ring.ring-red {
     width: 290px;
     height: 290px;
     top: 5px;
     left: 5px;
   }
+
   .genesis-orbit-ring.ring-gold {
     width: 265px;
     height: 265px;
     top: 17px;
     left: 17px;
   }
+
   .genesis-leader-circle-frame {
     width: 230px;
     height: 230px;
     top: 35px;
     left: 35px;
   }
+
   .genesis-floating-stat-badge {
     width: 76px;
     height: 76px;
@@ -9131,9 +9163,11 @@ body.mobile-nav-open {
     right: -5px;
     padding: 2px;
   }
+
   .stat-badge-percent {
     font-size: 0.96rem;
   }
+
   .genesis-floating-quote-card {
     bottom: -22px;
     right: -5px;
@@ -9142,6 +9176,7 @@ body.mobile-nav-open {
     max-width: 300px;
     padding: 12px 14px 10px 16px;
   }
+
   .quote-card-badge {
     width: 30px;
     height: 30px;
@@ -9149,13 +9184,16 @@ body.mobile-nav-open {
     left: -8px;
     font-size: 1.05rem;
   }
+
   .quote-line-lead {
     font-size: 0.92rem;
   }
+
   .quote-line-highlight {
     font-size: 0.96rem;
     margin-bottom: 2px;
   }
+
   .quote-author {
     font-size: 0.8rem;
   }
@@ -12800,10 +12838,10 @@ body.mobile-nav-open {
   }
 }
 
-  .quote-body {
-    font-size: 0.92rem;
-    line-height: 1.5;
-  }
+.quote-body {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
 }
 
 /* ==========================================================================
