@@ -13975,3 +13975,66 @@ body.mobile-nav-open {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   Responsive Section Visibility Controls
+   1. Leadership Section ("ప్రజాసేవలో పార్టీ నాయకత్వం"):
+      Removed completely across ALL screen sizes (Mobile, Tablet, Desktop)
+   2. Listed Sections:
+      - "ప్రజాసేవ పార్టీ – 10 ప్రధాన ప్రజా అంశాలు"
+      - "🔥 తెలంగాణలో 70 శాతం స్పెషల్ రంగంలో రిజర్వేషన్లు ఇవ్వాలి"
+      - "రాబోయే కార్యక్రమాలు" & "తాజా వార్తలు"
+      - "ఫోటోలు గ్యాలరీ"
+      - "పార్టీసభ్యత్వం"
+      Hidden completely on Tablet (768px – 1023px) and Laptop/Desktop (>= 1024px)
+      without leaving any empty space (display: none !important).
+      Visible exactly as they are on Mobile screens (< 768px) only.
+   ========================================================================== */
+
+/* 1. Entire Leadership Section: Hidden on Mobile, Tablet, and Desktop */
+#leadership-team,
+.leadership-showcase-section {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* 2. Tablet (768px - 1023px) and Laptop/Desktop (>= 1024px): Completely hide specified sections */
+@media (min-width: 768px) {
+  /* “ప్రజాసేవ పార్టీ – 10 ప్రధాన ప్రజా అంశాలు” */
+  #public-issues,
+  .issues-section,
+
+  /* “🔥 తెలంగాణలో 70 శాతం స్పెషల్ రంగంలో రిజర్వేషన్లు ఇవ్వాలి” */
+  #campaign-banner,
+  .campaign-banner-section,
+
+  /* “రాబోయే కార్యక్రమాలు” & “తాజా వార్తలు” (Homepage News & Upcoming Events) */
+  #news-events,
+  .news-events-section,
+  #news-events #upcoming-events,
+  .news-events-section .news-main-column,
+  .news-events-section .events-main-column,
+
+  /* “ఫోటోలు గ్యాలరీ” */
+  #gallery,
+  .gallery-section,
+
+  /* “పార్టీసభ్యత్వం” */
+  #membership-cta,
+  .membership-master-section {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
