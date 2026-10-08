@@ -4682,8 +4682,17 @@ body.mobile-nav-open {
   box-shadow: none !important;
 }
 
-/* Highlighted Telangana State in Vector SVG */
-.telangana-highlight-path {
+/* Active Party States (Telangana, Andhra Pradesh, Karnataka, Maharashtra) */
+.active-party-state {
+  cursor: pointer;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Highlighted Party States in Vector SVG (Telangana, Andhra Pradesh, Karnataka, Maharashtra) */
+.telangana-highlight-path,
+.party-highlight-path {
   fill: #C81016 !important;
   stroke: #FFFFFF !important;
   stroke-width: 2.5 !important;
@@ -4692,15 +4701,23 @@ body.mobile-nav-open {
   outline: none !important;
   box-shadow: none !important;
   -webkit-tap-highlight-color: transparent !important;
+  transition: all 0.22s ease;
 }
 
 .telangana-highlight-path:hover,
 .telangana-highlight-path:focus,
 .telangana-highlight-path:focus-visible,
-.telangana-highlight-path:active {
+.telangana-highlight-path:active,
+.telangana-highlight-path.is-active-state,
+.party-highlight-path:hover,
+.party-highlight-path:focus,
+.party-highlight-path:focus-visible,
+.party-highlight-path:active,
+.party-highlight-path.is-active-state {
   fill: #B91C1C !important;
-  stroke-width: 2.8 !important;
-  filter: drop-shadow(0 6px 24px rgba(200, 16, 22, 0.85));
+  stroke: #FEF3C7 !important;
+  stroke-width: 3 !important;
+  filter: drop-shadow(0 6px 26px rgba(200, 16, 22, 0.9));
   outline: none !important;
   box-shadow: none !important;
   -webkit-tap-highlight-color: transparent !important;
@@ -4708,25 +4725,30 @@ body.mobile-nav-open {
 
 .pin-pulse-halo {
   animation: pulseHalo 2s infinite ease-out;
-  opacity: 0.7;
-  transform-origin: 410px 642px;
+  opacity: 0.75;
   pointer-events: none;
+}
+
+.state-center-pin,
+.telangana-center-pin {
+  pointer-events: none;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.35));
 }
 
 @keyframes pulseHalo {
   0% {
-    r: 18;
-    opacity: 0.8;
+    r: 17;
+    opacity: 0.85;
   }
 
   50% {
-    r: 32;
+    r: 30;
     opacity: 0;
   }
 
   100% {
-    r: 18;
-    opacity: 0.8;
+    r: 17;
+    opacity: 0.85;
   }
 }
 
@@ -4765,8 +4787,9 @@ body.mobile-nav-open {
   transform: translate(-50%, -135%);
 }
 
-/* Telangana Leader Pop-up (Exact 1:1 Match with User Screenshot) */
-.telangana-leader-popup {
+/* State & Telangana Leader Pop-up (Consistent card styling across all states) */
+.telangana-leader-popup,
+.state-leader-popup {
   position: absolute;
   top: 22%;
   right: 15px;
@@ -4784,7 +4807,8 @@ body.mobile-nav-open {
   pointer-events: none;
 }
 
-.telangana-leader-popup.active {
+.telangana-leader-popup.active,
+.state-leader-popup.active {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
@@ -5121,14 +5145,16 @@ body.mobile-nav-open {
     max-width: 480px;
   }
 
-  .telangana-leader-popup {
+  .telangana-leader-popup,
+  .state-leader-popup {
     left: 50%;
     right: auto;
     transform: translateX(-50%) translateY(10px) scale(0.96);
     top: 15%;
   }
 
-  .telangana-leader-popup.active {
+  .telangana-leader-popup.active,
+  .state-leader-popup.active {
     transform: translateX(-50%) translateY(0) scale(1);
   }
 }
@@ -5161,7 +5187,8 @@ body.mobile-nav-open {
     max-width: 100%;
   }
 
-  .telangana-leader-popup {
+  .telangana-leader-popup,
+  .state-leader-popup {
     width: calc(100% - 24px);
     max-width: 295px;
     left: 50%;
@@ -5170,7 +5197,8 @@ body.mobile-nav-open {
     top: 10%;
   }
 
-  .telangana-leader-popup.active {
+  .telangana-leader-popup.active,
+  .state-leader-popup.active {
     transform: translateX(-50%) translateY(0) scale(1);
   }
 }
@@ -8268,6 +8296,25 @@ body.mobile-nav-open {
   margin: 0;
 }
 
+.f-developer-credit {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.f-developer-credit a {
+  color: #b91c1c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.f-developer-credit a:hover {
+  color: #991b1b;
+  text-decoration: underline;
+}
+
 .f-legal-links {
   display: flex;
   align-items: center;
@@ -8328,6 +8375,11 @@ body.mobile-nav-open {
 
   .f-legal-copyright {
     margin: auto;
+  }
+
+  .f-developer-credit {
+    margin: auto;
+    text-align: center;
   }
 }
 
