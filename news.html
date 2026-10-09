@@ -15,7 +15,11 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
+<<<<<<< Updated upstream
   <link rel="stylesheet" href="assets/css/style.css?v=12.0">
+=======
+  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
+>>>>>>> Stashed changes
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -82,10 +86,29 @@
         <div class="header-right-controls d-flex align-items-center">
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+<<<<<<< Updated upstream
           <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" aria-label="భాషను మార్చండి / Switch Language">
             <span class="lang-label" id="lang-current-label">తెలుగు</span>
             <i class="bi bi-chevron-down lang-chevron-icon"></i>
           </button>
+=======
+          <div class="lang-dropdown-wrapper">
+            <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" onclick="window.toggleLanguageDropdown && window.toggleLanguageDropdown(event);" title="భాషను మార్చండి / Switch Language" aria-label="భాషను మార్చండి / Switch Language" aria-expanded="false">
+              <span class="lang-label" id="lang-current-label">తెలుగు</span>
+              <i class="bi bi-chevron-down lang-chevron-icon"></i>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <button type="button" class="lang-dropdown-item active" data-lang-val="te" onclick="window.switchLanguage && window.switchLanguage('te'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>తెలుగు</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+              <button type="button" class="lang-dropdown-item" data-lang-val="en" onclick="window.switchLanguage && window.switchLanguage('en'); window.closeAllLangDropdowns && window.closeAllLangDropdowns();" role="menuitem">
+                <span>English</span>
+                <i class="bi bi-check2 check-icon"></i>
+              </button>
+            </div>
+          </div>
+>>>>>>> Stashed changes
 
           <!-- Donate Button (Gold Pill: విరాళం ఇవ్వండి) -->
           <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
@@ -98,7 +121,11 @@
             <span data-i18n="btnMembership">సభ్యత్వం</span>
           </a>
 
+<<<<<<< Updated upstream
           <!-- Mobile Hamburger / Close Toggler -->
+=======
+          <!-- Mobile Hamburger / Close Toggler (Only on < 992px) -->
+>>>>>>> Stashed changes
           <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
             data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -132,6 +159,7 @@
 
   <main id="main-content">
     <!-- ==========================================================================
+<<<<<<< Updated upstream
          Top Hero Banner: Hero matching about.html & vision.html UI design
          ========================================================================== -->
     <section class="about-page-hero" aria-label="వార్తలు &amp; కార్యక్రమాలు శీర్షిక">
@@ -139,6 +167,14 @@
         <!-- Breadcrumb, Accent Bar, Eyebrow, Title & Mission -->
         <div class="about-banner-content">
           <!-- Breadcrumb Navigation -->
+=======
+         Top Banner: Hero matching about.html & vision.html UI design
+         ========================================================================== -->
+    <section class="about-page-hero" aria-label="వార్తలు &amp; కార్యక్రమాలు శీర్షిక">
+      <div class="main-container about-banner-container">
+        <div class="about-banner-content">
+          <!-- Breadcrumbs -->
+>>>>>>> Stashed changes
           <nav class="about-banner-breadcrumb" aria-label="Breadcrumb">
             <a href="index.html#home" class="about-bc-link">
               <i class="bi bi-house-door-fill"></i>
@@ -162,7 +198,11 @@
 
           <!-- Subtitle Description -->
           <p class="about-banner-desc" data-i18n="newsHeroDesc">
+<<<<<<< Updated upstream
             ప్రజాసేవ పార్టీ తాజా వార్తలు, అధికారిక పత్రికా ప్రకటనలు, క్షేత్రస్థాయి ప్రజా పర్యటనలు మరియు రాబోయే కార్యక్రమాల వివరాలు.
+=======
+            ప్రజాసేవ పార్టీ తాజా వార్తలు, అధికారిక ప్రకటనలు, రాబోయే ప్రజా సభలు మరియు సేవా కార్యక్రమాల సమగ్ర సమాచారం.
+>>>>>>> Stashed changes
           </p>
         </div>
       </div>
@@ -1014,9 +1054,15 @@
 
   <!-- Global Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<<<<<<< Updated upstream
   <script src="assets/js/translations.js?v=12.0"></script>
   <script src="assets/js/news.js?v=1.0"></script>
   <script src="assets/js/main.js?v=12.0"></script>
+=======
+  <script src="assets/js/translations.js?v=10.0"></script>
+  <script src="assets/js/news.js?v=1.0"></script>
+  <script src="assets/js/main.js?v=10.0"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

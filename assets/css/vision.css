@@ -665,15 +665,91 @@
   letter-spacing: -0.01em;
 }
 
-@media (max-width: 991px) {
+/* 8. Responsive Breakpoints for Vision & Mission Page */
+
+/* Desktop to Medium Desktop (< 1200px) */
+@media (max-width: 1199.98px) {
+  .vm-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Tablet Devices (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .vm-section {
+    padding: 50px 0;
+  }
+
+  .vm-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .vm-vision-left {
+    padding-right: 0;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .vm-badge-row {
+    justify-content: center;
+  }
+
+  .vm-title-accent-bar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vm-vision-map-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .vm-quote-card {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .vm-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .vm-mission-right {
+    padding-left: 0;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .vm-mission-photo-frame {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .vm-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .vm-approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
   .vm-action-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+    text-align: center;
   }
 
   .vm-action-left {
-    text-align: center;
     padding-right: 0;
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .vm-action-red-line {
@@ -686,6 +762,7 @@
 
   .vm-action-map-svg-wrap {
     max-width: 380px;
+    margin: 0 auto;
   }
 
   .vm-connector-arrows-svg {
@@ -693,9 +770,10 @@
   }
 
   .vm-action-right-pillars {
-    max-width: 420px;
+    max-width: 480px;
     margin: 0 auto;
     width: 100%;
+<<<<<<< Updated upstream
   }
 }
 
@@ -704,74 +782,264 @@
   .vm-values-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+=======
+>>>>>>> Stashed changes
   }
 }
 
-@media (max-width: 991.98px) {
+/* Mobile Devices (< 768px) */
+@media (max-width: 767.98px) {
+  .vm-section {
+    padding: 38px 0;
+  }
+
+  .vm-main-title {
+    font-size: 1.85rem;
+    line-height: 1.28;
+  }
+
+  .vm-badge-row {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .vm-badge-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .vm-badge-primary {
+    font-size: 1.15rem;
+  }
+
+  .vm-badge-secondary {
+    font-size: 0.8rem;
+  }
+
   .vm-vision-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
     text-align: center;
   }
+
   .vm-vision-left {
     padding-right: 0;
   }
-  .vm-badge-row {
-    justify-content: center;
+
+  .vm-title-accent-bar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
   }
+
+  .vm-main-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .vm-vision-map-card {
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .vm-quote-card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px;
+    border-radius: 14px;
+    text-align: left;
+  }
+
+  .vm-quote-symbol {
+    font-size: 2.2rem;
+    margin-bottom: 4px;
+  }
+
+  .vm-quote-content {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
   .vm-mission-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .vm-mission-right {
-    padding-left: 0;
-  }
-  .vm-approach-grid {
-    grid-template-columns: 1fr;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .vm-action-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
     text-align: center;
   }
+
+  .vm-mission-left {
+    order: 1;
+  }
+
+  .vm-mission-right {
+    order: 2;
+    padding-left: 0;
+  }
+
+  .vm-mission-photo-frame {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  .vm-mission-photo-badge {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .vm-center-header {
+    margin-bottom: 28px;
+  }
+
+  .vm-center-header .vm-center-title {
+    font-size: 1.75rem;
+  }
+
+  .vm-center-header .vm-center-sub {
+    font-size: 0.92rem;
+  }
+
+  .vm-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .vm-value-card {
+    padding: 16px 8px;
+    border-radius: 14px;
+  }
+
+  .vm-value-icon-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .vm-value-title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .vm-value-desc {
+    font-size: 0.76rem;
+  }
+
+  .vm-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .vm-approach-card {
+    border-radius: 16px;
+  }
+
+  .vm-approach-img-wrap {
+    height: 170px;
+  }
+
+  .vm-approach-body {
+    padding: 16px 18px;
+  }
+
+  .vm-action-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
   .vm-action-left {
     padding-right: 0;
   }
-  .vm-action-right-pillars {
-    max-width: 440px;
+
+  .vm-action-main-title {
+    font-size: 1.7rem;
+  }
+
+  .vm-action-sub-title {
+    font-size: 0.92rem;
+  }
+
+  .vm-action-red-line {
+    margin: 8px auto 0;
+  }
+
+  .vm-action-quote-box {
+    padding: 16px;
+    margin: 18px 0 20px;
+    border-radius: 14px;
+  }
+
+  .vm-action-quote-text {
+    font-size: 0.92rem;
+  }
+
+  .vm-btn-gold-action {
     margin: 0 auto;
+    font-size: 0.92rem;
+    padding: 11px 24px;
+  }
+
+  .vm-action-map-svg-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .vm-connector-arrows-svg {
+    display: none;
+  }
+
+  .vm-action-right-pillars {
     width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .vm-pillars-track-line {
+    display: none;
+  }
+
+  .vm-pillar-pill {
+    padding: 5px 14px 5px 5px;
+    gap: 10px;
+    border-radius: 40px;
+  }
+
+  .vm-pillar-pill:hover {
+    transform: none;
+  }
+
+  .vm-pillar-icon-bubble {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+
+  .vm-pillar-label {
+    font-size: 0.88rem;
   }
 }
 
-@media (max-width: 575.98px) {
-  .vm-section {
-    padding: 44px 0;
-  }
+/* Extra-small screens (<= 380px) */
+@media (max-width: 380px) {
   .vm-main-title {
-    font-size: 1.85rem;
+    font-size: 1.6rem;
   }
+
   .vm-values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
+
   .vm-value-card {
-    padding: 20px 10px;
+    padding: 14px 10px;
   }
-  .vm-value-icon-circle {
-    width: 48px;
-    height: 48px;
-    font-size: 1.35rem;
-  }
-  .vm-value-title {
-    font-size: 1rem;
-  }
-  .vm-value-desc {
-    font-size: 0.78rem;
-  }
-  .vm-action-main-title {
-    font-size: 1.75rem;
+
+  .vm-pillar-label {
+    font-size: 0.82rem;
   }
 }

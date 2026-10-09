@@ -559,16 +559,27 @@ const translations = {
     newsShareBtn: "భాగస్వామ్యం చేయండి",
     newsCopiedAlert: "లింక్ కాపీ చేయబడింది!",
     newsPaginationLabel: "వార్తల పేజీలు",
+    memHeroTag: "పార్టీ సభ్యత్వం",
     memBannerTitle1: "పార్టీలో",
     memBannerTitle2: "సభ్యత్వం పొందండి",
+    memHeroDesc: "తెలంగాణ ప్రజా విప్లవంలో భాగస్వాములు కండి. ప్రజాసేవ పార్టీ డిజిటల్ సభ్యత్వం పొంది ప్రజా సంక్షేమ ప్రయాణంలో చేతులు కలపండి.",
+    issuesHeroTag: "10 ప్రధాన అంశాలు",
     issuesHeroTitle1: "ప్రజా సమస్యలకు",
     issuesHeroTitle2: "10 ప్రధాన అంశాలు",
+<<<<<<< Updated upstream
     issuesHeroTag: "10 ప్రధాన అంశాలు",
     issuesHeroDesc: "తెలంగాణ ప్రజల సమగ్ర అభివృద్ధి, సమాన అవకాశాలు మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ 10 స్పష్టమైన కార్యాచరణ అంశాలు.",
     newsHeroTag: "వార్తలు & కార్యక్రమాలు",
     newsHeroDesc: "ప్రజాసేవ పార్టీ తాజా వార్తలు, అధికారిక పత్రికా ప్రకటనలు, క్షేత్రస్థాయి ప్రజా పర్యటనలు మరియు రాబోయే కార్యక్రమాల వివరాలు.",
     memHeroTag: "పార్టీ సభ్యత్వం",
     memHeroDesc: "ప్రజాసేవ పార్టీ కుటుంబంలో భాగస్వామ్యులు కండి. తెలంగాణ సమగ్ర అభివృద్ధి, సమానత్వం మరియు ప్రజా సంక్షేమ ఉద్యమంలో చేరండి.",
+=======
+    issuesHeroDesc: "తెలంగాణ సమగ్ర అభివృద్ధి, సమాన అవకాశాలు మరియు ప్రతి కుటుంబ సంక్షేమానికి ప్రజాసేవ పార్టీ 10 స్పష్టమైన కార్యాచరణ అంశాలు.",
+    newsHeroTag: "వార్తలు & కార్యక్రమాలు",
+    newsHeroTitle1: "వార్తలు &",
+    newsHeroTitle2: "కార్యక్రమాలు",
+    newsHeroDesc: "ప్రజాసేవ పార్టీ తాజా వార్తలు, అధికారిక ప్రకటనలు, రాబోయే ప్రజా సభలు మరియు సేవా కార్యక్రమాల సమగ్ర సమాచారం.",
+>>>>>>> Stashed changes
     // Vision & Mission Page (మా దృష్టి & లక్ష్యం)
     visionPageTitle: "మా దృష్టి & లక్ష్యం | Prajaseva Party - Our Vision & Mission",
     visionBcCurrent: "మా దృష్టి & లక్ష్యం",
@@ -1192,6 +1203,7 @@ const translations = {
     newsShareBtn: "Share Story",
     newsCopiedAlert: "Link copied to clipboard!",
     newsPaginationLabel: "News Pages",
+<<<<<<< Updated upstream
     memBannerTitle1: "Join the Party",
     memBannerTitle2: "Get Membership",
     issuesHeroTitle1: "For Public Issues",
@@ -1202,6 +1214,20 @@ const translations = {
     newsHeroDesc: "Latest updates, official press statements, grassroots field tours, and upcoming public engagement initiatives from Prajaseva Party.",
     memHeroTag: "PARTY MEMBERSHIP",
     memHeroDesc: "Become a partner in the Prajaseva Party family. Join the movement for comprehensive progress, social justice, and citizen empowerment across Telangana.",
+=======
+    memHeroTag: "PARTY MEMBERSHIP",
+    memBannerTitle1: "Join the Party &",
+    memBannerTitle2: "Become a Member",
+    memHeroDesc: "Be a part of Telangana's historic transformation. Get your instant digital membership and champion the people's welfare.",
+    issuesHeroTag: "10 KEY PRIORITIES",
+    issuesHeroTitle1: "For Public Issues –",
+    issuesHeroTitle2: "10 Key Priorities",
+    issuesHeroDesc: "Praja Seva Party's 10 definitive commitments to inclusive development, equal opportunities, and citizen welfare in Telangana.",
+    newsHeroTag: "NEWS & PROGRAMS",
+    newsHeroTitle1: "News &",
+    newsHeroTitle2: "Programs",
+    newsHeroDesc: "Latest updates, official announcements, upcoming public conventions, and community service initiatives of Praja Seva Party.",
+>>>>>>> Stashed changes
     // Vision & Mission Page
     visionPageTitle: "Our Vision & Mission | Prajaseva Party - Telangana Progress",
     visionBcCurrent: "Our Vision & Mission",

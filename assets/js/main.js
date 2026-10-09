@@ -3,20 +3,34 @@
  * Language switching, carousels, lightbox, modals, and validation
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  updateHeaderHeight();
-  initLanguage();
-  initMobileNav();
-  initHeroCarousel();
-  initGalleryLightbox();
-  initPhotoGallerySlider();
-  initForms();
-  initBackToTop();
-  initPolicyModal();
-  initCampaignSlider();
-  initInteractiveMap();
-  init3DFlipCards();
-});
+function safeRun(fn, name) {
+  try {
+    if (typeof fn === 'function') fn();
+  } catch (err) {
+    console.warn(`[Prajaseva] Error in ${name}:`, err);
+  }
+}
+
+function initApp() {
+  safeRun(updateHeaderHeight, 'updateHeaderHeight');
+  safeRun(initLanguage, 'initLanguage');
+  safeRun(initMobileNav, 'initMobileNav');
+  safeRun(initHeroCarousel, 'initHeroCarousel');
+  safeRun(initGalleryLightbox, 'initGalleryLightbox');
+  safeRun(initPhotoGallerySlider, 'initPhotoGallerySlider');
+  safeRun(initForms, 'initForms');
+  safeRun(initBackToTop, 'initBackToTop');
+  safeRun(initPolicyModal, 'initPolicyModal');
+  safeRun(initCampaignSlider, 'initCampaignSlider');
+  safeRun(initInteractiveMap, 'initInteractiveMap');
+  safeRun(init3DFlipCards, 'init3DFlipCards');
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 function init3DFlipCards() {
   document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
@@ -50,6 +64,7 @@ function initMobileNav() {
 
   if (!navbarCollapse || !toggleBtn) return;
 
+<<<<<<< Updated upstream
   // Prevent Bootstrap collision by removing data-bs-toggle attribute
   toggleBtn.removeAttribute('data-bs-toggle');
 
@@ -66,6 +81,14 @@ function initMobileNav() {
     backdrop = document.createElement('div');
     backdrop.className = 'mobile-nav-backdrop';
     document.body.appendChild(backdrop);
+=======
+  // Prevent Bootstrap global attribute-based click collision
+  toggleBtn.removeAttribute('data-bs-toggle');
+
+  let bsCollapse = null;
+  if (window.bootstrap && bootstrap.Collapse) {
+    bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false });
+>>>>>>> Stashed changes
   }
 
   function setMenuState(isOpen) {
@@ -92,7 +115,18 @@ function initMobileNav() {
   }
 
   function closeMobileMenu() {
+<<<<<<< Updated upstream
     setMenuState(false);
+=======
+    if (navbarCollapse.classList.contains('show') || navbarCollapse.classList.contains('collapsing') || toggleBtn.getAttribute('aria-expanded') === 'true') {
+      if (bsCollapse) {
+        bsCollapse.hide();
+      } else {
+        navbarCollapse.classList.remove('show');
+      }
+      setMenuState(false);
+    }
+>>>>>>> Stashed changes
   }
 
   // Toggler button click: deterministic toggle
@@ -102,6 +136,7 @@ function initMobileNav() {
     toggleMobileMenu();
   };
 
+<<<<<<< Updated upstream
   // Tap on backdrop closes drawer
   if (backdrop) {
     backdrop.onclick = function (e) {
@@ -123,6 +158,22 @@ function initMobileNav() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
       closeMobileMenu();
+=======
+  // Toggler button click: deterministic toggle for both mobile & tablet
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isCurrentlyOpen = navbarCollapse.classList.contains('show') || navbarCollapse.classList.contains('collapsing') || toggleBtn.getAttribute('aria-expanded') === 'true';
+    if (isCurrentlyOpen) {
+      closeMobileMenu();
+    } else {
+      if (bsCollapse) {
+        bsCollapse.show();
+      } else {
+        navbarCollapse.classList.add('show');
+      }
+      setMenuState(true);
+>>>>>>> Stashed changes
     }
   });
 
@@ -238,6 +289,7 @@ try {
   currentLang = 'te';
 }
 
+<<<<<<< Updated upstream
 function toggleLanguageDirect(e) {
   if (e) {
     e.preventDefault();
@@ -249,6 +301,63 @@ function toggleLanguageDirect(e) {
 window.toggleLanguageDirect = toggleLanguageDirect;
 window.toggleLanguageDropdown = toggleLanguageDirect; // Alias for backward compatibility
 window.closeAllLangDropdowns = function () { };
+=======
+function closeAllLangDropdowns() {
+  document.querySelectorAll('.lang-dropdown-menu.show').forEach(m => m.classList.remove('show'));
+  document.querySelectorAll('#lang-toggle-btn, .lang-dropdown-capsule').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.classList.remove('is-open');
+  });
+}
+window.closeAllLangDropdowns = closeAllLangDropdowns;
+
+function toggleLanguageDropdown(triggerEl) {
+  let btn = triggerEl;
+  if (!btn || !btn.nodeType) {
+    btn = document.getElementById('lang-toggle-btn') || document.querySelector('.lang-dropdown-capsule');
+  }
+  if (!btn) return;
+
+  const wrapper = btn.closest('.lang-dropdown-wrapper') || btn.parentElement;
+  let menu = wrapper ? wrapper.querySelector('.lang-dropdown-menu') : document.getElementById('lang-dropdown-menu');
+
+  if (!menu && wrapper) {
+    menu = document.createElement('div');
+    menu.className = 'lang-dropdown-menu';
+    menu.id = 'lang-dropdown-menu';
+    menu.setAttribute('role', 'menu');
+    menu.innerHTML = `
+      <button type="button" class="lang-dropdown-item ${currentLang === 'te' ? 'active' : ''}" data-lang-val="te" role="menuitem">
+        <span>తెలుగు</span>
+        <i class="bi bi-check2 check-icon"></i>
+      </button>
+      <button type="button" class="lang-dropdown-item ${currentLang === 'en' ? 'active' : ''}" data-lang-val="en" role="menuitem">
+        <span>English</span>
+        <i class="bi bi-check2 check-icon"></i>
+      </button>
+    `;
+    wrapper.appendChild(menu);
+  }
+
+  if (menu) {
+    const isCurrentlyOpen = menu.classList.contains('show');
+    closeAllLangDropdowns();
+    if (!isCurrentlyOpen) {
+      menu.classList.add('show');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.classList.add('is-open');
+    }
+  }
+}
+window.toggleLanguageDropdown = function(event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const target = event && event.currentTarget ? event.currentTarget : (event && event.target ? event.target.closest('#lang-toggle-btn, .lang-dropdown-capsule') : null);
+  toggleLanguageDropdown(target);
+};
+>>>>>>> Stashed changes
 
 function initLanguage() {
   const teBtns = document.querySelectorAll('#lang-btn-te, .lang-select-te');
@@ -269,7 +378,9 @@ function initLanguage() {
     };
   });
 
+  // Setup interactive language dropdown on all capsule buttons
   toggleBtns.forEach(btn => {
+<<<<<<< Updated upstream
     btn.onclick = (e) => {
       toggleLanguageDirect(e);
     };
@@ -280,6 +391,89 @@ function initLanguage() {
     const btn = e.target.closest('#lang-toggle-btn, .lang-dropdown-capsule');
     if (btn) {
       toggleLanguageDirect(e);
+    }
+=======
+    let wrapper = btn.closest('.lang-dropdown-wrapper');
+    if (!wrapper) {
+      wrapper = document.createElement('div');
+      wrapper.className = 'lang-dropdown-wrapper';
+      btn.parentNode.insertBefore(wrapper, btn);
+      wrapper.appendChild(btn);
+    }
+
+    let menu = wrapper.querySelector('.lang-dropdown-menu');
+    if (!menu) {
+      menu = document.createElement('div');
+      menu.className = 'lang-dropdown-menu';
+      menu.id = 'lang-dropdown-menu';
+      menu.setAttribute('role', 'menu');
+      menu.innerHTML = `
+        <button type="button" class="lang-dropdown-item ${currentLang === 'te' ? 'active' : ''}" data-lang-val="te" role="menuitem">
+          <span>తెలుగు</span>
+          <i class="bi bi-check2 check-icon"></i>
+        </button>
+        <button type="button" class="lang-dropdown-item ${currentLang === 'en' ? 'active' : ''}" data-lang-val="en" role="menuitem">
+          <span>English</span>
+          <i class="bi bi-check2 check-icon"></i>
+        </button>
+      `;
+      wrapper.appendChild(menu);
+    }
+
+    // Direct click on capsule toggles dropdown
+    btn.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleLanguageDropdown(btn);
+    };
+
+    // Clicking a dropdown item selects language
+    menu.querySelectorAll('.lang-dropdown-item').forEach(item => {
+      item.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const selectedLang = item.getAttribute('data-lang-val');
+        if (selectedLang) {
+          switchLanguage(selectedLang);
+          closeAllLangDropdowns();
+        }
+      };
+    });
+>>>>>>> Stashed changes
+  });
+
+  // Global document-level click delegation: bulletproof fallback for language switches
+  document.addEventListener('click', (e) => {
+    const capsuleBtn = e.target.closest('#lang-toggle-btn, .lang-dropdown-capsule');
+    if (capsuleBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleLanguageDropdown(capsuleBtn);
+      return;
+    }
+
+    const langItem = e.target.closest('.lang-dropdown-item, [data-lang-val]');
+    if (langItem) {
+      e.preventDefault();
+      e.stopPropagation();
+      const val = langItem.getAttribute('data-lang-val');
+      if (val) {
+        switchLanguage(val);
+        closeAllLangDropdowns();
+      }
+      return;
+    }
+
+    // Tap outside closes dropdown
+    if (!e.target.closest('.lang-dropdown-wrapper')) {
+      closeAllLangDropdowns();
+    }
+  });
+
+  // ESC key closes dropdown
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllLangDropdowns();
     }
   });
 
@@ -311,7 +505,11 @@ function applyLanguage(lang) {
 
   // 1. Update capsule toggle labels and rotate chevron arrow
   const labelText = lang === 'te' ? 'తెలుగు' : 'English';
+<<<<<<< Updated upstream
   const toggleTitle = lang === 'te' ? 'భాషను మార్చండి / Switch to English' : 'Switch Language / తెలుగులోకి మార్చండి';
+=======
+  const toggleTitle = lang === 'te' ? 'భాషను మార్చండి / Switch Language' : 'Switch Language / భాషను మార్చండి';
+>>>>>>> Stashed changes
 
   document.querySelectorAll('#lang-current-label, .lang-dropdown-capsule .lang-label').forEach(el => {
     el.textContent = labelText;
@@ -325,6 +523,12 @@ function applyLanguage(lang) {
     } else {
       btn.classList.remove('lang-is-en');
     }
+  });
+
+  // Update active state in dropdown items
+  document.querySelectorAll('.lang-dropdown-item').forEach(item => {
+    const val = item.getAttribute('data-lang-val');
+    item.classList.toggle('active', val === lang);
   });
 
   document.documentElement.lang = lang;
@@ -429,7 +633,12 @@ function initHeroCarousel() {
     };
   });
 
+<<<<<<< Updated upstream
   // Snappy auto slide every 4 seconds with smooth transition
+=======
+
+  // Snappy auto slide every 3.5 seconds
+>>>>>>> Stashed changes
   startSlideShow();
 
   if (banner) {
