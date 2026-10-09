@@ -6075,25 +6075,18 @@ body.mobile-nav-open {
    Smooth 3D Flip Card Animation System (Professional Front & Back 180° Flip)
    ========================================================================== */
 
-/* ==========================================================================
-   Smooth 3D Flip Card Animation System (Professional Front & Back 180° Flip)
-   Landscape ID Card System (1024 x 682, ~1.50 Aspect Ratio)
-   ========================================================================== */
-
 /* 1. 3D Scene Wrapper with Perspective */
 .id-card-3d-scene {
   perspective: 1400px;
   -webkit-perspective: 1400px;
-  width: 490px;
+  width: 355px;
   max-width: 100%;
-  aspect-ratio: 1024 / 682;
   margin: 0 auto;
   position: relative;
   display: block;
   user-select: none;
   cursor: pointer;
   outline: none;
-  border-radius: 20px;
 }
 
 /* 2. Rotating 3D Inner Wrapper */
@@ -6105,7 +6098,6 @@ body.mobile-nav-open {
   -webkit-transform-style: preserve-3d;
   transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1);
   will-change: transform;
-  border-radius: 20px;
 }
 
 /* 3. Smooth Horizontal 180° Flip on Hover or Active Touch */
@@ -6119,16 +6111,12 @@ body.mobile-nav-open {
 /* 4. Perfectly Aligned Card Faces */
 .id-card-face {
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  border-radius: 18px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   box-sizing: border-box;
-  overflow: hidden;
-  border: 3.5px solid #D4AF37;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22), 0 3px 10px rgba(212, 175, 55, 0.25);
 }
 
 .id-card-face-front {
@@ -6136,7 +6124,6 @@ body.mobile-nav-open {
   z-index: 2;
   transform: rotateY(0deg) translateZ(1px);
   -webkit-transform: rotateY(0deg) translateZ(1px);
-  background: #111827;
 }
 
 .id-card-face-back {
@@ -6148,349 +6135,40 @@ body.mobile-nav-open {
   z-index: 1;
   transform: rotateY(180deg) translateZ(1px);
   -webkit-transform: rotateY(180deg) translateZ(1px);
-  background: #FFFDF7;
-}
-
-/* Front Card Containers */
-.golden-id-card-front {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 16.5px;
+  border-radius: 18px;
   overflow: hidden;
-  background: #111827;
-}
-
-.golden-card-base-img,
-.master-card-front-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 16.5px;
-}
-
-/* Dynamic Overlays for Member Registered Card */
-.golden-card-dynamic-photo-frame {
-  position: absolute;
-  left: 4.2%;
-  top: 33.2%;
-  width: 20.8%;
-  height: 39.4%;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #D4AF37;
-  background: #0074D9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 4;
-}
-
-.golden-card-dynamic-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.golden-card-field-val {
-  position: absolute;
-  left: 43.5%;
-  width: 20%;
-  height: 5.2%;
-  display: flex;
-  align-items: center;
-  background: #FAF7F0;
-  color: #DC2626;
-  font-weight: 900;
-  font-size: clamp(0.68rem, 1.4vw, 0.84rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 4px;
-  line-height: 1;
-  z-index: 4;
-}
-
-.field-val-name { top: 41.2%; }
-.field-val-role { top: 46.5%; }
-.field-val-id { top: 51.7%; }
-.field-val-blood { top: 57.0%; }
-.field-val-mobile { top: 62.3%; }
-.field-val-district { top: 67.5%; }
-
-.golden-card-badge-id-val {
-  position: absolute;
-  left: 80.0%;
-  width: 14.2%;
-  top: 89.2%;
-  height: 6.2%;
-  background: #F3C34F;
-  color: #1A1A1A;
-  font-weight: 900;
-  font-size: clamp(0.65rem, 1.4vw, 0.80rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 2px;
-  z-index: 4;
-}
-
-/* ==========================================================================
-   Matching Luxury Landscape Back Side of ID Card
-   ========================================================================== */
-.golden-id-card-back {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: #FFFDF9;
-  border-radius: 16.5px;
-  overflow: hidden;
-  position: relative;
-  user-select: none;
-}
-
-/* 1. Header Banner */
-.golden-back-header {
-  background: linear-gradient(180deg, #A80004 0%, #870003 55%, #6E0002 100%);
-  padding: 7px 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
-}
-
-.golden-back-emblem-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
   background: #FFFFFF;
-  border: 2px solid #D4AF37;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.golden-back-emblem-img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+/* Ensure Front & Back Card Bodies fill Face */
+.id-card-face .card-template-exact {
+  width: 100%;
+  margin: 0;
 }
 
-.golden-back-title-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 1.15;
-  flex: 1;
-}
-
-.golden-back-title-te {
-  font-size: 1.12rem;
-  font-weight: 900;
-  color: #FFFFFF;
-  letter-spacing: 0.3px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.golden-back-slogan-te {
-  font-size: 0.60rem;
-  font-weight: 700;
-  color: #FFD54F;
-  margin-top: 1px;
-}
-
-.golden-back-badge-official {
-  background: linear-gradient(135deg, #FFE082, #FFB800);
-  color: #7A0000;
-  font-size: 0.62rem;
-  font-weight: 900;
-  padding: 4px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-  border: 1px solid #FFF;
-  flex-shrink: 0;
-}
-
-/* 2. Gold Ribbon */
-.golden-back-gold-ribbon {
-  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
-  color: #7A0000;
-  font-size: 0.66rem;
-  font-weight: 900;
-  text-align: center;
-  padding: 2px 0;
-  letter-spacing: 1px;
-  flex-shrink: 0;
-}
-
-/* 3. Main Grid */
-.golden-back-body-grid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 10px;
-  padding: 10px 14px 6px 14px;
-  align-items: stretch;
-  background: radial-gradient(circle at 80% 50%, rgba(255, 201, 40, 0.08) 0%, transparent 60%), #FFFDF9;
-  min-height: 0;
-}
-
-.golden-back-col-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.golden-back-pill-heading {
-  background: #A80004;
-  color: #FFFFFF;
-  font-size: 0.70rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  align-self: flex-start;
-  margin-bottom: 4px;
-}
-
-.golden-back-resp-list {
-  list-style: none;
+/* Back Side Card Body */
+.id-card-back-body {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3.5px;
-}
-
-.golden-back-resp-list li {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #1F2937;
-  line-height: 1.25;
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-}
-
-.golden-back-resp-list .resp-bullet {
-  color: #DC2626;
-  font-size: 0.65rem;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.golden-back-motto-box {
-  background: #FEF2F2;
-  border-left: 3px solid #DC2626;
-  padding: 3px 8px;
-  font-size: 0.65rem;
-  font-weight: 800;
-  color: #991B1B;
-  border-radius: 0 4px 4px 0;
-  margin-top: 4px;
-}
-
-.golden-back-col-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.golden-back-info-card {
   background: #FFFFFF;
-  border: 1px solid #FDE68A;
-  border-radius: 8px;
-  padding: 6px 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  border: 1.5px solid #E2E8F0;
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 3px;
 }
 
-.golden-back-info-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  font-size: 0.60rem;
-  line-height: 1.25;
-  color: #334155;
-}
-
-.golden-back-info-row .info-icon {
-  font-size: 0.70rem;
-  flex-shrink: 0;
-}
-
-.golden-back-info-row strong {
-  color: #881337;
-  font-weight: 800;
-}
-
-.golden-back-notice-text {
-  font-size: 0.54rem;
-  color: #64748B;
-  line-height: 1.2;
-  margin-top: 3px;
-  text-align: justify;
-}
-
-/* 4. Bottom Footer */
-.golden-back-footer {
-  background: linear-gradient(180deg, #870003 0%, #6E0002 100%);
-  padding: 5px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #FFFFFF;
-  border-top: 1.5px solid #D4AF37;
-  flex-shrink: 0;
-}
-
-.golden-back-footer-pres {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.golden-back-footer-pres .pres-name {
-  font-size: 0.72rem;
-  font-weight: 900;
-  color: #FFE082;
-}
-
-.golden-back-footer-pres .pres-title {
-  font-size: 0.52rem;
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-.golden-back-footer-values {
-  font-size: 0.62rem;
-  font-weight: 800;
-  color: #FFFFFF;
-}
-
-.golden-back-footer-secure .secure-chip {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-size: 0.55rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+.id-card-back-full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 16.5px;
 }
 
 
@@ -10268,15 +9946,15 @@ body.mobile-nav-open {
 
 .mem-page-container {
   display: grid;
-  grid-template-columns: 490px 1fr;
+  grid-template-columns: 390px 1fr;
   gap: 36px;
   align-items: flex-start;
-  max-width: 1280px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 991px) {
   .mem-page-container {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -10298,9 +9976,10 @@ body.mobile-nav-open {
 
 .mem-id-card-exact {
   width: 100%;
-  max-width: 490px;
-  aspect-ratio: 1024 / 682;
+  max-width: 350px;
   border-radius: 20px;
+  border: 3.5px solid #F59E0B;
+  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
   background: #FFFFFF;
   overflow: hidden;
 }
@@ -10906,6 +10585,7 @@ body.mobile-nav-open {
   border-top: 1px dashed #FECACA;
   margin-top: 4px;
 }
+
 .searchable-option.is-custom-hint:hover {
   background: #FEE2E2;
 }
@@ -14123,6 +13803,327 @@ body.mobile-nav-open {
   border-color: #C81016;
   color: #FFFFFF;
   box-shadow: 0 3px 10px rgba(200, 16, 22, 0.3);
+}
+
+.page-nav-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #64748B;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-nav-arrow:hover {
+  color: #C81016;
+  border-color: #C81016;
+}
+
+/* ==========================================================================
+   Upcoming Events Section (రాబోయే కార్యక్రమాలు)
+   ========================================================================== */
+.upcoming-events-wrap {
+  margin-top: 54px;
+}
+
+.upcoming-events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.event-card-item {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 3px 14px rgba(11, 25, 54, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.event-card-item:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 24px rgba(11, 25, 54, 0.08);
+}
+
+/* Event Top: Date Badge + Thumbnail */
+.event-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.event-date-badge {
+  background: #FFF1F2;
+  border: 1px solid #FFE4E6;
+  border-radius: 12px;
+  padding: 8px 10px;
+  text-align: center;
+  min-width: 62px;
+  flex-shrink: 0;
+}
+
+.event-date-day {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #DC2626;
+  line-height: 1;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.event-date-month {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #081124;
+  margin-top: 2px;
+}
+
+.event-date-year {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+.event-thumb-wrap {
+  flex-grow: 1;
+  height: 78px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #E2E8F0;
+}
+
+.event-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.event-card-item:hover .event-thumb-wrap img {
+  transform: scale(1.06);
+}
+
+.event-title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #081124;
+  margin-bottom: 8px;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.event-card-item:hover .event-title {
+  color: #C81016;
+}
+
+.event-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: #64748B;
+  margin-bottom: 14px;
+}
+
+.event-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-meta-line i {
+  color: #C81016;
+  font-size: 0.86rem;
+}
+
+/* Warm Gold Action Button: "వివరాలు చూడండి →" */
+.btn-event-action {
+  margin-top: auto;
+  width: 100%;
+  background: #FFB800;
+  color: #081124;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 184, 0, 0.3);
+}
+
+.btn-event-action:hover {
+  background: #F59E0B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 184, 0, 0.45);
+}
+
+/* ==========================================================================
+   Responsive Media Queries for News & Events
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .news-top-highlight-grid {
+    grid-template-columns: 380px 1fr;
+    gap: 20px;
+  }
+
+  .upcoming-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .news-top-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-breaking-card {
+    order: 1;
+  }
+
+  .news-compact-list {
+    order: 2;
+    position: static;
+    top: auto;
+  }
+
+  .latest-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .news-hero-banner,
+  .membership-hero-banner,
+  .issues-hero-banner {
+    min-height: 180px;
+    padding: 26px 0;
+    background-position: 80% center;
+  }
+
+  .news-banner-title,
+  .membership-banner-title,
+  .issues-banner-title {
+    font-size: 2.05rem;
+  }
+
+  .news-accent-stripe,
+  .membership-accent-stripe,
+  .issues-accent-stripe {
+    width: 140px;
+    height: 4px;
+    margin-top: 10px;
+  }
+
+  .featured-img-wrap {
+    height: 220px;
+  }
+
+  .latest-news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-controls-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-search-box {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Responsive Section Visibility Controls
+   1. Leadership Section ("ప్రజాసేవలో పార్టీ నాయకత్వం"):
+      Removed completely across ALL screen sizes (Mobile, Tablet, Desktop)
+   2. Listed Sections:
+      - "ప్రజాసేవ పార్టీ – 10 ప్రధాన ప్రజా అంశాలు"
+      - "🔥 తెలంగాణలో 70 శాతం స్పెషల్ రంగంలో రిజర్వేషన్లు ఇవ్వాలి"
+      - "రాబోయే కార్యక్రమాలు" & "తాజా వార్తలు"
+      - "ఫోటోలు గ్యాలరీ"
+      - "పార్టీసభ్యత్వం"
+      Hidden completely on Tablet (768px – 1023px) and Laptop/Desktop (>= 1024px)
+      without leaving any empty space (display: none !important).
+      Visible exactly as they are on Mobile screens (< 768px) only.
+   ========================================================================== */
+
+/* 1. Entire Leadership Section: Hidden on Mobile, Tablet, and Desktop */
+#leadership-team,
+.leadership-showcase-section {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* 2. Tablet (768px - 1023px) and Laptop/Desktop (>= 1024px): Completely hide specified sections */
+@media (min-width: 768px) {
+  /* “ప్రజాసేవ పార్టీ – 10 ప్రధాన ప్రజా అంశాలు” */
+  #public-issues,
+  .issues-section,
+
+  /* “🔥 తెలంగాణలో 70 శాతం స్పెషల్ రంగంలో రిజర్వేషన్లు ఇవ్వాలి” */
+  #campaign-banner,
+  .campaign-banner-section,
+
+  /* “రాబోయే కార్యక్రమాలు” & “తాజా వార్తలు” (Homepage News & Upcoming Events) */
+  #news-events,
+  .news-events-section,
+  #news-events #upcoming-events,
+  .news-events-section .news-main-column,
+  .news-events-section .events-main-column,
+
+  /* “ఫోటోలు గ్యాలరీ” */
+  #gallery,
+  .gallery-section,
+
+  /* “పార్టీసభ్యత్వం” */
+  #membership-cta,
+  .membership-master-section {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+border-color: #C81016;
+color: #FFFFFF;
+box-shadow: 0 3px 10px rgba(200, 16, 22, 0.3);
 }
 
 .page-nav-arrow {
