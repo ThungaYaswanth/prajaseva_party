@@ -10281,7 +10281,14 @@ body.mobile-nav-open {
   font-weight: 500;
 }
 
+.mem-input.is-invalid,
+.mem-photo-box.is-invalid {
+  border-color: #DC2626 !important;
+  background-color: #FEF2F2 !important;
+}
+
 .mem-input.is-invalid~.mem-error-text,
+.mem-photo-box.is-invalid~.mem-error-text,
 .searchable-select.is-invalid~.mem-error-text,
 .mem-checkbox-grid.is-invalid~.mem-error-text,
 .mem-consent-wrap.is-invalid~.mem-error-text {

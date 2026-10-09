@@ -561,13 +561,13 @@
                   <span class="req-star">*</span>
                 </label>
                 <div class="mem-photo-box" id="memPhotoDropzone" role="button" tabindex="0">
-                  <input type="file" id="memPhotoInput" accept="image/png, image/jpeg, image/jpg"
+                  <input type="file" id="memPhotoInput" accept="image/*"
                     style="display: none;">
                   <div class="mem-photo-icon-wrap">
                     <i class="bi bi-camera-fill"></i>
                   </div>
                   <span class="mem-photo-text" data-i18n="memUploadPhotoText">ఫోటో అప్‌లోడ్ చేయండి</span>
-                  <small class="mem-photo-sub" data-i18n="memUploadPhotoSub">(JPG, PNG, Max 2MB)</small>
+                  <small class="mem-photo-sub" data-i18n="memUploadPhotoSub">(JPG, PNG, WEBP, GIF, మొదలైనవి)</small>
                   <div class="mem-photo-preview" id="memPhotoPreview">
                     <img src="" alt="సభ్యుడి ఫోటో" id="memPhotoPreviewImg">
                     <button type="button" class="mem-photo-remove-btn" id="memPhotoRemoveBtn"
@@ -582,7 +582,6 @@
                 <label class="mem-form-label">
                   <i class="bi bi-credit-card-2-front-fill"></i>
                   <span data-i18n="memLblPayment">చెల్లింపు పద్ధతి</span>
-                  <span class="req-star">*</span>
                 </label>
                 <div class="mem-method-grid" id="memPaymentMethodGrid">
                   <div class="mem-method-card active" data-method="upi" tabindex="0" role="button">
@@ -659,7 +658,6 @@
                 <label class="mem-form-label">
                   <i class="bi bi-people-fill"></i>
                   <span data-i18n="memLblInterests">మీ ఆసక్తి / పాత్ర</span>
-                  <span class="req-star">*</span>
                 </label>
                 <div class="mem-checkbox-grid" id="rolesCheckboxGrid">
                   <label class="mem-check-item">
@@ -687,7 +685,6 @@
                     <span data-i18n="memRoleOther">ఇతర</span>
                   </label>
                 </div>
-                <div class="mem-error-text" id="errRoles">దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.</div>
               </div>
 
               <!-- Row 8: Message / Suggestions (Full width field) -->
@@ -703,13 +700,11 @@
 
               <!-- Row 9: Consent Checkbox (Full width field) -->
               <div class="mem-consent-wrap full-width-field" id="consentWrap">
-                <input type="checkbox" id="memConsentCheck" required>
+                <input type="checkbox" id="memConsentCheck">
                 <label for="memConsentCheck" data-i18n="memConsentText">
                   నేను ఇచ్చిన వివరాలు సరైనవని నిర్ధారిస్తున్నాను.
                 </label>
               </div>
-              <div class="mem-error-text full-width-field" id="errConsent"
-                style="margin-top: -12px; margin-bottom: 12px;">దయచేసి నియమాలను అంగీకరించండి.</div>
 
               <!-- Row 10: Submit Button (Full width field) -->
               <button type="submit" class="btn-mem-submit full-width-field" id="btnSubmitMembership">
@@ -1523,55 +1518,221 @@
         });
       }
 
-      // Mobile Number: Numbers Only Restriction (strictly digits, max 10)
+      // Name Field: Real-time validation
+      const nameInput = document.getElementById('memFullName');
+      nameInput.addEventListener('input', function () {
+        if (this.value.trim().length > 0) {
+          clearError('memFullName', 'errFullName');
+        }
+      });
+      nameInput.addEventListener('blur', function () {
+        if (this.value.length > 0 && this.value.trim().length === 0) {
+          showError('memFullName', 'errFullName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.');
+        }
+      });
+
+      // Mobile Number: Numbers Only Restriction (strictly digits, max 10, valid Indian prefix)
       const mobileInput = document.getElementById('memMobile');
       mobileInput.addEventListener('input', function () {
         this.value = this.value.replace(/[^0-9]/g, '');
         if (this.value.length > 10) {
           this.value = this.value.slice(0, 10);
         }
-        if (this.value.length === 10) {
+        if (this.value.length === 10 && /^[6-9]\d{9}$/.test(this.value)) {
           clearError('memMobile', 'errMobile');
         }
       });
+      mobileInput.addEventListener('blur', function () {
+        const val = this.value.trim();
+        if (val.length > 0 && (val.length !== 10 || !/^[6-9]\d{9}$/.test(val))) {
+          showError('memMobile', 'errMobile', 'దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి.');
+        }
+      });
 
-      // Photo Upload Handling
+      // Photo Upload Handling & Genuine Image Type Detection
       const photoDropzone = document.getElementById('memPhotoDropzone');
       const photoInput = document.getElementById('memPhotoInput');
       const photoPreview = document.getElementById('memPhotoPreview');
       const photoPreviewImg = document.getElementById('memPhotoPreviewImg');
       const photoRemoveBtn = document.getElementById('memPhotoRemoveBtn');
 
+      function validateAndProcessPhoto(file) {
+        if (!file) {
+          uploadedPhotoData = null;
+          photoPreview.classList.remove('has-image');
+          photoPreviewImg.src = '';
+          showError('memPhotoDropzone', 'errPhoto', 'దయచేసి మీ ఫోటోను అప్‌లోడ్ చేయండి.');
+          return;
+        }
+
+        // Empty file check
+        if (file.size === 0) {
+          uploadedPhotoData = null;
+          photoPreview.classList.remove('has-image');
+          photoPreviewImg.src = '';
+          showError('memPhotoDropzone', 'errPhoto', 'ఎంచుకున్న ఫైల్ ఖాళీగా ఉంది. దయచేసి సరైన ఫోటోను ఎంచుకోండి.');
+          return;
+        }
+
+        // Size check (up to 10MB)
+        if (file.size > 10 * 1024 * 1024) {
+          uploadedPhotoData = null;
+          photoPreview.classList.remove('has-image');
+          photoPreviewImg.src = '';
+          showError('memPhotoDropzone', 'errPhoto', 'ఫోటో సైజు 10MB కంటే తక్కువగా ఉండాలి.');
+          return;
+        }
+
+        // Detect actual image type by inspecting header bytes (magic numbers)
+        // This ensures arbitrary non-image files with renamed extensions are safely rejected
+        const headerSlice = file.slice(0, 16);
+        const headerReader = new FileReader();
+
+        headerReader.onload = function (e) {
+          const bytes = new Uint8Array(e.target.result);
+          let isLikelyImage = false;
+
+          // JPEG / JPG (FF D8 FF)
+          if (bytes[0] === 0xFF && bytes[1] === 0xD8 && bytes[2] === 0xFF) {
+            isLikelyImage = true;
+          }
+          // PNG (89 50 4E 47 0D 0A 1A 0A)
+          else if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4E && bytes[3] === 0x47) {
+            isLikelyImage = true;
+          }
+          // GIF (47 49 46 38 = GIF8)
+          else if (bytes[0] === 0x47 && bytes[1] === 0x49 && bytes[2] === 0x46 && bytes[3] === 0x38) {
+            isLikelyImage = true;
+          }
+          // WebP (RIFF....WEBP: 52 49 46 46 ... 57 45 42 50)
+          else if (bytes[0] === 0x52 && bytes[1] === 0x49 && bytes[2] === 0x46 && bytes[3] === 0x46 &&
+                   bytes[8] === 0x57 && bytes[9] === 0x45 && bytes[10] === 0x42 && bytes[11] === 0x50) {
+            isLikelyImage = true;
+          }
+          // BMP (42 4D = BM)
+          else if (bytes[0] === 0x42 && bytes[1] === 0x4D) {
+            isLikelyImage = true;
+          }
+          // AVIF / HEIC (bytes 4-7: 66 74 79 70 = ftyp)
+          else if (bytes[4] === 0x66 && bytes[5] === 0x74 && bytes[6] === 0x79 && bytes[7] === 0x70) {
+            isLikelyImage = true;
+          }
+          // TIFF (49 49 2A 00 or 4D 4D 00 2A)
+          else if ((bytes[0] === 0x49 && bytes[1] === 0x49 && bytes[2] === 0x2A && bytes[3] === 0x00) ||
+                   (bytes[0] === 0x4D && bytes[1] === 0x4D && bytes[2] === 0x00 && bytes[3] === 0x2A)) {
+            isLikelyImage = true;
+          }
+          // SVG or vector image format
+          else if (file.type === 'image/svg+xml' || (file.name && file.name.toLowerCase().endsWith('.svg'))) {
+            isLikelyImage = true;
+          }
+          // Fallback to browser-detected MIME type starting with image/
+          else if (file.type && file.type.startsWith('image/')) {
+            isLikelyImage = true;
+          }
+
+          if (!isLikelyImage) {
+            uploadedPhotoData = null;
+            photoPreview.classList.remove('has-image');
+            photoPreviewImg.src = '';
+            showError('memPhotoDropzone', 'errPhoto', 'దయచేసి సరైన ఫోటోను అప్‌లోడ్ చేయండి. ఎంచుకున్న ఫైల్ మద్దతు ఉన్న చిత్రం కాదు.');
+            return;
+          }
+
+          // Verify actual browser decodability with new Image() to ensure file is not corrupted and processable
+          const fullReader = new FileReader();
+          fullReader.onload = function (evt) {
+            const dataUrl = evt.target.result;
+            const testImg = new Image();
+            testImg.onload = function () {
+              if (testImg.naturalWidth > 0 && testImg.naturalHeight > 0) {
+                // Success: Valid, fully processable image
+                uploadedPhotoData = dataUrl;
+                photoPreviewImg.src = dataUrl;
+                photoPreview.classList.add('has-image');
+                clearError('memPhotoDropzone', 'errPhoto');
+              } else {
+                uploadedPhotoData = null;
+                photoPreview.classList.remove('has-image');
+                photoPreviewImg.src = '';
+                showError('memPhotoDropzone', 'errPhoto', 'చిత్రాన్ని ప్రాసెస్ చేయడం సాధ్యం కాలేదు. దయచేసి మరొక ఫోటోను ఎంచుకోండి.');
+              }
+            };
+            testImg.onerror = function () {
+              uploadedPhotoData = null;
+              photoPreview.classList.remove('has-image');
+              photoPreviewImg.src = '';
+              showError('memPhotoDropzone', 'errPhoto', 'ఈ ఫైల్ చెల్లుబాటు అయ్యే చిత్రం కాదు లేదా పాడైంది. దయచేసి సరైన ఫోటోను అప్‌లోడ్ చేయండి.');
+            };
+            testImg.src = dataUrl;
+          };
+          fullReader.onerror = function () {
+            uploadedPhotoData = null;
+            photoPreview.classList.remove('has-image');
+            photoPreviewImg.src = '';
+            showError('memPhotoDropzone', 'errPhoto', 'ఫైల్‌ను చదవడంలో లోపం సంభవించింది.');
+          };
+          fullReader.readAsDataURL(file);
+        };
+
+        headerReader.onerror = function () {
+          uploadedPhotoData = null;
+          photoPreview.classList.remove('has-image');
+          photoPreviewImg.src = '';
+          showError('memPhotoDropzone', 'errPhoto', 'ఫైల్‌ను చదవడంలో లోపం సంభవించింది.');
+        };
+        headerReader.readAsArrayBuffer(headerSlice);
+      }
+
+      // Allow clicking to select or replace photo
       photoDropzone.addEventListener('click', (e) => {
-        if (e.target !== photoRemoveBtn) {
+        if (e.target !== photoRemoveBtn && !photoRemoveBtn.contains(e.target)) {
+          photoInput.value = ''; // Reset input to allow selecting same or replacement file
           photoInput.click();
         }
       });
 
-      photoInput.addEventListener('change', function () {
-        if (this.files && this.files[0]) {
-          const file = this.files[0];
-          if (file.size > 2 * 1024 * 1024) {
-            showError('memPhotoDropzone', 'errPhoto', 'ఫోటో సైజు 2MB కంటే తక్కువగా ఉండాలి.');
-            return;
-          }
-          clearError('memPhotoDropzone', 'errPhoto');
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            uploadedPhotoData = e.target.result;
-            photoPreviewImg.src = uploadedPhotoData;
-            photoPreview.classList.add('has-image');
-          };
-          reader.readAsDataURL(file);
+      // Keyboard accessibility for photo upload
+      photoDropzone.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && e.target !== photoRemoveBtn) {
+          e.preventDefault();
+          photoInput.value = '';
+          photoInput.click();
         }
       });
 
+      // Drag and drop photo handling
+      photoDropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        photoDropzone.classList.add('drag-over');
+      });
+      photoDropzone.addEventListener('dragleave', (e) => {
+        e.preventDefault();
+        photoDropzone.classList.remove('drag-over');
+      });
+      photoDropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        photoDropzone.classList.remove('drag-over');
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+          validateAndProcessPhoto(e.dataTransfer.files[0]);
+        }
+      });
+
+      // Photo file input change event (handles replacement and upload)
+      photoInput.addEventListener('change', function () {
+        if (this.files && this.files[0]) {
+          validateAndProcessPhoto(this.files[0]);
+        }
+      });
+
+      // Remove photo button: clears selected photo so user can choose another
       photoRemoveBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         photoInput.value = '';
         uploadedPhotoData = null;
         photoPreview.classList.remove('has-image');
         photoPreviewImg.src = '';
+        clearError('memPhotoDropzone', 'errPhoto');
       });
 
       // Payment Method Tabs
@@ -1618,15 +1779,7 @@
         if (errEl) errEl.style.display = 'none';
       }
 
-      document.getElementById('memFullName').addEventListener('input', function () {
-        if (this.value.trim().length > 1) clearError('memFullName', 'errFullName');
-      });
-
-      document.getElementById('memConsentCheck').addEventListener('change', function () {
-        if (this.checked) clearError('consentWrap', 'errConsent');
-      });
-
-      // Form Submission
+      // Form Submission: Validates ONLY Name, Mobile Number, and Photo
       const form = document.getElementById('dedicatedMembershipForm');
       const formView = document.getElementById('membershipFormView');
       const successView = document.getElementById('membershipSuccessView');
@@ -1635,44 +1788,37 @@
         e.preventDefault();
         let isValid = true;
 
-        // 1. Full Name
-        const nameVal = document.getElementById('memFullName').value.trim();
-        if (!nameVal || nameVal.length < 2) {
+        // 1. Full Name (Required, not empty, not whitespace-only)
+        const nameVal = (nameInput?.value || '').trim();
+        if (!nameVal || nameVal.length === 0) {
           showError('memFullName', 'errFullName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.');
           isValid = false;
         } else {
           clearError('memFullName', 'errFullName');
         }
 
-        // 2. Mobile
-        const mobileVal = mobileInput.value.trim();
-        if (mobileVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobileVal)) {
+        // 2. Mobile Number (Required, strictly 10-digit valid Indian mobile number)
+        const mobileVal = (mobileInput?.value || '').trim();
+        if (!mobileVal || mobileVal.length === 0) {
+          showError('memMobile', 'errMobile', 'దయచేసి మీ మొబైల్ నంబరును నమోదు చేయండి.');
+          isValid = false;
+        } else if (mobileVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobileVal)) {
           showError('memMobile', 'errMobile', 'దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి.');
           isValid = false;
         } else {
           clearError('memMobile', 'errMobile');
         }
 
-        // 3. Roles Checkbox
-        const checkedRoles = Array.from(document.querySelectorAll('input[name="interestRole"]:checked')).map(cb => cb.value);
-        if (checkedRoles.length === 0) {
-          showError('rolesCheckboxGrid', 'errRoles', 'దయచేసి కనీసం ఒక ఆసక్తిని ఎంపిక చేయండి.');
+        // 3. Photo Upload (Required, verified genuine supported image format)
+        if (!uploadedPhotoData) {
+          showError('memPhotoDropzone', 'errPhoto', 'దయచేసి మీ ఫోటోను అప్‌లోడ్ చేయండి.');
           isValid = false;
         } else {
-          clearError('rolesCheckboxGrid', 'errRoles');
+          clearError('memPhotoDropzone', 'errPhoto');
         }
 
-        // 4. Consent
-        const consentChecked = document.getElementById('memConsentCheck').checked;
-        if (!consentChecked) {
-          showError('consentWrap', 'errConsent', 'దయచేసి వివరాల ధృవీకరణ నిబంధనను అంగీకరించండి.');
-          isValid = false;
-        } else {
-          clearError('consentWrap', 'errConsent');
-        }
-
-        // (No validation, required-field restrictions, or submission-blocking conditions on locations)
-
+        // Prevent submission ONLY when Name, Mobile Number, or Photo fails validation
+        // Do NOT block on District, Constituency, Mandal, Village, Roles, or Consent
         if (!isValid) {
           const firstErr = document.querySelector('.is-invalid');
           if (firstErr) {
@@ -1680,6 +1826,9 @@
           }
           return;
         }
+
+        // Roles selection (optional, default to 'పార్టీ సభ్యత్వం' if unselected)
+        const checkedRoles = Array.from(document.querySelectorAll('input[name="interestRole"]:checked')).map(cb => cb.value);
 
         // Location values from all four fields (supports typed custom entries or dropdown selections)
         const distVal = (districtInput?.value || '').trim();
