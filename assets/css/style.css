@@ -6075,18 +6075,25 @@ body.mobile-nav-open {
    Smooth 3D Flip Card Animation System (Professional Front & Back 180° Flip)
    ========================================================================== */
 
+/* ==========================================================================
+   Smooth 3D Flip Card Animation System (Professional Front & Back 180° Flip)
+   Landscape ID Card System (1024 x 682, ~1.50 Aspect Ratio)
+   ========================================================================== */
+
 /* 1. 3D Scene Wrapper with Perspective */
 .id-card-3d-scene {
   perspective: 1400px;
   -webkit-perspective: 1400px;
-  width: 355px;
+  width: 490px;
   max-width: 100%;
+  aspect-ratio: 1024 / 682;
   margin: 0 auto;
   position: relative;
   display: block;
   user-select: none;
   cursor: pointer;
   outline: none;
+  border-radius: 20px;
 }
 
 /* 2. Rotating 3D Inner Wrapper */
@@ -6098,6 +6105,7 @@ body.mobile-nav-open {
   -webkit-transform-style: preserve-3d;
   transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1);
   will-change: transform;
+  border-radius: 20px;
 }
 
 /* 3. Smooth Horizontal 180° Flip on Hover or Active Touch */
@@ -6111,12 +6119,16 @@ body.mobile-nav-open {
 /* 4. Perfectly Aligned Card Faces */
 .id-card-face {
   width: 100%;
-  border-radius: 18px;
+  height: 100%;
+  border-radius: 20px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   box-sizing: border-box;
+  overflow: hidden;
+  border: 3.5px solid #D4AF37;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22), 0 3px 10px rgba(212, 175, 55, 0.25);
 }
 
 .id-card-face-front {
@@ -6124,6 +6136,7 @@ body.mobile-nav-open {
   z-index: 2;
   transform: rotateY(0deg) translateZ(1px);
   -webkit-transform: rotateY(0deg) translateZ(1px);
+  background: #111827;
 }
 
 .id-card-face-back {
@@ -6135,40 +6148,349 @@ body.mobile-nav-open {
   z-index: 1;
   transform: rotateY(180deg) translateZ(1px);
   -webkit-transform: rotateY(180deg) translateZ(1px);
-  border-radius: 18px;
-  overflow: hidden;
-  background: #FFFFFF;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  background: #FFFDF7;
 }
 
-/* Ensure Front & Back Card Bodies fill Face */
-.id-card-face .card-template-exact {
-  width: 100%;
-  margin: 0;
-}
-
-/* Back Side Card Body */
-.id-card-back-body {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #FFFFFF;
-  border-radius: 18px;
-  border: 1.5px solid #E2E8F0;
-  overflow: hidden;
+/* Front Card Containers */
+.golden-id-card-front {
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.id-card-back-full-img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  border-radius: 16.5px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.golden-card-base-img,
+.master-card-front-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 16.5px;
+}
+
+/* Dynamic Overlays for Member Registered Card */
+.golden-card-dynamic-photo-frame {
+  position: absolute;
+  left: 4.2%;
+  top: 33.2%;
+  width: 20.8%;
+  height: 39.4%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #D4AF37;
+  background: #0074D9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+}
+
+.golden-card-dynamic-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.golden-card-field-val {
+  position: absolute;
+  left: 43.5%;
+  width: 20%;
+  height: 5.2%;
+  display: flex;
+  align-items: center;
+  background: #FAF7F0;
+  color: #DC2626;
+  font-weight: 900;
+  font-size: clamp(0.68rem, 1.4vw, 0.84rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+  line-height: 1;
+  z-index: 4;
+}
+
+.field-val-name { top: 41.2%; }
+.field-val-role { top: 46.5%; }
+.field-val-id { top: 51.7%; }
+.field-val-blood { top: 57.0%; }
+.field-val-mobile { top: 62.3%; }
+.field-val-district { top: 67.5%; }
+
+.golden-card-badge-id-val {
+  position: absolute;
+  left: 80.0%;
+  width: 14.2%;
+  top: 89.2%;
+  height: 6.2%;
+  background: #F3C34F;
+  color: #1A1A1A;
+  font-weight: 900;
+  font-size: clamp(0.65rem, 1.4vw, 0.80rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 2px;
+  z-index: 4;
+}
+
+/* ==========================================================================
+   Matching Luxury Landscape Back Side of ID Card
+   ========================================================================== */
+.golden-id-card-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #FFFDF9;
+  border-radius: 16.5px;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+/* 1. Header Banner */
+.golden-back-header {
+  background: linear-gradient(180deg, #A80004 0%, #870003 55%, #6E0002 100%);
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.golden-back-emblem-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.golden-back-emblem-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.golden-back-title-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+  flex: 1;
+}
+
+.golden-back-title-te {
+  font-size: 1.12rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.golden-back-slogan-te {
+  font-size: 0.60rem;
+  font-weight: 700;
+  color: #FFD54F;
+  margin-top: 1px;
+}
+
+.golden-back-badge-official {
+  background: linear-gradient(135deg, #FFE082, #FFB800);
+  color: #7A0000;
+  font-size: 0.62rem;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid #FFF;
+  flex-shrink: 0;
+}
+
+/* 2. Gold Ribbon */
+.golden-back-gold-ribbon {
+  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
+  color: #7A0000;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 2px 0;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* 3. Main Grid */
+.golden-back-body-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 10px;
+  padding: 10px 14px 6px 14px;
+  align-items: stretch;
+  background: radial-gradient(circle at 80% 50%, rgba(255, 201, 40, 0.08) 0%, transparent 60%), #FFFDF9;
+  min-height: 0;
+}
+
+.golden-back-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.golden-back-pill-heading {
+  background: #A80004;
+  color: #FFFFFF;
+  font-size: 0.70rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+.golden-back-resp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+}
+
+.golden-back-resp-list li {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.25;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.golden-back-resp-list .resp-bullet {
+  color: #DC2626;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.golden-back-motto-box {
+  background: #FEF2F2;
+  border-left: 3px solid #DC2626;
+  padding: 3px 8px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #991B1B;
+  border-radius: 0 4px 4px 0;
+  margin-top: 4px;
+}
+
+.golden-back-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.golden-back-info-card {
+  background: #FFFFFF;
+  border: 1px solid #FDE68A;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.golden-back-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.60rem;
+  line-height: 1.25;
+  color: #334155;
+}
+
+.golden-back-info-row .info-icon {
+  font-size: 0.70rem;
+  flex-shrink: 0;
+}
+
+.golden-back-info-row strong {
+  color: #881337;
+  font-weight: 800;
+}
+
+.golden-back-notice-text {
+  font-size: 0.54rem;
+  color: #64748B;
+  line-height: 1.2;
+  margin-top: 3px;
+  text-align: justify;
+}
+
+/* 4. Bottom Footer */
+.golden-back-footer {
+  background: linear-gradient(180deg, #870003 0%, #6E0002 100%);
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  border-top: 1.5px solid #D4AF37;
+  flex-shrink: 0;
+}
+
+.golden-back-footer-pres {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.golden-back-footer-pres .pres-name {
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #FFE082;
+}
+
+.golden-back-footer-pres .pres-title {
+  font-size: 0.52rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.golden-back-footer-values {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.golden-back-footer-secure .secure-chip {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 
@@ -9946,15 +10268,15 @@ body.mobile-nav-open {
 
 .mem-page-container {
   display: grid;
-  grid-template-columns: 390px 1fr;
+  grid-template-columns: 490px 1fr;
   gap: 36px;
   align-items: flex-start;
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1080px) {
   .mem-page-container {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -9976,10 +10298,9 @@ body.mobile-nav-open {
 
 .mem-id-card-exact {
   width: 100%;
-  max-width: 350px;
+  max-width: 490px;
+  aspect-ratio: 1024 / 682;
   border-radius: 20px;
-  border: 3.5px solid #F59E0B;
-  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
   background: #FFFFFF;
   overflow: hidden;
 }
