@@ -180,9 +180,10 @@ const translations = {
 
     aboutCtaBadge: "కలిసి నడుద్దాం",
     aboutCtaTitle: "ప్రజాసేవలో మీరూ భాగస్వాములు కండి",
-    aboutCtaSubtitle: "ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి. తెలంగాణ ప్రగతి, ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.",
+    aboutCtaSubtitle: "ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి. తెలంగాణ ప్రజల, ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.",
     aboutCtaBtnJoin: "సభ్యత్వం పొందండి",
     aboutCtaBtnDonate: "విరాళం ఇవ్వండి",
+    aboutCtaQuote: "ప్రజల కోసం... ప్రజలతో... ప్రజల ఆధారంగా...",
     aboutCtaBtnContact: "మమ్మల్ని సంప్రదించండి",
     btnBackHome: "ముఖ్య పేజీకి వెళ్లండి",
 
@@ -826,6 +827,7 @@ const translations = {
     aboutCtaSubtitle: "Join hands in the collective pursuit of people's welfare, equality, and prosperity across Telangana.",
     aboutCtaBtnJoin: "Join Membership",
     aboutCtaBtnDonate: "Make a Donation",
+    aboutCtaQuote: "For the people... with the people... by the people...",
     aboutCtaBtnContact: "Contact Us",
     btnBackHome: "Back to Home Page",
 
