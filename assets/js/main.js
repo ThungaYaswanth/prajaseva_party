@@ -368,6 +368,9 @@ function applyLanguage(lang) {
   if (typeof updateMapTooltipLanguage === 'function') {
     updateMapTooltipLanguage(lang);
   }
+  if (typeof updateMapPopupLanguage === 'function') {
+    updateMapPopupLanguage(lang);
+  }
 
   // 6. Update issues page language if present
   if (typeof updateIssuesPageLanguage === 'function') {
@@ -1149,7 +1152,8 @@ function updateMapTooltipLanguage(lang) {
 /**
  * Interactive Vector India Map
  * Shows state name for all states on hover in current language
- * For Telangana: Shows Leader Card Popup
+ * For Party States (Telangana, Andhra Pradesh, Karnataka, Maharashtra):
+ * Displays rich interactive State Leader Popup Card with leader info, districts, and party details
  */
 function initInteractiveMap() {
   const mapStage = document.getElementById('indiaMapStage');
@@ -1157,40 +1161,164 @@ function initInteractiveMap() {
 
   const tooltip = document.getElementById('mapInteractiveTooltip');
   const tooltipTitle = document.getElementById('mapTooltipTitle');
-  const popup = document.getElementById('telanganaLeaderPopup');
+  const popup = document.getElementById('telanganaLeaderPopup') || document.querySelector('.state-leader-popup');
   const closePopupBtn = document.getElementById('closeTelanganaPopup');
   const statePaths = document.querySelectorAll('.india-map-stage .map-state-path');
-  const tgElement = document.getElementById('INTG') || document.querySelector('.active-telangana-zone');
+
+  const partyStatesData = {
+    INTG: {
+      id: 'INTG',
+      name: { te: 'తెలంగాణ', en: 'Telangana' },
+      districtsBadge: { te: '33 జిల్లాలు - ప్రజా సేవ', en: '33 Districts - Praja Seva' },
+      leaderName: { te: 'తల్లారం నర్సింలు', en: 'Thallaram Narsimlu' },
+      leaderRole: { te: 'పార్టీ అధ్యక్షుడు, తెలంగాణ', en: 'Party President, Telangana' },
+      avatar: 'assets/images/passport.jpg',
+      districts: [
+        { text: { te: 'హైదరాబాద్ (కేంద్రం)', en: 'Hyderabad (HQ)' }, isHq: true },
+        { text: { te: 'వరంగల్', en: 'Warangal' } },
+        { text: { te: 'కరీంనగర్', en: 'Karimnagar' } },
+        { text: { te: 'నిజామాబాద్', en: 'Nizamabad' } },
+        { text: { te: 'ఖమ్మం', en: 'Khammam' } },
+        { text: { te: 'నల్గొండ', en: 'Nalgonda' } },
+        { text: { te: '+27 జిల్లాలు', en: '+27 Districts' }, isMore: true }
+      ]
+    },
+    INAP: {
+      id: 'INAP',
+      name: { te: 'ఆంధ్రప్రదేశ్', en: 'Andhra Pradesh' },
+      districtsBadge: { te: '26 జిల్లాలు - ప్రజా సేవ', en: '26 Districts - Praja Seva' },
+      leaderName: { te: 'శ్రీ నాయుడు రామచంద్రరావు', en: 'Sri Naidu Ramachandra Rao' },
+      leaderRole: { te: 'పార్టీ సమన్వయకర్త, ఆంధ్రప్రదేశ్', en: 'Party Coordinator, Andhra Pradesh' },
+      avatar: 'assets/images/partymember2.webp',
+      districts: [
+        { text: { te: 'విజయవాడ / అమరావతి (కేంద్రం)', en: 'Vijayawada / Amaravati (HQ)' }, isHq: true },
+        { text: { te: 'విశాఖపట్నం', en: 'Visakhapatnam' } },
+        { text: { te: 'తిరుపతి', en: 'Tirupati' } },
+        { text: { te: 'గుంటూరు', en: 'Guntur' } },
+        { text: { te: 'కర్నూలు', en: 'Kurnool' } },
+        { text: { te: 'కాకినాడ', en: 'Kakinada' } },
+        { text: { te: '+20 జిల్లాలు', en: '+20 Districts' }, isMore: true }
+      ]
+    },
+    INKA: {
+      id: 'INKA',
+      name: { te: 'కర్ణాటక', en: 'Karnataka' },
+      districtsBadge: { te: '31 జిల్లాలు - ప్రజా సేవ', en: '31 Districts - Praja Seva' },
+      leaderName: { te: 'శ్రీ పి. సాయి కిరణ్', en: 'Sri P. Sai Kiran' },
+      leaderRole: { te: 'పార్టీ సమన్వయకర్త, కర్ణాటక', en: 'Party Coordinator, Karnataka' },
+      avatar: 'assets/images/team/sai-kiran.png',
+      districts: [
+        { text: { te: 'బెంగళూరు (కేంద్రం)', en: 'Bengaluru (HQ)' }, isHq: true },
+        { text: { te: 'మైసూర్', en: 'Mysuru' } },
+        { text: { te: 'హుబ్బళ్లి', en: 'Hubballi' } },
+        { text: { te: 'మంగళూరు', en: 'Mangaluru' } },
+        { text: { te: 'బళ్లారి', en: 'Ballari' } },
+        { text: { te: 'బెళగావి', en: 'Belagavi' } },
+        { text: { te: '+25 జిల్లాలు', en: '+25 Districts' }, isMore: true }
+      ]
+    },
+    INMH: {
+      id: 'INMH',
+      name: { te: 'మహారాష్ట్ర', en: 'Maharashtra' },
+      districtsBadge: { te: '36 జిల్లాలు - ప్రజా సేవ', en: '36 Districts - Praja Seva' },
+      leaderName: { te: 'శ్రీ కె. అనిల్ కుమార్', en: 'Sri K. Anil Kumar' },
+      leaderRole: { te: 'పార్టీ సమన్వయకర్త, మహారాష్ట్ర', en: 'Party Coordinator, Maharashtra' },
+      avatar: 'assets/images/team/anil-kumar.png',
+      districts: [
+        { text: { te: 'ముంబై (కేంద్రం)', en: 'Mumbai (HQ)' }, isHq: true },
+        { text: { te: 'పూణే', en: 'Pune' } },
+        { text: { te: 'నాగ్పూర్', en: 'Nagpur' } },
+        { text: { te: 'నాసిక్', en: 'Nashik' } },
+        { text: { te: 'ఛత్రపతి శంభాజీనగర్', en: 'Chhatrapati Sambhajinagar' } },
+        { text: { te: 'షోలాపూర్', en: 'Solapur' } },
+        { text: { te: '+30 జిల్లాలు', en: '+30 Districts' }, isMore: true }
+      ]
+    }
+  };
 
   let popupTimer = null;
+  let activePartyStateKey = null;
 
-  function openTelanganaPopup() {
+  function renderStatePopup(stateKey) {
+    const data = partyStatesData[stateKey];
+    if (!data || !popup) return;
+    activePartyStateKey = stateKey;
+
+    const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'te';
+
+    const titleEl = document.getElementById('popupStateTitle');
+    const badgeEl = document.getElementById('popupStateDistricts');
+    const avatarEl = document.getElementById('popupAvatarImg');
+    const leaderNameEl = document.getElementById('popupLeaderName');
+    const leaderRoleEl = document.getElementById('popupLeaderRole');
+    const distGridEl = document.getElementById('popupDistrictsGrid');
+
+    if (titleEl) titleEl.textContent = data.name[lang] || data.name.te;
+    if (badgeEl) badgeEl.textContent = data.districtsBadge[lang] || data.districtsBadge.te;
+    if (avatarEl) {
+      avatarEl.src = data.avatar;
+      avatarEl.alt = data.leaderName[lang] || data.leaderName.te;
+    }
+    if (leaderNameEl) leaderNameEl.textContent = data.leaderName[lang] || data.leaderName.te;
+    if (leaderRoleEl) leaderRoleEl.textContent = data.leaderRole[lang] || data.leaderRole.te;
+
+    if (distGridEl) {
+      distGridEl.innerHTML = '';
+      data.districts.forEach((dist) => {
+        const span = document.createElement('span');
+        span.className = 'dist-pill' + (dist.isHq ? ' dist-hq' : '') + (dist.isMore ? ' dist-more' : '');
+        span.textContent = dist.text[lang] || dist.text.te;
+        distGridEl.appendChild(span);
+      });
+    }
+  }
+
+  function openStatePopup(stateKey, pathEl) {
     if (popupTimer) clearTimeout(popupTimer);
     currentlyHoveredMapPath = null;
     if (tooltip) tooltip.classList.remove('visible');
+
+    // Highlight hovered party state and un-highlight others
+    document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+    if (pathEl) pathEl.classList.add('is-active-state');
+
+    renderStatePopup(stateKey);
     if (popup) popup.classList.add('active');
   }
 
-  function closeTelanganaPopup() {
+  function closeStatePopup() {
     popupTimer = setTimeout(() => {
       if (popup) popup.classList.remove('active');
+      document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+      activePartyStateKey = null;
     }, 280);
   }
 
-  statePaths.forEach((path) => {
-    const isTelangana = path.id === 'INTG' || path.classList.contains('active-telangana-zone') || path.classList.contains('telangana-highlight-path');
+  // Hook into language changes to update popup dynamically if it's currently open
+  window.updateMapPopupLanguage = function(lang) {
+    if (popup && popup.classList.contains('active') && activePartyStateKey) {
+      renderStatePopup(activePartyStateKey);
+    }
+  };
 
-    if (isTelangana) {
-      path.addEventListener('mouseenter', openTelanganaPopup);
-      path.addEventListener('mouseleave', closeTelanganaPopup);
+  statePaths.forEach((path) => {
+    const stateId = path.id;
+    const isPartyState = Boolean(partyStatesData[stateId]);
+
+    if (isPartyState) {
+      path.classList.add('active-party-state');
+      path.addEventListener('mouseenter', () => openStatePopup(stateId, path));
+      path.addEventListener('mouseleave', closeStatePopup);
       path.addEventListener('click', (e) => {
         e.stopPropagation();
         if (tooltip) tooltip.classList.remove('visible');
         if (popup) {
-          if (popup.classList.contains('active')) {
+          if (popup.classList.contains('active') && activePartyStateKey === stateId) {
             popup.classList.remove('active');
+            path.classList.remove('is-active-state');
+            activePartyStateKey = null;
           } else {
-            openTelanganaPopup();
+            openStatePopup(stateId, path);
           }
         }
       });
@@ -1228,7 +1356,7 @@ function initInteractiveMap() {
     popup.addEventListener('mouseenter', () => {
       if (popupTimer) clearTimeout(popupTimer);
     });
-    popup.addEventListener('mouseleave', closeTelanganaPopup);
+    popup.addEventListener('mouseleave', closeStatePopup);
   }
 
   // Close button
@@ -1236,14 +1364,19 @@ function initInteractiveMap() {
     closePopupBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       if (popup) popup.classList.remove('active');
+      document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+      activePartyStateKey = null;
     });
   }
 
   // Dismiss popup on outside click
   document.addEventListener('click', (e) => {
     if (popup && popup.classList.contains('active')) {
-      if (!popup.contains(e.target) && (!tgElement || !tgElement.contains(e.target))) {
+      const isClickedOnPartyState = e.target.closest && e.target.closest('.active-party-state');
+      if (!popup.contains(e.target) && !isClickedOnPartyState) {
         popup.classList.remove('active');
+        document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+        activePartyStateKey = null;
       }
     }
   });
