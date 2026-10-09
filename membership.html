@@ -388,42 +388,9 @@
                   <span data-i18n="memLblMobile">మొబైల్ నంబర్</span>
                   <span class="req-star">*</span>
                 </label>
-                <div class="mem-phone-input-wrap">
-                  <input type="tel" id="memMobile" class="mem-input" placeholder="మీ మొబైల్ నంబర్"
-                    data-i18n-placeholder="memPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
-                  <button type="button" id="btnSendOtp" class="btn-otp-action">
-                    <i class="bi bi-chat-dots-fill"></i>
-                    <span id="btnSendOtpLabel" data-i18n="memBtnSendOtp">OTP పంపండి</span>
-                  </button>
-                </div>
+                <input type="tel" id="memMobile" class="mem-input" placeholder="మీ మొబైల్ నంబర్"
+                  data-i18n-placeholder="memPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
                 <div class="mem-error-text" id="errMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
-
-                <!-- OTP Verification Panel -->
-                <div id="otpVerifyPanel" class="mem-otp-verify-panel">
-                  <label for="memOtpInput" class="mem-form-label small mb-1">
-                    <i class="bi bi-key-fill text-warning"></i>
-                    <span data-i18n="memLblOtp">OTP ధృవీకరణ కోడ్</span>
-                    <span class="req-star">*</span>
-                  </label>
-                  <div class="mem-otp-box-row">
-                    <input type="text" id="memOtpInput" class="mem-input text-center fw-bold" placeholder="6 అంకెల OTP"
-                      data-i18n-placeholder="memPlcOtp" maxlength="6" inputmode="numeric"
-                      style="letter-spacing: 4px; font-size: 1.1rem;">
-                    <button type="button" id="btnVerifyOtp" class="btn-verify-otp-action">
-                      <span data-i18n="memBtnVerifyOtp">ధృవీకరించండి</span>
-                    </button>
-                  </div>
-                  <div class="mem-otp-hint" id="otpHintText">
-                    <i class="bi bi-info-circle"></i> డెమో ధృవీకరణ OTP: <strong id="demoOtpCode">849201</strong>
-                  </div>
-                  <div class="mem-error-text" id="errOtp">దయచేసి సరైన OTP నమోదు చేయండి.</div>
-                </div>
-
-                <!-- Verified Badge -->
-                <div id="otpVerifiedBadge" class="mem-otp-verified-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span data-i18n="memOtpVerified">మొబైల్ నంబర్ విజయవంతంగా ధృవీకరించబడింది!</span>
-                </div>
               </div>
 
               <!-- Row 2: Email & Date of Birth (2 columns) -->
@@ -1308,9 +1275,6 @@
       };
 
       // State
-      let isOtpSent = false;
-      let isOtpVerified = false;
-      let generatedOtp = '849201';
       let uploadedPhotoData = null;
 
       // Populate Districts into Searchable Select
@@ -1496,87 +1460,6 @@
         if (this.value.length === 10) {
           clearError('memMobile', 'errMobile');
         }
-        // If mobile number changes after verification, require re-verification
-        if (isOtpVerified) {
-          isOtpVerified = false;
-          document.getElementById('otpVerifiedBadge').classList.remove('is-verified');
-          document.getElementById('btnSendOtpLabel').textContent = 'OTP పంపండి';
-        }
-      });
-
-      // OTP Send Action
-      const btnSendOtp = document.getElementById('btnSendOtp');
-      const otpVerifyPanel = document.getElementById('otpVerifyPanel');
-      const demoOtpCodeEl = document.getElementById('demoOtpCode');
-      const otpInput = document.getElementById('memOtpInput');
-      const btnVerifyOtp = document.getElementById('btnVerifyOtp');
-      const otpVerifiedBadge = document.getElementById('otpVerifiedBadge');
-
-      btnSendOtp.addEventListener('click', function () {
-        const val = mobileInput.value.trim();
-        if (val.length !== 10 || !/^[6-9]\d{9}$/.test(val)) {
-          showError('memMobile', 'errMobile', 'దయచేసి సరైన 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి (6-9 తో ప్రారంభం).');
-          mobileInput.focus();
-          return;
-        }
-
-        clearError('memMobile', 'errMobile');
-
-        // Generate clean 6-digit OTP
-        generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-        demoOtpCodeEl.textContent = generatedOtp;
-
-        otpVerifyPanel.classList.add('is-active');
-        isOtpSent = true;
-        otpInput.value = '';
-        clearError('memOtpInput', 'errOtp');
-        otpInput.focus();
-
-        // 30s Countdown timer on Send OTP button
-        let countdown = 30;
-        btnSendOtp.disabled = true;
-        document.getElementById('btnSendOtpLabel').textContent = `మళ్లీ పంపండి (${countdown}s)`;
-
-        const timer = setInterval(() => {
-          countdown--;
-          if (countdown <= 0) {
-            clearInterval(timer);
-            btnSendOtp.disabled = false;
-            document.getElementById('btnSendOtpLabel').textContent = 'మళ్లీ పంపండి';
-          } else {
-            document.getElementById('btnSendOtpLabel').textContent = `మళ్లీ పంపండి (${countdown}s)`;
-          }
-        }, 1000);
-
-        // Notify toast
-        const toast = document.getElementById('siteToast');
-        if (toast && window.bootstrap && bootstrap.Toast) {
-          document.getElementById('toastBody').textContent = `ధృవీకరణ OTP ${generatedOtp} మీ మొబైల్ ${val} కు పంపబడింది!`;
-          const bsToast = new bootstrap.Toast(toast, { delay: 4000 });
-          bsToast.show();
-        }
-      });
-
-      // Verify OTP Action
-      btnVerifyOtp.addEventListener('click', function () {
-        const entered = otpInput.value.trim();
-        if (entered === generatedOtp) {
-          isOtpVerified = true;
-          clearError('memOtpInput', 'errOtp');
-          otpVerifyPanel.classList.remove('is-active');
-          otpVerifiedBadge.classList.add('is-verified');
-          btnSendOtp.disabled = true;
-          document.getElementById('btnSendOtpLabel').textContent = 'ధృవీకరించబడింది ✓';
-        } else {
-          showError('memOtpInput', 'errOtp', 'తప్పు OTP నమోదు చేయబడింది. దయచేసి మళ్లీ ప్రయత్నించండి.');
-        }
-      });
-
-      otpInput.addEventListener('input', function () {
-        this.value = this.value.replace(/[^0-9]/g, '');
-        if (this.value.length === 6 && this.value === generatedOtp) {
-          btnVerifyOtp.click();
-        }
       });
 
       // Photo Upload Handling
@@ -1697,17 +1580,7 @@
           clearError('memMobile', 'errMobile');
         }
 
-        // 3. OTP Mandatory Verification
-        if (!isOtpVerified) {
-          showError('memMobile', 'errMobile', 'సభ్యత్వం నమోదుకు ముందు మొబైల్ OTP ని ధృవీకరించడం తప్పనిసరి.');
-          if (!isOtpSent) {
-            btnSendOtp.click();
-          } else {
-            otpVerifyPanel.classList.add('is-active');
-            otpInput.focus();
-          }
-          isValid = false;
-        }
+
 
         // 4. District
         const distVal = districtHiddenInput.value.trim();
@@ -1825,15 +1698,7 @@
       // Register Another Member
       document.getElementById('btnRegisterAnother').addEventListener('click', function () {
         form.reset();
-        isOtpSent = false;
-        isOtpVerified = false;
         uploadedPhotoData = null;
-        photoPreview.classList.remove('has-image');
-        photoPreviewImg.src = '';
-        otpVerifyPanel.classList.remove('is-active');
-        otpVerifiedBadge.classList.remove('is-verified');
-        btnSendOtp.disabled = false;
-        document.getElementById('btnSendOtpLabel').textContent = 'OTP పంపండి';
 
         districtTriggerText.textContent = 'మీ జిల్లా ఎంపిక చేయండి';
         districtTriggerText.classList.add('is-placeholder');
