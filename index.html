@@ -19,7 +19,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=12.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.3">
 
   <!-- Early Language Preference Sync -->
   <script>
@@ -284,18 +284,40 @@
         </div>
       </div>
     </section>
-    <section class="about-cta-section">
+    <section class="about-cta-section" id="join-movement">
       <div class="main-container">
         <div class="about-cta-card">
-          <h2 data-i18n="aboutCtaTitle">ప్రజాసేవలో మీరూ భాగస్వాములు కండి</h2>
-          <p data-i18n="aboutCtaSubtitle">
-            ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి. తెలంగాణ ప్రగతి, ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.
-          </p>
-          <div class="about-cta-buttons">
-            <button type="button" class="btn-cta-white" data-bs-toggle="modal" data-bs-target="#donateModal">
+          <!-- Top Row (Equal Size): #c10201 with Left Flag, Heading & Subtitle, Right Flag -->
+          <div class="cta-band-top">
+            <div class="cta-flag-frame cta-flag-left-frame">
+              <img src="assets/images/partyflag.webp" alt="పార్టీ జెండా" class="cta-flag-img cta-flag-left" loading="lazy">
+            </div>
+            <div class="cta-top-content">
+              <h2 class="cta-top-title" data-i18n="aboutCtaTitle">ప్రజాసేవలో మీరూ భాగస్వాములు కండి</h2>
+              <p class="cta-top-subtitle" data-i18n="aboutCtaSubtitle">
+                నేటి సేవ… రేపటి అభివృద్ధి… రేపటి తరాలకు మంచి భవిష్యత్తు!
+              </p>
+            </div>
+            <div class="cta-flag-frame cta-flag-right-frame">
+              <img src="assets/images/partyflag_right side.webp" alt="పార్టీ జెండా" class="cta-flag-img cta-flag-right" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Middle Row (Equal Size): #f1a703 with ONLY the Highlighted Enlarged Button -->
+          <div class="cta-band-middle">
+            <button type="button" class="btn-cta-donate btn-cta-highlight" data-bs-toggle="modal" data-bs-target="#donateModal">
               <i class="bi bi-heart-fill"></i>
               <span data-i18n="aboutCtaBtnDonate">విరాళం ఇవ్వండి</span>
             </button>
+          </div>
+
+          <!-- Bottom Row (Equal Size): #c10201 with Golden Quotes and Slogan -->
+          <div class="cta-band-bottom">
+            <div class="cta-slogan-wrap">
+              <span class="cta-quote-mark cta-quote-left" aria-hidden="true">❝</span>
+              <p class="cta-slogan-text" data-i18n="aboutCtaSlogan">ప్రజల కోసం... ప్రజలతో... ప్రజల ఆధారంగా...</p>
+              <span class="cta-quote-mark cta-quote-right" aria-hidden="true">❞</span>
+            </div>
           </div>
         </div>
       </div>

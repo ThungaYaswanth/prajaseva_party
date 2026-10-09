@@ -9616,35 +9616,398 @@ body.mobile-nav-open {
   color: var(--text-dark);
 }
 
-/* Section 7: Join CTA Banner */
+/* ==========================================================================
+   Section 7: Join Movement Flag-Theme Banner (.about-cta-card)
+   Equal-Sized 3-Row Design:
+   - Band 1 (Top): #c10201 with Left & Right 3D Party Flags, Main Heading & Subtitle
+   - Band 2 (Middle): #f1a703 with ONLY the Highlighted Enlarged Button (no side rays)
+   - Band 3 (Bottom): #c10201 with Golden Quotes & Slogan
+   ========================================================================== */
+.about-cta-section {
+  position: relative;
+  padding-top: var(--section-padding-top, 50px);
+  padding-bottom: var(--section-padding-bottom, 50px);
+}
+
 .about-cta-card {
-  background: linear-gradient(135deg, #C81016 0%, #8E0A0E 100%);
-  border-radius: var(--radius-lg);
-  padding: 45px 36px;
-  color: #fff;
-  text-align: center;
-  box-shadow: 0 16px 36px rgba(200, 16, 22, 0.25);
-}
-
-.about-cta-card h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.about-cta-card p {
-  font-size: 1.1rem;
-  color: #FFE5E5;
-  max-width: 680px;
-  margin: 0 auto 28px;
-  line-height: 1.6;
-}
-
-.about-cta-buttons {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 44px rgba(193, 2, 1, 0.28), 0 4px 14px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(241, 167, 3, 0.5);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  background: #c10201;
+}
+
+/* --------------------------------------------------------------------------
+   Equal-Sized 3 Rows Common Architecture
+   -------------------------------------------------------------------------- */
+.cta-band-top,
+.cta-band-middle,
+.cta-band-bottom {
+  flex: 1 1 0px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Top Row: #c10201 + 2 Flags + Center Heading & Subtitle
+   -------------------------------------------------------------------------- */
+.cta-band-top {
+  background-color: #c10201;
+  background-image:
+    radial-gradient(ellipse at 50% 120%, rgba(255, 255, 255, 0.1) 0%, transparent 65%),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(0, 0, 0, 0.2) 16%,
+      rgba(255, 255, 255, 0.12) 34%,
+      rgba(0, 0, 0, 0.18) 54%,
+      rgba(255, 255, 255, 0.14) 74%,
+      rgba(0, 0, 0, 0.22) 90%,
+      rgba(255, 255, 255, 0.06) 100%
+    ),
+    linear-gradient(180deg, #c10201 0%, #a80201 100%);
+  padding: 14px 22px;
+  justify-content: space-between;
+  gap: 16px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cta-flag-frame {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cta-flag-left-frame {
+  justify-content: flex-start;
+}
+
+.cta-flag-right-frame {
+  justify-content: flex-end;
+}
+
+.cta-flag-img {
+  height: 95px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  transition: transform 0.35s ease;
+}
+
+.about-cta-card:hover .cta-flag-left {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.about-cta-card:hover .cta-flag-right {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.cta-top-content {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  z-index: 2;
+}
+
+.cta-top-title {
+  color: #FFFFFF;
+  font-size: clamp(1.4rem, 2.7vw, 2.15rem);
+  font-weight: 900;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.cta-top-subtitle {
+  color: #FFE6A3;
+  font-size: clamp(0.92rem, 1.55vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Middle Row: #f1a703 + ONLY Highlighted Enlarged Button
+   -------------------------------------------------------------------------- */
+.cta-band-middle {
+  background-color: #f1a703;
+  background-image:
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(0, 0, 0, 0.06) 18%,
+      rgba(255, 255, 255, 0.24) 36%,
+      rgba(0, 0, 0, 0.05) 56%,
+      rgba(255, 255, 255, 0.22) 76%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(180deg, #f7b213 0%, #f1a703 50%, #e69d00 100%);
+  padding: 16px 20px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.12), inset 0 -2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+
+.btn-cta-highlight {
+  background: linear-gradient(180deg, #c10201 0%, #8c0100 100%);
+  color: #FFFFFF !important;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.1vw, 1.48rem);
+  padding: 14px 48px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 8px 24px rgba(140, 1, 0, 0.42),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+  line-height: 1.35;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+
+.btn-cta-highlight i {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.btn-cta-highlight:hover {
+  background: linear-gradient(180deg, #d80302 0%, #a20100 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 12px 32px rgba(140, 1, 0, 0.55),
+    0 0 24px rgba(255, 255, 255, 0.4),
+    inset 0 1px 3px rgba(255, 255, 255, 0.8);
+  color: #FFFFFF !important;
+  border-color: #FFFFFF;
+}
+
+.btn-cta-highlight:hover i {
+  transform: scale(1.22);
+}
+
+.btn-cta-highlight:active {
+  transform: translateY(0) scale(1.01);
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Row: #c10201 + Golden Quotes + Slogan
+   -------------------------------------------------------------------------- */
+.cta-band-bottom {
+  background-color: #c10201;
+  background-image:
+    radial-gradient(ellipse at 50% -20%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(0, 0, 0, 0.2) 16%,
+      rgba(255, 255, 255, 0.12) 34%,
+      rgba(0, 0, 0, 0.18) 54%,
+      rgba(255, 255, 255, 0.14) 74%,
+      rgba(0, 0, 0, 0.22) 90%,
+      rgba(255, 255, 255, 0.06) 100%
+    ),
+    linear-gradient(180deg, #a80201 0%, #c10201 100%);
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.cta-slogan-wrap {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.cta-quote-mark {
+  color: #f1a703;
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 0.6;
+  user-select: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  font-family: serif, system-ui;
+  vertical-align: middle;
+}
+
+.cta-slogan-text {
+  color: #FFFFFF;
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout: Tablets (576px - 991.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .cta-band-top,
+  .cta-band-middle,
+  .cta-band-bottom {
+    min-height: 105px;
+    padding: 12px 16px;
+  }
+
+  .cta-band-top {
+    gap: 12px;
+  }
+
+  .cta-flag-img {
+    height: 75px;
+    max-width: 135px;
+  }
+
+  .cta-top-title {
+    font-size: 1.55rem;
+    margin-bottom: 4px;
+  }
+
+  .cta-top-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .btn-cta-highlight {
+    padding: 12px 38px;
+    font-size: 1.2rem;
+  }
+
+  .btn-cta-highlight i {
+    font-size: 1.2rem;
+  }
+
+  .cta-quote-mark {
+    font-size: 2.2rem;
+  }
+
+  .cta-slogan-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout: Mobile Devices (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .about-cta-card {
+    border-radius: 16px;
+  }
+
+  .cta-band-top,
+  .cta-band-middle,
+  .cta-band-bottom {
+    min-height: auto;
+    padding: 14px 10px;
+  }
+
+  .cta-band-top {
+    gap: 8px;
+  }
+
+  .cta-flag-img {
+    height: 52px;
+    max-width: 85px;
+  }
+
+  .cta-top-content {
+    padding: 0 4px;
+  }
+
+  .cta-top-title {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+  }
+
+  .cta-top-subtitle {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .btn-cta-highlight {
+    padding: 11px 32px;
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  .btn-cta-highlight i {
+    font-size: 1.05rem;
+  }
+
+  .cta-slogan-wrap {
+    gap: 8px;
+  }
+
+  .cta-quote-mark {
+    font-size: 1.8rem;
+  }
+
+  .cta-slogan-text {
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout: Small Mobile Phones (<= 420px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 420px) {
+  .cta-band-top,
+  .cta-band-middle,
+  .cta-band-bottom {
+    padding: 12px 6px;
+  }
+
+  .cta-flag-img {
+    height: 42px;
+    max-width: 65px;
+  }
+
+  .cta-top-title {
+    font-size: 1.02rem;
+    margin-bottom: 3px;
+  }
+
+  .cta-top-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .btn-cta-highlight {
+    padding: 9px 24px;
+    font-size: 0.95rem;
+  }
+
+  .cta-quote-mark {
+    font-size: 1.5rem;
+  }
+
+  .cta-slogan-text {
+    font-size: 0.82rem;
+  }
 }
 
 .btn-cta-gold {
