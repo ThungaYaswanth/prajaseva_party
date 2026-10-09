@@ -10509,6 +10509,80 @@ body.mobile-nav-open {
   cursor: default;
 }
 
+/* Combobox Input with Manual Typing & Toggle */
+.searchable-combobox-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchable-combo-input {
+  width: 100%;
+  padding-right: 42px !important;
+  font-size: 0.95rem;
+  background: #FAFCFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  height: 46px;
+  transition: all 0.2s ease;
+  color: #1E293B;
+  box-sizing: border-box;
+}
+
+.searchable-combo-input:focus,
+.searchable-select.is-open .searchable-combo-input {
+  border-color: #C81016;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(200, 16, 22, 0.1);
+  outline: none;
+}
+
+.searchable-combo-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.searchable-combo-toggle:hover {
+  color: #C81016;
+  background: rgba(200, 16, 22, 0.08);
+}
+
+.searchable-select.is-open .searchable-combo-toggle i {
+  transform: rotate(180deg);
+}
+
+.searchable-combo-toggle i {
+  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.searchable-option.is-custom-hint {
+  color: #C81016;
+  background: #FEF2F2;
+  font-size: 0.88rem;
+  border-top: 1px dashed #FECACA;
+  margin-top: 4px;
+}
+.searchable-option.is-custom-hint:hover {
+  background: #FEE2E2;
+}
+
+
 /* Photo Upload Box */
 .mem-photo-box {
   border: 1.5px dashed #CBD5E1;
@@ -14037,4 +14111,4 @@ body.mobile-nav-open {
     visibility: hidden !important;
     pointer-events: none !important;
   }
-}
+}

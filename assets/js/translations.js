@@ -632,7 +632,18 @@ const translations = {
     actPill2: "గ్రామాల అభివృద్ధి",
     actPill3: "రైతుల సంక్షేమం",
     actPill4: "యువతకు అవకాశాలు",
-    actPill5: "సమాజ శ్రేయస్సు"
+    actPill5: "సమాజ శ్రేయస్సు",
+
+    // Membership Form Locations
+    memLblDistrict: "జిల్లా",
+    memPlcDistrict: "మీ జిల్లా ఎంపిక చేయండి లేదా టైప్ చేయండి",
+    memLblConstituency: "నియోజకవర్గం",
+    memPlcConstituency: "నియోజకవర్గం ఎంపిక చేయండి లేదా టైప్ చేయండి",
+    memLblMandal: "మండలం / పట్టణం",
+    memPlcMandal: "మండలం / పట్టణం ఎంపిక చేయండి లేదా టైప్ చేయండి",
+    memLblVillage: "గ్రామం / ప్రాంతం",
+    memPlcVillage: "గ్రామం ఎంపిక చేయండి లేదా టైప్ చేయండి",
+    searchPlaceholder: "శోధించండి..."
   },
 
   en: {
@@ -1264,6 +1275,17 @@ const translations = {
     actPill2: "Rural & Village Development",
     actPill3: "Farmers' Welfare",
     actPill4: "Opportunities for Youth",
-    actPill5: "Community Well-being"
+    actPill5: "Community Well-being",
+
+    // Membership Form Locations
+    memLblDistrict: "District",
+    memPlcDistrict: "Select or type your District",
+    memLblConstituency: "Constituency",
+    memPlcConstituency: "Select or type Constituency",
+    memLblMandal: "Mandal / Town",
+    memPlcMandal: "Select or type Mandal / Town",
+    memLblVillage: "Village / Area",
+    memPlcVillage: "Select or type Village",
+    searchPlaceholder: "Search..."
   }
 };
