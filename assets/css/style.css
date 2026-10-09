@@ -1962,9 +1962,11 @@ body.mobile-nav-open {
 }
 
 /* ==========================================================================
-   Section 3 — Quick Navigation Cards Strip (Integrated Floating Hero Dock)
+   Section 3 — Quick Navigation Cards Strip (Mobile Only)
+   Hidden on Laptop, Desktop, and Tablet (>= 768px), visible on Mobile (< 768px)
    ========================================================================== */
 .quick-nav-section {
+  display: none !important;
   position: relative;
   z-index: 10;
   margin-top: -46px;
@@ -7015,10 +7017,6 @@ body.mobile-nav-open {
     width: 20px !important;
   }
 
-  .quick-nav-section {
-    margin-top: 18px !important;
-    padding-bottom: 20px;
-  }
 
   .issues-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -7309,6 +7307,7 @@ body.mobile-nav-open {
   }
 
   .quick-nav-section {
+    display: block !important;
     margin-top: 14px !important;
     padding-bottom: 16px;
   }
