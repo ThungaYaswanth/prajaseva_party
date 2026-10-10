@@ -382,7 +382,12 @@ function applyLanguage(lang) {
     updateNewsPageLanguage(lang);
   }
 
-  // 8. Dispatch custom event for any other module hooks
+  // 8. Update leadership page language if present
+  if (typeof updateLeadershipPageLanguage === 'function') {
+    updateLeadershipPageLanguage(lang);
+  }
+
+  // 9. Dispatch custom event for any other module hooks
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 

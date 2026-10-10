@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="leadershipPageTitle">మా నాయకత్వం | Prajaseva Party - Our Leadership</title>
+  <meta name="description"
+    content="ప్రజాసేవ పార్టీ నాయకత్వం - తెలంగాణ, ఆంధ్రప్రదేశ్, మహారాష్ట్ర మరియు కర్ణాటక రాష్ట్రాల నియోజకవర్గాల సమన్వయకర్తలు మరియు నాయకులు.">
+  <link rel="icon" type="image/png" href="assets/images/party-emblem.png">
+  <link rel="apple-touch-icon" href="assets/images/party-emblem.png">
+
+  <!-- Preconnect to CDNs for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Preload Banner Image -->
+  <link rel="preload" as="image" href="assets/images/leadershipbanner.webp" type="image/webp">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=12.0">
+  <link rel="stylesheet" href="assets/css/leadership.css?v=6.0">
+
+  <!-- Early Language Preference Sync -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s) document.documentElement.lang = s;
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body class="leadership-page-body">
+
+  <!-- ==========================================================================
+       Section 1 — Header and Navigation
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="main-container header-container">
+      <nav class="navbar navbar-expand-lg header-pill-nav p-0">
+        <!-- 1. Left: Party Emblem + Leader Avatar -->
+        <a class="brand-wrap" href="index.html#home" id="brand-logo-link" title="ప్రజాసేవ పార్టీ">
+          <div class="brand-emblem-frame" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+            <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
+          </div>
+          <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
+            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+          </div>
+        </a>
+
+        <!-- 2. Center: Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav align-items-center mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home" data-i18n="navHome">హోమ్</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="navAbout">మా గురించి</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vision.html" data-i18n="navManifesto">మా దృక్పథం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="issues.html" data-i18n="navPolicies">10 ప్రధాన అంశాలు</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="leadership.html" data-i18n="navLeadership">నాయకత్వం</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" data-i18n="navNews">వార్తలు &amp; కార్యక్రమాలు</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Action CTAs -->
+          <div class="mobile-nav-cta-panel d-lg-none">
+            <a href="membership.html" class="btn-mobile-nav-membership" title="సభ్యత్వం">
+              <i class="bi bi-person-fill"></i>
+              <span data-i18n="btnMembership">సభ్యత్వం</span>
+            </a>
+            <a href="donate.html" class="btn-mobile-nav-donate" title="విరాళం ఇవ్వండి">
+              <i class="bi bi-heart-fill"></i>
+              <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Right: Language Dropdown + Donate + Membership -->
+        <div class="header-right-controls d-flex align-items-center">
+
+          <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            aria-label="భాషను మార్చండి / Switch Language">
+            <span class="lang-label" id="lang-current-label">తెలుగు</span>
+            <i class="bi bi-chevron-down lang-chevron-icon"></i>
+          </button>
+
+          <!-- Donate Button (Gold Pill) -->
+          <a href="donate.html" class="btn-pill-donate" id="header-donate-btn" title="విరాళం ఇవ్వండి">
+            <span data-i18n="btnDonate">విరాళం ఇవ్వండి</span>
+          </a>
+
+          <!-- Join Membership Button (Red Pill) -->
+          <a href="membership.html" class="btn-pill-membership" id="header-membership-btn" title="సభ్యత్వం">
+            <i class="bi bi-person-fill"></i>
+            <span data-i18n="btnMembership">సభ్యత్వం</span>
+          </a>
+
+          <!-- Mobile Hamburger / Close Toggler -->
+          <button class="navbar-toggler border-0 shadow-none d-lg-none collapsed" type="button" id="mobileMenuToggleBtn"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="toggle-icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('prajaseva_lang');
+        if (s === 'en') {
+          var l = document.getElementById('lang-current-label');
+          if (l) l.textContent = 'English';
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- ==========================================================================
+       Section 2 — Leadership Hero Banner (Exact Image from Mockup)
+       ========================================================================== -->
+  <section class="leadership-hero-banner-section" aria-label="మా నాయకత్వం బ్యానర్">
+    <div class="leadership-hero-banner-container">
+      <img src="assets/images/leadershipbanner.webp"
+        alt="మా నాయకత్వం - ప్రజల కోసం.. ప్రజలతో.. ప్రజల పాలన | ప్రజాసేవ పార్టీ" class="leadership-hero-banner-image"
+        fetchpriority="high" loading="eager" width="2161" height="728">
+      <h1 class="visually-hidden" data-i18n="leadershipHeroTitle">మా నాయకత్వం</h1>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 3 — Main Content: State Tabs, Districts Sidebar & 2-Col Leaders Grid
+       ========================================================================== -->
+  <main class="leadership-content-wrapper">
+
+    <!-- 1. Four State Tabs: Telangana, Andhra Pradesh, Maharashtra, Karnataka -->
+    <div class="leadership-state-tabs-row" id="leadershipStateTabs" role="tablist" aria-label="State Tabs">
+      <!-- Dynamic State Tab Buttons rendered via leadership.js -->
+    </div>
+
+    <!-- 2. Two-Column Layout: Districts Sidebar (Left) + Leaders Area (Right) -->
+    <div class="leadership-main-grid">
+
+      <!-- Left Column: Districts Sidebar -->
+      <aside class="districts-sidebar-panel" id="districtsSidebarPanel" aria-label="జిల్లాలు జాబితా">
+        <div class="districts-sidebar-header" id="districtsSidebarHeader" role="button" tabindex="0" aria-expanded="true" aria-controls="districtsCollapsibleBody">
+          <div class="sidebar-header-title">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span data-i18n="districtsTitle">జిల్లాలు</span>
+          </div>
+          <div class="sidebar-header-actions">
+            <span class="districts-count-badge" id="districtsCountBadge">33</span>
+            <button type="button" class="districts-collapse-toggle d-lg-none" id="districtsCollapseToggle" aria-label="Toggle districts list">
+              <i class="bi bi-chevron-down toggle-chevron"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="districts-collapsible-body" id="districtsCollapsibleBody">
+          <div class="districts-sidebar-search">
+            <i class="bi bi-search districts-search-icon" aria-hidden="true"></i>
+            <input type="text" id="districtFilterInput" class="district-filter-input" placeholder="జిల్లాను వెతకండి..."
+              aria-label="Search District">
+          </div>
+
+          <div class="districts-list-container" id="districtsListContainer" role="navigation" aria-label="Districts">
+            <!-- Dynamic District List Items rendered via leadership.js -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Column: Main Content Area -->
+      <section class="leaders-main-area" aria-label="నాయకుల వివరాలు">
+
+        <!-- Breadcrumbs Navigation -->
+        <nav class="leadership-breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li><a href="index.html#home"><i class="bi bi-house-door-fill"></i> <span
+                  data-i18n="navHome">హోమ్</span></a></li>
+            <li class="separator">&gt;</li>
+            <li><a href="leadership.html"><span data-i18n="navLeadership">మా నాయకత్వం</span></a></li>
+            <li class="separator">&gt;</li>
+            <li id="breadcrumbState">తెలంగాణ</li>
+            <li class="separator">&gt;</li>
+            <li class="active-crumb" id="breadcrumbDistrict">హైదరాబాద్</li>
+          </ol>
+        </nav>
+
+        <!-- Header Title -->
+        <div class="leaders-header-row">
+          <h2 class="leaders-page-heading" id="leadersPageHeading">
+            <span class="heading-highlight" id="headingDistrictName">హైదరాబాద్</span> జిల్లాలో నాయకులు
+          </h2>
+        </div>
+
+        <!-- Leader Profile Cards 3-Column Grid -->
+        <div class="leaders-cards-grid" id="leadersCardsGrid">
+          <!-- Dynamic Leader Profile Cards rendered via leadership.js -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="noLeadersMessage" style="display: none;"></div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       Section 4 — Grand Modern Footer (Exact match to all pages)
+       ========================================================================== -->
+  <footer class="footer-grand" id="contact">
+    <!-- 1. TOP HERO STAGE: Brand Identity + Leader + Wave Ribbon -->
+    <div class="footer-hero-stage">
+      <div class="footer-hero-bg-wrap" aria-hidden="true">
+        <img src="assets/images/hero.webp" alt="Praja Seva Party Background" class="footer-hero-bg-img" loading="lazy">
+        <div class="footer-hero-bg-overlay"></div>
+      </div>
+      <div class="main-container footer-hero-container">
+        <!-- Left: Emblem + Party Name + Motto + Social Icons -->
+        <div class="footer-hero-brand">
+          <div class="footer-brand-header">
+            <div class="footer-emblem-wrap">
+              <img src="assets/images/party-emblem.png" alt="Praja Seva Party Emblem" class="footer-emblem-img"
+                width="105" height="105">
+            </div>
+            <div class="footer-brand-titles">
+              <h2 class="footer-party-name" data-i18n="partyName">ప్రజాసేవ పార్టీ</h2>
+              <span class="footer-party-sub">PRAJA SEVA PARTY</span>
+              <p class="footer-party-motto" data-i18n="partyTagline">ప్రజల కోసం... ప్రజలతో... ప్రజా పాలన.</p>
+            </div>
+          </div>
+          <!-- Social Media Pills -->
+          <div class="footer-social-row" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-fb"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-x"
+              aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-insta"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-yt"
+              aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn pill-wa"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Leader Namaste Image + Radiance -->
+        <div class="footer-hero-leader" aria-hidden="true">
+          <div class="footer-leader-radiance"></div>
+          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+        </div>
+      </div>
+      <!-- Sweeping 2-Tone Wave Ribbon -->
+      <div class="footer-wave-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="footer-wave-svg">
+          <path d="M0,20 C360,52 920,-8 1440,22 L1440,60 L0,60 Z" fill="#facc15" />
+          <path d="M0,10 C360,42 940,-16 1440,16 L1440,50 C940,12 360,52 0,22 Z" fill="#b91c1c" />
+          <path d="M0,26 C360,56 920,10 1440,48 L1440,60 L0,60 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. NAVIGATION COLUMNS TIER -->
+    <div class="footer-nav-tier">
+      <div class="main-container footer-nav-container">
+        <div class="footer-nav-grid">
+          <!-- Column 1: Quick Links -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-link-45deg"></i>
+                <span data-i18n="fColQuickLinks">త్వరిత లింకులు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా
+                    గురించి</span></a></li>
+              <li><a href="vision.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navManifesto">మా
+                    దృక్పథం</span></a></li>
+              <li><a href="leadership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా
+                    నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 2: Our Programs -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-people-fill"></i>
+                <span data-i18n="fColPrograms">మా కార్యక్రమాలు</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="news.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="index.html#campaign-banner"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkCampaigns">అభియానాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkDonation">విరాళం</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Help & Support -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span data-i18n="fColHelp">సహాయం</span>
+              </span>
+            </div>
+            <ul class="footer-links-list">
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన
+                    అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా
+                    కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+            </ul>
+          </div>
+          <!-- Column 4: Headquarters -->
+          <div class="footer-nav-col">
+            <div class="footer-col-header">
+              <span class="f-col-icon-pill">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span data-i18n="fColHQ">ప్రధాన కార్యాలయం</span>
+              </span>
+            </div>
+            <div class="footer-contact-items">
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <strong data-i18n="fAddressCity">హైదరాబాద్, తెలంగాణ</strong>
+                  <span data-i18n="fAddressCountry">భారతదేశం - 500001</span>
+                </div>
+              </div>
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="tel:+919876543210" class="f-contact-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <div class="f-contact-item">
+                <div class="f-contact-icon-bubble">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div class="f-contact-text">
+                  <a href="mailto:info@prajasevaparty.org" class="f-contact-link">info@prajasevaparty.org</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BOTTOM LEGAL BAR -->
+    <div class="footer-legal-tier">
+      <div class="main-container footer-legal-container">
+        <div class="f-legal-copyright" data-i18n="fLegalCopy">
+          &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
+        </div>
+        <div class="f-developer-credit">
+          Designed &amp; Developed by <a href="https://sunseaz.com" target="_blank" rel="noopener noreferrer">Sunseaz
+            Technologies</a>
+        </div>
+        <nav class="f-legal-links" aria-label="Legal Links">
+          <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fTermsUsage">వినియోగ నిబంధనలు</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fDisclaimer">నిరాకరణ</a>
+          <span class="f-pipe" aria-hidden="true">|</span>
+          <a href="#" data-i18n="fSitemap">సైట్మ్యాప్</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Modals
+       ========================================================================== -->
+
+  <!-- 1. Membership Registration Modal -->
+  <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="membershipModalLabel" data-i18n="modalMemberTitle">ప్రజాసేవ పార్టీ సభ్యత్వ నమోదు
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="membershipForm">
+            <div class="mb-3">
+              <label class="form-label small fw-bold" data-i18n="modalMemberName">పూర్తి పేరు</label>
+              <input type="text" class="form-control" id="memberFullName" required placeholder="మీ పేరు నమోదు చేయండి">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold" data-i18n="modalMemberPhone">మొబైల్ సంఖ్య</label>
+              <input type="tel" class="form-control" id="memberPhone" required placeholder="10 అంకెల మొబైల్ సంఖ్య">
+            </div>
+            <div class="row mb-3">
+              <div class="col-8">
+                <label class="form-label small fw-bold" data-i18n="modalMemberDist">జిల్లా / నియోజకవర్గం</label>
+                <input type="text" class="form-control" id="memberConstituency" required
+                  placeholder="ఉదా: హైదరాబాద్, వరంగల్">
+              </div>
+              <div class="col-4">
+                <label class="form-label small fw-bold" data-i18n="modalMemberAge">వయస్సు</label>
+                <input type="number" class="form-control" id="memberAge" min="18" max="100" placeholder="18+">
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="memberConsent" checked required>
+              <label class="form-check-label small text-muted" for="memberConsent">
+                నేను ప్రజాసేవ పార్టీ విధానాలకు కట్టుబడి ఉంటానని అంగీకరిస్తున్నాను.
+              </label>
+            </div>
+            <button type="submit" class="btn-pill-red w-100" data-i18n="modalMemberSubmit">సభ్యత్వాన్ని
+              నిర్ధారించండి</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Donation Contribution Modal -->
+  <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"
+        style="border-radius: 24px; border: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.16);">
+        <div class="modal-header"
+          style="background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%); color: #1E293B; border-bottom: none; padding: 18px 24px;">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-heart-fill text-danger fs-4"></i>
+            <h5 class="modal-title fw-bold mb-0" id="donateModalLabel">ప్రజాసేవ పార్టీకి విరాళం</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <p class="text-muted small mb-3">ప్రజల సంక్షేమం, ఉచిత విద్య, నాణ్యమైన వైద్యం సాధన కోసం ప్రజాసేవ పార్టీకి మీ
+            వంతు చేయూతనివ్వండి.</p>
+          <div class="bg-light p-3 rounded-4 mb-3 d-inline-block border">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" style="width: 170px; height: 170px; display: block;"
+              class="mx-auto">
+            <div class="mt-2 text-dark fw-bold small">Scan &amp; Pay with Any UPI App (GPay / PhonePe / Paytm)</div>
+            <div class="badge bg-danger-subtle text-danger px-3 py-1 rounded-pill mt-1 fs-6">prajasevaparty@upi</div>
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹100</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹500</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹1,000</button></div>
+            <div class="col-3"><button type="button"
+                class="btn btn-outline-warning w-100 text-dark fw-bold btn-sm rounded-pill">₹5,000</button></div>
+          </div>
+          <div class="alert alert-secondary py-2 small mb-0 text-start">
+            <strong>ఖాతా వివరాలు:</strong> ప్రజాసేవ పార్టీ వెల్ఫేర్ ట్రస్ట్ &bull; A/C: 123456789012 &bull; IFSC:
+            SBIN0001234
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0 px-4 pb-4">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">మూసివేయి</button>
+          <button type="button" class="btn btn-warning rounded-pill px-4 fw-bold"
+            onclick="alert('విరాళం అందించినందుకు ధన్యవాదాలు! Thank you for your contribution.')">చెల్లింపు
+            నిర్ధారించండి</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container">
+    <div id="siteToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastBody">
+          సందేశం విజయవంతంగా పంపబడింది!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/translations.js?v=12.0"></script>
+  <script src="assets/js/leadership-data.js?v=6.0"></script>
+  <script src="assets/js/leadership.js?v=6.0"></script>
+  <script src="assets/js/main.js?v=12.0"></script>
+</body>
+
+</html>

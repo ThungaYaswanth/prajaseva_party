@@ -46,6 +46,18 @@ const translations = {
     btnDonate: "విరాళం ఇవ్వండి",
     searchPlaceholder: "శోధించండి...",
 
+    // Leadership Page
+    leadershipPageTitle: "మా నాయకత్వం | Prajaseva Party - Our Leadership",
+    leadershipHeroTitle: "మా నాయకత్వం",
+    leadershipHeroSubtitle: "మెరుగైన రేపటి కోసం పనిచేస్తున్న అంకితభావంగల నాయకులు",
+    districtsTitle: "జిల్లాలు",
+    selectDistrictTitle: "జిల్లాను ఎంచుకోండి",
+    leaderSearchPlaceholder: "పేరు లేదా నియోజకవర్గం ద్వారా వెతకండి...",
+    leadersInDistrictTitle: "నాయకులు",
+    totalLeadersLabel: "మొత్తం నాయకులు:",
+    noLeadersFoundTitle: "నాయకులు కనుగొనబడలేదు",
+    noLeadersFoundDesc: "సంబంధిత ఫలితాలు ఏవీ లేవు.",
+
     // Hero Banner
     heroSloganTop: "ప్రజాసేవ పార్టీ",
     heroHeadingLine1: "ప్రజా కోసం...",
@@ -688,6 +700,18 @@ const translations = {
     btnMembership: "Membership",
     btnDonate: "Donate",
     searchPlaceholder: "Search...",
+
+    // Leadership Page
+    leadershipPageTitle: "Our Leadership | Prajaseva Party",
+    leadershipHeroTitle: "Our Leadership",
+    leadershipHeroSubtitle: "Dedicated leaders working for a better tomorrow",
+    districtsTitle: "Districts",
+    selectDistrictTitle: "Select District",
+    leaderSearchPlaceholder: "Search by name or constituency...",
+    leadersInDistrictTitle: "Leaders in",
+    totalLeadersLabel: "Total Leaders:",
+    noLeadersFoundTitle: "No leaders found",
+    noLeadersFoundDesc: "No matching leaders found.",
 
     // Hero Banner
     heroSloganTop: "PRAJASEVA PARTY",

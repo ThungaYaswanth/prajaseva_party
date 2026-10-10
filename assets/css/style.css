@@ -14121,9 +14121,11 @@ body.mobile-nav-open {
   }
 }
 
-border-color: #C81016;
-color: #FFFFFF;
-box-shadow: 0 3px 10px rgba(200, 16, 22, 0.3);
+.page-nav-item.is-active {
+  border-color: #C81016;
+  color: #FFFFFF;
+  background: #C81016;
+  box-shadow: 0 3px 10px rgba(200, 16, 22, 0.3);
 }
 
 .page-nav-arrow {

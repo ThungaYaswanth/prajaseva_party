@@ -1,0 +1,1036 @@
+/**
+ * Prajaseva Party - Leadership Module Stylesheet
+ * Fully Responsive: Mobile (320px-480px), Phablets (480px-768px), Tablets (768px-991px), Desktop (992px-1399px), Ultrawide (>=1400px)
+ * Matches the Reference Mockup Exactly with Rich Modern Aesthetics
+ */
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & Root Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --lead-primary-red: #990000;
+  --lead-dark-red: #7A0000;
+  --lead-accent-red: #C53030;
+  --lead-light-red-bg: #FFF5F5;
+  --lead-navy-text: #0A1C4C;
+  --lead-text-dark: #0F172A;
+  --lead-text-body: #334155;
+  --lead-text-muted: #64748B;
+  --lead-border: #E2E8F0;
+  --lead-gold: #F59E0B;
+  --lead-gold-shadow: rgba(245, 158, 11, 0.18);
+  --lead-radius-lg: 16px;
+  --lead-radius-md: 10px;
+  --lead-radius-sm: 8px;
+}
+
+body.leadership-page-body {
+  background-color: #F8FAFC;
+  color: var(--lead-text-body);
+  font-family: 'Outfit', 'Noto Sans Telugu', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Leadership Hero Banner Section
+   -------------------------------------------------------------------------- */
+.leadership-hero-banner-section {
+  width: 100%;
+  background: #660002;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.leadership-hero-banner-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  line-height: 0;
+}
+
+.leadership-hero-banner-image {
+  width: 100%;
+  height: auto;
+  min-height: 180px;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Main Content Wrapper
+   -------------------------------------------------------------------------- */
+.leadership-content-wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 28px 24px 60px 24px;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   4. State Tabs Row (Four States)
+   -------------------------------------------------------------------------- */
+.leadership-state-tabs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.state-tab-btn {
+  background: #FFFFFF;
+  border: 1.5px solid var(--lead-border);
+  border-radius: var(--lead-radius-md);
+  color: var(--lead-text-dark);
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  user-select: none;
+  min-height: 52px;
+  box-sizing: border-box;
+}
+
+.state-tab-btn:hover {
+  background: var(--lead-light-red-bg);
+  border-color: #F87171;
+  color: var(--lead-primary-red);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(153, 0, 0, 0.08);
+}
+
+.state-tab-btn.is-active {
+  background: var(--lead-primary-red);
+  color: #FFFFFF;
+  border-color: var(--lead-primary-red);
+  box-shadow: 0 4px 14px rgba(153, 0, 0, 0.24);
+}
+
+.state-tab-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--lead-primary-red);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.state-tab-btn:hover .state-tab-icon-wrap {
+  transform: scale(1.08);
+}
+
+.state-tab-btn.is-active .state-tab-icon-wrap {
+  color: #FFFFFF;
+}
+
+.state-tab-icon-wrap svg {
+  width: 100%;
+  height: 100%;
+  max-width: 28px;
+  max-height: 28px;
+  display: block;
+  fill: currentColor;
+}
+
+.state-tab-map-img {
+  width: 100%;
+  height: 100%;
+  max-width: 28px;
+  max-height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.state-tab-name {
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   5. Two-Column Layout (Sidebar + Main Area)
+   -------------------------------------------------------------------------- */
+.leadership-main-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Left Sidebar: Districts */
+.districts-sidebar-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--lead-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 90px;
+  z-index: 10;
+  transition: box-shadow 0.2s ease;
+}
+
+.districts-sidebar-header {
+  background: var(--lead-primary-red);
+  color: #FFFFFF;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.sidebar-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+}
+
+.sidebar-header-title i {
+  font-size: 1.25rem;
+}
+
+.sidebar-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.districts-count-badge {
+  background: #FFFFFF;
+  color: var(--lead-primary-red);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.districts-collapse-toggle {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  padding: 2px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.districts-sidebar-panel.is-collapsed .districts-collapse-toggle .toggle-chevron {
+  transform: rotate(-90deg);
+}
+
+.districts-sidebar-panel.is-collapsed .districts-collapsible-body {
+  display: none;
+}
+
+/* Sidebar Search Box */
+.districts-sidebar-search {
+  padding: 12px 14px;
+  border-bottom: 1px solid #F1F5F9;
+  position: relative;
+  background: #FFFFFF;
+}
+
+.districts-search-icon {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lead-accent-red);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.district-filter-input {
+  width: 100%;
+  padding: 9px 12px 9px 38px;
+  border-radius: var(--lead-radius-sm);
+  border: 1px solid #CBD5E1;
+  background: #F8FAFC;
+  font-size: 0.88rem;
+  font-family: inherit;
+  color: #1E293B;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.district-filter-input:focus {
+  background: #FFFFFF;
+  border-color: var(--lead-primary-red);
+  box-shadow: 0 0 0 3px rgba(153, 0, 0, 0.08);
+}
+
+/* Sidebar Districts List */
+.districts-list-container {
+  max-height: calc(100vh - 240px);
+  min-height: 280px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+.districts-list-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.districts-list-container::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.district-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid #F8FAFC;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  user-select: none;
+}
+
+.district-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.district-pin-icon {
+  color: var(--lead-accent-red);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.district-name-text {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #334155;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+}
+
+.district-arrow-icon {
+  color: #94A3B8;
+  font-size: 0.85rem;
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.district-nav-item:hover {
+  background: #FFF5F5;
+}
+
+.district-nav-item:hover .district-name-text {
+  color: var(--lead-primary-red);
+}
+
+.district-nav-item:hover .district-arrow-icon {
+  transform: translateX(3px);
+  color: var(--lead-primary-red);
+}
+
+/* Active District Item */
+.district-nav-item.is-active {
+  background: var(--lead-light-red-bg);
+  border-left: 4px solid var(--lead-primary-red);
+}
+
+.district-nav-item.is-active .district-name-text {
+  color: var(--lead-primary-red);
+  font-weight: 700;
+}
+
+.district-nav-item.is-active .district-pin-icon {
+  color: var(--lead-primary-red);
+}
+
+.district-nav-item.is-active .district-arrow-icon {
+  color: var(--lead-primary-red);
+}
+
+/* --------------------------------------------------------------------------
+   6. Right Main Area: Breadcrumbs, Title, Search, Filters
+   -------------------------------------------------------------------------- */
+.leaders-main-area {
+  min-width: 0;
+}
+
+/* Breadcrumbs */
+.leadership-breadcrumbs {
+  margin-bottom: 14px;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.88rem;
+  color: #64748B;
+  flex-wrap: wrap;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+}
+
+.breadcrumb-list a {
+  color: #475569;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+
+.breadcrumb-list a:hover {
+  color: var(--lead-primary-red);
+}
+
+.breadcrumb-list .separator {
+  color: #94A3B8;
+  font-size: 0.75rem;
+}
+
+.breadcrumb-list .active-crumb {
+  color: var(--lead-primary-red);
+  font-weight: 700;
+}
+
+/* Header & Controls Cluster */
+.leaders-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.leaders-page-heading {
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.leaders-page-heading .heading-highlight {
+  color: var(--lead-primary-red);
+}
+
+/* Controls Cluster: Search & Dropdowns */
+.leaders-controls-cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 100%;
+}
+
+/* Search Bar with Red Button */
+.leaders-search-bar {
+  display: flex;
+  align-items: stretch;
+  width: 440px;
+  max-width: 100%;
+  position: relative;
+  height: 44px;
+}
+
+.leader-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lead-accent-red);
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.leader-search-input {
+  width: 100%;
+  padding: 9px 14px 9px 36px;
+  border: 1.5px solid #CBD5E1;
+  border-right: none;
+  border-radius: var(--lead-radius-sm) 0 0 var(--lead-radius-sm);
+  font-size: 0.88rem;
+  font-family: inherit;
+  color: #1E293B;
+  outline: none;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.leader-search-input:focus {
+  border-color: var(--lead-primary-red);
+}
+
+.btn-leader-search {
+  background: var(--lead-primary-red);
+  color: #FFFFFF;
+  border: 1.5px solid var(--lead-primary-red);
+  border-radius: 0 var(--lead-radius-sm) var(--lead-radius-sm) 0;
+  padding: 0 20px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.btn-leader-search:hover {
+  background: var(--lead-dark-red);
+}
+
+/* Filter Dropdowns Row */
+.leaders-filter-dropdowns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.filter-dropdown-select {
+  padding: 8px 14px;
+  border-radius: var(--lead-radius-sm);
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+  transition: border-color 0.2s ease;
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+.filter-dropdown-select:focus {
+  border-color: var(--lead-primary-red);
+}
+
+/* --------------------------------------------------------------------------
+   7. Leader Cards Grid & Card Details
+   -------------------------------------------------------------------------- */
+.leaders-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card Outer Box */
+.leader-profile-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--lead-radius-lg);
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.leader-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #CBD5E1;
+}
+
+/* Circular Portrait with Gold Border Ring */
+.leader-avatar-wrap {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.leader-avatar-ring {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  border: 2.5px solid var(--lead-gold);
+  padding: 3px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 3px 10px var(--lead-gold-shadow);
+  flex-shrink: 0;
+}
+
+.leader-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* Centered Leader Details */
+.leader-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.leader-name {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--lead-navy-text);
+  margin: 0 0 5px 0;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+  line-height: 1.3;
+}
+
+.leader-role {
+  font-size: 0.94rem;
+  color: var(--lead-text-muted);
+  margin: 0 0 6px 0;
+  font-weight: 500;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+}
+
+.leader-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: var(--lead-text-muted);
+  margin: 0 0 16px 0;
+  font-family: 'Noto Sans Telugu', 'Outfit', sans-serif;
+}
+
+.leader-location i {
+  color: #DC2626;
+  font-size: 0.95rem;
+}
+
+/* Footer Row: 5 Social Icons on Left + Red Button on Right */
+.leader-card-footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #F8FAFC;
+}
+
+.leader-social-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  color: #FFFFFF;
+}
+
+.soc-fb { background: #1877F2; }
+.soc-x { background: #000000; }
+.soc-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.soc-yt { background: #FF0000; }
+.soc-wa { background: #25D366; }
+
+/* Solid Deep Red Circle Action Button with White Chevron Right */
+.action-btn-red {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #B91C1C;
+  color: #FFFFFF;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+  flex-shrink: 0;
+}
+
+.action-btn-red:hover {
+  background: var(--lead-primary-red);
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.4);
+}
+
+.action-btn-red i {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   8. Responsive Breakpoints Across All Formats
+   -------------------------------------------------------------------------- */
+
+/* Large Desktop (>= 1400px) */
+@media (min-width: 1400px) {
+  .leadership-content-wrapper {
+    max-width: 1440px;
+    padding: 32px 30px 70px 30px;
+  }
+
+  .leadership-main-grid {
+    grid-template-columns: 310px 1fr;
+    gap: 28px;
+  }
+
+  .leaders-cards-grid {
+    gap: 24px;
+  }
+}
+
+/* Laptop / Mid Desktop (992px - 1279px) */
+@media (max-width: 1279px) and (min-width: 992px) {
+  .leaders-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .leadership-main-grid {
+    grid-template-columns: 270px 1fr;
+    gap: 20px;
+  }
+
+  .leaders-search-bar {
+    width: 360px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .leadership-content-wrapper {
+    padding: 20px 18px 50px 18px;
+  }
+
+  .leadership-hero-banner-image {
+    min-height: 140px;
+    max-height: 250px;
+  }
+
+  .leadership-state-tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .leadership-main-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .districts-sidebar-panel {
+    position: static;
+  }
+
+  .districts-sidebar-header {
+    cursor: pointer;
+  }
+
+  .districts-list-container {
+    max-height: 260px;
+  }
+
+  .leaders-header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .leaders-controls-cluster {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .leaders-search-bar {
+    width: 100%;
+  }
+
+  .leaders-filter-dropdowns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .leaders-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Large Phones / Phablets (480px - 767px) */
+@media (max-width: 767px) {
+  .leadership-content-wrapper {
+    padding: 16px 14px 40px 14px;
+  }
+
+  .leadership-hero-banner-image {
+    min-height: 110px;
+    max-height: 180px;
+  }
+
+  .leadership-state-tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .state-tab-btn {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    gap: 8px;
+    border-radius: var(--lead-radius-sm);
+    min-height: 48px;
+  }
+
+  .state-tab-icon-wrap {
+    width: 24px;
+    height: 24px;
+  }
+
+  .leadership-breadcrumbs .breadcrumb-list {
+    font-size: 0.82rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .leaders-page-heading {
+    font-size: 1.25rem;
+  }
+
+  .leaders-filter-dropdowns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  #filterSort {
+    grid-column: span 2;
+  }
+
+  .leaders-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .leader-profile-card {
+    padding: 22px 18px 18px 18px;
+    border-radius: 14px;
+  }
+
+  .leader-avatar-ring {
+    width: 112px;
+    height: 112px;
+  }
+
+  .leader-name {
+    font-size: 1.18rem;
+  }
+
+  .leader-role {
+    font-size: 0.9rem;
+  }
+
+  .leader-location {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+  }
+
+  .social-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-btn-red {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Small Phones (< 480px down to 320px) */
+@media (max-width: 479px) {
+  .leadership-content-wrapper {
+    padding: 12px 10px 32px 10px;
+  }
+
+  .leadership-hero-banner-image {
+    min-height: 90px;
+    max-height: 135px;
+  }
+
+  .leadership-state-tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .state-tab-btn {
+    padding: 8px 8px;
+    font-size: 0.88rem;
+    gap: 6px;
+    border-radius: 8px;
+    min-height: 44px;
+  }
+
+  .state-tab-icon-wrap {
+    width: 20px;
+    height: 20px;
+  }
+
+  .districts-sidebar-header {
+    padding: 11px 14px;
+  }
+
+  .sidebar-header-title {
+    font-size: 1.05rem;
+  }
+
+  .districts-list-container {
+    max-height: 200px;
+  }
+
+  .district-nav-item {
+    padding: 10px 14px;
+  }
+
+  .district-name-text {
+    font-size: 0.92rem;
+  }
+
+  .leaders-search-bar {
+    height: 42px;
+  }
+
+  .leader-search-input {
+    font-size: 0.85rem;
+    padding: 8px 10px 8px 34px;
+  }
+
+  .btn-leader-search {
+    padding: 0 14px;
+    font-size: 0.86rem;
+  }
+
+  .leaders-filter-dropdowns {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #filterSort {
+    grid-column: auto;
+  }
+
+  .filter-dropdown-select {
+    min-height: 42px;
+    font-size: 0.85rem;
+  }
+
+  .leader-profile-card {
+    padding: 18px 14px 16px 14px;
+    border-radius: 12px;
+  }
+
+  .leader-avatar-ring {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .leader-name {
+    font-size: 1.12rem;
+  }
+
+  .leader-role {
+    font-size: 0.86rem;
+  }
+
+  .leader-location {
+    font-size: 0.84rem;
+    margin-bottom: 12px;
+  }
+
+  .leader-social-links {
+    gap: 5px;
+  }
+
+  .social-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .action-btn-red {
+    width: 34px;
+    height: 34px;
+  }
+}
