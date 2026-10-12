@@ -9616,28 +9616,260 @@ body.mobile-nav-open {
   color: var(--text-dark);
 }
 
-/* Section 7: Join CTA Banner */
+/* ==========================================================================
+   Section 7: About Page CTA Card (3 Equal-Height Rows: #b30001 & #fab301)
+   ========================================================================== */
+.about-cta-section {
+  padding: 36px 0 52px 0;
+}
+
 .about-cta-card {
-  background: linear-gradient(135deg, #C81016 0%, #8E0A0E 100%);
-  border-radius: var(--radius-lg);
-  padding: 45px 36px;
+  position: relative;
+  border-radius: 18px;
+  border: 2.5px solid #b30001;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   color: #fff;
   text-align: center;
-  box-shadow: 0 16px 36px rgba(200, 16, 22, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.about-cta-card h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+.about-cta-card:hover {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+/* Three Equal-Height Horizontal Rows */
+.about-cta-row {
+  flex: 1 1 0;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* 1. Top Row: Background #b30001 with Flags on Opposite Ends & Centered Text */
+.about-cta-row-top {
+  background-color: #b30001;
+  padding: 16px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-cta-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-cta-flag-left {
+  justify-content: flex-start;
+}
+
+.about-cta-flag-right {
+  justify-content: flex-end;
+}
+
+.cta-flag-img {
+  height: 74px;
+  width: auto;
+  max-width: 165px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  transition: transform 0.25s ease;
+}
+
+.about-cta-card:hover .cta-flag-img {
+  transform: scale(1.02);
+}
+
+.about-cta-message {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-cta-message p {
+  color: #FFFFFF;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* 2. Middle Row: Background #fab301 with Heading & Red Donation Button */
+.about-cta-row-middle {
+  background-color: #fab301;
+  padding: 18px 20px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-cta-title {
+  color: #b30001;
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  font-weight: 900;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.btn-cta-donate {
+  background-color: #b30001;
+  color: #FFFFFF;
+  font-size: 1.15rem;
   font-weight: 800;
-  margin-bottom: 12px;
+  padding: 12px 42px;
+  border-radius: 9999px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 5px 16px rgba(179, 0, 1, 0.38);
+  transition: all 0.25s ease;
 }
 
-.about-cta-card p {
-  font-size: 1.1rem;
-  color: #FFE5E5;
-  max-width: 680px;
-  margin: 0 auto 28px;
-  line-height: 1.6;
+.btn-cta-donate:hover {
+  background-color: #900001;
+  color: #FFFFFF;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 7px 20px rgba(179, 0, 1, 0.48);
+}
+
+.btn-cta-donate i {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+}
+
+/* 3. Bottom Row: Background #b30001 with White Quotation & Yellow Quote Marks */
+.about-cta-row-bottom {
+  background-color: #b30001;
+  padding: 16px 24px;
+}
+
+.about-cta-quote {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 0.02em;
+}
+
+.cta-quote-mark {
+  color: #fab301;
+  font-family: Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Responsive Rules for Equal 3-Row Layout */
+@media (max-width: 991px) {
+  .about-cta-row {
+    min-height: 96px;
+  }
+  .about-cta-row-top {
+    padding: 14px 20px;
+    gap: 16px;
+  }
+  .cta-flag-img {
+    height: 60px;
+    max-width: 125px;
+  }
+  .about-cta-message p {
+    font-size: 1.05rem;
+  }
+  .about-cta-title {
+    font-size: 1.35rem;
+  }
+  .btn-cta-donate {
+    font-size: 1.05rem;
+    padding: 10px 32px;
+  }
+  .about-cta-quote {
+    font-size: 1.05rem;
+  }
+  .cta-quote-mark {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cta-row {
+    min-height: 84px;
+  }
+  .about-cta-row-top {
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+  .cta-flag-img {
+    height: 48px;
+    max-width: 85px;
+  }
+  .about-cta-message p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .about-cta-row-middle {
+    padding: 14px 12px;
+    gap: 8px;
+  }
+  .about-cta-title {
+    font-size: 1.2rem;
+  }
+  .btn-cta-donate {
+    font-size: 0.98rem;
+    padding: 9px 26px;
+  }
+  .about-cta-row-bottom {
+    padding: 12px 14px;
+  }
+  .about-cta-quote {
+    font-size: 0.92rem;
+  }
+  .cta-quote-mark {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-cta-row {
+    min-height: 74px;
+  }
+  .cta-flag-img {
+    height: 38px;
+    max-width: 65px;
+  }
+  .about-cta-message p {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+  .about-cta-title {
+    font-size: 1.05rem;
+  }
+  .btn-cta-donate {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+  .about-cta-quote {
+    font-size: 0.8rem;
+  }
+  .cta-quote-mark {
+    font-size: 1.3rem;
+  }
 }
 
 .about-cta-buttons {
