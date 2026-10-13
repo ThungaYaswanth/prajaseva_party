@@ -41,7 +41,7 @@
             <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
           </div>
           <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
-            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+            <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="నాయకుడు" class="brand-leader-img">
           </div>
         </a>
 
@@ -583,79 +583,46 @@
                 <div class="mem-error-text" id="errPhoto">దయచేసి మీ ఫోటోను అప్‌లోడ్ చేయండి.</div>
               </div>
 
-              <!-- Row 6: Payment Method (Full width field) -->
+              <!-- Row 6: Payment Method (Full width field) - Razorpay Only -->
               <div class="mem-form-group full-width-field">
                 <label class="mem-form-label">
-                  <i class="bi bi-credit-card-2-front-fill"></i>
+                  <i class="bi bi-shield-check"></i>
                   <span data-i18n="memLblPayment">చెల్లింపు పద్ధతి</span>
+                  <span class="req-star" style="color:#C81016; margin-left:2px;">*</span>
                 </label>
-                <div class="mem-method-grid" id="memPaymentMethodGrid">
-                  <div class="mem-method-card active" data-method="upi" tabindex="0" role="button">
-                    <i class="bi bi-qr-code-scan mem-method-icon"></i>
-                    <div class="mem-method-title" data-i18n="memPayUpi">UPI</div>
-                    <div class="mem-method-sub" data-i18n="memPayUpiSub">UPI ద్వారా</div>
-                  </div>
-                  <div class="mem-method-card" data-method="card" tabindex="0" role="button">
-                    <i class="bi bi-credit-card-fill mem-method-icon"></i>
-                    <div class="mem-method-title" data-i18n="memPayCard">కార్డ్</div>
-                    <div class="mem-method-sub" data-i18n="memPayCardSub">డెబిట్ / క్రెడిట్ కార్డ్</div>
-                  </div>
-                  <div class="mem-method-card" data-method="netbanking" tabindex="0" role="button">
-                    <i class="bi bi-bank2 mem-method-icon"></i>
-                    <div class="mem-method-title" data-i18n="memPayNet">నెట్ బ్యాంకింగ్</div>
-                    <div class="mem-method-sub" data-i18n="memPayNetSub">ఇంటర్నెట్ బ్యాంకింగ్</div>
-                  </div>
-                </div>
 
-                <!-- Subpanel: UPI -->
-                <div class="mem-payment-subpanel active" id="memSubpanelUpi">
-                  <div class="mem-subpanel-header">
-                    <span class="mem-subpanel-title"><i class="bi bi-phone"></i> <span data-i18n="memPayUpiApp">ఏదైనా
-                        UPI యాప్ ద్వారా చెల్లించండి:</span></span>
-                    <span class="badge-verification" data-i18n="memPayVerifyBadge">చెల్లింపు ధృవీకరణ</span>
+                <!-- Razorpay Only Payment Card -->
+                <div class="don-rzp-card" id="memRazorpayGatewayCard">
+                  <div class="don-rzp-card-header">
+                    <div class="don-rzp-brand">
+                      <span class="don-rzp-icon-wrap">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.2 2L4 15.2H11.6L9.2 22.4L20.8 9.2H13.2V2Z" fill="#0C2340"/>
+                          <path d="M14.6 2L5.4 15.2H13L10.6 22.4L22.2 9.2H14.6V2Z" fill="#0284C7"/>
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="don-rzp-title">
+                          <span data-i18n="memPayRazorpay">Razorpay</span>
+                          <span class="don-rzp-badge" data-i18n="memRazorpayBadge">సురక్షిత గేట్‌వే</span>
+                        </div>
+                        <div class="don-rzp-sub" data-i18n="memRazorpaySub">UPI • క్రెడిట్/డెబిట్ కార్డులు • నెట్ బ్యాంకింగ్ • వాలెట్స్</div>
+                      </div>
+                    </div>
+                    <span class="don-rzp-check"><i class="bi bi-check-circle-fill"></i></span>
                   </div>
-                  <div class="mem-upi-input-group">
-                    <input type="text" id="memUpiIdInput" class="mem-input"
-                      placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)" data-i18n-placeholder="memPlcUpi">
-                    <button type="button" id="btnMemShowQr" class="btn-qr-show">
-                      <i class="bi bi-qr-code text-danger"></i> <span data-i18n="memBtnShowQr">QR కోడ్ చూపించు</span>
-                    </button>
-                  </div>
-                  <div id="memInlineQrBox" class="mem-inline-qr-box" style="display: none;">
-                    <img src="assets/images/qr-code.svg" alt="UPI QR" class="mem-qr-img">
-                    <div class="small text-muted mt-1">GPay, PhonePe, Paytm తో స్కాన్ చేయండి</div>
-                    <div class="badge bg-danger-subtle text-danger mt-1">prajasevaparty@upi</div>
-                  </div>
-                </div>
 
-                <!-- Subpanel: Card -->
-                <div class="mem-payment-subpanel" id="memSubpanelCard" style="display: none;">
-                  <div class="small fw-bold text-dark mb-2"><i class="bi bi-shield-lock"></i> కార్డ్ వివరాలు:</div>
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <input type="text" class="mem-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19">
-                    </div>
-                    <div class="col-6">
-                      <input type="text" class="mem-input" placeholder="MM/YY" maxlength="5">
-                    </div>
-                    <div class="col-6">
-                      <input type="password" class="mem-input" placeholder="CVV" maxlength="3">
-                    </div>
+                  <div class="don-rzp-pill-row">
+                    <span class="rzp-pill"><i class="bi bi-qr-code text-danger"></i> GPay / PhonePe / Paytm</span>
+                    <span class="rzp-pill"><i class="bi bi-credit-card-2-front text-success"></i> All Debit / Credit Cards</span>
+                    <span class="rzp-pill"><i class="bi bi-bank text-primary"></i> 50+ Banks</span>
+                    <span class="rzp-pill"><i class="bi bi-wallet2 text-warning"></i> Wallets</span>
                   </div>
-                </div>
 
-                <!-- Subpanel: Net Banking -->
-                <div class="mem-payment-subpanel" id="memSubpanelNetbanking" style="display: none;">
-                  <div class="small fw-bold text-dark mb-2"><i class="bi bi-bank"></i> మీ బ్యాంక్ ఎంచుకోండి:</div>
-                  <select class="mem-input">
-                    <option value="">బ్యాంక్ ఎంపిక చేయండి</option>
-                    <option value="sbi">State Bank of India (SBI)</option>
-                    <option value="hdfc">HDFC Bank</option>
-                    <option value="icici">ICICI Bank</option>
-                    <option value="axis">Axis Bank</option>
-                    <option value="canara">Canara Bank</option>
-                    <option value="union">Union Bank of India</option>
-                  </select>
+                  <div class="don-rzp-note">
+                    <i class="bi bi-shield-lock-fill"></i>
+                    <span data-i18n="memRazorpayDesc">మీరు సమర్పించినప్పుడు, Razorpay అధికారిక సురక్షిత చెల్లింపు పాప్-అప్ ద్వారా సులభంగా చెల్లించవచ్చు.</span>
+                  </div>
                 </div>
               </div>
 
@@ -962,7 +929,7 @@
         <!-- Right: Leader Namaste Image + Radiance -->
         <div class="footer-hero-leader" aria-hidden="true">
           <div class="footer-leader-radiance"></div>
-          <img src="assets/images/leader-namaste.png" alt="Party Leader" class="footer-hero-leader-img">
+          <img src="assets/images/Namaste Portrait in Navy Bandhgala.png" alt="Party Leader" class="footer-hero-leader-img">
         </div>
       </div>
       <!-- Sweeping 2-Tone Wave Ribbon (Red on top, Gold underneath) -->
@@ -1157,6 +1124,141 @@
     </div>
   </div>
 
+  <!-- ==========================================================================
+       Static Razorpay Checkout Modal (Direct Interactive Simulation)
+       ========================================================================== -->
+  <div class="rzp-modal-backdrop" id="rzpMemCheckoutModal" aria-hidden="true">
+    <div class="rzp-modal-window" role="dialog" aria-modal="true" aria-labelledby="rzpMemModalTitle">
+      <!-- Processing Overlay -->
+      <div class="rzp-processing-overlay" id="rzpMemProcessingOverlay">
+        <div class="rzp-spinner" id="rzpMemSpinner"></div>
+        <i class="bi bi-check-circle-fill rzp-success-badge" id="rzpMemSuccessBadge"></i>
+        <div class="rzp-process-text" id="rzpMemProcessTitle">Razorpay తో అనుసంధానించబడుతోంది...</div>
+        <div class="rzp-process-sub" id="rzpMemProcessSubtitle">సురక్షిత బ్యాంక్ గేట్‌వే ద్వారా ప్రాసెస్ చేయబడుతోంది...</div>
+      </div>
+
+      <!-- Top Header -->
+      <div class="rzp-modal-header">
+        <div class="rzp-brand-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.2 2L4 15.2H11.6L9.2 22.4L20.8 9.2H13.2V2Z" fill="#FFFFFF"/>
+            <path d="M14.6 2L5.4 15.2H13L10.6 22.4L22.2 9.2H14.6V2Z" fill="#38BDF8"/>
+          </svg>
+          <div>
+            <div class="rzp-header-title" id="rzpMemModalTitle">Razorpay Trusted Business</div>
+            <div class="rzp-header-sub"><i class="bi bi-shield-shaded"></i> 100% Verified Secure Gateway</div>
+          </div>
+        </div>
+        <button type="button" class="rzp-btn-close" id="btnRzpMemModalClose" title="మూసివేయి / Close">&times;</button>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="rzp-summary-box">
+        <div class="rzp-merchant-info">
+          <img src="assets/images/party-emblem.png" alt="Praja Seva Party" class="rzp-merchant-logo">
+          <div>
+            <div class="rzp-merchant-name">ప్రజాసేవ పార్టీ (PSP)</div>
+            <div class="rzp-order-desc" id="rzpMemModalDonorDesc">సభ్యత్వ నమోదు రుసుము / Membership Fee</div>
+          </div>
+        </div>
+        <div class="rzp-amount-box">
+          <div class="rzp-amount-lbl">రుసుము / Amount</div>
+          <div class="rzp-amount-num" id="rzpMemModalAmountText">₹100</div>
+        </div>
+      </div>
+
+      <!-- Methods Nav & Panels -->
+      <div class="rzp-modal-body">
+        <nav class="rzp-methods-nav">
+          <button type="button" class="rzp-nav-item active" data-tab="upi">
+            <i class="bi bi-qr-code text-danger"></i> UPI / QR
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="cards">
+            <i class="bi bi-credit-card text-success"></i> Cards
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="netbanking">
+            <i class="bi bi-bank text-primary"></i> Net Banking
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="wallets">
+            <i class="bi bi-wallet2 text-warning"></i> Wallets
+          </button>
+        </nav>
+
+        <!-- UPI Tab Panel -->
+        <div class="rzp-tab-panel active" id="rzpMemTabUpi">
+          <div class="rzp-qr-wrap">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" class="rzp-qr-code-img">
+            <div class="rzp-qr-note">Scan with GPay, PhonePe, Paytm or BHIM</div>
+            <div class="small text-muted mt-1">UPI ID: <strong>prajasevaparty@razorpay</strong></div>
+          </div>
+          <div class="rzp-vpa-row">
+            <input type="text" class="rzp-vpa-input" id="rzpMemVpaInput" placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)">
+          </div>
+        </div>
+
+        <!-- Cards Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpMemTabCards">
+          <div class="rzp-card-fields">
+            <div>
+              <label class="small text-muted mb-1 d-block">కార్డు సంఖ్య / Card Number</label>
+              <input type="text" class="rzp-card-input" id="rzpMemCardNumber" value="4111 2222 3333 4444" placeholder="4111 2222 3333 4444">
+            </div>
+            <div class="rzp-card-row">
+              <div>
+                <label class="small text-muted mb-1 d-block">గడువు / Valid Thru</label>
+                <input type="text" class="rzp-card-input" id="rzpMemCardExpiry" value="12/28" placeholder="MM/YY">
+              </div>
+              <div>
+                <label class="small text-muted mb-1 d-block">CVV</label>
+                <input type="password" class="rzp-card-input" id="rzpMemCardCvv" value="123" placeholder="CVV" maxlength="3">
+              </div>
+            </div>
+            <div>
+              <label class="small text-muted mb-1 d-block">కార్డుదారుని పేరు / Cardholder Name</label>
+              <input type="text" class="rzp-card-input" id="rzpMemCardHolder" placeholder="కార్డుదారుని పేరు">
+            </div>
+          </div>
+        </div>
+
+        <!-- Netbanking Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpMemTabNetbanking">
+          <div class="small text-muted mb-2">ప్రజాదరణ పొందిన బ్యాంకులు:</div>
+          <div class="rzp-bank-grid">
+            <button type="button" class="rzp-bank-btn active"><i class="bi bi-bank2 text-primary"></i> SBI</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-danger"></i> HDFC</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-warning"></i> ICICI</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-info"></i> Axis</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-success"></i> Kotak</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-secondary"></i> 50+ Banks</button>
+          </div>
+        </div>
+
+        <!-- Wallets Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpMemTabWallets">
+          <div class="small text-muted mb-2">వాలెట్ ఎంచుకోండి:</div>
+          <div class="rzp-bank-grid">
+            <button type="button" class="rzp-bank-btn active"><i class="bi bi-wallet2 text-primary"></i> Paytm</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-info"></i> Amazon Pay</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-warning"></i> Mobikwik</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-success"></i> PhonePe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="rzp-modal-footer">
+        <button type="button" class="btn-rzp-submit-pay" id="btnRzpMemSubmitPay">
+          <i class="bi bi-lock-fill"></i>
+          <span id="rzpMemSubmitPayText">Pay ₹100</span>
+        </button>
+        <div class="rzp-security-tag">
+          <i class="bi bi-shield-lock-fill text-success"></i>
+          <span>Secured by Razorpay • 256-Bit SSL Bank Grade Encryption</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Floating Back to Top Button -->
   <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
     <i class="bi bi-arrow-up"></i>
@@ -1181,6 +1283,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="assets/js/translations.js?v=12.0"></script>
   <script src="assets/js/main.js?v=12.0"></script>
+  <!-- Razorpay Static Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <script src="assets/js/telangana-locations.js?v=12.0"></script>
 
@@ -1741,31 +1845,123 @@
         clearError('memPhotoDropzone', 'errPhoto');
       });
 
-      // Payment Method Tabs
-      const paymentCards = document.querySelectorAll('.mem-method-card');
-      const subpanelUpi = document.getElementById('memSubpanelUpi');
-      const subpanelCard = document.getElementById('memSubpanelCard');
-      const subpanelNet = document.getElementById('memSubpanelNetbanking');
-      const btnShowQr = document.getElementById('btnMemShowQr');
-      const inlineQrBox = document.getElementById('memInlineQrBox');
+      // ======================================================================
+      // Interactive Static Razorpay Checkout Controller for Membership
+      // ======================================================================
+      const memRazorpayGatewayCard = document.getElementById('memRazorpayGatewayCard');
+      const rzpMemModal = document.getElementById('rzpMemCheckoutModal');
+      const rzpMemModalClose = document.getElementById('btnRzpMemModalClose');
+      const rzpMemOverlay = document.getElementById('rzpMemProcessingOverlay');
+      const rzpMemSpinner = document.getElementById('rzpMemSpinner');
+      const rzpMemSuccessBadge = document.getElementById('rzpMemSuccessBadge');
+      const rzpMemProcessTitle = document.getElementById('rzpMemProcessTitle');
+      const rzpMemProcessSubtitle = document.getElementById('rzpMemProcessSubtitle');
+      const btnRzpMemSubmitPay = document.getElementById('btnRzpMemSubmitPay');
 
-      paymentCards.forEach(card => {
-        card.addEventListener('click', function () {
-          paymentCards.forEach(c => c.classList.remove('active'));
-          this.classList.add('active');
-          const method = this.dataset.method;
-          if (subpanelUpi) subpanelUpi.style.display = method === 'upi' ? 'block' : 'none';
-          if (subpanelCard) subpanelCard.style.display = method === 'card' ? 'block' : 'none';
-          if (subpanelNet) subpanelNet.style.display = method === 'netbanking' ? 'block' : 'none';
+      let memPaymentCallback = null;
+
+      function openMemRazorpayCheckout(name, mobile, onDone) {
+        memPaymentCallback = onDone;
+        const isEn = (localStorage.getItem('prajaseva_lang') === 'en');
+        const donorDesc = document.getElementById('rzpMemModalDonorDesc');
+        if (donorDesc) {
+          donorDesc.textContent = name ? `${isEn ? 'Member: ' : 'సభ్యుడు: '}${name}` : (isEn ? 'Membership Fee: ₹100' : 'సభ్యత్వ నమోదు రుసుము: ₹100');
+        }
+
+        // Reset overlay
+        if (rzpMemOverlay) rzpMemOverlay.classList.remove('is-active');
+        if (rzpMemSpinner) rzpMemSpinner.style.display = 'block';
+        if (rzpMemSuccessBadge) rzpMemSuccessBadge.style.display = 'none';
+
+        if (rzpMemModal) {
+          rzpMemModal.classList.add('is-open');
+          rzpMemModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeMemRazorpayCheckout() {
+        if (rzpMemModal) {
+          rzpMemModal.classList.remove('is-open');
+          rzpMemModal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (rzpMemModalClose) {
+        rzpMemModalClose.addEventListener('click', closeMemRazorpayCheckout);
+      }
+
+      if (rzpMemModal) {
+        rzpMemModal.addEventListener('click', function (e) {
+          if (e.target === rzpMemModal) closeMemRazorpayCheckout();
+        });
+      }
+
+      // Tab switching inside membership Razorpay modal
+      const rzpMemNavItems = document.querySelectorAll('#rzpMemCheckoutModal .rzp-nav-item');
+      const rzpMemTabPanels = {
+        upi: document.getElementById('rzpMemTabUpi'),
+        cards: document.getElementById('rzpMemTabCards'),
+        netbanking: document.getElementById('rzpMemTabNetbanking'),
+        wallets: document.getElementById('rzpMemTabWallets')
+      };
+
+      rzpMemNavItems.forEach(btn => {
+        btn.addEventListener('click', () => {
+          rzpMemNavItems.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const targetTab = btn.dataset.tab;
+          Object.keys(rzpMemTabPanels).forEach(key => {
+            if (rzpMemTabPanels[key]) {
+              rzpMemTabPanels[key].classList.toggle('active', key === targetTab);
+            }
+          });
         });
       });
 
-      if (btnShowQr && inlineQrBox) {
-        btnShowQr.addEventListener('click', function () {
-          const isVisible = inlineQrBox.style.display === 'block';
-          inlineQrBox.style.display = isVisible ? 'none' : 'block';
+      // Bank buttons inside Netbanking tab
+      document.querySelectorAll('#rzpMemCheckoutModal .rzp-bank-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('#rzpMemCheckoutModal .rzp-bank-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Execute membership payment when user clicks "Pay ₹100" inside modal
+      if (btnRzpMemSubmitPay) {
+        btnRzpMemSubmitPay.addEventListener('click', function () {
+          if (!rzpMemOverlay) return;
+
+          const isEn = (localStorage.getItem('prajaseva_lang') === 'en');
+          rzpMemOverlay.classList.add('is-active');
+          if (rzpMemSpinner) rzpMemSpinner.style.display = 'block';
+          if (rzpMemSuccessBadge) rzpMemSuccessBadge.style.display = 'none';
+          if (rzpMemProcessTitle) rzpMemProcessTitle.textContent = isEn ? 'Connecting to Razorpay gateway...' : 'Razorpay గేట్‌వే తో అనుసంధానించబడుతోంది...';
+          if (rzpMemProcessSubtitle) rzpMemProcessSubtitle.textContent = isEn ? 'Processing ₹100 membership fee...' : '₹100 సభ్యత్వ రుసుము సురక్షితంగా ప్రాసెస్ చేయబడుతోంది...';
+
+          setTimeout(() => {
+            if (rzpMemProcessTitle) rzpMemProcessTitle.textContent = isEn ? 'Authorizing transaction...' : 'బ్యాంక్ సర్వర్ ధృవీకరణ పూర్తవుతోంది...';
+          }, 700);
+
+          setTimeout(() => {
+            if (rzpMemSpinner) rzpMemSpinner.style.display = 'none';
+            if (rzpMemSuccessBadge) rzpMemSuccessBadge.style.display = 'block';
+            const randomPayId = `pay_PSP2026_${Math.floor(100000 + Math.random() * 900000)}`;
+            if (rzpMemProcessTitle) rzpMemProcessTitle.textContent = isEn ? 'Payment Successful!' : 'చెల్లింపు విజయవంతమైంది!';
+            if (rzpMemProcessSubtitle) rzpMemProcessSubtitle.textContent = `${isEn ? 'Payment ID: ' : 'చెల్లింపు సంఖ్య: '}${randomPayId}`;
+
+            setTimeout(() => {
+              closeMemRazorpayCheckout();
+              if (typeof memPaymentCallback === 'function') {
+                memPaymentCallback();
+              }
+            }, 1000);
+          }, 1500);
         });
       }
+
+
 
       // Form Validation Helpers
       function showError(inputId, errorId, message) {
@@ -1899,23 +2095,30 @@
           sessionStorage.setItem('psp_registered_member', JSON.stringify(memberSubmissionData));
         } catch (e) { }
 
-        // Switch to Thank You screen smoothly
-        formView.style.display = 'none';
-        successView.classList.add('is-visible');
+        function finishMembershipRegistration() {
+          // Switch to Thank You screen smoothly
+          formView.style.display = 'none';
+          successView.classList.add('is-visible');
 
-        // Scroll into view
-        window.scrollTo({
-          top: successView.offsetTop - 80,
-          behavior: 'smooth'
-        });
+          // Scroll into view
+          window.scrollTo({
+            top: successView.offsetTop - 80,
+            behavior: 'smooth'
+          });
 
-        // Trigger celebration toast notification
-        const toast = document.getElementById('siteToast');
-        if (toast && window.bootstrap && bootstrap.Toast) {
-          document.getElementById('toastBody').textContent = `సభ్యత్వం విజయవంతంగా పూర్తయింది! సభ్యత్వ సంఖ్య: ${memberId}`;
-          const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
-          bsToast.show();
+          // Trigger celebration toast notification
+          const toast = document.getElementById('siteToast');
+          if (toast && window.bootstrap && bootstrap.Toast) {
+            document.getElementById('toastBody').textContent = `సభ్యత్వం విజయవంతంగా పూర్తయింది! సభ్యత్వ సంఖ్య: ${memberId}`;
+            const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
+            bsToast.show();
+          }
         }
+
+        // Open Static Razorpay Checkout Modal for Membership
+        openMemRazorpayCheckout(nameVal, mobileVal, function () {
+          finishMembershipRegistration();
+        });
       });
 
       // Register Another Member
@@ -1930,13 +2133,9 @@
         if (mandalInput) mandalInput.value = '';
         if (villageInput) villageInput.value = '';
 
-        if (inlineQrBox) inlineQrBox.style.display = 'none';
-        paymentCards.forEach(c => c.classList.remove('active'));
-        const upiCard = document.querySelector('.mem-method-card[data-method="upi"]');
-        if (upiCard) upiCard.classList.add('active');
-        if (subpanelUpi) subpanelUpi.style.display = 'block';
-        if (subpanelCard) subpanelCard.style.display = 'none';
-        if (subpanelNet) subpanelNet.style.display = 'none';
+        // Clear errors
+        document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+        document.querySelectorAll('.mem-error-text').forEach(el => el.style.display = 'none');
 
         successView.classList.remove('is-visible');
         formView.style.display = 'block';

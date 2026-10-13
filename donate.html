@@ -22,7 +22,7 @@
       try {
         var s = localStorage.getItem('prajaseva_lang');
         if (s) document.documentElement.lang = s;
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 </head>
@@ -41,7 +41,8 @@
             <img src="assets/images/party-emblem.png" alt="పార్టీ చిహ్నం" class="brand-emblem-img">
           </div>
           <div class="brand-leader-frame" title="పార్టీ నాయకుడు">
-            <img src="assets/images/passport1.png" alt="నాయకుడు" class="brand-leader-img">
+            <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="నాయకుడు"
+              class="brand-leader-img">
           </div>
         </a>
 
@@ -85,7 +86,8 @@
         <div class="header-right-controls d-flex align-items-center">
 
           <!-- Language Dropdown Capsule (తెలుగు ⌄) -->
-          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn" aria-label="భాషను మార్చండి / Switch Language">
+          <button type="button" class="lang-dropdown-capsule" id="lang-toggle-btn"
+            aria-label="భాషను మార్చండి / Switch Language">
             <span class="lang-label" id="lang-current-label">తెలుగు</span>
             <i class="bi bi-chevron-down lang-chevron-icon"></i>
           </button>
@@ -111,8 +113,8 @@
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
-            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="toggle-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -129,7 +131,7 @@
           var l = document.getElementById('lang-current-label');
           if (l) l.textContent = 'English';
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -202,19 +204,63 @@
         <!-- Form View -->
         <div id="donationFormView">
           <!-- Card Header -->
+          <div class="don-form-accent" aria-hidden="true"></div>
           <h2 class="don-form-title" data-i18n="donFormTitle">ప్రజా సేవకు మీ సహకారం అందించండి</h2>
           <p class="don-form-sub" data-i18n="donFormSub">
             తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం మీ విరాళం ఎంతో విలువైనది.
           </p>
-          <div class="don-form-accent" aria-hidden="true"></div>
 
-          <!-- Donation Form -->
+          <!-- Donation Form Matching Mockup -->
           <form id="dedicatedDonationForm" novalidate>
 
-            <!-- 2-Column Fields Grid: Name, Mobile, Email, Town/District -->
             <div class="don-fields-grid-2">
 
-              <!-- 1. Full Name -->
+              <!-- 1. Country of Present Residence -->
+              <div class="don-form-group">
+                <label for="donCountry" class="don-form-label">
+                  <i class="bi bi-globe2"></i>
+                  <span data-i18n="donLblCountry">ప్రస్తుత నివాస దేశం</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <select id="donCountry" class="don-input don-select" required>
+                    <option value="India" selected data-i18n="countryIndia">భారతదేశం (India)</option>
+                    <option value="USA" data-i18n="countryUSA">అమెరికా (USA)</option>
+                    <option value="UK" data-i18n="countryUK">యూకే (UK)</option>
+                    <option value="UAE" data-i18n="countryUAE">యూఏఈ (UAE)</option>
+                    <option value="Australia" data-i18n="countryAustralia">ఆస్ట్రేలియా (Australia)</option>
+                    <option value="Canada" data-i18n="countryCanada">కెనడా (Canada)</option>
+                    <option value="Other" data-i18n="countryOther">ఇతర దేశాలు (Other)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 2. Select State -->
+              <div class="don-form-group">
+                <label for="donState" class="don-form-label">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="donLblState">రాష్ట్రాన్ని ఎంచుకోండి</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <select id="donState" class="don-input don-select" required>
+                    <option value="" disabled selected data-i18n="donPlcState">దయచేసి రాష్ట్రాన్ని ఎంచుకోండి</option>
+                    <option value="Telangana" data-i18n="stateTelangana">తెలంగాణ</option>
+                    <option value="Andhra Pradesh" data-i18n="stateAP">ఆంధ్రప్రదేశ్</option>
+                    <option value="Maharashtra" data-i18n="stateMH">మహారాష్ట్ర</option>
+                    <option value="Karnataka" data-i18n="stateKA">కర్ణాటక</option>
+                    <option value="Tamil Nadu" data-i18n="stateTN">తమిళనాడు</option>
+                    <option value="Kerala" data-i18n="stateKL">కేరళ</option>
+                    <option value="Delhi" data-i18n="stateDL">ఢిల్లీ</option>
+                    <option value="Gujarat" data-i18n="stateGJ">గుజరాత్</option>
+                    <option value="Uttar Pradesh" data-i18n="stateUP">ఉత్తరప్రదేశ్</option>
+                    <option value="Other" data-i18n="stateOther">ఇతర రాష్ట్రం / కేంద్రపాలిత ప్రాంతం</option>
+                  </select>
+                  <div class="don-error-text" id="errDonState">దయచేసి రాష్ట్రాన్ని ఎంచుకోండి.</div>
+                </div>
+              </div>
+
+              <!-- 3. Full Name -->
               <div class="don-form-group">
                 <label for="donFullName" class="don-form-label">
                   <i class="bi bi-person-fill"></i>
@@ -228,7 +274,52 @@
                 </div>
               </div>
 
-              <!-- 2. Mobile Number (10 Digits strictly) -->
+              <!-- 4. Gender -->
+              <div class="don-form-group">
+                <label class="don-form-label">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="donLblGender">లింగం</span>
+                </label>
+                <div class="don-gender-row">
+                  <label class="don-radio-pill">
+                    <input type="radio" name="donGender" value="Male" checked>
+                    <span data-i18n="donGenderMale">పురుషుడు</span>
+                  </label>
+                  <label class="don-radio-pill">
+                    <input type="radio" name="donGender" value="Female">
+                    <span data-i18n="donGenderFemale">స్త్రీ</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 5. Amount (INR) - Full Width -->
+              <div class="don-form-group don-col-span-2">
+                <label for="customAmountInput" class="don-form-label">
+                  <i class="bi bi-currency-rupee"></i>
+                  <span data-i18n="donLblAmount">విరాళం మొత్తం (INR)</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="number" id="customAmountInput" class="don-input" min="10" max="1000000"
+                    placeholder="విరాళం మొత్తం నమోదు చేయండి" data-i18n-placeholder="donPlcAmount" required>
+                  <div class="don-error-text" id="errDonAmount">దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 6. Date of Birth - Full Width -->
+              <div class="don-form-group don-col-span-2">
+                <label for="donDob" class="don-form-label">
+                  <i class="bi bi-calendar-event-fill"></i>
+                  <span data-i18n="donLblDob">పుట్టిన తేదీ</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="date" id="donDob" class="don-input" required>
+                  <div class="don-error-text" id="errDonDob">దయచేసి మీ పుట్టిన తేదీని నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 7. Mobile/Cellphone -->
               <div class="don-form-group">
                 <label for="donMobile" class="don-form-label">
                   <i class="bi bi-telephone-fill"></i>
@@ -236,177 +327,175 @@
                   <span class="req-star">*</span>
                 </label>
                 <div class="don-input-wrap">
-                  <input type="tel" id="donMobile" class="don-input" placeholder="10 అంకెల మొబైల్ నంబర్"
+                  <input type="tel" id="donMobile" class="don-input" placeholder="10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి"
                     data-i18n-placeholder="donPlcMobile" maxlength="10" inputmode="numeric" required autocomplete="tel">
-                  <div class="don-error-text" id="errDonMobile">దయచేసి చెల్లుబాటు అయ్యే 10 అంకెల మొబైల్ నంబరును నమోదు
-                    చేయండి.</div>
+                  <div class="don-error-text" id="errDonMobile">దయచేసి సరైన 10 అంకెల మొబైల్ నంబరును నమోదు చేయండి.</div>
                 </div>
               </div>
 
-              <!-- 3. Email (Optional) -->
+              <!-- 8. Email -->
               <div class="don-form-group">
                 <label for="donEmail" class="don-form-label">
                   <i class="bi bi-envelope-fill"></i>
                   <span data-i18n="donLblEmail">ఈమెయిల్</span>
+                  <span class="req-star">*</span>
                 </label>
                 <div class="don-input-wrap">
-                  <input type="email" id="donEmail" class="don-input" placeholder="మీ ఈమెయిల్ (ఐచ్ఛికం)"
-                    data-i18n-placeholder="donPlcEmail" autocomplete="email">
+                  <input type="email" id="donEmail" class="don-input" placeholder="మీ ఈమెయిల్ చిరునామా నమోదు చేయండి"
+                    data-i18n-placeholder="donPlcEmail" required autocomplete="email">
                   <div class="don-error-text" id="errDonEmail">దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.</div>
                 </div>
               </div>
 
-              <!-- 4. Town / District (Searchable Dropdown) -->
+              <!-- 9. City -->
               <div class="don-form-group">
-                <label for="donLocationTrigger" class="don-form-label">
-                  <i class="bi bi-geo-alt-fill"></i>
-                  <span data-i18n="donLblLocation">పట్టణం / జిల్లా</span>
+                <label for="donCity" class="don-form-label">
+                  <i class="bi bi-building"></i>
+                  <span data-i18n="donLblCity">నగరం / పట్టణం</span>
+                  <span class="req-star">*</span>
                 </label>
-                <div class="searchable-select" id="locationSelect">
-                  <div class="searchable-trigger" id="donLocationTrigger" tabindex="0" role="combobox"
-                    aria-expanded="false">
-                    <span class="searchable-trigger-text is-placeholder" id="locationTriggerText"
-                      data-i18n="donPlcLocation">పట్టణం / జిల్లా ఎంచుకోండి</span>
-                    <i class="bi bi-chevron-down searchable-trigger-icon"></i>
+                <div class="don-input-wrap">
+                  <input type="text" id="donCity" class="don-input" placeholder="మీ నగరం నమోదు చేయండి"
+                    data-i18n-placeholder="donPlcCity" required>
+                  <div class="don-error-text" id="errDonCity">దయచేసి మీ నగరం / పట్టణం నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 10. Pin / Zipcode -->
+              <div class="don-form-group">
+                <label for="donPincode" class="don-form-label">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="donLblPincode">పిన్ / జిప్‌కోడ్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="text" id="donPincode" class="don-input" placeholder="పిన్ / జిప్‌కోడ్ నమోదు చేయండి"
+                    data-i18n-placeholder="donPlcPincode" maxlength="6" inputmode="numeric" required>
+                  <div class="don-error-text" id="errDonPincode">దయచేసి సరైన 6 అంకెల పిన్ కోడ్ నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 11. Address - Full Width -->
+              <div class="don-form-group don-col-span-2">
+                <label for="donAddress" class="don-form-label">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span data-i18n="donLblAddress">పూర్తి చిరునామా</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <textarea id="donAddress" class="don-input don-textarea" rows="3"
+                    placeholder="మీ పూర్తి చిరునామా నమోదు చేయండి" data-i18n-placeholder="donPlcAddress"
+                    required></textarea>
+                  <div class="don-error-text" id="errDonAddress">దయచేసి మీ పూర్తి చిరునామా నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 12. PAN Number -->
+              <div class="don-form-group">
+                <label for="donPan" class="don-form-label">
+                  <i class="bi bi-card-text"></i>
+                  <span data-i18n="donLblPan">పాన్ నంబర్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="text" id="donPan" class="don-input text-uppercase"
+                    placeholder="మీ పాన్ నంబర్ నమోదు చేయండి" data-i18n-placeholder="donPlcPan" maxlength="10" required>
+                  <div class="don-error-text" id="errDonPan">దయచేసి సరైన పాన్ నంబర్ (ఉదా: ABCDE1234F) నమోదు చేయండి.
                   </div>
-                  <div class="searchable-dropdown">
-                    <div class="searchable-search-wrap">
-                      <i class="bi bi-search"></i>
-                      <input type="text" class="searchable-search-input" placeholder="జిల్లా / పట్టణం శోధించండి..."
-                        autocomplete="off">
-                    </div>
-                    <div class="searchable-options-list" id="locationOptionsList" role="listbox">
-                      <!-- Populated via script with Telangana districts -->
-                    </div>
-                  </div>
-                  <input type="hidden" id="donLocation" name="donLocation" value="">
+                </div>
+              </div>
+
+              <!-- 13. PAN Image -->
+              <div class="don-form-group">
+                <label for="donPanFile" class="don-form-label">
+                  <i class="bi bi-cloud-arrow-up-fill"></i>
+                  <span data-i18n="donLblPanImage">పాన్ కార్డు చిత్రం</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="file" id="donPanFile" class="don-file-input" accept=".jpg,.jpeg,.png,.gif,.pdf">
+                  <div class="don-file-help" data-i18n="donFileHelp">(jpg, png, gif మరియు pdf)</div>
+                  <div class="don-error-text" id="errDonPanFile">దయచేసి పాన్ కార్డు ఫైల్ ఎంచుకోండి.</div>
+                </div>
+              </div>
+
+              <!-- 14. Aadhar Number -->
+              <div class="don-form-group">
+                <label for="donAadhar" class="don-form-label">
+                  <i class="bi bi-person-vcard-fill"></i>
+                  <span data-i18n="donLblAadhar">ఆధార్ నంబర్</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="text" id="donAadhar" class="don-input" placeholder="మీ ఆధార్ నంబర్ నమోదు చేయండి"
+                    data-i18n-placeholder="donPlcAadhar" maxlength="12" inputmode="numeric" required>
+                  <div class="don-error-text" id="errDonAadhar">దయచేసి సరైన 12 అంకెల ఆధార్ సంఖ్య నమోదు చేయండి.</div>
+                </div>
+              </div>
+
+              <!-- 15. Aadhar Image -->
+              <div class="don-form-group">
+                <label for="donAadharFile" class="don-form-label">
+                  <i class="bi bi-cloud-arrow-up-fill"></i>
+                  <span data-i18n="donLblAadharImage">ఆధార్ కార్డు చిత్రం</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="don-input-wrap">
+                  <input type="file" id="donAadharFile" class="don-file-input" accept=".jpg,.jpeg,.png,.gif,.pdf">
+                  <div class="don-file-help" data-i18n="donFileHelp">(jpg, png, gif మరియు pdf)</div>
+                  <div class="don-error-text" id="errDonAadharFile">దయచేసి ఆధార్ కార్డు ఫైల్ ఎంచుకోండి.</div>
                 </div>
               </div>
 
             </div>
 
-            <!-- 5. Donation Amount Section -->
-            <div class="don-amount-section">
+            <!-- 16. Payment Method Section: Razorpay Only -->
+            <div class="don-method-section mt-3">
               <label class="don-form-label">
-                <i class="bi bi-currency-rupee"></i>
-                <span data-i18n="donLblAmount">విరాళం మొత్తం</span>
-                <span class="req-star">*</span>
-              </label>
-
-              <!-- Amount Preset Pills -->
-              <div class="don-amount-pills-row" id="amountPillsRow">
-                <button type="button" class="don-pill-btn" data-amt="500">₹500</button>
-                <button type="button" class="don-pill-btn active" data-amt="1000">₹1,000</button>
-                <button type="button" class="don-pill-btn" data-amt="2000">₹2,000</button>
-                <button type="button" class="don-pill-btn" data-amt="5000">₹5,000</button>
-                <button type="button" class="don-pill-btn" data-amt="other" data-i18n="donAmtOther">ఇతర మొత్తం</button>
-              </div>
-
-              <!-- Custom Amount Input Field -->
-              <div class="don-custom-amount-wrap">
-                <span class="don-currency-prefix">₹</span>
-                <input type="number" id="customAmountInput" class="don-input don-custom-amount-input" value="1000"
-                  min="10" max="1000000" placeholder="మొత్తం నమోదు చేయండి (₹)" data-i18n-placeholder="donPlcAmount"
-                  required>
-              </div>
-              <div class="don-error-text" id="errDonAmount">దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.</div>
-            </div>
-
-            <!-- 6. Payment Method Section -->
-            <div class="don-method-section">
-              <label class="don-form-label">
-                <i class="bi bi-credit-card-2-front-fill"></i>
+                <i class="bi bi-shield-check"></i>
                 <span data-i18n="donLblPaymentMethod">చెల్లింపు పద్ధతి</span>
                 <span class="req-star">*</span>
               </label>
 
-              <!-- 3 Interactive Cards: UPI, Card, Net Banking -->
-              <div class="don-method-grid" id="paymentMethodGrid">
-                <!-- Method 1: UPI -->
-                <div class="don-method-card active" data-method="upi" tabindex="0" role="button">
-                  <i class="bi bi-qr-code-scan don-method-icon"></i>
-                  <div class="don-method-title" data-i18n="donPayUpi">UPI</div>
-                  <div class="don-method-sub" data-i18n="donPayUpiSub">UPI ద్వారా</div>
+              <!-- Razorpay Only Payment Card -->
+              <div class="don-rzp-card" id="razorpayGatewayCard">
+                <div class="don-rzp-card-header">
+                  <div class="don-rzp-brand">
+                    <span class="don-rzp-icon-wrap">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.2 2L4 15.2H11.6L9.2 22.4L20.8 9.2H13.2V2Z" fill="#0C2340" />
+                        <path d="M14.6 2L5.4 15.2H13L10.6 22.4L22.2 9.2H14.6V2Z" fill="#0284C7" />
+                      </svg>
+                    </span>
+                    <div>
+                      <div class="don-rzp-title">
+                        <span data-i18n="donPayRazorpay">Razorpay</span>
+                        <span class="don-rzp-badge" data-i18n="donRazorpayBadge">సురక్షిత గేట్‌వే</span>
+                      </div>
+                      <div class="don-rzp-sub" data-i18n="donRazorpaySub">UPI • క్రెడిట్/డెబిట్ కార్డులు • నెట్
+                        బ్యాంకింగ్ • వాలెట్స్</div>
+                    </div>
+                  </div>
+                  <span class="don-rzp-check"><i class="bi bi-check-circle-fill"></i></span>
                 </div>
 
-                <!-- Method 2: Card -->
-                <div class="don-method-card" data-method="card" tabindex="0" role="button">
-                  <i class="bi bi-credit-card-fill don-method-icon"></i>
-                  <div class="don-method-title" data-i18n="donPayCard">కార్డ్</div>
-                  <div class="don-method-sub" data-i18n="donPayCardSub">డెబిట్ / క్రెడిట్ కార్డ్</div>
+                <div class="don-rzp-pill-row">
+                  <span class="rzp-pill"><i class="bi bi-qr-code text-danger"></i> GPay / PhonePe / Paytm</span>
+                  <span class="rzp-pill"><i class="bi bi-credit-card-2-front text-success"></i> All Debit / Credit
+                    Cards</span>
+                  <span class="rzp-pill"><i class="bi bi-bank text-primary"></i> 50+ Banks</span>
+                  <span class="rzp-pill"><i class="bi bi-wallet2 text-warning"></i> Wallets</span>
                 </div>
 
-                <!-- Method 3: Net Banking -->
-                <div class="don-method-card" data-method="netbanking" tabindex="0" role="button">
-                  <i class="bi bi-bank2 don-method-icon"></i>
-                  <div class="don-method-title" data-i18n="donPayNet">నెట్ బ్యాంకింగ్</div>
-                  <div class="don-method-sub" data-i18n="donPayNetSub">ఇంటర్నెట్ బ్యాంకింగ్</div>
-                </div>
-              </div>
-
-              <!-- Dynamic Subpanels for Selected Method -->
-              <!-- UPI Panel -->
-              <div class="don-subpanel active" id="subpanelUpi">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="small fw-bold text-dark"><i class="bi bi-phone"></i> ఏదైనా UPI యాప్ ద్వారా
-                    చెల్లించండి:</span>
-                  <span class="badge bg-success-subtle text-success border border-success-subtle">తక్షణ ధృవీకరణ</span>
-                </div>
-                <div class="row g-2 align-items-center">
-                  <div class="col-sm-8">
-                    <input type="text" id="upiIdInput" class="don-input"
-                      placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)"
-                      style="height: 40px; font-size: 0.88rem;">
-                  </div>
-                  <div class="col-sm-4">
-                    <button type="button" id="btnShowQr" class="btn btn-outline-danger w-100 text-truncate"
-                      style="height: 40px; font-size: 0.84rem; border-radius: 8px;">
-                      <i class="bi bi-qr-code"></i> QR కోడ్ చూపించు
-                    </button>
-                  </div>
-                </div>
-                <div id="inlineQrCodeBox" class="mt-2 text-center p-2 bg-white rounded border" style="display: none;">
-                  <img src="assets/images/qr-code.svg" alt="UPI QR" style="width: 140px; height: 140px;"
-                    class="mx-auto d-block">
-                  <div class="small text-muted mt-1">GPay, PhonePe, Paytm తో స్కాన్ చేయండి</div>
-                  <div class="badge bg-danger-subtle text-danger mt-1">prajasevaparty@upi</div>
-                </div>
-              </div>
-
-              <!-- Card Panel -->
-              <div class="don-subpanel" id="subpanelCard">
-                <div class="small fw-bold text-dark mb-2"><i class="bi bi-shield-lock"></i> కార్డ్ వివరాలు:</div>
-                <div class="row g-2">
-                  <div class="col-12">
-                    <input type="text" class="don-input" placeholder="కార్డ్ నంబర్ (16 అంకెలు)" maxlength="19"
-                      style="height: 40px; font-size: 0.88rem;">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" class="don-input" placeholder="MM / YY" maxlength="5"
-                      style="height: 40px; font-size: 0.88rem;">
-                  </div>
-                  <div class="col-6">
-                    <input type="password" class="don-input" placeholder="CVV" maxlength="3"
-                      style="height: 40px; font-size: 0.88rem;">
-                  </div>
-                </div>
-              </div>
-
-              <!-- Net Banking Panel -->
-              <div class="don-subpanel" id="subpanelNetbanking">
-                <div class="small fw-bold text-dark mb-2"><i class="bi bi-building"></i> ప్రముఖ బ్యాంకులు:</div>
-                <div class="don-bank-pill-row">
-                  <span class="don-bank-pill active">SBI</span>
-                  <span class="don-bank-pill">HDFC</span>
-                  <span class="don-bank-pill">ICICI</span>
-                  <span class="don-bank-pill">Axis Bank</span>
-                  <span class="don-bank-pill">Union Bank</span>
-                  <span class="don-bank-pill">Canara Bank</span>
+                <div class="don-rzp-note">
+                  <i class="bi bi-shield-lock-fill"></i>
+                  <span data-i18n="donRazorpayDesc">మీరు 'విరాళం చెల్లించండి' క్లిక్ చేసినప్పుడు, Razorpay అధికారిక
+                    సురక్షిత చెల్లింపు పాప్-అప్ ద్వారా సులభంగా చెల్లించవచ్చు.</span>
                 </div>
               </div>
             </div>
 
-            <!-- 7. Consent Checkbox -->
+            <!-- 17. Consent Checkbox -->
             <div class="don-consent-group" id="donConsentWrap">
               <label class="don-checkbox-label">
                 <input type="checkbox" id="donConsentCheck" checked required>
@@ -419,17 +508,18 @@
               <div class="don-error-text" id="errDonConsent">దయచేసి నిబంధనలను అంగీకరించండి.</div>
             </div>
 
-            <!-- 8. Submit Button: Yellow CTA -->
+            <!-- 18. Submit Button: Yellow CTA -->
             <button type="submit" id="btnDonPay" class="btn-don-pay-cta">
               <i class="bi bi-lock-fill"></i>
               <span data-i18n="donBtnPayNow">విరాళం చెల్లించండి</span>
               <i class="bi bi-arrow-right"></i>
             </button>
 
-            <!-- 9. Security Trust Note -->
+            <!-- 19. Security Trust Note -->
             <div class="don-security-note">
               <i class="bi bi-shield-fill-check"></i>
-              <span data-i18n="donSecurityNote">మీ చెల్లింపు సమాచారం పూర్తిగా సురక్షితం.</span>
+              <span data-i18n="donSecurityNote">మీ చెల్లింపు సమాచారం పూర్తిగా సురక్షితం. 256-బిట్ ఎన్‌క్రిప్షన్ ద్వారా
+                రక్షించబడింది.</span>
             </div>
 
           </form>
@@ -589,11 +679,16 @@
               </span>
             </div>
             <ul class="footer-links-list">
-              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span data-i18n="navHome">హోమ్</span></a></li>
-              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా గురించి</span></a></li>
-              <li><a href="index.html#about-party"><span class="f-link-chev">&#8250;</span> <span data-i18n="navLeadership">మా నాయకులు</span></a></li>
-              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navNews">వార్తలు</span></a></li>
-              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
+              <li><a href="index.html#home"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navHome">హోమ్</span></a></li>
+              <li><a href="about.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkAbout">మా
+                    గురించి</span></a></li>
+              <li><a href="index.html#about-party"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navLeadership">మా నాయకులు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navNews">వార్తలు</span></a></li>
+              <li><a href="index.html#gallery"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkGallery">ఫోటో గ్యాలరీ</span></a></li>
             </ul>
           </div>
           <!-- Column 2: Our Programs -->
@@ -605,10 +700,14 @@
               </span>
             </div>
             <ul class="footer-links-list">
-              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
-              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
-              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
-              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkDonation">విరాళం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkMembership">సభ్యత్వం</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkVolunteer">స్వచ్ఛంద సేవకులుగా చేరండి</span></a></li>
+              <li><a href="index.html#upcoming-events"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navEvents">కార్యక్రమాలు</span></a></li>
+              <li><a href="donate.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkDonation">విరాళం</span></a></li>
             </ul>
           </div>
           <!-- Column 3: Help & Support -->
@@ -620,11 +719,16 @@
               </span>
             </div>
             <ul class="footer-links-list">
-              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన అంశాలు</span></a></li>
-              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా కేంద్రం</span></a></li>
-              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
-              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
-              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
+              <li><a href="issues.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="navPolicies">10 ప్రధాన
+                    అంశాలు</span></a></li>
+              <li><a href="news.html"><span class="f-link-chev">&#8250;</span> <span data-i18n="fLinkMediaCenter">మీడియా
+                    కేంద్రం</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkFAQ">తరచుగా అడిగే ప్రశ్నలు</span></a></li>
+              <li><a href="membership.html"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="fLinkCareers">ఉద్యోగ / సభ్యత్వ అవకాశాలు</span></a></li>
+              <li><a href="index.html#contact"><span class="f-link-chev">&#8250;</span> <span
+                    data-i18n="navContact">మమ్మల్ని సంప్రదించండి</span></a></li>
             </ul>
           </div>
           <!-- Column 4: Headquarters -->
@@ -677,7 +781,8 @@
           &copy; 2026 ప్రజా సేవా పార్టీ. అన్ని హక్కులు రిజర్వ్ చేయబడినవి.
         </div>
         <div class="f-developer-credit">
-          Designed &amp; Developed by <a href="https://sunseaz.com" target="_blank" rel="noopener noreferrer">Sunseaz Technologies</a>
+          Designed &amp; Developed by <a href="https://sunseaz.com" target="_blank" rel="noopener noreferrer">Sunseaz
+            Technologies</a>
         </div>
         <nav class="f-legal-links" aria-label="Legal Links">
           <a href="#" data-i18n="footerPrivacy">గోప్యతా విధానం</a>
@@ -692,6 +797,145 @@
     </div>
   </footer>
 
+  <!-- ==========================================================================
+       Static Razorpay Checkout Modal (Direct Interactive Simulation)
+       ========================================================================== -->
+  <div class="rzp-modal-backdrop" id="rzpCheckoutModal" aria-hidden="true">
+    <div class="rzp-modal-window" role="dialog" aria-modal="true" aria-labelledby="rzpModalTitle">
+      <!-- Processing Overlay -->
+      <div class="rzp-processing-overlay" id="rzpProcessingOverlay">
+        <div class="rzp-spinner" id="rzpSpinner"></div>
+        <i class="bi bi-check-circle-fill rzp-success-badge" id="rzpSuccessBadge"></i>
+        <div class="rzp-process-text" id="rzpProcessTitle">Razorpay తో అనుసంధానించబడుతోంది...</div>
+        <div class="rzp-process-sub" id="rzpProcessSubtitle">సురక్షిత బ్యాంక్ గేట్‌వే ద్వారా ప్రాసెస్ చేయబడుతోంది...
+        </div>
+      </div>
+
+      <!-- Top Header -->
+      <div class="rzp-modal-header">
+        <div class="rzp-brand-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.2 2L4 15.2H11.6L9.2 22.4L20.8 9.2H13.2V2Z" fill="#FFFFFF" />
+            <path d="M14.6 2L5.4 15.2H13L10.6 22.4L22.2 9.2H14.6V2Z" fill="#38BDF8" />
+          </svg>
+          <div>
+            <div class="rzp-header-title" id="rzpModalTitle">Razorpay Trusted Business</div>
+            <div class="rzp-header-sub"><i class="bi bi-shield-shaded"></i> 100% Verified Secure Gateway</div>
+          </div>
+        </div>
+        <button type="button" class="rzp-btn-close" id="btnRzpModalClose" title="మూసివేయి / Close">&times;</button>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="rzp-summary-box">
+        <div class="rzp-merchant-info">
+          <img src="assets/images/party-emblem.png" alt="Praja Seva Party" class="rzp-merchant-logo">
+          <div>
+            <div class="rzp-merchant-name">ప్రజాసేవ పార్టీ (PSP)</div>
+            <div class="rzp-order-desc" id="rzpModalDonorDesc">పార్టీ విరాళం / Party Contribution</div>
+          </div>
+        </div>
+        <div class="rzp-amount-box">
+          <div class="rzp-amount-lbl">మొత్తం / Amount</div>
+          <div class="rzp-amount-num" id="rzpModalAmountText">₹1,000</div>
+        </div>
+      </div>
+
+      <!-- Methods Nav & Panels -->
+      <div class="rzp-modal-body">
+        <nav class="rzp-methods-nav">
+          <button type="button" class="rzp-nav-item active" data-tab="upi">
+            <i class="bi bi-qr-code text-danger"></i> UPI / QR
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="cards">
+            <i class="bi bi-credit-card text-success"></i> Cards
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="netbanking">
+            <i class="bi bi-bank text-primary"></i> Net Banking
+          </button>
+          <button type="button" class="rzp-nav-item" data-tab="wallets">
+            <i class="bi bi-wallet2 text-warning"></i> Wallets
+          </button>
+        </nav>
+
+        <!-- UPI Tab Panel -->
+        <div class="rzp-tab-panel active" id="rzpTabUpi">
+          <div class="rzp-qr-wrap">
+            <img src="assets/images/qr-code.svg" alt="UPI QR Code" class="rzp-qr-code-img">
+            <div class="rzp-qr-note">Scan with GPay, PhonePe, Paytm or BHIM</div>
+            <div class="small text-muted mt-1">UPI ID: <strong>prajasevaparty@razorpay</strong></div>
+          </div>
+          <div class="rzp-vpa-row">
+            <input type="text" class="rzp-vpa-input" id="rzpVpaInput"
+              placeholder="మీ UPI ID నమోదు చేయండి (ఉదా: 9876543210@upi)">
+          </div>
+        </div>
+
+        <!-- Cards Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpTabCards">
+          <div class="rzp-card-fields">
+            <div>
+              <label class="small text-muted mb-1 d-block">కార్డు సంఖ్య / Card Number</label>
+              <input type="text" class="rzp-card-input" id="rzpCardNumber" value="4111 2222 3333 4444"
+                placeholder="4111 2222 3333 4444">
+            </div>
+            <div class="rzp-card-row">
+              <div>
+                <label class="small text-muted mb-1 d-block">గడువు / Valid Thru</label>
+                <input type="text" class="rzp-card-input" id="rzpCardExpiry" value="12/28" placeholder="MM/YY">
+              </div>
+              <div>
+                <label class="small text-muted mb-1 d-block">CVV</label>
+                <input type="password" class="rzp-card-input" id="rzpCardCvv" value="123" placeholder="CVV"
+                  maxlength="3">
+              </div>
+            </div>
+            <div>
+              <label class="small text-muted mb-1 d-block">కార్డుదారుని పేరు / Cardholder Name</label>
+              <input type="text" class="rzp-card-input" id="rzpCardHolder" placeholder="కార్డుదారుని పేరు">
+            </div>
+          </div>
+        </div>
+
+        <!-- Netbanking Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpTabNetbanking">
+          <div class="small text-muted mb-2">ప్రజాదరణ పొందిన బ్యాంకులు:</div>
+          <div class="rzp-bank-grid">
+            <button type="button" class="rzp-bank-btn active"><i class="bi bi-bank2 text-primary"></i> SBI</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-danger"></i> HDFC</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-warning"></i> ICICI</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-info"></i> Axis</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-success"></i> Kotak</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-bank2 text-secondary"></i> 50+ Banks</button>
+          </div>
+        </div>
+
+        <!-- Wallets Tab Panel -->
+        <div class="rzp-tab-panel" id="rzpTabWallets">
+          <div class="small text-muted mb-2">వాలెట్ ఎంచుకోండి:</div>
+          <div class="rzp-bank-grid">
+            <button type="button" class="rzp-bank-btn active"><i class="bi bi-wallet2 text-primary"></i> Paytm</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-info"></i> Amazon Pay</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-warning"></i> Mobikwik</button>
+            <button type="button" class="rzp-bank-btn"><i class="bi bi-wallet2 text-success"></i> PhonePe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="rzp-modal-footer">
+        <button type="button" class="btn-rzp-submit-pay" id="btnRzpSubmitPay">
+          <i class="bi bi-lock-fill"></i>
+          <span id="rzpSubmitPayText">Pay ₹1,000</span>
+        </button>
+        <div class="rzp-security-tag">
+          <i class="bi bi-shield-lock-fill text-success"></i>
+          <span>Secured by Razorpay • 256-Bit SSL Bank Grade Encryption</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Floating Back to Top Button -->
   <a href="#site-header" class="back-to-top" id="backToTopBtn" title="పైకి వెళ్లండి" aria-label="Back to Top">
     <i class="bi bi-arrow-up"></i>
@@ -701,210 +945,43 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/translations.js?v=12.0"></script>
   <script src="assets/js/main.js?v=12.0"></script>
+  <!-- Razorpay Static Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- Dedicated Donation Page Logic -->
   <script>
     (function () {
-      // 33 Telangana Districts for Dropdown
-      const telanganaDistricts = [
-        "హైదరాబాద్ (Hyderabad)",
-        "రంగారెడ్డి (Ranga Reddy)",
-        "మేడ్చల్-మల్కాజిగిరి (Medchal-Malkajgiri)",
-        "వరంగల్ (Warangal)",
-        "హనుమకొండ (Hanumakonda)",
-        "కరీంనగర్ (Karimnagar)",
-        "ఖమ్మం (Khammam)",
-        "నిజామాబాద్ (Nizamabad)",
-        "నల్గొండ (Nalgonda)",
-        "సంగారెడ్డి (Sangareddy)",
-        "సిద్దిపేట (Siddipet)",
-        "మహబూబ్‌నగర్ (Mahabubnagar)",
-        "భద్రాద్రి కొత్తగూడెం (Bhadradri Kothagudem)",
-        "జగిత్యాల (Jagtial)",
-        "సూర్యాపేట (Suryapet)",
-        "మంచిర్యాల (Mancherial)",
-        "కామారెడ్డి (Kamareddy)",
-        "వికారాబాద్ (Vikarabad)",
-        "జనగాం (Jangaon)",
-        "అదిలాబాద్ (Adilabad)",
-        "జయశంకర్ భూపాలపల్లి (Jayashankar Bhupalpally)",
-        "జోగులాంబ గద్వాల (Jogulamba Gadwal)",
-        "కొమరం భీమ్ ఆసిఫాబాద్ (Kumuram Bheem Asifabad)",
-        "మహబూబాబాద్ (Mahabubabad)",
-        "మెదక్ (Medak)",
-        "ములుగు (Mulugu)",
-        "నాగర్‌కర్నూల్ (Nagarkurnool)",
-        "నారాయణపేట (Narayanpet)",
-        "నిర్మల్ (Nirmal)",
-        "పెద్దపల్లి (Peddapalli)",
-        "రాజన్న సిరిసిల్ల (Rajanna Sircilla)",
-        "వనపర్తి (Wanaparthy)",
-        "యాదాద్రి భువనగిరి (Yadadri Bhuvanagiri)"
-      ];
-
-      // Populate District / Town Searchable Select
-      const locList = document.getElementById('locationOptionsList');
-      const locTriggerText = document.getElementById('locationTriggerText');
-      const locHidden = document.getElementById('donLocation');
-      const locSelect = document.getElementById('locationSelect');
-      const locTrigger = document.getElementById('donLocationTrigger');
-      const locSearch = locSelect.querySelector('.searchable-search-input');
-
-      function initLocations() {
-        locList.innerHTML = '';
-        telanganaDistricts.forEach(dist => {
-          const opt = document.createElement('div');
-          opt.className = 'searchable-option';
-          opt.dataset.val = dist;
-          opt.textContent = dist;
-          opt.addEventListener('click', (e) => {
-            e.stopPropagation();
-            locList.querySelectorAll('.searchable-option').forEach(o => o.classList.remove('is-selected'));
-            opt.classList.add('is-selected');
-            locHidden.value = dist;
-            locTriggerText.textContent = dist;
-            locTriggerText.classList.remove('is-placeholder');
-            locSelect.classList.remove('is-open');
-            locTrigger.setAttribute('aria-expanded', 'false');
-          });
-          locList.appendChild(opt);
-        });
-      }
-      initLocations();
-
-      locTrigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = locSelect.classList.toggle('is-open');
-        locTrigger.setAttribute('aria-expanded', isOpen);
-        if (isOpen) {
-          locSearch.value = '';
-          filterLocations('');
-          setTimeout(() => locSearch.focus(), 50);
-        }
-      });
-
-      locSearch.addEventListener('input', (e) => {
-        filterLocations(e.target.value.toLowerCase());
-      });
-
-      locSearch.addEventListener('click', (e) => e.stopPropagation());
-
-      function filterLocations(query) {
-        let matchCount = 0;
-        locList.querySelectorAll('.searchable-option').forEach(opt => {
-          const text = opt.textContent.toLowerCase();
-          if (text.includes(query)) {
-            opt.style.display = 'block';
-            matchCount++;
-          } else {
-            opt.style.display = 'none';
-          }
-        });
+      function isEnglish() {
+        return (localStorage.getItem('prajaseva_lang') === 'en');
       }
 
-      document.addEventListener('click', () => {
-        locSelect.classList.remove('is-open');
-        locTrigger.setAttribute('aria-expanded', 'false');
-      });
-
-      // Amount Pills Sync
-      const amountPills = document.querySelectorAll('.don-pill-btn');
-      const customAmountInput = document.getElementById('customAmountInput');
-
-      amountPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          amountPills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          const amt = pill.dataset.amt;
-          if (amt === 'other') {
-            customAmountInput.value = '';
-            customAmountInput.focus();
-          } else {
-            customAmountInput.value = amt;
-          }
-          clearError('customAmountInput', 'errDonAmount');
-        });
-      });
-
-      customAmountInput.addEventListener('input', function () {
-        const val = this.value.trim();
-        let matched = false;
-        amountPills.forEach(pill => {
-          if (pill.dataset.amt === val) {
-            pill.classList.add('active');
-            matched = true;
-          } else {
-            pill.classList.remove('active');
-          }
-        });
-        if (!matched) {
-          const otherBtn = document.querySelector('.don-pill-btn[data-amt="other"]');
-          if (otherBtn) otherBtn.classList.add('active');
-        }
-        if (parseFloat(val) >= 10) {
-          clearError('customAmountInput', 'errDonAmount');
-        }
-      });
-
-      // Payment Method Cards & Subpanels
-      const methodCards = document.querySelectorAll('.don-method-card');
-      const subpanels = {
-        upi: document.getElementById('subpanelUpi'),
-        card: document.getElementById('subpanelCard'),
-        netbanking: document.getElementById('subpanelNetbanking')
-      };
-      let selectedMethod = 'upi';
-
-      methodCards.forEach(card => {
-        card.addEventListener('click', () => {
-          methodCards.forEach(c => c.classList.remove('active'));
-          card.classList.add('active');
-          selectedMethod = card.dataset.method;
-
-          // Toggle subpanel
-          Object.keys(subpanels).forEach(key => {
-            if (key === selectedMethod) {
-              subpanels[key].classList.add('active');
-            } else {
-              subpanels[key].classList.remove('active');
-            }
-          });
-        });
-      });
-
-      // Show QR Toggle Button in UPI subpanel
-      const btnShowQr = document.getElementById('btnShowQr');
-      const inlineQrCodeBox = document.getElementById('inlineQrCodeBox');
-      if (btnShowQr && inlineQrCodeBox) {
-        btnShowQr.addEventListener('click', () => {
-          const isShown = inlineQrCodeBox.style.display === 'block';
-          inlineQrCodeBox.style.display = isShown ? 'none' : 'block';
-          btnShowQr.innerHTML = isShown
-            ? '<i class="bi bi-qr-code"></i> QR కోడ్ చూపించు'
-            : '<i class="bi bi-x-circle"></i> QR మూసివేయి';
-        });
-      }
-
-      // Bank Pills in Net Banking subpanel
-      const bankPills = document.querySelectorAll('.don-bank-pill');
-      bankPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          bankPills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-        });
-      });
-
-      // Form Validation & Submission
+      // Elements
       const form = document.getElementById('dedicatedDonationForm');
       const formView = document.getElementById('donationFormView');
       const successView = document.getElementById('donationSuccessView');
 
-      function showError(inputId, errId, msg) {
+      const countrySelect = document.getElementById('donCountry');
+      const stateSelect = document.getElementById('donState');
+      const nameInput = document.getElementById('donFullName');
+      const customAmountInput = document.getElementById('customAmountInput');
+      const dobInput = document.getElementById('donDob');
+      const mobileInput = document.getElementById('donMobile');
+      const emailInput = document.getElementById('donEmail');
+      const cityInput = document.getElementById('donCity');
+      const pincodeInput = document.getElementById('donPincode');
+      const addressInput = document.getElementById('donAddress');
+      const panInput = document.getElementById('donPan');
+      const panFileInput = document.getElementById('donPanFile');
+      const aadharInput = document.getElementById('donAadhar');
+      const aadharFileInput = document.getElementById('donAadharFile');
+      const consentCheck = document.getElementById('donConsentCheck');
+
+      function showError(inputId, errId, teMsg, enMsg) {
         const el = document.getElementById(inputId);
         const err = document.getElementById(errId);
         if (el) el.classList.add('is-invalid');
         if (err) {
-          if (msg) err.textContent = msg;
+          err.textContent = isEnglish() ? enMsg : teMsg;
           err.classList.add('show');
         }
       }
@@ -916,110 +993,193 @@
         if (err) err.classList.remove('show');
       }
 
-      // Live digit restriction for Mobile (10 digits strictly)
-      const mobileInput = document.getElementById('donMobile');
-      mobileInput.addEventListener('input', function () {
-        this.value = this.value.replace(/[^0-9]/g, '');
-        if (this.value.length > 10) {
-          this.value = this.value.slice(0, 10);
+      // Live digit restriction & clear errors
+      if (mobileInput) {
+        mobileInput.addEventListener('input', function () {
+          this.value = this.value.replace(/[^0-9]/g, '');
+          if (this.value.length > 10) this.value = this.value.slice(0, 10);
+          if (this.value.length === 10) clearError('donMobile', 'errDonMobile');
+        });
+      }
+
+      if (pincodeInput) {
+        pincodeInput.addEventListener('input', function () {
+          this.value = this.value.replace(/[^0-9]/g, '');
+          if (this.value.length > 6) this.value = this.value.slice(0, 6);
+          if (this.value.length === 6) clearError('donPincode', 'errDonPincode');
+        });
+      }
+
+      if (aadharInput) {
+        aadharInput.addEventListener('input', function () {
+          this.value = this.value.replace(/[^0-9]/g, '');
+          if (this.value.length > 12) this.value = this.value.slice(0, 12);
+          if (this.value.length === 12) clearError('donAadhar', 'errDonAadhar');
+        });
+      }
+
+      if (panInput) {
+        panInput.addEventListener('input', function () {
+          this.value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+          if (this.value.length > 10) this.value = this.value.slice(0, 10);
+          if (this.value.length === 10) clearError('donPan', 'errDonPan');
+        });
+      }
+
+      if (nameInput) {
+        nameInput.addEventListener('input', function () {
+          if (this.value.trim().length >= 2) clearError('donFullName', 'errDonName');
+        });
+      }
+
+      if (cityInput) {
+        cityInput.addEventListener('input', function () {
+          if (this.value.trim().length >= 2) clearError('donCity', 'errDonCity');
+        });
+      }
+
+      if (addressInput) {
+        addressInput.addEventListener('input', function () {
+          if (this.value.trim().length >= 5) clearError('donAddress', 'errDonAddress');
+        });
+      }
+
+      if (stateSelect) {
+        stateSelect.addEventListener('change', function () {
+          if (this.value) clearError('donState', 'errDonState');
+        });
+      }
+
+      if (dobInput) {
+        dobInput.addEventListener('change', function () {
+          if (this.value) clearError('donDob', 'errDonDob');
+        });
+      }
+
+      if (customAmountInput) {
+        customAmountInput.addEventListener('input', function () {
+          const val = parseFloat(this.value);
+          if (val >= 10) clearError('customAmountInput', 'errDonAmount');
+        });
+      }
+
+      if (emailInput) {
+        emailInput.addEventListener('input', function () {
+          if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) clearError('donEmail', 'errDonEmail');
+        });
+      }
+
+      if (consentCheck) {
+        consentCheck.addEventListener('change', function () {
+          if (this.checked) clearError('donConsentCheck', 'errDonConsent');
+        });
+      }
+
+      // ======================================================================
+      // Interactive Static Razorpay Checkout Controller
+      // ======================================================================
+      const rzpModal = document.getElementById('rzpCheckoutModal');
+      const rzpModalClose = document.getElementById('btnRzpModalClose');
+      const rzpModalAmtText = document.getElementById('rzpModalAmountText');
+      const rzpSubmitPayText = document.getElementById('rzpSubmitPayText');
+      const rzpModalDonorDesc = document.getElementById('rzpModalDonorDesc');
+      const rzpOverlay = document.getElementById('rzpProcessingOverlay');
+      const rzpSpinner = document.getElementById('rzpSpinner');
+      const rzpSuccessBadge = document.getElementById('rzpSuccessBadge');
+      const rzpProcessTitle = document.getElementById('rzpProcessTitle');
+      const rzpProcessSubtitle = document.getElementById('rzpProcessSubtitle');
+      const btnRzpSubmitPay = document.getElementById('btnRzpSubmitPay');
+
+      let currentPaymentContext = null;
+
+      function openRazorpayCheckout(opts) {
+        currentPaymentContext = opts || {};
+        const amt = currentPaymentContext.amount || 1000;
+        const formattedAmt = `₹${amt.toLocaleString('en-IN')}`;
+
+        if (rzpModalAmtText) rzpModalAmtText.textContent = formattedAmt;
+        if (rzpSubmitPayText) rzpSubmitPayText.textContent = `Pay ${formattedAmt}`;
+        if (rzpModalDonorDesc) {
+          rzpModalDonorDesc.textContent = currentPaymentContext.name
+            ? `${isEnglish() ? 'Donor: ' : 'దాత: '}${currentPaymentContext.name}`
+            : (isEnglish() ? 'Party Contribution' : 'పార్టీ విరాళం');
         }
-        if (this.value.length === 10) {
-          clearError('donMobile', 'errDonMobile');
+
+        // Reset overlay
+        if (rzpOverlay) rzpOverlay.classList.remove('is-active');
+        if (rzpSpinner) rzpSpinner.style.display = 'block';
+        if (rzpSuccessBadge) rzpSuccessBadge.style.display = 'none';
+
+        if (rzpModal) {
+          rzpModal.classList.add('is-open');
+          rzpModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
         }
+      }
+
+      function closeRazorpayCheckout() {
+        if (rzpModal) {
+          rzpModal.classList.remove('is-open');
+          rzpModal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (rzpModalClose) {
+        rzpModalClose.addEventListener('click', closeRazorpayCheckout);
+      }
+
+      if (rzpModal) {
+        rzpModal.addEventListener('click', function (e) {
+          if (e.target === rzpModal) closeRazorpayCheckout();
+        });
+      }
+
+      // Tab switching inside Razorpay modal
+      const rzpTabBtns = document.querySelectorAll('.rzp-nav-item');
+      const rzpTabPanels = {
+        upi: document.getElementById('rzpTabUpi'),
+        cards: document.getElementById('rzpTabCards'),
+        netbanking: document.getElementById('rzpTabNetbanking'),
+        wallets: document.getElementById('rzpTabWallets')
+      };
+
+      rzpTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          rzpTabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const targetTab = btn.dataset.tab;
+          Object.keys(rzpTabPanels).forEach(key => {
+            if (rzpTabPanels[key]) {
+              rzpTabPanels[key].classList.toggle('active', key === targetTab);
+            }
+          });
+        });
       });
 
-      // Live Full Name validation
-      const nameInput = document.getElementById('donFullName');
-      nameInput.addEventListener('input', function () {
-        if (this.value.trim().length >= 2) {
-          clearError('donFullName', 'errDonName');
-        }
+      // Bank buttons selection inside Netbanking tab
+      document.querySelectorAll('.rzp-bank-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.rzp-bank-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
       });
 
-      // Consent Checkbox
-      const consentCheck = document.getElementById('donConsentCheck');
-      consentCheck.addEventListener('change', function () {
-        if (this.checked) {
-          clearError('donConsentCheck', 'errDonConsent');
-        }
-      });
+      // Complete donation and render receipt
+      function finishDonation(finalTxnId, methodLabel, donorName, donorMob, donorAmt) {
+        const nameToShow = donorName || (nameInput ? nameInput.value.trim() : '') || (isEnglish() ? 'PSP Supporter' : 'సహృదయ దాత');
+        const mobToShow = donorMob || (mobileInput ? mobileInput.value.trim() : '') || '9876543210';
+        const amtToShow = donorAmt || parseFloat(customAmountInput ? customAmountInput.value : 1000) || 1000;
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        let isValid = true;
-
-        // 1. Full Name
-        const nameVal = nameInput.value.trim();
-        if (nameVal.length < 2) {
-          showError('donFullName', 'errDonName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.');
-          isValid = false;
-        } else {
-          clearError('donFullName', 'errDonName');
-        }
-
-        // 2. Mobile
-        const mobVal = mobileInput.value.trim();
-        if (mobVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobVal)) {
-          showError('donMobile', 'errDonMobile', 'దయచేసి సరైన 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి (6-9 తో ప్రారంభం).');
-          isValid = false;
-        } else {
-          clearError('donMobile', 'errDonMobile');
-        }
-
-        // 3. Email (optional, but validate format if entered)
-        const emailInput = document.getElementById('donEmail');
-        const emailVal = emailInput.value.trim();
-        if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-          showError('donEmail', 'errDonEmail', 'దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.');
-          isValid = false;
-        } else {
-          clearError('donEmail', 'errDonEmail');
-        }
-
-        // 4. Amount
-        const amtVal = parseFloat(customAmountInput.value);
-        if (isNaN(amtVal) || amtVal < 10) {
-          showError('customAmountInput', 'errDonAmount', 'దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.');
-          isValid = false;
-        } else {
-          clearError('customAmountInput', 'errDonAmount');
-        }
-
-        // 5. Consent Check
-        if (!consentCheck.checked) {
-          showError('donConsentCheck', 'errDonConsent', 'దయచేసి వివరాల ధృవీకరణ నిబంధనను అంగీకరించండి.');
-          isValid = false;
-        } else {
-          clearError('donConsentCheck', 'errDonConsent');
-        }
-
-        if (!isValid) {
-          const firstErr = document.querySelector('.is-invalid');
-          if (firstErr) {
-            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-          return;
-        }
-
-        // Submission Simulation: Generate Receipt & Show Confirmation Card
-        const randomTxn = Math.floor(100000 + Math.random() * 900000);
-        const txnId = `PSP-TXN-2026-${randomTxn}`;
-
-        document.getElementById('receiptTxnId').textContent = txnId;
-        document.getElementById('receiptName').textContent = nameVal;
-        document.getElementById('receiptMobile').textContent = `+91 ${mobVal}`;
-        document.getElementById('receiptAmount').textContent = `₹${amtVal.toLocaleString('en-IN')}`;
-
-        let methodText = 'UPI (సురక్షిత చెల్లింపు)';
-        if (selectedMethod === 'card') methodText = 'డెబిట్ / క్రెడిట్ కార్డ్ (సురక్షిత చెల్లింపు)';
-        if (selectedMethod === 'netbanking') {
-          const activeBank = document.querySelector('.don-bank-pill.active');
-          methodText = `నెట్ బ్యాంకింగ్ (${activeBank ? activeBank.textContent : 'All Banks'})`;
-        }
-        document.getElementById('receiptMethod').textContent = methodText;
+        document.getElementById('receiptTxnId').textContent = finalTxnId;
+        document.getElementById('receiptName').textContent = nameToShow;
+        document.getElementById('receiptMobile').textContent = `+91 ${mobToShow}`;
+        document.getElementById('receiptAmount').textContent = `₹${amtToShow.toLocaleString('en-IN')}`;
+        document.getElementById('receiptMethod').textContent = methodLabel || (isEnglish() ? 'Razorpay (Secure Gateway)' : 'Razorpay (సురక్షిత గేట్‌వే)');
 
         const now = new Date();
-        const dateStr = now.toLocaleDateString('te-IN', { year: 'numeric', month: 'short', day: 'numeric' }) + ' ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        const dateLocale = isEnglish() ? 'en-IN' : 'te-IN';
+        const dateStr = now.toLocaleDateString(dateLocale, { year: 'numeric', month: 'short', day: 'numeric' }) + ' ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
         document.getElementById('receiptDate').textContent = dateStr;
 
         // Transition to Success Receipt
@@ -1029,36 +1189,184 @@
           top: successView.offsetTop - 80,
           behavior: 'smooth'
         });
+      }
+
+      // Execute payment processing when user clicks "Pay ₹..." inside Razorpay modal
+      if (btnRzpSubmitPay) {
+        btnRzpSubmitPay.addEventListener('click', function () {
+          if (!rzpOverlay) return;
+
+          rzpOverlay.classList.add('is-active');
+          if (rzpSpinner) rzpSpinner.style.display = 'block';
+          if (rzpSuccessBadge) rzpSuccessBadge.style.display = 'none';
+          if (rzpProcessTitle) rzpProcessTitle.textContent = isEnglish() ? 'Connecting to Razorpay gateway...' : 'Razorpay గేట్‌వే తో అనుసంధానించబడుతోంది...';
+          if (rzpProcessSubtitle) rzpProcessSubtitle.textContent = isEnglish() ? 'Securing 256-bit bank connection...' : 'సురక్షిత 256-బిట్ బ్యాంక్ ఎన్‌క్రిప్షన్...';
+
+          setTimeout(() => {
+            if (rzpProcessTitle) rzpProcessTitle.textContent = isEnglish() ? 'Authorizing transaction with bank...' : 'బ్యాంక్ సర్వర్ ధృవీకరణ పూర్తవుతోంది...';
+            if (rzpProcessSubtitle) rzpProcessSubtitle.textContent = isEnglish() ? 'Please do not refresh or close...' : 'దయచేసి పేజీని రీఫ్రెష్ చేయవద్దు...';
+          }, 700);
+
+          setTimeout(() => {
+            if (rzpSpinner) rzpSpinner.style.display = 'none';
+            if (rzpSuccessBadge) rzpSuccessBadge.style.display = 'block';
+            const randomPayId = `pay_PSP2026_${Math.floor(100000 + Math.random() * 900000)}`;
+            if (rzpProcessTitle) rzpProcessTitle.textContent = isEnglish() ? 'Payment Successful!' : 'చెల్లింపు విజయవంతమైంది!';
+            if (rzpProcessSubtitle) rzpProcessSubtitle.textContent = `${isEnglish() ? 'Payment ID: ' : 'చెల్లింపు సంఖ్య: '}${randomPayId}`;
+
+            setTimeout(() => {
+              closeRazorpayCheckout();
+              const txnId = `PSP-TXN-2026-${Math.floor(100000 + Math.random() * 900000)}`;
+              const ctx = currentPaymentContext || {};
+              finishDonation(txnId, isEnglish() ? 'Razorpay (Official Secure Gateway)' : 'Razorpay (అధికారిక సురక్షిత గేట్‌వే)', ctx.name, ctx.mobile, ctx.amount);
+            }, 1000);
+          }, 1500);
+        });
+      }
+
+      // Form Submission: Strictly validates all donor details and amount before launching Razorpay
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // 1. Donation Amount Validation
+        const amtVal = parseFloat(customAmountInput ? customAmountInput.value : 0);
+        if (isNaN(amtVal) || amtVal < 10) {
+          showError('customAmountInput', 'errDonAmount', 'దయచేసి కనీసం ₹10 విరాళం మొత్తాన్ని నమోదు చేయండి.', 'Please enter a valid donation amount (minimum ₹10).');
+          isValid = false;
+        } else {
+          clearError('customAmountInput', 'errDonAmount');
+        }
+
+        // 2. State Validation
+        if (stateSelect && !stateSelect.value) {
+          showError('donState', 'errDonState', 'దయచేసి రాష్ట్రాన్ని ఎంచుకోండి.', 'Please select your state.');
+          isValid = false;
+        } else if (stateSelect) {
+          clearError('donState', 'errDonState');
+        }
+
+        // 3. Full Name Validation (at least 2 letters)
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        if (nameVal.length < 2) {
+          showError('donFullName', 'errDonName', 'దయచేసి మీ పూర్తి పేరును నమోదు చేయండి.', 'Please enter your full name.');
+          isValid = false;
+        } else {
+          clearError('donFullName', 'errDonName');
+        }
+
+        // 4. Date of Birth Validation
+        const dobVal = dobInput ? dobInput.value : '';
+        if (!dobVal) {
+          showError('donDob', 'errDonDob', 'దయచేసి మీ పుట్టిన తేదీని నమోదు చేయండి.', 'Please enter your date of birth.');
+          isValid = false;
+        } else {
+          clearError('donDob', 'errDonDob');
+        }
+
+        // 5. Mobile Number Validation (10 digits starting with 6-9)
+        const mobVal = mobileInput ? mobileInput.value.trim() : '';
+        if (mobVal.length !== 10 || !/^[6-9]\d{9}$/.test(mobVal)) {
+          showError('donMobile', 'errDonMobile', 'దయచేసి సరైన 10 అంకెల మొబైల్ సంఖ్య నమోదు చేయండి (6-9 తో ప్రారంభం).', 'Please enter a valid 10-digit mobile number.');
+          isValid = false;
+        } else {
+          clearError('donMobile', 'errDonMobile');
+        }
+
+        // 6. Email Validation
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+        if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+          showError('donEmail', 'errDonEmail', 'దయచేసి సరైన ఈమెయిల్ చిరునామా నమోదు చేయండి.', 'Please enter a valid email address.');
+          isValid = false;
+        } else {
+          clearError('donEmail', 'errDonEmail');
+        }
+
+        // 7. City / Town Validation
+        const cityVal = cityInput ? cityInput.value.trim() : '';
+        if (cityVal.length < 2) {
+          showError('donCity', 'errDonCity', 'దయచేసి మీ నగరం / పట్టణం నమోదు చేయండి.', 'Please enter your city/town.');
+          isValid = false;
+        } else {
+          clearError('donCity', 'errDonCity');
+        }
+
+        // 8. Pincode Validation (6 digits)
+        const pinVal = pincodeInput ? pincodeInput.value.trim() : '';
+        if (pinVal.length !== 6 || !/^\d{6}$/.test(pinVal)) {
+          showError('donPincode', 'errDonPincode', 'దయచేసి సరైన 6 అంకెల పిన్ కోడ్ నమోదు చేయండి.', 'Please enter a valid 6-digit pin code.');
+          isValid = false;
+        } else {
+          clearError('donPincode', 'errDonPincode');
+        }
+
+        // 9. Address Validation
+        const addrVal = addressInput ? addressInput.value.trim() : '';
+        if (addrVal.length < 5) {
+          showError('donAddress', 'errDonAddress', 'దయచేసి మీ పూర్తి చిరునామా నమోదు చేయండి.', 'Please enter your full address.');
+          isValid = false;
+        } else {
+          clearError('donAddress', 'errDonAddress');
+        }
+
+        // 10. Consent Checkbox Validation
+        if (consentCheck && !consentCheck.checked) {
+          showError('donConsentCheck', 'errDonConsent', 'దయచేసి వివరాల ధృవీకరణ నిబంధనను అంగీకరించండి.', 'Please confirm that the information provided is correct.');
+          isValid = false;
+        } else if (consentCheck) {
+          clearError('donConsentCheck', 'errDonConsent');
+        }
+
+        // Stop immediately if any field failed validation - DO NOT OPEN RAZORPAY!
+        if (!isValid) {
+          const firstErr = document.querySelector('.is-invalid');
+          if (firstErr) {
+            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstErr.focus();
+          }
+          return;
+        }
+
+        // ONLY Open Razorpay Checkout Modal after all donor details and amount pass validation
+        openRazorpayCheckout({
+          amount: amtVal,
+          name: nameVal,
+          mobile: mobVal,
+          email: emailVal,
+          city: cityVal,
+          address: addrVal
+        });
       });
 
       // Print Receipt
-      document.getElementById('btnPrintReceipt').addEventListener('click', function () {
-        window.print();
-      });
+      const printBtn = document.getElementById('btnPrintReceipt');
+      if (printBtn) {
+        printBtn.addEventListener('click', function () {
+          window.print();
+        });
+      }
 
       // Donate Again
-      document.getElementById('btnDonateAgain').addEventListener('click', function () {
-        form.reset();
-        customAmountInput.value = '1000';
-        amountPills.forEach(p => p.classList.remove('active'));
-        const defPill = document.querySelector('.don-pill-btn[data-amt="1000"]');
-        if (defPill) defPill.classList.add('active');
+      const repeatBtn = document.getElementById('btnDonateAgain');
+      if (repeatBtn) {
+        repeatBtn.addEventListener('click', function () {
+          form.reset();
+          if (countrySelect) countrySelect.value = 'India';
+          if (customAmountInput) customAmountInput.value = '';
+          if (consentCheck) consentCheck.checked = true;
 
-        locTriggerText.textContent = 'పట్టణం / జిల్లా ఎంచుకోండి';
-        locTriggerText.classList.add('is-placeholder');
-        locHidden.value = '';
+          // Clear any validation states
+          document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+          document.querySelectorAll('.don-error-text.show').forEach(el => el.classList.remove('show'));
 
-        if (inlineQrCodeBox) inlineQrCodeBox.style.display = 'none';
-        if (btnShowQr) btnShowQr.innerHTML = '<i class="bi bi-qr-code"></i> QR కోడ్ చూపించు';
-
-        consentCheck.checked = true;
-        successView.classList.remove('show');
-        formView.style.display = 'block';
-        window.scrollTo({
-          top: formView.offsetTop - 80,
-          behavior: 'smooth'
+          successView.classList.remove('show');
+          formView.style.display = 'block';
+          window.scrollTo({
+            top: formView.offsetTop - 80,
+            behavior: 'smooth'
+          });
         });
-      });
+      }
 
     })();
   </script>
