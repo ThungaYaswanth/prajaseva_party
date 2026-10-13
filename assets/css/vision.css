@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    Vision & Mission Page (మా దృష్టి & లక్ష్యం) Styles
    Matching Exact Reference UI / UX Design
@@ -34,13 +33,13 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  background: linear-gradient(135deg, #B30001 0%, #A30005 100%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
   font-size: 1.5rem;
-  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.28);
+  box-shadow: 0 8px 18px rgba(179, 0, 1, 0.28);
   flex-shrink: 0;
 }
 
@@ -52,7 +51,7 @@
 .vm-badge-primary {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #B91C1C;
+  color: #B30001;
   line-height: 1.15;
 }
 
@@ -77,14 +76,14 @@
 }
 
 .vm-main-title .title-crimson {
-  color: #B91C1C;
+  color: #B30001;
   display: block;
 }
 
 .vm-title-accent-bar {
   width: 65px;
   height: 4px;
-  background: linear-gradient(90deg, #B91C1C 0%, #F59E0B 100%);
+  background: linear-gradient(90deg, #B30001 0%, #F59E0B 100%);
   border-radius: 2px;
   margin-bottom: 18px;
 }
@@ -115,7 +114,7 @@
   display: inline-block;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #B91C1C;
+  color: #B30001;
   letter-spacing: 0.2px;
   position: relative;
   padding-bottom: 10px;
@@ -129,7 +128,7 @@
   transform: translateX(-50%);
   width: 48px;
   height: 3px;
-  background: #B91C1C;
+  background: #B30001;
   border-radius: 2px;
 }
 
@@ -181,7 +180,7 @@
   position: relative;
   background: #FFFFFF;
   border: 1px solid #F1F5F9;
-  border-left: 4px solid #B91C1C;
+  border-left: 4px solid #B30001;
   border-radius: 16px;
   padding: 28px 24px 24px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
@@ -193,7 +192,7 @@
   font-family: Georgia, serif;
   font-size: 2.8rem;
   line-height: 1;
-  color: #B91C1C;
+  color: #B30001;
   margin-bottom: 8px;
   font-weight: 700;
 }
@@ -209,7 +208,7 @@
 .vm-quote-dash {
   width: 36px;
   height: 3px;
-  background: #B91C1C;
+  background: #B30001;
   border-radius: 2px;
 }
 
@@ -288,7 +287,7 @@
 
 .vm-value-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(185, 28, 28, 0.1);
+  box-shadow: 0 16px 32px rgba(179, 0, 1, 0.1);
   border-color: #FECACA;
 }
 
@@ -301,7 +300,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #DC2626;
+  color: #B30001;
   font-size: 1.6rem;
   margin-bottom: 16px;
   transition: transform 0.25s ease, background-color 0.25s ease;
@@ -315,7 +314,7 @@
 .vm-value-title {
   font-size: 1.12rem;
   font-weight: 800;
-  color: #B91C1C;
+  color: #B30001;
   margin-bottom: 8px;
   line-height: 1.25;
 }
@@ -377,12 +376,12 @@
   height: 52px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 2.5px solid #B91C1C;
-  box-shadow: 0 6px 16px rgba(185, 28, 28, 0.22);
+  border: 2.5px solid #B30001;
+  box-shadow: 0 6px 16px rgba(179, 0, 1, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #B91C1C;
+  color: #B30001;
   font-size: 1.4rem;
   z-index: 2;
 }
@@ -397,7 +396,7 @@
 .vm-approach-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #B91C1C;
+  color: #B30001;
   margin-bottom: 16px;
   line-height: 1.3;
 }
@@ -422,7 +421,7 @@
 
 .vm-approach-bullets li::before {
   content: '♦';
-  color: #B91C1C;
+  color: #B30001;
   font-size: 0.85rem;
 }
 
@@ -453,14 +452,14 @@
 .vm-action-sub-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #DC2626;
+  color: #B30001;
   display: block;
 }
 
 .vm-action-red-line {
   width: 44px;
   height: 3px;
-  background: #DC2626;
+  background: #B30001;
   border-radius: 2px;
   margin-top: 10px;
 }
@@ -468,7 +467,7 @@
 .vm-action-quote-box {
   position: relative;
   background: #FFFFFF;
-  border-left: 3.5px solid #DC2626;
+  border-left: 3.5px solid #B30001;
   border-radius: 14px;
   padding: 20px 22px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
@@ -479,7 +478,7 @@
   font-family: Georgia, serif;
   font-size: 2.4rem;
   line-height: 1;
-  color: #DC2626;
+  color: #B30001;
   font-weight: 700;
 }
 
@@ -495,20 +494,20 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #FFC928 0%, #FFB800 100%);
+  background: linear-gradient(135deg, #FAB301 0%, #F59E0B 100%);
   color: #0F172A;
   font-size: 1.02rem;
   font-weight: 700;
   padding: 13px 28px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(255, 184, 0, 0.35);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .vm-btn-gold-action:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(255, 184, 0, 0.45);
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.45);
   color: #0F172A;
 }
 
@@ -648,7 +647,7 @@
 
 .vm-pillar-icon-bubble.bubble-red {
   background: #FFF1F2;
-  color: #DC2626;
+  color: #B30001;
   border: 1.5px solid #FFE4E6;
 }
 
@@ -713,32 +712,40 @@
     gap: 36px;
     text-align: center;
   }
+
   .vm-vision-left {
     padding-right: 0;
   }
+
   .vm-badge-row {
     justify-content: center;
   }
+
   .vm-mission-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
   .vm-mission-right {
     padding-left: 0;
   }
+
   .vm-approach-grid {
     grid-template-columns: 1fr;
     max-width: 520px;
     margin: 0 auto;
   }
+
   .vm-action-layout {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
+
   .vm-action-left {
     padding-right: 0;
   }
+
   .vm-action-right-pillars {
     max-width: 440px;
     margin: 0 auto;
@@ -750,27 +757,34 @@
   .vm-section {
     padding: 44px 0;
   }
+
   .vm-main-title {
     font-size: 1.85rem;
   }
+
   .vm-values-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
   .vm-value-card {
     padding: 20px 10px;
   }
+
   .vm-value-icon-circle {
     width: 48px;
     height: 48px;
     font-size: 1.35rem;
   }
+
   .vm-value-title {
     font-size: 1rem;
   }
+
   .vm-value-desc {
     font-size: 0.78rem;
   }
+
   .vm-action-main-title {
     font-size: 1.75rem;
   }

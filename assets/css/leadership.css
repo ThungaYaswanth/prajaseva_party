@@ -8,9 +8,9 @@
    1. Design Tokens & Root Variables
    -------------------------------------------------------------------------- */
 :root {
-  --lead-primary-red: #990000;
-  --lead-dark-red: #7A0000;
-  --lead-accent-red: #C53030;
+  --lead-primary-red: #B30001;
+  --lead-dark-red: #A30005;
+  --lead-accent-red: #B30001;
   --lead-light-red-bg: #FFF5F5;
   --lead-navy-text: #0A1C4C;
   --lead-text-dark: #0F172A;
@@ -655,25 +655,26 @@ body.leadership-page-body {
 }
 
 .leader-location i {
-  color: #DC2626;
+  color: var(--lead-primary-red);
   font-size: 0.95rem;
 }
 
-/* Footer Row: 5 Social Icons on Left + Red Button on Right */
+/* Footer Row: Centered Social Media Icons */
 .leader-card-footer {
   width: 100%;
   margin-top: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 1px solid #F8FAFC;
+  justify-content: center;
+  padding-top: 12px;
+  border-top: 1px solid #F1F5F9;
 }
 
 .leader-social-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .social-btn {
@@ -705,7 +706,7 @@ body.leadership-page-body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #B91C1C;
+  background: var(--lead-primary-red);
   color: #FFFFFF;
   border: none;
   display: inline-flex;
@@ -713,14 +714,14 @@ body.leadership-page-body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+  box-shadow: 0 2px 8px rgba(179, 0, 1, 0.25);
   flex-shrink: 0;
 }
 
 .action-btn-red:hover {
-  background: var(--lead-primary-red);
+  background: var(--lead-dark-red);
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.4);
+  box-shadow: 0 4px 12px rgba(179, 0, 1, 0.4);
 }
 
 .action-btn-red i {
