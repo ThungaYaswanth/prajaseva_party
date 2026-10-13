@@ -12381,6 +12381,7 @@ body.mobile-nav-open {
     border-bottom: 3px solid transparent;
     padding: 10px 14px;
   }
+
   .rzp-nav-item.active {
     border-left-color: transparent;
     border-bottom-color: #0284C7;
@@ -12574,7 +12575,9 @@ body.mobile-nav-open {
 }
 
 @keyframes rzpSpin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .rzp-process-text {
