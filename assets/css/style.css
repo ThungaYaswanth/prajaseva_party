@@ -6234,57 +6234,104 @@ body.mobile-nav-open {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* 1. Red Header Banner with Round Emblem & Slogan */
+/* 1. Professional Red Header Banner with Medallion Logo & Waving Flag */
 .id-header-exact {
-  background: linear-gradient(180deg, #B30001 0%, #A30005 100%);
-  padding: 8px 14px;
+  background: linear-gradient(135deg, #8B0C10 0%, #B91C1C 45%, #7F1D1D 100%);
+  padding: 6px 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  border-bottom: 2px solid #F59E0B;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
 }
 
+.id-header-exact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+.id-logo-medallion,
 .id-emblem-ring {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 2.5px solid #B30001;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   flex-shrink: 0;
+  padding: 1px;
+  overflow: hidden;
 }
 
+.id-logo-medallion-img,
 .id-emblem-exact-img {
-  width: 38px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .id-title-exact-wrap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   line-height: 1.15;
   text-align: left;
+  flex: 1;
+  min-width: 0;
+  margin: 0 4px;
 }
 
 .id-title-exact-telugu {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #FFFFFF;
   letter-spacing: 0.2px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
 }
 
 .id-slogan-exact-telugu {
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #FEF08A;
   margin-top: 2px;
   letter-spacing: 0.2px;
-  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.id-header-flag-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  height: 42px;
+}
+
+.id-header-flag-img {
+  height: 38px;
+  width: auto;
+  max-width: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  transition: transform 0.3s ease;
+}
+
+.id-header-flag-wrap:hover .id-header-flag-img {
+  transform: scale(1.05);
 }
 
 /* 2. Golden-Yellow & Red Ribbon: —— ID CARD —— */
