@@ -1147,7 +1147,7 @@ function getMapStateName(path, lang) {
 function updateMapTooltipLanguage(lang) {
   const tooltipTitle = document.getElementById('mapTooltipTitle');
   if (!tooltipTitle) return;
-  if (currentlyHoveredMapPath) {
+  if (currentlyHoveredMapPath && !currentlyHoveredMapPath.classList.contains('active-party-state')) {
     tooltipTitle.textContent = getMapStateName(currentlyHoveredMapPath, lang);
   } else {
     tooltipTitle.textContent = '';
@@ -1324,35 +1324,42 @@ function initInteractiveMap() {
     const isPartyState = Boolean(partyStatesData[stateId]);
     const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'te';
 
-    // Immediately update tooltip to currently hovered state name
-    const stateName = getMapStateName(path, lang);
-    if (tooltipTitle) {
-      tooltipTitle.textContent = stateName;
-    }
-    if (tooltip) {
-      tooltip.classList.add('visible');
-      if (e) updateTooltipPosition(e);
-    }
-
     if (isPartyState) {
+      // 1. Special highlighted states:
+      // Show ONLY the leader information card. Do NOT show tooltip.
+      if (tooltip) tooltip.classList.remove('visible');
+      if (tooltipTitle) tooltipTitle.textContent = '';
       openStatePopup(stateId, path);
     } else {
-      // Non-party state: immediately clear previous party highlights & popup
-      document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+      // 2. Normal states:
+      // Immediately hide leader card and clear special state highlights
       if (popup) popup.classList.remove('active');
+      document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
       activePartyStateKey = null;
+
+      // Display ONLY the normal state's name in a simple tooltip
+      const stateName = getMapStateName(path, lang);
+      if (tooltipTitle) {
+        tooltipTitle.textContent = stateName;
+      }
+      if (tooltip) {
+        tooltip.classList.add('visible');
+        if (e) updateTooltipPosition(e);
+      }
     }
   }
 
   function handleStateLeave(path) {
+    const stateId = path.id;
+    const isPartyState = Boolean(partyStatesData[stateId]);
+
     if (currentlyHoveredMapPath === path) {
       currentlyHoveredMapPath = null;
       if (tooltip) tooltip.classList.remove('visible');
       if (tooltipTitle) tooltipTitle.textContent = '';
     }
 
-    const stateId = path.id;
-    if (partyStatesData[stateId]) {
+    if (isPartyState) {
       closeStatePopup();
     }
   }
@@ -1373,7 +1380,11 @@ function initInteractiveMap() {
     }
 
     path.addEventListener('mouseenter', (e) => handleStateEnter(path, e));
-    path.addEventListener('mousemove', (e) => updateTooltipPosition(e));
+    path.addEventListener('mousemove', (e) => {
+      if (!isPartyState) {
+        updateTooltipPosition(e);
+      }
+    });
     path.addEventListener('mouseleave', () => handleStateLeave(path));
 
     if (isPartyState) {
