@@ -440,7 +440,7 @@
           </div>
         </div>
 
-        <!-- Footer Row: 5 Social Media Buttons + Red Action Button -->
+        <!-- Footer Row: Social Media Links -->
         <div class="leader-card-footer">
           <div class="leader-social-links" aria-label="Social Media">
             <a href="${leader.social?.fb || 'https://facebook.com'}" target="_blank" rel="noopener noreferrer" class="social-btn soc-fb" title="Facebook">
@@ -455,15 +455,7 @@
             <a href="${leader.social?.yt || 'https://youtube.com'}" target="_blank" rel="noopener noreferrer" class="social-btn soc-yt" title="YouTube">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
-            <a href="${leader.social?.wa || 'https://whatsapp.com'}" target="_blank" rel="noopener noreferrer" class="social-btn soc-wa" title="WhatsApp">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.531 1.83.813 2.796.813h.005c3.179 0 5.767-2.586 5.768-5.766 0-1.54-.6-2.988-1.689-4.078-1.09-1.09-2.538-1.722-4.084-1.722zm0-2.172c1.996 0 3.873.777 5.284 2.188 1.411 1.411 2.188 3.288 2.188 5.284 0 4.124-3.356 7.48-7.48 7.48-.002 0-.004 0-.006 0-1.228 0-2.434-.303-3.513-.878l-4.504 1.18 1.201-4.387c-.636-1.107-.972-2.368-.972-3.665 0-4.124 3.356-7.48 7.48-7.48zm-1.048 4.394c-.161-.358-.332-.365-.486-.372-.126-.005-.27-.005-.414-.005s-.378.054-.576.27c-.198.216-.756.738-.756 1.8s.774 2.088.882 2.232c.108.144 1.524 2.327 3.693 3.264.516.223.918.356 1.232.456.518.165.99.142 1.363.086.416-.062 1.278-.522 1.458-1.026.18-.504.18-.936.126-1.026-.054-.09-.198-.144-.414-.252s-1.278-.63-1.476-.702c-.198-.072-.342-.108-.486.108s-.558.702-.684.846c-.126.144-.252.162-.468.054s-.915-.337-1.743-1.075c-.645-.575-1.08-1.285-1.206-1.501s-.013-.333.095-.44c.097-.097.216-.252.324-.378.108-.126.144-.216.216-.36.072-.144.036-.27-.018-.378s-.486-1.17-.666-1.602z"/></svg>
-            </a>
           </div>
-
-          <!-- Solid Red Circle Chevron Button -->
-          <button type="button" class="action-btn-red" aria-label="View Details" title="${isTe ? 'వివరాలు చూడండి' : 'View details'}">
-            <i class="bi bi-chevron-right"></i>
-          </button>
         </div>
       `;
 
