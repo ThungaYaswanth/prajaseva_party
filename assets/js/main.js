@@ -1147,10 +1147,10 @@ function getMapStateName(path, lang) {
 function updateMapTooltipLanguage(lang) {
   const tooltipTitle = document.getElementById('mapTooltipTitle');
   if (!tooltipTitle) return;
-  if (currentlyHoveredMapPath) {
+  if (currentlyHoveredMapPath && !currentlyHoveredMapPath.classList.contains('active-party-state')) {
     tooltipTitle.textContent = getMapStateName(currentlyHoveredMapPath, lang);
   } else {
-    tooltipTitle.textContent = lang === 'en' ? 'State' : 'రాష్ట్రం';
+    tooltipTitle.textContent = '';
   }
 }
 
@@ -1279,9 +1279,10 @@ function initInteractiveMap() {
   }
 
   function openStatePopup(stateKey, pathEl) {
-    if (popupTimer) clearTimeout(popupTimer);
-    currentlyHoveredMapPath = null;
-    if (tooltip) tooltip.classList.remove('visible');
+    if (popupTimer) {
+      clearTimeout(popupTimer);
+      popupTimer = null;
+    }
 
     // Highlight hovered party state and un-highlight others
     document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
@@ -1292,15 +1293,79 @@ function initInteractiveMap() {
   }
 
   function closeStatePopup() {
+    if (popupTimer) clearTimeout(popupTimer);
     popupTimer = setTimeout(() => {
+      // Only close if not currently hovering a party state
+      if (!currentlyHoveredMapPath || !partyStatesData[currentlyHoveredMapPath.id]) {
+        if (popup) popup.classList.remove('active');
+        document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
+        activePartyStateKey = null;
+      }
+    }, 180);
+  }
+
+  function updateTooltipPosition(e) {
+    if (!tooltip || !mapStage) return;
+    const rect = mapStage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+  }
+
+  function handleStateEnter(path, e) {
+    if (popupTimer) {
+      clearTimeout(popupTimer);
+      popupTimer = null;
+    }
+
+    currentlyHoveredMapPath = path;
+    const stateId = path.id;
+    const isPartyState = Boolean(partyStatesData[stateId]);
+    const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'te';
+
+    if (isPartyState) {
+      // 1. Special highlighted states:
+      // Show ONLY the leader information card. Do NOT show tooltip.
+      if (tooltip) tooltip.classList.remove('visible');
+      if (tooltipTitle) tooltipTitle.textContent = '';
+      openStatePopup(stateId, path);
+    } else {
+      // 2. Normal states:
+      // Immediately hide leader card and clear special state highlights
       if (popup) popup.classList.remove('active');
       document.querySelectorAll('.active-party-state').forEach(el => el.classList.remove('is-active-state'));
       activePartyStateKey = null;
-    }, 280);
+
+      // Display ONLY the normal state's name in a simple tooltip
+      const stateName = getMapStateName(path, lang);
+      if (tooltipTitle) {
+        tooltipTitle.textContent = stateName;
+      }
+      if (tooltip) {
+        tooltip.classList.add('visible');
+        if (e) updateTooltipPosition(e);
+      }
+    }
+  }
+
+  function handleStateLeave(path) {
+    const stateId = path.id;
+    const isPartyState = Boolean(partyStatesData[stateId]);
+
+    if (currentlyHoveredMapPath === path) {
+      currentlyHoveredMapPath = null;
+      if (tooltip) tooltip.classList.remove('visible');
+      if (tooltipTitle) tooltipTitle.textContent = '';
+    }
+
+    if (isPartyState) {
+      closeStatePopup();
+    }
   }
 
   // Hook into language changes to update popup dynamically if it's currently open
-  window.updateMapPopupLanguage = function(lang) {
+  window.updateMapPopupLanguage = function (lang) {
     if (popup && popup.classList.contains('active') && activePartyStateKey) {
       renderStatePopup(activePartyStateKey);
     }
@@ -1312,11 +1377,19 @@ function initInteractiveMap() {
 
     if (isPartyState) {
       path.classList.add('active-party-state');
-      path.addEventListener('mouseenter', () => openStatePopup(stateId, path));
-      path.addEventListener('mouseleave', closeStatePopup);
+    }
+
+    path.addEventListener('mouseenter', (e) => handleStateEnter(path, e));
+    path.addEventListener('mousemove', (e) => {
+      if (!isPartyState) {
+        updateTooltipPosition(e);
+      }
+    });
+    path.addEventListener('mouseleave', () => handleStateLeave(path));
+
+    if (isPartyState) {
       path.addEventListener('click', (e) => {
         e.stopPropagation();
-        if (tooltip) tooltip.classList.remove('visible');
         if (popup) {
           if (popup.classList.contains('active') && activePartyStateKey === stateId) {
             popup.classList.remove('active');
@@ -1327,33 +1400,7 @@ function initInteractiveMap() {
           }
         }
       });
-      return;
     }
-
-    // All other states: show state name in the tooltip according to selected language
-    path.addEventListener('mouseenter', () => {
-      if (popup && popup.classList.contains('active')) return;
-      currentlyHoveredMapPath = path;
-      const stateName = getMapStateName(path, currentLang);
-      if (tooltipTitle) tooltipTitle.textContent = stateName;
-      if (tooltip) tooltip.classList.add('visible');
-    });
-
-    path.addEventListener('mousemove', (e) => {
-      if (!tooltip || !mapStage) return;
-      const rect = mapStage.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      tooltip.style.left = `${x}px`;
-      tooltip.style.top = `${y}px`;
-    });
-
-    path.addEventListener('mouseleave', () => {
-      if (currentlyHoveredMapPath === path) {
-        currentlyHoveredMapPath = null;
-      }
-      if (tooltip) tooltip.classList.remove('visible');
-    });
   });
 
   // Keep popup open when cursor is hovered over it
@@ -1384,5 +1431,13 @@ function initInteractiveMap() {
         activePartyStateKey = null;
       }
     }
+  });
+
+  // Clean up tooltip and highlights when leaving the map stage
+  mapStage.addEventListener('mouseleave', () => {
+    currentlyHoveredMapPath = null;
+    if (tooltip) tooltip.classList.remove('visible');
+    if (tooltipTitle) tooltipTitle.textContent = '';
+    closeStatePopup();
   });
 }

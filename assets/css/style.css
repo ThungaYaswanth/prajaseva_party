@@ -4796,33 +4796,16 @@ body.mobile-nav-open {
   -webkit-tap-highlight-color: transparent !important;
 }
 
-.pin-pulse-halo {
-  animation: pulseHalo 2s infinite ease-out;
-  opacity: 0.75;
-  pointer-events: none;
-}
-
 .state-center-pin,
 .telangana-center-pin {
   pointer-events: none;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.35));
+  filter: none !important;
 }
 
-@keyframes pulseHalo {
-  0% {
-    r: 17;
-    opacity: 0.85;
-  }
-
-  50% {
-    r: 30;
-    opacity: 0;
-  }
-
-  100% {
-    r: 17;
-    opacity: 0.85;
-  }
+.state-center-pin image,
+.telangana-center-pin image {
+  pointer-events: none;
+  filter: none !important;
 }
 
 /* Floating Tooltip (Shows ONLY state name cleanly as requested) */
@@ -4840,7 +4823,7 @@ body.mobile-nav-open {
   font-weight: 700;
   z-index: 20;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.08s ease, transform 0.08s ease;
   transform: translate(-50%, -125%);
   white-space: nowrap;
   border: 1px solid rgba(245, 158, 11, 0.45);
