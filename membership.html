@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=12.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.2">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -201,9 +201,9 @@
                         <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
                         <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
                       </div>
-                      <div class="id-header-flag-wrap">
-                        <img src="assets/images/partyflag_right side.webp" alt="ప్రజాసేవ పార్టీ జెండా"
-                          class="id-header-flag-img">
+                      <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
+                        <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
+                          class="id-leader-badge-img">
                       </div>
                     </div>
 
@@ -307,11 +307,101 @@
                   </div>
                 </div>
 
-                <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) -->
+                <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) - Pure HTML/CSS UI/UX Design -->
                 <div class="id-card-face id-card-face-back">
-                  <div class="id-card-body card-template-exact id-card-back-body">
-                    <img src="assets/images/id-card-back-clean.png" alt="ప్రజా సేవా పార్టీ గుర్తింపు కార్డు వెనుక భాగం"
-                      class="id-card-back-full-img" loading="eager">
+                  <div class="id-card-body card-template-exact id-card-back-body mem-id-card-exact">
+                    <!-- 1. Header Banner: Emblem (Left) + Party Title & Slogan (Center) + President Portrait (Right) -->
+                    <div class="id-header-exact">
+                      <div class="id-emblem-ring" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+                        <img src="assets/images/logo1.webp" alt="పార్టీ గుర్తు" class="id-emblem-exact-img">
+                      </div>
+                      <div class="id-title-exact-wrap">
+                        <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
+                        <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                      </div>
+                      <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
+                        <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
+                          class="id-leader-badge-img">
+                      </div>
+                    </div>
+
+                    <!-- 2. Dark Red & Gold Ribbon: —— MEMBER DUTIES & RESPONSIBILITIES —— -->
+                    <div class="id-back-ribbon">
+                      <span class="back-ribbon-line"></span>
+                      <span class="back-ribbon-text">MEMBER DUTIES & RESPONSIBILITIES</span>
+                      <span class="back-ribbon-line"></span>
+                    </div>
+
+                    <!-- 3. Duties Main Body with Party Flag Watermark -->
+                    <div class="id-back-main-content">
+                      <div class="id-back-flag-watermark" aria-hidden="true">
+                        <img src="assets/images/partyflag_right side.webp" alt="" class="back-watermark-img">
+                      </div>
+
+                      <!-- Centered Crimson Pill: పార్టీ సభ్యుడిగా నా బాధ్యత -->
+                      <div class="id-duty-pill-wrap">
+                        <span class="id-duty-pill-text">పార్టీ సభ్యుడిగా నా బాధ్యత</span>
+                      </div>
+
+                      <!-- 4 Duty Bullet Points with Red Triangle Arrows -->
+                      <ul class="id-duties-list">
+                        <li class="id-duty-item">
+                          <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                          <span class="duty-text">ప్రజా సమస్యలను పార్టీ దృష్టికి తీసుకెళ్లడం</span>
+                        </li>
+                        <li class="id-duty-item">
+                          <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                          <span class="duty-text">ప్రజా సేవా కార్యక్రమాల్లో చురుకుగా పాల్గొనడం</span>
+                        </li>
+                        <li class="id-duty-item">
+                          <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                          <span class="duty-text">పార్టీ సిద్ధాంతాలను ప్రజల్లోకి తీసుకెళ్లడం</span>
+                        </li>
+                        <li class="id-duty-item">
+                          <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                          <span class="duty-text">సమాజంలో ఐక్యత, సామరస్యాన్ని పెంపొందించడంలో కృషి చేయడం</span>
+                        </li>
+                      </ul>
+
+                      <!-- Slogan Strip: ప్రజా సేవే మా ధ్యేయం • సమాజమే మా కుటుంబం -->
+                      <div class="id-slogan-capsule">
+                        <span class="slogan-cap-red">ప్రజా సేవే మా ధ్యేయం</span>
+                        <span class="slogan-cap-dot">•</span>
+                        <span class="slogan-cap-red">సమాజమే మా కుటుంబం</span>
+                      </div>
+
+                      <!-- Head Office Box -->
+                      <div class="id-office-card">
+                        <div class="office-badge-tag">
+                          <i class="bi bi-geo-alt-fill"></i>
+                          <span>పార్టీ కేంద్ర కార్యాలయం / HEAD OFFICE</span>
+                        </div>
+                        <div class="office-address-block">
+                          <div class="office-addr-bold">8-1-297/SN/157, Shakkubai Nagar, Shaikpet,</div>
+                          <div class="office-addr-sub">Hyderabad, Telangana - 500104</div>
+                        </div>
+                        <div class="office-contact-row">
+                          <a href="tel:7989454568" class="contact-pill-item contact-pill-phone" title="ఫోన్ నంబర్">
+                            <i class="bi bi-telephone-fill icon-phone"></i>
+                            <span>79894 54568</span>
+                          </a>
+                          <a href="mailto:info@prajasevaparty.org" class="contact-pill-item contact-pill-email" title="ఈమెయిల్">
+                            <i class="bi bi-envelope-fill icon-email"></i>
+                            <span>info@prajasevaparty.org</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 4. Bottom Red Footer Banner with Website URL -->
+                    <div class="id-back-bottom-banner">
+                      <span class="footer-dash-line"></span>
+                      <a href="index.html#home" class="back-web-link" title="ప్రజాసేవ పార్టీ వెబ్‌సైట్">
+                        <i class="bi bi-globe"></i>
+                        <span>www.prajasevaparty.org</span>
+                      </a>
+                      <span class="footer-dash-line"></span>
+                    </div>
                   </div>
                 </div>
 
@@ -728,9 +818,9 @@
                           <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
                           <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
                         </div>
-                        <div class="id-header-flag-wrap">
-                          <img src="assets/images/partyflag_right side.webp" alt="ప్రజాసేవ పార్టీ జెండా"
-                            class="id-header-flag-img">
+                        <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
+                          <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
+                            class="id-leader-badge-img">
                         </div>
                       </div>
 
@@ -836,12 +926,101 @@
                     </div>
                   </div>
 
-                  <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) -->
+                  <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) - Pure HTML/CSS UI/UX Design -->
                   <div class="id-card-face id-card-face-back">
-                    <div class="id-card-body card-template-exact id-card-back-body">
-                      <img src="assets/images/id-card-back-clean.png"
-                        alt="ప్రజా సేవా పార్టీ గుర్తింపు కార్డు వెనుక భాగం" class="id-card-back-full-img"
-                        loading="eager">
+                    <div class="id-card-body card-template-exact id-card-back-body mem-id-card-exact">
+                      <!-- 1. Header Banner: Emblem (Left) + Party Title & Slogan (Center) + President Portrait (Right) -->
+                      <div class="id-header-exact">
+                        <div class="id-emblem-ring" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+                          <img src="assets/images/logo1.webp" alt="పార్టీ గుర్తు" class="id-emblem-exact-img">
+                        </div>
+                        <div class="id-title-exact-wrap">
+                          <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
+                          <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                        </div>
+                        <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
+                          <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
+                            class="id-leader-badge-img">
+                        </div>
+                      </div>
+
+                      <!-- 2. Dark Red & Gold Ribbon: —— MEMBER DUTIES & RESPONSIBILITIES —— -->
+                      <div class="id-back-ribbon">
+                        <span class="back-ribbon-line"></span>
+                        <span class="back-ribbon-text">MEMBER DUTIES & RESPONSIBILITIES</span>
+                        <span class="back-ribbon-line"></span>
+                      </div>
+
+                      <!-- 3. Duties Main Body with Party Flag Watermark -->
+                      <div class="id-back-main-content">
+                        <div class="id-back-flag-watermark" aria-hidden="true">
+                          <img src="assets/images/partyflag_right side.webp" alt="" class="back-watermark-img">
+                        </div>
+
+                        <!-- Centered Crimson Pill: పార్టీ సభ్యుడిగా నా బాధ్యత -->
+                        <div class="id-duty-pill-wrap">
+                          <span class="id-duty-pill-text">పార్టీ సభ్యుడిగా నా బాధ్యత</span>
+                        </div>
+
+                        <!-- 4 Duty Bullet Points with Red Triangle Arrows -->
+                        <ul class="id-duties-list">
+                          <li class="id-duty-item">
+                            <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                            <span class="duty-text">ప్రజా సమస్యలను పార్టీ దృష్టికి తీసుకెళ్లడం</span>
+                          </li>
+                          <li class="id-duty-item">
+                            <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                            <span class="duty-text">ప్రజా సేవా కార్యక్రమాల్లో చురుకుగా పాల్గొనడం</span>
+                          </li>
+                          <li class="id-duty-item">
+                            <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                            <span class="duty-text">పార్టీ సిద్ధాంతాలను ప్రజల్లోకి తీసుకెళ్లడం</span>
+                          </li>
+                          <li class="id-duty-item">
+                            <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                            <span class="duty-text">సమాజంలో ఐక్యత, సామరస్యాన్ని పెంపొందించడంలో కృషి చేయడం</span>
+                          </li>
+                        </ul>
+
+                        <!-- Slogan Strip: ప్రజా సేవే మా ధ్యేయం • సమాజమే మా కుటుంబం -->
+                        <div class="id-slogan-capsule">
+                          <span class="slogan-cap-red">ప్రజా సేవే మా ధ్యేయం</span>
+                          <span class="slogan-cap-dot">•</span>
+                          <span class="slogan-cap-red">సమాజమే మా కుటుంబం</span>
+                        </div>
+
+                        <!-- Head Office Box -->
+                        <div class="id-office-card">
+                          <div class="office-badge-tag">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>పార్టీ కేంద్ర కార్యాలయం / HEAD OFFICE</span>
+                          </div>
+                          <div class="office-address-block">
+                            <div class="office-addr-bold">8-1-297/SN/157, Shakkubai Nagar, Shaikpet,</div>
+                            <div class="office-addr-sub">Hyderabad, Telangana - 500104</div>
+                          </div>
+                          <div class="office-contact-row">
+                            <a href="tel:7989454568" class="contact-pill-item contact-pill-phone" title="ఫోన్ నంబర్">
+                              <i class="bi bi-telephone-fill icon-phone"></i>
+                              <span>79894 54568</span>
+                            </a>
+                            <a href="mailto:info@prajasevaparty.org" class="contact-pill-item contact-pill-email" title="ఈమెయిల్">
+                              <i class="bi bi-envelope-fill icon-email"></i>
+                              <span>info@prajasevaparty.org</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 4. Bottom Red Footer Banner with Website URL -->
+                      <div class="id-back-bottom-banner">
+                        <span class="footer-dash-line"></span>
+                        <a href="index.html#home" class="back-web-link" title="ప్రజాసేవ పార్టీ వెబ్‌సైట్">
+                          <i class="bi bi-globe"></i>
+                          <span>www.prajasevaparty.org</span>
+                        </a>
+                        <span class="footer-dash-line"></span>
+                      </div>
                     </div>
                   </div>
 

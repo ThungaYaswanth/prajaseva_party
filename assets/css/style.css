@@ -6141,7 +6141,7 @@ body.mobile-nav-open {
 .id-card-3d-flipper {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 110%;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -6174,6 +6174,36 @@ body.mobile-nav-open {
   -webkit-transform: rotateY(0deg) translateZ(1px);
 }
 
+/* Header President Avatar Medallion Ring (Front & Back Sides) */
+.id-leader-badge-ring {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #F59E0B;
+  outline: 1.5px solid #8B0C10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.id-leader-badge-ring:hover {
+  transform: scale(1.06);
+}
+
+.id-leader-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
 .id-card-face-back {
   position: absolute;
   top: 0;
@@ -6183,10 +6213,10 @@ body.mobile-nav-open {
   z-index: 1;
   transform: rotateY(180deg) translateZ(1px);
   -webkit-transform: rotateY(180deg) translateZ(1px);
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
-  background: #FFFFFF;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  background: #FFFDF8;
+  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 /* Ensure Front & Back Card Bodies fill Face */
@@ -6195,20 +6225,300 @@ body.mobile-nav-open {
   margin: 0;
 }
 
-/* Back Side Card Body */
+/* ==========================================================================
+   Back Side Card Body - Pure HTML/CSS UI/UX Design System
+   Matches Official Reference (Emblem, Slogan, Leader, Duties, Office & Web)
+   ========================================================================== */
 .id-card-back-body {
   width: 100% !important;
   height: 100% !important;
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: #FFFFFF;
-  border-radius: 18px;
-  border: 1.5px solid #E2E8F0;
+  background: #FFFDF8;
+  border-radius: 20px;
+  border: 3.5px solid #F59E0B !important;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Back Side Ribbon: — MEMBER DUTIES & RESPONSIBILITIES — */
+.id-back-ribbon {
+  background: #6D0204;
+  border-top: 1.5px solid #F59E0B;
+  border-bottom: 1.5px solid #F59E0B;
+  padding: 3.5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.back-ribbon-line {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #F59E0B;
+  border-radius: 2px;
+}
+
+.back-ribbon-text {
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+}
+
+/* Main Content Area */
+.id-back-main-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7px 10px 6px 10px;
+  overflow: hidden;
+  background: #FFFDF8;
+}
+
+/* Subtle Flag Watermark in Right Center */
+.id-back-flag-watermark {
+  position: absolute;
+  top: 10%;
+  right: -12px;
+  width: 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(1.2);
+}
+
+.back-watermark-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pill: పార్టీ సభ్యుడిగా నా బాధ్యత */
+.id-duty-pill-wrap {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5px;
+}
+
+.id-duty-pill-text {
+  display: inline-block;
+  background: linear-gradient(135deg, #B91C1C 0%, #8B0C10 100%);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 3.5px 22px;
+  border-radius: 50px;
+  box-shadow: 0 3px 8px rgba(185, 28, 28, 0.35);
+  letter-spacing: 0.2px;
+}
+
+/* 4 Duties List */
+.id-duties-list {
+  list-style: none;
+  padding: 0 4px;
+  margin: 0 0 5px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+}
+
+.id-duty-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.32;
+  text-align: left;
+}
+
+.duty-arrow-icon {
+  color: #DC2626;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  margin-top: 1.5px;
+  line-height: 1;
+}
+
+/* Slogan Capsule */
+.id-slogan-capsule {
+  position: relative;
+  z-index: 1;
+  background: #FFF1F0;
+  border: 1px solid rgba(220, 38, 38, 0.18);
+  border-radius: 12px;
+  padding: 3px 12px;
+  margin: 0 auto 5px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 95%;
+}
+
+.slogan-cap-red {
+  color: #DC2626;
+  font-weight: 700;
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+.slogan-cap-dot {
+  color: #F59E0B;
+  font-weight: 900;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Head Office Card */
+.id-office-card {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1.5px solid #F59E0B;
+  border-radius: 12px;
+  padding: 5px 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.office-badge-tag {
+  background: #FFF1F0;
+  border-radius: 50px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #DC2626;
+  font-weight: 700;
+  font-size: 0.68rem;
+  margin-bottom: 2px;
+}
+
+.office-badge-tag i {
+  font-size: 0.72rem;
+}
+
+.office-address-block {
+  font-size: 0.72rem;
+  line-height: 1.32;
+  margin-bottom: 4px;
+}
+
+.office-addr-bold {
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.office-addr-sub {
+  color: #334155;
+  font-weight: 600;
+}
+
+.office-contact-row {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.contact-pill-item {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 2.5px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.71rem;
+  font-weight: 700;
+  color: #0F172A;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-pill-item:hover {
+  transform: translateY(-1px);
+}
+
+.contact-pill-phone {
+  flex: 1;
+  border: 1px solid #FECACA;
+}
+
+.contact-pill-phone .icon-phone {
+  color: #DC2626;
+  font-size: 0.68rem;
+}
+
+.contact-pill-email {
+  flex: 1.3;
+  border: 1px solid #FED7AA;
+  font-size: 0.66rem;
+}
+
+.contact-pill-email .icon-email {
+  color: #F59E0B;
+  font-size: 0.7rem;
+}
+
+/* Bottom Banner */
+.id-back-bottom-banner {
+  background: linear-gradient(180deg, #8B0C10 0%, #6D0204 100%);
+  border-top: 2px solid #F59E0B;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.footer-dash-line {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #F59E0B;
+  border-radius: 2px;
+}
+
+.back-web-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  transition: color 0.2s ease;
+}
+
+.back-web-link:hover {
+  color: #FEF08A;
+}
+
+.back-web-link i {
+  font-size: 0.88rem;
 }
 
 .id-card-back-full-img {
@@ -10317,7 +10627,7 @@ body.mobile-nav-open {
 }
 
 .mem-id-card-frame {
-  margin-bottom: 24px;
+  margin-bottom: 64px;
   width: 100%;
   display: flex;
   justify-content: center;
