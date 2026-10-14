@@ -1328,7 +1328,7 @@ body.mobile-nav-open {
     object-fit: cover !important;
     object-position: center 20% !important;
     transform: scale(1.36) !important;
-    transform-origin: center 26% !important;
+    transform-origin: center 6% !important;
     display: block !important;
   }
 
@@ -1550,7 +1550,7 @@ body.mobile-nav-open {
     object-fit: cover !important;
     object-position: center 20% !important;
     transform: scale(1.36) !important;
-    transform-origin: center 26% !important;
+    transform-origin: center 6% !important;
     display: block !important;
   }
 
@@ -10068,7 +10068,7 @@ body.mobile-nav-open {
   .about-page-hero {
     min-height: 220px;
     padding: 36px 0 32px;
-    background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 45%, rgba(255, 255, 255, 0.78) 70%, rgba(255, 255, 255, 0.15) 90%), url('../images/about_bg.png');
+    background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 45%, rgba(255, 255, 255, 0.78) 70%, rgba(255, 255, 255, 0.15) 90%), url('../images/Golden\ Rally\ at\ Sunset.webp');
   }
 
   .about-banner-container {
