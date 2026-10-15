@@ -1741,7 +1741,7 @@ body.mobile-nav-open {
     object-fit: cover !important;
     object-position: center 20% !important;
     transform: scale(1.36) !important;
-    transform-origin: center 26% !important;
+    transform-origin: center 6% !important;
     display: block !important;
   }
 
