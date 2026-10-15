@@ -586,6 +586,7 @@ const translations = {
     searchNoResults: "ఫలితాలు కనుగొనబడలేదు",
 
     // News & Events Page (వార్తలు & కార్యక్రమాలు)
+    newsHeroTitle: "వార్తలు & కార్యక్రమాలు - ప్రజాసేవ పార్టీ",
     newsHeroTitle1: "వార్తలు &",
     newsHeroTitle2: "కార్యక్రమాలు",
     newsHeroSub: "ప్రజలతో కలసి, ప్రజల కోసం – మా ప్రతి అడుగు, మీ కోసం..",
@@ -1372,6 +1373,7 @@ const translations = {
     searchNoResults: "No matching results found",
 
     // News & Events Page (వార్తలు & కార్యక్రమాలు)
+    newsHeroTitle: "News & Events - Praja Seva Party",
     newsHeroTitle1: "News &",
     newsHeroTitle2: "Events",
     newsHeroSub: "Together with the people, for the people – our every step, for you..",

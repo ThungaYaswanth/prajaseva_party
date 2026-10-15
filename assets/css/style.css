@@ -129,7 +129,7 @@ body {
 .gallery-section,
 .social-connect-section,
 .membership-master-section,
-main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
+main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner):not(.news-hero-banner) {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-top: var(--section-padding-top);
@@ -148,7 +148,7 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner):not(.news-hero-banner) {
     padding-top: 60px;
     padding-bottom: 60px;
     padding-top: var(--section-padding-top);
@@ -168,7 +168,7 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner):not(.news-hero-banner) {
     padding-top: 70px;
     padding-bottom: 70px;
     padding-top: var(--section-padding-top);
@@ -188,7 +188,7 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner):not(.news-hero-banner) {
     padding-top: 90px;
     padding-bottom: 90px;
     padding-top: var(--section-padding-top);
@@ -10293,26 +10293,29 @@ body.mobile-nav-open {
 .about-hero-banner,
 .vision-hero-banner,
 .issues-graphic-banner,
+.news-hero-banner,
 main > section.mem-hero-banner,
 main > section.about-hero-banner,
 main > section.vision-hero-banner,
-main > section.issues-graphic-banner {
+main > section.issues-graphic-banner,
+main > section.news-hero-banner {
   position: relative;
   width: 100%;
   padding: 0 !important;
   margin: 0 !important;
   line-height: 0;
   display: block;
-  background-color: #FFFFFF;
+  background-color: #660002;
   border-bottom: 1px solid #E2E8F0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
 .mem-hero-banner-image,
 .about-hero-banner-image,
 .vision-hero-banner-image,
-.issues-graphic-banner-image {
+.issues-graphic-banner-image,
+.news-hero-banner-image {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -14037,27 +14040,14 @@ main > section.issues-graphic-banner {
    Matches Exact Reference Design with Consistent Brand Palette
    ========================================================================== */
 
-/* Top Hero Banner (Exact match with reference UI using news-programs_bg.png) */
+/* Top Hero Graphic Banner for News & Events */
 .news-hero-banner {
   position: relative;
   width: 100%;
-  min-height: 220px;
-  padding: 38px 0 34px;
-  display: flex;
-  align-items: center;
-  background: #FFFFFF url('../images/Red\ and\ Gold\ Flags\ at\ Sunrise.webp') right center / cover no-repeat;
-  border-bottom: 1px solid #E2E8F0;
-  overflow: hidden;
-}
-
-/* Smooth white gradient overlay ensuring left text sits on crisp white */
-.news-hero-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 28%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0) 75%);
-  z-index: 1;
-  pointer-events: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0;
+  background: #660002;
 }
 
 .news-banner-inner {
@@ -15063,7 +15053,6 @@ main > section.issues-graphic-banner {
 
 @media (max-width: 768px) {
 
-  .news-hero-banner,
   .membership-hero-banner,
   .issues-hero-banner {
     min-height: 180px;
@@ -15386,7 +15375,6 @@ main > section.issues-graphic-banner {
 
 @media (max-width: 768px) {
 
-  .news-hero-banner,
   .membership-hero-banner,
   .issues-hero-banner {
     min-height: 180px;
