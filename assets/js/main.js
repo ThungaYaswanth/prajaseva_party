@@ -119,6 +119,26 @@ function initMobileNav() {
     }
   });
 
+  // Close button inside mobile menu card & clicking backdrop
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.mobile-menu-close-btn')) {
+      e.preventDefault();
+      closeMobileMenu();
+    }
+    if (e.target === navbarCollapse) {
+      closeMobileMenu();
+    }
+  });
+
+  // Handle mobile nav card clicks
+  document.querySelectorAll('.mobile-nav-item-card').forEach(card => {
+    card.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        closeMobileMenu();
+      }
+    });
+  });
+
   // ESC key closes menu
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {

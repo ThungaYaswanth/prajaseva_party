@@ -643,6 +643,70 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
   }
 }
 
+/* Tight Desktop 992px–1100px — prevent header overflow at ~1024px */
+@media (min-width: 992px) and (max-width: 1100px) {
+  .brand-emblem-frame,
+  .brand-leader-frame {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-emblem-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-wrap {
+    gap: 8px;
+    margin-right: 8px;
+  }
+
+  .site-header .navbar,
+  .header-pill-nav {
+    min-height: 70px !important;
+  }
+
+  .site-header .navbar {
+    gap: 8px !important;
+  }
+
+  .site-header .navbar-collapse {
+    margin: 0 6px;
+  }
+
+  .navbar-nav {
+    gap: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 0.85rem !important;
+  }
+
+  .header-right-controls {
+    gap: 7px !important;
+    margin-left: 8px !important;
+  }
+
+  .lang-dropdown-capsule {
+    padding: 6px 10px !important;
+  }
+
+  .lang-dropdown-capsule .lang-label {
+    font-size: 0.78rem !important;
+  }
+
+  .btn-pill-donate {
+    padding: 7px 13px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .btn-pill-membership {
+    padding: 7px 13px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+
 .nav-item {
   display: inline-flex;
   align-items: center;
@@ -928,7 +992,8 @@ body.mobile-nav-open {
   }
 
   .card-template-exact {
-    width: 310px;
+    width: 100%;
+    max-width: 480px;
   }
 }
 
@@ -1123,151 +1188,383 @@ body.mobile-nav-open {
     outline: none;
   }
 
-  /* Mobile & Tablet Dropdown Floating Drawer (< 992px) */
+  /* Mobile & Tablet Modal Overlay Drawer (< 992px) */
   .site-header .navbar-collapse {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 10px;
-    right: 10px;
-    width: auto;
-    margin-left: 0 !important;
-    background: #FFFFFF;
-    border-radius: 18px;
-    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.18), 0 4px 12px rgba(15, 23, 42, 0.06);
-    border: 1px solid #ECEFF2;
-    padding: 14px 12px;
-    z-index: 1050;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: rgba(15, 23, 42, 0.72) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    z-index: 99999 !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    display: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow-y: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
   }
 
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .site-header .navbar-collapse {
-      max-width: 440px;
-      left: auto !important;
-      right: 16px !important;
-      width: 440px;
-    }
+  .site-header .navbar-collapse.show {
+    display: flex !important;
+    animation: mobileModalBackdropFade 0.22s ease-out forwards;
   }
 
   .site-header .navbar-collapse:not(.show) {
     display: none !important;
   }
 
-  @keyframes mobileDrawerSlideDown {
+  @keyframes mobileModalBackdropFade {
     from {
       opacity: 0;
-      transform: translateY(-10px) scale(0.98);
     }
-
     to {
       opacity: 1;
-      transform: translateY(0) scale(1);
     }
   }
 
-  .site-header .navbar-collapse.show {
-    display: block !important;
-    animation: mobileDrawerSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  /* Hide default desktop horizontal navbar-nav inside mobile modal */
+  .site-header .navbar-collapse > .navbar-nav {
+    display: none !important;
   }
 
-  .navbar-nav {
-    flex-direction: column;
-    align-items: stretch !important;
-    gap: 4px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-item {
+  /* The Centered Floating Modal Card */
+  .mobile-menu-modal-card {
     width: 100%;
-    display: block;
-  }
-
-  .nav-link {
-    display: block;
-    width: 100%;
-    padding: 10px 16px !important;
-    font-size: 0.98rem;
-    font-weight: 700;
-    color: #1E293B !important;
-    border-radius: 10px;
-    transition: all 0.18s ease;
-    text-decoration: none;
-  }
-
-  .nav-link:hover {
-    background-color: #F8FAFC;
-    color: #B30001 !important;
-  }
-
-  .nav-link.active {
-    background-color: #FEF2F2 !important;
-    color: #B30001 !important;
-  }
-
-  .nav-link.active::after {
-    display: none;
-  }
-
-  /* Mobile Menu CTAs inside drawer */
-  .mobile-nav-cta-panel {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid #E2E8F0;
+    max-width: 480px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    margin: auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: mobileModalCardZoom 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  .btn-mobile-nav-membership {
+  @keyframes mobileModalCardZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.94) translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* 1. Header Banner: Red textured gradient with flag, centered titles, and gold-ring leader avatar */
+  .mobile-menu-header-banner {
+    position: relative;
+    background: linear-gradient(180deg, #A30005 0%, #870003 100%);
+    padding: 16px 14px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-menu-flag-wrap {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu-flag-img {
+    height: 52px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+  }
+
+  .mobile-menu-brand-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .mobile-menu-title-telugu {
+    color: #FFFFFF;
+    font-family: var(--font-telugu, inherit);
+    font-size: clamp(1.22rem, 3.8vw, 1.45rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .mobile-menu-title-english {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     width: 100%;
-    padding: 11px 16px;
-    background: linear-gradient(135deg, #B30001, #A50B0F);
+  }
+
+  .mobile-menu-title-english .sub-line {
+    display: inline-block;
+    height: 1px;
+    flex: 1;
+    max-width: 28px;
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  .mobile-menu-title-english .sub-text {
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu-leader-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2.5px solid #FFC928;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #0077D4;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-menu-leader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transform: scale(1.36);
+    transform-origin: center 26%;
+    display: block;
+  }
+
+  /* 2. Action Controls Bar */
+  .mobile-menu-action-bar {
+    background: #FFFFFF;
+    padding: 12px 14px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  /* Segmented language pill */
+  .mobile-menu-lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 9999px;
+    padding: 3px;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .mobile-lang-btn {
+    border: none;
+    background: transparent;
+    color: #334155;
+    font-family: var(--font-telugu, inherit);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    cursor: pointer;
+    line-height: 1.2;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-lang-btn.active {
+    background: #B30001;
     color: #FFFFFF !important;
-    font-family: var(--font-telugu);
-    font-weight: 700;
-    font-size: 0.94rem;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(179, 0, 1, 0.22);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(179, 0, 1, 0.3);
   }
 
-  .btn-mobile-nav-membership:hover {
-    background: linear-gradient(135deg, #A50B0F, #800000);
+  /* Donate Button in Action Bar */
+  .mobile-menu-btn-donate {
+    background: #B30001;
+    color: #FFFFFF !important;
+    font-family: var(--font-telugu, inherit);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(179, 0, 1, 0.28);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu-btn-donate:hover {
+    background: #940001;
+    color: #FFFFFF !important;
     transform: translateY(-1px);
   }
 
-  .btn-mobile-nav-donate {
-    display: flex;
+  .mobile-menu-btn-donate i {
+    font-size: 0.85rem;
+    color: #FFFFFF;
+  }
+
+  /* Membership Button in Action Bar */
+  .mobile-menu-btn-membership {
+    background: #FAB301;
+    color: #0F172A !important;
+    font-family: var(--font-telugu, inherit);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(250, 179, 1, 0.35);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu-btn-membership:hover {
+    background: #FFA500;
+    transform: translateY(-1px);
+  }
+
+  .mobile-menu-btn-membership i {
+    font-size: 0.95rem;
+    color: #0F172A;
+  }
+
+  /* Close Button in Action Bar */
+  .mobile-menu-close-btn {
+    width: 36px;
+    height: 36px;
+    background: #B30001;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF !important;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 11px 16px;
-    background: linear-gradient(135deg, #FAB301, #FFA500);
-    color: #0F172A !important;
-    font-family: var(--font-telugu);
-    font-weight: 700;
-    font-size: 0.94rem;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(255, 184, 0, 0.25);
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(179, 0, 1, 0.3);
     transition: all 0.2s ease;
-    text-decoration: none;
+    flex-shrink: 0;
+    padding: 0;
   }
 
-  .btn-mobile-nav-donate:hover {
-    background: linear-gradient(135deg, #FFA500, #FF9100);
-    transform: translateY(-1px);
+  .mobile-menu-close-btn:hover {
+    background: #940001;
+    transform: scale(1.05);
+  }
+
+  .mobile-menu-close-btn i {
+    font-size: 1.05rem;
+    line-height: 1;
+    stroke-width: 1px;
+  }
+
+  /* 3. Navigation Cards List */
+  .mobile-menu-cards-list {
+    padding: 6px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    overflow-y: auto;
+    max-height: calc(85vh - 160px);
+  }
+
+  .mobile-nav-item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 16px;
+    background: #FFFFFF;
+    border: 1px solid #EDF2F7;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.18s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+
+  .mobile-nav-item-card:hover {
+    background: #F8FAFC;
+    border-color: #CBD5E1;
+    transform: translateX(2px);
+  }
+
+  .nav-item-card-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-item-card-left i {
+    font-size: 1.18rem;
+    color: #0F172A;
+    width: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.18s ease;
+  }
+
+  .nav-item-card-left span {
+    font-family: var(--font-telugu, inherit);
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+    transition: color 0.18s ease;
+  }
+
+  .nav-item-chevron {
+    font-size: 0.95rem;
+    color: #64748B;
+    transition: all 0.18s ease;
+  }
+
+  /* Active State (e.g. Home when active) */
+  .mobile-nav-item-card.active {
+    background: #FFF5F5 !important;
+    border-color: #FEE2E2 !important;
+  }
+
+  .mobile-nav-item-card.active .nav-item-card-left i {
+    color: #B30001 !important;
+  }
+
+  .mobile-nav-item-card.active .nav-item-card-left span {
+    color: #B30001 !important;
+  }
+
+  .mobile-nav-item-card.active .nav-item-chevron {
+    color: #B30001 !important;
+    font-weight: 800;
   }
 }
 
@@ -1342,6 +1639,7 @@ body.mobile-nav-open {
   }
 
   .lang-dropdown-capsule {
+    order: 1;
     padding: 6px 12px;
     gap: 5px;
     flex-shrink: 0 !important;
@@ -1352,7 +1650,8 @@ body.mobile-nav-open {
     font-size: 0.82rem;
   }
 
-  .btn-pill-donate {
+  .btn-pill-membership {
+    order: 2;
     display: inline-flex !important;
     padding: 6px 13px;
     font-size: 0.82rem;
@@ -1361,7 +1660,8 @@ body.mobile-nav-open {
     white-space: nowrap;
   }
 
-  .btn-pill-membership {
+  .btn-pill-donate {
+    order: 3;
     display: inline-flex !important;
     padding: 6px 13px;
     font-size: 0.82rem;
@@ -1371,6 +1671,7 @@ body.mobile-nav-open {
   }
 
   .navbar-toggler {
+    order: 4;
     width: 40px;
     height: 40px;
     margin-left: 2px !important;
@@ -1444,55 +1745,69 @@ body.mobile-nav-open {
     display: block !important;
   }
 
-  /* In mobile top bar, hide secondary membership so hamburger never gets pushed */
+  /* In mobile top bar: show membership beside Telugu */
   .header-right-controls {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 6px;
+    gap: 5px;
     flex-shrink: 0 !important;
     flex-wrap: nowrap !important;
     margin-left: auto !important;
   }
 
+  .header-right-controls .lang-dropdown-capsule {
+    order: 1;
+    padding: 5px 8px;
+    gap: 3px;
+    flex-shrink: 0 !important;
+    white-space: nowrap;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-label {
+    font-size: 0.74rem;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-chevron-icon {
+    font-size: 0.65rem;
+  }
+
   .header-right-controls .btn-pill-membership {
-    display: none !important;
-  }
-
-  .lang-dropdown-capsule {
+    order: 2;
+    display: inline-flex !important;
     padding: 5px 9px;
+    font-size: 0.74rem;
+    gap: 4px;
+    flex-shrink: 0 !important;
+    white-space: nowrap;
+    border-radius: 50px;
+  }
+
+  .header-right-controls .btn-pill-membership i {
+    font-size: 0.75rem;
+  }
+
+  .header-right-controls .btn-pill-donate {
+    order: 3;
+    padding: 5px 9px;
+    font-size: 0.74rem;
     gap: 4px;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
-  .lang-dropdown-capsule .lang-label {
-    font-size: 0.76rem;
-  }
-
-  .lang-dropdown-capsule .lang-chevron-icon {
-    font-size: 0.68rem;
-  }
-
-  .btn-pill-donate {
-    padding: 5px 10px;
-    font-size: 0.76rem;
-    gap: 4px;
-    flex-shrink: 0 !important;
-    white-space: nowrap;
-  }
-
-  .navbar-toggler {
-    width: 38px;
-    height: 38px;
+  .header-right-controls .navbar-toggler {
+    order: 4;
+    width: 36px;
+    height: 36px;
     margin: 0 !important;
     flex-shrink: 0 !important;
     border-radius: 9px;
   }
 
-  .navbar-toggler svg {
-    width: 20px;
-    height: 20px;
+  .header-right-controls .navbar-toggler svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -1558,40 +1873,61 @@ body.mobile-nav-open {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 4px;
+    gap: 3px;
     flex-wrap: nowrap !important;
     flex-shrink: 0 !important;
     margin-left: auto !important;
   }
 
-  .lang-dropdown-capsule {
-    padding: 4px 7px;
+  .header-right-controls .lang-dropdown-capsule {
+    order: 1;
+    padding: 4px 6px;
+    gap: 2px;
+    flex-shrink: 0 !important;
+    white-space: nowrap;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-label {
+    font-size: 0.68rem;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-chevron-icon {
+    font-size: 0.6rem;
+  }
+
+  .header-right-controls .btn-pill-membership {
+    order: 2;
+    display: inline-flex !important;
+    padding: 4px 6px;
+    font-size: 0.68rem;
     gap: 3px;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
-  .lang-dropdown-capsule .lang-label {
-    font-size: 0.72rem;
+  .header-right-controls .btn-pill-membership i {
+    font-size: 0.68rem;
   }
 
-  .btn-pill-donate {
-    padding: 4px 8px;
-    font-size: 0.72rem;
+  .header-right-controls .btn-pill-donate {
+    order: 3;
+    padding: 4px 6px;
+    font-size: 0.68rem;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
-  .navbar-toggler {
-    width: 34px;
-    height: 34px;
+  .header-right-controls .navbar-toggler {
+    order: 4;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
     flex-shrink: 0 !important;
   }
 
-  .navbar-toggler svg {
-    width: 18px;
-    height: 18px;
+  .header-right-controls .navbar-toggler svg {
+    width: 16px;
+    height: 16px;
   }
 
   .site-header .navbar-collapse {
@@ -6127,8 +6463,10 @@ body.mobile-nav-open {
 .id-card-3d-scene {
   perspective: 1400px;
   -webkit-perspective: 1400px;
-  width: 355px;
+  width: 500px;
   max-width: 100%;
+  aspect-ratio: 85.6 / 54;
+  min-height: 315px;
   margin: 0 auto;
   position: relative;
   display: block;
@@ -6159,7 +6497,8 @@ body.mobile-nav-open {
 /* 4. Perfectly Aligned Card Faces */
 .id-card-face {
   width: 100%;
-  border-radius: 18px;
+  height: 100%;
+  border-radius: 20px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -6169,9 +6508,8 @@ body.mobile-nav-open {
 
 .id-card-face-front {
   position: relative;
-  z-index: 2;
-  transform: rotateY(0deg) translateZ(1px);
-  -webkit-transform: rotateY(0deg) translateZ(1px);
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
 }
 
 .id-card-face-back {
@@ -6180,71 +6518,56 @@ body.mobile-nav-open {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  transform: rotateY(180deg) translateZ(1px);
-  -webkit-transform: rotateY(180deg) translateZ(1px);
-  border-radius: 18px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  border-radius: 20px;
   overflow: hidden;
-  background: #FFFFFF;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  background: #FFFDF8;
+  box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 /* Ensure Front & Back Card Bodies fill Face */
 .id-card-face .card-template-exact {
   width: 100%;
+  height: 100%;
   margin: 0;
 }
 
-/* Back Side Card Body */
-.id-card-back-body {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #FFFFFF;
-  border-radius: 18px;
-  border: 1.5px solid #E2E8F0;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.id-card-back-full-img {
+/* Outer Card Container with Metallic Gold Double-Border Frame */
+.card-template-exact,
+.mem-id-card-exact {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  display: block;
-  border-radius: 16.5px;
-}
-
-
-/* Card Body Matching Official Reference Image */
-.card-template-exact {
-  width: 330px;
-  max-width: 100%;
+  max-width: 500px;
+  aspect-ratio: 85.6 / 54;
   background: #FFFFFF;
-  border-radius: 18px;
-  border: 1.5px solid #E2E8F0;
+  border-radius: 20px;
+  border: 3.5px solid #F59E0B;
+  outline: 1.5px solid #FEF08A;
+  outline-offset: -3px;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18), 0 4px 14px rgba(245, 158, 11, 0.22);
+  box-sizing: border-box;
 }
 
-/* 1. Professional Red Header Banner with Medallion Logo & Waving Flag */
+/* ==========================================================================
+   Header Banner: Deep Crimson Gradient + Gold Trim + Emblem + Leader Avatar
+   ========================================================================== */
 .id-header-exact {
-  background: linear-gradient(135deg, #8B0C10 0%, #B91C1C 45%, #7F1D1D 100%);
-  padding: 6px 12px;
+  background: linear-gradient(180deg, #A80000 0%, #880000 45%, #6B0000 100%);
+  padding: 8px 14px 7px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
   position: relative;
-  border-bottom: 2px solid #F59E0B;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-bottom: 2.5px solid #F59E0B;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -6255,27 +6578,28 @@ body.mobile-nav-open {
   left: 0;
   right: 0;
   height: 48%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
 }
 
-.id-logo-medallion,
+/* Left: Party Emblem Medallion */
 .id-emblem-ring {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 2.5px solid #B30001;
+  border: 2.5px solid #F59E0B;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
   flex-shrink: 0;
-  padding: 1px;
+  padding: 1.5px;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
-.id-logo-medallion-img,
 .id-emblem-exact-img {
   width: 100%;
   height: 100%;
@@ -6283,118 +6607,127 @@ body.mobile-nav-open {
   display: block;
 }
 
+/* Center: Party Title & Slogan with 3D Gold Glow */
 .id-title-exact-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1.15;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   flex: 1;
   min-width: 0;
-  margin: 0 4px;
+  line-height: 1.15;
+  position: relative;
+  z-index: 2;
 }
 
 .id-title-exact-telugu {
-  font-size: 1.25rem;
+  font-size: 1.48rem;
   font-weight: 900;
-  color: #FFFFFF;
-  letter-spacing: 0.2px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  color: #FFF275;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85), 0 0 12px rgba(245, 158, 11, 0.6);
   white-space: nowrap;
+  font-family: var(--font-telugu, 'Noto Sans Telugu', sans-serif);
 }
 
 .id-slogan-exact-telugu {
-  font-size: 0.58rem;
+  font-size: 0.70rem;
   font-weight: 700;
-  color: #FEF08A;
-  margin-top: 2px;
-  letter-spacing: 0.2px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  margin-top: 1px;
+  letter-spacing: 0.4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
 }
 
-.id-header-flag-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-shrink: 0;
-  height: 42px;
-}
-
-.id-header-flag-img {
-  height: 38px;
-  width: auto;
-  max-width: 80px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
-  transition: transform 0.3s ease;
-}
-
-.id-header-flag-wrap:hover .id-header-flag-img {
-  transform: scale(1.05);
-}
-
-/* 2. Golden-Yellow & Red Ribbon: —— ID CARD —— */
-.id-ribbon-exact {
-  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
-  padding: 2.5px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-}
-
-.id-ribbon-content {
-  background: #A30005;
-  color: #FFFFFF;
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-align: center;
-  padding: 2px 0;
+/* Right: Leader Portrait Medallion */
+.id-leader-badge-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2.5px solid #F59E0B;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-}
-
-.ribbon-dash {
-  color: #FBBF24;
-  font-weight: 900;
-}
-
-.ribbon-text {
-  color: #FFFFFF;
-  font-weight: 900;
-}
-
-/* 3. Photo (Left) + Member Details (Right) */
-.id-info-exact-grid {
-  display: grid;
-  grid-template-columns: 104px 1fr;
-  gap: 8px;
-  padding: 10px 10px 6px 10px;
-  align-items: flex-start;
-  position: relative;
-}
-
-.id-photo-exact-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.id-photo-exact-frame {
-  width: 104px;
-  height: 132px;
-  border: 2px solid #B30001;
-  border-radius: 9px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+.id-leader-badge-ring:hover {
+  transform: scale(1.06);
+}
+
+.id-leader-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* ==========================================================================
+   Main Body: 3 Columns Landscape (Photo Left + Details Center + QR Right)
+   ========================================================================== */
+.id-body-exact {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 118px 1fr 92px;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 14px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+  overflow: hidden;
+}
+
+/* Centered Faint Golden Sri Chakra Watermark */
+.id-watermark-bg {
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3));
+}
+
+.id-watermark-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Column 1: Member Photo in Gold Rounded Frame */
+.id-photo-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.id-photo-frame {
+  width: 114px;
+  height: 142px;
+  border: 2.5px solid #F59E0B;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
   background: #fdfdfd;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.id-photo-exact-img {
+.id-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -6402,200 +6735,602 @@ body.mobile-nav-open {
   display: block;
 }
 
-.id-fields-exact-col {
+/* Column 2: Member Details Table */
+.id-details-col {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding-top: 1px;
+  gap: 2.5px;
   min-width: 0;
+  justify-content: center;
 }
 
-.id-row-exact {
+.id-field-row {
   display: flex;
   align-items: baseline;
-  font-size: 0.70rem;
-  line-height: 1.3;
+  font-size: 0.72rem;
+  line-height: 1.25;
   min-width: 0;
 }
 
-.id-lbl-exact {
-  width: 66px;
-  color: #111827;
+.id-field-lbl {
+  width: 76px;
+  color: #0F172A;
   font-weight: 800;
+  font-size: 0.71rem;
   flex-shrink: 0;
-  font-size: 0.69rem;
 }
 
-.id-sep-exact {
-  width: 8px;
-  color: #111827;
+.id-field-sep {
+  width: 9px;
+  color: #0F172A;
   font-weight: 800;
   text-align: center;
   flex-shrink: 0;
 }
 
-.id-val-exact.val-red {
+.id-field-val {
+  color: #1E293B;
+  font-weight: 700;
+  font-size: 0.72rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.id-field-val.val-red {
   color: #B30001;
   font-weight: 900;
-  font-size: 0.71rem;
-  line-height: 1.25;
-  word-break: break-word;
-  overflow: visible;
-  flex: 1;
-  min-width: 0;
 }
 
-.desig-exact-row {
-  align-items: flex-start;
-}
-
-.desig-wrap {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.id-num-bold {
-  font-size: 0.69rem !important;
+.id-field-val.val-name {
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #B30001;
   letter-spacing: 0.2px;
-  white-space: nowrap !important;
 }
 
-/* 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) */
-.id-auth-exact-strip {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 6px 14px 8px 14px;
+.id-field-val.val-bold {
+  font-weight: 800;
+}
+
+/* Column 3: QR Code (without inner logo) + Signature */
+.id-auth-col {
   position: relative;
-}
-
-.id-qr-exact-wrap {
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
-.id-qr-box-frame {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #E5E7EB;
-  border-radius: 4px;
-  padding: 2px;
+.id-qr-box {
+  width: 80px;
+  height: 80px;
   background: #FFFFFF;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .id-qr-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
-.id-tagline-exact {
+.id-sign-box {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
-  text-align: left;
+  align-items: center;
+  text-align: center;
+  width: 88px;
 }
 
-.tagline-bars-exact {
+.id-signature-svg {
+  width: 86px;
+  height: 24px;
   display: flex;
-  gap: 2px;
-  margin-bottom: 2px;
+  align-items: center;
+  justify-content: center;
 }
 
-.bar-gold {
-  width: 16px;
-  height: 2.5px;
-  background: #F59E0B;
-  border-radius: 1px;
+.id-sign-line {
+  width: 100%;
+  height: 1.2px;
+  background: #0F172A;
+  margin: 1px 0 2px 0;
 }
 
-.bar-red {
-  width: 16px;
-  height: 2.5px;
-  background: #B30001;
-  border-radius: 1px;
+.id-sign-text {
+  font-size: 0.50rem;
+  font-weight: 800;
+  color: #0F172A;
+  white-space: nowrap;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
 }
 
-.tagline-line1 {
-  font-size: 0.44rem;
-  color: #1E293B;
-  font-weight: 700;
+/* ==========================================================================
+   Bottom Banner: Rich Red Glossy Bar with Gold Dashes Flanking Telugu Text
+   ========================================================================== */
+.id-bottom-exact-banner {
+  background: linear-gradient(180deg, #990000 0%, #750000 100%);
+  border-top: 2.5px solid #F59E0B;
+  padding: 4px 14px 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
-.tagline-line2 {
-  font-size: 0.52rem;
-  color: #1E3A8A;
+.id-bottom-decor-line {
+  height: 2px;
+  flex: 1;
+  max-width: 65px;
+  background: linear-gradient(90deg, transparent, #F59E0B, #FFF066);
+  border-radius: 2px;
+}
+
+.id-bottom-decor-line:last-child {
+  background: linear-gradient(90deg, #FFF066, #F59E0B, transparent);
+}
+
+.id-bottom-telugu-text {
+  font-size: 1.15rem;
   font-weight: 900;
+  color: #FFF275;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+  font-family: var(--font-telugu, 'Noto Sans Telugu', sans-serif);
 }
 
-.id-watermark-exact {
+/* ==========================================================================
+   Back Side Card Body: Aadhaar Landscape Format (Duties Left + Office Right)
+   ========================================================================== */
+.id-card-back-body {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #FFFDF8;
+  border-radius: 20px;
+  border: 3.5px solid #F59E0B !important;
+  outline: 1.5px solid #FEF08A;
+  outline-offset: -3px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Back Side Ribbon: — MEMBER DUTIES & RESPONSIBILITIES — */
+.id-back-ribbon {
+  background: #6D0204;
+  border-top: 1.5px solid #F59E0B;
+  border-bottom: 1.5px solid #F59E0B;
+  padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.back-ribbon-line {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #F59E0B;
+  border-radius: 2px;
+}
+
+.back-ribbon-text {
+  color: #FFFFFF;
+  font-size: 0.70rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+}
+
+/* Back Main Content (2-Column Landscape) */
+.id-back-main-content {
+  position: relative;
+  flex: 1;
+  padding: 6px 14px;
+  overflow: hidden;
+  background: #FFFDF8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.id-back-watermark {
   position: absolute;
-  left: 52%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
-  opacity: 0.45;
+  width: 140px;
+  height: 140px;
+  opacity: 0.10;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
-.id-watermark-img {
+.back-watermark-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.id-signature-exact-wrap {
-  display: flex;
-  flex-direction: column;
+.id-back-grid-cols {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 12px;
   align-items: center;
-  text-align: center;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
 }
 
-.signature-drawing {
+/* Left Duties */
+.id-back-left-duties {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.id-duty-pill-wrap {
+  margin-bottom: 3px;
+}
+
+.id-duty-pill-text {
+  display: inline-block;
+  background: linear-gradient(135deg, #B91C1C 0%, #8B0C10 100%);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 14px;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(185, 28, 28, 0.3);
+  letter-spacing: 0.2px;
+}
+
+.id-duties-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.id-duty-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.duty-arrow-icon {
+  color: #DC2626;
+  font-size: 0.65rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Right Office & Seal */
+.id-back-right-office {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.id-office-card {
+  background: #FFFFFF;
+  border: 1.5px solid #F59E0B;
+  border-radius: 10px;
+  padding: 5px 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.office-badge-tag {
+  background: #FFF1F0;
+  border-radius: 50px;
+  padding: 1.5px 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #DC2626;
+  font-weight: 700;
+  font-size: 0.62rem;
   margin-bottom: 2px;
 }
 
-.signature-lbl-exact {
-  font-size: 0.52rem;
+.office-badge-tag i {
+  font-size: 0.65rem;
+}
+
+.office-address-block {
+  font-size: 0.66rem;
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.office-addr-bold {
+  color: #0F172A;
   font-weight: 800;
-  color: #111827;
-  border-top: 1px solid #94A3B8;
-  padding-top: 2px;
 }
 
-/* 5. Bottom Red Curved Banner: ప్రజా సేవా పార్టీ */
-.id-bottom-exact-banner {
-  background: linear-gradient(180deg, #B30001 0%, #A30005 100%);
-  padding: 6px 10px 7px 10px;
-  text-align: center;
-  position: relative;
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+.office-addr-sub {
+  color: #475569;
+  font-weight: 600;
 }
 
-.id-bottom-gold-curve {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%);
-  border-radius: 50% 50% 0 0;
+.office-contact-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
-.id-bottom-telugu-text {
-  font-size: 1.12rem;
-  font-weight: 900;
-  color: #FFFFFF;
+.contact-pill-item {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: #0F172A;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-pill-item:hover {
+  transform: translateY(-1px);
+}
+
+.contact-pill-phone {
+  flex: 1;
+  border: 1px solid #FECACA;
+}
+
+.contact-pill-phone .icon-phone {
+  color: #DC2626;
+  font-size: 0.62rem;
+}
+
+.contact-pill-email {
+  flex: 1.3;
+  border: 1px solid #FED7AA;
+  font-size: 0.60rem;
+}
+
+.contact-pill-email .icon-email {
+  color: #F59E0B;
+  font-size: 0.64rem;
+}
+
+.id-back-official-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  color: #166534;
+  background: #DCFCE7;
+  border: 1px solid #BBF7D0;
+  border-radius: 6px;
+  padding: 3px 6px;
+}
+
+.id-back-official-seal i {
+  color: #16A34A;
+  font-size: 0.72rem;
+}
+
+/* Back Bottom Banner */
+.id-back-bottom-banner {
+  background: linear-gradient(180deg, #990000 0%, #750000 100%);
+  border-top: 2.5px solid #F59E0B;
+  padding: 4px 14px;
+}
+
+.back-web-link {
+  color: #FFF275;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 800;
   letter-spacing: 0.5px;
-  line-height: 1.2;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  transition: color 0.2s ease;
+}
+
+.back-web-link:hover {
+  color: #FFFFFF;
+}
+
+.back-web-link i {
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   Responsive Scaling for Aadhaar Card on Mobile & Tablets
+   ========================================================================== */
+@media (max-width: 539.98px) {
+  .id-card-3d-scene {
+    width: 100%;
+    max-width: 440px;
+    min-height: unset;
+  }
+
+  .id-header-exact {
+    padding: 6px 10px 5px 10px;
+    gap: 6px;
+  }
+
+  .id-emblem-ring,
+  .id-leader-badge-ring {
+    width: 36px;
+    height: 36px;
+  }
+
+  .id-title-exact-telugu {
+    font-size: 1.18rem;
+  }
+
+  .id-slogan-exact-telugu {
+    font-size: 0.58rem;
+  }
+
+  .id-body-exact {
+    grid-template-columns: 92px 1fr 72px;
+    gap: 8px;
+    padding: 6px 10px;
+  }
+
+  .id-photo-frame {
+    width: 90px;
+    height: 114px;
+  }
+
+  .id-field-row {
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+
+  .id-field-lbl {
+    width: 58px;
+    font-size: 0.60rem;
+  }
+
+  .id-field-sep {
+    width: 6px;
+    font-size: 0.60rem;
+  }
+
+  .id-field-val {
+    font-size: 0.62rem;
+  }
+
+  .id-field-val.val-name {
+    font-size: 0.66rem;
+  }
+
+  .id-qr-box {
+    width: 64px;
+    height: 64px;
+  }
+
+  .id-signature-svg {
+    width: 68px;
+    height: 20px;
+  }
+
+  .id-sign-box {
+    width: 70px;
+  }
+
+  .id-sign-text {
+    font-size: 0.44rem;
+  }
+
+  .id-bottom-exact-banner {
+    padding: 3px 10px;
+  }
+
+  .id-bottom-telugu-text {
+    font-size: 0.95rem;
+  }
+
+  .id-bottom-decor-line {
+    max-width: 40px;
+  }
+
+  .id-back-grid-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .id-duty-item {
+    font-size: 0.58rem;
+  }
+
+  .id-duty-pill-text {
+    font-size: 0.62rem;
+    padding: 1.5px 10px;
+  }
+
+  .office-addr-bold,
+  .office-addr-sub {
+    font-size: 0.58rem;
+  }
+
+  .contact-pill-item {
+    font-size: 0.56rem;
+    padding: 1.5px 4px;
+  }
+
+  .back-web-link {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .id-body-exact {
+    grid-template-columns: 78px 1fr 60px;
+    gap: 5px;
+    padding: 5px 6px;
+  }
+
+  .id-photo-frame {
+    width: 76px;
+    height: 96px;
+  }
+
+  .id-field-lbl {
+    width: 48px;
+    font-size: 0.54rem;
+  }
+
+  .id-field-val {
+    font-size: 0.55rem;
+  }
+
+  .id-qr-box {
+    width: 54px;
+    height: 54px;
+  }
+
+  .id-title-exact-telugu {
+    font-size: 1.02rem;
+  }
 }
 
 /* ==========================================================================
@@ -9712,7 +10447,7 @@ body.mobile-nav-open {
 }
 
 /* ==========================================================================
-   Section 7: About Page CTA Card (3 Equal-Height Rows: #b30001 & #fab301)
+   Section 7: About Page CTA Card (3 Rows: Red, Yellow with Green Button, Red)
    ========================================================================== */
 .about-cta-section {
   padding: 36px 0 52px 0;
@@ -9720,35 +10455,34 @@ body.mobile-nav-open {
 
 .about-cta-card {
   position: relative;
-  border-radius: 18px;
-  border: 2.5px solid #b30001;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  border-radius: 20px;
+  border: 2px solid #b30001;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  color: #fff;
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .about-cta-card:hover {
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
 }
 
-/* Three Equal-Height Horizontal Rows */
+/* Three Horizontal Rows */
 .about-cta-row {
-  flex: 1 1 0;
-  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  width: 100%;
 }
 
-/* 1. Top Row: Background #b30001 with Flags on Opposite Ends & Centered Text */
+/* 1. Top Row: Background #b30001 with Flags on Opposite Ends & Centered Black Text */
 .about-cta-row-top {
   background-color: #b30001;
-  padding: 16px 32px;
+  padding: 12px 28px;
+  min-height: 98px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -9771,11 +10505,11 @@ body.mobile-nav-open {
 }
 
 .cta-flag-img {
-  height: 74px;
+  height: 76px;
   width: auto;
-  max-width: 165px;
+  max-width: 170px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
   transition: transform 0.25s ease;
 }
 
@@ -9785,180 +10519,195 @@ body.mobile-nav-open {
 
 .about-cta-message {
   text-align: center;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .about-cta-message p {
-  color: #FFFFFF;
+  color: #FAB301;
   font-size: 1.18rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.5;
   margin: 0;
   letter-spacing: 0.01em;
 }
 
-/* 2. Middle Row: Background #fab301 with Heading & Red Donation Button */
+/* 2. Middle Row: Background #fab301 with Centered Large Green Donation Pill Button */
 .about-cta-row-middle {
   background-color: #fab301;
-  padding: 18px 20px;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.about-cta-title {
-  color: #b30001;
-  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
-  font-weight: 900;
-  line-height: 1.25;
-  margin: 0;
-  letter-spacing: -0.01em;
+  padding: 24px 20px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-cta-donate {
-  background-color: #b30001;
+  background-color:#0fea0f;
   color: #FFFFFF;
-  font-size: 1.15rem;
+  font-size: 2.7rem;
   font-weight: 800;
-  padding: 12px 42px;
+  padding: 20px 68px;
+  min-height: 125px;
+  width: min(560px, 92%);
   border-radius: 9999px;
-  border: none;
+  border: 3px solid white;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 22px;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 5px 16px rgba(179, 0, 1, 0.38);
+  box-shadow: 0 8px 24px rgba(25, 135, 84, 0.42);
   transition: all 0.25s ease;
 }
 
 .btn-cta-donate:hover {
-  background-color: #900001;
+  background-color: #157347;
   color: #FFFFFF;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 7px 20px rgba(179, 0, 1, 0.48);
+  box-shadow: 0 12px 30px rgba(25, 135, 84, 0.52);
 }
 
 .btn-cta-donate i {
   color: #FFFFFF;
-  font-size: 1.15rem;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 3. Bottom Row: Background #b30001 with White Quotation & Yellow Quote Marks */
+/* 3. Bottom Row: Background #b30001 with Black Quotation & Yellow Quote Marks */
 .about-cta-row-bottom {
   background-color: #b30001;
   padding: 16px 24px;
+  min-height: 90px;
 }
 
 .about-cta-quote {
   margin: 0;
-  color: #FFFFFF;
-  font-size: 1.2rem;
-  font-weight: 700;
+  color: #FAB301;
+  font-size: 1.25rem;
+  font-weight: 800;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   letter-spacing: 0.02em;
 }
 
 .cta-quote-mark {
   color: #fab301;
   font-family: Georgia, serif;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 900;
   line-height: 1;
 }
 
-/* Responsive Rules for Equal 3-Row Layout */
+/* Responsive Rules for 3-Row Layout */
 @media (max-width: 991px) {
-  .about-cta-row {
-    min-height: 96px;
-  }
-
   .about-cta-row-top {
-    padding: 14px 20px;
+    padding: 12px 18px;
     gap: 16px;
+    min-height: 85px;
   }
 
   .cta-flag-img {
     height: 60px;
-    max-width: 125px;
+    max-width: 130px;
   }
 
   .about-cta-message p {
     font-size: 1.05rem;
   }
 
-  .about-cta-title {
-    font-size: 1.35rem;
+  .about-cta-row-middle {
+    min-height: 145px;
+    padding: 20px 16px;
   }
 
   .btn-cta-donate {
-    font-size: 1.05rem;
-    padding: 10px 32px;
+    font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+    padding: 16px 44px;
+    min-height: 95px;
+    width: min(480px, 92%);
+    gap: 16px;
+  }
+
+  .btn-cta-donate i {
+    font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  }
+
+  .about-cta-row-bottom {
+    min-height: 80px;
+    padding: 14px 18px;
   }
 
   .about-cta-quote {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   .cta-quote-mark {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .about-cta-row {
-    min-height: 84px;
-  }
-
   .about-cta-row-top {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    padding: 12px 12px;
+    padding: 10px 12px;
+    min-height: 75px;
   }
 
   .cta-flag-img {
     height: 48px;
-    max-width: 85px;
+    max-width: 90px;
   }
 
   .about-cta-message p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.4;
   }
 
   .about-cta-row-middle {
-    padding: 14px 12px;
-    gap: 8px;
-  }
-
-  .about-cta-title {
-    font-size: 1.2rem;
+    min-height: 120px;
+    padding: 16px 12px;
   }
 
   .btn-cta-donate {
-    font-size: 0.98rem;
-    padding: 9px 26px;
+    font-size: 1.25rem;
+    padding: 14px 28px;
+    min-height: 76px;
+    width: min(390px, 94%);
+    gap: 12px;
+  }
+
+  .btn-cta-donate i {
+    font-size: 1.35rem;
   }
 
   .about-cta-row-bottom {
+    min-height: 68px;
     padding: 12px 14px;
   }
 
   .about-cta-quote {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
+    gap: 8px;
   }
 
   .cta-quote-mark {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about-cta-row {
-    min-height: 74px;
+  .about-cta-row-top {
+    padding: 8px 8px;
+    min-height: 64px;
+    gap: 6px;
   }
 
   .cta-flag-img {
@@ -9967,21 +10716,35 @@ body.mobile-nav-open {
   }
 
   .about-cta-message p {
-    font-size: 0.8rem;
-    line-height: 1.35;
+    font-size: 0.78rem;
+    line-height: 1.32;
   }
 
-  .about-cta-title {
-    font-size: 1.05rem;
+  .about-cta-row-middle {
+    min-height: 98px;
+    padding: 14px 8px;
   }
 
   .btn-cta-donate {
-    font-size: 0.9rem;
-    padding: 8px 20px;
+    font-size: 1.05rem;
+    padding: 11px 20px;
+    min-height: 58px;
+    width: min(310px, 96%);
+    gap: 9px;
+  }
+
+  .btn-cta-donate i {
+    font-size: 1.15rem;
+  }
+
+  .about-cta-row-bottom {
+    min-height: 58px;
+    padding: 10px 8px;
   }
 
   .about-cta-quote {
     font-size: 0.8rem;
+    gap: 6px;
   }
 
   .cta-quote-mark {
@@ -10336,15 +11099,15 @@ main > section.news-hero-banner {
 
 .mem-page-container {
   display: grid;
-  grid-template-columns: 390px 1fr;
+  grid-template-columns: minmax(460px, 500px) 1fr;
   gap: 36px;
   align-items: flex-start;
-  max-width: 1240px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1040px) {
   .mem-page-container {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -10358,7 +11121,7 @@ main > section.news-hero-banner {
 }
 
 .mem-id-card-frame {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10366,7 +11129,8 @@ main > section.news-hero-banner {
 
 .mem-id-card-exact {
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
+  aspect-ratio: 85.6 / 54;
   border-radius: 20px;
   border: 3.5px solid #F59E0B;
   box-shadow: 0 14px 34px rgba(245, 158, 11, 0.24), 0 6px 18px rgba(0, 0, 0, 0.08);
