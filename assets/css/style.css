@@ -129,7 +129,7 @@ body {
 .gallery-section,
 .social-connect-section,
 .membership-master-section,
-main>section:not(.hero-section):not(.quick-nav-section) {
+main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-top: var(--section-padding-top);
@@ -148,7 +148,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
     padding-top: 60px;
     padding-bottom: 60px;
     padding-top: var(--section-padding-top);
@@ -168,7 +168,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
     padding-top: 70px;
     padding-bottom: 70px;
     padding-top: var(--section-padding-top);
@@ -188,7 +188,7 @@ main>section:not(.hero-section):not(.quick-nav-section) {
   .gallery-section,
   .social-connect-section,
   .membership-master-section,
-  main>section:not(.hero-section):not(.quick-nav-section) {
+  main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):not(.about-hero-banner):not(.vision-hero-banner):not(.issues-graphic-banner) {
     padding-top: 90px;
     padding-bottom: 90px;
     padding-top: var(--section-padding-top);
@@ -10596,6 +10596,44 @@ body.mobile-nav-open {
   background: linear-gradient(90deg, #B30001 0%, #B30001 50%, #FAB301 50%, #FAB301 100%);
 }
 
+/* ==========================================================================
+   Hero Graphic Banner Sections (Seamless Zero-Gap Header to Banner)
+   ========================================================================== */
+.mem-hero-banner,
+.about-hero-banner,
+.vision-hero-banner,
+.issues-graphic-banner,
+main > section.mem-hero-banner,
+main > section.about-hero-banner,
+main > section.vision-hero-banner,
+main > section.issues-graphic-banner {
+  position: relative;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0;
+  display: block;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.mem-hero-banner-image,
+.about-hero-banner-image,
+.vision-hero-banner-image,
+.issues-graphic-banner-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  line-height: 0;
+  vertical-align: middle;
+}
+
 .mem-page-section {
   background: #F8FAFC;
   padding: 40px 0 70px;
@@ -13385,14 +13423,10 @@ body.mobile-nav-open {
   overflow: hidden;
 }
 
-/* Smooth white gradient overlay ensuring left text sits on crisp white */
+/* Legacy hero overlay disabled for crisp graphic banner */
 .issues-hero-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 28%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0) 75%);
-  z-index: 1;
-  pointer-events: none;
+  display: none !important;
+  content: none !important;
 }
 
 .issues-banner-inner {
