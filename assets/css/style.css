@@ -2360,7 +2360,7 @@ body.mobile-nav-open {
 
 @media (max-width: 768px) {
   .hero-slider-nav-btn {
-    width: 64px;
+    width: 6px;
     height: 64px;
     font-size: 2rem;
     background: transparent;
@@ -10868,7 +10868,7 @@ body.mobile-nav-open {
 .btn-cta-donate {
   background-color:#0fea0f;
   color: #FFFFFF;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 800;
   padding: 20px 68px;
   min-height: 125px;
@@ -12804,56 +12804,274 @@ main > section.news-hero-banner {
 .don-benefit-item {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 16px;
-  padding: 18px 12px;
+  border-radius: 18px;
+  padding: 20px 14px 18px;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(8, 17, 36, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 16px rgba(8, 17, 36, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .don-benefit-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(8, 17, 36, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(8, 17, 36, 0.09);
   border-color: #CBD5E1;
 }
 
 .don-benefit-icon-circle {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  margin: 0 auto 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin: 0 auto 12px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.don-benefit-icon-circle i {
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.don-benefit-icon-circle svg {
+  width: 27px;
+  height: 27px;
+  display: block;
+}
+
+.don-benefit-item:hover .don-benefit-icon-circle {
+  transform: scale(1.1);
 }
 
 .icon-badge-red {
-  background: #FFF1F2;
-  border: 1.5px solid #FFE4E6;
+  background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+  border: 1.5px solid #FECDD3;
   color: #B30001;
+  box-shadow: 0 4px 14px rgba(179, 0, 1, 0.08);
+}
+
+.don-benefit-item:hover .icon-badge-red {
+  box-shadow: 0 6px 20px rgba(179, 0, 1, 0.18);
+  border-color: #FDA4AF;
 }
 
 .icon-badge-gold {
-  background: #FFFBEB;
-  border: 1.5px solid #FEF08A;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1.5px solid #FDE68A;
   color: #B45309;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.1);
+}
+
+.don-benefit-item:hover .icon-badge-gold {
+  box-shadow: 0 6px 20px rgba(180, 83, 9, 0.2);
+  border-color: #FCD34D;
 }
 
 .don-benefit-title {
   font-family: var(--font-telugu, inherit);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #081124;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+  line-height: 1.3;
 }
 
 .don-benefit-sub {
   font-family: var(--font-telugu, inherit);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: #64748B;
-  line-height: 1.35;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Bank Details Card (Donate Page Left Side)
+   ========================================================================== */
+.don-bank-details-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(8, 17, 36, 0.05);
+  margin-top: 22px;
+  width: 100%;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  text-align: left;
+}
+
+.don-bank-details-card:hover {
+  box-shadow: 0 8px 26px rgba(8, 17, 36, 0.08);
+  border-color: #CBD5E1;
+}
+
+.don-bank-card-header {
+  background: linear-gradient(135deg, #8B0000 0%, #B30000 100%);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  border-bottom: 2px solid #F59E0B;
+}
+
+.don-bank-header-icon {
+  font-size: 1.35rem;
+  color: #FFF275;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  flex-shrink: 0;
+}
+
+.don-bank-card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+  font-family: var(--font-telugu, inherit);
+}
+
+.don-bank-card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #FFFFFF;
+}
+
+.don-bank-row {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.don-bank-row:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  transform: translateX(2px);
+}
+
+.don-bank-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.don-bank-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(220, 38, 38, 0.08);
+}
+
+.don-bank-icon-circle.fs-icon-pill {
+  font-size: 0.90rem;
+}
+
+.don-bank-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.don-bank-row-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.don-bank-value {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0F172A;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.don-bank-copy-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  border-radius: 6px;
+  padding: 4px 7px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.don-bank-copy-btn:hover {
+  background: #B30000;
+  color: #FFFFFF;
+  border-color: #B30000;
+  transform: scale(1.05);
+}
+
+.don-bank-copy-btn.copied {
+  background: #DCFCE7;
+  color: #16A34A;
+  border-color: #86EFAC;
+}
+
+/* Yellow Information Box */
+.don-bank-info-box {
+  background: #FEF9C3;
+  border: 1.5px solid #FDE047;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-top: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(234, 179, 8, 0.12);
+}
+
+.don-bank-info-icon {
+  font-size: 1.45rem;
+  color: #EAB308;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.don-bank-info-text {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #854D0E;
+  font-family: var(--font-telugu, inherit);
 }
 
 /* Right Column: Donation Form Card */
@@ -14074,11 +14292,18 @@ main > section.news-hero-banner {
     order: 4;
     width: 100%;
     max-width: 580px;
+    margin-bottom: 20px;
+  }
+
+  .don-bank-details-card {
+    order: 5;
+    width: 100%;
+    max-width: 580px;
     margin-bottom: 28px;
   }
 
   .don-leader-stage {
-    order: 5;
+    order: 6;
     margin: 0 auto 8px;
   }
 

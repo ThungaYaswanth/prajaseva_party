@@ -256,33 +256,159 @@
           తెలంగాణ అభివృద్ధి కోసం, ప్రజా సంక్షేమం కోసం, మీ విలువైన సహకారం అందించండి. కలిసే ముందుకు సాగుదాం..
         </p>
 
-        <!-- 3 Benefit Cards (Matching Reference Image) -->
+        <!-- 3 Benefit Cards (Content-Suitable Professional Icons) -->
         <div class="don-benefits-row">
-          <!-- Benefit 1: ప్రజల కోసం -->
+          <!-- Benefit 1: ప్రజల కోసం (For the People - Community & Welfare) -->
           <div class="don-benefit-item">
             <div class="don-benefit-icon-circle icon-badge-red">
-              <i class="bi bi-people-fill"></i>
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
             </div>
             <div class="don-benefit-title" data-i18n="donBenefit1Title">ప్రజల కోసం</div>
-            <div class="don-benefit-sub" data-i18n="donBenefit1Sub">మంచి పాలన కోసం మీ సహాయంతో</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit1Sub">సమాజాభివృద్ధి కోసం పనిచేస్తూ...</div>
           </div>
 
-          <!-- Benefit 2: సేవా దృక్పథం -->
+          <!-- Benefit 2: మా బాధ్యత (Our Responsibility - Social Duty & Protection Guarantee) -->
           <div class="don-benefit-item">
             <div class="don-benefit-icon-circle icon-badge-gold">
-              <i class="bi bi-flower1"></i>
+              <i class="bi bi-shield-fill-check" aria-hidden="true"></i>
             </div>
-            <div class="don-benefit-title" data-i18n="donBenefit2Title">సేవా దృక్పథం</div>
-            <div class="don-benefit-sub" data-i18n="donBenefit2Sub">ప్రతి వ్యక్తికి సమాన అవకాశాలు</div>
+            <div class="don-benefit-title" data-i18n="donBenefit2Title">మా బాధ్యత</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit2Sub">ప్రతి ఒక్కరి అభివృద్ధి లక్ష్యంగా</div>
           </div>
 
-          <!-- Benefit 3: మంచి తెలంగాణ -->
+          <!-- Benefit 3: నమ్మకమైన పాలన (Trustworthy Governance - Verified Public Integrity) -->
           <div class="don-benefit-item">
             <div class="don-benefit-icon-circle icon-badge-red">
-              <i class="bi bi-bullseye"></i>
+              <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
             </div>
-            <div class="don-benefit-title" data-i18n="donBenefit3Title">మంచి తెలంగాణ</div>
-            <div class="don-benefit-sub" data-i18n="donBenefit3Sub">మరింత బలమైన భవిష్యత్తు కోసం</div>
+            <div class="don-benefit-title" data-i18n="donBenefit3Title">నమ్మకమైన పాలన</div>
+            <div class="don-benefit-sub" data-i18n="donBenefit3Sub">ప్రజలతో, ప్రజల కోసం నిరంతర సేవ</div>
+          </div>
+        </div>
+
+        <!-- Bank Details Card with Yellow Information Box (Matching Mockup) -->
+        <div class="don-bank-details-card">
+          <!-- Card Red Header -->
+          <div class="don-bank-card-header">
+            <i class="bi bi-bank2 don-bank-header-icon" aria-hidden="true"></i>
+            <h3 class="don-bank-card-title">
+              <span data-i18n="bankDetailsHeader">బ్యాంక్ వివరాలు (Bank Details)</span>
+            </h3>
+          </div>
+
+          <!-- Card Body with 6 Detail Rows -->
+          <div class="don-bank-card-body">
+            <!-- Row 1: Account Name -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankAccountNameLbl">Account Name</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValAccName">Praja Seva Party</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy Account Name" onclick="copyBankValue('Praja Seva Party', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Row 2: Account Number -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle">
+                  <i class="bi bi-bank"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankAccountNumLbl">Account Number</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValAccNum">1234 5678 9012</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy Account Number" onclick="copyBankValue('1234 5678 9012', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Row 3: Bank Name -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle">
+                  <i class="bi bi-bank2"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankNameLbl">Bank Name</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValBankName">State Bank of India (SBI)</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy Bank Name" onclick="copyBankValue('State Bank of India (SBI)', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Row 4: Branch Name -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankBranchLbl">Branch Name</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValBranch">Ameerpet, Hyderabad</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy Branch Name" onclick="copyBankValue('Ameerpet, Hyderabad', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Row 5: IFSC Code -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle fs-icon-pill">
+                  <i class="bi bi-qr-code"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankIfscLbl">IFSC Code</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValIfsc">SBIN0001234</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy IFSC Code" onclick="copyBankValue('SBIN0001234', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Row 6: Account Type -->
+            <div class="don-bank-row">
+              <div class="don-bank-row-left">
+                <span class="don-bank-icon-circle">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <span class="don-bank-label" data-i18n="bankAccountTypeLbl">Account Type</span>
+              </div>
+              <div class="don-bank-row-right">
+                <span class="don-bank-value" id="bankValAccType">Current Account</span>
+                <button type="button" class="don-bank-copy-btn" title="కాపీ చేయండి" data-i18n-title="bankCopyBtnTitle"
+                  aria-label="Copy Account Type" onclick="copyBankValue('Current Account', this)">
+                  <i class="bi bi-copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Yellow Information Box (Bilingual Support: Telugu & English) -->
+            <div class="don-bank-info-box" role="note" aria-label="Donation Note">
+              <span class="don-bank-info-icon" aria-hidden="true">
+                <i class="bi bi-info-circle-fill"></i>
+              </span>
+              <p class="don-bank-info-text" data-i18n="bankInfoBoxText">
+                మీ చిన్న సహకారం ప్రజా సేవలో గొప్ప మార్పుకు నాంది కావచ్చు. ప్రజల సంక్షేమం కోసం ప్రజా సేవా పార్టీతో కలిసి ముందడుగు వేయండి.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -1037,6 +1163,32 @@
   <script src="assets/js/main.js?v=12.1"></script>
   <!-- Razorpay Static Checkout -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!-- Bank Details Copy Helper -->
+  <script>
+    function copyBankValue(text, btn) {
+      if (!navigator.clipboard) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } else {
+        navigator.clipboard.writeText(text);
+      }
+      const icon = btn ? btn.querySelector('i') : null;
+      if (icon && btn) {
+        const origClass = icon.className;
+        icon.className = 'bi bi-check2 text-success';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          icon.className = origClass;
+          btn.classList.remove('copied');
+        }, 2000);
+      }
+    }
+    window.copyBankValue = copyBankValue;
+  </script>
 
   <!-- Dedicated Donation Page Logic -->
   <script>
