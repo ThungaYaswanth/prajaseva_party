@@ -43,7 +43,9 @@ const translations = {
     navGallery: "గ్యాలరీ",
     navContact: "సంప్రదించండి",
     btnMembership: "సభ్యత్వం",
+    btnMembershipShort: "సభ్యత్వం",
     btnDonate: "విరాళం ఇవ్వండి",
+    btnDonateShort: "విరాళం",
     searchPlaceholder: "శోధించండి...",
 
     // Leadership Page
@@ -192,7 +194,7 @@ const translations = {
 
     aboutCtaBadge: "కలిసి నడుద్దాం",
     aboutCtaTitle: "ప్రజాసేవలో మీరూ భాగస్వాములు కండి",
-    aboutCtaSubtitle: "ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి. తెలంగాణ ప్రజల, ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.",
+    aboutCtaSubtitle: "ఒక గొప్ప ప్రజా ఉద్యమంలో చేరండి.  ప్రజల శ్రేయస్సు కోసం మనమందరం కలిసి పనిచేద్దాం.",
     aboutCtaBtnJoin: "సభ్యత్వం పొందండి",
     aboutCtaBtnDonate: "విరాళం ఇవ్వండి",
     aboutCtaQuote: "ప్రజల కోసం... ప్రజలతో... ప్రజల ఆధారంగా...",
@@ -825,7 +827,9 @@ const translations = {
     navGallery: "Gallery",
     navContact: "Contact",
     btnMembership: "Membership",
+    btnMembershipShort: "Membership",
     btnDonate: "Donate",
+    btnDonateShort: "Donate",
     searchPlaceholder: "Search...",
 
     // Leadership Page
