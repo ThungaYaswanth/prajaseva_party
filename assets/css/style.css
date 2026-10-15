@@ -1569,6 +1569,203 @@ body.mobile-nav-open {
 }
 
 /* ==========================================================================
+   Responsive Adaptations for mobile-menu-modal-card:
+   - Medium Mobile (375px screens: e.g., iPhone SE/12/13/14 mini, Galaxy S)
+   - Small Mobile (320px - 340px screens: e.g., iPhone 5/SE1, Fold cover)
+   - Keeps Large Mobile (400px+) completely untouched and intact
+   ========================================================================== */
+@media (max-width: 380px) {
+  .site-header .navbar-collapse {
+    padding: 10px 8px !important;
+  }
+
+  .mobile-menu-modal-card {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  /* Header Banner */
+  .mobile-menu-header-banner {
+    padding: 12px 10px 10px;
+    gap: 8px;
+  }
+
+  .mobile-menu-flag-img {
+    height: 44px;
+    max-width: 78px;
+  }
+
+  .mobile-menu-title-telugu {
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+  }
+
+  .mobile-menu-title-english .sub-text {
+    font-size: 0.6rem;
+    letter-spacing: 0.8px;
+  }
+
+  .mobile-menu-title-english .sub-line {
+    max-width: 16px;
+  }
+
+  .mobile-menu-leader-wrap {
+    width: 46px;
+    height: 46px;
+    border-width: 2px;
+  }
+
+  /* Action Controls Bar */
+  .mobile-menu-action-bar {
+    padding: 10px 10px 6px;
+    gap: 6px;
+  }
+
+  .mobile-lang-btn {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+
+  .mobile-menu-btn-donate {
+    font-size: 0.78rem;
+    padding: 5px 9px;
+    gap: 4px;
+  }
+
+  .mobile-menu-btn-donate i {
+    font-size: 0.76rem;
+  }
+
+  .mobile-menu-btn-membership {
+    font-size: 0.78rem;
+    padding: 5px 9px;
+    gap: 4px;
+  }
+
+  .mobile-menu-btn-membership i {
+    font-size: 0.82rem;
+  }
+
+  .mobile-menu-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .mobile-menu-close-btn i {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation Cards List */
+  .mobile-menu-cards-list {
+    padding: 4px 10px 12px;
+    gap: 6px;
+    max-height: calc(88vh - 145px);
+  }
+
+  .mobile-nav-item-card {
+    padding: 9px 12px;
+    border-radius: 10px;
+  }
+
+  .nav-item-card-left {
+    gap: 10px;
+  }
+
+  .nav-item-card-left i {
+    font-size: 1.05rem;
+    width: 18px;
+  }
+
+  .nav-item-card-left span {
+    font-size: 0.92rem;
+  }
+
+  .nav-item-chevron {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Compact for Small Mobile (320px - 340px) */
+@media (max-width: 340px) {
+  .site-header .navbar-collapse {
+    padding: 6px 5px !important;
+  }
+
+  .mobile-menu-modal-card {
+    border-radius: 14px;
+  }
+
+  .mobile-menu-header-banner {
+    padding: 10px 8px 8px;
+    gap: 6px;
+  }
+
+  .mobile-menu-flag-img {
+    height: 38px;
+    max-width: 66px;
+  }
+
+  .mobile-menu-title-telugu {
+    font-size: 1.02rem;
+  }
+
+  .mobile-menu-title-english .sub-text {
+    font-size: 0.54rem;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-menu-title-english .sub-line {
+    max-width: 10px;
+  }
+
+  .mobile-menu-leader-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-action-bar {
+    padding: 8px 8px 5px;
+    gap: 4px;
+  }
+
+  .mobile-lang-btn {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+  }
+
+  .mobile-menu-btn-donate,
+  .mobile-menu-btn-membership {
+    font-size: 0.72rem;
+    padding: 4px 7px;
+    gap: 3px;
+  }
+
+  .mobile-menu-close-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+  }
+
+  .mobile-menu-close-btn i {
+    font-size: 0.85rem;
+  }
+
+  .mobile-menu-cards-list {
+    padding: 3px 8px 10px;
+    gap: 5px;
+  }
+
+  .mobile-nav-item-card {
+    padding: 7.5px 10px;
+  }
+
+  .nav-item-card-left span {
+    font-size: 0.86rem;
+  }
+}
+
+/* ==========================================================================
    Tablet Devices (768px - 991.98px): Spacious Layout
    ========================================================================== */
 /* ==========================================================================
@@ -1881,38 +2078,38 @@ body.mobile-nav-open {
 
   .header-right-controls .lang-dropdown-capsule {
     order: 1;
-    padding: 4px 6px;
+    padding: 3px 5px;
     gap: 2px;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
   .header-right-controls .lang-dropdown-capsule .lang-label {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
   }
 
   .header-right-controls .lang-dropdown-capsule .lang-chevron-icon {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
 
   .header-right-controls .btn-pill-membership {
     order: 2;
     display: inline-flex !important;
     padding: 4px 6px;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     gap: 3px;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
 
   .header-right-controls .btn-pill-membership i {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
   }
 
   .header-right-controls .btn-pill-donate {
     order: 3;
     padding: 4px 6px;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     flex-shrink: 0 !important;
     white-space: nowrap;
   }
@@ -1940,6 +2137,137 @@ body.mobile-nav-open {
   .nav-link {
     padding: 9px 12px !important;
     font-size: 0.92rem;
+  }
+}
+
+/* ==========================================================================
+   Ultra-Compact Header Rules for Extra Small Mobile (< 360px and <= 330px):
+   Ensure toggler is always 100% inside screen boundary without overflowing
+   ========================================================================== */
+@media (max-width: 360px) {
+  .site-header .header-container {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .site-header .navbar {
+    gap: 2px !important;
+  }
+
+  .brand-wrap {
+    gap: 3px !important;
+  }
+
+  .brand-emblem-frame,
+  .brand-leader-frame {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+  }
+
+  .brand-emblem-img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .header-right-controls {
+    gap: 2.5px !important;
+  }
+
+  .header-right-controls .lang-dropdown-capsule {
+    padding: 3px 4px !important;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-label {
+    font-size: 0.62rem !important;
+  }
+
+  .header-right-controls .btn-pill-membership {
+    padding: 3px 5px !important;
+    font-size: 0.62rem !important;
+    gap: 2px !important;
+  }
+
+  .header-right-controls .btn-pill-membership i {
+    font-size: 0.6rem !important;
+  }
+
+  .header-right-controls .btn-pill-donate {
+    padding: 3px 5px !important;
+    font-size: 0.62rem !important;
+  }
+
+  .header-right-controls .navbar-toggler {
+    width: 29px !important;
+    height: 29px !important;
+    border-radius: 7px !important;
+  }
+
+  .header-right-controls .navbar-toggler svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 330px) {
+  .site-header .header-container {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+
+  .brand-wrap {
+    gap: 2px !important;
+  }
+
+  .brand-emblem-frame,
+  .brand-leader-frame {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+  }
+
+  .brand-emblem-img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .header-right-controls {
+    gap: 2px !important;
+  }
+
+  .header-right-controls .lang-dropdown-capsule {
+    padding: 2.5px 3.5px !important;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-label {
+    font-size: 0.58rem !important;
+  }
+
+  .header-right-controls .lang-dropdown-capsule .lang-chevron-icon {
+    font-size: 0.5rem !important;
+  }
+
+  .header-right-controls .btn-pill-membership {
+    padding: 3px 4.5px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .header-right-controls .btn-pill-donate {
+    padding: 3px 4.5px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .header-right-controls .navbar-toggler {
+    width: 27px !important;
+    height: 27px !important;
+    border-radius: 6px !important;
+  }
+
+  .header-right-controls .navbar-toggler svg {
+    width: 13px !important;
+    height: 13px !important;
   }
 }
 
@@ -8837,11 +9165,6 @@ body.mobile-nav-open {
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
-
-.footer-emblem-img:hover {
-  transform: rotate(6deg) scale(1.04);
-}
-
 .footer-brand-titles {
   display: flex;
   flex-direction: column;
@@ -10563,7 +10886,7 @@ body.mobile-nav-open {
 }
 
 .btn-cta-donate:hover {
-  background-color: #157347;
+  background-color: #00ff00;
   color: #FFFFFF;
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 30px rgba(25, 135, 84, 0.52);
@@ -15372,6 +15695,145 @@ main > section.news-hero-banner {
   background: #FFFFFF;
 }
 
+/* Date Picker Input Box */
+.filter-date-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-date-box .filter-date-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748B;
+  font-size: 0.95rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s ease;
+}
+
+.filter-date-box:hover .filter-date-icon,
+.filter-date-box:focus-within .filter-date-icon {
+  color: #B30001;
+}
+
+.filter-date-input {
+  padding: 7px 32px 7px 34px;
+  border: 1px solid #CBD5E1;
+  border-radius: 20px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+  background: #F8FAFC;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 175px;
+  transition: all 0.2s ease;
+}
+
+.filter-date-input:focus {
+  border-color: #B30001;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(179, 0, 1, 0.1);
+  color: #081124;
+}
+
+.filter-date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.filter-date-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.filter-date-clear-btn {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94A3B8;
+  font-size: 0.9rem;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  z-index: 3;
+}
+
+.filter-date-clear-btn:hover {
+  color: #B30001;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* Empty State / No Results Feedback */
+.news-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 45px 20px;
+  background: #FFFFFF;
+  border: 2px dashed #E2E8F0;
+  border-radius: 16px;
+  margin: 15px 0 25px;
+}
+
+.news-no-results .no-results-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(179, 0, 1, 0.08);
+  color: #B30001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 16px;
+}
+
+.news-no-results .no-results-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 6px;
+}
+
+.news-no-results .no-results-desc {
+  font-size: 0.9rem;
+  color: #64748B;
+  margin-bottom: 18px;
+}
+
+.news-no-results .btn-reset-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #B30001;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.news-no-results .btn-reset-filters:hover {
+  background: #8E0001;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(179, 0, 1, 0.2);
+}
+
 /* ==========================================================================
    Section Headers: "తాజా వార్తలు" & "రాబోయే కార్యక్రమాలు"
    ========================================================================== */
@@ -15863,6 +16325,10 @@ main > section.news-hero-banner {
   .filter-search-box {
     width: 100%;
   }
+
+  .filter-date-box {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -16183,6 +16649,10 @@ main > section.news-hero-banner {
   }
 
   .filter-search-box {
+    width: 100%;
+  }
+
+  .filter-date-box {
     width: 100%;
   }
 }

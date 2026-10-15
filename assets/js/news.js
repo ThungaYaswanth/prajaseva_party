@@ -587,28 +587,53 @@
     let currentCategory = 'all';
 
     function applyFilters() {
-      const searchVal = document.getElementById("newsSearchInput").value.toLowerCase().trim();
-      const locVal = document.getElementById("locFilterSelect").value;
-      const dateVal = document.getElementById("dateFilterSelect").value;
+      const searchInput = document.getElementById("newsSearchInput");
+      const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      
+      const locSelect = document.getElementById("locFilterSelect");
+      const locVal = locSelect ? locSelect.value : "all";
+
+      const dateInput = document.getElementById("dateFilterInput");
+      const dateVal = dateInput ? dateInput.value.trim() : "";
+
+      const clearBtn = document.getElementById("clearDateFilterBtn");
+      if (clearBtn) {
+        clearBtn.style.display = dateVal ? "inline-flex" : "none";
+      }
 
       const cards = document.querySelectorAll("#latestNewsGrid .news-card-item");
+      let visibleCount = 0;
+
       cards.forEach(card => {
         const cat = card.getAttribute("data-cat");
         const loc = card.getAttribute("data-loc");
-        const title = card.querySelector(".news-card-title").textContent.toLowerCase();
-        const desc = card.querySelector(".news-card-desc").textContent.toLowerCase();
+        const cardDate = card.getAttribute("data-date");
+        const titleEl = card.querySelector(".news-card-title");
+        const descEl = card.querySelector(".news-card-desc");
+        const title = titleEl ? titleEl.textContent.toLowerCase() : "";
+        const desc = descEl ? descEl.textContent.toLowerCase() : "";
 
         let matchesCat = (currentCategory === 'all') || (cat === currentCategory);
         let matchesSearch = !searchVal || title.includes(searchVal) || desc.includes(searchVal);
         let matchesLoc = (locVal === 'all') || (loc === locVal);
-        let matchesDate = true; // Flexible demonstration
+        let matchesDate = !dateVal || (cardDate === dateVal);
 
         if (matchesCat && matchesSearch && matchesLoc && matchesDate) {
           card.style.display = "";
+          visibleCount++;
         } else {
           card.style.display = "none";
         }
       });
+
+      const noResults = document.getElementById("newsNoResults");
+      const pagination = document.querySelector(".news-pagination");
+      if (noResults) {
+        noResults.style.display = (visibleCount === 0) ? "block" : "none";
+      }
+      if (pagination) {
+        pagination.style.display = (visibleCount === 0) ? "none" : "";
+      }
     }
 
     function resetFilters() {
@@ -616,9 +641,21 @@
       document.querySelectorAll(".filter-tab-pill").forEach(pill => {
         pill.classList.toggle("is-active", pill.getAttribute("data-cat") === 'all');
       });
-      document.getElementById("newsSearchInput").value = "";
-      document.getElementById("locFilterSelect").value = "all";
-      document.getElementById("dateFilterSelect").value = "all";
+      const searchInput = document.getElementById("newsSearchInput");
+      if (searchInput) searchInput.value = "";
+
+      const locSelect = document.getElementById("locFilterSelect");
+      if (locSelect) locSelect.value = "all";
+
+      const dateInput = document.getElementById("dateFilterInput");
+      if (dateInput) dateInput.value = "";
+
+      const clearBtn = document.getElementById("clearDateFilterBtn");
+      if (clearBtn) clearBtn.style.display = "none";
+
+      const oldDateSelect = document.getElementById("dateFilterSelect");
+      if (oldDateSelect) oldDateSelect.value = "all";
+
       applyFilters();
     }
 
@@ -647,10 +684,61 @@
         searchInput.addEventListener("input", applyFilters);
       }
 
-      // Location & Date Dropdown
+      // Location Dropdown (if present)
       const locSelect = document.getElementById("locFilterSelect");
       if (locSelect) locSelect.addEventListener("change", applyFilters);
 
+      // Date Input & Calendar Picker
+      const dateInput = document.getElementById("dateFilterInput");
+      const filterDateBox = document.getElementById("filterDateBox");
+      const clearBtn = document.getElementById("clearDateFilterBtn");
+
+      if (dateInput) {
+        // Trigger filter on date selection or manual entry
+        dateInput.addEventListener("input", applyFilters);
+        dateInput.addEventListener("change", applyFilters);
+
+        // Helper to trigger browser native calendar picker
+        const openCalendarPicker = () => {
+          if (typeof dateInput.showPicker === 'function') {
+            try {
+              dateInput.showPicker();
+            } catch (err) {
+              // Ignore picker restriction if already open
+            }
+          }
+        };
+
+        // Open calendar on click
+        dateInput.addEventListener("click", () => {
+          openCalendarPicker();
+        });
+
+        // Clicking the calendar icon also focuses and opens calendar picker
+        if (filterDateBox) {
+          const dateIcon = filterDateBox.querySelector(".filter-date-icon");
+          if (dateIcon) {
+            dateIcon.addEventListener("click", (e) => {
+              e.stopPropagation();
+              dateInput.focus();
+              openCalendarPicker();
+            });
+          }
+        }
+      }
+
+      // Clear Date Filter Button
+      if (clearBtn && dateInput) {
+        clearBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dateInput.value = "";
+          clearBtn.style.display = "none";
+          applyFilters();
+          dateInput.focus();
+        });
+      }
+
+      // Fallback for dateFilterSelect if present
       const dateSelect = document.getElementById("dateFilterSelect");
       if (dateSelect) dateSelect.addEventListener("change", applyFilters);
 

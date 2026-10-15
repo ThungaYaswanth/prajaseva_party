@@ -619,6 +619,9 @@ const translations = {
     newsShareBtn: "భాగస్వామ్యం చేయండి",
     newsCopiedAlert: "లింక్ కాపీ చేయబడింది!",
     newsPaginationLabel: "వార్తల పేజీలు",
+    newsNoResultsTitle: "ఎంచుకున్న వివరాలతో వార్తలు కనుగొనబడలేదు",
+    newsNoResultsDesc: "దయచేసి వేరే తేదీ లేదా శోధన పదాన్ని ప్రయత్నించండి.",
+    newsResetFilters: "అన్ని వార్తలను చూపించు",
     memBannerTitle1: "పార్టీలో",
     memBannerTitle2: "సభ్యత్వం పొందండి",
     issuesHeroTitle1: "ప్రజా సమస్యలకు",
@@ -648,9 +651,9 @@ const translations = {
     // Section 2: Our Mission
     missionSecBadgeTe: "మా లక్ష్యం",
     missionSecBadgeEn: "Our Mission",
-    missionSecTitlePart1: "ప్రజా కోసం ... ప్రజలతో కలిసి ...",
-    missionSecTitlePart2: "ప్రజల భవిష్యత్తుకోసం",
-    missionSecDesc: "ప్రతి కుటుంబానికి భరోసా చేకూర్చిన, నాణ్యమైన విద్య, వైద్యం, ఉపాధి, సురక్షిత సమాజం మరియు పారదర్శక పాలనతో అభివృద్ధిని సాధించడం మా లక్ష్యం.",
+    missionSecTitlePart1: "ప్రజల కోసం ... ప్రజలతో కలిసి ...",
+    missionSecTitlePart2: "ప్రజల మధ్య ... ప్రజా సమస్యలపై ... ప్రజలే ముందుండే ప్రజా సేవా పార్టీ",
+    missionSecDesc: "ప్రజా సేవా పార్టీ ప్రజలతో, ప్రజల మధ్య, ప్రజల కోసమే, ప్రజా సమస్యలపై నిరంతరం పనిచేస్తూ, ప్రజల కష్టాలు, అవసరాలు, అభివృద్ధి తెలుసుకుని వాటికి పరిష్కారం చూపించడమే మా లక్ష్యం.",
 
     // Section 3: Core Values
     valuesSecTitle: "మా ప్రాథమిక విలువలు",
@@ -1408,6 +1411,9 @@ const translations = {
     newsShareBtn: "Share Story",
     newsCopiedAlert: "Link copied to clipboard!",
     newsPaginationLabel: "News Pages",
+    newsNoResultsTitle: "No news found matching selected criteria",
+    newsNoResultsDesc: "Please try another date or search keyword.",
+    newsResetFilters: "Show All News",
     memBannerTitle1: "Join the Party",
     memBannerTitle2: "Get Membership",
     issuesHeroTitle1: "For Public Issues",

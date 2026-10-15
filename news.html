@@ -271,7 +271,7 @@
             </button>
           </div>
 
-          <!-- Right: Search Box + Date & Location Selects -->
+          <!-- Right: Search Box + Date Picker -->
           <div class="filter-controls-wrap">
             <div class="filter-search-box">
               <i class="bi bi-search"></i>
@@ -279,22 +279,13 @@
                 placeholder="వార్తలు, కార్యక్రమాలు వెతకండి..." data-i18n-placeholder="newsSearchPlc" autocomplete="off">
             </div>
 
-            <select id="dateFilterSelect" class="filter-select" aria-label="తేదీ ఎంచుకోండి">
-              <option value="all" data-i18n="newsDateAll">తేదీ ఎంచుకోండి</option>
-              <option value="september" data-i18n="newsDateSep">సెప్టెంబర్ 2026</option>
-              <option value="august" data-i18n="newsDateAug">ఆగస్టు 2026</option>
-              <option value="recent" data-i18n="newsDateRecent">ఇటీవలి వార్తలు</option>
-            </select>
-
-            <select id="locFilterSelect" class="filter-select" aria-label="అన్ని ప్రాంతాలు">
-              <option value="all" data-i18n="newsLocAll">అన్ని ప్రాంతాలు</option>
-              <option value="hyderabad" data-i18n="locHyd">హైదరాబాద్</option>
-              <option value="warangal" data-i18n="locWgl">వరంగల్</option>
-              <option value="karimnagar" data-i18n="locKmr">కరీంనగర్</option>
-              <option value="nalgonda" data-i18n="locNlg">నల్లగొండ</option>
-              <option value="nizamabad" data-i18n="locNzb">నిజామాబాద్</option>
-              <option value="adilabad" data-i18n="locAdb">ఆదిలాబాద్</option>
-            </select>
+            <div class="filter-date-box" id="filterDateBox">
+              <i class="bi bi-calendar3 filter-date-icon" title="క్యాలెండర్ తెరవండి"></i>
+              <input type="date" id="dateFilterInput" class="filter-date-input" aria-label="తేదీ ఎంచుకోండి" title="తేదీని మాన్యువల్‌గా నమోదు చేయండి లేదా క్యాలెండర్ నుండి ఎంచుకోండి">
+              <button type="button" id="clearDateFilterBtn" class="filter-date-clear-btn" aria-label="తేదీని క్లియర్ చేయండి" title="తేదీని క్లియర్ చేయండి" style="display: none;">
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -320,7 +311,7 @@
           <div class="latest-news-grid" id="latestNewsGrid">
 
             <!-- Card 1 -->
-            <article class="news-card-item" data-cat="news" data-loc="nalgonda" data-story-key="latest1"
+            <article class="news-card-item" data-cat="news" data-loc="nalgonda" data-story-key="latest1" data-date="2026-09-08"
               onclick="openStoryModal('latest1')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
@@ -346,7 +337,7 @@
             </article>
 
             <!-- Card 2 -->
-            <article class="news-card-item" data-cat="events" data-loc="warangal" data-story-key="latest2"
+            <article class="news-card-item" data-cat="events" data-loc="warangal" data-story-key="latest2" data-date="2026-09-05"
               onclick="openStoryModal('latest2')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-events" data-i18n="newsFilterEvents">కార్యక్రమాలు</span>
@@ -373,7 +364,7 @@
             </article>
 
             <!-- Card 3 -->
-            <article class="news-card-item" data-cat="news" data-loc="karimnagar" data-story-key="latest3"
+            <article class="news-card-item" data-cat="news" data-loc="karimnagar" data-story-key="latest3" data-date="2026-09-02"
               onclick="openStoryModal('latest3')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
@@ -399,7 +390,7 @@
             </article>
 
             <!-- Card 4 -->
-            <article class="news-card-item" data-cat="announcements" data-loc="hyderabad" data-story-key="latest4"
+            <article class="news-card-item" data-cat="announcements" data-loc="hyderabad" data-story-key="latest4" data-date="2026-08-22"
               onclick="openStoryModal('latest4')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-announcements" data-i18n="newsFilterAnnouncements">ప్రకటనలు</span>
@@ -424,7 +415,7 @@
             </article>
 
             <!-- Card 5 -->
-            <article class="news-card-item" data-cat="news" data-loc="nizamabad" data-story-key="latest5"
+            <article class="news-card-item" data-cat="news" data-loc="nizamabad" data-story-key="latest5" data-date="2026-08-18"
               onclick="openStoryModal('latest5')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-news" data-i18n="newsFilterNews">వార్తలు</span>
@@ -450,7 +441,7 @@
             </article>
 
             <!-- Card 6 -->
-            <article class="news-card-item" data-cat="events" data-loc="adilabad" data-story-key="latest6"
+            <article class="news-card-item" data-cat="events" data-loc="adilabad" data-story-key="latest6" data-date="2026-08-12"
               onclick="openStoryModal('latest6')">
               <div class="news-card-img-wrap">
                 <span class="card-cat-badge cat-events" data-i18n="newsFilterEvents">కార్యక్రమాలు</span>
@@ -473,6 +464,19 @@
                 </div>
               </div>
             </article>
+
+            <!-- No Results Message -->
+            <div class="news-no-results" id="newsNoResults" style="display: none;">
+              <div class="no-results-icon-wrap">
+                <i class="bi bi-calendar-x"></i>
+              </div>
+              <h4 class="no-results-title" data-i18n="newsNoResultsTitle">ఎంచుకున్న వివరాలతో వార్తలు కనుగొనబడలేదు</h4>
+              <p class="no-results-desc" data-i18n="newsNoResultsDesc">దయచేసి వేరే తేదీ లేదా శోధన పదాన్ని ప్రయత్నించండి.</p>
+              <button type="button" class="btn-reset-filters" onclick="resetFilters()">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                <span data-i18n="newsResetFilters">అన్ని వార్తలను చూపించు</span>
+              </button>
+            </div>
 
           </div>
 
