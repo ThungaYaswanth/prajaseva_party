@@ -15,7 +15,7 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=12.7">
+  <link rel="stylesheet" href="assets/css/style.css?v=12.8">
   <!-- Early Language Preference Sync -->
   <script>
     (function () {
@@ -2378,8 +2378,9 @@
 
       // Mobile / Tablet 3D Flip Card Tap Support
       document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
-        scene.addEventListener('click', function () {
-          if (window.matchMedia('(hover: none)').matches) {
+        scene.addEventListener('click', function (e) {
+          if (e.target.closest('a, button, input')) return;
+          if (window.innerWidth <= 992 || window.matchMedia('(hover: none)').matches) {
             this.classList.toggle('is-flipped');
           }
         });
