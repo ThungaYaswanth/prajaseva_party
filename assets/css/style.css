@@ -2885,19 +2885,39 @@ body.mobile-nav-open {
   background: #FFFFFF;
   box-shadow: 0 16px 38px -10px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 4px solid #FFFFFF;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  isolation: isolate;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.about-leader-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.about-leader-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-circle-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 10%;
   display: block;
+  pointer-events: none;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-circle-stage:hover .about-circle-photo {
-  transform: scale(1.04);
+.about-circle-stage:hover .about-leader-slide.active .about-circle-photo {
+  transform: scale(1.05);
 }
 
 .about-image-card {

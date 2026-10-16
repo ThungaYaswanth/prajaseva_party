@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCampaignSlider();
   initInteractiveMap();
   init3DFlipCards();
+  initAboutLeaderCarousel();
 });
 
 function init3DFlipCards() {
@@ -521,6 +522,106 @@ function changeHeroSlide(newIdx) {
       dot.classList.remove('active');
     }
   });
+}
+
+/* ==========================================================================
+   2b. About Us Leader Circular Carousel (Auto-scrolling)
+   ========================================================================== */
+function initAboutLeaderCarousel() {
+  const container = document.getElementById('aboutLeaderCarousel');
+  if (!container) return;
+  const track = container.querySelector('.about-leader-slider-track');
+  if (!track) return;
+  const originalSlides = Array.from(track.querySelectorAll('.about-leader-slide'));
+  if (originalSlides.length <= 1) return;
+
+  const total = originalSlides.length;
+  let currentIndex = 0;
+  let timer = null;
+  const slideDuration = 700; // ms
+  const intervalTime = 3000; // ms
+
+  // Clone first slide for seamless forward continuous scrolling
+  const clone = originalSlides[0].cloneNode(true);
+  clone.classList.remove('active');
+  clone.setAttribute('aria-hidden', 'true');
+  track.appendChild(clone);
+
+  function moveTo(index, animate = true) {
+    if (animate) {
+      track.style.transition = `transform ${slideDuration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
+    } else {
+      track.style.transition = 'none';
+    }
+    track.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index;
+
+    const allSlides = track.querySelectorAll('.about-leader-slide');
+    allSlides.forEach((s, idx) => {
+      if (idx === (index % total)) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+  }
+
+  function next() {
+    currentIndex++;
+    moveTo(currentIndex, true);
+
+    if (currentIndex === total) {
+      setTimeout(() => {
+        moveTo(0, false);
+      }, slideDuration);
+    }
+  }
+
+  function prev() {
+    if (currentIndex === 0) {
+      moveTo(total, false);
+      track.offsetHeight; // force reflow
+      currentIndex = total - 1;
+      moveTo(currentIndex, true);
+    } else {
+      currentIndex--;
+      moveTo(currentIndex, true);
+    }
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(next, intervalTime);
+  }
+
+  function stop() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  // Hover pauses auto-scroll
+  container.addEventListener('mouseenter', stop);
+  container.addEventListener('mouseleave', start);
+
+  // Mobile swipe support
+  let startX = 0;
+  container.addEventListener('touchstart', (e) => {
+    stop();
+    startX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 35) {
+      if (diff > 0) next();
+      else prev();
+    }
+    start();
+  }, { passive: true });
+
+  start();
 }
 
 /* ==========================================================================
