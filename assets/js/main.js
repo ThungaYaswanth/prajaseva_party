@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function init3DFlipCards() {
   document.querySelectorAll('.id-card-3d-scene').forEach(function (scene) {
-    scene.addEventListener('click', function () {
-      if (window.matchMedia('(hover: none)').matches) {
+    scene.addEventListener('click', function (e) {
+      if (e.target.closest('a, button, input')) return;
+      if (window.innerWidth <= 992 || window.matchMedia('(hover: none)').matches) {
         this.classList.toggle('is-flipped');
       }
     });

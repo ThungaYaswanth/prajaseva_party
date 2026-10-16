@@ -1901,18 +1901,17 @@
                     aria-label="Praja Seva Party ID Card (Hover to flip 3D)">
                     <div class="id-card-3d-flipper">
 
-                      <!-- 1. FRONT SIDE OF ID CARD -->
+                      <!-- 1. FRONT SIDE OF ID CARD (Aadhaar Card Landscape Ratio 85.6/54) -->
                       <div class="id-card-face id-card-face-front">
-                        <div class="id-card-body card-template-exact">
-                          <!-- 1. Red Header Banner with Round Emblem & Telugu Slogan -->
+                        <div class="id-card-body card-template-exact mem-id-card-exact">
+                          <!-- 1. Header Banner: Emblem (Left) + Party Title & Slogan (Center) + President Portrait (Right) -->
                           <div class="id-header-exact">
-                            <div class="id-logo-medallion">
-                              <img src="assets/images/logo1.webp" alt="ప్రజాసేవ పార్టీ గుర్తు"
-                                class="id-logo-medallion-img">
+                            <div class="id-emblem-ring" title="ప్రజాసేవ పార్టీ అధికారిక చిహ్నం">
+                              <img src="assets/images/logo1.webp" alt="ప్రజాసేవ పార్టీ గుర్తు" class="id-emblem-exact-img">
                             </div>
                             <div class="id-title-exact-wrap">
                               <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
-                              <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                              <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం • సమాజ అభివృద్ధి మా ధ్యేయం</div>
                             </div>
                             <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
                               <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
@@ -1920,108 +1919,92 @@
                             </div>
                           </div>
 
-                          <!-- 2. Golden-Yellow & Red Ribbon: —— ID CARD —— -->
-                          <div class="id-ribbon-exact">
-                            <div class="id-ribbon-content">
-                              <span class="ribbon-dash">—</span>
-                              <span class="ribbon-text">ID CARD</span>
-                              <span class="ribbon-dash">—</span>
+                          <!-- 2. Main Body: Photo (Left) + Member Details (Center) + QR & Sign (Right) -->
+                          <div class="id-body-exact">
+                            <!-- Center Golden Sri Chakra Emblem Watermark -->
+                            <div class="id-watermark-bg" aria-hidden="true">
+                              <img src="assets/images/card_1bg.png" alt="" class="id-watermark-bg-img">
                             </div>
-                          </div>
 
-                          <!-- 3. Photo (Left) + Member Details (Right) -->
-                          <div class="id-info-exact-grid">
-                            <!-- Photo on Left (Prominent, High-Resolution, Red Border) -->
-                            <div class="id-photo-exact-col">
-                              <div class="id-photo-exact-frame">
-                                <img src="assets/images/passport.jpg" alt="తల్లారం నర్సింలు ఫోటో"
-                                  class="id-photo-exact-img">
+                            <!-- Left: Photo in Gold Rounded Frame -->
+                            <div class="id-photo-col">
+                              <div class="id-photo-frame">
+                                <img src="assets/images/passport1.png" alt="తల్లారం నర్సింలు ఫోటో" class="id-photo-img">
                               </div>
                             </div>
 
-                            <!-- Details on Right (Cleanly aligned, bold red field values) -->
-                            <div class="id-fields-exact-col">
-                              <div class="id-row-exact">
-                                <span class="id-lbl-exact">Name</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red">తల్లారం నర్సింలు</span>
+                            <!-- Center: Member Details -->
+                            <div class="id-details-col">
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">Name</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val val-red val-name">శ్రీధారం నర్సింలు</span>
                               </div>
-                              <div class="id-row-exact desig-exact-row">
-                                <span class="id-lbl-exact">Designation</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red desig-wrap">
-                                  <span>President</span>
-                                  <span>Telangana</span>
-                                </span>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">Designation</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val val-bold">President</span>
                               </div>
-                              <div class="id-row-exact">
-                                <span class="id-lbl-exact">ID No</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red id-num-bold">PSP00000001</span>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">State</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val">Telangana</span>
                               </div>
-                              <div class="id-row-exact">
-                                <span class="id-lbl-exact">Blood Group</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red">B+</span>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">ID No</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val val-red val-bold">PSP00000001</span>
                               </div>
-                              <div class="id-row-exact">
-                                <span class="id-lbl-exact">Mobile No</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red">7989454568</span>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">Blood Group</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val val-bold">B+</span>
                               </div>
-                              <div class="id-row-exact">
-                                <span class="id-lbl-exact">District</span>
-                                <span class="id-sep-exact">:</span>
-                                <span class="id-val-exact val-red">Telangana</span>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">Mobile No</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val">7989454568</span>
+                              </div>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">Date of Join</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val">10-10-2026</span>
+                              </div>
+                              <div class="id-field-row">
+                                <span class="id-field-lbl">District</span>
+                                <span class="id-field-sep">:</span>
+                                <span class="id-field-val">Telangana</span>
                               </div>
                             </div>
-                          </div>
 
-                          <!-- 4. Security & Signature Section (QR + Sri Chakra Watermark + Signature) -->
-                          <div class="id-auth-exact-strip">
-                            <!-- Left: QR Code + Tagline -->
-                            <div class="id-qr-exact-wrap">
-                              <div class="id-qr-box-frame">
+                            <!-- Right: QR Code (clean, no inner logo) + Authorised Signatory -->
+                            <div class="id-auth-col">
+                              <div class="id-qr-box">
                                 <img src="assets/images/qr-code.svg" alt="ID QR Code" class="id-qr-img">
                               </div>
-                              <div class="id-tagline-exact">
-                                <div class="tagline-bars-exact">
-                                  <span class="bar-gold"></span>
-                                  <span class="bar-red"></span>
+                              <div class="id-sign-box">
+                                <div class="id-signature-svg">
+                                  <svg viewBox="0 0 110 36" width="86" height="26">
+                                    <path
+                                      d="M8 22 C 16 6, 22 4, 30 18 C 34 26, 40 10, 46 22 C 52 30, 58 14, 68 18 C 76 22, 84 12, 92 16 M10 26 L96 24"
+                                      fill="none" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
                                 </div>
-                                <span class="tagline-line1">Together for a</span>
-                                <span class="tagline-line2">Better Tomorrow</span>
+                                <div class="id-sign-line"></div>
+                                <span class="id-sign-text">Authorised Signatory</span>
                               </div>
-                            </div>
-
-                            <!-- Center: Golden Sri Chakra Emblem Watermark -->
-                            <div class="id-watermark-exact">
-                              <img src="assets/images/logo1.webp" alt="Party Emblem Watermark" class="id-watermark-img">
-                            </div>
-
-                            <!-- Right: Signature + Authorised Signatory -->
-                            <div class="id-signature-exact-wrap">
-                              <div class="signature-drawing">
-                                <svg viewBox="0 0 110 36" width="94" height="30">
-                                  <path
-                                    d="M8 22 C 16 6, 22 4, 30 18 C 34 26, 40 10, 46 22 C 52 30, 58 14, 68 18 C 76 22, 84 12, 92 16 M10 26 L96 24"
-                                    fill="none" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                </svg>
-                              </div>
-                              <span class="signature-lbl-exact">Authorised Signatory</span>
                             </div>
                           </div>
 
-                          <!-- 5. Bottom Red Curved Banner: ప్రజా సేవా పార్టీ -->
+                          <!-- 3. Bottom Red & Gold Banner: — ప్రజా సేవా పార్టీ — -->
                           <div class="id-bottom-exact-banner">
-                            <div class="id-bottom-gold-curve"></div>
                             <span class="id-bottom-telugu-text">ప్రజా సేవా పార్టీ</span>
                           </div>
                         </div>
                       </div>
 
-                      <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) - Pure HTML/CSS UI/UX Design -->
+                      <!-- 2. BACK SIDE OF ID CARD (Revealed on 3D Flip) - Aadhaar Card Landscape Ratio 85.6/54 -->
                       <div class="id-card-face id-card-face-back">
                         <div class="id-card-body card-template-exact id-card-back-body mem-id-card-exact">
                           <!-- 1. Header Banner: Emblem (Left) + Party Title & Slogan (Center) + President Portrait (Right) -->
@@ -2031,7 +2014,7 @@
                             </div>
                             <div class="id-title-exact-wrap">
                               <div class="id-title-exact-telugu">ప్రజా సేవా పార్టీ</div>
-                              <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం... ప్రజలే మా బలం...</div>
+                              <div class="id-slogan-exact-telugu">సేవే మా లక్ష్యం • సమాజ అభివృద్ధి మా ధ్యేయం</div>
                             </div>
                             <div class="id-leader-badge-ring" title="పార్టీ అధ్యక్షుడు">
                               <img src="assets/images/Formal Indian Portrait on White Background.webp" alt="పార్టీ అధ్యక్షుడు"
@@ -2042,79 +2025,78 @@
                           <!-- 2. Dark Red & Gold Ribbon: —— MEMBER DUTIES & RESPONSIBILITIES —— -->
                           <div class="id-back-ribbon">
                             <span class="back-ribbon-line"></span>
-                            <span class="back-ribbon-text">MEMBER DUTIES & RESPONSIBILITIES</span>
+                            <span class="back-ribbon-text">MEMBER DUTIES &amp; RESPONSIBILITIES</span>
                             <span class="back-ribbon-line"></span>
                           </div>
 
-                          <!-- 3. Duties Main Body with Party Flag Watermark -->
+                          <!-- 3. Duties Main Body with Party Logo Watermark -->
                           <div class="id-back-main-content">
-                            <div class="id-back-flag-watermark" aria-hidden="true">
-                              <img src="assets/images/partyflag_right side.webp" alt="" class="back-watermark-img">
+                            <div class="id-back-watermark" aria-hidden="true">
+                              <img src="assets/images/card_1bg.png" alt="" class="back-watermark-img">
                             </div>
 
-                            <!-- Centered Crimson Pill: పార్టీ సభ్యుడిగా నా బాధ్యత -->
-                            <div class="id-duty-pill-wrap">
-                              <span class="id-duty-pill-text">పార్టీ సభ్యుడిగా నా బాధ్యత</span>
-                            </div>
-
-                            <!-- 4 Duty Bullet Points with Red Triangle Arrows -->
-                            <ul class="id-duties-list">
-                              <li class="id-duty-item">
-                                <span class="duty-arrow-icon" aria-hidden="true">▶</span>
-                                <span class="duty-text">ప్రజా సమస్యలను పార్టీ దృష్టికి తీసుకెళ్లడం</span>
-                              </li>
-                              <li class="id-duty-item">
-                                <span class="duty-arrow-icon" aria-hidden="true">▶</span>
-                                <span class="duty-text">ప్రజా సేవా కార్యక్రమాల్లో చురుకుగా పాల్గొనడం</span>
-                              </li>
-                              <li class="id-duty-item">
-                                <span class="duty-arrow-icon" aria-hidden="true">▶</span>
-                                <span class="duty-text">పార్టీ సిద్ధాంతాలను ప్రజల్లోకి తీసుకెళ్లడం</span>
-                              </li>
-                              <li class="id-duty-item">
-                                <span class="duty-arrow-icon" aria-hidden="true">▶</span>
-                                <span class="duty-text">సమాజంలో ఐక్యత, సామరస్యాన్ని పెంపొందించడంలో కృషి చేయడం</span>
-                              </li>
-                            </ul>
-
-                            <!-- Slogan Strip: ప్రజా సేవే మా ధ్యేయం • సమాజమే మా కుటుంబం -->
-                            <div class="id-slogan-capsule">
-                              <span class="slogan-cap-red">ప్రజా సేవే మా ధ్యేయం</span>
-                              <span class="slogan-cap-dot">•</span>
-                              <span class="slogan-cap-red">సమాజమే మా కుటుంబం</span>
-                            </div>
-
-                            <!-- Head Office Box -->
-                            <div class="id-office-card">
-                              <div class="office-badge-tag">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <span>పార్టీ కేంద్ర కార్యాలయం / HEAD OFFICE</span>
+                            <div class="id-back-grid-cols">
+                              <!-- Left: Duties list -->
+                              <div class="id-back-left-duties">
+                                <div class="id-duty-pill-wrap">
+                                  <span class="id-duty-pill-text">పార్టీ సభ్యుడిగా నా బాధ్యత</span>
+                                </div>
+                                <ul class="id-duties-list">
+                                  <li class="id-duty-item">
+                                    <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                                    <span class="duty-text">ప్రజా సమస్యలను పార్టీ దృష్టికి తీసుకెళ్లడం</span>
+                                  </li>
+                                  <li class="id-duty-item">
+                                    <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                                    <span class="duty-text">ప్రజా సేవా కార్యక్రమాల్లో చురుకుగా పాల్గొనడం</span>
+                                  </li>
+                                  <li class="id-duty-item">
+                                    <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                                    <span class="duty-text">పార్టీ సిద్ధాంతాలను ప్రజల్లోకి తీసుకెళ్లడం</span>
+                                  </li>
+                                  <li class="id-duty-item">
+                                    <span class="duty-arrow-icon" aria-hidden="true">▶</span>
+                                    <span class="duty-text">సమాజంలో ఐక్యత, సామరస్యాన్ని పెంపొందించడం</span>
+                                  </li>
+                                </ul>
                               </div>
-                              <div class="office-address-block">
-                                <div class="office-addr-bold">8-1-297/SN/157, Shakkubai Nagar, Shaikpet,</div>
-                                <div class="office-addr-sub">Hyderabad, Telangana - 500104</div>
-                              </div>
-                              <div class="office-contact-row">
-                                <a href="tel:7989454568" class="contact-pill-item contact-pill-phone" title="ఫోన్ నంబర్">
-                                  <i class="bi bi-telephone-fill icon-phone"></i>
-                                  <span>79894 54568</span>
-                                </a>
-                                <a href="mailto:info@prajasevaparty.org" class="contact-pill-item contact-pill-email" title="ఈమెయిల్">
-                                  <i class="bi bi-envelope-fill icon-email"></i>
-                                  <span>info@prajasevaparty.org</span>
-                                </a>
+
+                              <!-- Right: Office Address & Official Seal -->
+                              <div class="id-back-right-office">
+                                <div class="id-office-card">
+                                  <div class="office-badge-tag">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>పార్టీ కేంద్ర కార్యాలయం / HEAD OFFICE</span>
+                                  </div>
+                                  <div class="office-address-block">
+                                    <div class="office-addr-bold">8-1-297/SN/157, Shakkubai Nagar, Shaikpet,</div>
+                                    <div class="office-addr-sub">Hyderabad, Telangana - 500104</div>
+                                  </div>
+                                  <div class="office-contact-row">
+                                    <a href="tel:7989454568" class="contact-pill-item contact-pill-phone" title="ఫోన్ నంబర్">
+                                      <i class="bi bi-telephone-fill icon-phone"></i>
+                                      <span>79894 54568</span>
+                                    </a>
+                                    <a href="mailto:info@prajasevaparty.org" class="contact-pill-item contact-pill-email" title="ఈమెయిల్">
+                                      <i class="bi bi-envelope-fill icon-email"></i>
+                                      <span>info@prajasevaparty.org</span>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="id-back-official-seal">
+                                  <i class="bi bi-patch-check-fill"></i>
+                                  <span>అధికారిక సభ్యత్వ గుర్తింపు కార్డు • PSP</span>
+                                </div>
                               </div>
                             </div>
                           </div>
 
                           <!-- 4. Bottom Red Footer Banner with Website URL -->
-                          <div class="id-back-bottom-banner">
-                            <span class="footer-dash-line"></span>
+                          <div class="id-bottom-exact-banner id-back-bottom-banner">
                             <a href="index.html#home" class="back-web-link" title="ప్రజాసేవ పార్టీ వెబ్‌సైట్">
                               <i class="bi bi-globe"></i>
                               <span>www.prajasevaparty.org</span>
                             </a>
-                            <span class="footer-dash-line"></span>
                           </div>
                         </div>
                       </div>

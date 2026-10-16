@@ -2128,10 +2128,10 @@ body.mobile-nav-open {
   }
 
   .site-header .navbar-collapse {
-    left: 6px;
-    right: 6px;
-    padding: 10px 8px;
-    border-radius: 14px;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 10px 8px !important;
+    border-radius: 0 !important;
   }
 
   .nav-link {
@@ -2360,9 +2360,9 @@ body.mobile-nav-open {
 
 @media (max-width: 768px) {
   .hero-slider-nav-btn {
-    width: 6px;
-    height: 64px;
-    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
     background: transparent;
   }
 
@@ -7070,6 +7070,7 @@ body.mobile-nav-open {
   gap: 2.5px;
   min-width: 0;
   justify-content: center;
+  text-align: left;
 }
 
 .id-field-row {
@@ -7078,6 +7079,7 @@ body.mobile-nav-open {
   font-size: 0.72rem;
   line-height: 1.25;
   min-width: 0;
+  text-align: left;
 }
 
 .id-field-lbl {
@@ -7086,6 +7088,8 @@ body.mobile-nav-open {
   font-weight: 800;
   font-size: 0.71rem;
   flex-shrink: 0;
+  white-space: nowrap;
+  text-align: left;
 }
 
 .id-field-sep {
@@ -7104,6 +7108,7 @@ body.mobile-nav-open {
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 1;
+  text-align: left;
 }
 
 .id-field-val.val-red {
@@ -7529,153 +7534,713 @@ body.mobile-nav-open {
 /* ==========================================================================
    Responsive Scaling for Aadhaar Card on Mobile & Tablets
    ========================================================================== */
+/* ==========================================================================
+   Responsive Scaling for Aadhaar Card on Mobile & Tablets
+   ========================================================================== */
 @media (max-width: 539.98px) {
+  /* Ensure container doesn't overflow screen */
+  .mem-id-card-frame,
+  .mem-card-preview-wrap {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
   .id-card-3d-scene {
     width: 100%;
     max-width: 440px;
     min-height: unset;
+    aspect-ratio: 85.6 / 54;
+    margin: 0 auto;
   }
 
+  .card-template-exact,
+  .mem-id-card-exact,
+  .id-card-face,
+  .id-card-face-back,
+  .id-card-result {
+    border-radius: 14px;
+    border-width: 2.5px;
+  }
+
+  /* 1. Header Banner */
   .id-header-exact {
-    padding: 6px 10px 5px 10px;
+    padding: 5px 10px 4px 10px;
     gap: 6px;
+    border-bottom-width: 2px;
   }
 
   .id-emblem-ring,
   .id-leader-badge-ring {
     width: 36px;
     height: 36px;
+    border-width: 2px;
+  }
+
+  .id-title-exact-wrap {
+    line-height: 1.1;
   }
 
   .id-title-exact-telugu {
-    font-size: 1.18rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
   }
 
   .id-slogan-exact-telugu {
-    font-size: 0.58rem;
+    font-size: 0.54rem;
+    margin-top: 3px;
+    letter-spacing: 0.2px;
   }
 
+  /* 2. Main Body Front (Photo + Details + QR/Sign) */
   .id-body-exact {
-    grid-template-columns: 92px 1fr 72px;
-    gap: 8px;
-    padding: 6px 10px;
-  }
-
-  .id-photo-frame {
-    width: 90px;
-    height: 114px;
-  }
-
-  .id-field-row {
-    font-size: 0.62rem;
-    line-height: 1.2;
-  }
-
-  .id-field-lbl {
-    width: 58px;
-    font-size: 0.60rem;
-  }
-
-  .id-field-sep {
-    width: 6px;
-    font-size: 0.60rem;
-  }
-
-  .id-field-val {
-    font-size: 0.62rem;
-  }
-
-  .id-field-val.val-name {
-    font-size: 0.66rem;
-  }
-
-  .id-qr-box {
-    width: 64px;
-    height: 64px;
-  }
-
-  .id-signature-svg {
-    width: 68px;
-    height: 20px;
-  }
-
-  .id-sign-box {
-    width: 70px;
-  }
-
-  .id-sign-text {
-    font-size: 0.44rem;
-  }
-
-  .id-bottom-exact-banner {
-    padding: 3px 10px;
-  }
-
-  .id-bottom-telugu-text {
-    font-size: 0.95rem;
-  }
-
-  .id-bottom-decor-line {
-    max-width: 40px;
-  }
-
-  .id-back-grid-cols {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .id-duty-item {
-    font-size: 0.58rem;
-  }
-
-  .id-duty-pill-text {
-    font-size: 0.62rem;
-    padding: 1.5px 10px;
-  }
-
-  .office-addr-bold,
-  .office-addr-sub {
-    font-size: 0.58rem;
-  }
-
-  .contact-pill-item {
-    font-size: 0.56rem;
-    padding: 1.5px 4px;
-  }
-
-  .back-web-link {
-    font-size: 0.72rem;
-  }
-}
-
-@media (max-width: 399.98px) {
-  .id-body-exact {
-    grid-template-columns: 78px 1fr 60px;
-    gap: 5px;
-    padding: 5px 6px;
+    grid-template-columns: auto 1fr auto;
+    gap: 6px;
+    padding: 5px 10px;
   }
 
   .id-photo-frame {
     width: 76px;
-    height: 96px;
+    height: 98px;
+    border-radius: 8px;
+    border-width: 2px;
+  }
+
+  .id-details-col {
+    gap: 1.5px;
+    min-width: 0;
+    text-align: left !important;
+  }
+
+  .id-field-row {
+    font-size: 0.58rem;
+    line-height: 1.2;
+    min-width: 0;
+    text-align: left !important;
   }
 
   .id-field-lbl {
-    width: 48px;
-    font-size: 0.54rem;
+    width: 44px;
+    font-size: 0.56rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: left !important;
+  }
+
+  .id-field-sep {
+    width: 5px;
+    font-size: 0.56rem;
+    margin-right: 3px;
+    flex-shrink: 0;
+    text-align: left !important;
   }
 
   .id-field-val {
-    font-size: 0.55rem;
+    font-size: 0.58rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    text-align: left !important;
+  }
+
+  .id-field-val.val-name {
+    font-size: 0.64rem;
+    text-align: left !important;
+  }
+
+  .id-auth-col {
+    gap: 4px;
   }
 
   .id-qr-box {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
+    padding: 2px;
+    border-radius: 6px;
+  }
+
+  .id-sign-box {
+    width: 60px;
+  }
+
+  .id-signature-svg {
+    width: 58px;
+    height: 16px;
+  }
+
+  .id-sign-line {
+    margin: 1px 0;
+  }
+
+  .id-sign-text {
+    font-size: 0.40rem;
+    letter-spacing: 0.1px;
+  }
+
+  /* 3. Bottom Banner Front */
+  .id-bottom-exact-banner {
+    padding: 2.5px 10px;
+    border-top-width: 2px;
+  }
+
+  .id-bottom-telugu-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
+  }
+
+  .id-bottom-decor-line {
+    max-width: 35px;
+    height: 1.5px;
+  }
+
+  /* 4. Back Side of Card */
+  .id-back-ribbon {
+    padding: 2px 6px;
+    gap: 6px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+
+  .back-ribbon-text {
+    font-size: 0.56rem;
+    letter-spacing: 0.4px;
+  }
+
+  .back-ribbon-line {
+    width: 14px;
+    height: 1.5px;
+  }
+
+  .id-back-main-content {
+    padding: 4px 8px;
+    justify-content: center;
+  }
+
+  .id-back-grid-cols {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 6px;
+    align-items: center;
+  }
+
+  /* Fix: Overwrite desktop margin-bottom: 50px */
+  .id-back-left-duties {
+    margin-bottom: 0 !important;
+    gap: 2.5px;
+  }
+
+  .id-duty-pill-wrap {
+    margin-bottom: 2px;
+  }
+
+  .id-duty-pill-text {
+    font-size: 0.52rem;
+    padding: 1px 7px;
+  }
+
+  .id-duties-list {
+    gap: 2px;
+  }
+
+  .id-duty-item {
+    font-size: 0.48rem;
+    line-height: 1.15;
+    gap: 3px;
+  }
+
+  .duty-arrow-icon {
+    font-size: 0.42rem;
+  }
+
+  .id-back-right-office {
+    gap: 3px;
+  }
+
+  .id-office-card {
+    padding: 3px 5px;
+    border-radius: 6px;
+    border-width: 1px;
+  }
+
+  .office-badge-tag {
+    font-size: 0.46rem;
+    padding: 1px 4px;
+    margin-bottom: 1px;
+    gap: 2px;
+  }
+
+  .office-badge-tag i {
+    font-size: 0.48rem;
+  }
+
+  .office-address-block {
+    font-size: 0.46rem;
+    line-height: 1.15;
+    padding: 0;
+    margin-bottom: 2px;
+  }
+
+  .office-contact-row {
+    gap: 2px;
+    padding: 0;
+  }
+
+  .contact-pill-item {
+    font-size: 0.44rem;
+    padding: 1px 3px;
+    gap: 2px;
+    padding-left: 3px;
+  }
+
+  .contact-pill-phone .icon-phone,
+  .contact-pill-email .icon-email {
+    font-size: 0.46rem;
+  }
+
+  .id-back-official-seal {
+    font-size: 0.46rem;
+    padding: 1.5px 4px;
+    gap: 3px;
+    border-radius: 4px;
+    margin-top: 2px;
+  }
+
+  .id-back-official-seal i {
+    font-size: 0.52rem;
+  }
+
+  /* 5. Back Bottom Banner - Fix icon scaling */
+  .id-back-bottom-banner {
+    padding: 2.5px 8px;
+    border-top-width: 2px;
+  }
+
+  .back-web-link {
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  .back-web-link i {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Medium Mobile Devices (361px to 399.98px, e.g. iPhone 13/14/15/16, Galaxy S, Pixel) */
+@media (max-width: 399.98px) {
+  .id-card-3d-scene {
+    max-width: 360px;
+  }
+
+  .id-header-exact {
+    padding: 4px 8px 3px 8px;
+    gap: 5px;
+  }
+
+  .id-emblem-ring,
+  .id-leader-badge-ring {
+    width: 32px;
+    height: 32px;
   }
 
   .id-title-exact-telugu {
     font-size: 1.02rem;
+  }
+
+  .id-slogan-exact-telugu {
+    font-size: 0.48rem;
+    margin-top: 2px;
+  }
+
+  .id-body-exact {
+    grid-template-columns: auto 1fr auto;
+    gap: 5px;
+    padding: 4px 8px;
+  }
+
+  .id-photo-frame {
+    width: 68px;
+    height: 88px;
+    border-radius: 7px;
+  }
+
+  .id-field-row {
+    font-size: 0.52rem;
+    line-height: 1.15;
+    text-align: left !important;
+  }
+
+  .id-field-lbl {
+    width: 39px;
+    font-size: 0.50rem;
+    text-align: left !important;
+  }
+
+  .id-field-sep {
+    width: 4px;
+    font-size: 0.50rem;
+    margin-right: 2px;
+    text-align: left !important;
+  }
+
+  .id-field-val {
+    font-size: 0.52rem;
+    text-align: left !important;
+  }
+
+  .id-field-val.val-name {
+    font-size: 0.58rem;
+    text-align: left !important;
+  }
+
+  .id-qr-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+  }
+
+  .id-sign-box {
+    width: 52px;
+  }
+
+  .id-signature-svg {
+    width: 50px;
+    height: 15px;
+  }
+
+  .id-sign-text {
+    font-size: 0.36rem;
+  }
+
+  .id-bottom-telugu-text {
+    font-size: 0.88rem;
+  }
+
+  .id-bottom-decor-line {
+    max-width: 25px;
+  }
+
+  .back-ribbon-text {
+    font-size: 0.50rem;
+  }
+
+  .id-duty-pill-text {
+    font-size: 0.47rem;
+  }
+
+  .id-duty-item {
+    font-size: 0.44rem;
+    line-height: 1.12;
+  }
+
+  .office-badge-tag {
+    font-size: 0.42rem;
+  }
+
+  .office-address-block {
+    font-size: 0.42rem;
+    line-height: 1.12;
+  }
+
+  .contact-pill-item {
+    font-size: 0.40rem;
+  }
+
+  .id-back-official-seal {
+    font-size: 0.42rem;
+  }
+
+  .back-web-link {
+    font-size: 0.66rem;
+  }
+
+  .back-web-link i {
+    font-size: 0.68rem !important;
+  }
+}
+
+/* Compact Mobile Devices (<= 360px, e.g. iPhone SE 1st gen, Galaxy Fold cover, 320px-360px screens) */
+@media (max-width: 360px) {
+  .mem-page-container {
+    padding: 0 8px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .mem-left-side,
+  .mem-right-card,
+  .mem-form-card,
+  .mem-id-card-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .id-card-3d-scene {
+    width: 100% !important;
+    max-width: 304px !important;
+    margin: 0 auto !important;
+    min-height: unset !important;
+    aspect-ratio: 85.6 / 54 !important;
+  }
+
+  .card-template-exact,
+  .mem-id-card-exact,
+  .id-card-face,
+  .id-card-face-back,
+  .id-card-result {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 10px !important;
+    border-width: 2px !important;
+    outline-offset: -1.5px !important;
+  }
+
+  .id-header-exact {
+    padding: 3.5px 6px 3px 6px !important;
+    gap: 4px !important;
+    border-bottom-width: 1.5px !important;
+  }
+
+  .id-emblem-ring,
+  .id-leader-badge-ring {
+    width: 26px !important;
+    height: 26px !important;
+    border-width: 1.5px !important;
+  }
+
+  .id-title-exact-telugu {
+    font-size: 0.88rem !important;
+  }
+
+  .id-slogan-exact-telugu {
+    font-size: 0.44rem !important;
+    margin-top: 1.5px !important;
+  }
+
+  .id-body-exact {
+    grid-template-columns: auto 1fr auto !important;
+    gap: 4px !important;
+    padding: 3px 6px !important;
+  }
+
+  .id-photo-frame {
+    width: 58px !important;
+    height: 76px !important;
+    border-radius: 6px !important;
+    border-width: 1.5px !important;
+  }
+
+  .id-details-col {
+    gap: 1px !important;
+    text-align: left !important;
+  }
+
+  .id-field-row {
+    font-size: 0.46rem !important;
+    line-height: 1.12 !important;
+    text-align: left !important;
+  }
+
+  .id-field-lbl {
+    width: 33px !important;
+    font-size: 0.44rem !important;
+    text-align: left !important;
+  }
+
+  .id-field-sep {
+    width: 4px !important;
+    font-size: 0.44rem !important;
+    margin-right: 2px !important;
+    text-align: left !important;
+  }
+
+  .id-field-val {
+    font-size: 0.46rem !important;
+    text-align: left !important;
+  }
+
+  .id-field-val.val-name {
+    font-size: 0.50rem !important;
+    text-align: left !important;
+  }
+
+  .id-qr-box {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 1px !important;
+    border-radius: 4px !important;
+  }
+
+  .id-sign-box {
+    width: 44px !important;
+  }
+
+  .id-signature-svg {
+    width: 42px !important;
+    height: 13px !important;
+  }
+
+  .id-sign-text {
+    font-size: 0.32rem !important;
+  }
+
+  .id-bottom-exact-banner {
+    padding: 2px 6px !important;
+    border-top-width: 1.5px !important;
+  }
+
+  .id-bottom-telugu-text {
+    font-size: 0.78rem !important;
+  }
+
+  .id-bottom-decor-line {
+    max-width: 18px !important;
+    height: 1px !important;
+  }
+
+  /* Back Side Ultra Compact */
+  .id-back-ribbon {
+    padding: 1.5px 4px !important;
+    gap: 4px !important;
+  }
+
+  .back-ribbon-text {
+    font-size: 0.44rem !important;
+    letter-spacing: 0.2px !important;
+  }
+
+  .back-ribbon-line {
+    width: 10px !important;
+    height: 1px !important;
+  }
+
+  .id-back-main-content {
+    padding: 2px 5px !important;
+  }
+
+  .id-back-grid-cols {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px !important;
+  }
+
+  .id-back-left-duties {
+    margin-bottom: 0 !important;
+    gap: 1.5px !important;
+  }
+
+  .id-duty-pill-wrap {
+    margin-bottom: 1.5px !important;
+  }
+
+  .id-duty-pill-text {
+    font-size: 0.42rem !important;
+    padding: 0.5px 5px !important;
+  }
+
+  .id-duties-list {
+    gap: 1.5px !important;
+  }
+
+  .id-duty-item {
+    font-size: 0.38rem !important;
+    line-height: 1.1 !important;
+    gap: 2px !important;
+  }
+
+  .duty-arrow-icon {
+    font-size: 0.34rem !important;
+  }
+
+  .id-office-card {
+    padding: 2px 3px !important;
+    border-radius: 4px !important;
+    border-width: 1px !important;
+  }
+
+  .office-badge-tag {
+    font-size: 0.36rem !important;
+    padding: 0.5px 2px !important;
+    margin-bottom: 1px !important;
+    gap: 1px !important;
+  }
+
+  .office-badge-tag i {
+    font-size: 0.38rem !important;
+  }
+
+  .office-address-block {
+    font-size: 0.36rem !important;
+    line-height: 1.1 !important;
+    padding: 0 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .office-contact-row {
+    gap: 1px !important;
+    padding: 0 !important;
+  }
+
+  .contact-pill-item {
+    font-size: 0.34rem !important;
+    padding: 0.5px 2px !important;
+    gap: 1.5px !important;
+    padding-left: 2px !important;
+  }
+
+  .contact-pill-phone .icon-phone,
+  .contact-pill-email .icon-email {
+    font-size: 0.36rem !important;
+  }
+
+  .id-back-official-seal {
+    font-size: 0.36rem !important;
+    padding: 1px 3px !important;
+    gap: 2px !important;
+    border-radius: 3px !important;
+    margin-top: 1px !important;
+  }
+
+  .id-back-official-seal i {
+    font-size: 0.40rem !important;
+  }
+
+  .id-back-bottom-banner {
+    padding: 2px 6px !important;
+  }
+
+  .back-web-link {
+    font-size: 0.58rem !important;
+    gap: 3px !important;
+  }
+
+  .back-web-link i {
+    font-size: 0.60rem !important;
+  }
+
+  .mem-benefits-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .mem-benefit-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    padding: 10px 14px !important;
+  }
+
+  .mem-benefit-icon-circle {
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mem-form-card {
+    padding: 20px 12px !important;
   }
 }
 
@@ -8527,30 +9092,25 @@ body.mobile-nav-open {
   }
 
   .membership-cards-stage-wrap {
-    height: 370px;
-    min-height: 370px;
+    height: auto;
+    min-height: auto;
     width: 100%;
-  }
-
-  .membership-podium-stage {
-    width: 360px;
-  }
-
-  .podium-tier-base {
-    width: 360px;
-    height: 36px;
-  }
-
-  .podium-tier-top {
-    width: 300px;
-    height: 30px;
-    bottom: 12px;
+    margin-top: 0;
   }
 
   .membership-id-cards-area {
-    transform: scale(0.85);
-    transform-origin: bottom center;
-    margin-bottom: 20px;
+    transform: none;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hanging-master-card {
+    transform: none;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 480px;
   }
 
   .footer-top {
@@ -8664,9 +9224,10 @@ body.mobile-nav-open {
   }
 
   .hanging-master-card {
-    transform: scale(0.9);
-    transform-origin: top center;
-    margin-bottom: -30px;
+    transform: none;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 480px;
   }
 
   .membership-bottom-stats-strip {
@@ -9039,9 +9600,10 @@ body.mobile-nav-open {
   }
 
   .hanging-master-card {
-    transform: scale(0.82);
-    transform-origin: top center;
-    margin-bottom: -60px;
+    transform: none;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 480px;
   }
 
   .membership-bottom-stats-strip {
@@ -9616,7 +10178,7 @@ body.mobile-nav-open {
   display: flex;
   align-items: center;
   background-color: #FFFFFF;
-  background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 32%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.25) 80%), url('../images/Golden\ Rally\ at\ Sunset.webp');
+  background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 32%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.25) 80%), url('../images/Golden Rally at Sunset.webp');
   background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11172,7 +11734,7 @@ body.mobile-nav-open {
   .about-page-hero {
     min-height: 220px;
     padding: 36px 0 32px;
-    background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 45%, rgba(255, 255, 255, 0.78) 70%, rgba(255, 255, 255, 0.15) 90%), url('../images/Golden\ Rally\ at\ Sunset.webp');
+    background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 45%, rgba(255, 255, 255, 0.78) 70%, rgba(255, 255, 255, 0.15) 90%), url('../images/Golden Rally at Sunset.webp');
   }
 
   .about-banner-container {
@@ -12653,6 +13215,28 @@ main > section.news-hero-banner {
     margin: 0 auto 12px;
   }
 
+  /* Reduce space between label and value on tablet & ensure left-alignment */
+  .id-details-col,
+  .id-field-row,
+  .id-field-lbl,
+  .id-field-val {
+    text-align: left !important;
+  }
+
+  .id-field-lbl {
+    width: 68px;
+  }
+
+  .id-field-sep {
+    width: 6px;
+    margin-right: 4px;
+    text-align: left !important;
+  }
+
+  .id-field-val {
+    text-align: left !important;
+  }
+
   .mem-right-card {
     padding: 32px 24px;
   }
@@ -13530,7 +14114,7 @@ main > section.news-hero-banner {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   z-index: 999999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -13540,6 +14124,7 @@ main > section.news-hero-banner {
 }
 
 .rzp-modal-backdrop.is-open {
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -14426,6 +15011,65 @@ main > section.news-hero-banner {
   .btn-don-repeat {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .don-page-container {
+    padding: 0 10px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .don-left-side,
+  .don-right-card,
+  .don-bank-details-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .don-benefits-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .don-benefit-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    padding: 10px 14px !important;
+  }
+
+  .don-benefit-icon-circle {
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .don-leader-stage {
+    max-width: 280px !important;
+  }
+
+  .don-leader-splash {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  .don-amount-pills-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .don-pill-btn {
+    font-size: 0.78rem !important;
+    padding: 2px 4px !important;
+  }
+
+  .don-right-card {
+    padding: 20px 12px !important;
   }
 }
 
