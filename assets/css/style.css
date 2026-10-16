@@ -197,14 +197,68 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
 }
 
 /* ==========================================================================
-   Global Icon Centering System — Perfect Dead-Center for ALL Circular Elements
+   Global Icon Centering System — Absolute Dead-Center for ALL Icons & Circles
    Applies across homepage, donate, membership, issues, about, and footer.
    ========================================================================== */
+
+/* 1. Universal Bootstrap Icons & Icon Font Alignment */
+i.bi,
+.bi,
+[class^="bi-"],
+[class*=" bi-"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+  font-style: normal !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+/* 2. Neutralize Bootstrap Icons' baseline offset (-.125em) and whitespace on ::before universally */
+i.bi::before,
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: 0 !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transform: translateY(0) !important;
+}
+
+/* 3. Universal SVG Icons Centering */
+svg.pillar-svg-icon,
+svg[class*="icon"],
+svg[class*="-icon"],
+.icon-wrap svg,
+.icon-circle svg,
+.icon-bubble svg,
+[class*="icon"] svg,
+[class*="-icon"] svg,
+button svg,
+.btn svg,
+a svg {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin: auto !important;
+  flex-shrink: 0 !important;
+}
+
+/* 4. ALL Icon Containers, Circular Badges, Nav Arrows, and Icon Wrappers */
 .quick-icon-wrap,
 .feature-icon-circle,
 .issue-circle-stage,
 .issue-halo-ring,
 .issue-circle-img-wrap.is-vector,
+.issue-card-arrow,
+.issue-cat-badge,
 .about-pillar-icon,
 .social-circle-btn,
 .mem-stat-icon-circle,
@@ -236,120 +290,127 @@ main>section:not(.hero-section):not(.quick-nav-section):not(.mem-hero-banner):no
 .brand-emblem-frame,
 .brand-leader-frame,
 .f-emblem-ring,
-.mem-step-circle {
+.mem-step-circle,
+.hero-slider-nav-btn,
+.mobile-menu-close-btn,
+.don-bank-icon-circle,
+.don-bank-copy-btn,
+.don-step-circle,
+.btn-icon-plus,
+.btn-icon-arrow,
+.f-col-icon-pill,
+.office-badge-tag,
+.id-back-official-seal,
+.contact-pill-item,
+.issues-pill-badge,
+.leadership-pill-badge,
+[class*="icon-wrap"],
+[class*="icon-circle"],
+[class*="icon-bubble"],
+[class*="-arrow-circle"],
+[class*="-nav-btn"] {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
+  box-sizing: border-box !important;
 }
 
-/* Ensure direct children inside circular containers are centered with zero baseline drift */
-.quick-icon-wrap>*,
-.feature-icon-circle>*,
-.issue-circle-img-wrap.is-vector>*,
-.about-pillar-icon>*,
-.social-circle-btn>*,
-.mem-stat-icon-circle>*,
-.f-contact-icon-bubble>*,
-.circle-action-btn>*,
-.id-emblem-ring>*,
-.social-btn-arrow-circle>*,
-.social-platform-icon>*,
-.event-category-icon>*,
-.mission-pill-icon>*,
-.gallery-nav-btn>*,
-.popup-close-btn>*,
-.don-benefit-icon-circle>*,
-.mem-benefit-icon-circle>*,
-.target-icon-bubble>*,
-.initiative-icon-wrap>*,
-.about-vm-icon-bubble>*,
-.don-success-icon-badge>*,
-.mem-success-icon-badge>* {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  vertical-align: 0;
-  text-align: center;
-}
-
-/* Bootstrap Icons & Font Awesome — force dead-center alignment on the <i> element */
-.quick-icon-wrap i,
-.feature-icon-circle i,
-.issue-circle-img-wrap.is-vector i,
-.about-pillar-icon i,
-.social-circle-btn i,
-.mem-stat-icon-circle i,
-.f-contact-icon-bubble i,
-.circle-action-btn i,
-.id-emblem-ring i,
-.social-btn-arrow-circle i,
-.social-platform-icon i,
-.event-category-icon i,
-.mission-pill-icon i,
-.gallery-nav-btn i,
-.popup-close-btn i,
-.don-benefit-icon-circle i,
-.mem-benefit-icon-circle i,
-.target-icon-bubble i,
-.initiative-icon-wrap i,
-.about-vm-icon-bubble i,
-.don-success-icon-badge i,
-.mem-success-icon-badge i,
-.back-to-top i,
-.f-social-btn i {
+/* 5. Force children of all icon containers to be dead-center with zero baseline drift */
+.quick-icon-wrap > *,
+.feature-icon-circle > *,
+.issue-card-arrow > *,
+.issue-cat-badge > *,
+.about-pillar-icon > *,
+.social-circle-btn > *,
+.mem-stat-icon-circle > *,
+.f-contact-icon-bubble > *,
+.circle-action-btn > *,
+.id-emblem-ring > *,
+.social-btn-arrow-circle > *,
+.social-platform-icon > *,
+.event-category-icon > *,
+.mission-pill-icon > *,
+.gallery-nav-btn > *,
+.popup-close-btn > *,
+.don-benefit-icon-circle > *,
+.mem-benefit-icon-circle > *,
+.target-icon-bubble > *,
+.initiative-icon-wrap > *,
+.about-vm-icon-bubble > *,
+.don-success-icon-badge > *,
+.mem-success-icon-badge > *,
+.hero-slider-nav-btn > *,
+.mobile-menu-close-btn > *,
+.don-bank-icon-circle > *,
+.don-bank-copy-btn > *,
+.back-to-top > *,
+[class*="icon-wrap"] > *,
+[class*="icon-circle"] > *,
+[class*="icon-bubble"] > * {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   line-height: 1 !important;
-  vertical-align: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  vertical-align: 0 !important;
+  text-align: center !important;
 }
 
-/* CRUCIAL FIX: Neutralize Bootstrap Icons' default `vertical-align: -.125em` on ::before pseudo-element */
-.quick-icon-wrap i::before,
-.feature-icon-circle i::before,
-.issue-circle-img-wrap.is-vector i::before,
-.about-pillar-icon i::before,
-.social-circle-btn i::before,
-.mem-stat-icon-circle i::before,
-.f-contact-icon-bubble i::before,
-.circle-action-btn i::before,
-.id-emblem-ring i::before,
-.social-btn-arrow-circle i::before,
-.social-platform-icon i::before,
-.event-category-icon i::before,
-.mission-pill-icon i::before,
-.gallery-nav-btn i::before,
-.popup-close-btn i::before,
-.don-benefit-icon-circle i::before,
-.mem-benefit-icon-circle i::before,
-.target-icon-bubble i::before,
-.initiative-icon-wrap i::before,
-.about-vm-icon-bubble i::before,
-.don-success-icon-badge i::before,
-.mem-success-icon-badge i::before,
-.back-to-top i::before,
-.f-social-btn i::before {
-  display: block !important;
+/* 6. Buttons with Icons (Horizontal pill buttons, CTA buttons, Navbars) */
+.btn-pill-donate,
+.btn-pill-membership,
+.lang-dropdown-capsule,
+.mobile-menu-btn-donate,
+.mobile-menu-btn-membership,
+.btn-cta-donate,
+.btn-about-goals,
+.mobile-nav-item-card,
+.contact-pill-item,
+.back-web-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-pill-donate i,
+.btn-pill-membership i,
+.lang-dropdown-capsule i,
+.mobile-menu-btn-donate i,
+.mobile-menu-btn-membership i,
+.btn-cta-donate i,
+.btn-about-goals i,
+.mobile-nav-item-card i,
+.contact-pill-item i,
+.back-web-link i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   line-height: 1 !important;
-  vertical-align: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  vertical-align: 0 !important;
 }
 
-/* Force SVGs inside buttons and circular pills to be geometrically centered */
-.social-pill-btn svg,
-.social-circle-btn svg,
-.f-social-btn svg,
-.f-contact-icon-bubble svg {
-  display: block !important;
-  margin: auto !important;
-  flex-shrink: 0 !important;
+/* 7. Zero-out padding & default offsets on button arrows and controls */
+.hero-slider-nav-btn,
+.gallery-nav-btn,
+.mobile-menu-close-btn,
+.don-bank-copy-btn,
+.circle-action-btn {
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.hero-slider-nav-btn i,
+.gallery-nav-btn i,
+.mobile-menu-close-btn i,
+.don-bank-copy-btn i,
+.circle-action-btn i {
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Numeric badges in circles */
@@ -2332,9 +2393,11 @@ body.mobile-nav-open {
   background: transparent;
   border: none;
   color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2680,12 +2743,14 @@ body.mobile-nav-open {
   height: 42px;
   border-radius: 50%;
   background-color: #FFF0F0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   color: var(--primary-red);
   font-size: 1.15rem;
-  margin-bottom: 6px;
+  margin: 0 auto 6px auto !important;
+  padding: 0 !important;
+  line-height: 1 !important;
   transition: var(--transition);
 }
 
@@ -2978,10 +3043,12 @@ body.mobile-nav-open {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 15px auto !important;
+  padding: 0 !important;
+  line-height: 1 !important;
   font-size: 1.5rem;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
